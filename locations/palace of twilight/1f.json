@@ -20,7 +20,7 @@
 						],
 						"sections": [
 							{
-								"name": "West First Room Central Chest",
+								"name": "West Wing First Room Central Chest",
 								"access_rules": [
 									"@PalaceofTwilightWestWing, $canDefeatZantHead",
 									"[glitcheson], @PalaceofTwilightWestWing, $canDefeatZantHeadGlitched"
@@ -43,7 +43,7 @@
 						],
 						"sections": [
 							{
-								"name": "West Wall of Darkness Chest",
+								"name": "West Wing Chest Behind Wall of Darkness",
 								"access_rules": [
 									"@PalaceofTwilightWestWing, glowingmastersword, clawshot"
 								]
@@ -65,7 +65,7 @@
 						],
 						"sections": [
 							{
-								"name": "West Second Room Central Chest",
+								"name": "West Wing Second Room Central Chest",
 								"access_rules": [
 									"@PalaceofTwilightWestWing, ptsmallkey:6, $canDefeatZantHead, clawshot",
 									"@PalaceofTwilightWestWing, skvanilla, ptsmallkey:3, $canDefeatZantHead, clawshot",
@@ -92,7 +92,7 @@
 						],
 						"sections": [
 							{
-								"name": "West Second Room Lower South Chest",
+								"name": "West Wing Second Room Lower South Chest",
 								"access_rules": [
 									"@PalaceofTwilightWestWing, ptsmallkey:6, $canDefeatZantHead, clawshot",
 									"@PalaceofTwilightWestWing, skvanilla, ptsmallkey:3, $canDefeatZantHead, clawshot",
@@ -119,7 +119,7 @@
 						],
 						"sections": [
 							{
-								"name": "West Second Room Southeast Chest",
+								"name": "West Wing Second Room Southeast Chest",
 								"access_rules": [
 									"@PalaceofTwilightWestWing, ptsmallkey:6, $canDefeatZantHead, doubleclawshot",
 									"@PalaceofTwilightWestWing, skvanilla, ptsmallkey:3, $canDefeatZantHead, doubleclawshot",
@@ -146,7 +146,7 @@
 						],
 						"sections": [
 							{
-								"name": "East First Room Zant Head Chest",
+								"name": "East Wing First Room Zant Head Chest",
 								"access_rules": [
 									"@PalaceofTwilightEastWing, clawshot, $canDefeatZantHead",
 									"[glitcheson], @PalaceofTwilightEastWing, clawshot, $canDefeatZantHeadGlitched"
@@ -169,7 +169,7 @@
 						],
 						"sections": [
 							{
-								"name": "East First Room North Small Chest",
+								"name": "East Wing First Room North Small Chest",
 								"access_rules": [
 									"@PalaceofTwilightEastWing, clawshot"
 								]
@@ -191,7 +191,7 @@
 						],
 						"sections": [
 							{
-								"name": "East Second Room Northwest Chest",
+								"name": "East Wing Second Room Northwest Chest",
 								"access_rules": [
 									"@PalaceofTwilightEastWing, $canDefeatZantHead, $canDefeatShadowBeast, clawshot, ptsmallkey:6",
 									"@PalaceofTwilightEastWing, $canDefeatZantHead, $canDefeatShadowBeast, clawshot, skvanilla, ptsmallkey:3",
@@ -218,7 +218,7 @@
 						],
 						"sections": [
 							{
-								"name": "East Second Room Northeast Chest",
+								"name": "East Wing Second Room Northeast Chest",
 								"access_rules": [
 									"@PalaceofTwilightEastWing, $canDefeatZantHead, $canDefeatShadowBeast, doubleclawshot, ptsmallkey:6",
 									"@PalaceofTwilightEastWing, $canDefeatZantHead, $canDefeatShadowBeast, doubleclawshot, skvanilla, ptsmallkey:3",
@@ -245,7 +245,7 @@
 						],
 						"sections": [
 							{
-								"name": "East Second Room Southwest Chest",
+								"name": "East Wing Second Room Southwest Chest",
 								"access_rules": [
 									"@PalaceofTwilightEastWing, $canDefeatZantHead, $canDefeatShadowBeast, doubleclawshot, ptsmallkey:6",
 									"@PalaceofTwilightEastWing, $canDefeatZantHead, $canDefeatShadowBeast, doubleclawshot, skvanilla, ptsmallkey:3",
@@ -272,7 +272,7 @@
 						],
 						"sections": [
 							{
-								"name": "East Second Room Southeast Chest",
+								"name": "East Wing Second Room Southeast Chest",
 								"access_rules": [
 									"@PalaceofTwilightEastWing, $canDefeatZantHead, $canDefeatShadowBeast, doubleclawshot, ptsmallkey:6",
 									"@PalaceofTwilightEastWing, $canDefeatZantHead, $canDefeatShadowBeast, doubleclawshot, skvanilla, ptsmallkey:3",
@@ -299,7 +299,7 @@
 						],
 						"sections": [
 							{
-								"name": "East First Room East Alcove",
+								"name": "East Wing First Room East Alcove Chest",
 								"access_rules": [
 									"@PalaceofTwilightEastWing, glowingmastersword",
 									"@PalaceofTwilightEastWing, clawshot, $canDefeatPhantomZant, $canDefeatZantHead, $canDefeatShadowBeast, ptsmallkey:6",
@@ -325,7 +325,7 @@
 						],
 						"sections": [
 							{
-								"name": "East First Room West Alcove",
+								"name": "East Wing First Room West Alcove Chest",
 								"access_rules": [
 									"@PalaceofTwilightEastWing, glowingmastersword",
 									"@PalaceofTwilightEastWing, clawshot, $canDefeatPhantomZant, $canDefeatZantHead, $canDefeatShadowBeast, ptsmallkey:6",
