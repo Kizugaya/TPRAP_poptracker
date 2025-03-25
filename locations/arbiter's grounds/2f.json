@@ -1,0 +1,155 @@
+[
+	{
+		"name": "Arbiter's Grounds",
+		"children": [
+			{
+				"name": "2F",
+				"children": [
+					{
+						"map_locations": [
+							{
+								"map": "ag2f",
+								"x": 1771,
+								"y": 1133
+							},
+							{
+								"map": "agfull",
+								"x": 1771,
+								"y": 2834
+							}
+						],
+						"sections": [
+							{
+								"name": "East Upper Turnable Chest",
+								"access_rules": [
+									"@ArbitersGroundsEastWing, agsmallkey:2",
+									"@ArbitersGroundsEastWing, skkeysy"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "ag2f",
+								"x": 1990,
+								"y": 1055
+							},
+							{
+								"map": "agfull",
+								"x": 1990,
+								"y": 2756
+							}
+						],
+						"sections": [
+							{
+								"name": "East Upper Turnable Redead Chest",
+								"access_rules": [
+									"@ArbitersGroundsEastWing, agsmallkey:2, $hasDamagingItem",
+									"@ArbitersGroundsEastWing, skkeysy, $hasDamagingItem"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "ag2f",
+								"x": 1369,
+								"y": 834
+							},
+							{
+								"map": "agfull",
+								"x": 1369,
+								"y": 2535
+							}
+						],
+						"sections": [
+							{
+								"name": "Ghoul Rat Room Chest",
+								"access_rules": [
+									"@ArbitersGroundsEastWing, agsmallkey:3, $canDefeatBubble, $canDefeatStalchild, $canDefeatRedeadKnight",
+									"[glitcheson], @ArbitersGroundsEastWing, agsmallkey:3, $canDefeatBubbleGlitched, $canDefeatStalchild, $canDefeatRedeadKnight",
+									"[glitcheson], @ArbitersGroundsEastWing, agsmallkey:3, $canDefeatBubble, $canDefeatStalchildGlitched, $canDefeatRedeadKnight",
+									"[glitcheson], @ArbitersGroundsEastWing, agsmallkey:3, $canDefeatBubbleGlitched, $canDefeatStalchildGlitched, $canDefeatRedeadKnight",
+									"[glitcheson], @ArbitersGroundsEastWing, agsmallkey:3, $canDefeatBubble, $canDefeatStalchild, $canDefeatRedeadKnightGlitched",
+									"[glitcheson], @ArbitersGroundsEastWing, agsmallkey:3, $canDefeatBubbleGlitched, $canDefeatStalchild, $canDefeatRedeadKnightGlitched",
+									"[glitcheson], @ArbitersGroundsEastWing, agsmallkey:3, $canDefeatBubble, $canDefeatStalchildGlitched, $canDefeatRedeadKnightGlitched",
+									"[glitcheson], @ArbitersGroundsEastWing, agsmallkey:3, $canDefeatBubbleGlitched, $canDefeatStalchildGlitched, $canDefeatRedeadKnightGlitched",
+									"@ArbitersGroundsEastWing, skkeysy, $canDefeatBubble, $canDefeatStalchild, $canDefeatRedeadKnight",
+									"[glitcheson], @ArbitersGroundsEastWing, skkeysy, $canDefeatBubbleGlitched, $canDefeatStalchild, $canDefeatRedeadKnight",
+									"[glitcheson], @ArbitersGroundsEastWing, skkeysy, $canDefeatBubble, $canDefeatStalchildGlitched, $canDefeatRedeadKnight",
+									"[glitcheson], @ArbitersGroundsEastWing, skkeysy, $canDefeatBubbleGlitched, $canDefeatStalchildGlitched, $canDefeatRedeadKnight",
+									"[glitcheson], @ArbitersGroundsEastWing, skkeysy, $canDefeatBubble, $canDefeatStalchild, $canDefeatRedeadKnightGlitched",
+									"[glitcheson], @ArbitersGroundsEastWing, skkeysy, $canDefeatBubbleGlitched, $canDefeatStalchild, $canDefeatRedeadKnightGlitched",
+									"[glitcheson], @ArbitersGroundsEastWing, skkeysy, $canDefeatBubble, $canDefeatStalchildGlitched, $canDefeatRedeadKnightGlitched",
+									"[glitcheson], @ArbitersGroundsEastWing, skkeysy, $canDefeatBubbleGlitched, $canDefeatStalchildGlitched, $canDefeatRedeadKnightGlitched"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Poes2F",
+				"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
+				"chest_opened_img": "images/Items/PoeSoul.png",
+				"children": [
+					{
+						"map_locations": [
+							{
+								"map": "ag2f",
+								"x": 1478,
+								"y": 1054,
+								"shape": "diamond"
+							},
+							{
+								"map": "agfull",
+								"x": 1478,
+								"y": 2755,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"name": "Hidden Wall Poe",
+								"access_rules": [
+									"@ArbitersGroundsEastWing, agsmallkey:3, $canDefeatRedeadKnight, shadowcrystal",
+									"[glitcheson], @ArbitersGroundsEastWing, agsmallkey:3, $canDefeatRedeadKnightGlitched, shadowcrystal",
+									"@ArbitersGroundsEastWing, skkeysy, $canDefeatRedeadKnight, shadowcrystal",
+									"[glitcheson], @ArbitersGroundsEastWing, skkeysy, $canDefeatRedeadKnightGlitched, shadowcrystal"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "ag2f",
+								"x": 694,
+								"y": 1014,
+								"shape": "diamond"
+							},
+							{
+								"map": "agfull",
+								"x": 694,
+								"y": 2715,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"name": "West Poe",
+								"access_rules": [
+									"@ArbitersGroundsWestWing, agsmallkey:4, $canSmash, shadowcrystal",
+									"@ArbitersGroundsWestWing, skkeysy, $canSmash, shadowcrystal",
+									"[glitcheson], @ArbitersGroundsWestWing, $canDoLJA, $canSmash, shadowcrystal"
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

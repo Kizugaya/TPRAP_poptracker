@@ -1,0 +1,132 @@
+[
+	{
+		"name": "Temple of Time",
+		"children": [
+			{
+				"name": "7F",
+				"children": [
+					{
+						"map_locations": [
+							{
+								"map": "tt7f",
+								"x": 730,
+								"y": 1230
+							},
+							{
+								"map": "ttfull",
+								"x": 3088,
+								"y": 2827
+							}
+						],
+						"sections": [
+							{
+								"name": "Scales Upper Chest",
+								"access_rules": [
+									"@TempleofTimeScalesofTime, spinner, clawshot"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "tt7f",
+								"x": 1071,
+								"y": 1114
+							},
+							{
+								"map": "ttfull",
+								"x": 3429,
+								"y": 2711
+							}
+						],
+						"sections": [
+							{
+								"name": "Floor Switch Room Upper Chest",
+								"access_rules": [
+									"@TempleofTimeFloorSwitchPuzzleRoom, clawshot"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "tt7f",
+								"x": 1008,
+								"y": 1114
+							},
+							{
+								"map": "ttfull",
+								"x": 3366,
+								"y": 2711
+							}
+						],
+						"sections": [
+							{
+								"name": "Big Key Chest",
+								"access_rules": [
+									"@TempleofTimeFloorSwitchPuzzleRoom, $canDefeatHelmasaur, clawshot",
+									"[glitcheson], @TempleofTimeFloorSwitchPuzzleRoom, $canDefeatHelmasaurGlitched, clawshot"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "tt7f",
+								"x": 1011,
+								"y": 1547
+							},
+							{
+								"map": "ttfull",
+								"x": 3369,
+								"y": 3144
+							}
+						],
+						"sections": [
+							{
+								"name": "Gilloutine Chest",
+								"access_rules": [
+									"@TempleofTimeUpperSpikeTrapCorridor"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Poes7F",
+				"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
+				"chest_opened_img": "images/Items/PoeSoul.png",
+				"children": [
+					{
+						"map_locations": [
+							{
+								"map": "tt7f",
+								"x": 782,
+								"y": 1080,
+								"shape": "diamond"
+							},
+							{
+								"map": "ttfull",
+								"x": 3140,
+								"y": 2677,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"name": "Poe Above Scales",
+								"access_rules": [
+									"@TempleofTimeScalesofTime, shadowcrystal, spinner, clawshot"
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

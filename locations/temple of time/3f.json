@@ -1,0 +1,90 @@
+[
+	{
+		"name": "Temple of Time",
+		"children": [
+			{
+				"name": "3F",
+				"children": [
+					{
+						"map_locations": [
+							{
+								"map": "tt3f",
+								"x": 1035,
+								"y": 1329
+							},
+							{
+								"map": "ttfull",
+								"x": 3393,
+								"y": 1329
+							}
+						],
+						"sections": [
+							{
+								"name": "First Staircase Window Chest",
+								"access_rules": [
+									"@TempleofTimeConnectingCorridors, $hasRangedItem"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "tt3f",
+								"x": 1117,
+								"y": 1291
+							},
+							{
+								"map": "ttfull",
+								"x": 3475,
+								"y": 1291
+							}
+						],
+						"sections": [
+							{
+								"name": "First Staircase Armos Chest",
+								"access_rules": [
+									"@TempleofTimeConnectingCorridors, $hasRangedItem, $canDefeatArmos",
+									"[glitcheson], @TempleofTimeConnectingCorridors, $hasRangedItem, $canDefeatArmosGlitched"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Poes3F",
+				"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
+				"chest_opened_img": "images/Items/PoeSoul.png",
+				"children": [
+					{
+						"map_locations": [
+							{
+								"map": "tt3f",
+								"x": 420,
+								"y": 1115,
+								"shape": "diamond"
+							},
+							{
+								"map": "ttfull",
+								"x": 2778,
+								"y": 1115,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"name": "Poe Behind Gate",
+								"access_rules": [
+									"@TempleofTimeCentralMechanicalPlatform, shadowcrystal, dominionrod",
+									"[glitcheson], @TempleofTimeCentralMechanicalPlatform, shadowcrystal, ballchain",
+									"[glitcheson], @TempleofTimeCentralMechanicalPlatform, shadowcrystal, $canDoHSMoonBoots"
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

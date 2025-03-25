@@ -1,0 +1,414 @@
+[
+	{
+		"name": "Overworld",
+		"children": [
+			{
+				"name": "Castle Town",
+				"children": [
+					{
+						"map_locations": [
+							{
+								"map": "ct",
+								"x": 257,
+								"y": 300
+							},
+							{
+								"map": "overworld",
+								"x": 4590,
+								"y": 3954
+							}
+						],
+						"sections": [
+							{
+								"name": "Charlo Donation Blessing",
+								"access_rules": [
+									"@CastleTownWest"
+								]
+							}
+						]
+					},
+					{
+						"name": "STAR",
+						"access_rules": [
+							"@CastleTownSTARGame"
+						],
+						"map_locations": [
+							{
+								"map": "ct",
+								"x": 235,
+								"y": 382
+							},
+							{
+								"map": "overworld",
+								"x": 4568,
+								"y": 4036
+							}
+						],
+						"sections": [
+							{
+								"name": "Prize 1",
+								"access_rules": [
+									"clawshot"
+								]
+							},
+							{
+								"name": "Prize 2",
+								"access_rules": [
+									"doubleclawshot"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "ct",
+								"x": 427,
+								"y": 404
+							},
+							{
+								"map": "overworld",
+								"x": 4760,
+								"y": 4058
+							}
+						],
+						"sections": [
+							{
+								"name": "Malo Mart Magic Armor",
+								"access_rules": [
+									"@CastleTownMaloMart, @LowerKakarikoVillage, @KakarikoMaloMart, increasewalleton",
+									"@CastleTownMaloMart, @LowerKakarikoVillage, @KakarikoMaloMart, mediumwallet"
+								]
+							}
+						]
+					},
+					{
+						"name": "Jovani",
+						"access_rules": [
+							"@CastleTownJovanisHouse"
+						],
+						"map_locations": [
+							{
+								"map": "ct",
+								"x": 489,
+								"y": 409
+							},
+							{
+								"map": "overworld",
+								"x": 4821,
+								"y": 4063
+							}
+						],
+						"sections": [
+							{
+								"name": "20 Poe Souls",
+								"access_rules": [
+									"poesoul:20"
+								]
+							},
+							{
+								"name": "60 Poe Souls",
+								"access_rules": [
+									"poesoul:60"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "ct",
+								"x": 460,
+								"y": 485
+							},
+							{
+								"map": "overworld",
+								"x": 4793,
+								"y": 4139
+							}
+						],
+						"sections": [
+							{
+								"name": "Telma Invoice",
+								"hosted_item": "invoice",
+								"access_rules": [
+									"@CastleTownTelmasBar, renadosletter"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "ct",
+								"x": 575,
+								"y": 289
+							},
+							{
+								"map": "overworld",
+								"x": 4908,
+								"y": 3943
+							}
+						],
+						"sections": [
+							{
+								"name": "Doctor's Office Balcony Chest",
+								"access_rules": [
+									"@CastleTownDoctorsOfficeBalcony, shadowcrystal, invoice"
+								]
+							}
+						]
+					},
+					{
+						"name": "Agitha's Castle",
+						"access_rules": [
+							"@CastleTownAgithasHouse"
+						],
+						"map_locations": [
+							{
+								"map": "ct",
+								"x": 251,
+								"y": 492
+							},
+							{
+								"map": "overworld",
+								"x": 4584,
+								"y": 4146
+							}
+						],
+						"sections": [
+							{
+								"name": "Male Ant",
+								"access_rules": [
+									"Bug0"
+								]
+							},
+							{
+								"name": "Female Ant",
+								"access_rules": [
+									"Bug1"
+								]
+							},
+							{
+								"name": "Male Dayfly",
+								"access_rules": [
+									"Bug2"
+								]
+							},
+							{
+								"name": "Female Dayfly",
+								"access_rules": [
+									"Bug3"
+								]
+							},
+							{
+								"name": "Male Beetle",
+								"access_rules": [
+									"Bug4"
+								]
+							},
+							{
+								"name": "Female Beetle",
+								"access_rules": [
+									"Bug5"
+								]
+							},
+							{
+								"name": "Male Mantis",
+								"access_rules": [
+									"Bug6"
+								]
+							},
+							{
+								"name": "Female Mantis",
+								"access_rules": [
+									"Bug7"
+								]
+							},
+							{
+								"name": "Male Stag Beetle",
+								"access_rules": [
+									"Bug8"
+								]
+							},
+							{
+								"name": "Female Stag Beetle",
+								"access_rules": [
+									"Bug9"
+								]
+							},
+							{
+								"name": "Male Pillbug",
+								"access_rules": [
+									"Bug10"
+								]
+							},
+							{
+								"name": "Female Pillbug",
+								"access_rules": [
+									"Bug11"
+								]
+							},
+							{
+								"name": "Male Butterfly",
+								"access_rules": [
+									"Bug12"
+								]
+							},
+							{
+								"name": "Female Butterfly",
+								"access_rules": [
+									"Bug13"
+								]
+							},
+							{
+								"name": "Male Ladybug",
+								"access_rules": [
+									"Bug14"
+								]
+							},
+							{
+								"name": "Female Ladybug",
+								"access_rules": [
+									"Bug15"
+								]
+							},
+							{
+								"name": "Male Snail",
+								"access_rules": [
+									"Bug16"
+								]
+							},
+							{
+								"name": "Female Snail",
+								"access_rules": [
+									"Bug17"
+								]
+							},
+							{
+								"name": "Male Phasmid",
+								"access_rules": [
+									"Bug18"
+								]
+							},
+							{
+								"name": "Female Phasmid",
+								"access_rules": [
+									"Bug19"
+								]
+							},
+							{
+								"name": "Male Grasshopper",
+								"access_rules": [
+									"Bug20"
+								]
+							},
+							{
+								"name": "Female Grasshopper",
+								"access_rules": [
+									"Bug21"
+								]
+							},
+							{
+								"name": "Male Dragonfly",
+								"access_rules": [
+									"Bug22"
+								]
+							},
+							{
+								"name": "Female Dragonfly",
+								"access_rules": [
+									"Bug23"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Poes",
+				"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
+				"chest_opened_img": "images/Items/PoeSoul.png",
+				"children": [
+					{
+						"map_locations": [
+							{
+								"map": "ct",
+								"x": 519,
+								"y": 409,
+								"shape": "diamond"
+							},
+							{
+								"map": "overworld",
+								"x": 4855,
+								"y": 4063,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"name": "Jovani House Poe",
+								"access_rules": [
+									"@CastleTownJovanisHouse, shadowcrystal"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "ct",
+								"x": 715,
+								"y": 313,
+								"shape": "diamond"
+							},
+							{
+								"map": "overworld",
+								"x": 5052,
+								"y": 3967,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"name": "East Castle Town Bridge Poe",
+								"access_rules": [
+									"@OutsideCastleTownEast, shadowcrystal"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Golden Wolves",
+				"children": [
+					{
+						"map_locations": [
+							{
+								"map": "ct",
+								"x": 376,
+								"y": 50
+							},
+							{
+								"map": "overworld",
+								"x": 4709,
+								"y": 3705
+							}
+						],
+						"sections": [
+							{
+								"name": "Golden Wolf",
+								"chest_unopened_img": "images/Items/GoldenWolfGrayed.png",
+								"chest_opened_img": "images/Items/GoldenWolf.png",
+								"access_rules": [
+									"@CastleTownNorthBehindFirstDoor, @HiddenVillage, shadowcrystal, $canCompleteMDH"
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

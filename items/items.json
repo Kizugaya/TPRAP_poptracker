@@ -1,0 +1,1365 @@
+[
+	{
+		"name": "Fishing Rod",
+		"type": "progressive",
+		"codes": "p_fishingrod",
+		"stages": [
+			{
+				"name": "Fishing Rod",
+				"codes": "fishingrod",
+				"img": "images/Items/FishingRod1.png"
+			},
+			{
+				"name": "Fishing Rod with Hook",
+				"codes": "hook, fishinghook, Fishingrodhook, rodhook",
+				"img": "images/Items/FishingRod2.png"
+			}
+		]
+	},
+	{
+		"name": "Slingshot",
+		"type": "toggle",
+		"codes": "slingshot",
+		"img": "images/Items/Slingshot.png"
+	},
+	{
+		"name": "Lantern",
+		"type": "toggle",
+		"codes": "lantern, lamp",
+		"img": "images/Items/Lantern.png"
+	},
+	{
+		"name": "Gale Boomerang",
+		"type": "toggle",
+		"codes": "galeboomerang, boomerang",
+		"img": "images/Items/Boomerang.png"
+	},
+	{
+		"name": "Iron Boots",
+		"type": "toggle",
+		"codes": "ironboots, boots",
+		"img": "images/Items/IronBoots.png"
+	},
+	{
+		"name": "Bow",
+		"type": "progressive",
+		"codes": "p_bow",
+		"stages": [
+			{
+				"name": "Bow - Small Quiver",
+				"codes": "smallquiver, bow",
+				"img": "images/Items/Bow1.png"
+			},
+			{
+				"name": "Bow - Medium Quiver",
+				"codes": "mediumquiver",
+				"img": "images/Items/Bow2.png"
+			},
+			{
+				"name": "Bow - Large Quiver",
+				"codes": "largequiver",
+				"img": "images/Items/Bow3.png"
+			}
+		]
+	},
+	{
+		"name": "Hawkeye",
+		"type": "toggle",
+		"codes": "hawkeye",
+		"img": "images/Items/Hawkeye.png"
+	},
+	{
+		"name": "Bomb Bag",
+		"type": "consumable",
+		"codes": "bombbag",
+		"max_quantity": 3,
+		"img": "images/Items/BombBag.png"
+	},
+	{
+		"name": "Giant Bomb Bag",
+		"type": "toggle",
+		"codes": "giantbombbag, giantbombs, giantbag",
+		"img": "images/Items/GiantBombBag.png"
+	},
+	{
+		"name": "Water Bombs",
+		"type": "toggle",
+		"codes": "waterbomb, waterbombs",
+		"img": "images/Items/WaterBombs.png"
+	},
+	{
+		"name": "Clawshot",
+		"type": "progressive",
+		"codes": "p_clawshot",
+		"stages": [
+			{
+				"name": "Clawshot",
+				"codes": "clawshot",
+				"img": "images/Items/Clawshot1.png"
+			},
+			{
+				"name": "Double Clawshot",
+				"codes": "dclawshot, doubleclawshot",
+				"img": "images/Items/Clawshot2.png"
+			}
+		]
+	},
+	{
+		"name": "Spinner",
+		"type": "toggle",
+		"codes": "spinner",
+		"img": "images/Items/Spinner.png"
+	},
+	{
+		"name": "Ball and Chain",
+		"type": "toggle",
+		"codes": "ballandchain, ballchain",
+		"img": "images/Items/BallAndChain.png"
+	},
+	{
+		"name": "Dominion Rod",
+		"type": "progressive",
+		"codes": "p_dominionrod",
+		"stages": [
+			{
+				"name": "Dominion Rod",
+				"codes": "dominionrod",
+				"img": "images/Items/DominionRod1.png"
+			},
+			{
+				"name": "Dominion Rod",
+				"codes": "powereddominionrod",
+				"img": "images/Items/DominionRod2.png"
+			}
+		]
+	},
+	{
+		"name": "Horse Call",
+		"type": "toggle",
+		"codes": "horsecall",
+		"img": "images/Items/HorseCall.png"
+	},
+	{
+		"name": "Sky Book Character",
+		"type": "consumable",
+		"codes": "skybookcharacter, skybook, ancientbook, ancientskybook",
+		"max_quantity": 7,
+		"img": "images/Items/AncientSkybook.png"
+	},
+	{
+		"name": "Ashei's Sketch",
+		"type": "toggle",
+		"codes": "asheisketch, asheissketch",
+		"img": "images/Items/AsheiSketch.png"
+	},
+	{
+		"name": "Auru's Memo",
+		"type": "toggle",
+		"codes": "aurumemo, aurusmemo",
+		"img": "images/Items/AuruMemo.png"
+	},
+	{
+		"name": "Bottle",
+		"type": "consumable",
+		"codes": "bottle",
+		"max_quantity": 4,
+		"img": "images/Items/Bottle.png"
+	},
+	{
+		"name": "Shadow Crystal",
+		"type": "toggle",
+		"codes": "shadowcrystal",
+		"img": "images/Items/ShadowCrystal.png"
+	},
+	{
+		"name": "Sword",
+		"type": "progressive",
+		"codes": "p_sword",
+		"stages": [
+			{
+				"name": "Wooden Sword",
+				"codes": "woodensword, sword",
+				"img": "images/Items/Sword1.png"
+			},
+			{
+				"name": "Ordon Sword",
+				"codes": "ordonsword",
+				"img": "images/Items/Sword2.png"
+			},
+			{
+				"name": "Master Sword",
+				"codes": "mastersword",
+				"img": "images/Items/Sword3.png"
+			},
+			{
+				"name": "Light Master Sword",
+				"codes": "glowingmastersword, lightmastersword, truemastersword",
+				"img": "images/Items/Sword4.png"
+			}
+		]
+	},
+	{
+		"name": "Shield",
+		"type": "toggle",
+		"codes": "ordonshield, shield",
+		"img": "images/Items/OrdonShield.png"
+	},
+	{
+		"name": "Hylian Shield",
+		"type": "toggle",
+		"codes": "hylianshield, shield",
+		"img": "images/Items/HylianShield.png"
+	},
+	{
+		"name": "Zora Armor",
+		"type": "toggle",
+		"codes": "zoraarmor",
+		"img": "images/Items/ZoraArmor.png"
+	},
+	{
+		"name": "Magic Armor",
+		"type": "toggle",
+		"codes": "magicarmor",
+		"img": "images/Items/MagicArmor.png"
+	},
+	{
+		"name": "Wallet",
+		"type": "progressive",
+		"codes": "p_wallet",
+		"allow_disabled": false,
+		"stages": [
+			{
+				"name": "Small Wallet",
+				"codes": "wallet",
+				"img": "images/Items/Wallet1.png"
+			},
+			{
+				"name": "Medium Wallet",
+				"codes": "mediumwallet",
+				"img": "images/Items/Wallet2.png"
+			},
+			{
+				"name": "Large Wallet",
+				"codes": "largewallet",
+				"img": "images/Items/Wallet3.png"
+			}
+		]
+	},
+	{
+		"name": "Hidden Skill",
+		"type": "consumable",
+		"codes": "hiddenskill, endingblow, shieldattack, backslice, helmsplitter, mortaldraw, jumpstrike, greatspin",
+		"max_quantity": 7,
+		"img": "images/Items/HiddenSkills.png"
+	},
+	{
+		"name": "Poe Soul",
+		"type": "consumable",
+		"codes": "poesoul",
+		"max_quantity": 60,
+		"img": "images/Items/PoeSoul.png"
+	},
+	{
+		"name": "Youths Scent",
+		"type": "toggle",
+		"codes": "youthsscent",
+		"img": "images/Items/Scent1.png"
+	},
+	{
+		"name": "Ilia Scent",
+		"type": "toggle",
+		"codes": "iliascent",
+		"img": "images/Items/Scent2.png"
+	},
+	{
+		"name": "Poe Scent",
+		"type": "toggle",
+		"codes": "poescent",
+		"img": "images/Items/Scent3.png"
+	},
+	{
+		"name": "Reekfish Scent",
+		"type": "toggle",
+		"codes": "reekfishscent",
+		"img": "images/Items/Scent4.png"
+	},
+	{
+		"name": "Medicine Scent",
+		"type": "toggle",
+		"codes": "medicinescent",
+		"img": "images/Items/Scent5.png"
+	},
+	{
+		"name": "Heart Piece",
+		"type": "consumable",
+		"codes": "heartpiece",
+		"max_quantity": 45,
+		"img": "images/Items/PieceOfHeart.png"
+	},
+	{
+		"name": "Heart Container",
+		"type": "consumable",
+		"codes": "heartcontainer",
+		"max_quantity": 8,
+		"img": "images/Items/HeartContainer.png"
+	},
+	{
+		"name": "Fused Shadow",
+		"type": "consumable",
+		"codes": "fusedshadow, fusedshadows",
+		"max_quantity": 3,
+		"img": "images/Items/FusedShadows.png"
+	},
+	{
+		"name": "Mirror Shard",
+		"type": "consumable",
+		"codes": "mirrorshard, mirrorshards",
+		"max_quantity": 4,
+		"img": "images/Items/MirrorShards.png"
+	},
+	{
+		"name": "Ilia Memory Quest",
+		"type": "progressive",
+		"codes": "p_memory",
+		"stages": [
+			{
+				"name": "Renado's Letter",
+				"codes": "renadosletter",
+				"img": "images/Items/Fetch1.png"
+			},
+			{
+				"name": "Invoice",
+				"codes": "invoice",
+				"img": "images/Items/Fetch2.png"
+			},
+			{
+				"name": "Wooden Statue",
+				"codes": "woodenstatue",
+				"img": "images/Items/Fetch3.png"
+			},
+			{
+				"name": "Ilia's Charm",
+				"codes": "iliascharm",
+				"img": "images/Items/Fetch4.png"
+			}
+		]
+	},
+	{
+		"name": "Faron Vessel of Light",
+		"type": "toggle",
+		"codes": "faronvesseloflight",
+		"img": "images/Items/VesselOfLightFaron.png"
+	},
+	{
+		"name": "Eldin Vessel of Light",
+		"type": "toggle",
+		"codes": "eldinvesseloflight",
+		"img": "images/Items/VesselOfLightEldin.png"
+	},
+	{
+		"name": "Lanayru Vessel of Light",
+		"type": "toggle",
+		"codes": "lanayruvesseloflight",
+		"img": "images/Items/VesselOfLightLanayru.png"
+	},
+	{
+		"name": "Faron Woods Key",
+		"type": "toggle",
+		"codes": "faronwoodskey, fwkey, keyfw",
+		"img": "images/Items/ForestKey.png"
+	},
+	{
+		"name": "Gate Keys",
+		"type": "toggle",
+		"codes": "gatekeys, gatekey",
+		"img": "images/Items/GateKeys.png"
+	},
+	{
+		"name": "Bulbin Camp Key",
+		"type": "toggle",
+		"codes": "bulbincampkey, bckey, keybc",
+		"img": "images/Items/DesertKey.png"
+	},
+	{
+		"name": "Forest Temple Small Key",
+		"type": "consumable",
+		"codes": "foresttemplesmallkey, ftsmallkey, smallkeyft",
+		"max_quantity": 4,
+		"img": "images/Items/SmallKeyFT.png"
+	},
+	{
+		"name": "Forest Temple Big Key",
+		"type": "toggle",
+		"codes": "foresttemplebigkey, ftbigkey, bigkeyft",
+		"img": "images/Items/BossKeyFT.png"
+	},
+	{
+		"name": "Forest Temple Completed",
+		"type": "toggle",
+		"codes": "foresttemplecompleted, ftcompleted, completedft",
+		"img": "images/Items/Boss1.png"
+	},
+	{
+		"name": "Goron Mines Small Key",
+		"type": "consumable",
+		"codes": "goronminessmallkey, gmsmallkey, smallkeygm",
+		"max_quantity": 3,
+		"img": "images/Items/SmallKeyGM.png"
+	},
+	{
+		"name": "Goron Mines Key Shards",
+		"type": "consumable",
+		"codes": "goronminesbigkey, gmbigkey, bigkeygm, goronmineskeyshards, gmkeyshards, keyshardsgm",
+		"max_quantity": 3,
+		"img": "images/Items/MinesKey.png"
+	},
+	{
+		"name": "Goron Mines Completed",
+		"type": "toggle",
+		"codes": "goronminescompleted, gmcompleted, completedgm",
+		"img": "images/Items/Boss2.png"
+	},
+	{
+		"name": "Lakebed Temple Small Key",
+		"type": "consumable",
+		"codes": "lakebedtemplesmallkey, ltsmallkey, smallkeylt",
+		"max_quantity": 3,
+		"img": "images/Items/SmallKeyLT.png"
+	},
+	{
+		"name": "Lakebed Temple Big Key",
+		"type": "toggle",
+		"codes": "lakebedtemplebigkey, ltbigkey, bigkeylt",
+		"img": "images/Items/BossKeyLT.png"
+	},
+	{
+		"name": "Lakebed Temple Completed",
+		"type": "toggle",
+		"codes": "lakebedtemplecompleted, ltcompleted, completedlt",
+		"img": "images/Items/Boss3.png"
+	},
+	{
+		"name": "Arbiter's Grounds Small Key",
+		"type": "consumable",
+		"codes": "arbitersgroundssmallkey, agsmallkey, smallkeyag",
+		"max_quantity": 5,
+		"img": "images/Items/SmallKeyAG.png"
+	},
+	{
+		"name": "Arbiter's Grounds Big Key",
+		"type": "toggle",
+		"codes": "arbitersgroundsbigkey, agbigkey, bigkeyag",
+		"img": "images/Items/BossKeyAG.png"
+	},
+	{
+		"name": "Arbiter's Grounds Completed",
+		"type": "toggle",
+		"codes": "arbitersgroundcompleted, agcompleted, completedag",
+		"img": "images/Items/Boss4.png"
+	},
+	{
+		"name": "Snowpeak Ruins Small Key",
+		"type": "consumable",
+		"codes": "snowpeakruinssmallkey, srsmallkey, smallkeysr",
+		"max_quantity": 4,
+		"img": "images/Items/SmallKeySR.png"
+	},
+	{
+		"name": "Bedroom Key",
+		"type": "toggle",
+		"codes": "snowpeakruinsbigkey, srbigkey, bigkeysr, snowpeakruinsbedroomkey, srbedroomkey, bedroomkeysr, bedroomkey",
+		"img": "images/Items/BedroomKey.png"
+	},
+	{
+		"name": "Ordon Pumpkin",
+		"type": "toggle",
+		"codes": "ordonpumpkin, pumpkin",
+		"img": "images/Items/Pumpkin.png"
+	},
+	{
+		"name": "Ordon Goat Cheese",
+		"type": "toggle",
+		"codes": "ordongoatcheese, cheese",
+		"img": "images/Items/Cheese.png"
+	},
+	{
+		"name": "Snowpeak Ruins Completed",
+		"type": "toggle",
+		"codes": "snowpeakruinscompleted, srcompleted, completedsr",
+		"img": "images/Items/Boss5.png"
+	},
+	{
+		"name": "Temple of Time Small Key",
+		"type": "consumable",
+		"codes": "templeoftimesmallkey, templetimesmallkey, ttsmallkey, smallkeytt",
+		"max_quantity": 3,
+		"img": "images/Items/SmallKeyTT.png"
+	},
+	{
+		"name": "Temple of Time Big Key",
+		"type": "toggle",
+		"codes": "templeoftimebigkey, templetimebigkey, ttbigkey, bigkeytt",
+		"img": "images/Items/BossKeyTT.png"
+	},
+	{
+		"name": "Temple of Time Completed",
+		"type": "toggle",
+		"codes": "templeoftimecompleted, templetimecompleted, ttcompleted, completedtt",
+		"img": "images/Items/Boss6.png"
+	},
+	{
+		"name": "City in the Sky Small Key",
+		"type": "consumable",
+		"codes": "cityintheskysmallkey, cityskysmallkey, cssmallkey, smallkeycs",
+		"max_quantity": 1,
+		"img": "images/Items/SmallKeyCS.png"
+	},
+	{
+		"name": "City in the Sky Big Key",
+		"type": "toggle",
+		"codes": "cityintheskybigkey, cityskybigkey, csbigkey, bigkeycs",
+		"img": "images/Items/BossKeyCS.png"
+	},
+	{
+		"name": "City in the Sky Completed",
+		"type": "toggle",
+		"codes": "cityintheskycompleted, cityskycompleted, cscompleted, completedcs",
+		"img": "images/Items/Boss7.png"
+	},
+	{
+		"name": "Palace of Twilight Small Key",
+		"type": "consumable",
+		"codes": "palaceoftwilightsmallkey, palacetwilightsmallkey, ptsmallkey, smallkeypt",
+		"max_quantity": 7,
+		"img": "images/Items/SmallKeyPT.png"
+	},
+	{
+		"name": "Palace of Twilight Big Key",
+		"type": "toggle",
+		"codes": "palaceoftwilightbigkey, palacetwilightbigkey, ptbigkey, bigkeypt",
+		"img": "images/Items/BossKeyPT.png"
+	},
+	{
+		"name": "Palace of Twilight Completed",
+		"type": "toggle",
+		"codes": "palaceoftwilightcompleted, palacetwilightcompleted, ptcompleted, completedpt",
+		"img": "images/Items/Boss8.png"
+	},
+	{
+		"name": "Hyrule Castle Small Key",
+		"type": "consumable",
+		"codes": "hyrulecastlesmallkey, hcsmallkey, smallkeyhc",
+		"max_quantity": 3,
+		"img": "images/Items/SmallKeyHC.png"
+	},
+	{
+		"name": "Hyrule Castle Big Key",
+		"type": "toggle",
+		"codes": "hyrulecastlebigkey, hcbigkey, bigkeyhc",
+		"img": "images/Items/BossKeyHC.png"
+	},,
+	{
+		"name": "Hyrule Castle Completed",
+		"type": "toggle",
+		"codes": "hyrulecastlecompleted, hccompleted, completedhc",
+		"img": "images/Items/Boss9.png"
+	},
+	{
+		"name": "Ant ♂",
+		"type": "toggle",
+		"codes": "bug0",
+		"img": "images/Items/Bug0.png"
+	},
+	{
+		"name": "Ant ♀",
+		"type": "toggle",
+		"codes": "bug1",
+		"img": "images/Items/Bug1.png"
+	},
+	{
+		"name": "Dayfly ♂",
+		"type": "toggle",
+		"codes": "bug2",
+		"img": "images/Items/Bug2.png"
+	},
+	{
+		"name": "Dayfly ♀",
+		"type": "toggle",
+		"codes": "bug3",
+		"img": "images/Items/Bug3.png"
+	},
+	{
+		"name": "Beetle ♂",
+		"type": "toggle",
+		"codes": "bug4",
+		"img": "images/Items/Bug4.png"
+	},
+	{
+		"name": "Beetle ♀",
+		"type": "toggle",
+		"codes": "bug5",
+		"img": "images/Items/Bug5.png"
+	},
+	{
+		"name": "Mantis ♂",
+		"type": "toggle",
+		"codes": "bug6",
+		"img": "images/Items/Bug6.png"
+	},
+	{
+		"name": "Mantis ♀",
+		"type": "toggle",
+		"codes": "bug7",
+		"img": "images/Items/Bug7.png"
+	},
+	{
+		"name": "Stag Beetle ♂",
+		"type": "toggle",
+		"codes": "bug8",
+		"img": "images/Items/Bug8.png"
+	},
+	{
+		"name": "Stag Beetle ♀",
+		"type": "toggle",
+		"codes": "bug9",
+		"img": "images/Items/Bug9.png"
+	},
+	{
+		"name": "Pill Bug ♂",
+		"type": "toggle",
+		"codes": "bug10",
+		"img": "images/Items/Bug10.png"
+	},
+	{
+		"name": "Pill Bug ♀",
+		"type": "toggle",
+		"codes": "bug11",
+		"img": "images/Items/Bug11.png"
+	},
+	{
+		"name": "Butterfly ♂",
+		"type": "toggle",
+		"codes": "bug12",
+		"img": "images/Items/Bug12.png"
+	},
+	{
+		"name": "Butterfly ♀",
+		"type": "toggle",
+		"codes": "bug13",
+		"img": "images/Items/Bug13.png"
+	},
+	{
+		"name": "Ladybug ♂",
+		"type": "toggle",
+		"codes": "bug14",
+		"img": "images/Items/Bug14.png"
+	},
+	{
+		"name": "Ladybug ♀",
+		"type": "toggle",
+		"codes": "bug15",
+		"img": "images/Items/Bug15.png"
+	},
+	{
+		"name": "Snail ♂",
+		"type": "toggle",
+		"codes": "bug16",
+		"img": "images/Items/Bug16.png"
+	},
+	{
+		"name": "Snail ♀",
+		"type": "toggle",
+		"codes": "bug17",
+		"img": "images/Items/Bug17.png"
+	},
+	{
+		"name": "Phasmid ♂",
+		"type": "toggle",
+		"codes": "bug18",
+		"img": "images/Items/Bug18.png"
+	},
+	{
+		"name": "Phasmid ♀",
+		"type": "toggle",
+		"codes": "bug19",
+		"img": "images/Items/Bug19.png"
+	},
+	{
+		"name": "Grasshopper ♂",
+		"type": "toggle",
+		"codes": "bug20",
+		"img": "images/Items/Bug20.png"
+	},
+	{
+		"name": "Grasshopper ♀",
+		"type": "toggle",
+		"codes": "bug21",
+		"img": "images/Items/Bug21.png"
+	},
+	{
+		"name": "Dragonfly ♂",
+		"type": "toggle",
+		"codes": "bug22",
+		"img": "images/Items/Bug22.png"
+	},
+	{
+		"name": "Dragonfly ♀",
+		"type": "toggle",
+		"codes": "bug23",
+		"img": "images/Items/Bug23.png"
+	},
+	{
+		"name": "Forest Temple Name",
+		"type": "static",
+		"img": "images/Dungeons/Forest Temple/Name.png",
+		"codes": "ftname"
+	},
+	{
+		"name": "Goron Mines Name",
+		"type": "static",
+		"img": "images/Dungeons/Goron Mines/Name.png",
+		"codes": "gmname"
+	},
+	{
+		"name": "Lakebed Temple Name",
+		"type": "static",
+		"img": "images/Dungeons/Lakebed Temple/Name.png",
+		"codes": "ltname"
+	},
+	{
+		"name": "Arbiter's Grounds Name",
+		"type": "static",
+		"img": "images/Dungeons/Arbiter's Grounds/Name.png",
+		"codes": "agname"
+	},
+	{
+		"name": "Snowpeak Ruins Name",
+		"type": "static",
+		"img": "images/Dungeons/Snowpeak Ruins/Name.png",
+		"codes": "srname"
+	},
+	{
+		"name": "Temple of Time Name",
+		"type": "static",
+		"img": "images/Dungeons/Temple of Time/Name.png",
+		"codes": "ttname"
+	},
+	{
+		"name": "City in the Sky Name",
+		"type": "static",
+		"img": "images/Dungeons/City in the Sky/Name.png",
+		"codes": "csname"
+	},
+	{
+		"name": "Palace of Twilight Name",
+		"type": "static",
+		"img": "images/Dungeons/Palace of Twilight/Name.png",
+		"codes": "ptname"
+	},
+	{
+		"name": "Hyrule Castle Name",
+		"type": "static",
+		"img": "images/Dungeons/Hyrule Castle/Name.png",
+		"codes": "hcname"
+	},
+	{
+		"name": "Golden Bugs",
+		"type": "progressive",
+		"codes": "bugs, gbugs, goldenbugs",
+		"loop": true,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"name": "Golden Bugs Enabled",
+				"codes": "bugson, gbugson, goldenbugson",
+				"img": "images/Items/GoldenBugEnabled.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Golden Bugs Disabled",
+				"codes": "bugsoff, gbugsoff, goldenbugsoff",
+				"img": "images/Items/GoldenBugDisabled.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Poes",
+		"type": "progressive",
+		"codes": "poes",
+		"loop": true,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"name": "Poes Enabled",
+				"codes": "poeson",
+				"img": "images/Items/PoeSoulEnabled.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Poes Disabled",
+				"codes": "poesoff",
+				"img": "images/Items/PoeSoulDisabled.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Glitched",
+		"type": "progressive",
+		"codes": "glitched",
+		"loop": true,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"name": "Glitches Enabled",
+				"codes": "glitcheson",
+				"img": "images/Items/FishingRod1.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Glitches Disabled",
+				"codes": "glitchesoff",
+				"img": "images/Items/FishingRod2.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Castle Requirements",
+		"type": "progressive",
+		"codes": "castlerequirements",
+		"loop": true,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"name": "HC Open",
+				"codes": "hcopen",
+				"img": "images/Items/FishingRod1.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "HC Fused Shadows",
+				"codes": "hcfusedshadows",
+				"img": "images/Items/FishingRod2.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "HC Mirror Shards",
+				"codes": "hcmirrorshards",
+				"img": "images/Items/Slingshot.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "HC All Dungeons",
+				"codes": "hcalldungeons",
+				"img": "images/Items/Lantern.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "HC Vanilla",
+				"codes": "hcvanilla",
+				"img": "images/Items/Boomerang.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Palace Requirements",
+		"type": "progressive",
+		"codes": "palacerequirements",
+		"loop": true,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"name": "PT Open",
+				"codes": "ptopen",
+				"img": "images/Items/FishingRod1.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "PT Fused Shadows",
+				"codes": "ptfusedshadows",
+				"img": "images/Items/FishingRod2.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "PT Mirror Shards",
+				"codes": "ptmirrorshards",
+				"img": "images/Items/Slingshot.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "PT Vanilla",
+				"codes": "ptvanilla",
+				"img": "images/Items/Lantern.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Faron Woods",
+		"type": "progressive",
+		"codes": "faronwoods",
+		"loop": true,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"name": "Faron Woods Open",
+				"codes": "faronwoodsopen",
+				"img": "images/Items/FishingRod1.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Faron Woods Closed",
+				"codes": "faronwoodsclosed",
+				"img": "images/Items/FishingRod2.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Small Keys",
+		"type": "progressive",
+		"codes": "smallkeys",
+		"loop": true,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"name": "SK Start with",
+				"codes": "skkeysy",
+				"img": "images/Items/FishingRod1.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "SK Vanilla",
+				"codes": "skvanilla",
+				"img": "images/Items/FishingRod2.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "SK Own Dungeon",
+				"codes": "skowndungeon",
+				"img": "images/Items/Slingshot.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "SK Any Dungeon",
+				"codes": "skanydungeon",
+				"img": "images/Items/Lantern.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "SK Anywhere",
+				"codes": "skkeysanity",
+				"img": "images/Items/Boomerang.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Big Keys",
+		"type": "progressive",
+		"codes": "bigkeys",
+		"loop": true,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"name": "BK Start with",
+				"codes": "bkkeysy",
+				"img": "images/Items/FishingRod1.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "BK Vanilla",
+				"codes": "bkvanilla",
+				"img": "images/Items/FishingRod2.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "BK Own Dungeon",
+				"codes": "bkowndungeon",
+				"img": "images/Items/Slingshot.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "BK Any Dungeon",
+				"codes": "bkanydungeon",
+				"img": "images/Items/Lantern.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "BK Anywhere",
+				"codes": "bkkeysanity",
+				"img": "images/Items/Boomerang.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Skip Prologue",
+		"type": "progressive",
+		"codes": "skipprologue",
+		"loop": true,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"name": "Skip Prologue Enabled",
+				"codes": "skipprologueon",
+				"img": "images/Items/FishingRod1.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Skip Prologue Disabled",
+				"codes": "skipprologueoff",
+				"img": "images/Items/FishingRod2.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Faron Twilight Cleared",
+		"type": "progressive",
+		"codes": "farontwilightcleared",
+		"loop": true,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"name": "Faron Twilight Cleared Enabled",
+				"codes": "farontwilightclearedon",
+				"img": "images/Items/FishingRod1.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Faron Twilight Cleared Disabled",
+				"codes": "farontwilightclearedoff",
+				"img": "images/Items/FishingRod2.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Eldin Twilight Cleared",
+		"type": "progressive",
+		"codes": "eldintwilightcleared",
+		"loop": true,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"name": "Eldin Twilight Cleared Enabled",
+				"codes": "eldintwilightclearedon",
+				"img": "images/Items/FishingRod1.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Eldin Twilight Cleared Disabled",
+				"codes": "eldintwilightclearedoff",
+				"img": "images/Items/FishingRod2.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Lanayru Twilight Cleared",
+		"type": "progressive",
+		"codes": "lanayrutwilightcleared",
+		"loop": true,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"name": "Lanayru Twilight Cleared Enabled",
+				"codes": "lanayrutwilightclearedon",
+				"img": "images/Items/FishingRod1.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Lanayru Twilight Cleared Disabled",
+				"codes": "lanayrutwilightclearedoff",
+				"img": "images/Items/FishingRod2.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Skip Midna's Desperate Hour",
+		"type": "progressive",
+		"codes": "skipmdh",
+		"loop": true,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"name": "Skip Midna's Desperate Hour Enabled",
+				"codes": "skipmdhon",
+				"img": "images/Items/FishingRod1.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Skip Midna's Desperate Hour Disabled",
+				"codes": "skipmdhoff",
+				"img": "images/Items/FishingRod2.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Open Map",
+		"type": "progressive",
+		"codes": "openmap",
+		"loop": true,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"name": "Open Map Enabled",
+				"codes": "openmapon",
+				"img": "images/Items/FishingRod1.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Open Map Disabled",
+				"codes": "openmapoff",
+				"img": "images/Items/FishingRod2.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Increase Wallet",
+		"type": "progressive",
+		"codes": "increasewallet",
+		"loop": true,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"name": "Increase Wallet Enabled",
+				"codes": "increasewalleton",
+				"img": "images/Items/FishingRod1.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Increase Wallet Disabled",
+				"codes": "increasewalletoff",
+				"img": "images/Items/FishingRod2.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Transform Anywhere",
+		"type": "progressive",
+		"codes": "transformanywhere",
+		"loop": true,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"name": "Transform Anywhere Enabled",
+				"codes": "transformanywhereon",
+				"img": "images/Items/FishingRod1.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Transform Anywhere Disabled",
+				"codes": "transformanywhereoff",
+				"img": "images/Items/FishingRod2.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Bonks Do Damage",
+		"type": "progressive",
+		"codes": "bonksdodamage",
+		"loop": true,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"name": "Bonks Do Damage Enabled",
+				"codes": "bonksdodamageon",
+				"img": "images/Items/FishingRod1.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Bonks Do Damage Disabled",
+				"codes": "bonksdodamageoff",
+				"img": "images/Items/FishingRod2.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Damage Magnification",
+		"type": "progressive",
+		"codes": "damagemagnification",
+		"loop": true,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"name": "Damage Vanilla",
+				"codes": "damagevanilla",
+				"img": "images/Items/FishingRod1.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Damage Double",
+				"codes": "damagedouble",
+				"img": "images/Items/FishingRod2.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Damage Triple",
+				"codes": "damagetriple",
+				"img": "images/Items/Slingshot.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Damage Quadruple",
+				"codes": "damagequadruple",
+				"img": "images/Items/Lantern.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "One Hit KO",
+				"codes": "ohko",
+				"img": "images/Items/Boomerang.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Skip Lakebed Entrance",
+		"type": "progressive",
+		"codes": "skiplakebedentrance",
+		"loop": true,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"name": "Skip Lakebed Entrance Enabled",
+				"codes": "skiplakebedentranceon",
+				"img": "images/Items/FishingRod1.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Skip Lakebed Entrance Disabled",
+				"codes": "skiplakebedentranceoff",
+				"img": "images/Items/FishingRod2.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Skip Arbiter's Entrance",
+		"type": "progressive",
+		"codes": "skiparbitersentrance",
+		"loop": true,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"name": "Skip Arbiter's Entrance Enabled",
+				"codes": "skiparbitersentranceon",
+				"img": "images/Items/FishingRod1.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Skip Arbiter's Entrance Disabled",
+				"codes": "skiparbitersentranceoff",
+				"img": "images/Items/FishingRod2.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Skip Snowpeak Entrance",
+		"type": "progressive",
+		"codes": "skipsnowpeakentrance",
+		"loop": true,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"name": "Skip Snowpeak Entrance Enabled",
+				"codes": "skipsnowpeakentranceon",
+				"img": "images/Items/FishingRod1.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Skip Snowpeak Entrance Disabled",
+				"codes": "skipsnowpeakentranceoff",
+				"img": "images/Items/FishingRod2.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Skip City in the Sky Entrance",
+		"type": "progressive",
+		"codes": "skipcityintheskyentrance",
+		"loop": true,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"name": "Skip City in the Sky Entrance Enabled",
+				"codes": "skipcityintheskyentranceon",
+				"img": "images/Items/FishingRod1.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Skip City in the Sky Entrance Disabled",
+				"codes": "skipcityintheskyentranceoff",
+				"img": "images/Items/FishingRod2.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Goron Mines Entrance",
+		"type": "progressive",
+		"codes": "goronminesentrance",
+		"loop": true,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"name": "GM Open",
+				"codes": "gmopen",
+				"img": "images/Items/FishingRod1.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "GM No Wrestling",
+				"codes": "gmnowrestling",
+				"img": "images/Items/FishingRod2.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "GM Closed",
+				"codes": "gmclosed",
+				"img": "images/Items/Slingshot.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Temple of Time Entrance",
+		"type": "progressive",
+		"codes": "templeoftimeentrance",
+		"loop": true,
+		"allow_disabled": false,
+		"stages": [
+			{
+				"name": "TT Open",
+				"codes": "ttopen",
+				"img": "images/Items/FishingRod1.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "TT Open Grove",
+				"codes": "ttopengrove",
+				"img": "images/Items/FishingRod2.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "TT Closed",
+				"codes": "ttclosed",
+				"img": "images/Items/Slingshot.png",
+				"inherit_codes": false
+			}
+		]
+	}
+]

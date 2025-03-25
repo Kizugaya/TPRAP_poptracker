@@ -1,0 +1,125 @@
+[
+	{
+		"name": "Temple of Time",
+		"children": [
+			{
+				"name": "5F",
+				"children": [
+					{
+						"map_locations": [
+							{
+								"map": "tt5f",
+								"x": 522,
+								"y": 1411
+							},
+							{
+								"map": "ttfull",
+								"x": 522,
+								"y": 3008
+							}
+						],
+						"sections": [
+							{
+								"name": "Armos Antechamber West Chest",
+								"access_rules": [
+									"@TempleofTimeArmosAntechamber, $canDefeatArmos",
+									"[glitcheson], @TempleofTimeArmosAntechamber, $canDefeatArmosGlitched"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "tt5f",
+								"x": 642,
+								"y": 1567
+							},
+							{
+								"map": "ttfull",
+								"x": 642,
+								"y": 3164
+							}
+						],
+						"sections": [
+							{
+								"name": "Armos Antechamber South Chest",
+								"access_rules": [
+									"@TempleofTimeArmosAntechamber"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "tt5f",
+								"x": 769,
+								"y": 1411
+							},
+							{
+								"map": "ttfull",
+								"x": 769,
+								"y": 3008
+							}
+						],
+						"sections": [
+							{
+								"name": "Armos Antechamber Statue Chest",
+								"access_rules": [
+									"@TempleofTimeArmosAntechamber, dominionrod",
+									"[glitcheson], @TempleofTimeArmosAntechamber"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "tt5f",
+								"x": 406,
+								"y": 835
+							},
+							{
+								"map": "ttfull",
+								"x": 406,
+								"y": 2432
+							}
+						],
+						"sections": [
+							{
+								"name": "Moving Wall Beamos Room Chest",
+								"access_rules": [
+									"@TempleofTimeMovingWallHallways, bow"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "tt5f",
+								"x": 44,
+								"y": 879
+							},
+							{
+								"map": "ttfull",
+								"x": 44,
+								"y": 2476
+							}
+						],
+						"sections": [
+							{
+								"name": "Moving Wall Dinalfos Room Chest",
+								"access_rules": [
+									"@TempleofTimeMovingWallHallways, $canDefeatDinalfos, dominionrod, bow",
+									"[glitcheson], @TempleofTimeMovingWallHallways, $canDefeatDinalfos, spinner, $hasBombs, bow"
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

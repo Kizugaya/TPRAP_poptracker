@@ -1,0 +1,13 @@
+[
+	{
+		"name": "Hyrule Castle",
+		"children": [
+			{
+				"name": "5F",
+				"children": [
+					{}
+				]
+			}
+		]
+	}
+]

@@ -1,0 +1,63 @@
+[
+	{
+		"name": "Temple of Time",
+		"children": [
+			{
+				"name": "8F",
+				"children": [
+					{
+						"map_locations": [
+							{
+								"map": "tt8f",
+								"x": 1010,
+								"y": 1070
+							},
+							{
+								"map": "ttfull",
+								"x": 4547,
+								"y": 2667
+							}
+						],
+						"sections": [
+							{
+								"name": "Chest Before Darknut",
+								"access_rules": [
+									"@TempleofTimeUpperSpikeTrapCorridor, $canDefeatArmos, $canDefeatBabyGohma, $canDefeatYoungGohma",
+									"@TempleofTimeUpperSpikeTrapCorridor, $canDefeatArmosGlitched, $canDefeatBabyGohma, $canDefeatYoungGohma",
+									"@TempleofTimeUpperSpikeTrapCorridor, $canDefeatArmos, $canDefeatBabyGohmaGlitched, $canDefeatYoungGohma",
+									"@TempleofTimeUpperSpikeTrapCorridor, $canDefeatArmosGlitched, $canDefeatBabyGohmaGlitched, $canDefeatYoungGohma",
+									"@TempleofTimeUpperSpikeTrapCorridor, $canDefeatArmos, $canDefeatBabyGohma, $canDefeatYoungGohmaGlitched",
+									"@TempleofTimeUpperSpikeTrapCorridor, $canDefeatArmosGlitched, $canDefeatBabyGohma, $canDefeatYoungGohmaGlitched",
+									"@TempleofTimeUpperSpikeTrapCorridor, $canDefeatArmos, $canDefeatBabyGohmaGlitched, $canDefeatYoungGohmaGlitched",
+									"@TempleofTimeUpperSpikeTrapCorridor, $canDefeatArmosGlitched, $canDefeatBabyGohmaGlitched, $canDefeatYoungGohmaGlitched"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "tt8f",
+								"x": 331,
+								"y": 1149
+							},
+							{
+								"map": "ttfull",
+								"x": 3868,
+								"y": 2746
+							}
+						],
+						"sections": [
+							{
+								"name": "Darknut Chest",
+								"access_rules": [
+									"@TempleofTimeDarknutArena, $canDefeatDarknut"
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

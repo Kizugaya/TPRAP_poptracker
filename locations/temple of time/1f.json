@@ -1,0 +1,65 @@
+[
+	{
+		"name": "Temple of Time",
+		"children": [
+			{
+				"name": "1F",
+				"children": [
+					{
+						"map_locations": [
+							{
+								"map": "tt1f",
+								"x": 808,
+								"y": 1130
+							},
+							{
+								"map": "ttfull",
+								"x": 808,
+								"y": 1130
+							}
+						],
+						"sections": [
+							{
+								"name": "Lobby Lantern Chest",
+								"access_rules": [
+									"@TempleofTimeEntrance, lantern"
+								]
+							}
+						]
+					},
+					{
+						"access_rules": [
+							"@TempleofTimeBossRoom"
+						],
+						"map_locations": [
+							{
+								"map": "tt1f",
+								"x": 637,
+								"y": 189
+							},
+							{
+								"map": "ttfull",
+								"x": 637,
+								"y": 189
+							}
+						],
+						"sections": [
+							{
+								"name": "Armogohma Heart Container",
+								"access_rules": [
+									"$canDefeatArmogohma"
+								]
+							},
+							{
+								"name": "Dungeon Reward",
+								"access_rules": [
+									"$canDefeatArmogohma"
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

@@ -1,0 +1,189 @@
+[
+	{
+		"name": "Overworld",
+		"children": [
+			{
+				"name": "Faron Field",
+				"children": [
+					{
+						"name": "Corner Grotto",
+						"access_rules": [
+							"@FaronFieldCornerGrotto"
+						],
+						"map_locations": [
+							{
+								"map": "ff",
+								"x": 934,
+								"y": 1360
+							},
+							{
+								"map": "overworld",
+								"x": 5179,
+								"y": 6663
+							}
+						],
+						"sections": [
+							{
+								"name": "Left Chest",
+								"access_rules": [
+									""
+								]
+							},
+							{
+								"name": "Right Chest",
+								"access_rules": [
+									""
+								]
+							},
+							{
+								"name": "Rear Chest",
+								"access_rules": [
+									""
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "ff",
+								"x": 671,
+								"y": 985
+							},
+							{
+								"map": "overworld",
+								"x": 4920,
+								"y": 6280
+							}
+						],
+						"sections": [
+							{
+								"name": "Tree Heart Piece",
+								"access_rules": [
+									"@FaronField, boomerang",
+									"@FaronField, clawshot",
+									"[glitcheson], @FaronField, ballchain"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "ff",
+								"x": 642,
+								"y": 828
+							},
+							{
+								"map": "overworld",
+								"x": 4888,
+								"y": 6133
+							}
+						],
+						"sections": [
+							{
+								"name": "Bridge Chest",
+								"access_rules": [
+									"@FaronField, clawshot",
+									"[glitcheson], $canDoStorage"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Poes",
+				"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
+				"chest_opened_img": "images/Items/PoeSoul.png",
+				"children": [
+					{
+						"map_locations": [
+							{
+								"map": "ff",
+								"x": 715,
+								"y": 644,
+								"shape": "diamond"
+							},
+							{
+								"map": "overworld",
+								"x": 4984,
+								"y": 5952,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"name": "Faron Field Poe",
+								"access_rules": [
+									"@FaronField, $canCompleteMDH, shadowcrystal, $allTwilightCleared"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Bugs",
+				"chest_unopened_img": "images/Items/GoldenBugGrayed.png",
+				"chest_opened_img": "images/Items/GoldenBug.png",
+				"access_rules": [
+					"@FaronField"
+				],
+				"children": [
+					{
+						"map_locations": [
+							{
+								"map": "ff",
+								"x": 516,
+								"y": 1031,
+								"shape": "diamond"
+							},
+							{
+								"map": "overworld",
+								"x": 4762,
+								"y": 6333,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"name": "Male Beetle",
+								"access_rules": [
+									""
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "ff",
+								"x": 919,
+								"y": 672,
+								"shape": "diamond"
+							},
+							{
+								"map": "overworld",
+								"x": 5163,
+								"y": 5970,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"name": "Female Beetle",
+								"access_rules": [
+									"boomerang",
+									"clawshot",
+									"[glitcheson], $canDoMapGlitch",
+									"[glitcheson], $canDoEBMoonBoots"
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

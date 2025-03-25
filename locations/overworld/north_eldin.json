@@ -1,0 +1,144 @@
+[
+	{
+		"name": "Overworld",
+		"children": [
+			{
+				"name": "North Eldin",
+				"children": [
+					{
+						"map_locations": [
+							{
+								"map": "ne",
+								"x": 520,
+								"y": 1041
+							},
+							{
+								"map": "overworld",
+								"x": 7356,
+								"y": 2507
+							}
+						],
+						"sections": [
+							{
+								"name": "Owl Statue Sky Character",
+								"access_rules": [
+									"@EldinField, powereddominionrod"
+								]
+							}
+						]
+					},
+					{
+						"name": "Stockcave",
+						"map_locations": [
+							{
+								"map": "ne",
+								"x": 763,
+								"y": 936
+							},
+							{
+								"map": "overworld",
+								"x": 7601,
+								"y": 2399
+							}
+						],
+						"sections": [
+							{
+								"name": "Upper Chest",
+								"access_rules": [
+									"@EldinFieldLavaCaveUpper, boots, glitchesoff",
+									"[glitcheson], @EldinFieldLavaCaveUpper, clawshot"
+								]
+							},
+							{
+								"name": "Lantern Chest",
+								"access_rules": [
+									"@EldinFieldLavaCaveLower, lantern, glitchesoff",
+									"[glitcheson], @EldinFieldLavaCaveLower, lantern, $canDoLJA",
+									"[glitcheson], @EldinFieldLavaCaveLower, lantern, clawshot"
+								]
+							},
+							{
+								"name": "Lowest Chest",
+								"access_rules": [
+									"@EldinFieldLavaCaveLower, glitchesoff",
+									"[glitcheson], @EldinFieldLavaCaveLower, $canDoLJA",
+									"[glitcheson], @EldinFieldLavaCaveLower, clawshot"
+								]
+							}
+						]
+					},
+					{
+						"name": "Stalfos Grotto",
+						"access_rules": [
+							"@EldinFieldStalfosGrotto"
+						],
+						"map_locations": [
+							{
+								"map": "ne",
+								"x": 168,
+								"y": 80
+							},
+							{
+								"map": "overworld",
+								"x": 7007,
+								"y": 1543
+							}
+						],
+						"sections": [
+							{
+								"name": "Left Small Chest",
+								"access_rules": [
+									""
+								]
+							},
+							{
+								"name": "Right Small Chest",
+								"access_rules": [
+									""
+								]
+							},
+							{
+								"name": "Stalfos Chest",
+								"access_rules": [
+									"$canDefeatStalfos"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Bugs",
+				"chest_unopened_img": "images/Items/GoldenBugGrayed.png",
+				"chest_opened_img": "images/Items/GoldenBug.png",
+				"children": [
+					{
+						"map_locations": [
+							{
+								"map": "ne",
+								"x": 723,
+								"y": 929,
+								"shape": "diamond"
+							},
+							{
+								"map": "overworld",
+								"x": 7561,
+								"y": 2389,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"name": "Female Phasmid",
+								"access_rules": [
+									"@EldinField, boomerang",
+									"@EldinField, clawshot"
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

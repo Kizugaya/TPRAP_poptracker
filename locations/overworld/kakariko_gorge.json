@@ -1,0 +1,233 @@
+[
+	{
+		"name": "Overworld",
+		"children": [
+			{
+				"name": "Kakariko Gorge",
+				"children": [
+					{
+						"name": "Lantern Cave",
+						"access_rules": [
+							"@EldinLanternCave"
+						],
+						"map_locations": [
+							{
+								"map": "kg",
+								"x": 665,
+								"y": 922
+							},
+							{
+								"map": "overworld",
+								"x": 6021,
+								"y": 5698
+							}
+						],
+						"sections": [
+							{
+								"name": "First Chest",
+								"access_rules": [
+									"$canBurnWebs"
+								]
+							},
+							{
+								"name": "Second Chest",
+								"access_rules": [
+									"$canBurnWebs"
+								]
+							},
+							{
+								"name": "Lantern Chest",
+								"access_rules": [
+									"lantern"
+								]
+							}
+						]
+					},
+					{
+						"name": "Stone Pillars",
+						"access_rules": [
+							"@KakarikoGorge"
+						],
+						"map_locations": [
+							{
+								"map": "kg",
+								"x": 284,
+								"y": 514
+							},
+							{
+								"map": "overworld",
+								"x": 5639,
+								"y": 5291
+							}
+						],
+						"sections": [
+							{
+								"name": "Spire Heart Piece",
+								"access_rules": [
+									"boomerang",
+									"clawshot"
+								]
+							},
+							{
+								"name": "Double Clawshot Chest",
+								"access_rules": [
+									"doubleclawshot",
+									"[glitcheson], $canDoLJA",
+									"[glitcheson], shadowcrystal"
+								]
+							}
+						]
+					},
+					{
+						"name": "Owl Statue",
+						"access_rules": [
+							"@KakarikoGorge"
+						],
+						"map_locations": [
+							{
+								"map": "kg",
+								"x": 633,
+								"y": 81
+							},
+							{
+								"map": "overworld",
+								"x": 5983,
+								"y": 4862
+							}
+						],
+						"sections": [
+							{
+								"name": "Sky Character",
+								"access_rules": [
+									"powereddominionrod"
+								]
+							},
+							{
+								"name": "Chest",
+								"access_rules": [
+									"powereddominionrod",
+									"[glitcheson], $canDoLJA",
+									"[glitcheson], $canDoStorage",
+									"[glitcheson], $canDoEBMoonBoots"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Poes",
+				"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
+				"chest_opened_img": "images/Items/PoeSoul.png",
+				"children": [
+					{
+						"map_locations": [
+							{
+								"map": "kg",
+								"x": 695,
+								"y": 922,
+								"shape": "diamond"
+							},
+							{
+								"map": "overworld",
+								"x": 6051,
+								"y": 5698,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"name": "Lantern Cave Poe",
+								"access_rules": [
+									"@EldinLanternCave, $canBurnWebs, shadowcrystal"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "kg",
+								"x": 615,
+								"y": 570,
+								"shape": "diamond"
+							},
+							{
+								"map": "overworld",
+								"x": 5973,
+								"y": 5358,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"name": "Kakariko Gorge Poe",
+								"access_rules": [
+									"@KakarikoGorge, $canCompleteMDH, shadowcrystal, $allTwilightCleared"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Bugs",
+				"chest_unopened_img": "images/Items/GoldenBugGrayed.png",
+				"chest_opened_img": "images/Items/GoldenBug.png",
+				"access_rules": [
+					"@KakarikoGorge"
+				],
+				"children": [
+					{
+						"map_locations": [
+							{
+								"map": "kg",
+								"x": 643,
+								"y": 648,
+								"shape": "diamond"
+							},
+							{
+								"map": "overworld",
+								"x": 6003,
+								"y": 5422,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"name": "Male Pill Bug",
+								"access_rules": [
+									""
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "kg",
+								"x": 967,
+								"y": 814,
+								"shape": "diamond"
+							},
+							{
+								"map": "overworld",
+								"x": 6320,
+								"y": 5591,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"name": "Female Pill Bug",
+								"access_rules": [
+									""
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

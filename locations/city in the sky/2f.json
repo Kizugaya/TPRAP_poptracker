@@ -1,0 +1,185 @@
+[
+	{
+		"name": "City in the Sky",
+		"children": [
+			{
+				"name": "2F",
+				"children": [
+					{
+						"map_locations": [
+							{
+								"map": "cs2f",
+								"x": 1866,
+								"y": 881
+							},
+							{
+								"map": "csfull",
+								"x": 4104,
+								"y": 2636
+							}
+						],
+						"sections": [
+							{
+								"name": "East Wing After Dinalfos Ledge Chest",
+								"access_rules": [
+									"@CityinTheSkyEastWing, clawshot, $canDefeatTileWorm, $canDefeatDinalfos",
+									"[glitcheson], @CityinTheSkyEastWing, clawshot, $canDefeatTileWormGlitched, $canDefeatDinalfos",
+									"[glitcheson], @CityinTheSkyEastWing, clawshot, boots"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "cs2f",
+								"x": 1648,
+								"y": 864
+							},
+							{
+								"map": "csfull",
+								"x": 3886,
+								"y": 2619
+							}
+						],
+						"sections": [
+							{
+								"name": "East Wing After Dinalfos Alcove Chest",
+								"access_rules": [
+									"@CityinTheSkyEastWing, clawshot, $canDefeatTileWorm, $canDefeatDinalfos",
+									"[glitcheson], @CityinTheSkyEastWing, clawshot, $canDefeatTileWormGlitched, $canDefeatDinalfos",
+									"[glitcheson], @CityinTheSkyEastWing, clawshot, boots"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "cs2f",
+								"x": 218,
+								"y": 384
+							},
+							{
+								"map": "csfull",
+								"x": 2456,
+								"y": 2139
+							}
+						],
+						"sections": [
+							{
+								"name": "Baba Tower Narrow Ledge Chest",
+								"access_rules": [
+									"@CityinTheSkyWestWing, $canDefeatBabaSerpent, doubleclawshot, $canDefeatBigBaba",
+									"@CityinTheSkyWestWing, $canDefeatBabaSerpentGlitched, doubleclawshot, $canDefeatBigBaba",
+									"@CityinTheSkyWestWing, $canDefeatBabaSerpent, doubleclawshot, $canDefeatBigBabaGlitched",
+									"@CityinTheSkyWestWing, $canDefeatBabaSerpentGlitched, doubleclawshot, $canDefeatBigBabaGlitched"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "cs2f",
+								"x": 115,
+								"y": 492
+							},
+							{
+								"map": "csfull",
+								"x": 2353,
+								"y": 2247
+							}
+						],
+						"sections": [
+							{
+								"name": "Baba Tower Alcove Chest",
+								"access_rules": [
+									"@CityinTheSkyWestWing, $canDefeatBabaSerpent, doubleclawshot, $canDefeatBigBaba",
+									"@CityinTheSkyWestWing, $canDefeatBabaSerpentGlitched, doubleclawshot, $canDefeatBigBaba",
+									"@CityinTheSkyWestWing, $canDefeatBabaSerpent, doubleclawshot, $canDefeatBigBabaGlitched",
+									"@CityinTheSkyWestWing, $canDefeatBabaSerpentGlitched, doubleclawshot, $canDefeatBigBabaGlitched"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "cs2f",
+								"x": 132,
+								"y": 881
+							},
+							{
+								"map": "csfull",
+								"x": 2370,
+								"y": 2636
+							}
+						],
+						"sections": [
+							{
+								"name": "West Garden Lone Island Chest",
+								"access_rules": [
+									"@CityinTheSkyWestWing, doubleclawshot"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "cs2f",
+								"x": 217,
+								"y": 625
+							},
+							{
+								"map": "csfull",
+								"x": 2455,
+								"y": 2380
+							}
+						],
+						"sections": [
+							{
+								"name": "West Garden Lower Chest",
+								"access_rules": [
+									"@CityinTheSkyWestWing, doubleclawshot"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Poes2F",
+				"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
+				"chest_opened_img": "images/Items/PoeSoul.png",
+				"children": [
+					{
+						"map_locations": [
+							{
+								"map": "cs2f",
+								"x": 209,
+								"y": 860,
+								"shape": "diamond"
+							},
+							{
+								"map": "csfull",
+								"x": 2447,
+								"y": 2615,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"name": "Garden Island Poe",
+								"access_rules": [
+									"@CityinTheSkyWestWing, doubleclawshot, shadowcrystal"
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

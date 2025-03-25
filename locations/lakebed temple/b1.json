@@ -1,0 +1,170 @@
+[
+	{
+		"name": "Lakebed Temple",
+		"children": [
+			{
+				"name": "B1",
+				"children": [
+					{
+						"map_locations": [
+							{
+								"map": "ltb1",
+								"x": 1523,
+								"y": 515
+							},
+							{
+								"map": "ltfull",
+								"x": 4438,
+								"y": 515
+							}
+						],
+						"sections": [
+							{
+								"name": "Central Room Spire Chest",
+								"access_rules": [
+									"@LakebedTempleCentralRoom, $canLaunchBombs, ltsmallkey:3, boots",
+									"@LakebedTempleCentralRoom, $canLaunchBombs, skkeysy, boots",
+									"[glitcheson], @LakebedTempleCentralRoom, clawshot, sword, boots"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "ltb1",
+								"x": 2341,
+								"y": 617
+							},
+							{
+								"map": "ltfull",
+								"x": 5256,
+								"y": 617
+							}
+						],
+						"sections": [
+							{
+								"name": "East Lower Waterwheel Stalactite Chest",
+								"access_rules": [
+									"@LakebedTempleEastWingFirstFloor, $canLaunchBombs",
+									"[glitcheson], @LakebedTempleCentralRoom, $canDoLJA"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "ltb1",
+								"x": 2249,
+								"y": 764
+							},
+							{
+								"map": "ltfull",
+								"x": 5164,
+								"y": 764
+							}
+						],
+						"sections": [
+							{
+								"name": "East Lower Waterwheel Bridge Chest",
+								"access_rules": [
+									"@LakebedTempleEastWingFirstFloor, $canLaunchBombs, ltsmallkey:3, clawshot",
+									"@LakebedTempleEastWingFirstFloor, $canLaunchBombs, skkeysy, clawshot",
+									"[glitcheson], @LakebedTempleEastWingFirstFloor, $canDoLJA",
+									"[glitcheson], @LakebedTempleEastWingFirstFloor, clawshot, $hasBombs",
+									"[glitcheson], @LakebedTempleEastWingFirstFloor, @LakebedTempleEastWingSecondFloor, clawshot, shadowcrystal",
+									"[glitcheson], @LakebedTempleEastWingFirstFloor, @LakebedTempleEastWingSecondFloor, clawshot, $hasBombs, sword",
+									"[glitcheson], @LakebedTempleEastWingFirstFloor, @LakebedTempleEastWingSecondFloor, $canLaunchBombs, shadowcrystal",
+									"[glitcheson], @LakebedTempleEastWingFirstFloor, @LakebedTempleEastWingSecondFloor, $canLaunchBombs, $hasBombs, sword",
+									"[glitcheson], @LakebedTempleEastWingFirstFloor, @LakebedTempleWestWing, $canLaunchBombs"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "ltb1",
+								"x": 2367,
+								"y": 411
+							},
+							{
+								"map": "ltfull",
+								"x": 5282,
+								"y": 411
+							}
+						],
+						"sections": [
+							{
+								"name": "Before Deku Toad Underwater Left Chest",
+								"access_rules": [
+									"@LakebedTempleEastWingFirstFloor, glitchesoff, zoraarmor, boots, ltsmallkey:3, $canLaunchBombs",
+									"@LakebedTempleEastWingFirstFloor, glitchesoff, zoraarmor, boots, skkeysy, $canLaunchBombs",
+									"@LakebedTempleEastWingFirstFloor, glitchesoff, zoraarmor, boots, ltsmallkey:3, clawshot, $canSmash",
+									"@LakebedTempleEastWingFirstFloor, glitchesoff, zoraarmor, boots, skkeysy, clawshot, $canSmash",
+									"[glitcheson], @LakebedTempleEastWingFirstFloor, $canDoLJA, $canSkipKeyToDekuToad, $hasHeavyMod",
+									"[glitcheson], @LakebedTempleEastWingFirstFloor, $canDoLJA, ltsmallkey:1, $hasHeavyMod",
+									"[glitcheson], @LakebedTempleEastWingFirstFloor, $canSkipKeyToDekuToad, clawshot, $canLaunchBombs, $hasHeavyMod",
+									"[glitcheson], @LakebedTempleEastWingFirstFloor, ltsmallkey:3, clawshot, $canLaunchBombs, $hasHeavyMod"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "ltb1",
+								"x": 2404,
+								"y": 299
+							},
+							{
+								"map": "ltfull",
+								"x": 5319,
+								"y": 299
+							}
+						],
+						"sections": [
+							{
+								"name": "Before Deku Toad Underwater Right Chest",
+								"access_rules": [
+									"@LakebedTempleEastWingFirstFloor, glitchesoff, zoraarmor, boots, ltsmallkey:3, $canLaunchBombs",
+									"@LakebedTempleEastWingFirstFloor, glitchesoff, zoraarmor, boots, skkeysy, $canLaunchBombs",
+									"@LakebedTempleEastWingFirstFloor, glitchesoff, zoraarmor, boots, ltsmallkey:3, clawshot, $canSmash",
+									"@LakebedTempleEastWingFirstFloor, glitchesoff, zoraarmor, boots, skkeysy, clawshot, $canSmash",
+									"[glitcheson], @LakebedTempleEastWingFirstFloor, $canDoLJA, $canSkipKeyToDekuToad, $hasHeavyMod",
+									"[glitcheson], @LakebedTempleEastWingFirstFloor, $canDoLJA, ltsmallkey:1, $hasHeavyMod",
+									"[glitcheson], @LakebedTempleEastWingFirstFloor, $canSkipKeyToDekuToad, clawshot, $canLaunchBombs, $hasHeavyMod",
+									"[glitcheson], @LakebedTempleEastWingFirstFloor, ltsmallkey:3, clawshot, $canLaunchBombs, $hasHeavyMod"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "ltb1",
+								"x": 471,
+								"y": 671
+							},
+							{
+								"map": "ltfull",
+								"x": 3386,
+								"y": 671
+							}
+						],
+						"sections": [
+							{
+								"name": "Big Key Chest",
+								"access_rules": [
+									"@LakebedTempleWestWing, zoraarmor, $canLaunchBombs, boots, clawshot, $hasWaterBombs",
+									"[glitcheson], @LakebedTempleWestWing, $canDoLJA, $canLaunchBombs, clawshot"
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

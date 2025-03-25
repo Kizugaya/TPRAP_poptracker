@@ -1,0 +1,236 @@
+[
+	{
+		"name": "Lakebed Temple",
+		"children": [
+			{
+				"name": "2F",
+				"children": [
+					{
+						"map_locations": [
+							{
+								"map": "lt2f",
+								"x": 1418,
+								"y": 1266
+							},
+							{
+								"map": "ltfull",
+								"x": 4333,
+								"y": 3026
+							}
+						],
+						"sections": [
+							{
+								"name": "Lobby Left Chest",
+								"access_rules": [
+									"@LakebedTempleEntrance, zoraarmor",
+									"[glitcheson], @LakebedTempleEntrance, $canDoAirRefill"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "lt2f",
+								"x": 1512,
+								"y": 1326
+							},
+							{
+								"map": "ltfull",
+								"x": 4427,
+								"y": 3086
+							}
+						],
+						"sections": [
+							{
+								"name": "Lobby Rear Chest",
+								"access_rules": [
+									"@LakebedTempleEntrance, zoraarmor",
+									"[glitcheson], @LakebedTempleEntrance, $canDoAirRefill"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "lt2f",
+								"x": 1615,
+								"y": 904
+							},
+							{
+								"map": "ltfull",
+								"x": 4530,
+								"y": 2664
+							}
+						],
+						"sections": [
+							{
+								"name": "Stalactite Room Chest",
+								"access_rules": [
+									"@LakebedTempleEntrance, $canLaunchBombs",
+									"[glitcheson], @LakebedTempleEntrance, $canDoLJA"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "lt2f",
+								"x": 1525,
+								"y": 529
+							},
+							{
+								"map": "ltfull",
+								"x": 4440,
+								"y": 2289
+							}
+						],
+						"sections": [
+							{
+								"name": "Chandelier Chest",
+								"access_rules": [
+									"@LakebedTempleCentralRoom, clawshot"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "lt2f",
+								"x": 2084,
+								"y": 608
+							},
+							{
+								"map": "ltfull",
+								"x": 4999,
+								"y": 2368
+							}
+						],
+						"sections": [
+							{
+								"name": "East Second Floor Southwest Chest",
+								"access_rules": [
+									"@LakebedTempleEastWingSecondFloor"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "lt2f",
+								"x": 2258,
+								"y": 666
+							},
+							{
+								"map": "ltfull",
+								"x": 5173,
+								"y": 2426
+							}
+						],
+						"sections": [
+							{
+								"name": "East Second Floor Southeast Chest",
+								"access_rules": [
+									"@LakebedTempleEastWingSecondFloor, $canLaunchBombs",
+									"@LakebedTempleEastWingSecondFloor, clawshot, $canSmash"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "lt2f",
+								"x": 623,
+								"y": 670
+							},
+							{
+								"map": "ltfull",
+								"x": 3538,
+								"y": 2430
+							}
+						],
+						"sections": [
+							{
+								"name": "West Second Floor Southwest Underwater Chest",
+								"access_rules": [
+									"@LakebedTempleWestWing, $canLaunchBombs, boots, clawshot"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "lt2f",
+								"x": 877,
+								"y": 433
+							},
+							{
+								"map": "ltfull",
+								"x": 3792,
+								"y": 2193
+							}
+						],
+						"sections": [
+							{
+								"name": "West Second Floor Central Small Chest",
+								"access_rules": [
+									"@LakebedTempleWestWing, clawshot"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "lt2f",
+								"x": 934,
+								"y": 429
+							},
+							{
+								"map": "ltfull",
+								"x": 3849,
+								"y": 2189
+							}
+						],
+						"sections": [
+							{
+								"name": "West Second Floor Northeast Chest",
+								"access_rules": [
+									"@LakebedTempleWestWing, $canLaunchBombs, clawshot"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "lt2f",
+								"x": 827,
+								"y": 653
+							},
+							{
+								"map": "ltfull",
+								"x": 3742,
+								"y": 2413
+							}
+						],
+						"sections": [
+							{
+								"name": "West Second Floor Southeast Chest",
+								"access_rules": [
+									"@LakebedTempleWestWing, $canLaunchBombs, clawshot"
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

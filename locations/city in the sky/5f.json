@@ -1,0 +1,45 @@
+[
+	{
+		"name": "City in the Sky",
+		"children": [
+			{
+				"name": "5F",
+				"children": [
+					{
+						"access_rules": [
+							"@CityinTheSkyBossRoom"
+						],
+						"map_locations": [
+							{
+								"map": "cs5f",
+								"x": 761,
+								"y": 144
+							},
+							{
+								"map": "csfull",
+								"x": 2999,
+								"y": 3658
+							}
+						],
+						"sections": [
+							{
+								"name": "Argorok Heart Container",
+								"access_rules": [
+									"$canDefeatArgorok",
+									"[glitcheson], $canDefeatArgorokGlitched"
+								]
+							},
+							{
+								"name": "Dungeon Reward",
+								"access_rules": [
+									"$canDefeatArgorok",
+									"[glitcheson], $canDefeatArgorokGlitched"
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

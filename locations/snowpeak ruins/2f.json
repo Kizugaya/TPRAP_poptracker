@@ -1,0 +1,138 @@
+[
+	{
+		"name": "Snowpeak Ruins",
+		"children": [
+			{
+				"name": "2F",
+				"children": [
+					{
+						"map_locations": [
+							{
+								"map": "sr2f",
+								"x": 170,
+								"y": 633
+							},
+							{
+								"map": "srfull",
+								"x": 1611,
+								"y": 633
+							}
+						],
+						"sections": [
+							{
+								"name": "Wooden Beam Chandelier Chest",
+								"access_rules": [
+									"@SnowpeakRuinsWoodenBeamRoom, ballchain, cheese",
+									"@SnowpeakRuinsWoodenBeamRoom, ballchain, skkeysy",
+									"[glitcheson], @SnowpeakRuinsWoodenBeamRoom, $canDoLJA, cheese",
+									"[glitcheson], @SnowpeakRuinsWoodenBeamRoom, $canDoLJA, skkeysy"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "sr2f",
+								"x": 725,
+								"y": 1461
+							},
+							{
+								"map": "srfull",
+								"x": 2166,
+								"y": 1461
+							}
+						],
+						"sections": [
+							{
+								"name": "Lobby Chandelier Chest",
+								"access_rules": [
+									"@SnowpeakRuinsEntrance, ballchain, cheese, srsmallkey:3",
+									"@SnowpeakRuinsEntrance, ballchain, skkeysy",
+									"[glitcheson], @SnowpeakRuinsEntrance, shadowcrystal, $canDoLJA"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "sr2f",
+								"x": 1288,
+								"y": 542
+							},
+							{
+								"map": "srfull",
+								"x": 2729,
+								"y": 542
+							}
+						],
+						"sections": [
+							{
+								"name": "Northeast Chandelier Chest",
+								"access_rules": [
+									"@SnowpeakRuinsNortheastChilfosRoomSecondFloor, $canDefeatChilfos, ballchain",
+									"[glitcheson], @SnowpeakRuinsNortheastChilfosRoomSecondFloor, $canDefeatChilfosGlitched, ballchain"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "sr2f",
+								"x": 167,
+								"y": 182
+							},
+							{
+								"map": "srfull",
+								"x": 1608,
+								"y": 182
+							}
+						],
+						"sections": [
+							{
+								"name": "Chapel Chest",
+								"access_rules": [
+									"@SnowpeakRuinsChapel, $canDefeatChilfos",
+									"[glitcheson], @SnowpeakRuinsChapel, $canDefeatChilfosGlitched"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Poes2F",
+				"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
+				"chest_opened_img": "images/Items/PoeSoul.png",
+				"children": [
+					{
+						"map_locations": [
+							{
+								"map": "sr2f",
+								"x": 1336,
+								"y": 1053,
+								"shape": "diamond"
+							},
+							{
+								"map": "srfull",
+								"x": 2777,
+								"y": 1053,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"name": "Ice Room Poe",
+								"access_rules": [
+									"@SnowpeakRuinsSecondFloorMiniFreezardRoom, shadowcrystal"
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

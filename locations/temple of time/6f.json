@@ -1,0 +1,37 @@
+[
+	{
+		"name": "Temple of Time",
+		"children": [
+			{
+				"name": "6F",
+				"children": [
+					{
+						"map_locations": [
+							{
+								"map": "tt6f",
+								"x": 640,
+								"y": 1036
+							},
+							{
+								"map": "ttfull",
+								"x": 1819,
+								"y": 2633
+							}
+						],
+						"sections": [
+							{
+								"name": "Scales Gohma Chest",
+								"access_rules": [
+									"@TempleofTimeScalesofTime, $canDefeatYoungGohma, $canDefeatBabyGohma",
+									"[glitcheson], @TempleofTimeScalesofTime, $canDefeatYoungGohmaGlitched, $canDefeatBabyGohma",
+									"[glitcheson], @TempleofTimeScalesofTime, $canDefeatYoungGohma, $canDefeatBabyGohmaGlitched",
+									"[glitcheson], @TempleofTimeScalesofTime, $canDefeatYoungGohmaGlitched, $canDefeatBabyGohmaGlitched"
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

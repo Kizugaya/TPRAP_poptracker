@@ -1,0 +1,81 @@
+[
+	{
+		"name": "Palace of Twilight",
+		"children": [
+			{
+				"name": "3F",
+				"children": [
+					{
+						"map_locations": [
+							{
+								"map": "pt3f",
+								"x": 350,
+								"y": 747
+							},
+							{
+								"map": "ptfull",
+								"x": 2128,
+								"y": 747
+							}
+						],
+						"sections": [
+							{
+								"name": "Big Key Chest",
+								"access_rules": [
+									"@PalaceofTwilightOutsideRoom, $canDefeatZantHead, doubleclawshot, glowingmastersword",
+									"[glitcheson], @PalaceofTwilightOutsideRoom, $canDefeatZantHeadGlitched, doubleclawshot, glowingmastersword"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "pt3f",
+								"x": 289,
+								"y": 622
+							},
+							{
+								"map": "ptfull",
+								"x": 2067,
+								"y": 622
+							}
+						],
+						"sections": [
+							{
+								"name": "Central Outdoor Chest",
+								"access_rules": [
+									"@PalaceofTwilightOutsideRoom, $canDefeatZantHead",
+									"[glitcheson], @PalaceofTwilightOutsideRoom, $canDefeatZantHeadGlitched"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "pt3f",
+								"x": 439,
+								"y": 678
+							},
+							{
+								"map": "ptfull",
+								"x": 2217,
+								"y": 678
+							}
+						],
+						"sections": [
+							{
+								"name": "Central Tower Chest",
+								"access_rules": [
+									"@PalaceofTwilightOutsideRoom, $canDefeatZantHead, clawshot, glowingmastersword",
+									"[glitcheson], @PalaceofTwilightOutsideRoom, $canDefeatZantHeadGlitched, clawshot, glowingmastersword"
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

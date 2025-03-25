@@ -1,0 +1,35 @@
+[
+	{
+		"name": "Temple of Time",
+		"children": [
+			{
+				"name": "2F",
+				"children": [
+					{
+						"map_locations": [
+							{
+								"map": "tt2f",
+								"x": 643,
+								"y": 1532
+							},
+							{
+								"map": "ttfull",
+								"x": 1822,
+								"y": 1532
+							}
+						],
+						"sections": [
+							{
+								"name": "First Staircase Gohma Gate Chest",
+								"access_rules": [
+									"@TempleofTimeConnectingCorridors, $canDefeatYoungGohma",
+									"[glitcheson], @TempleofTimeConnectingCorridors, $canDefeatYoungGohmaGlitched"
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

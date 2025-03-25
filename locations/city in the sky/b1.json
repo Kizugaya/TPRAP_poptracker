@@ -1,0 +1,57 @@
+[
+	{
+		"name": "City in the Sky",
+		"children": [
+			{
+				"name": "B1",
+				"children": [
+					{
+						"map_locations": [
+							{
+								"map": "csb1",
+								"x": 1513,
+								"y": 698
+							},
+							{
+								"map": "csfull",
+								"x": 5989,
+								"y": 698
+							}
+						],
+						"sections": [
+							{
+								"name": "East Wing Lower Level Chest",
+								"access_rules": [
+									"@CityinTheSkyEastWing, doubleclawshot, $canDefeatTileWorm, $canDefeatDinalfos",
+									"[glitcheson], @CityinTheSkyEastWing, doubleclawshot"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "csb1",
+								"x": 303,
+								"y": 546
+							},
+							{
+								"map": "csfull",
+								"x": 4779,
+								"y": 546
+							}
+						],
+						"sections": [
+							{
+								"name": "West Wing Baba Balcony Chest",
+								"access_rules": [
+									"@CityinTheSkyWestWing, doubleclawshot"
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

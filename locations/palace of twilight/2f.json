@@ -1,0 +1,35 @@
+[
+	{
+		"name": "Palace of Twilight",
+		"children": [
+			{
+				"name": "2F",
+				"children": [
+					{
+						"map_locations": [
+							{
+								"map": "pt2f",
+								"x": 574,
+								"y": 893
+							},
+							{
+								"map": "ptfull",
+								"x": 1463,
+								"y": 893
+							}
+						],
+						"sections": [
+							{
+								"name": "Central First Room Chest",
+								"access_rules": [
+									"@PalaceofTwilightCentralFirstRoom, $canDefeatZantHead, glowingmastersword",
+									"[glitcheson], @PalaceofTwilightCentralFirstRoom, $canDefeatZantHeadGlitched, glowingmastersword"
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

@@ -1,0 +1,368 @@
+[
+	{
+		"name": "Palace of Twilight",
+		"children": [
+			{
+				"name": "1F",
+				"children": [
+					{
+						"map_locations": [
+							{
+								"map": "pt1f",
+								"x": 200,
+								"y": 1074
+							},
+							{
+								"map": "ptfull",
+								"x": 200,
+								"y": 1074
+							}
+						],
+						"sections": [
+							{
+								"name": "West First Room Central Chest",
+								"access_rules": [
+									"@PalaceofTwilightWestWing, $canDefeatZantHead",
+									"[glitcheson], @PalaceofTwilightWestWing, $canDefeatZantHeadGlitched"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "pt1f",
+								"x": 45,
+								"y": 1141
+							},
+							{
+								"map": "ptfull",
+								"x": 45,
+								"y": 1141
+							}
+						],
+						"sections": [
+							{
+								"name": "West Wall of Darkness Chest",
+								"access_rules": [
+									"@PalaceofTwilightWestWing, glowingmastersword, clawshot"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "pt1f",
+								"x": 202,
+								"y": 798
+							},
+							{
+								"map": "ptfull",
+								"x": 202,
+								"y": 798
+							}
+						],
+						"sections": [
+							{
+								"name": "West Second Room Central Chest",
+								"access_rules": [
+									"@PalaceofTwilightWestWing, ptsmallkey:6, $canDefeatZantHead, clawshot",
+									"@PalaceofTwilightWestWing, skvanilla, ptsmallkey:3, $canDefeatZantHead, clawshot",
+									"@PalaceofTwilightWestWing, skkeysy, $canDefeatZantHead, clawshot",
+									"[glitcheson], @PalaceofTwilightWestWing, ptsmallkey:6, $canDefeatZantHeadGlitched, clawshot",
+									"[glitcheson], @PalaceofTwilightWestWing, skvanilla, ptsmallkey:3, $canDefeatZantHeadGlitched, clawshot",
+									"[glitcheson], @PalaceofTwilightWestWing, skkeysy, $canDefeatZantHeadGlitched, clawshot"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "pt1f",
+								"x": 254,
+								"y": 932
+							},
+							{
+								"map": "ptfull",
+								"x": 254,
+								"y": 932
+							}
+						],
+						"sections": [
+							{
+								"name": "West Second Room Lower South Chest",
+								"access_rules": [
+									"@PalaceofTwilightWestWing, ptsmallkey:6, $canDefeatZantHead, clawshot",
+									"@PalaceofTwilightWestWing, skvanilla, ptsmallkey:3, $canDefeatZantHead, clawshot",
+									"@PalaceofTwilightWestWing, skkeysy, $canDefeatZantHead, clawshot",
+									"[glitcheson], @PalaceofTwilightWestWing, ptsmallkey:6, $canDefeatZantHeadGlitched, clawshot",
+									"[glitcheson], @PalaceofTwilightWestWing, skvanilla, ptsmallkey:3, $canDefeatZantHeadGlitched, clawshot",
+									"[glitcheson], @PalaceofTwilightWestWing, skkeysy, $canDefeatZantHeadGlitched, clawshot"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "pt1f",
+								"x": 290,
+								"y": 939
+							},
+							{
+								"map": "ptfull",
+								"x": 290,
+								"y": 939
+							}
+						],
+						"sections": [
+							{
+								"name": "West Second Room Southeast Chest",
+								"access_rules": [
+									"@PalaceofTwilightWestWing, ptsmallkey:6, $canDefeatZantHead, doubleclawshot",
+									"@PalaceofTwilightWestWing, skvanilla, ptsmallkey:3, $canDefeatZantHead, doubleclawshot",
+									"@PalaceofTwilightWestWing, skkeysy, $canDefeatZantHead, doubleclawshot",
+									"[glitcheson], @PalaceofTwilightWestWing, ptsmallkey:6, $canDefeatZantHeadGlitched, doubleclawshot",
+									"[glitcheson], @PalaceofTwilightWestWing, skvanilla, ptsmallkey:3, $canDefeatZantHeadGlitched, doubleclawshot",
+									"[glitcheson], @PalaceofTwilightWestWing, skkeysy, $canDefeatZantHeadGlitched, doubleclawshot"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "pt1f",
+								"x": 809,
+								"y": 1056
+							},
+							{
+								"map": "ptfull",
+								"x": 809,
+								"y": 1056
+							}
+						],
+						"sections": [
+							{
+								"name": "East First Room Zant Head Chest",
+								"access_rules": [
+									"@PalaceofTwilightEastWing, clawshot, $canDefeatZantHead",
+									"[glitcheson], @PalaceofTwilightEastWing, clawshot, $canDefeatZantHeadGlitched"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "pt1f",
+								"x": 714,
+								"y": 1056
+							},
+							{
+								"map": "ptfull",
+								"x": 714,
+								"y": 1056
+							}
+						],
+						"sections": [
+							{
+								"name": "East First Room North Small Chest",
+								"access_rules": [
+									"@PalaceofTwilightEastWing, clawshot"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "pt1f",
+								"x": 654,
+								"y": 783
+							},
+							{
+								"map": "ptfull",
+								"x": 654,
+								"y": 783
+							}
+						],
+						"sections": [
+							{
+								"name": "East Second Room Northwest Chest",
+								"access_rules": [
+									"@PalaceofTwilightEastWing, $canDefeatZantHead, $canDefeatShadowBeast, clawshot, ptsmallkey:6",
+									"@PalaceofTwilightEastWing, $canDefeatZantHead, $canDefeatShadowBeast, clawshot, skvanilla, ptsmallkey:3",
+									"@PalaceofTwilightEastWing, $canDefeatZantHead, $canDefeatShadowBeast, clawshot, skkeysy",
+									"[glitcheson], @PalaceofTwilightEastWing, $canDefeatZantHeadGlitched, $canDefeatShadowBeast, clawshot, ptsmallkey:6",
+									"[glitcheson], @PalaceofTwilightEastWing, $canDefeatZantHeadGlitched, $canDefeatShadowBeast, clawshot, skvanilla, ptsmallkey:3",
+									"[glitcheson], @PalaceofTwilightEastWing, $canDefeatZantHeadGlitched, $canDefeatShadowBeast, clawshot, skkeysy"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "pt1f",
+								"x": 870,
+								"y": 815
+							},
+							{
+								"map": "ptfull",
+								"x": 870,
+								"y": 815
+							}
+						],
+						"sections": [
+							{
+								"name": "East Second Room Northeast Chest",
+								"access_rules": [
+									"@PalaceofTwilightEastWing, $canDefeatZantHead, $canDefeatShadowBeast, doubleclawshot, ptsmallkey:6",
+									"@PalaceofTwilightEastWing, $canDefeatZantHead, $canDefeatShadowBeast, doubleclawshot, skvanilla, ptsmallkey:3",
+									"@PalaceofTwilightEastWing, $canDefeatZantHead, $canDefeatShadowBeast, doubleclawshot, skkeysy",
+									"[glitcheson], @PalaceofTwilightEastWing, $canDefeatZantHeadGlitched, $canDefeatShadowBeast, doubleclawshot, ptsmallkey:6",
+									"[glitcheson], @PalaceofTwilightEastWing, $canDefeatZantHeadGlitched, $canDefeatShadowBeast, doubleclawshot, skvanilla, ptsmallkey:3",
+									"[glitcheson], @PalaceofTwilightEastWing, $canDefeatZantHeadGlitched, $canDefeatShadowBeast, doubleclawshot, skkeysy"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "pt1f",
+								"x": 652,
+								"y": 862
+							},
+							{
+								"map": "ptfull",
+								"x": 652,
+								"y": 862
+							}
+						],
+						"sections": [
+							{
+								"name": "East Second Room Southwest Chest",
+								"access_rules": [
+									"@PalaceofTwilightEastWing, $canDefeatZantHead, $canDefeatShadowBeast, doubleclawshot, ptsmallkey:6",
+									"@PalaceofTwilightEastWing, $canDefeatZantHead, $canDefeatShadowBeast, doubleclawshot, skvanilla, ptsmallkey:3",
+									"@PalaceofTwilightEastWing, $canDefeatZantHead, $canDefeatShadowBeast, doubleclawshot, skkeysy",
+									"[glitcheson], @PalaceofTwilightEastWing, $canDefeatZantHeadGlitched, $canDefeatShadowBeast, doubleclawshot, ptsmallkey:6",
+									"[glitcheson], @PalaceofTwilightEastWing, $canDefeatZantHeadGlitched, $canDefeatShadowBeast, doubleclawshot, skvanilla, ptsmallkey:3",
+									"[glitcheson], @PalaceofTwilightEastWing, $canDefeatZantHeadGlitched, $canDefeatShadowBeast, doubleclawshot, skkeysy"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "pt1f",
+								"x": 869,
+								"y": 861
+							},
+							{
+								"map": "ptfull",
+								"x": 869,
+								"y": 861
+							}
+						],
+						"sections": [
+							{
+								"name": "East Second Room Southeast Chest",
+								"access_rules": [
+									"@PalaceofTwilightEastWing, $canDefeatZantHead, $canDefeatShadowBeast, doubleclawshot, ptsmallkey:6",
+									"@PalaceofTwilightEastWing, $canDefeatZantHead, $canDefeatShadowBeast, doubleclawshot, skvanilla, ptsmallkey:3",
+									"@PalaceofTwilightEastWing, $canDefeatZantHead, $canDefeatShadowBeast, doubleclawshot, skkeysy",
+									"[glitcheson], @PalaceofTwilightEastWing, $canDefeatZantHeadGlitched, $canDefeatShadowBeast, doubleclawshot, ptsmallkey:6",
+									"[glitcheson], @PalaceofTwilightEastWing, $canDefeatZantHeadGlitched, $canDefeatShadowBeast, doubleclawshot, skvanilla, ptsmallkey:3",
+									"[glitcheson], @PalaceofTwilightEastWing, $canDefeatZantHeadGlitched, $canDefeatShadowBeast, doubleclawshot, skkeysy"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "pt1f",
+								"x": 845,
+								"y": 1155
+							},
+							{
+								"map": "ptfull",
+								"x": 845,
+								"y": 1155
+							}
+						],
+						"sections": [
+							{
+								"name": "East First Room East Alcove",
+								"access_rules": [
+									"@PalaceofTwilightEastWing, glowingmastersword",
+									"@PalaceofTwilightEastWing, clawshot, $canDefeatPhantomZant, $canDefeatZantHead, $canDefeatShadowBeast, ptsmallkey:6",
+									"@PalaceofTwilightEastWing, clawshot, $canDefeatPhantomZant, $canDefeatZantHead, $canDefeatShadowBeast, skkeysy",
+									"[glitcheson], @PalaceofTwilightEastWing, clawshot, $canDefeatPhantomZant, $canDefeatZantHeadGlitched, $canDefeatShadowBeast, ptsmallkey:6",
+									"[glitcheson], @PalaceofTwilightEastWing, clawshot, $canDefeatPhantomZant, $canDefeatZantHeadGlitched, $canDefeatShadowBeast, skkeysy"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "pt1f",
+								"x": 677,
+								"y": 1155
+							},
+							{
+								"map": "ptfull",
+								"x": 677,
+								"y": 1155
+							}
+						],
+						"sections": [
+							{
+								"name": "East First Room West Alcove",
+								"access_rules": [
+									"@PalaceofTwilightEastWing, glowingmastersword",
+									"@PalaceofTwilightEastWing, clawshot, $canDefeatPhantomZant, $canDefeatZantHead, $canDefeatShadowBeast, ptsmallkey:6",
+									"@PalaceofTwilightEastWing, clawshot, $canDefeatPhantomZant, $canDefeatZantHead, $canDefeatShadowBeast, skkeysy",
+									"[glitcheson], @PalaceofTwilightEastWing, clawshot, $canDefeatPhantomZant, $canDefeatZantHeadGlitched, $canDefeatShadowBeast, ptsmallkey:6",
+									"[glitcheson], @PalaceofTwilightEastWing, clawshot, $canDefeatPhantomZant, $canDefeatZantHeadGlitched, $canDefeatShadowBeast, skkeysy"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "pt1f",
+								"x": 485,
+								"y": 1436
+							},
+							{
+								"map": "ptfull",
+								"x": 485,
+								"y": 1436
+							}
+						],
+						"sections": [
+							{
+								"name": "Collect Both Sols",
+								"access_rules": [
+									"@PalaceofTwilightEntrance, clawshot, $canDefeatPhantomZant, $canDefeatZantHead, $canDefeatShadowBeast, ptsmallkey:7",
+									"@PalaceofTwilightEntrance, clawshot, $canDefeatPhantomZant, $canDefeatZantHead, $canDefeatShadowBeast, skkeysy",
+									"[glitcheson], @PalaceofTwilightEntrance, clawshot, $canDefeatPhantomZant, $canDefeatZantHeadGlitched, $canDefeatShadowBeast, ptsmallkey:7",
+									"[glitcheson], @PalaceofTwilightEntrance, clawshot, $canDefeatPhantomZant, $canDefeatZantHeadGlitched, $canDefeatShadowBeast, skkeysy"
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

@@ -1,0 +1,69 @@
+{
+	"item_grid": {
+		"type": "container",
+		"orientation": "vertical",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"item_size": "71",
+				"item_margin": "1,1,1,1",
+				"margin": "1,1,1,1",
+				"item_h_alignment": "center",
+				"item_v_alignment": "center",
+				"rows":[
+					[
+						"fishingrod",
+						"slingshot",
+						"lamp",
+						"boomerang",
+						"boots",
+						"bow",
+						"hawkeye"
+					],
+					[
+						"bombbag",
+						"giantbombs",
+						"waterbombs",
+						"clawshot",
+						"spinner",
+						"ballandchain",
+						"dominionrod"
+					],
+					[
+						"asheisketch",
+						"aurumemo",
+						"bottle",
+						"hiddenskill",
+						"renadosletter",
+						"horsecall",
+						"skybook"
+					],
+					[
+						"shadowcrystal",
+						"wallet",
+						"woodensword",
+						"ordonshield",
+						"hylianshield",
+						"zoraarmor",
+						"magicarmor"
+					],
+					[
+						"youthsscent",
+						"iliascent",
+						"poescent",
+						"reekfishscent",
+						"medicinescent"
+					],
+					[
+						"poesoul",
+						"heartpiece",
+						"heartcontainer",
+						"fusedshadow",
+						"mirrorshard"
+					]
+				]
+			}
+		]
+	}
+}

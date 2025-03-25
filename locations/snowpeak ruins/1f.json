@@ -1,0 +1,405 @@
+[
+	{
+		"name": "Snowpeak Ruins",
+		"children": [
+			{
+				"name": "1F",
+				"children": [
+					{
+						"map_locations": [
+							{
+								"map": "sr1f",
+								"x": 829,
+								"y": 1481
+							},
+							{
+								"map": "srfull",
+								"x": 829,
+								"y": 1481
+							}
+						],
+						"sections": [
+							{
+								"name": "Lobby East Armor Chest",
+								"access_rules": [
+									"@SnowpeakRuinsEntrance, ballchain"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "sr1f",
+								"x": 621,
+								"y": 1579
+							},
+							{
+								"map": "srfull",
+								"x": 621,
+								"y": 1579
+							}
+						],
+						"sections": [
+							{
+								"name": "Lobby West Armor Chest",
+								"access_rules": [
+									"@SnowpeakRuinsEntrance, ballchain"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "sr1f",
+								"x": 754,
+								"y": 979
+							},
+							{
+								"map": "srfull",
+								"x": 754,
+								"y": 979
+							}
+						],
+						"sections": [
+							{
+								"name": "Mansion Map",
+								"access_rules": [
+									"@SnowpeakRuinsYetoandYeta"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "sr1f",
+								"x": 900,
+								"y": 619
+							},
+							{
+								"map": "srfull",
+								"x": 900,
+								"y": 619
+							}
+						],
+						"sections": [
+							{
+								"name": "East Courtyard Buried Chest",
+								"access_rules": [
+									"@SnowpeakRuinsEastCourtyard, shadowcrystal"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "sr1f",
+								"x": 907,
+								"y": 865
+							},
+							{
+								"map": "srfull",
+								"x": 907,
+								"y": 865
+							}
+						],
+						"sections": [
+							{
+								"name": "East Courtyard Chest",
+								"access_rules": [
+									"@SnowpeakRuinsEastCourtyard"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "sr1f",
+								"x": 1400,
+								"y": 520
+							},
+							{
+								"map": "srfull",
+								"x": 1400,
+								"y": 520
+							}
+						],
+						"sections": [
+							{
+								"name": "Ordon Pumpkin Chest",
+								"access_rules": [
+									"@SnowpeakRuinsNortheastChilfosRoomFirstFloor, $canDefeatChilfos",
+									"[glitcheson], @SnowpeakRuinsNortheastChilfosRoomFirstFloor, $canDefeatChilfosGlitched"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "sr1f",
+								"x": 544,
+								"y": 605
+							},
+							{
+								"map": "srfull",
+								"x": 544,
+								"y": 605
+							}
+						],
+						"sections": [
+							{
+								"name": "West Courtyard Buried Chest",
+								"access_rules": [
+									"@SnowpeakRuinsWestCourtyard, shadowcrystal"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "sr1f",
+								"x": 166,
+								"y": 802
+							},
+							{
+								"map": "srfull",
+								"x": 166,
+								"y": 802
+							}
+						],
+						"sections": [
+							{
+								"name": "Wooden Beam Central Chest",
+								"access_rules": [
+									"@SnowpeakRuinsWoodenBeamRoom, $canDefeatIceKeese",
+									"[glitcheson], @SnowpeakRuinsWoodenBeamRoom, $canDefeatIceKeeseGlitched"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "sr1f",
+								"x": 276,
+								"y": 881
+							},
+							{
+								"map": "srfull",
+								"x": 276,
+								"y": 881
+							}
+						],
+						"sections": [
+							{
+								"name": "Wooden Beam Southeast Chest",
+								"access_rules": [
+									"@SnowpeakRuinsWoodenBeamRoom, $canDefeatIceKeese",
+									"[glitcheson], @SnowpeakRuinsWoodenBeamRoom, $canDefeatIceKeeseGlitched"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "sr1f",
+								"x": 725,
+								"y": 896
+							},
+							{
+								"map": "srfull",
+								"x": 725,
+								"y": 896
+							}
+						],
+						"sections": [
+							{
+								"name": "Courtyard Central Chest",
+								"access_rules": [
+									"@SnowpeakRuinsWestCourtyard, ballchain",
+									"@SnowpeakRuinsWestCourtyard, $hasBombs, srsmallkey:2",
+									"@SnowpeakRuinsWestCourtyard, $hasBombs, cheese, glitchesoff",
+									"@SnowpeakRuinsWestCourtyard, $hasBombs, skkeysy"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "sr1f",
+								"x": 723,
+								"y": 339
+							},
+							{
+								"map": "srfull",
+								"x": 723,
+								"y": 339
+							}
+						],
+						"sections": [
+							{
+								"name": "Ball and Chain",
+								"access_rules": [
+									"@SnowpeakRuinsDarkhammerRoom, $canDefeatDarkhammer",
+									"[glitcheson], @SnowpeakRuinsDarkhammerRoom, $canDefeatDarkhammerGlitched"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "sr1f",
+								"x": 722,
+								"y": 24
+							},
+							{
+								"map": "srfull",
+								"x": 722,
+								"y": 24
+							}
+						],
+						"sections": [
+							{
+								"name": "Chest After Darkhammer",
+								"access_rules": [
+									"@SnowpeakRuinsDarkhammerRoom, $canDefeatDarkhammer, ballchain",
+									"[glitcheson], @SnowpeakRuinsDarkhammerRoom, $canDefeatDarkhammerGlitched, ballchain"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "sr1f",
+								"x": 264,
+								"y": 1166
+							},
+							{
+								"map": "srfull",
+								"x": 264,
+								"y": 1166
+							}
+						],
+						"sections": [
+							{
+								"name": "Broken Floor Chest",
+								"access_rules": [
+									"@SnowpeakRuinsCagedFreezardRoom, ballchain"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "sr1f",
+								"x": 36,
+								"y": 385
+							},
+							{
+								"map": "srfull",
+								"x": 36,
+								"y": 385
+							}
+						],
+						"sections": [
+							{
+								"name": "West Cannon Room Central Chest",
+								"access_rules": [
+									"@SnowpeakRuinsWestCannonRoom, ballchain"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "sr1f",
+								"x": 507,
+								"y": 260
+							},
+							{
+								"map": "srfull",
+								"x": 507,
+								"y": 260
+							}
+						],
+						"sections": [
+							{
+								"name": "West Canon Room Corner Chest",
+								"access_rules": [
+									"@SnowpeakRuinsWestCannonRoom, $canSmash"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Poes1F",
+				"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
+				"chest_opened_img": "images/Items/PoeSoul.png",
+				"children": [
+					{
+						"map_locations": [
+							{
+								"map": "sr1f",
+								"x": 829,
+								"y": 1579,
+								"shape": "diamond"
+							},
+							{
+								"map": "srfull",
+								"x": 829,
+								"y": 1579,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"name": "Lobby Armor Poe",
+								"access_rules": [
+									"@SnowpeakRuinsEntrance, shadowcrystal, ballchain"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "sr1f",
+								"x": 726,
+								"y": 1316,
+								"shape": "diamond"
+							},
+							{
+								"map": "srfull",
+								"x": 726,
+								"y": 1316,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"name": "Lobby Poe",
+								"access_rules": [
+									"@SnowpeakRuinsEntrance, shadowcrystal"
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

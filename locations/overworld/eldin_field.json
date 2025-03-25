@@ -1,0 +1,225 @@
+[
+	{
+		"name": "Overworld",
+		"children": [
+			{
+				"name": "Eldin Field",
+				"children": [
+					{
+						"map_locations": [
+							{
+								"map": "ef",
+								"x": 1110,
+								"y": 1543
+							},
+							{
+								"map": "overworld",
+								"x": 6671,
+								"y": 4397
+							}
+						],
+						"sections": [
+							{
+								"name": "Bomb Rock Chest",
+								"access_rules": [
+									"@EldinField, $canSmash",
+									"[glitcheson], @EldinField, $canDoMapGlitch",
+									"[glitcheson], @EldinField, $canDoEBMoonBoots, $canDoLJA"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "ef",
+								"x": 42,
+								"y": 1090
+							},
+							{
+								"map": "overworld",
+								"x": 5600,
+								"y": 3944
+							}
+						],
+						"sections": [
+							{
+								"name": "Goron Springwater Rush",
+								"access_rules": [
+									"@EldinField, $canSmash",
+									"@EldinField, gatekeys, $lanayruTwilightCleared",
+									"@EldinField, gatekeys, shadowcrystal",
+									"@EldinField, skkeysy, $lanayruTwilightCleared",
+									"@EldinField, skkeysy, shadowcrystal"
+								]
+							}
+						]
+					},
+					{
+						"name": "Bomskit Grotto",
+						"access_rules": [
+							"@EldinFieldBombskitGrotto"
+						],
+						"map_locations": [
+							{
+								"map": "ef",
+								"x": 794,
+								"y": 909
+							},
+							{
+								"map": "overworld",
+								"x": 6351,
+								"y": 3757
+							}
+						],
+						"sections": [
+							{
+								"name": "Left Chest",
+								"access_rules": [
+									"$canDefeatBomskit",
+									"[glitcheson], $canDefeatBomskitGlitched"
+								]
+							},
+							{
+								"name": "Lantern Chest",
+								"access_rules": [
+									"$canDefeatBomskit, lantern",
+									"[glitcheson], $canDefeatBomskitGlitched, lantern"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "ef",
+								"x": 1680,
+								"y": 400
+							},
+							{
+								"map": "overworld",
+								"x": 7235,
+								"y": 3249
+							}
+						],
+						"sections": [
+							{
+								"name": "Water Bomb Fish Grotto",
+								"access_rules": [
+									"@EldinFieldWaterBombFishGrotto"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "ef",
+								"x": 1739,
+								"y": 282
+							},
+							{
+								"map": "overworld",
+								"x": 7300,
+								"y": 3133
+							}
+						],
+						"sections": [
+							{
+								"name": "Owl Statue Chest",
+								"access_rules": [
+									"@EldinField, powereddominionrod",
+									"[glitcheson], @EldinField, $canDoLJA",
+									"[glitcheson], shadowcrystal"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Bugs",
+				"chest_unopened_img": "images/Items/GoldenBugGrayed.png",
+				"chest_opened_img": "images/Items/GoldenBug.png",
+				"access_rules": [
+					"@EldinField"
+				],
+				"children": [
+					{
+						"map_locations": [
+							{
+								"map": "ef",
+								"x": 1445,
+								"y": 1183,
+								"shape": "diamond"
+							},
+							{
+								"map": "overworld",
+								"x": 7010,
+								"y": 4036,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"name": "Male Grasshopper",
+								"access_rules": [
+									""
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "ef",
+								"x": 364,
+								"y": 485,
+								"shape": "diamond"
+							},
+							{
+								"map": "overworld",
+								"x": 5958,
+								"y": 3340,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"name": "Female Grasshopper",
+								"access_rules": [
+									""
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "ef",
+								"x": 1846,
+								"y": 302,
+								"shape": "diamond"
+							},
+							{
+								"map": "overworld",
+								"x": 7407,
+								"y": 3158,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"name": "Male Phasmid",
+								"access_rules": [
+									"boomerang",
+									"clawshot"
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

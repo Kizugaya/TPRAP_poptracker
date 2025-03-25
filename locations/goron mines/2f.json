@@ -1,0 +1,372 @@
+[
+	{
+		"name": "Goron Mines",
+		"children": [
+			{
+				"name": "2F",
+				"children": [
+					{
+						"map_locations": [
+							{
+								"map": "gm2f",
+								"x": 1597,
+								"y": 1053
+							},
+							{
+								"map": "gmfull",
+								"x": 4394,
+								"y": 1053
+							}
+						],
+						"sections": [
+							{
+								"name": "Crystal Switch Room Underwater Chest",
+								"access_rules": [
+									"@GoronMinesCrystalSwitchRoom, boots",
+									"[glitcheson], @GoronMinesCrystalSwitchRoom, $hasHeavyMod"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "gm2f",
+								"x": 1588,
+								"y": 1000
+							},
+							{
+								"map": "gmfull",
+								"x": 4385,
+								"y": 1000
+							}
+						],
+						"sections": [
+							{
+								"name": "Crystal Switch Room Small Chest",
+								"access_rules": [
+									"@GoronMinesCrystalSwitchRoom, boots"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "gm2f",
+								"x": 1384,
+								"y": 957
+							},
+							{
+								"map": "gmfull",
+								"x": 4181,
+								"y": 957
+							}
+						],
+						"sections": [
+							{
+								"name": "After Crystal Switch Room Magnet Wall Chest",
+								"access_rules": [
+									"@GoronMinesCrystalSwitchRoom, boots"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "gm2f",
+								"x": 1413,
+								"y": 356
+							},
+							{
+								"map": "gmfull",
+								"x": 4210,
+								"y": 356
+							}
+						],
+						"sections": [
+							{
+								"name": "Outside Beamos Chest",
+								"access_rules": [
+									"@GoronMinesNorthWing"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "gm2f",
+								"x": 1743,
+								"y": 61
+							},
+							{
+								"map": "gmfull",
+								"x": 4540,
+								"y": 61
+							}
+						],
+						"sections": [
+							{
+								"name": "Outside Clawshot Chest",
+								"access_rules": [
+									"@GoronMinesNorthWing, clawshot, bow",
+									"@GoronMinesNorthWing, clawshot, slingshot",
+									"[glitcheson], @GoronMinesNorthWing, clawshot"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "gm2f",
+								"x": 1708,
+								"y": 211
+							},
+							{
+								"map": "gmfull",
+								"x": 4505,
+								"y": 211
+							}
+						],
+						"sections": [
+							{
+								"name": "Outside Underwater Chest",
+								"access_rules": [
+									"@GoronMinesNorthWing, boots, $hasWaterBombs",
+									"@GoronMinesNorthWing, boots, sword",
+									"[glitcheson], @GoronMinesNorthWing, $hasHeavyMod"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "gm2f",
+								"x": 2670,
+								"y": 181
+							},
+							{
+								"map": "gmfull",
+								"x": 5467,
+								"y": 181
+							}
+						],
+						"sections": [
+							{
+								"name": "Gor Ebizo Key Shard",
+								"access_rules": [
+									"@GoronMinesUpperEastWing"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "gm2f",
+								"x": 2753,
+								"y": 209
+							},
+							{
+								"map": "gmfull",
+								"x": 5550,
+								"y": 209
+							}
+						],
+						"sections": [
+							{
+								"name": "Gor Ebizo Chest",
+								"access_rules": [
+									"@GoronMinesUpperEastWing"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "gm2f",
+								"x": 2411,
+								"y": 333
+							},
+							{
+								"map": "gmfull",
+								"x": 5208,
+								"y": 333
+							}
+						],
+						"sections": [
+							{
+								"name": "Chest Before Dangoro",
+								"access_rules": [
+									"@GoronMinesUpperEastWing, boots",
+									"[glitcheson], @GoronMinesUpperEastWing, $canDoLJA"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "gm2f",
+								"x": 2226,
+								"y": 1023
+							},
+							{
+								"map": "gmfull",
+								"x": 5023,
+								"y": 1023
+							}
+						],
+						"sections": [
+							{
+								"name": "Dangoro Chest",
+								"access_rules": [
+									"@GoronMinesUpperEastWing, boots, $canDefeatDangoro",
+									"[glitcheson], @GoronMinesUpperEastWing, boots, $canDefeatDangoroGlitched"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "gm2f",
+								"x": 2083,
+								"y": 1266
+							},
+							{
+								"map": "gmfull",
+								"x": 4880,
+								"y": 1266
+							}
+						],
+						"sections": [
+							{
+								"name": "Beamos Room Chest",
+								"access_rules": [
+									"@GoronMinesUpperEastWing, boots, $canDefeatDangoro, bow",
+									"[glitcheson], @GoronMinesUpperEastWing, boots, $canDefeatDangoroGlitched, bow",
+									"[glitcheson], @GoronMinesUpperEastWing, boots, $canDefeatDangoro, $canDefeatBeamos",
+									"[glitcheson], @GoronMinesUpperEastWing, boots, $canDefeatDangoroGlitched, $canDefeatBeamos"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "gm2f",
+								"x": 2674,
+								"y": 1267
+							},
+							{
+								"map": "gmfull",
+								"x": 5471,
+								"y": 1267
+							}
+						],
+						"sections": [
+							{
+								"name": "Gor Liggs Key Shard",
+								"access_rules": [
+									"@GoronMinesUpperEastWing, boots, $canDefeatDangoro, bow",
+									"[glitcheson], @GoronMinesUpperEastWing, boots, $canDefeatDangoroGlitched, bow",
+									"[glitcheson], @GoronMinesUpperEastWing, boots, $canDefeatDangoro, $canDefeatBeamos",
+									"[glitcheson], @GoronMinesUpperEastWing, boots, $canDefeatDangoroGlitched, $canDefeatBeamos"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "gm2f",
+								"x": 2764,
+								"y": 1269
+							},
+							{
+								"map": "gmfull",
+								"x": 5561,
+								"y": 1269
+							}
+						],
+						"sections": [
+							{
+								"name": "Gor Liggs Chest",
+								"access_rules": [
+									"@GoronMinesUpperEastWing, boots, $canDefeatDangoro, bow",
+									"[glitcheson], @GoronMinesUpperEastWing, boots, $canDefeatDangoroGlitched, bow",
+									"[glitcheson], @GoronMinesUpperEastWing, boots, $canDefeatDangoro, $canDefeatBeamos",
+									"[glitcheson], @GoronMinesUpperEastWing, boots, $canDefeatDangoroGlitched, $canDefeatBeamos"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "gm2f",
+								"x": 1829,
+								"y": 1659
+							},
+							{
+								"map": "gmfull",
+								"x": 4626,
+								"y": 1659
+							}
+						],
+						"sections": [
+							{
+								"name": "Main Magnet Room Top Chest",
+								"access_rules": [
+									"@GoronMinesMagnetRoom, $canDefeatDangoro, boots, gmsmallkey:3, bow",
+									"@GoronMinesMagnetRoom, $canDefeatDangoro, boots, skkeysy, bow",
+									"[glitcheson], @GoronMinesMagnetRoom, $canDefeatDangoroGlitched, boots, gmsmallkey:3, bow",
+									"[glitcheson], @GoronMinesMagnetRoom, $canDefeatDangoroGlitched, boots, skkeysy, bow",
+									"[glitcheson], @GoronMinesMagnetRoom, @GoronMinesUpperEastWing, $canDefeatDangoro, $canDefeatBeamos",
+									"[glitcheson], @GoronMinesMagnetRoom, @GoronMinesUpperEastWing, $canDefeatDangoroGlitched, $canDefeatBeamos"
+								]
+							}
+						]
+					},
+					{
+						"access_rules": [
+							"@GoronMinesBossRoom"
+						],
+						"map_locations": [
+							{
+								"map": "gm2f",
+								"x": 968,
+								"y": 764
+							},
+							{
+								"map": "gmfull",
+								"x": 3765,
+								"y": 764
+							}
+						],
+						"sections": [
+							{
+								"name": "Fyrus Heart Container",
+								"access_rules": [
+									"$canDefeatFyrus"
+								]
+							},
+							{
+								"name": "Dungeon Reward",
+								"access_rules": [
+									"$canDefeatFyrus"
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

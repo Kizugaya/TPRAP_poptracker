@@ -1,0 +1,215 @@
+[
+	{
+		"name": "Overworld",
+		"children": [
+			{
+				"name": "Zora's Domain",
+				"children": [
+					{
+						"map_locations": [
+							{
+								"map": "zd",
+								"x": 370,
+								"y": 568
+							},
+							{
+								"map": "overworld",
+								"x": 4932,
+								"y": 610
+							}
+						],
+						"sections": [
+							{
+								"name": "Chest Behind Waterfall",
+								"access_rules": [
+									"@ZorasDomain, shadowcrystal",
+									"[glitcheson], @ZorasDomain, $canDoBSMoonBoots",
+									"[glitcheson], @ZorasDomain, spinner",
+									"[glitcheson], @ZorasDomain, $hasBombs, sword",
+									"[glitcheson], @ZorasDomain, $canDoLJA"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "zd",
+								"x": 404,
+								"y": 563
+							},
+							{
+								"map": "overworld",
+								"x": 4966,
+								"y": 607
+							}
+						],
+						"sections": [
+							{
+								"name": "Chest By Mother and Child Isles",
+								"access_rules": [
+									"@ZorasDomain"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "zd",
+								"x": 284,
+								"y": 124
+							},
+							{
+								"map": "overworld",
+								"x": 4846,
+								"y": 168
+							}
+						],
+						"sections": [
+							{
+								"name": "Underwater Goron",
+								"access_rules": [
+									"@ZorasThroneRoom, boots, zoraarmor, $hasWaterBombs",
+									"[glitcheson], @ZorasThroneRoom, boots, $hasWaterBombs"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "zd",
+								"x": 276,
+								"y": 160
+							},
+							{
+								"map": "overworld",
+								"x": 4838,
+								"y": 204
+							}
+						],
+						"sections": [
+							{
+								"name": "Light All Torches Chest",
+								"access_rules": [
+									"@ZorasThroneRoom, lantern, boots",
+									"[glitcheson], @ZorasThroneRoom, lantern, $hasHeavyMod"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "zd",
+								"x": 296,
+								"y": 160
+							},
+							{
+								"map": "overworld",
+								"x": 4858,
+								"y": 204
+							}
+						],
+						"sections": [
+							{
+								"name": "Extinguish All Torches Chest",
+								"access_rules": [
+									"@ZorasThroneRoom, boomerang, boots",
+									"[glitcheson], @ZorasThroneRoom, boomerang, $hasHeavyMod"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Poes",
+				"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
+				"chest_opened_img": "images/Items/PoeSoul.png",
+				"children": [
+					{
+						"map_locations": [
+							{
+								"map": "zd",
+								"x": 389,
+								"y": 603,
+								"shape": "diamond"
+							},
+							{
+								"map": "overworld",
+								"x": 4950,
+								"y": 647,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"name": "Mother and Child Isle Poe",
+								"access_rules": [
+									"@ZorasDomain, shadowcrystal"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "zd",
+								"x": 280,
+								"y": 434,
+								"shape": "diamond"
+							},
+							{
+								"map": "overworld",
+								"x": 4844,
+								"y": 481,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"name": "Waterfall Poe",
+								"access_rules": [
+									"@ZorasDomain, shadowcrystal"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Bugs",
+				"chest_unopened_img": "images/Items/GoldenBugGrayed.png",
+				"chest_opened_img": "images/Items/GoldenBug.png",
+				"children": [
+					{
+						"map_locations": [
+							{
+								"map": "zd",
+								"x": 417,
+								"y": 692,
+								"shape": "diamond"
+							},
+							{
+								"map": "overworld",
+								"x": 4979,
+								"y": 735,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"name": "Male Dragonfly",
+								"access_rules": [
+									"@ZorasDomain"
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

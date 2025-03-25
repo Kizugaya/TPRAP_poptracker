@@ -1,0 +1,229 @@
+[
+	{
+		"name": "Overworld",
+		"children": [
+			{
+				"name": "Lanayru Field",
+				"children": [
+					{
+						"map_locations": [
+							{
+								"map": "lf",
+								"x": 312,
+								"y": 1664
+							},
+							{
+								"map": "overworld",
+								"x": 3598,
+								"y": 3369
+							}
+						],
+						"sections": [
+							{
+								"name": "Spinner Track Chest",
+								"access_rules": [
+									"@HyruleFieldNearSpinnerRails, $canSmash, spinner",
+									"[glitcheson], @HyruleFieldNearSpinnerRails, $canDoMapGlitch"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "lf",
+								"x": 1585,
+								"y": 1220
+							},
+							{
+								"map": "overworld",
+								"x": 4871,
+								"y": 2916
+							}
+						],
+						"sections": [
+							{
+								"name": "Behind Gate Underwater Chest",
+								"access_rules": [
+									"@LanayruField, boots",
+									"[glitcheson], @LanayruField, $hasHeavyMod"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "lf",
+								"x": 1551,
+								"y": 429
+							},
+							{
+								"map": "overworld",
+								"x": 4835,
+								"y": 2128
+							}
+						],
+						"sections": [
+							{
+								"name": "Skulltula Grotto Chest",
+								"access_rules": [
+									"@LanayruFieldSkulltulaGrotto, $canDefeatSkulltula, lantern, $canBreakWoodenDoor",
+									"[glitcheson], @LanayruFieldSkulltulaGrotto, lantern, $canBreakWoodenDoor",
+									"[glitcheson], @LanayruFieldSkulltulaGrotto, lantern, $canBreakWoodenDoorGlitched"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "lf",
+								"x": 1533,
+								"y": 319
+							},
+							{
+								"map": "overworld",
+								"x": 4818,
+								"y": 2018
+							}
+						],
+						"sections": [
+							{
+								"name": "Ice Block Puzzle Cave Chest",
+								"access_rules": [
+									"@LanayruIcePuzzleCave, ballchain"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Poes",
+				"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
+				"chest_opened_img": "images/Items/PoeSoul.png",
+				"children": [
+					{
+						"map_locations": [
+							{
+								"map": "lf",
+								"x": 1620,
+								"y": 900,
+								"shape": "diamond"
+							},
+							{
+								"map": "overworld",
+								"x": 4905,
+								"y": 2597,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"name": "Bridge Poe",
+								"access_rules": [
+									"@LanayruField, $canCompleteMDH, shadowcrystal, $allTwilightCleared"
+								]
+							}
+						]
+					},
+					{
+						"name": "Grotto",
+						"access_rules": [
+							"@LanayruFieldPoeGrotto"
+						],
+						"map_locations": [
+							{
+								"map": "lf",
+								"x": 900,
+								"y": 921,
+								"shape": "diamond"
+							},
+							{
+								"map": "overworld",
+								"x": 4185,
+								"y": 2610,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"name": "Left Poe",
+								"access_rules": [
+									"shadowcrystal"
+								]
+							},
+							{
+								"name": "Right Poe",
+								"access_rules": [
+									"shadowcrystal"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Bugs",
+				"chest_unopened_img": "images/Items/GoldenBugGrayed.png",
+				"chest_opened_img": "images/Items/GoldenBug.png",
+				"access_rules": [
+					"@LanayruField"
+				],
+				"children": [
+					{
+						"map_locations": [
+							{
+								"map": "lf",
+								"x": 1504,
+								"y": 303,
+								"shape": "diamond"
+							},
+							{
+								"map": "overworld",
+								"x": 4787,
+								"y": 2002,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"name": "Female Stag Beetle",
+								"access_rules": [
+									"boomerang",
+									"clawshot"
+								]
+							}
+						]
+					},
+					{
+						"map_locations": [
+							{
+								"map": "lf",
+								"x": 1070,
+								"y": 885,
+								"shape": "diamond"
+							},
+							{
+								"map": "overworld",
+								"x": 4350,
+								"y": 2590,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"name": "Male Stag Beetle",
+								"access_rules": [
+									"boomerang",
+									"clawshot"
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]
