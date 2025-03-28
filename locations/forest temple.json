@@ -6,6 +6,7 @@
 				"name": "1F",
 				"children": [
 					{
+						"name": "Entrance Vines Chest",
 						"map_locations": [
 							{
 								"map": "ft1f",
@@ -20,7 +21,6 @@
 						],
 						"sections": [
 							{
-								"name": "Entrance Vines Chest",
 								"access_rules": [
 									"@ForestTempleEntrance, $canDefeatWalltula",
 									"[glitcheson], @ForestTempleEntrance, $canDefeatWalltulaGlitched"
@@ -29,6 +29,7 @@
 						]
 					},
 					{
+						"name": "Central Chest Behind Stairs",
 						"map_locations": [
 							{
 								"map": "ft1f",
@@ -43,7 +44,6 @@
 						],
 						"sections": [
 							{
-								"name": "Central Chest Behind Stairs",
 								"access_rules": [
 									"@ForestTempleLobby, boomerang, glitchesoff",
 									"[glitcheson], @ForestTempleLobby, boomerang, $canDefeatBombling",
@@ -54,6 +54,7 @@
 						]
 					},
 					{
+						"name": "Central North Chest",
 						"map_locations": [
 							{
 								"map": "ft1f",
@@ -68,7 +69,6 @@
 						],
 						"sections": [
 							{
-								"name": "Central North Chest",
 								"access_rules": [
 									"@ForestTempleLobby, lantern",
 									"[glitcheson], @ForestTempleLobby, lantern, $canDoLJA",
@@ -78,6 +78,7 @@
 						]
 					},
 					{
+						"name": "Windless Bridge Chest",
 						"map_locations": [
 							{
 								"map": "ft1f",
@@ -92,7 +93,6 @@
 						],
 						"sections": [
 							{
-								"name": "Windless Bridge Chest",
 								"access_rules": [
 									"@ForestTempleNorthWing"
 								]
@@ -100,6 +100,7 @@
 						]
 					},
 					{
+						"name": "Second Monkey Under Bridge Chest",
 						"map_locations": [
 							{
 								"map": "ft1f",
@@ -114,7 +115,6 @@
 						],
 						"sections": [
 							{
-								"name": "Second Monkey Under Bridge Chest",
 								"access_rules": [
 									"@ForestTempleEastWing, ftsmallkey:4",
 									"@ForestTempleEastWing, skkeysy"
@@ -123,6 +123,7 @@
 						]
 					},
 					{
+						"name": "Totem Pole Chest",
 						"map_locations": [
 							{
 								"map": "ft1f",
@@ -137,7 +138,6 @@
 						],
 						"sections": [
 							{
-								"name": "Totem Pole Chest",
 								"access_rules": [
 									"@ForestTempleWestWing, glitchesoff",
 									"[glitcheson], @ForestTempleWestWing, $canDefeatBombling",
@@ -148,6 +148,7 @@
 						]
 					},
 					{
+						"name": "West Tile Worm Room Vines Chest",
 						"map_locations": [
 							{
 								"map": "ft1f",
@@ -162,7 +163,6 @@
 						],
 						"sections": [
 							{
-								"name": "West Tile Worm Room Vines Chest",
 								"access_rules": [
 									"@ForestTempleWestWing, glitchesoff",
 									"[glitcheson], @ForestTempleWestWing, $canDefeatBombling",
@@ -173,6 +173,7 @@
 						]
 					},
 					{
+						"name": "West Tile Worm Chest Behind Stairs",
 						"map_locations": [
 							{
 								"map": "ft1f",
@@ -187,7 +188,6 @@
 						],
 						"sections": [
 							{
-								"name": "West Tile Worm Chest Behind Stairs",
 								"access_rules": [
 									"@ForestTempleWestWing, boomerang, glitchesoff",
 									"[glitcheson], @ForestTempleWestWing, boomerang, $canDefeatBombling",
@@ -198,6 +198,7 @@
 						]
 					},
 					{
+						"name": "West Deku Like Chest",
 						"map_locations": [
 							{
 								"map": "ft1f",
@@ -212,7 +213,6 @@
 						],
 						"sections": [
 							{
-								"name": "West Deku Like Chest",
 								"access_rules": [
 									"@ForestTempleWestWing, $canDefeatWalltula",
 									"[glitcheson], @ForestTempleWestWing"
@@ -221,6 +221,7 @@
 						]
 					},
 					{
+						"name": "Big Baba Key",
 						"map_locations": [
 							{
 								"map": "ft1f",
@@ -235,7 +236,6 @@
 						],
 						"sections": [
 							{
-								"name": "Big Baba Key",
 								"access_rules": [
 									"@ForestTempleWestWing, $canDefeatWalltula, $canDefeatBigBaba",
 									"[glitcheson], @ForestTempleWestWing, $canDefeatBigBaba",
@@ -245,6 +245,7 @@
 						]
 					},
 					{
+						"name": "Gale Boomerang",
 						"map_locations": [
 							{
 								"map": "ft1f",
@@ -259,7 +260,6 @@
 						],
 						"sections": [
 							{
-								"name": "Gale Boomerang",
 								"access_rules": [
 									"@Ook, $canDefeatOok",
 									"[glitcheson], @Ook, $canDefeatOokGlitched",
@@ -269,6 +269,7 @@
 						]
 					},
 					{
+						"name": "Central Chest Hanging From Web",
 						"map_locations": [
 							{
 								"map": "ft1f",
@@ -283,7 +284,6 @@
 						],
 						"sections": [
 							{
-								"name": "Central Chest Hanging From Web",
 								"access_rules": [
 									"@ForestTempleLobby, $canCutHangingWeb",
 									"[glitcheson], @ForestTempleLobby, $canCutHangingWebGlitched",
@@ -293,6 +293,7 @@
 						]
 					},
 					{
+						"name": "Big Key Chest",
 						"map_locations": [
 							{
 								"map": "ft1f",
@@ -307,7 +308,6 @@
 						],
 						"sections": [
 							{
-								"name": "Big Key Chest",
 								"access_rules": [
 									"@ForestTempleEastWing, boomerang"
 								]
@@ -315,6 +315,7 @@
 						]
 					},
 					{
+						"name": "East Water Cave Chest",
 						"map_locations": [
 							{
 								"map": "ft1f",
@@ -329,7 +330,6 @@
 						],
 						"sections": [
 							{
-								"name": "East Water Cave Chest",
 								"access_rules": [
 									"@ForestTempleEastWing"
 								]
@@ -337,6 +337,7 @@
 						]
 					},
 					{
+						"name": "North Deku Like Chest",
 						"map_locations": [
 							{
 								"map": "ft1f",
@@ -351,7 +352,6 @@
 						],
 						"sections": [
 							{
-								"name": "North Deku Like Chest",
 								"access_rules": [
 									"@ForestTempleNorthWing, boomerang",
 									"[glitcheson], @ForestTempleNorthWing, $hasBombs, sword, clawshot"
@@ -360,6 +360,7 @@
 						]
 					},
 					{
+						"name": "East Tile Worm Chest",
 						"map_locations": [
 							{
 								"map": "ft1f",
@@ -374,7 +375,6 @@
 						],
 						"sections": [
 							{
-								"name": "East Tile Worm Chest",
 								"access_rules": [
 									"@ForestTempleNorthWing, $canDefeatWalltula, $canDefeatSkulltula, $canDefeatTileWorm, boomerang, ftsmallkey:4",
 									"[glitcheson], @ForestTempleNorthWing, $canDefeatWalltulaGlitched, $canDefeatSkulltula, $canDefeatTileWorm, boomerang, ftsmallkey:4",
@@ -405,6 +405,7 @@
 						]
 					},
 					{
+						"name": "Diababa Boss",
 						"access_rules": [
 							"@ForestTempleBossRoom"
 						],

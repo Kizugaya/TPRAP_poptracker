@@ -3,9 +3,151 @@
 		"name": "Goron Mines",
 		"children": [
 			{
+				"name": "1F",
+				"children": [
+					{
+						"name": "Entrance Chest",
+						"map_locations": [
+							{
+								"map": "gm1f",
+								"x": 1597,
+								"y": 2315
+							},
+							{
+								"map": "gmfull",
+								"x": 1597,
+								"y": 2315
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@GoronMinesEntrance, $canPressMinesSwitch, $canBreakWoodenDoor",
+									"@GoronMinesEntrance, $canPressMinesSwitch, $canBreakWoodenDoorGlitched",
+									"[glitcheson], @GoronMinesEntrance, $canDoBSMoonBoots",
+									"[glitcheson], @GoronMinesEntrance, $canBreakWoodenDoor",
+									"[glitcheson], @GoronMinesEntrance, $canBreakWoodenDoorGlitched"
+								]
+							}
+						]
+					},
+					{
+						"name": "Main Magnet Room Bottom Chest",
+						"map_locations": [
+							{
+								"map": "gm1f",
+								"x": 1722,
+								"y": 1736
+							},
+							{
+								"map": "gmfull",
+								"x": 1722,
+								"y": 1736
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@GoronMinesMagnetRoom"
+								]
+							}
+						]
+					},
+					{
+						"name": "Gor Amato Key Shard",
+						"map_locations": [
+							{
+								"map": "gm1f",
+								"x": 124,
+								"y": 1491
+							},
+							{
+								"map": "gmfull",
+								"x": 124,
+								"y": 1491
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@GoronMinesLowerWestWing, boots"
+								]
+							}
+						]
+					},
+					{
+						"name": "Gor Amato Chest",
+						"map_locations": [
+							{
+								"map": "gm1f",
+								"x": 63,
+								"y": 1465
+							},
+							{
+								"map": "gmfull",
+								"x": 63,
+								"y": 1465
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@GoronMinesLowerWestWing, boots"
+								]
+							}
+						]
+					},
+					{
+						"name": "Gor Amato Small Chest",
+						"map_locations": [
+							{
+								"map": "gm1f",
+								"x": 33,
+								"y": 1457
+							},
+							{
+								"map": "gmfull",
+								"x": 33,
+								"y": 1457
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@GoronMinesLowerWestWing, boots"
+								]
+							}
+						]
+					},
+					{
+						"name": "Magnet Maze Chest",
+						"map_locations": [
+							{
+								"map": "gm1f",
+								"x": 1019,
+								"y": 1400
+							},
+							{
+								"map": "gmfull",
+								"x": 1019,
+								"y": 1400
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@GoronMinesLowerWestWing, boots"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
 				"name": "2F",
 				"children": [
 					{
+						"name": "Crystal Switch Room Underwater Chest",
 						"map_locations": [
 							{
 								"map": "gm2f",
@@ -20,7 +162,6 @@
 						],
 						"sections": [
 							{
-								"name": "Crystal Switch Room Underwater Chest",
 								"access_rules": [
 									"@GoronMinesCrystalSwitchRoom, boots",
 									"[glitcheson], @GoronMinesCrystalSwitchRoom, $hasHeavyMod"
@@ -29,6 +170,7 @@
 						]
 					},
 					{
+						"name": "Crystal Switch Room Small Chest",
 						"map_locations": [
 							{
 								"map": "gm2f",
@@ -43,7 +185,6 @@
 						],
 						"sections": [
 							{
-								"name": "Crystal Switch Room Small Chest",
 								"access_rules": [
 									"@GoronMinesCrystalSwitchRoom, boots"
 								]
@@ -51,6 +192,7 @@
 						]
 					},
 					{
+						"name": "After Crystal Switch Room Magnet Wall Chest",
 						"map_locations": [
 							{
 								"map": "gm2f",
@@ -65,7 +207,6 @@
 						],
 						"sections": [
 							{
-								"name": "After Crystal Switch Room Magnet Wall Chest",
 								"access_rules": [
 									"@GoronMinesCrystalSwitchRoom, boots"
 								]
@@ -73,6 +214,7 @@
 						]
 					},
 					{
+						"name": "Outside Beamos Chest",
 						"map_locations": [
 							{
 								"map": "gm2f",
@@ -87,7 +229,6 @@
 						],
 						"sections": [
 							{
-								"name": "Outside Beamos Chest",
 								"access_rules": [
 									"@GoronMinesNorthWing"
 								]
@@ -95,6 +236,7 @@
 						]
 					},
 					{
+						"name": "Outside Clawshot Chest",
 						"map_locations": [
 							{
 								"map": "gm2f",
@@ -109,7 +251,6 @@
 						],
 						"sections": [
 							{
-								"name": "Outside Clawshot Chest",
 								"access_rules": [
 									"@GoronMinesNorthWing, clawshot, bow",
 									"@GoronMinesNorthWing, clawshot, slingshot",
@@ -119,6 +260,7 @@
 						]
 					},
 					{
+						"name": "Outside Underwater Chest",
 						"map_locations": [
 							{
 								"map": "gm2f",
@@ -133,7 +275,6 @@
 						],
 						"sections": [
 							{
-								"name": "Outside Underwater Chest",
 								"access_rules": [
 									"@GoronMinesNorthWing, boots, $hasWaterBombs",
 									"@GoronMinesNorthWing, boots, sword",
@@ -143,6 +284,7 @@
 						]
 					},
 					{
+						"name": "Gor Ebizo Key Shard",
 						"map_locations": [
 							{
 								"map": "gm2f",
@@ -157,7 +299,6 @@
 						],
 						"sections": [
 							{
-								"name": "Gor Ebizo Key Shard",
 								"access_rules": [
 									"@GoronMinesUpperEastWing"
 								]
@@ -165,6 +306,7 @@
 						]
 					},
 					{
+						"name": "Gor Ebizo Chest",
 						"map_locations": [
 							{
 								"map": "gm2f",
@@ -179,7 +321,6 @@
 						],
 						"sections": [
 							{
-								"name": "Gor Ebizo Chest",
 								"access_rules": [
 									"@GoronMinesUpperEastWing"
 								]
@@ -187,6 +328,7 @@
 						]
 					},
 					{
+						"name": "Chest Before Dangoro",
 						"map_locations": [
 							{
 								"map": "gm2f",
@@ -201,7 +343,6 @@
 						],
 						"sections": [
 							{
-								"name": "Chest Before Dangoro",
 								"access_rules": [
 									"@GoronMinesUpperEastWing, boots",
 									"[glitcheson], @GoronMinesUpperEastWing, $canDoLJA"
@@ -210,6 +351,7 @@
 						]
 					},
 					{
+						"name": "Dangoro Chest",
 						"map_locations": [
 							{
 								"map": "gm2f",
@@ -224,7 +366,6 @@
 						],
 						"sections": [
 							{
-								"name": "Dangoro Chest",
 								"access_rules": [
 									"@GoronMinesUpperEastWing, boots, $canDefeatDangoro",
 									"[glitcheson], @GoronMinesUpperEastWing, boots, $canDefeatDangoroGlitched"
@@ -233,6 +374,7 @@
 						]
 					},
 					{
+						"name": "Beamos Room Chest",
 						"map_locations": [
 							{
 								"map": "gm2f",
@@ -247,7 +389,6 @@
 						],
 						"sections": [
 							{
-								"name": "Beamos Room Chest",
 								"access_rules": [
 									"@GoronMinesUpperEastWing, boots, $canDefeatDangoro, bow",
 									"[glitcheson], @GoronMinesUpperEastWing, boots, $canDefeatDangoroGlitched, bow",
@@ -258,6 +399,7 @@
 						]
 					},
 					{
+						"name": "Gor Liggs Key Shard",
 						"map_locations": [
 							{
 								"map": "gm2f",
@@ -272,7 +414,6 @@
 						],
 						"sections": [
 							{
-								"name": "Gor Liggs Key Shard",
 								"access_rules": [
 									"@GoronMinesUpperEastWing, boots, $canDefeatDangoro, bow",
 									"[glitcheson], @GoronMinesUpperEastWing, boots, $canDefeatDangoroGlitched, bow",
@@ -283,6 +424,7 @@
 						]
 					},
 					{
+						"name": "Gor Liggs Chest",
 						"map_locations": [
 							{
 								"map": "gm2f",
@@ -297,7 +439,6 @@
 						],
 						"sections": [
 							{
-								"name": "Gor Liggs Chest",
 								"access_rules": [
 									"@GoronMinesUpperEastWing, boots, $canDefeatDangoro, bow",
 									"[glitcheson], @GoronMinesUpperEastWing, boots, $canDefeatDangoroGlitched, bow",
@@ -308,6 +449,7 @@
 						]
 					},
 					{
+						"name": "Main Magnet Room Top Chest",
 						"map_locations": [
 							{
 								"map": "gm2f",
@@ -322,7 +464,6 @@
 						],
 						"sections": [
 							{
-								"name": "Main Magnet Room Top Chest",
 								"access_rules": [
 									"@GoronMinesMagnetRoom, $canDefeatDangoro, boots, gmsmallkey:3, bow",
 									"@GoronMinesMagnetRoom, $canDefeatDangoro, boots, skkeysy, bow",
@@ -335,6 +476,7 @@
 						]
 					},
 					{
+						"name": "Fyrus Boss",
 						"access_rules": [
 							"@GoronMinesBossRoom"
 						],

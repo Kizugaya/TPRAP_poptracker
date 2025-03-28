@@ -1,3 +1,3 @@
-ScriptHost:LoadScript("scripts/autotracking/item_mapping.lua")
-ScriptHost:LoadScript("scripts/autotracking/location_mapping.lua")
+ScriptHost:LoadScript("scripts/item_mapping.lua")
+ScriptHost:LoadScript("scripts/location_mapping.lua")
 
