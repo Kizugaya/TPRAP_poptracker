@@ -69,6 +69,9 @@
 				"name": "Beside Castle Town Poes",
 				"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
 				"chest_opened_img": "images/Items/PoeSoul.png",
+				"visibility_rules": [
+					"poeson"
+				],
 				"children": [
 					{
 						"name": "Amphitheater Poe",
@@ -100,6 +103,9 @@
 				"name": "Beside Castle Town Bugs",
 				"chest_unopened_img": "images/Items/GoldenBugGrayed.png",
 				"chest_opened_img": "images/Items/GoldenBug.png",
+				"visibility_rules": [
+					"bugson"
+				],
 				"access_rules": [
 					"@OutsideCastleTownWest"
 				],
@@ -512,6 +518,9 @@
 				"name": "Castle Town Poes",
 				"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
 				"chest_opened_img": "images/Items/PoeSoul.png",
+				"visibility_rules": [
+					"poeson"
+				],
 				"children": [
 					{
 						"name": "Jovani House Poe",
@@ -627,6 +636,9 @@
 				"name": "Death Mountain Poes",
 				"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
 				"chest_opened_img": "images/Items/PoeSoul.png",
+				"visibility_rules": [
+					"poeson"
+				],
 				"children": [
 					{
 						"name": "Death Mountain Trail Poe",
@@ -822,6 +834,9 @@
 				"name": "Eldin Field Bugs",
 				"chest_unopened_img": "images/Items/GoldenBugGrayed.png",
 				"chest_opened_img": "images/Items/GoldenBug.png",
+				"visibility_rules": [
+					"bugson"
+				],
 				"access_rules": [
 					"@EldinField"
 				],
@@ -995,6 +1010,9 @@
 				"name": "Faron Field Poes",
 				"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
 				"chest_opened_img": "images/Items/PoeSoul.png",
+				"visibility_rules": [
+					"poeson"
+				],
 				"children": [
 					{
 						"name": "Faron Field Poe",
@@ -1026,6 +1044,9 @@
 				"name": "Faron Field Bugs",
 				"chest_unopened_img": "images/Items/GoldenBugGrayed.png",
 				"chest_opened_img": "images/Items/GoldenBug.png",
+				"visibility_rules": [
+					"bugson"
+				],
 				"access_rules": [
 					"@FaronField"
 				],
@@ -1331,6 +1352,9 @@
 				"name": "Faron Woods Poes",
 				"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
 				"chest_opened_img": "images/Items/PoeSoul.png",
+				"visibility_rules": [
+					"poeson"
+				],
 				"children": [
 					{
 						"name": "Mist Poe",
@@ -1833,6 +1857,9 @@
 				"name": "Gerudo Desert Poes",
 				"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
 				"chest_opened_img": "images/Items/PoeSoul.png",
+				"visibility_rules": [
+					"poeson"
+				],
 				"children": [
 					{
 						"name": "East Poe",
@@ -2023,6 +2050,9 @@
 				"name": "Gerudo Desert Bugs",
 				"chest_unopened_img": "images/Items/GoldenBugGrayed.png",
 				"chest_opened_img": "images/Items/GoldenBug.png",
+				"visibility_rules": [
+					"bugson"
+				],
 				"access_rules": [
 					"@GerudoDesert"
 				],
@@ -2188,6 +2218,9 @@
 				"name": "Hidden Village Poes",
 				"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
 				"chest_opened_img": "images/Items/PoeSoul.png",
+				"visibility_rules": [
+					"poeson"
+				],
 				"children": [
 					{
 						"name": "Hidden Village Poe",
@@ -2533,6 +2566,9 @@
 				"name": "Kakariko Poes",
 				"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
 				"chest_opened_img": "images/Items/PoeSoul.png",
+				"visibility_rules": [
+					"poeson"
+				],
 				"children": [
 					{
 						"name": "Bomb Shop Poe",
@@ -2636,6 +2672,9 @@
 				"name": "Kakariko Bugs",
 				"chest_unopened_img": "images/Items/GoldenBugGrayed.png",
 				"chest_opened_img": "images/Items/GoldenBug.png",
+				"visibility_rules": [
+					"bugson"
+				],
 				"children": [
 					{
 						"name": "Female Ant",
@@ -2833,6 +2872,9 @@
 				"name": "Kakariko Gorge Poes",
 				"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
 				"chest_opened_img": "images/Items/PoeSoul.png",
+				"visibility_rules": [
+					"poeson"
+				],
 				"children": [
 					{
 						"name": "Lantern Cave Poe",
@@ -2888,6 +2930,9 @@
 				"name": "Kakariko Gorge Bugs",
 				"chest_unopened_img": "images/Items/GoldenBugGrayed.png",
 				"chest_opened_img": "images/Items/GoldenBug.png",
+				"visibility_rules": [
+					"bugson"
+				],
 				"access_rules": [
 					"@KakarikoGorge"
 				],
@@ -3434,6 +3479,9 @@
 				"name": "Lake Hylia Poes",
 				"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
 				"chest_opened_img": "images/Items/PoeSoul.png",
+				"visibility_rules": [
+					"poeson"
+				],
 				"children": [
 					{
 						"name": "Lake Hylia Bridge Cliff Poe",
@@ -3628,6 +3676,9 @@
 				"name": "Lake Hylia Bugs",
 				"chest_unopened_img": "images/Items/GoldenBugGrayed.png",
 				"chest_opened_img": "images/Items/GoldenBug.png",
+				"visibility_rules": [
+					"bugson"
+				],
 				"access_rules": [
 					"@LakeHyliaBridge"
 				],
@@ -3814,6 +3865,9 @@
 				"name": "Lanayru Field Poes",
 				"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
 				"chest_opened_img": "images/Items/PoeSoul.png",
+				"visibility_rules": [
+					"poeson"
+				],
 				"children": [
 					{
 						"name": "Bridge Poe",
@@ -3879,6 +3933,9 @@
 				"name": "Lanayru Field Bugs",
 				"chest_unopened_img": "images/Items/GoldenBugGrayed.png",
 				"chest_opened_img": "images/Items/GoldenBug.png",
+				"visibility_rules": [
+					"bugson"
+				],
 				"access_rules": [
 					"@LanayruField"
 				],
@@ -4044,6 +4101,9 @@
 				"name": "North Eldin Bugs",
 				"chest_unopened_img": "images/Items/GoldenBugGrayed.png",
 				"chest_opened_img": "images/Items/GoldenBug.png",
+				"visibility_rules": [
+					"bugson"
+				],
 				"children": [
 					{
 						"name": "Female Phasmid",
@@ -4439,6 +4499,9 @@
 				"name": "Sacred Grove Poes",
 				"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
 				"chest_opened_img": "images/Items/PoeSoul.png",
+				"visibility_rules": [
+					"poeson"
+				],
 				"children": [
 					{
 						"name": "Master Sword Poe",
@@ -4544,6 +4607,9 @@
 				"name": "Sacred Grove Bugs",
 				"chest_unopened_img": "images/Items/GoldenBugGrayed.png",
 				"chest_opened_img": "images/Items/GoldenBug.png",
+				"visibility_rules": [
+					"bugson"
+				],
 				"children": [
 					{
 						"name": "Bugs",
@@ -4677,6 +4743,9 @@
 				"name": "Snowpeak Mountain Poes",
 				"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
 				"chest_opened_img": "images/Items/PoeSoul.png",
+				"visibility_rules": [
+					"poeson"
+				],
 				"children": [
 					{
 						"name": "Above Freezard Grotto Poe",
@@ -4974,6 +5043,9 @@
 				"name": "South Castle Town Poes",
 				"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
 				"chest_opened_img": "images/Items/PoeSoul.png",
+				"visibility_rules": [
+					"poeson"
+				],
 				"children": [
 					{
 						"name": "Outside South Castle Town Poe",
@@ -5005,6 +5077,9 @@
 				"name": "South Castle Town Bugs",
 				"chest_unopened_img": "images/Items/GoldenBugGrayed.png",
 				"chest_opened_img": "images/Items/GoldenBug.png",
+				"visibility_rules": [
+					"bugson"
+				],
 				"access_rules": [
 					"@OutsideCastleTownSouth"
 				],
@@ -5173,6 +5248,9 @@
 				"name": "Upper Zora's River Poes",
 				"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
 				"chest_opened_img": "images/Items/PoeSoul.png",
+				"visibility_rules": [
+					"poeson"
+				],
 				"children": [
 					{
 						"name": "Upper Zoras River Poe",
@@ -5204,6 +5282,9 @@
 				"name": "Upper Zora's River Bugs",
 				"chest_unopened_img": "images/Items/GoldenBugGrayed.png",
 				"chest_opened_img": "images/Items/GoldenBug.png",
+				"visibility_rules": [
+					"bugson"
+				],
 				"children": [
 					{
 						"name": "Female Dragonfly",
@@ -5386,6 +5467,9 @@
 				"name": "Zora's Domain Poes",
 				"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
 				"chest_opened_img": "images/Items/PoeSoul.png",
+				"visibility_rules": [
+					"poeson"
+				],
 				"children": [
 					{
 						"name": "Mother and Child Isle Poe",
@@ -5441,6 +5525,9 @@
 				"name": "Zora's Domain Bugs",
 				"chest_unopened_img": "images/Items/GoldenBugGrayed.png",
 				"chest_opened_img": "images/Items/GoldenBug.png",
+				"visibility_rules": [
+					"bugson"
+				],
 				"children": [
 					{
 						"name": "Male Dragonfly",

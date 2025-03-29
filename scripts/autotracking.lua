@@ -137,6 +137,9 @@ function onItem(index, item_id, item_name, player_number)
     end
     local obj = Tracker:FindObjectForCode(v[1])
     if obj then
+		if v[1] == "bombbag" and obj.CurrentStage == 0 then
+			Tracker:FindObjectForCode("waterbomb").Active = true
+		end
         if v[2] == "toggle" then
             obj.Active = true
         elseif v[2] == "progressive" then

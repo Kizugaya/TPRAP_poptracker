@@ -23,30 +23,31 @@
 					],
 					[
 						"bombbag",
-						"giantbombs",
 						"waterbombs",
 						"clawshot",
 						"spinner",
 						"ballandchain",
-						"dominionrod"
+						"dominionrod",
+						"bottle"
 					],
 					[
 						"asheisketch",
 						"aurumemo",
-						"bottle",
 						"hiddenskill",
 						"renadosletter",
 						"horsecall",
-						"skybook"
+						"skybook",
+						"shadowcrystal"
 					],
 					[
-						"shadowcrystal",
+						
 						"wallet",
 						"woodensword",
 						"ordonshield",
 						"hylianshield",
 						"zoraarmor",
-						"magicarmor"
+						"magicarmor",
+						"poesoul"
 					],
 					[
 						"youthsscent",
@@ -56,7 +57,6 @@
 						"medicinescent"
 					],
 					[
-						"poesoul",
 						"heartpiece",
 						"heartcontainer",
 						"fusedshadow",
