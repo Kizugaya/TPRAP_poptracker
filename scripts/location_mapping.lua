@@ -249,7 +249,7 @@ LOCATION_MAPPING = {
 	[BASE + 358] = {"@Overworld/Castle Town/Malo Mart Magic Armor/"},
 	[BASE + 376] = {"@Overworld/Castle Town/Jovani/20 Poe Souls"},
 	[BASE + 377] = {"@Overworld/Castle Town/Jovani/60 Poe Souls"},
-	--[BASE + ] = {"@Overworld/Castle Town/Telma Invoice"},
+	--[BASE + ] = {"@Overworld/Castle Town/Telma Invoice/"},
 	[BASE + 360] = {"@Overworld/Castle Town/Doctor's Office Balcony Chest/"},
 	[BASE + 333] = {"@Overworld/Castle Town/Agitha's Castle/Male Ant"},
 	[BASE + 345] = {"@Overworld/Castle Town/Agitha's Castle/Female Ant"},
@@ -362,7 +362,7 @@ LOCATION_MAPPING = {
 	--[BASE + ] = {"@Overworld/Hidden Village/Ilia's Charm/"},
 	[BASE + 264] = {"@Overworld/Hidden Village/Skybook From Impaz/"},
 	[BASE + 239] = {"@Overworld/Hidden Village Poes/Hidden Village Poe/"},
-	--[BASE + ] = {"@Overworld/Hidden Village Golden Wolves/North Castle Town Stone"},
+	--[BASE + ] = {"@Overworld/Hidden Village Golden Wolves/North Castle Town Stone/"},
 	
 	--Kakariko Locations
 	[BASE + 252] = {"@Overworld/Kakariko/Kakariko Inn Chest/"},
@@ -386,7 +386,7 @@ LOCATION_MAPPING = {
 	[BASE + 251] = {"@Overworld/Kakariko Poes/Open Poe/"},
 	[BASE + 248] = {"@Overworld/Kakariko Poes/Grave Poe/"},
 	[BASE + 255] = {"@Overworld/Kakariko Bugs/Female Ant/"},
-	[BASE + 250] = {"@Overworld/Kakariko Bugs/Male Ant"},
+	[BASE + 250] = {"@Overworld/Kakariko Bugs/Male Ant/"},
 	[BASE + 247] = {"@Overworld/Kakariko Golden Wolves/Golden Wolf/"},
 	
 	--Kakariko Gorge Locations
@@ -399,8 +399,8 @@ LOCATION_MAPPING = {
 	[BASE + 243] = {"@Overworld/Kakariko Gorge/Owl Statue/Chest"},
 	[BASE + 231] = {"@Overworld/Kakariko Gorge Poes/Lantern Cave Poe/"},
 	[BASE + 245] = {"@Overworld/Kakariko Gorge Poes/Kakariko Gorge Poe/"},
-	[BASE + 242] = {"@Overworld/Kakariko Gorge Bugs/Male Pill Bug"},
-	[BASE + 241] = {"@Overworld/Kakariko Gorge Bugs/Female Pill Bug"},
+	[BASE + 242] = {"@Overworld/Kakariko Gorge Bugs/Male Pill Bug/"},
+	[BASE + 241] = {"@Overworld/Kakariko Gorge Bugs/Female Pill Bug/"},
 	
 	--Lake Hylia Locations
 	[BASE + 386] = {"@Overworld/Lake Hylia/Owl Statue/Sky Character"},
@@ -422,7 +422,7 @@ LOCATION_MAPPING = {
 	[BASE + 408] = {"@Overworld/Lake Hylia/Lake Lantern Cave/3rd Chest"},
 	[BASE + 401] = {"@Overworld/Lake Hylia/Lake Lantern Cave/4th Chest"},
 	[BASE + 396] = {"@Overworld/Lake Hylia/Lake Lantern Cave/5th Chest"},
-	[BASE + 406] = {"@Overworld/Lake Hylia/Lake Lantern Cave/6th Chest"},
+	[BASE + 406] = {"@Overworld/Lake Hylia/Lake Lantern Cave/6th Chest - Lantern"},
 	[BASE + 405] = {"@Overworld/Lake Hylia/Lake Lantern Cave/7th Chest"},
 	[BASE + 393] = {"@Overworld/Lake Hylia/Lake Lantern Cave/8th Chest"},
 	[BASE + 402] = {"@Overworld/Lake Hylia/Lake Lantern Cave/9th Chest"},
@@ -487,7 +487,7 @@ LOCATION_MAPPING = {
 	[BASE + 465] = {"@Overworld/Ordon/Wrestling With Bo/"},
 	[BASE + 455] = {"@Overworld/Ordon/Herding Goats Reward/"},
 	[BASE + 458] = {"@Overworld/Ordon/Ranch Grotto Lantern Chest/"},
-	[BASE + 460] = {"@Overworld/Ordon Golden Wolves/Golden Wolf"},
+	[BASE + 460] = {"@Overworld/Ordon Golden Wolves/Golden Wolf/"},
 	
 	--Sacred Grove Locations
 	[BASE + 293] = {"@Overworld/Sacred Grove/Pedestal/Master Sword"},
@@ -524,7 +524,7 @@ LOCATION_MAPPING = {
 	[BASE + 435] = {"@Overworld/South Castle Town Poes/Outside South Castle Town Poe/"},
 	[BASE + 431] = {"@Overworld/South Castle Town Bugs/Female Ladybug/"},
 	[BASE + 434] = {"@Overworld/South Castle Town Bugs/Male Ladybug/"},
-	[BASE + 433] = {"@Overworld/South Castle Town Golden Wolves/Golden Wolf"},
+	[BASE + 433] = {"@Overworld/South Castle Town Golden Wolves/Golden Wolf/"},
 	
 	--Upper Zora's River Locations
 	[BASE + 374] = {"@Overworld/Upper Zora's River/Iza/Helping Hand"},

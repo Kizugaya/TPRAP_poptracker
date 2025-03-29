@@ -362,7 +362,7 @@ end
 function canDefeatBabyGohma()
 	return hasAny({"sword", "ballchain", "spinner", "slingshot", "clawshot", hasBombs()})
 end
-function canDefeatBabyGhomaGlitched()
+function canDefeatBabyGohmaGlitched()
 	return hasAny({hasAll({canDoNicheStuff(), "boots"}), canUseBacksliceAsSword()})
 end
 

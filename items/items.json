@@ -1027,13 +1027,13 @@
 			{
 				"name": "Faron Twilight Cleared Enabled",
 				"codes": "farontwilightclearedon",
-				"img": "images/Items/FishingRod1.png",
+				"img": "images/Items/TwilightFaronEnabled.png",
 				"inherit_codes": false
 			},
 			{
 				"name": "Faron Twilight Cleared Disabled",
 				"codes": "farontwilightclearedoff",
-				"img": "images/Items/FishingRod2.png",
+				"img": "images/Items/TwilightFaronDisabled.png",
 				"inherit_codes": false
 			}
 		]
@@ -1048,13 +1048,13 @@
 			{
 				"name": "Eldin Twilight Cleared Enabled",
 				"codes": "eldintwilightclearedon",
-				"img": "images/Items/FishingRod1.png",
+				"img": "images/Items/TwilightEldinEnabled.png",
 				"inherit_codes": false
 			},
 			{
 				"name": "Eldin Twilight Cleared Disabled",
 				"codes": "eldintwilightclearedoff",
-				"img": "images/Items/FishingRod2.png",
+				"img": "images/Items/TwilightEldinDisabled.png",
 				"inherit_codes": false
 			}
 		]
@@ -1069,13 +1069,13 @@
 			{
 				"name": "Lanayru Twilight Cleared Enabled",
 				"codes": "lanayrutwilightclearedon",
-				"img": "images/Items/FishingRod1.png",
+				"img": "images/Items/TwilightLanayruEnabled.png",
 				"inherit_codes": false
 			},
 			{
 				"name": "Lanayru Twilight Cleared Disabled",
 				"codes": "lanayrutwilightclearedoff",
-				"img": "images/Items/FishingRod2.png",
+				"img": "images/Items/TwilightLanayruDisabled.png",
 				"inherit_codes": false
 			}
 		]
@@ -1132,13 +1132,13 @@
 			{
 				"name": "Increase Wallet Enabled",
 				"codes": "increasewalleton",
-				"img": "images/Items/FishingRod1.png",
+				"img": "images/Items/Wallet4.png",
 				"inherit_codes": false
 			},
 			{
 				"name": "Increase Wallet Disabled",
 				"codes": "increasewalletoff",
-				"img": "images/Items/FishingRod2.png",
+				"img": "images/Items/Wallet1.png",
 				"inherit_codes": false
 			}
 		]
@@ -1153,13 +1153,13 @@
 			{
 				"name": "Transform Anywhere Enabled",
 				"codes": "transformanywhereon",
-				"img": "images/Items/FishingRod1.png",
+				"img": "images/Items/TransformEnabled.png",
 				"inherit_codes": false
 			},
 			{
 				"name": "Transform Anywhere Disabled",
 				"codes": "transformanywhereoff",
-				"img": "images/Items/FishingRod2.png",
+				"img": "images/Items/TransformDisabled.png",
 				"inherit_codes": false
 			}
 		]

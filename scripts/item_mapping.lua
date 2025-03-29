@@ -1,4 +1,4 @@
-BASE = 2320000
+BASE = 2319999
 
 ITEM_MAPPING = {
 	[BASE + 23] = {"heartpiece", "consumable"},
@@ -81,6 +81,6 @@ ITEM_MAPPING = {
 	[BASE + 124] = {"poesoul", "consumable"},
 	[BASE + 129] = {"pumpkin", "toggle"},
 	[BASE + 130] = {"cheese", "toggle"},
-	[BASE + 132] = {"boss9", "toggle"},
+	[BASE + 132] = {"hccompleted", "toggle"},
 	[BASE + 133] = {"giantbombbag", "toggle"}
 }
