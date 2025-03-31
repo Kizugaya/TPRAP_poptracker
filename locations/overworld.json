@@ -4218,13 +4218,13 @@
 							{
 								"name": "Sera Shop Slingshot",
 								"access_rules": [
-									"fishingrod"
+									""
 								]
 							},
 							{
 								"name": "Ordon Cat Rescue",
 								"access_rules": [
-									""
+									"fishingrod"
 								]
 							}
 						]

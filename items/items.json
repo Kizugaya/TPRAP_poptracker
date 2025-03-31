@@ -76,6 +76,12 @@
 		"img": "images/Items/BombBag.png"
 	},
 	{
+		"name": "Giant Bomb Bag",
+		"type": "toggle",
+		"codes": "giantbombs, giantbombbag",
+		"img": "images/Items/GiantBombBag.png"
+	},
+	{
 		"name": "Water Bombs",
 		"type": "toggle",
 		"codes": "waterbomb, waterbombs",
