@@ -30,23 +30,23 @@ ScriptHost:LoadScript("scripts/location_mapping.lua")
 CUR_INDEX = -1
 
 function dump_table(o, depth)
-    if depth == nil then
-        depth = 0
-    end
-    if type(o) == 'table' then
-        local tabs = ('\t'):rep(depth)
-        local tabs2 = ('\t'):rep(depth + 1)
-        local s = '{\n'
-        for k, v in pairs(o) do
-            if type(k) ~= 'number' then
-                k = '"' .. k .. '"'
-            end
-            s = s .. tabs2 .. '[' .. k .. '] = ' .. dump_table(v, depth + 1) .. ',\n'
-        end
-        return s .. tabs .. '}'
-    else
-        return tostring(o)
-    end
+	if depth == nil then
+		depth = 0
+	end
+	if type(o) == 'table' then
+		local tabs = ('\t'):rep(depth)
+		local tabs2 = ('\t'):rep(depth + 1)
+		local s = '{\n'
+		for k, v in pairs(o) do
+			if type(k) ~= 'number' then
+				k = '"' .. k .. '"'
+			end
+			s = s .. tabs2 .. '[' .. k .. '] = ' .. dump_table(v, depth + 1) .. ',\n'
+		end
+		return s .. tabs .. '}'
+	else
+		return tostring(o)
+	end
 end
 
 function onClear(slot_data)
@@ -97,20 +97,20 @@ function onClear(slot_data)
 	Tracker:FindObjectForCode("hccompleted").Active = false
 	--Clear Locations
 	for _, v in pairs(LOCATION_MAPPING) do
-        if v[1] then
-            debugAP(string.format("onClear: clearing location %s", v[1]))
-            local obj = Tracker:FindObjectForCode(v[1])
-            if obj then
-                if v[1]:sub(1, 1) == "@" then
-                    obj.AvailableChestCount = obj.ChestCount
-                else
-                    obj.Active = false
-                end
-            else
-                debugAP(string.format("onClear: could not find object for code %s", v[1]))
-            end
-        end
-    end
+		if v[1] then
+			debugAP(string.format("onClear: clearing location %s", v[1]))
+			local obj = Tracker:FindObjectForCode(v[1])
+			if obj then
+				if v[1]:sub(1, 1) == "@" then
+					obj.AvailableChestCount = obj.ChestCount
+				else
+					obj.Active = false
+				end
+			else
+				debugAP(string.format("onClear: could not find object for code %s", v[1]))
+			end
+		end
+	end
 	
 	Tracker:UiHint("ActivateTab", "Full Map")
 	Tracker:UiHint("ActivateTab", "Overworld")
@@ -127,70 +127,70 @@ function onClear(slot_data)
 end
 
 function onItem(index, item_id, item_name, player_number)
-    debugAP(string.format("called onItem: %s, %s, %s, %s, %s", index, item_id, item_name, player_number, CUR_INDEX))
-    if not AUTOTRACKER_ENABLE_ITEM_TRACKING then
-        return
-    end
-    if index <= CUR_INDEX then
-        return
-    end
-    CUR_INDEX = index;
-    local v = ITEM_MAPPING[item_id]
-    if not v then
-        debugAP(string.format("onItem: could not find item mapping for id %s", item_id))
-        return
-    end
-    debugAP(string.format("onItem: code: %s, type %s", v[1], v[2]))
-    if not v[1] then
-        return
-    end
-    local obj = Tracker:FindObjectForCode(v[1])
-    if obj then
+	debugAP(string.format("called onItem: %s, %s, %s, %s, %s", index, item_id, item_name, player_number, CUR_INDEX))
+	if not AUTOTRACKER_ENABLE_ITEM_TRACKING then
+		return
+	end
+	if index <= CUR_INDEX then
+		return
+	end
+	CUR_INDEX = index;
+	local v = ITEM_MAPPING[item_id]
+	if not v then
+		debugAP(string.format("onItem: could not find item mapping for id %s", item_id))
+		return
+	end
+	debugAP(string.format("onItem: code: %s, type %s", v[1], v[2]))
+	if not v[1] then
+		return
+	end
+	local obj = Tracker:FindObjectForCode(v[1])
+	if obj then
 		if v[1] == "bombbag" and obj.CurrentStage == 0 then
 			Tracker:FindObjectForCode("waterbomb").Active = true
 		elseif v[1] == "skybook" then --[TMP] on skybook get, set amount to 7
 			Tracker:FindObjectForCode("skybook").AcquiredCount = 6
 		end
-        if v[2] == "toggle" then
-            obj.Active = true
-        elseif v[2] == "progressive" then
-            if obj.Active then
-                obj.CurrentStage = obj.CurrentStage + 1
-            else
-                obj.Active = true
-            end
-        elseif v[2] == "consumable" then
-            obj.AcquiredCount = obj.AcquiredCount + obj.Increment
-        else
-            debugAP(string.format("onItem: unknown item type %s for code %s", v[2], v[1]))
-        end
-    else
-        debugAP(string.format("onItem: could not find object for code %s", v[1]))
-    end
+		if v[2] == "toggle" then
+			obj.Active = true
+		elseif v[2] == "progressive" then
+			if obj.Active then
+				obj.CurrentStage = obj.CurrentStage + 1
+			else
+				obj.Active = true
+			end
+		elseif v[2] == "consumable" then
+			obj.AcquiredCount = obj.AcquiredCount + obj.Increment
+		else
+			debugAP(string.format("onItem: unknown item type %s for code %s", v[2], v[1]))
+		end
+	else
+		debugAP(string.format("onItem: could not find object for code %s", v[1]))
+	end
 end
 
 function onLocation(location_id, location_name)
-    debugAP(string.format("called onLocation: %s, %s", location_id, location_name))
-    if not AUTOTRACKER_ENABLE_LOCATION_TRACKING then
-        return
-    end
-    local v = LOCATION_MAPPING[location_id]
-    if not v then
-        debugAP(string.format("onLocation: could not find location mapping for id %s", location_id))
-    end
-    if not v[1] then
-        return
-    end
-    local obj = Tracker:FindObjectForCode(v[1])
-    if obj then
-        if v[1]:sub(1, 1) == "@" then
-            obj.AvailableChestCount = obj.AvailableChestCount - 1
-        else
-            obj.Active = true
-        end
-    else
-        debugAP(string.format("onLocation: could not find object for code %s", v[1]))
-    end
+	debugAP(string.format("called onLocation: %s, %s", location_id, location_name))
+	if not AUTOTRACKER_ENABLE_LOCATION_TRACKING then
+		return
+	end
+	local v = LOCATION_MAPPING[location_id]
+	if not v then
+		debugAP(string.format("onLocation: could not find location mapping for id %s", location_id))
+	end
+	if not v[1] then
+		return
+	end
+	local obj = Tracker:FindObjectForCode(v[1])
+	if obj then
+		if v[1]:sub(1, 1) == "@" then
+			obj.AvailableChestCount = obj.AvailableChestCount - 1
+		else
+			obj.Active = true
+		end
+	else
+		debugAP(string.format("onLocation: could not find object for code %s", v[1]))
+	end
 	if location_id == 2320002 then
 		Tracker:FindObjectForCode("agcompleted").Active = true
 	elseif location_id == 2320035 then
@@ -215,11 +215,11 @@ function onSetReply(key, value, old)
 end
 
 function onScout(location_id, location_name, item_id, item_name, item_player)
-    debugAP(string.format("called onScout: %s, %s, %s, %s, %s", location_id, location_name, item_id, item_name, item_player))
+	debugAP(string.format("called onScout: %s, %s, %s, %s, %s", location_id, location_name, item_id, item_name, item_player))
 end
 
 function onBounce(json)
-    debugAP(string.format("called onBounce: %s", dump_table(json)))
+	debugAP(string.format("called onBounce: %s", dump_table(json)))
 end
 
 function onRetrieved(key, value)

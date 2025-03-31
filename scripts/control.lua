@@ -29,22 +29,22 @@ end
 
 -- Check if player has at least X items
 function hasAmount(item, amount)
-    return Tracker:ProviderCountForCode(item) >= amount
+	return Tracker:ProviderCountForCode(item) >= amount
 end
 
 -- Check if player has NONE of following items
 function hasNone(items)
-    for _, item in ipairs(items) do
-        if has(item) then
-            return false
-        end
-    end
-    return true
+	for _, item in ipairs(items) do
+		if has(item) then
+			return false
+		end
+	end
+	return true
 end
 
 -- Return number of item
 function count(item)
-    return Tracker:ProviderCountForCode(item)
+	return Tracker:ProviderCountForCode(item)
 end
 
 
@@ -56,7 +56,7 @@ end
 -- HAS, CAN, GET
 -- Return if has any damaging item
 function hasDamagingItem()
-    return hasAny({ "sword", "ballchain", "bow", hasBombs(), "boots", "shadowcrystal", "spinner" })
+	return hasAny({ "sword", "ballchain", "bow", hasBombs(), "boots", "shadowcrystal", "spinner" })
 end
 
 -- Check for bombbag
