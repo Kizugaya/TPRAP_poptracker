@@ -1,13 +1,21 @@
 {
 	"versions": [
-	{
-		"package_version": "0.1.2",
-			"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.1.2/TPRAP_poptracker_v0.1.2.zip",
-			"sha256": "2989D3AA1855043C3DC2538DD793161E18AFD414D2C94CCFD98CF4125225EC3A",
+		{
+			"package_version": "0.1.0",
+			"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.2.0/TPRAP_poptracker_v0.2.0.zip",
+			"sha256": "60D1F53B0D924B1475D1E4351C708C61C398B2E6BB63DE916CDFFD6388062F6F",
 			"changelog": [
-				"Added Tracker"
+				"Settings will be picked automatically"
 			]
-	},
+		},
+		{
+			"package_version": "0.1.2",
+				"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.1.2/TPRAP_poptracker_v0.1.2.zip",
+				"sha256": "2989D3AA1855043C3DC2538DD793161E18AFD414D2C94CCFD98CF4125225EC3A",
+				"changelog": [
+					"Bugfix for Agitha's rewards"
+				]
+		},
 		{
 			"package_version": "0.1.1",
 			"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.1.1/TPRAP_poptracker_v0.1.1.zip",
