@@ -369,145 +369,145 @@
 							{
 								"name": "Male Ant",
 								"access_rules": [
-									"Bug0"
+									"bug0"
 								]
 							},
 							{
 								"name": "Female Ant",
 								"access_rules": [
-									"Bug1"
+									"bug1"
 								]
 							},
 							{
 								"name": "Male Dayfly",
 								"access_rules": [
-									"Bug2"
+									"bug2"
 								]
 							},
 							{
 								"name": "Female Dayfly",
 								"access_rules": [
-									"Bug3"
+									"bug3"
 								]
 							},
 							{
 								"name": "Male Beetle",
 								"access_rules": [
-									"Bug4"
+									"bug4"
 								]
 							},
 							{
 								"name": "Female Beetle",
 								"access_rules": [
-									"Bug5"
+									"bug5"
 								]
 							},
 							{
 								"name": "Male Mantis",
 								"access_rules": [
-									"Bug6"
+									"bug6"
 								]
 							},
 							{
 								"name": "Female Mantis",
 								"access_rules": [
-									"Bug7"
+									"bug7"
 								]
 							},
 							{
 								"name": "Male Stag Beetle",
 								"access_rules": [
-									"Bug8"
+									"bug8"
 								]
 							},
 							{
 								"name": "Female Stag Beetle",
 								"access_rules": [
-									"Bug9"
+									"bug9"
 								]
 							},
 							{
 								"name": "Male Pillbug",
 								"access_rules": [
-									"Bug10"
+									"bug10"
 								]
 							},
 							{
 								"name": "Female Pillbug",
 								"access_rules": [
-									"Bug11"
+									"bug11"
 								]
 							},
 							{
 								"name": "Male Butterfly",
 								"access_rules": [
-									"Bug12"
+									"bug12"
 								]
 							},
 							{
 								"name": "Female Butterfly",
 								"access_rules": [
-									"Bug13"
+									"bug13"
 								]
 							},
 							{
 								"name": "Male Ladybug",
 								"access_rules": [
-									"Bug14"
+									"bug14"
 								]
 							},
 							{
 								"name": "Female Ladybug",
 								"access_rules": [
-									"Bug15"
+									"bug15"
 								]
 							},
 							{
 								"name": "Male Snail",
 								"access_rules": [
-									"Bug16"
+									"bug16"
 								]
 							},
 							{
 								"name": "Female Snail",
 								"access_rules": [
-									"Bug17"
+									"bug17"
 								]
 							},
 							{
 								"name": "Male Phasmid",
 								"access_rules": [
-									"Bug18"
+									"bug18"
 								]
 							},
 							{
 								"name": "Female Phasmid",
 								"access_rules": [
-									"Bug19"
+									"bug19"
 								]
 							},
 							{
 								"name": "Male Grasshopper",
 								"access_rules": [
-									"Bug20"
+									"bug20"
 								]
 							},
 							{
 								"name": "Female Grasshopper",
 								"access_rules": [
-									"Bug21"
+									"bug21"
 								]
 							},
 							{
 								"name": "Male Dragonfly",
 								"access_rules": [
-									"Bug22"
+									"bug22"
 								]
 							},
 							{
 								"name": "Female Dragonfly",
 								"access_rules": [
-									"Bug23"
+									"bug23"
 								]
 							}
 						]
