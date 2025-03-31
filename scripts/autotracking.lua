@@ -115,6 +115,15 @@ function onClear(slot_data)
 	Tracker:UiHint("ActivateTab", "Full Map")
 	Tracker:UiHint("ActivateTab", "Overworld")
 	Tracker:UiHint("ActivateTab", "Main Map")
+	
+	Tracker:FindObjectForCode("skipprologue").CurrentStage = 0
+	Tracker:FindObjectForCode("farontwilightcleared").CurrentStage = 0
+	Tracker:FindObjectForCode("eldintwilightcleared").CurrentStage = 0
+	Tracker:FindObjectForCode("lanayrutwilightcleared").CurrentStage = 0
+	Tracker:FindObjectForCode("skipmdh").CurrentStage = 0
+	Tracker:FindObjectForCode("faronvesseloflight").Active = true
+	Tracker:FindObjectForCode("eldinvesseloflight").Active = true
+	Tracker:FindObjectForCode("lanayruvesseloflight").Active = true
 end
 
 function onItem(index, item_id, item_name, player_number)
@@ -139,6 +148,8 @@ function onItem(index, item_id, item_name, player_number)
     if obj then
 		if v[1] == "bombbag" and obj.CurrentStage == 0 then
 			Tracker:FindObjectForCode("waterbomb").Active = true
+		elseif v[1] == "skybook" then --[TMP] on skybook get, set amount to 7
+			Tracker:FindObjectForCode("skybook").AcquiredCount = 6
 		end
         if v[2] == "toggle" then
             obj.Active = true
@@ -180,6 +191,23 @@ function onLocation(location_id, location_name)
     else
         debugAP(string.format("onLocation: could not find object for code %s", v[1]))
     end
+	if location_id == 2320002 then
+		Tracker:FindObjectForCode("agcompleted").Active = true
+	elseif location_id == 2320035 then
+		Tracker:FindObjectForCode("cscompleted").Active = true
+	elseif location_id == 2320059 then
+		Tracker:FindObjectForCode("ftcompleted").Active = true
+	elseif location_id == 2320077 then
+		Tracker:FindObjectForCode("gmcompleted").Active = true
+	elseif location_id == 2320130 then
+		Tracker:FindObjectForCode("ltcompleted").Active = true
+	elseif location_id == 2320167 then --currently uses heart container id
+		Tracker:FindObjectForCode("ptcompleted").Active = true
+	elseif location_id == 2320174 then
+		Tracker:FindObjectForCode("srcompleted").Active = true
+	elseif location_id == 2320199 then
+		Tracker:FindObjectForCode("ttcompleted").Active = true
+	end
 end
 
 function onSetReply(key, value, old)

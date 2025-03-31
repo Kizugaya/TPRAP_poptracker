@@ -3,7 +3,7 @@
 		"type": "itemgrid",
 		"item_margin": "2,2,2,2",
 		"h_alignment": "left",
-		"item_size": "64,64",
+		"item_size": "96,96",
 		"rows": [
 			[
 				"glitched",

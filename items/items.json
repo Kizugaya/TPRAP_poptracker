@@ -762,6 +762,7 @@
 		"codes": "bugs, gbugs, goldenbugs",
 		"loop": true,
 		"allow_disabled": false,
+		"initial_stage_idx": 0,
 		"stages": [
 			{
 				"name": "Golden Bugs Enabled",
@@ -783,6 +784,7 @@
 		"codes": "poes",
 		"loop": true,
 		"allow_disabled": false,
+		"initial_stage_idx": 0,
 		"stages": [
 			{
 				"name": "Poes Enabled",
@@ -804,17 +806,18 @@
 		"codes": "glitched",
 		"loop": true,
 		"allow_disabled": false,
+		"initial_stage_idx": 1,
 		"stages": [
 			{
 				"name": "Glitches Enabled",
 				"codes": "glitcheson",
-				"img": "images/Items/FishingRod1.png",
+				"img": "images/Items/GlitchesEnabled.png",
 				"inherit_codes": false
 			},
 			{
 				"name": "Glitches Disabled",
 				"codes": "glitchesoff",
-				"img": "images/Items/FishingRod2.png",
+				"img": "images/Items/GlitchesDisabled.png",
 				"inherit_codes": false
 			}
 		]
@@ -825,35 +828,36 @@
 		"codes": "castlerequirements",
 		"loop": true,
 		"allow_disabled": false,
+		"initial_stage_idx": 0,
 		"stages": [
 			{
-				"name": "HC Open",
-				"codes": "hcopen",
-				"img": "images/Items/FishingRod1.png",
+				"name": "HC Vanilla",
+				"codes": "hcvanilla",
+				"img": "images/Items/HCVanilla.png",
 				"inherit_codes": false
 			},
 			{
 				"name": "HC Fused Shadows",
 				"codes": "hcfusedshadows",
-				"img": "images/Items/FishingRod2.png",
+				"img": "images/Items/HCFusedShadows.png",
 				"inherit_codes": false
 			},
 			{
 				"name": "HC Mirror Shards",
 				"codes": "hcmirrorshards",
-				"img": "images/Items/Slingshot.png",
+				"img": "images/Items/HCMirrorShards.png",
 				"inherit_codes": false
 			},
 			{
 				"name": "HC All Dungeons",
 				"codes": "hcalldungeons",
-				"img": "images/Items/Lantern.png",
+				"img": "images/Items/HCAllDungeons.png",
 				"inherit_codes": false
 			},
 			{
-				"name": "HC Vanilla",
-				"codes": "hcvanilla",
-				"img": "images/Items/Boomerang.png",
+				"name": "HC Open",
+				"codes": "hcopen",
+				"img": "images/Items/HCOpen.png",
 				"inherit_codes": false
 			}
 		]
@@ -864,29 +868,30 @@
 		"codes": "palacerequirements",
 		"loop": true,
 		"allow_disabled": false,
+		"initial_stage_idx": 0,
 		"stages": [
 			{
-				"name": "PT Open",
-				"codes": "ptopen",
-				"img": "images/Items/FishingRod1.png",
+				"name": "PT Vanilla",
+				"codes": "ptvanilla",
+				"img": "images/Items/PTVanilla.png",
 				"inherit_codes": false
 			},
 			{
 				"name": "PT Fused Shadows",
 				"codes": "ptfusedshadows",
-				"img": "images/Items/FishingRod2.png",
+				"img": "images/Items/PTFusedShadows.png",
 				"inherit_codes": false
 			},
 			{
 				"name": "PT Mirror Shards",
 				"codes": "ptmirrorshards",
-				"img": "images/Items/Slingshot.png",
+				"img": "images/Items/PTMirrorShards.png",
 				"inherit_codes": false
 			},
 			{
-				"name": "PT Vanilla",
-				"codes": "ptvanilla",
-				"img": "images/Items/Lantern.png",
+				"name": "PT Open",
+				"codes": "ptopen",
+				"img": "images/Items/PTOpen.png",
 				"inherit_codes": false
 			}
 		]
@@ -897,17 +902,18 @@
 		"codes": "faronwoods",
 		"loop": true,
 		"allow_disabled": false,
+		"initial_stage_idx": 1,
 		"stages": [
 			{
 				"name": "Faron Woods Open",
 				"codes": "faronwoodsopen",
-				"img": "images/Items/FishingRod1.png",
+				"img": "images/Items/FaronWoodsOpen.png",
 				"inherit_codes": false
 			},
 			{
 				"name": "Faron Woods Closed",
 				"codes": "faronwoodsclosed",
-				"img": "images/Items/FishingRod2.png",
+				"img": "images/Items/FaronWoodsClosed.png",
 				"inherit_codes": false
 			}
 		]
@@ -918,35 +924,36 @@
 		"codes": "smallkeys",
 		"loop": true,
 		"allow_disabled": false,
+		"initial_stage_idx": 0,
 		"stages": [
-			{
-				"name": "SK Start with",
-				"codes": "skkeysy",
-				"img": "images/Items/FishingRod1.png",
-				"inherit_codes": false
-			},
 			{
 				"name": "SK Vanilla",
 				"codes": "skvanilla",
-				"img": "images/Items/FishingRod2.png",
+				"img": "images/Items/SKVanilla.png",
 				"inherit_codes": false
 			},
 			{
 				"name": "SK Own Dungeon",
 				"codes": "skowndungeon",
-				"img": "images/Items/Slingshot.png",
+				"img": "images/Items/SKOwnDungeon.png",
 				"inherit_codes": false
 			},
 			{
 				"name": "SK Any Dungeon",
 				"codes": "skanydungeon",
-				"img": "images/Items/Lantern.png",
+				"img": "images/Items/SKAnyDungeon.png",
 				"inherit_codes": false
 			},
 			{
 				"name": "SK Anywhere",
 				"codes": "skkeysanity",
-				"img": "images/Items/Boomerang.png",
+				"img": "images/Items/SKAnywhere.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "SK Start with",
+				"codes": "skkeysy",
+				"img": "images/Items/SKKeysy.png",
 				"inherit_codes": false
 			}
 		]
@@ -957,35 +964,36 @@
 		"codes": "bigkeys",
 		"loop": true,
 		"allow_disabled": false,
+		"initial_stage_idx": 0,
 		"stages": [
-			{
-				"name": "BK Start with",
-				"codes": "bkkeysy",
-				"img": "images/Items/FishingRod1.png",
-				"inherit_codes": false
-			},
 			{
 				"name": "BK Vanilla",
 				"codes": "bkvanilla",
-				"img": "images/Items/FishingRod2.png",
+				"img": "images/Items/BKVanilla.png",
 				"inherit_codes": false
 			},
 			{
 				"name": "BK Own Dungeon",
 				"codes": "bkowndungeon",
-				"img": "images/Items/Slingshot.png",
+				"img": "images/Items/BKOwnDungeon.png",
 				"inherit_codes": false
 			},
 			{
 				"name": "BK Any Dungeon",
 				"codes": "bkanydungeon",
-				"img": "images/Items/Lantern.png",
+				"img": "images/Items/BKAnyDungeon.png",
 				"inherit_codes": false
 			},
 			{
 				"name": "BK Anywhere",
 				"codes": "bkkeysanity",
-				"img": "images/Items/Boomerang.png",
+				"img": "images/Items/BKAnywhere.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "BK Start with",
+				"codes": "bkkeysy",
+				"img": "images/Items/BKKeysy.png",
 				"inherit_codes": false
 			}
 		]
@@ -996,17 +1004,18 @@
 		"codes": "skipprologue",
 		"loop": true,
 		"allow_disabled": false,
+		"initial_stage_idx": 1,
 		"stages": [
 			{
 				"name": "Skip Prologue Enabled",
 				"codes": "skipprologueon",
-				"img": "images/Items/FishingRod1.png",
+				"img": "images/Items/SkipPrologueEnabled.png",
 				"inherit_codes": false
 			},
 			{
 				"name": "Skip Prologue Disabled",
 				"codes": "skipprologueoff",
-				"img": "images/Items/FishingRod2.png",
+				"img": "images/Items/SkipPrologueDisabled.png",
 				"inherit_codes": false
 			}
 		]
@@ -1017,6 +1026,7 @@
 		"codes": "farontwilightcleared",
 		"loop": true,
 		"allow_disabled": false,
+		"initial_stage_idx": 1,
 		"stages": [
 			{
 				"name": "Faron Twilight Cleared Enabled",
@@ -1038,6 +1048,7 @@
 		"codes": "eldintwilightcleared",
 		"loop": true,
 		"allow_disabled": false,
+		"initial_stage_idx": 1,
 		"stages": [
 			{
 				"name": "Eldin Twilight Cleared Enabled",
@@ -1059,6 +1070,7 @@
 		"codes": "lanayrutwilightcleared",
 		"loop": true,
 		"allow_disabled": false,
+		"initial_stage_idx": 1,
 		"stages": [
 			{
 				"name": "Lanayru Twilight Cleared Enabled",
@@ -1080,17 +1092,18 @@
 		"codes": "skipmdh",
 		"loop": true,
 		"allow_disabled": false,
+		"initial_stage_idx": 1,
 		"stages": [
 			{
 				"name": "Skip Midna's Desperate Hour Enabled",
 				"codes": "skipmdhon",
-				"img": "images/Items/FishingRod1.png",
+				"img": "images/Items/SkipMDHEnabled.png",
 				"inherit_codes": false
 			},
 			{
 				"name": "Skip Midna's Desperate Hour Disabled",
 				"codes": "skipmdhoff",
-				"img": "images/Items/FishingRod2.png",
+				"img": "images/Items/SkipMDHDisabled.png",
 				"inherit_codes": false
 			}
 		]
@@ -1101,17 +1114,18 @@
 		"codes": "openmap",
 		"loop": true,
 		"allow_disabled": false,
+		"initial_stage_idx": 1,
 		"stages": [
 			{
 				"name": "Open Map Enabled",
 				"codes": "openmapon",
-				"img": "images/Items/FishingRod1.png",
+				"img": "images/Items/OpenMapEnabled.png",
 				"inherit_codes": false
 			},
 			{
 				"name": "Open Map Disabled",
 				"codes": "openmapoff",
-				"img": "images/Items/FishingRod2.png",
+				"img": "images/Items/OpenMapDisabled.png",
 				"inherit_codes": false
 			}
 		]
@@ -1122,17 +1136,18 @@
 		"codes": "increasewallet",
 		"loop": true,
 		"allow_disabled": false,
+		"initial_stage_idx": 1,
 		"stages": [
 			{
 				"name": "Increase Wallet Enabled",
 				"codes": "increasewalleton",
-				"img": "images/Items/Wallet4.png",
+				"img": "images/Items/IncreaseWalletEnabled.png",
 				"inherit_codes": false
 			},
 			{
 				"name": "Increase Wallet Disabled",
 				"codes": "increasewalletoff",
-				"img": "images/Items/Wallet1.png",
+				"img": "images/Items/IncreaseWalletDisabled.png",
 				"inherit_codes": false
 			}
 		]
@@ -1143,6 +1158,7 @@
 		"codes": "transformanywhere",
 		"loop": true,
 		"allow_disabled": false,
+		"initial_stage_idx": 1,
 		"stages": [
 			{
 				"name": "Transform Anywhere Enabled",
@@ -1164,17 +1180,18 @@
 		"codes": "bonksdodamage",
 		"loop": true,
 		"allow_disabled": false,
+		"initial_stage_idx": 1,
 		"stages": [
 			{
 				"name": "Bonks Do Damage Enabled",
 				"codes": "bonksdodamageon",
-				"img": "images/Items/FishingRod1.png",
+				"img": "images/Items/BonksDoDamageEnabled.png",
 				"inherit_codes": false
 			},
 			{
 				"name": "Bonks Do Damage Disabled",
 				"codes": "bonksdodamageoff",
-				"img": "images/Items/FishingRod2.png",
+				"img": "images/Items/BonksDoDamageDisabled.png",
 				"inherit_codes": false
 			}
 		]
@@ -1185,35 +1202,36 @@
 		"codes": "damagemagnification",
 		"loop": true,
 		"allow_disabled": false,
+		"initial_stage_idx": 0,
 		"stages": [
 			{
 				"name": "Damage Vanilla",
 				"codes": "damagevanilla",
-				"img": "images/Items/FishingRod1.png",
+				"img": "images/Items/DamageVanilla.png",
 				"inherit_codes": false
 			},
 			{
 				"name": "Damage Double",
 				"codes": "damagedouble",
-				"img": "images/Items/FishingRod2.png",
+				"img": "images/Items/DamageDouble.png",
 				"inherit_codes": false
 			},
 			{
 				"name": "Damage Triple",
 				"codes": "damagetriple",
-				"img": "images/Items/Slingshot.png",
+				"img": "images/Items/DamageTriple.png",
 				"inherit_codes": false
 			},
 			{
 				"name": "Damage Quadruple",
 				"codes": "damagequadruple",
-				"img": "images/Items/Lantern.png",
+				"img": "images/Items/DamageQuadruple.png",
 				"inherit_codes": false
 			},
 			{
 				"name": "One Hit KO",
 				"codes": "ohko",
-				"img": "images/Items/Boomerang.png",
+				"img": "images/Items/DamageOHKO.png",
 				"inherit_codes": false
 			}
 		]
@@ -1224,17 +1242,18 @@
 		"codes": "skiplakebedentrance",
 		"loop": true,
 		"allow_disabled": false,
+		"initial_stage_idx": 1,
 		"stages": [
 			{
 				"name": "Skip Lakebed Entrance Enabled",
 				"codes": "skiplakebedentranceon",
-				"img": "images/Items/FishingRod1.png",
+				"img": "images/Items/SkipLTEnabled.png",
 				"inherit_codes": false
 			},
 			{
 				"name": "Skip Lakebed Entrance Disabled",
 				"codes": "skiplakebedentranceoff",
-				"img": "images/Items/FishingRod2.png",
+				"img": "images/Items/SkipLTDisabled.png",
 				"inherit_codes": false
 			}
 		]
@@ -1245,17 +1264,18 @@
 		"codes": "skiparbitersentrance",
 		"loop": true,
 		"allow_disabled": false,
+		"initial_stage_idx": 1,
 		"stages": [
 			{
 				"name": "Skip Arbiter's Entrance Enabled",
 				"codes": "skiparbitersentranceon",
-				"img": "images/Items/FishingRod1.png",
+				"img": "images/Items/SkipAGEnabled.png",
 				"inherit_codes": false
 			},
 			{
 				"name": "Skip Arbiter's Entrance Disabled",
 				"codes": "skiparbitersentranceoff",
-				"img": "images/Items/FishingRod2.png",
+				"img": "images/Items/SkipAGDisabled.png",
 				"inherit_codes": false
 			}
 		]
@@ -1266,17 +1286,18 @@
 		"codes": "skipsnowpeakentrance",
 		"loop": true,
 		"allow_disabled": false,
+		"initial_stage_idx": 1,
 		"stages": [
 			{
 				"name": "Skip Snowpeak Entrance Enabled",
 				"codes": "skipsnowpeakentranceon",
-				"img": "images/Items/FishingRod1.png",
+				"img": "images/Items/SkipSREnabled.png",
 				"inherit_codes": false
 			},
 			{
 				"name": "Skip Snowpeak Entrance Disabled",
 				"codes": "skipsnowpeakentranceoff",
-				"img": "images/Items/FishingRod2.png",
+				"img": "images/Items/SkipSRDisabled.png",
 				"inherit_codes": false
 			}
 		]
@@ -1287,17 +1308,18 @@
 		"codes": "skipcityintheskyentrance",
 		"loop": true,
 		"allow_disabled": false,
+		"initial_stage_idx": 1,
 		"stages": [
 			{
 				"name": "Skip City in the Sky Entrance Enabled",
 				"codes": "skipcityintheskyentranceon",
-				"img": "images/Items/FishingRod1.png",
+				"img": "images/Items/SkipCSEnabled.png",
 				"inherit_codes": false
 			},
 			{
 				"name": "Skip City in the Sky Entrance Disabled",
 				"codes": "skipcityintheskyentranceoff",
-				"img": "images/Items/FishingRod2.png",
+				"img": "images/Items/SkipCSDisabled.png",
 				"inherit_codes": false
 			}
 		]
@@ -1308,23 +1330,24 @@
 		"codes": "goronminesentrance",
 		"loop": true,
 		"allow_disabled": false,
+		"initial_stage_idx": 2,
 		"stages": [
 			{
 				"name": "GM Open",
 				"codes": "gmopen",
-				"img": "images/Items/FishingRod1.png",
+				"img": "images/Items/GMOpen.png",
 				"inherit_codes": false
 			},
 			{
 				"name": "GM No Wrestling",
 				"codes": "gmnowrestling",
-				"img": "images/Items/FishingRod2.png",
+				"img": "images/Items/GMNoWrestling.png",
 				"inherit_codes": false
 			},
 			{
 				"name": "GM Closed",
 				"codes": "gmclosed",
-				"img": "images/Items/Slingshot.png",
+				"img": "images/Items/GMClosed.png",
 				"inherit_codes": false
 			}
 		]
@@ -1335,23 +1358,24 @@
 		"codes": "templeoftimeentrance",
 		"loop": true,
 		"allow_disabled": false,
+		"initial_stage_idx": 2,
 		"stages": [
 			{
 				"name": "TT Open",
 				"codes": "ttopen",
-				"img": "images/Items/FishingRod1.png",
+				"img": "images/Items/TTOpen.png",
 				"inherit_codes": false
 			},
 			{
 				"name": "TT Open Grove",
 				"codes": "ttopengrove",
-				"img": "images/Items/FishingRod2.png",
+				"img": "images/Items/TTOpenGrove.png",
 				"inherit_codes": false
 			},
 			{
 				"name": "TT Closed",
 				"codes": "ttclosed",
-				"img": "images/Items/Slingshot.png",
+				"img": "images/Items/TTClosed.png",
 				"inherit_codes": false
 			}
 		]
