@@ -18,8 +18,8 @@
 				"skiparbitersentrance",
 				"skipsnowpeakentrance",
 				"skipcityintheskyentrance",
-				"smallkeys",
-				"bigkeys"
+				"goronminesentrance",
+				"templeoftimeentrance"
 			],
 			[
 				"skipprologue",
@@ -34,8 +34,8 @@
 				"transformanywhere",
 				"bonksdodamage",
 				"damagemagnification",
-				"goronminesentrance",
-				"templeoftimeentrance"
+				"smallkeys",
+				"bigkeys"
 			]
 		]
 	}

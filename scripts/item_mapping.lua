@@ -36,7 +36,6 @@ ITEM_MAPPING = {
 	[BASE + 60] = {"cssmallkey", "consumable"},
 	[BASE + 61] = {"ptsmallkey", "consumable"},
 	[BASE + 62] = {"hcsmallkey", "consumable"},
-	[BASE + 63] = {"fwkey", "toggle"},
 	[BASE + 65] = {"gatekeys", "toggle"},
 	[BASE + 66] = {"bckey", "toggle"},
 	[BASE + 67] = {"aurusmemo", "toggle"},
