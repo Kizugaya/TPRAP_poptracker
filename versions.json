@@ -1,10 +1,22 @@
 {
 	"versions": [
-		"package_version": "0.1.0",
-		"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.1.0/TPRAP_poptracker_v0.1.0.zip",
-		"sha256": "9D77175422F2D807198CA0E14EBE5EF3BACC2CF321946705EB3B680F59249FA8",
-		"changelog": [
-			"Added Tracker"
-		]
+		{
+			"package_version": "0.1.0",
+			"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.1.0/TPRAP_poptracker_v0.1.0.zip",
+			"sha256": "9D77175422F2D807198CA0E14EBE5EF3BACC2CF321946705EB3B680F59249FA8",
+			"changelog": [
+				"Added Tracker"
+			]
+		},
+		{
+			"package_version": "0.1.1",
+			"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.1.0/TPRAP_poptracker_v0.1.1.zip",
+			"sha256": "E0206D774494C645C3A81E57A6E435075958A2B790005FCBA307EF8E56795542",
+			"changelog": [
+				"access_rule for Sera's shop in Ordon was mixed up",
+				"Item mapping was wrong",
+				"Added Giant Bomb Bag"
+			]
+		}
 	]
 }
