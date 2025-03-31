@@ -53,7 +53,7 @@ function onClear(slot_data)
 	debugAP(string.format("called onClear, slot_data:\n%s", dump_table(slot_data)))
 	SLOT_DATA = slot_data
 	SLOT_DATA.Settings["Lakebed Entrance Requirements"] = SLOT_DATA.Settings["Lakebed Entrance Requirements"] or SLOT_DATA.Settings["Lakebed Enterance Requirements"]
-	SLOT_DATA.Settings["Arbiters Grounds Entrance Requirements"] = SLOT_DATA.Settings["Arbiters Grounds Entrance Requirements"] or SLOT_DATA.Settings["Arbiters Grounds Enterance Requirements"]
+	SLOT_DATA.Settings["Arbiters Grounds Entrance Requirements"] = SLOT_DATA.Settings["Arbiters Grounds Entrance Requirements"] or SLOT_DATA.Settings["Arbiters Grounds Requirements"]
 	SLOT_DATA.Settings["Snowpeak Entrance Requirements"] = SLOT_DATA.Settings["Snowpeak Entrance Requirements"] or SLOT_DATA.Settings["Snowpeak Enterance Requirements"]
 	SLOT_DATA.Settings["City in the Sky Entrance Requirements"] = SLOT_DATA.Settings["City in the Sky Entrance Requirements"] or SLOT_DATA.Settings["City in the Sky Enterance Requirements"]
 	SLOT_DATA.Settings["Goron Mines Entrance Requirements"] = SLOT_DATA.Settings["Goron Mines Entrance Requirements"] or SLOT_DATA.Settings["Goron Mines Enterance Requirements"]
