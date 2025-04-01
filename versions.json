@@ -10,11 +10,11 @@
 		},
 		{
 			"package_version": "0.1.2",
-				"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.1.2/TPRAP_poptracker_v0.1.2.zip",
-				"sha256": "2989D3AA1855043C3DC2538DD793161E18AFD414D2C94CCFD98CF4125225EC3A",
-				"changelog": [
-					"Bugfix for Agitha's rewards"
-				]
+			"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.1.2/TPRAP_poptracker_v0.1.2.zip",
+			"sha256": "2989D3AA1855043C3DC2538DD793161E18AFD414D2C94CCFD98CF4125225EC3A",
+			"changelog": [
+				"Bugfix for Agitha's rewards"
+			]
 		},
 		{
 			"package_version": "0.1.1",
