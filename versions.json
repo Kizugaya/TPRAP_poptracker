@@ -1,6 +1,15 @@
 {
 	"versions": [
 		{
+			"package_version": "0.2.1",
+			"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.2.1/TPRAP_poptracker_v0.2.1.zip",
+			"sha256": "520BDD4D2E09865C2A2991F7FBE58ECC6BFA2CD935002A5A1D1BD79660A1111B",
+			"changelog": [
+				"Fixed location at Lake Hylia Grotto Ledge",
+				"Added Statue locations next to Golden Wolves"
+			]
+		},
+		{
 			"package_version": "0.2.0",
 			"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.2.0/TPRAP_poptracker_v0.2.0.zip",
 			"sha256": "60D1F53B0D924B1475D1E4351C708C61C398B2E6BB63DE916CDFFD6388062F6F",
