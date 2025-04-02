@@ -184,7 +184,33 @@
 								"chest_unopened_img": "images/Items/GoldenWolfGrayed.png",
 								"chest_opened_img": "images/Items/GoldenWolf.png",
 								"access_rules": [
-									"@OutsideCastleTownWest, @NorthFaronWoods, shadowcrystal"
+									"@OutsideCastleTownWest, @UpperZorasRiver, shadowcrystal"
+								]
+							}
+						]
+					},
+					{
+						"name": "Upper Zora's River Stone",
+						"map_locations": [
+							{
+								"map": "bct",
+								"x": 485,
+								"y": 664,
+								"size": 16
+							},
+							{
+								"map": "overworld",
+								"x": 4116,
+								"y": 3933,
+								"size": 32
+							}
+						],
+						"sections": [
+							{
+								"chest_unopened_img": "images/Items/HowlingStoneGrayed.png",
+								"chest_opened_img": "images/Items/HowlingStone.png",
+								"access_rules": [
+									"{@UpperZorasRiver, shadowcrystal}"
 								]
 							}
 						]
@@ -595,6 +621,32 @@
 								"chest_opened_img": "images/Items/GoldenWolf.png",
 								"access_rules": [
 									"@CastleTownNorthBehindFirstDoor, @HiddenVillage, shadowcrystal, $canCompleteMDH"
+								]
+							}
+						]
+					},
+					{
+						"name": "Hidden Village Stone",
+						"map_locations": [
+							{
+								"map": "ct",
+								"x": 356,
+								"y": 56,
+								"size": 12
+							},
+							{
+								"map": "overworld",
+								"x": 4645,
+								"y": 3713,
+								"size": 32
+							}
+						],
+						"sections": [
+							{
+								"chest_unopened_img": "images/Items/HowlingStoneGrayed.png",
+								"chest_opened_img": "images/Items/HowlingStone.png",
+								"access_rules": [
+									"{@HiddenVillage, shadowcrystal}"
 								]
 							}
 						]
@@ -2133,6 +2185,32 @@
 								]
 							}
 						]
+					},
+					{
+						"name": "Lake Hylia Stone",
+						"map_locations": [
+							{
+								"map": "gd",
+								"x": 550,
+								"y": 1278,
+								"size": 20
+							},
+							{
+								"map": "overworld",
+								"x": 520,
+								"y": 4678,
+								"size": 32
+							}
+						],
+						"sections": [
+							{
+								"chest_unopened_img": "images/Items/HowlingStoneGrayed.png",
+								"chest_opened_img": "images/Items/HowlingStone.png",
+								"access_rules": [
+									"{@LakeHylia, shadowcrystal}"
+								]
+							}
+						]
 					}
 				]
 			},
@@ -2752,6 +2830,35 @@
 								]
 							}
 						]
+					},
+					{
+						"name": "Snowpeak Mountain Stone",
+						"map_locations": [
+							{
+								"map": "kakariko",
+								"x": 777,
+								"y": 521,
+								"size": 12
+							},
+							{
+								"map": "overworld",
+								"x": 8090,
+								"y": 5481,
+								"size": 32
+							}
+						],
+						"sections": [
+							{
+								"chest_unopened_img": "images/Items/HowlingStoneGrayed.png",
+								"chest_opened_img": "images/Items/HowlingStone.png",
+								"access_rules": [
+									"{@SnowpeakClimbUpper, shadowcrystal}",
+									"{[glitcheson], @SnowpeakClimbUpper, shadowcrystal, skipsnowpeakentrance}",
+									"{[glitcheson], @SnowpeakClimbUpper, shadowcrystal, reekfishscent}",
+									"{[glitcheson], @SnowpeakClimbUpper, shadowcrystal, $canDoMapGlitch}"
+								]
+							}
+						]
 					}
 				]
 			},
@@ -3064,7 +3171,7 @@
 							{
 								"name": "Cliff Chest",
 								"access_rules": [
-									"@LakeHyliaBridge, glitchesoff",
+									"@LakeHyliaBridgeGrottoLedge, glitchesoff",
 									"[glitcheson], @LakeHyliaBridge, $canLaunchBombs, clawshot"
 								]
 							},
@@ -3502,7 +3609,7 @@
 						"sections": [
 							{
 								"access_rules": [
-									"@LakeHyliaBridge, shadowcrystal, $allTwilightCleared, $canCompleteMDH"
+									"@LakeHyliaBridgeGrottoLedge, shadowcrystal, $allTwilightCleared, $canCompleteMDH"
 								]
 							}
 						]
@@ -4356,6 +4463,32 @@
 								]
 							}
 						]
+					},
+					{
+						"name": "Snowpeak Mountain Stone",
+						"map_locations": [
+							{
+								"map": "ordon",
+								"x": 270,
+								"y": 280,
+								"size": 16
+							},
+							{
+								"map": "overworld",
+								"x": 4734,
+								"y": 8540,
+								"size": 32
+							}
+						],
+						"sections": [
+							{
+								"chest_unopened_img": "images/Items/HowlingStoneGrayed.png",
+								"chest_opened_img": "images/Items/HowlingStone.png",
+								"access_rules": [
+									"{@DeathMountainTrail, shadowcrystal}"
+								]
+							}
+						]
 					}
 				]
 			},
@@ -5157,6 +5290,32 @@
 								"chest_opened_img": "images/Items/GoldenWolf.png",
 								"access_rules": [
 									"@OutsideCastleTownSouth, @NorthFaronWoods, shadowcrystal"
+								]
+							}
+						]
+					},
+					{
+						"name": "North Faron Woods Stone",
+						"map_locations": [
+							{
+								"map": "sct",
+								"x": 273,
+								"y": 165,
+								"size": 12
+							},
+							{
+								"map": "overworld",
+								"x": 4535,
+								"y": 4439,
+								"size": 32
+							}
+						],
+						"sections": [
+							{
+								"chest_unopened_img": "images/Items/HowlingStoneGrayed.png",
+								"chest_opened_img": "images/Items/HowlingStone.png",
+								"access_rules": [
+									"{@NorthFaronWoods, shadowcrystal}"
 								]
 							}
 						]
