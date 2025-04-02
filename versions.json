@@ -1,6 +1,14 @@
 {
 	"versions": [
 		{
+			"package_version": "0.2.2",
+			"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.2.2/TPRAP_poptracker_v0.2.2.zip",
+			"sha256": "5CD746E64C751A515F848AAABA46DA4EBD8769845F9B7C88D7D1C6A3CD083B01",
+			"changelog": [
+				"Fixed Ordon Spring Wolf Stone name"
+			]
+		},
+		{
 			"package_version": "0.2.1",
 			"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.2.1/TPRAP_poptracker_v0.2.1.zip",
 			"sha256": "520BDD4D2E09865C2A2991F7FBE58ECC6BFA2CD935002A5A1D1BD79660A1111B",
