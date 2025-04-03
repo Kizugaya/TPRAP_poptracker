@@ -1,0 +1,67 @@
+{
+	"tracker_broadcast": {
+		"background": "#1D1A14",
+		"type": "dock",
+		"content": [
+			{
+				"type": "dock",
+				"orientation": "vertical",
+				"dock": "left",
+				"content": [
+					{
+						"type": "tabbed",
+						"dock": "top",
+						"content": [
+							{
+								"type": "group",
+								"header": "Items",
+								"background": "#525260",
+								"content": {
+									"type": "layout",
+									"key": "item_grid_broadcast"
+								}
+							},
+							{
+								"type": "group",
+								"header": "Bugs",
+								"background": "#525260",
+								"content": {
+									"type": "layout",
+									"key": "bugs_broadcast"
+								}
+							}
+						]
+					},
+					{
+						"type": "group",
+						"header": "Keys & Dungeons",
+						"dock": "top",
+						"background": "#525260",
+						"content": {
+							"type": "layout",
+							"key": "keys_broadcast"
+						}
+					},
+					{
+						"type": "container",
+						"dock": "top",
+						"background": "#525260",
+						"content": {
+							"type": "layout",
+							"key": "bosses_broadcast"
+						}
+					},
+					{
+						"type": "container",
+						"dock": "top",
+						"background": "#525260",
+						"content": {
+							"type": "layout",
+							"key": "dungeon_keys_broadcast"
+						}
+					}
+				]
+			}
+		]
+	}
+}

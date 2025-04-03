@@ -29,6 +29,7 @@ Tracker:AddLayouts("layouts/bosses.json")
 Tracker:AddLayouts("layouts/dungeon_keys.json")
 
 Tracker:AddLayouts("layouts/settings.json")
+Tracker:AddLayouts("layouts/broadcast.json")
 
 
 
