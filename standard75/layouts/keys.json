@@ -26,5 +26,33 @@
 				]
 			}
 		]
+	},
+	"keys_broadcast": {
+		"type": "array",
+		"orientation": "horizontal",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"item_size": "41",
+				"item_margin": "1,1,1,1",
+				"margin": "4,1,1,40",
+				"item_h_alignment": "center",
+				"item_v_alignment": "center",
+				"rows":[
+					[
+						"",
+						"faronvesseloflight",
+						"eldinvesseloflight",
+						"lanayruvesseloflight",
+						"",
+						"fwkey",
+						"gatekeys",
+						"bckey",
+						""
+					]
+				]
+			}
+		]
 	}
 }
