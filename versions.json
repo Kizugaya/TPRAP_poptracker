@@ -1,6 +1,14 @@
 {
 	"versions": [
 		{
+			"package_version": "0.3.0",
+			"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.3.0/TPRAP_poptracker_v0.3.0.zip",
+			"sha256": "AFCA6ED567E18E45E8348F421804A6B6F38DB3D1BE9DF3F0F1CC61EB7BC88E4D",
+			"changelog": [
+				"Added 75% Icon Scale Tracker"
+			]
+		},
+		{
 			"package_version": "0.2.2",
 			"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.2.2/TPRAP_poptracker_v0.2.2.zip",
 			"sha256": "5CD746E64C751A515F848AAABA46DA4EBD8769845F9B7C88D7D1C6A3CD083B01",
