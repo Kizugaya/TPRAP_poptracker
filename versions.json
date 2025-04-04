@@ -1,6 +1,14 @@
 {
 	"versions": [
 		{
+			"package_version": "0.3.3",
+			"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.3.3/TPRAP_poptracker_v0.3.3.zip",
+			"sha256": "8A70B8FBBFB2EFCBCE48C97FAF557B7FCF4E9612F0CD336A3A3ED31AAF40483D",
+			"changelog": [
+				"Added Victory Check"
+			]
+		},
+		{
 			"package_version": "0.3.2",
 			"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.3.2/TPRAP_poptracker_v0.3.2.zip",
 			"sha256": "F1539714F8777812B788C2AA6927B46EE89FAB701622DF4E03B37F70D5B75C1F",
