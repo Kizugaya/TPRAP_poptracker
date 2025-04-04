@@ -429,6 +429,39 @@
 						]
 					}
 				]
+			},
+			{
+				"name": "5F",
+				"children": [
+					{
+						"name": "Victory",
+						"map_locations": [
+							{
+								"map": "hc5f",
+								"x": 834,
+								"y": 609
+							},
+							{
+								"map": "hcfull",
+								"x": 2445,
+								"y": 1899
+							},
+							{
+								"map": "overworld",
+								"x": 4707,
+								"y": 3364,
+								"size": 256
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"@GanondorfCastle"
+								]
+							}
+						]
+					}
+				]
 			}
 		]
 	}
