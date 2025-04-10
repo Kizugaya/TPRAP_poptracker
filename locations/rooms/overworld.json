@@ -74,7 +74,8 @@
 		"access_rules": [
 			"@OutsideLinksHouse",
 			"@SouthFaronWoods, woodensword, slingshot",
-			"@SouthFaronWoods, skipprologueon"
+			"@SouthFaronWoods, skipprologueon",
+			"osportalactive, shadowcrystal"
 		]
 	},
 	{
@@ -89,7 +90,8 @@
 			"@SouthFaronWoodsOwlStatueArea, $canSmash",
 			"@FaronField",
 			"@ForestTempleBossRoom, $canDefeatDiababa",
-			"[glitcheson], @ForestTempleBossRoom, $canDefeatDiababaGlitched"
+			"[glitcheson], @ForestTempleBossRoom, $canDefeatDiababaGlitched",
+			"sfwportalactive, shadowcrystal"
 		]
 	},
 	{
@@ -175,7 +177,8 @@
 			"@MistAreaNearNorthFaronWoods, skkeysy",
 			"@MistAreaNearNorthFaronWoods, skipprologueon",
 			"@LostWoods",
-			"@ForestTempleEntrance"
+			"@ForestTempleEntrance",
+			"nfwportalactive, shadowcrystal"
 		]
 	},
 	{
@@ -234,7 +237,8 @@
 			"@LostWoodsLowerBattleArena, $canDefeatSkullKid",
 			"@LostWoodsLowerBattleArena, ttopen",
 			"@LostWoodsLowerBattleArena, ttopengrove",
-			"@SacredGroveUpper"
+			"@SacredGroveUpper",
+			"sgportalactive, shadowcrystal"
 		]
 	},
 	{
@@ -272,7 +276,8 @@
 			"@EldinField, $canSmash",
 			"@LowerKakarikoVillage, shadowcrystal",
 			"@LowerKakarikoVillage, gatekeys",
-			"@LowerKakarikoVillage, skkeysy"
+			"@LowerKakarikoVillage, skkeysy",
+			"kgportalactive, shadowcrystal"
 		]
 	},
 	{
@@ -292,7 +297,8 @@
 			"@EldinFieldBombskitGrotto",
 			"@EldinFieldWaterBombFishGrotto",
 			"@LowerKakarikoVillage",
-			"@OutsideCastleTownEast"
+			"@OutsideCastleTownEast",
+			"boeportalactive, shadowcrystal"
 		]
 	},
 	{
@@ -359,7 +365,8 @@
 			"@KakarikoBarnesBombShopLower",
 			"@KakarikoGraveyard",
 			"@DeathMountainTrail",
-			"@GoronMinesBossRoom, $canDefeatFyrus"
+			"@GoronMinesBossRoom, $canDefeatFyrus",
+			"kvportalactive, shadowcrystal"
 		]
 	},
 	{
@@ -436,7 +443,8 @@
 		"access_rules": [
 			"@DeathMountainTrail",
 			"@DeathMountainElevatorLower",
-			"@DeathMountainSumoHall"
+			"@DeathMountainSumoHall",
+			"dmportalactive, shadowcrystal"
 		]
 	},
 	{
@@ -530,7 +538,8 @@
 			"@LanayruField",
 			"@OutsideCastleTownWestGrottoLedge",
 			"@LakeHyliaBridge",
-			"@CastleTownWest"
+			"@CastleTownWest",
+			"ctportalactive, shadowcrystal"
 		]
 	},
 	{
@@ -708,7 +717,8 @@
 			"@LakeHyliaWaterToadpoliGrotto",
 			"@UpperZorasRiverIzasHouse, bow",
 			"@LakebedTempleEntrance",
-			"@CityinTheSkyEntrance, clawshot"
+			"@CityinTheSkyEntrance, clawshot",
+			"lhportalactive, shadowcrystal"
 		]
 	},
 	{
@@ -745,7 +755,8 @@
 			"@LakeHylia, shadowcrystal",
 			"@UpperZorasRiverIzasHouse",
 			"@FishingHole",
-			"@ZorasDomain"
+			"@ZorasDomain",
+			"uzrportalactive, shadowcrystal"
 		]
 	},
 	{
@@ -767,7 +778,8 @@
 			"@UpperZorasRiver",
 			"@ZorasDomainWestLedge",
 			"@ZorasThroneRoom",
-			"@SnowpeakClimbLower"
+			"@SnowpeakClimbLower",
+			"zdportalactive, shadowcrystal"
 		]
 	},
 	{
@@ -800,7 +812,8 @@
 		"name": "GerudoDesertCaveofOrdealsPlateau",
 		"access_rules": [
 			"@GerudoDesert, $canDefeatShadowBeast, clawshot",
-			"@CaveofOrdealsFloors0111, clawshot"
+			"@CaveofOrdealsFloors0111, clawshot",
+			"gmportalactive, shadowcrystal"
 		]
 	},
 	{
@@ -871,7 +884,8 @@
 		"access_rules": [
 			"@MirrorChamberLower",
 			"@MirrorChamberPortal, $canDefeatShadowBeast",
-			"@PalaceofTwilightEntrance"
+			"@PalaceofTwilightEntrance",
+			"mcportalactive, shadowcrystal"
 		]
 	},
 	{
@@ -949,7 +963,8 @@
 	{
 		"name": "SnowpeakSummitUpper",
 		"access_rules": [
-			"@SnowpeakClimbUpper, shadowcrystal"
+			"@SnowpeakClimbUpper, shadowcrystal",
+			"stportalactive, shadowcrystal"
 		]
 	},
 	{

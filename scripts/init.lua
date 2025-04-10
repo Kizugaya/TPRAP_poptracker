@@ -19,19 +19,18 @@ Tracker:AddMaps("maps/maps.json")
 --
 Tracker:AddLayouts("layouts/tracker.json")
 
-
-Tracker:AddLayouts("layouts/layouts_maps.json")
-
 Tracker:AddLayouts("layouts/item_grid.json")
 Tracker:AddLayouts("layouts/bugs.json")
 Tracker:AddLayouts("layouts/keys.json")
 Tracker:AddLayouts("layouts/bosses.json")
 Tracker:AddLayouts("layouts/dungeon_keys.json")
+Tracker:AddLayouts("layouts/portals.json")
 
 Tracker:AddLayouts("layouts/settings.json")
 Tracker:AddLayouts("layouts/broadcast.json")
 
 
+Tracker:AddLayouts("layouts/layouts_maps.json")
 
 --
 Tracker:AddLocations("locations/rooms/overworld.json")

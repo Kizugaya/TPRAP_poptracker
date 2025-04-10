@@ -184,7 +184,7 @@
 								"chest_unopened_img": "images/Items/GoldenWolfGrayed.png",
 								"chest_opened_img": "images/Items/GoldenWolf.png",
 								"access_rules": [
-									"@OutsideCastleTownWest, @UpperZorasRiver, shadowcrystal"
+									"@OutsideCastleTownWest, @UpperZorasRiver, shadowcrystal, uzrhowlingstone"
 								]
 							}
 						]
@@ -620,7 +620,7 @@
 								"chest_unopened_img": "images/Items/GoldenWolfGrayed.png",
 								"chest_opened_img": "images/Items/GoldenWolf.png",
 								"access_rules": [
-									"@CastleTownNorthBehindFirstDoor, @HiddenVillage, shadowcrystal, $canCompleteMDH"
+									"@CastleTownNorthBehindFirstDoor, @HiddenVillage, shadowcrystal, $canCompleteMDH, hvhowlingstone"
 								]
 							}
 						]
@@ -2181,7 +2181,7 @@
 								"chest_unopened_img": "images/Items/GoldenWolfGrayed.png",
 								"chest_opened_img": "images/Items/GoldenWolf.png",
 								"access_rules": [
-									"@GerudoDesertOutsideBulblinCamp, @LakeHylia, shadowcrystal"
+									"@GerudoDesertOutsideBulblinCamp, @LakeHylia, shadowcrystal, lhhowlingstone"
 								]
 							}
 						]
@@ -2826,7 +2826,7 @@
 								"chest_unopened_img": "images/Items/GoldenWolfGrayed.png",
 								"chest_opened_img": "images/Items/GoldenWolf.png",
 								"access_rules": [
-									"@KakarikoGraveyard, @SnowpeakClimbUpper, shadowcrystal"
+									"@KakarikoGraveyard, @SnowpeakClimbUpper, shadowcrystal, smhowlingstone"
 								]
 							}
 						]
@@ -4459,7 +4459,7 @@
 								"chest_unopened_img": "images/Items/GoldenWolfGrayed.png",
 								"chest_opened_img": "images/Items/GoldenWolf.png",
 								"access_rules": [
-									"@OrdonSpring, @DeathMountainTrail, shadowcrystal"
+									"@OrdonSpring, @DeathMountainTrail, shadowcrystal, dmhowlingstone"
 								]
 							}
 						]
@@ -5289,7 +5289,7 @@
 								"chest_unopened_img": "images/Items/GoldenWolfGrayed.png",
 								"chest_opened_img": "images/Items/GoldenWolf.png",
 								"access_rules": [
-									"@OutsideCastleTownSouth, @NorthFaronWoods, shadowcrystal"
+									"@OutsideCastleTownSouth, @NorthFaronWoods, shadowcrystal, nfwhowlingstone"
 								]
 							}
 						]

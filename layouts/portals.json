@@ -1,0 +1,78 @@
+{
+	"portals": {
+		"type": "container",
+		"orientation": "vertical",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"item_size": "101",
+				"item_margin": "1,1,1,1",
+				"margin": "1,1,1,1",
+				"item_h_alignment": "center",
+				"item_v_alignment": "center",
+				"rows":[
+					[
+						"osportal",
+						"sfwportal",
+						"nfwportal",
+						"kgportal",
+						"kvportal"
+					],
+					[
+						"dmportal",
+						"boeportal",
+						"zdportal",
+						"lhportal",
+						"ctportal"
+					],
+					[
+						"uzrportal",
+						"gmportal",
+						"mcportal",
+						"stportal",
+						"sgportal"
+					]
+				]
+			}
+		]
+	},
+	"portals_broadcast": {
+		"type": "container",
+		"orientation": "vertical",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"item_size": "76",
+				"item_margin": "1,1,1,1",
+				"margin": "1,1,1,1",
+				"item_h_alignment": "center",
+				"item_v_alignment": "center",
+				"rows":[
+					[
+						"osportal",
+						"sfwportal",
+						"nfwportal",
+						"kgportal",
+						"kvportal"
+					],
+					[
+						"dmportal",
+						"boeportal",
+						"zdportal",
+						"lhportal",
+						"ctportal"
+					],
+					[
+						"uzrportal",
+						"gmportal",
+						"mcportal",
+						"stportal",
+						"sgportal"
+					]
+				]
+			}
+		]
+	}
+}

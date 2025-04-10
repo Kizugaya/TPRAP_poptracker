@@ -29,6 +29,15 @@
 									"type": "layout",
 									"key": "bugs_broadcast"
 								}
+							},
+							{
+								"type": "group",
+								"header": "Portals",
+								"background": "#525260",
+								"content": {
+									"type": "layout",
+									"key": "portals_broadcast"
+								}
 							}
 						]
 					},

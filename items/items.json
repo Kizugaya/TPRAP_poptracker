@@ -1385,5 +1385,356 @@
 				"inherit_codes": false
 			}
 		]
+	},
+	{
+		"name": "Ordon Spring Portal",
+		"type": "progressive",
+		"codes": "osportal",
+		"allow_disabled": false,
+		"stages": [
+			{
+				"name": "Ordon Spring Portal Inactive",
+				"codes": "osportalinactive",
+				"img": "images/Items/PortalRedOS.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Ordon Spring Portal Active",
+				"codes": "osportalactive",
+				"img": "images/Items/PortalBlueOS.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "South Faron Woods Portal",
+		"type": "progressive",
+		"codes": "sfwportal",
+		"allow_disabled": false,
+		"stages": [
+			{
+				"name": "South Faron Woods Portal Inactive",
+				"codes": "sfwportalinactive",
+				"img": "images/Items/PortalRedSFW.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "South Faron Woods Portal Active",
+				"codes": "sfwportalactive",
+				"img": "images/Items/PortalBlueSFW.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "North Faron Woods Portal",
+		"type": "progressive",
+		"codes": "nfwportal",
+		"allow_disabled": false,
+		"stages": [
+			{
+				"name": "North Faron Woods Portal Inactive",
+				"codes": "nfwportalinactive",
+				"img": "images/Items/PortalRedNFW.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "North Faron Woods Portal Active",
+				"codes": "nfwportalactive",
+				"img": "images/Items/PortalBlueNFW.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Kakariko Gorge Portal",
+		"type": "progressive",
+		"codes": "kgportal",
+		"allow_disabled": false,
+		"stages": [
+			{
+				"name": "Kakariko Gorge Portal Inactive",
+				"codes": "kgportalinactive",
+				"img": "images/Items/PortalRedKG.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Kakariko Gorge Portal Active",
+				"codes": "kgportalactive",
+				"img": "images/Items/PortalBlueKG.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Kakariko Village Portal",
+		"type": "progressive",
+		"codes": "kvportal",
+		"allow_disabled": false,
+		"stages": [
+			{
+				"name": "Kakariko Village Portal Inactive",
+				"codes": "kwportalinactive",
+				"img": "images/Items/PortalRedKV.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Kakariko Village Portal Active",
+				"codes": "kvportalactive",
+				"img": "images/Items/PortalBlueKV.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Death Mountain Portal",
+		"type": "progressive",
+		"codes": "dmportal",
+		"allow_disabled": false,
+		"stages": [
+			{
+				"name": "Death Mountain Portal Inactive",
+				"codes": "dmportalinactive",
+				"img": "images/Items/PortalRedDM.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Death Mountain Portal Active",
+				"codes": "dmportalactive",
+				"img": "images/Items/PortalBlueDM.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Bridge of Eldin Portal",
+		"type": "progressive",
+		"codes": "boeportal",
+		"allow_disabled": false,
+		"stages": [
+			{
+				"name": "Bridge of Eldin Portal Inactive",
+				"codes": "boeportalinactive",
+				"img": "images/Items/PortalRedBoE.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Bridge of Eldin Portal Active",
+				"codes": "boeportalactive",
+				"img": "images/Items/PortalBlueBoe.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Zora's Domain Portal",
+		"type": "progressive",
+		"codes": "zdportal",
+		"allow_disabled": false,
+		"stages": [
+			{
+				"name": "Zora's Domain Portal Inactive",
+				"codes": "zdportalinactive",
+				"img": "images/Items/PortalRedZD.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Zora's Domain Portal Active",
+				"codes": "zdportalactive",
+				"img": "images/Items/PortalBlueZD.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Lake Hylia Portal",
+		"type": "progressive",
+		"codes": "lhportal",
+		"allow_disabled": false,
+		"stages": [
+			{
+				"name": "Lake Hylia Portal Inactive",
+				"codes": "lhportalinactive",
+				"img": "images/Items/PortalRedLH.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Lake Hylia Portal Active",
+				"codes": "lhportalactive",
+				"img": "images/Items/PortalBlueLH.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Castle Town Portal",
+		"type": "progressive",
+		"codes": "ctportal",
+		"allow_disabled": false,
+		"stages": [
+			{
+				"name": "Castle Town Portal Inactive",
+				"codes": "ctportalinactive",
+				"img": "images/Items/PortalRedCT.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Castle Town Portal Active",
+				"codes": "ctportalactive",
+				"img": "images/Items/PortalBlueCT.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Upper Zora's River Portal",
+		"type": "progressive",
+		"codes": "uzrportal",
+		"allow_disabled": false,
+		"stages": [
+			{
+				"name": "Upper Zora's River Portal Inactive",
+				"codes": "uzrportalinactive",
+				"img": "images/Items/PortalRedUZR.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Upper Zora's River Portal Active",
+				"codes": "uzrportalactive",
+				"img": "images/Items/PortalBlueUZR.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Gerudo Mesa Portal",
+		"type": "progressive",
+		"codes": "gmportal",
+		"allow_disabled": false,
+		"stages": [
+			{
+				"name": "Gerudo Mesa Portal Inactive",
+				"codes": "gmportalinactive",
+				"img": "images/Items/PortalRedGM.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Gerudo Mesa Portal Active",
+				"codes": "gmportalactive",
+				"img": "images/Items/PortalBlueGM.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Mirror Chamber Portal",
+		"type": "progressive",
+		"codes": "mcportal",
+		"allow_disabled": false,
+		"stages": [
+			{
+				"name": "Mirror Chamber Portal Inactive",
+				"codes": "mcportalinactive",
+				"img": "images/Items/PortalRedMC.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Mirror Chamber Portal Active",
+				"codes": "mcportalactive",
+				"img": "images/Items/PortalBlueMC.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Snowpeak Top Portal",
+		"type": "progressive",
+		"codes": "stportal",
+		"allow_disabled": false,
+		"stages": [
+			{
+				"name": "Snowpeak Top Portal Inactive",
+				"codes": "stportalinactive",
+				"img": "images/Items/PortalRedST.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Snowpeak Top Portal Active",
+				"codes": "stportalactive",
+				"img": "images/Items/PortalBlueST.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Sacred Grove Portal",
+		"type": "progressive",
+		"codes": "sgportal",
+		"allow_disabled": false,
+		"stages": [
+			{
+				"name": "Sacred Grove Portal Inactive",
+				"codes": "sgportalinactive",
+				"img": "images/Items/PortalRedSG.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Sacred Grove Portal Active",
+				"codes": "sgportalactive",
+				"img": "images/Items/PortalBlueSG.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "Death Mountain Howling Stone",
+		"type": "toggle",
+		"codes": "dmhowlingstone"
+	},
+	{
+		"name": "North Faron Woods Howling Stone",
+		"type": "toggle",
+		"codes": "nfwhowlingstone"
+	},
+	{
+		"name": "Lake Hylia Howling Stone",
+		"type": "toggle",
+		"codes": "lhhowlingstone"
+	},
+	{
+		"name": "Hidden Village Howling Stone",
+		"type": "toggle",
+		"codes": "hvhowlingstone"
+	},
+	{
+		"name": "Upper Zora's River Howling Stone",
+		"type": "toggle",
+		"codes": "uzrhowlingstone"
+	},
+	{
+		"name": "Snowpeak Mountain Howling Stone",
+		"type": "toggle",
+		"codes": "smhowlingstone"
+	},
+	{
+		"name": "Autotab",
+		"type": "progressive",
+		"codes": "autotab",
+		"allow_disabled": false,
+		"loop": true,
+		"stages": [
+			{
+				"name": "Autotab On",
+				"codes": "autotabon",
+				"img": "images/Items/AutoTabOn.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Autotab Off",
+				"codes": "autotaboff",
+				"img": "images/Items/AutoTabOff.png",
+				"inherit_codes": false
+			}
+		]
 	}
 ]
