@@ -118,20 +118,21 @@ function clearLocations()
 	end
 end
 function clearPortals()
-	Tracker:FindObjectForCode("osportal").CurrentStage = 1
-	Tracker:FindObjectForCode("sfwportal").CurrentStage = 1
-	Tracker:FindObjectForCode("nfwportal").CurrentStage = 1
-	Tracker:FindObjectForCode("kgportal").CurrentStage = 1
-	Tracker:FindObjectForCode("kvportal").CurrentStage = 1
-	Tracker:FindObjectForCode("dmportal").CurrentStage = 1
-	Tracker:FindObjectForCode("boeportal").CurrentStage = 1
-	Tracker:FindObjectForCode("zdportal").CurrentStage = 1
-	Tracker:FindObjectForCode("lhportal").CurrentStage = 1
-	Tracker:FindObjectForCode("ctportal").CurrentStage = 1
-	Tracker:FindObjectForCode("uzrportal").CurrentStage = 1
-	Tracker:FindObjectForCode("gmportal").CurrentStage = 1
-	Tracker:FindObjectForCode("stportal").CurrentStage = 1
-	Tracker:FindObjectForCode("sgportal").CurrentStage = 1
+	Tracker:FindObjectForCode("osportal").CurrentStage = 0
+	Tracker:FindObjectForCode("sfwportal").CurrentStage = 0
+	Tracker:FindObjectForCode("nfwportal").CurrentStage = 0
+	Tracker:FindObjectForCode("kgportal").CurrentStage = 0
+	Tracker:FindObjectForCode("kvportal").CurrentStage = 0
+	Tracker:FindObjectForCode("dmportal").CurrentStage = 0
+	Tracker:FindObjectForCode("boeportal").CurrentStage = 0
+	Tracker:FindObjectForCode("zdportal").CurrentStage = 0
+	Tracker:FindObjectForCode("lhportal").CurrentStage = 0
+	Tracker:FindObjectForCode("ctportal").CurrentStage = 0
+	Tracker:FindObjectForCode("uzrportal").CurrentStage = 0
+	Tracker:FindObjectForCode("gmportal").CurrentStage = 0
+	Tracker:FindObjectForCode("mcportal").CurrentStage = 0
+	Tracker:FindObjectForCode("stportal").CurrentStage = 0
+	Tracker:FindObjectForCode("sgportal").CurrentStage = 0
 end
 function setSettings()
 	if SLOT_DATA.Settings["Logic Settings"] == "Glitchless" then
@@ -278,17 +279,17 @@ function setSettings()
 	end
 end
 function initPortals()
-	Tracker:FindObjectForCode("osportal").CurrentStage = 2
-	Tracker:FindObjectForCode("sfwportal").CurrentStage = 2
-	Tracker:FindObjectForCode("nfwportal").CurrentStage = 2
-	Tracker:FindObjectForCode("kgportal").CurrentStage = 2
-	Tracker:FindObjectForCode("kvportal").CurrentStage = 2
-	Tracker:FindObjectForCode("dmportal").CurrentStage = 2
-	Tracker:FindObjectForCode("zdportal").CurrentStage = 2
-	Tracker:FindObjectForCode("lhportal").CurrentStage = 2
-	Tracker:FindObjectForCode("ctportal").CurrentStage = 2
-	Tracker:FindObjectForCode("stportal").CurrentStage = 2
-	Tracker:FindObjectForCode("sgportal").CurrentStage = 2
+	Tracker:FindObjectForCode("osportal").CurrentStage = 1
+	Tracker:FindObjectForCode("sfwportal").CurrentStage = 1
+	Tracker:FindObjectForCode("nfwportal").CurrentStage = 1
+	Tracker:FindObjectForCode("kgportal").CurrentStage = 1
+	Tracker:FindObjectForCode("kvportal").CurrentStage = 1
+	Tracker:FindObjectForCode("dmportal").CurrentStage = 1
+	Tracker:FindObjectForCode("zdportal").CurrentStage = 1
+	Tracker:FindObjectForCode("lhportal").CurrentStage = 1
+	Tracker:FindObjectForCode("ctportal").CurrentStage = 1
+	Tracker:FindObjectForCode("stportal").CurrentStage = 1
+	Tracker:FindObjectForCode("sgportal").CurrentStage = 1
 end
 function initItems()
 	Tracker:FindObjectForCode("faronvesseloflight").Active = true
