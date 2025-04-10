@@ -1,6 +1,14 @@
 {
 	"versions": [
 		{
+			"package_version": "0.4.1",
+			"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.4.1/TPRAP_poptracker_v0.4.1.zip",
+			"sha256": "AEF8EB986120067F4C4536AAF72B2CD9DE5AC8AADAF9DDC0B198821B5ED17412",
+			"changelog": [
+				"Fixed portals bug"
+			]
+		},
+		{
 			"package_version": "0.4.0",
 			"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.4.0/TPRAP_poptracker_v0.4.0.zip",
 			"sha256": "5D2EAE7673D240BD49F2FB63F21E6FAB3F913DFE1B6F1FDF5E24739075AE8152",
