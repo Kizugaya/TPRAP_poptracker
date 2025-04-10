@@ -1,6 +1,20 @@
 {
 	"versions": [
 		{
+			"package_version": "0.4.0",
+			"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.4.0/TPRAP_poptracker_v0.4.0.zip",
+			"sha256": "5D2EAE7673D240BD49F2FB63F21E6FAB3F913DFE1B6F1FDF5E24739075AE8152",
+			"changelog": [
+				"1. Added Autotracking for:",
+				"- Scents",
+				"- Howling Stones",
+				"- Fetch Quest Items",
+				"- Fetch Quest Reward",
+				"2. Added Autotab to switch between Overworld and Dungeons",
+				"3. Fixed Logic for Portals"
+			]
+		},
+		{
 			"package_version": "0.3.3",
 			"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.3.3/TPRAP_poptracker_v0.3.3.zip",
 			"sha256": "8A70B8FBBFB2EFCBCE48C97FAF557B7FCF4E9612F0CD336A3A3ED31AAF40483D",
