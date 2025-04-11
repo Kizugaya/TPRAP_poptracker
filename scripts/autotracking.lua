@@ -187,6 +187,7 @@ function setSettings()
 	end
 	if SLOT_DATA.Settings["Snowpeak Entrance Requirements"] == "Yes" then
 		Tracker:FindObjectForCode("skipsnowpeakentrance").CurrentStage = 0
+		Tracker:FindObjectForCode("reekfishscent").Active = true
 	elseif SLOT_DATA.Settings["Snowpeak Entrance Requirements"] == "No" then
 		Tracker:FindObjectForCode("skipsnowpeakentrance").CurrentStage = 1
 	end
@@ -483,7 +484,7 @@ function onNotify(key, value, old)
 		Tracker:FindObjectForCode("srcompleted").Active = value
 	elseif key == "Armogohma Defeated" then
 		Tracker:FindObjectForCode("ttcompleted").Active = value
-	elseif key == "Current Region" and Tracker:FindObjectForCode("ttcompleted").CurrentStage == 1 then
+	elseif key == "Current Region" and Tracker:FindObjectForCode("autotab").CurrentStage == 0 then
 		Tracker:UiHint("ActivateTab", REGION[value])
 	end
 end
