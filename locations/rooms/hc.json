@@ -42,7 +42,6 @@
 	{
 		"name": "HyruleCastleInsideEastWing",
 		"access_rules": [
-			"@HyruleCastleInsideEastWing",
 			"@HyruleCastleMainHall, $canDefeatBokoblin, $canDefeatLizalfos, doubleclawshot, $canDefeatDarknut, boomerang",
 			"[glitcheson], @HyruleCastleMainHall, $canDefeatBokoblinGlitched, $canDefeatLizalfos, doubleclawshot, $canDefeatDarknut, boomerang",
 			"[glitcheson], @HyruleCastleMainHall, $canDefeatBokoblin, $canDefeatLizalfosGlitched, doubleclawshot, $canDefeatDarknut, boomerang",

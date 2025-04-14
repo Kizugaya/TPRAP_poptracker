@@ -21,173 +21,210 @@
 							]
 						},
 						{
-							"title": "Beside Castle Town",
-							"type": "array",
-							"orientation": "vertical",
-							"content": [
-								{
-									"type": "map",
-									"maps": [
-										"bct"
-									]
-								}
-							]
+							"title": "Faron",
+							"content": {
+								"type": "tabbed",
+								"tabs": [
+									{
+										"title": "Faron Woods",
+										"type": "array",
+										"orientation": "vertical",
+										"content": [
+											{
+												"type": "map",
+												"maps": [
+													"fw"
+												]
+											}
+										]
+									},
+									{
+										"title": "Faron Field",
+										"type": "array",
+										"orientation": "vertical",
+										"content": [
+											{
+												"type": "map",
+												"maps": [
+													"ff"
+												]
+											}
+										]
+									}
+								]
+							}
 						},
 						{
-							"title": "Castle Town",
-							"type": "array",
-							"orientation": "vertical",
-							"content": [
-								{
-									"type": "map",
-									"maps": [
-										"ct"
-									]
-								}
-							]
+							"title": "Eldin",
+							"content": {
+								"type": "tabbed",
+								"tabs": [
+									{
+										"title": "Kakariko Gorge",
+										"type": "array",
+										"orientation": "vertical",
+										"content": [
+											{
+												"type": "map",
+												"maps": [
+													"kg"
+												]
+											}
+										]
+									},
+									{
+										"title": "Kakariko",
+										"type": "array",
+										"orientation": "vertical",
+										"content": [
+											{
+												"type": "map",
+												"maps": [
+													"kakariko"
+												]
+											}
+										]
+									},
+									{
+										"title": "Death Mountain",
+										"type": "array",
+										"orientation": "vertical",
+										"content": [
+											{
+												"type": "map",
+												"maps": [
+													"dm"
+												]
+											}
+										]
+									},
+									{
+										"title": "Eldin Field",
+										"type": "array",
+										"orientation": "vertical",
+										"content": [
+											{
+												"type": "map",
+												"maps": [
+													"ef"
+												]
+											}
+										]
+									},
+									{
+										"title": "North Eldin",
+										"type": "array",
+										"orientation": "vertical",
+										"content": [
+											{
+												"type": "map",
+												"maps": [
+													"ne"
+												]
+											}
+										]
+									},
+									{
+										"title": "Hidden Village",
+										"type": "array",
+										"orientation": "vertical",
+										"content": [
+											{
+												"type": "map",
+												"maps": [
+													"hv"
+												]
+											}
+										]
+									}
+								]
+							}
 						},
 						{
-							"title": "Death Mountain",
-							"type": "array",
-							"orientation": "vertical",
-							"content": [
-								{
-									"type": "map",
-									"maps": [
-										"dm"
-									]
-								}
-							]
-						},
-						{
-							"title": "Eldin Field",
-							"type": "array",
-							"orientation": "vertical",
-							"content": [
-								{
-									"type": "map",
-									"maps": [
-										"ef"
-									]
-								}
-							]
-						},
-						{
-							"title": "Faron Field",
-							"type": "array",
-							"orientation": "vertical",
-							"content": [
-								{
-									"type": "map",
-									"maps": [
-										"ff"
-									]
-								}
-							]
-						},
-						{
-							"title": "Faron Woods",
-							"type": "array",
-							"orientation": "vertical",
-							"content": [
-								{
-									"type": "map",
-									"maps": [
-										"fw"
-									]
-								}
-							]
-						},
-						{
-							"title": "Gerudo Desert",
-							"type": "array",
-							"orientation": "vertical",
-							"content": [
-								{
-									"type": "map",
-									"maps": [
-										"gd"
-									]
-								}
-							]
-						},
-						{
-							"title": "Hidden Village",
-							"type": "array",
-							"orientation": "vertical",
-							"content": [
-								{
-									"type": "map",
-									"maps": [
-										"hv"
-									]
-								}
-							]
-						},
-						{
-							"title": "Kakariko",
-							"type": "array",
-							"orientation": "vertical",
-							"content": [
-								{
-									"type": "map",
-									"maps": [
-										"kakariko"
-									]
-								}
-							]
-						},
-						{
-							"title": "Kakariko Gorge",
-							"type": "array",
-							"orientation": "vertical",
-							"content": [
-								{
-									"type": "map",
-									"maps": [
-										"kg"
-									]
-								}
-							]
-						},
-						{
-							"title": "Lake Hylia",
-							"type": "array",
-							"orientation": "vertical",
-							"content": [
-								{
-									"type": "map",
-									"maps": [
-										"lh"
-									]
-								}
-							]
-						},
-						{
-							"title": "Lanayru Field",
-							"type": "array",
-							"orientation": "vertical",
-							"content": [
-								{
-									"type": "map",
-									"maps": [
-										"lf"
-									]
-								}
-							]
-						},
-						{
-							"title": "North Eldin",
-							"type": "array",
-							"orientation": "vertical",
-							"content": [
-								{
-									"type": "map",
-									"maps": [
-										"ne"
-									]
-								}
-							]
+							"title": "Lanayru",
+							"content": {
+								"type": "tabbed",
+								"tabs": [
+									{
+										"title": "Lake Hylia",
+										"type": "array",
+										"orientation": "vertical",
+										"content": [
+											{
+												"type": "map",
+												"maps": [
+													"lh"
+												]
+											}
+										]
+									},
+									{
+										"title": "Lanayru Field",
+										"type": "array",
+										"orientation": "vertical",
+										"content": [
+											{
+												"type": "map",
+												"maps": [
+													"lf"
+												]
+											}
+										]
+									},
+									{
+										"title": "Beside Castle Town",
+										"type": "array",
+										"orientation": "vertical",
+										"content": [
+											{
+												"type": "map",
+												"maps": [
+													"bct"
+												]
+											}
+										]
+									},
+									{
+										"title": "South Castle Town",
+										"type": "array",
+										"orientation": "vertical",
+										"content": [
+											{
+												"type": "map",
+												"maps": [
+													"sct"
+												]
+											}
+										]
+									},
+									{
+										"title": "Upper Zora's River",
+										"type": "array",
+										"orientation": "vertical",
+										"content": [
+											{
+												"type": "map",
+												"maps": [
+													"uzr"
+												]
+											}
+										]
+									},
+									{
+										"title": "Zora's Domain",
+										"type": "array",
+										"orientation": "vertical",
+										"content": [
+											{
+												"type": "map",
+												"maps": [
+													"zd"
+												]
+											}
+										]
+									}
+								]
+							}
 						},
 						{
 							"title": "Ordon",
@@ -229,40 +266,27 @@
 							]
 						},
 						{
-							"title": "South Castle Town",
+							"title": "Gerudo Desert",
 							"type": "array",
 							"orientation": "vertical",
 							"content": [
 								{
 									"type": "map",
 									"maps": [
-										"sct"
+										"gd"
 									]
 								}
 							]
 						},
 						{
-							"title": "Upper Zora's River",
+							"title": "Castle Town",
 							"type": "array",
 							"orientation": "vertical",
 							"content": [
 								{
 									"type": "map",
 									"maps": [
-										"uzr"
-									]
-								}
-							]
-						},
-						{
-							"title": "Zora's Domain",
-							"type": "array",
-							"orientation": "vertical",
-							"content": [
-								{
-									"type": "map",
-									"maps": [
-										"zd"
+										"ct"
 									]
 								}
 							]

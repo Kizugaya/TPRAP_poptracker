@@ -29,7 +29,7 @@
 	},
 	{
 		"name": "gmfull",
-		"location_size": 48,
+		"location_size": 24,
 		"location_border_thickness": 2,
 		"location_shape": "rectangle",
 		"img": "images/Dungeons/Goron Mines/Full.png"
@@ -78,7 +78,7 @@
 	},
 	{
 		"name": "ltfull",
-		"location_size": 64,
+		"location_size": 24,
 		"location_border_thickness": 2,
 		"location_shape": "rectangle",
 		"img": "images/Dungeons/Lakebed Temple/Full.png"
@@ -127,7 +127,7 @@
 	},
 	{
 		"name": "agfull",
-		"location_size": 48,
+		"location_size": 24,
 		"location_border_thickness": 2,
 		"location_shape": "rectangle",
 		"img": "images/Dungeons/Arbiter's Grounds/Full.png"
@@ -155,7 +155,7 @@
 	},
 	{
 		"name": "srfull",
-		"location_size": 32,
+		"location_size": 24,
 		"location_border_thickness": 2,
 		"location_shape": "rectangle",
 		"img": "images/Dungeons/Snowpeak Ruins/Full.png"
@@ -218,7 +218,7 @@
 	},
 	{
 		"name": "ttfull",
-		"location_size": 32,
+		"location_size": 24,
 		"location_border_thickness": 2,
 		"location_shape": "rectangle",
 		"img": "images/Dungeons/Temple of Time/Full.png"
@@ -281,7 +281,7 @@
 	},
 	{
 		"name": "csfull",
-		"location_size": 64,
+		"location_size": 24,
 		"location_border_thickness": 2,
 		"location_shape": "rectangle",
 		"img": "images/Dungeons/City in the Sky/Full.png"
@@ -316,7 +316,7 @@
 	},
 	{
 		"name": "ptfull",
-		"location_size": 32,
+		"location_size": 24,
 		"location_border_thickness": 2,
 		"location_shape": "rectangle",
 		"img": "images/Dungeons/Palace of Twilight/Full.png"
@@ -358,7 +358,7 @@
 	},
 	{
 		"name": "hcfull",
-		"location_size": 64,
+		"location_size": 24,
 		"location_border_thickness": 2,
 		"location_shape": "rectangle",
 		"img": "images/Dungeons/Hyrule Castle/Full.png"
@@ -414,7 +414,7 @@
 	},
 	{
 		"name": "gd",
-		"location_size": 40,
+		"location_size": 28,
 		"location_border_thickness": 2,
 		"location_shape": "rectangle",
 		"img": "images/Overworld/Gerudo Desert.png"
@@ -477,7 +477,7 @@
 	},
 	{
 		"name": "sm",
-		"location_size": 64,
+		"location_size": 32,
 		"location_border_thickness": 2,
 		"location_shape": "rectangle",
 		"img": "images/Overworld/Snowpeak Mountain.png"
