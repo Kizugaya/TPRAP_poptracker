@@ -70,8 +70,7 @@
 						],
 						"sections": [
 							{
-								"chest_unopened_img": "images/Items/HowlingStoneGrayed.png",
-								"chest_opened_img": "images/Items/HowlingStone.png",
+								"hosted_item": "dmhowlingstone",
 								"access_rules": [
 									"{@DeathMountainTrail, shadowcrystal}"
 								]
@@ -365,8 +364,7 @@
 						],
 						"sections": [
 							{
-								"chest_unopened_img": "images/Items/HowlingStoneGrayed.png",
-								"chest_opened_img": "images/Items/HowlingStone.png",
+								"hosted_item": "hvhowlingstone",
 								"access_rules": [
 									"{@HiddenVillage, shadowcrystal}"
 								]

@@ -187,7 +187,6 @@ function setSettings()
 	end
 	if SLOT_DATA.Settings["Snowpeak Entrance Requirements"] == "Yes" then
 		Tracker:FindObjectForCode("skipsnowpeakentrance").CurrentStage = 0
-		Tracker:FindObjectForCode("reekfishscent").Active = true
 	elseif SLOT_DATA.Settings["Snowpeak Entrance Requirements"] == "No" then
 		Tracker:FindObjectForCode("skipsnowpeakentrance").CurrentStage = 1
 	end
@@ -319,8 +318,19 @@ function onClear(slot_data)
 	SLOT_DATA = slot_data
 	if SLOT_DATA["World Version"] == "v0.2.3" then correctMistakes() end
 	CUR_INDEX = -1
-	Archipelago:SetNotify(SERVER_COPY)
-	Archipelago:Get(SERVER_COPY)
+	PLAYER_ID = Archipelago.PlayerNumber or -1
+	TEAM_NUMBER = Archipelago.TeamNumber or 0
+	if SLOT_DATA["World Version"] == "v0.2.5" then
+		local server_copy = {}
+		for _, sd in pairs(SERVER_COPY) do
+			table.insert(server_copy, "TP_"..TEAM_NUMBER.."_"..PLAYER_ID.."_"..sd)
+		end
+		Archipelago:SetNotify(server_copy)
+		Archipelago:Get(server_copy)
+	elseif SLOT_DATA["World Version"] == "v0.2.4" then
+		Archipelago:SetNotify(SERVER_COPY)
+		Archipelago:Get(SERVER_COPY)
+	end
 	clearItems()
 	clearLocations()
 	clearPortals()
@@ -393,23 +403,6 @@ function onLocation(location_id, location_name)
 	else
 		debugAP(string.format("onLocation: could not find object for code %s", v[1]))
 	end
-	if location_id == 2320002 then
-		Tracker:FindObjectForCode("agcompleted").Active = true
-	elseif location_id == 2320035 then
-		Tracker:FindObjectForCode("cscompleted").Active = true
-	elseif location_id == 2320059 then
-		Tracker:FindObjectForCode("ftcompleted").Active = true
-	elseif location_id == 2320077 then
-		Tracker:FindObjectForCode("gmcompleted").Active = true
-	elseif location_id == 2320130 then
-		Tracker:FindObjectForCode("ltcompleted").Active = true
-	elseif location_id == 2320167 then --[TMP] currently uses heart container id
-		Tracker:FindObjectForCode("ptcompleted").Active = true
-	elseif location_id == 2320174 then
-		Tracker:FindObjectForCode("srcompleted").Active = true
-	elseif location_id == 2320199 then
-		Tracker:FindObjectForCode("ttcompleted").Active = true
-	end
 end
 
 function onScout(location_id, location_name, item_id, item_name, item_player)
@@ -420,7 +413,11 @@ function onBounce(json)
 	debugAP(string.format("called onBounce: %s", dump_table(json)))
 end
 
-function onNotify(key, value, old)
+function onNotify(_key, value, old)
+	local key = _key
+	if SLOT_DATA["World Version"] == "v0.2.5" then
+		_, _, key = string.find(_key, "TP_.*_.*_(.*)")
+	end
 	debugAP(string.format("called onNotify: %s %s %s", key, value, old))
 	if value == old then return end
 	if key == "Death Mountain Stone" then
@@ -485,11 +482,19 @@ function onNotify(key, value, old)
 		Tracker:FindObjectForCode("ttcompleted").Active = value
 	elseif key == "Current Region" and Tracker:FindObjectForCode("autotab").CurrentStage == 0 then
 		Tracker:UiHint("ActivateTab", REGION[value])
+		if REGION[value] == "Ordon" or
+		REGION[value] == "Sacred Grove" or
+		REGION[value] == "Snowpeak Mountain" or
+		REGION[value] == "Castle Town" or
+		REGION[value] == "Gerudo Desert" or
+		REGION[value] == "Main Map" then
+			Tracker:UiHint("ActivateTab", "Overworld")
+		end
 	end
 end
 
 function onNotifyLaunch(key, value)
-	debugAP(string.format("called onNotifyLaunch: %s %s", key, value))
+	debugAP(string.format("called onNotifyLaunch: '%s', '%s'", key, value))
 	onNotify(key, value)
 end
 

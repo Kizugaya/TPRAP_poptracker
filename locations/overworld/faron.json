@@ -394,8 +394,7 @@
 						],
 						"sections": [
 							{
-								"chest_unopened_img": "images/Items/HowlingStoneGrayed.png",
-								"chest_opened_img": "images/Items/HowlingStone.png",
+								"hosted_item": "nfwhowlingstone",
 								"access_rules": [
 									"{@NorthFaronWoods, shadowcrystal}"
 								]

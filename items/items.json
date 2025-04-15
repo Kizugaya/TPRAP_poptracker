@@ -1689,31 +1689,37 @@
 	{
 		"name": "Death Mountain Howling Stone",
 		"type": "toggle",
+		"img": "images/Items/HowlingStone.png",
 		"codes": "dmhowlingstone"
 	},
 	{
 		"name": "North Faron Woods Howling Stone",
 		"type": "toggle",
+		"img": "images/Items/HowlingStone.png",
 		"codes": "nfwhowlingstone"
 	},
 	{
 		"name": "Lake Hylia Howling Stone",
 		"type": "toggle",
+		"img": "images/Items/HowlingStone.png",
 		"codes": "lhhowlingstone"
 	},
 	{
 		"name": "Hidden Village Howling Stone",
 		"type": "toggle",
+		"img": "images/Items/HowlingStone.png",
 		"codes": "hvhowlingstone"
 	},
 	{
 		"name": "Upper Zora's River Howling Stone",
 		"type": "toggle",
+		"img": "images/Items/HowlingStone.png",
 		"codes": "uzrhowlingstone"
 	},
 	{
 		"name": "Snowpeak Mountain Howling Stone",
 		"type": "toggle",
+		"img": "images/Items/HowlingStone.png",
 		"codes": "smhowlingstone"
 	},
 	{

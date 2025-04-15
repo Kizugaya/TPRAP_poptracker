@@ -6,12 +6,13 @@
 			{
 				"type": "dock",
 				"orientation": "vertical",
+				"background": "#5212121",
 				"dock": "left",
 				"content": [
 					{
 						"type": "tabbed",
 						"dock": "top",
-						"content": [
+						"tabs": [
 							{
 								"type": "group",
 								"header": "Items",

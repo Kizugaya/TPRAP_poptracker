@@ -821,8 +821,7 @@
 						],
 						"sections": [
 							{
-								"chest_unopened_img": "images/Items/HowlingStoneGrayed.png",
-								"chest_opened_img": "images/Items/HowlingStone.png",
+								"hosted_item": "lhhowlingstone",
 								"access_rules": [
 									"{@LakeHylia, shadowcrystal}"
 								]
@@ -1376,8 +1375,7 @@
 						],
 						"sections": [
 							{
-								"chest_unopened_img": "images/Items/HowlingStoneGrayed.png",
-								"chest_opened_img": "images/Items/HowlingStone.png",
+								"hosted_item": "uzrhowlingstone",
 								"access_rules": [
 									"{@UpperZorasRiver, shadowcrystal}"
 								]

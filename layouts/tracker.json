@@ -7,11 +7,12 @@
 				"type": "dock",
 				"orientation": "vertical",
 				"dock": "left",
+				"background": "#212121",
 				"content": [
 					{
 						"type": "tabbed",
 						"dock": "top",
-						"content": [
+						"tabs": [
 							{
 								"type": "group",
 								"header": "Items",
