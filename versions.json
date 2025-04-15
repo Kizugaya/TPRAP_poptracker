@@ -1,6 +1,15 @@
 {
 	"versions": [
 		{
+			"package_version": "0.5.0",
+			"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.5.0/TPRAP_poptracker_v0.5.0.zip",
+			"sha256": "DC3E66354C1A996953B8D87D8CCF67CB8BC481DAFAD73DF2A51DBECEF0848778",
+			"changelog": [
+				"Scaled Down Map Size",
+				"Added AutoTab for a few more Regions"
+			]
+		},
+		{
 			"package_version": "0.4.2",
 			"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.4.2/TPRAP_poptracker_v0.4.2.zip",
 			"sha256": "3925A4A460FD2252F35D7E7696033B2E1FD54D67CC742E8B80CEFBA478699E05",
