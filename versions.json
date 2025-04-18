@@ -1,6 +1,14 @@
 {
 	"versions": [
 		{
+			"package_version": "0.5.1",
+			"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.5.1/TPRAP_poptracker_v0.5.1.zip",
+			"sha256": "50382F16A36995A0E216B9000C3ACD0E2D21F231D734A4A4925170EEB157B841",
+			"changelog": [
+				"Added AutoTab for Faron Woods"
+			]
+		},
+		{
 			"package_version": "0.5.0",
 			"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.5.0/TPRAP_poptracker_v0.5.0.zip",
 			"sha256": "DC3E66354C1A996953B8D87D8CCF67CB8BC481DAFAD73DF2A51DBECEF0848778",
