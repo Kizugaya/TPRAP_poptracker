@@ -488,6 +488,9 @@ function onNotify(_key, value, old)
 		REGION[value] == "Castle Town" or
 		REGION[value] == "Gerudo Desert" or
 		REGION[value] == "Main Map" then
+			if REGION[value] == "Faron Woods" then
+				Tracker:UiHint("ActivateTab", "Faron")
+			end
 			Tracker:UiHint("ActivateTab", "Overworld")
 		end
 	end

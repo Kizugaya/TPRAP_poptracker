@@ -1,7 +1,7 @@
 REGION = {
 	["Ordon"] = "Ordon",
     ["Sewers"] = "Overworld",
-    ["Faron"] = "Main Map",
+    ["Faron"] = "Faron Woods",
     ["Eldin"] = "Main Map",
     ["Lanayru"] = "Main Map",
     ["Hyrule Field"] = "Main Map",
