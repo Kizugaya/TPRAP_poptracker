@@ -84,6 +84,7 @@ function clearItems()
 	Tracker:FindObjectForCode("faronvesseloflight").Active = false
 	Tracker:FindObjectForCode("eldinvesseloflight").Active = false
 	Tracker:FindObjectForCode("lanayruvesseloflight").Active = false
+	Tracker:FindObjectForCode("fwkey").Active = false
 	Tracker:FindObjectForCode("ftcompleted").Active = false
 	Tracker:FindObjectForCode("gmcompleted").Active = false
 	Tracker:FindObjectForCode("ltcompleted").Active = false
@@ -135,147 +136,151 @@ function clearPortals()
 	Tracker:FindObjectForCode("sgportal").CurrentStage = 0
 end
 function setSettings()
-	if SLOT_DATA.Settings["Logic Settings"] == "Glitchless" then
-		Tracker:FindObjectForCode("glitched").CurrentStage = 1
-	elseif (SLOT_DATA.Settings["Logic Settings"] == "No Logic") or (SLOT_DATA.Settings["Logic Settings"] == "Glitched") then
-		Tracker:FindObjectForCode("glitched").CurrentStage = 0
-	end
-	if SLOT_DATA.Settings["Poes Shuffled"] == "Yes" then
-		Tracker:FindObjectForCode("poes").CurrentStage = 0
-	elseif SLOT_DATA.Settings["Poes Shuffled"] == "No" then
-		Tracker:FindObjectForCode("poes").CurrentStage = 1
-	end
-	if SLOT_DATA.Settings["Golden Bugs Shuffled"] == "Yes" then
-		Tracker:FindObjectForCode("gbugs").CurrentStage = 0
-	elseif SLOT_DATA.Settings["Golden Bugs Shuffled"] == "No" then
-		Tracker:FindObjectForCode("gbugs").CurrentStage = 1
-	end
-	if SLOT_DATA.Settings["Castle Requirements"] == "Open" then
-		Tracker:FindObjectForCode("castlerequirements").CurrentStage = 4
-	elseif SLOT_DATA.Settings["Castle Requirements"] == "Fused Shadows" then
-		Tracker:FindObjectForCode("castlerequirements").CurrentStage = 1
-	elseif SLOT_DATA.Settings["Castle Requirements"] == "Mirror Shards" then
-		Tracker:FindObjectForCode("castlerequirements").CurrentStage = 2
-	elseif SLOT_DATA.Settings["Castle Requirements"] == "All Dungeons" then
-		Tracker:FindObjectForCode("castlerequirements").CurrentStage = 3
-	elseif SLOT_DATA.Settings["Castle Requirements"] == "Vanilla" then
-		Tracker:FindObjectForCode("castlerequirements").CurrentStage = 0
-	end
-	if SLOT_DATA.Settings["Palace of Twilight Requirements"] == "Open" then
-		Tracker:FindObjectForCode("palacerequirements").CurrentStage = 3
-	elseif SLOT_DATA.Settings["Palace of Twilight Requirements"] == "Fused Shadows" then
-		Tracker:FindObjectForCode("palacerequirements").CurrentStage = 1
-	elseif SLOT_DATA.Settings["Palace of Twilight Requirements"] == "Mirror Shards" then
-		Tracker:FindObjectForCode("palacerequirements").CurrentStage = 2
-	elseif SLOT_DATA.Settings["Palace of Twilight Requirements"] == "Vanilla" then
-		Tracker:FindObjectForCode("palacerequirements").CurrentStage = 0
-	end
-	if SLOT_DATA.Settings["Faron Woods Logic"] == "Open" then
-		Tracker:FindObjectForCode("faronwoods").CurrentStage = 0
-	elseif SLOT_DATA.Settings["Faron Woods Logic"] == "Closed" then
-		Tracker:FindObjectForCode("faronwoods").CurrentStage = 1
-	end
-	if SLOT_DATA.Settings["Lakebed Entrance Requirements"] == "Yes" then
-		Tracker:FindObjectForCode("skiplakebedentrance").CurrentStage = 0
-	elseif SLOT_DATA.Settings["Lakebed Entrance Requirements"] == "No" then
-		Tracker:FindObjectForCode("skiplakebedentrance").CurrentStage = 1
-	end
-	if SLOT_DATA.Settings["Arbiters Grounds Entrance Requirements"] == "Yes" then
-		Tracker:FindObjectForCode("skiparbitersentrance").CurrentStage = 0
-	elseif SLOT_DATA.Settings["Arbiters Grounds Entrance Requirements"] == "No" then
-		Tracker:FindObjectForCode("skiparbitersentrance").CurrentStage = 1
-	end
-	if SLOT_DATA.Settings["Snowpeak Entrance Requirements"] == "Yes" then
-		Tracker:FindObjectForCode("skipsnowpeakentrance").CurrentStage = 0
-	elseif SLOT_DATA.Settings["Snowpeak Entrance Requirements"] == "No" then
-		Tracker:FindObjectForCode("skipsnowpeakentrance").CurrentStage = 1
-	end
-	if SLOT_DATA.Settings["City in the Sky Entrance Requirements"] == "Yes" then
-		Tracker:FindObjectForCode("skipcityintheskyentrance").CurrentStage = 0
-	elseif SLOT_DATA.Settings["City in the Sky Entrance Requirements"] == "No" then
-		Tracker:FindObjectForCode("skipcityintheskyentrance").CurrentStage = 1
-	end
-	if SLOT_DATA.Settings["Goron Mines Entrance Requirements"] == "Open" then
-		Tracker:FindObjectForCode("goronminesentrance").CurrentStage = 0
-	elseif SLOT_DATA.Settings["Goron Mines Entrance Requirements"] == "No Wrestling" then
-		Tracker:FindObjectForCode("goronminesentrance").CurrentStage = 1
-	elseif SLOT_DATA.Settings["Goron Mines Entrance Requirements"] == "Closed" then
-		Tracker:FindObjectForCode("goronminesentrance").CurrentStage = 2
-	end
-	if SLOT_DATA.Settings["Temple of Time Entrance Requirements"] == "Open" then
-		Tracker:FindObjectForCode("templeoftimeentrance").CurrentStage = 0
-	elseif SLOT_DATA.Settings["Temple of Time Entrance Requirements"] == "Open Grove" then
-		Tracker:FindObjectForCode("templeoftimeentrance").CurrentStage = 1
-	elseif SLOT_DATA.Settings["Temple of Time Entrance Requirements"] == "Closed" then
-		Tracker:FindObjectForCode("templeoftimeentrance").CurrentStage = 2
-	end
-	if SLOT_DATA.Settings["Skip Prologue"] == "Yes" then
-		Tracker:FindObjectForCode("skipprologue").CurrentStage = 0
-	end
-	if SLOT_DATA.Settings["Faron Twilight Cleared"] == "Yes" then
-		Tracker:FindObjectForCode("farontwilightcleared").CurrentStage = 0
-	end
-	if SLOT_DATA.Settings["Eldin Twilight Cleared"] == "Yes" then
-		Tracker:FindObjectForCode("eldintwilightcleared").CurrentStage = 0
-	end
-	if SLOT_DATA.Settings["Lanayru Twilight Cleared"] == "Yes" then
-		Tracker:FindObjectForCode("lanayrutwilightcleared").CurrentStage = 0
-	end
-	if SLOT_DATA.Settings["Skip MDH"] == "Yes" then
-		Tracker:FindObjectForCode("skipmdh").CurrentStage = 0
-	end
-	if SLOT_DATA.Settings["Open Map"] == "Yes" then
-		Tracker:FindObjectForCode("openmap").CurrentStage = 0
-	elseif SLOT_DATA.Settings["Open Map"] == "No" then
-		Tracker:FindObjectForCode("openmap").CurrentStage = 1
-	end
-	if SLOT_DATA.Settings["Increase Wallet"] == "Yes" then
-		Tracker:FindObjectForCode("increasewallet").CurrentStage = 0
-	elseif SLOT_DATA.Settings["Increase Wallet"] == "No" then
-		Tracker:FindObjectForCode("increasewallet").CurrentStage = 1
-	end
-	if SLOT_DATA.Settings["Transform Anywhere"] == "Yes" then
-		Tracker:FindObjectForCode("transformanywhere").CurrentStage = 0
-	elseif SLOT_DATA.Settings["Transform Anywhere"] == "No" then
-		Tracker:FindObjectForCode("transformanywhere").CurrentStage = 1
-	end
-	if SLOT_DATA.Settings["Bonks do Damage"] == "Yes" then
-		Tracker:FindObjectForCode("bonksdodamage").CurrentStage = 0
-	elseif SLOT_DATA.Settings["Bonks do Damage"] == "No" then
-		Tracker:FindObjectForCode("bonksdodamage").CurrentStage = 1
-	end
-	if SLOT_DATA.Settings["Damage Magnification"] == "Vanilla" then
-		Tracker:FindObjectForCode("damagemagnification").CurrentStage = 0
-	elseif SLOT_DATA.Settings["Damage Magnification"] == "Double" then
-		Tracker:FindObjectForCode("damagemagnification").CurrentStage = 1
-	elseif SLOT_DATA.Settings["Damage Magnification"] == "Triple" then
-		Tracker:FindObjectForCode("damagemagnification").CurrentStage = 2
-	elseif SLOT_DATA.Settings["Damage Magnification"] == "Quadruple" then
-		Tracker:FindObjectForCode("damagemagnification").CurrentStage = 3
-	elseif SLOT_DATA.Settings["Damage Magnification"] == "Ohko" then
-		Tracker:FindObjectForCode("damagemagnification").CurrentStage = 4
-	end
-	if SLOT_DATA.Settings["Small Key Settings"] == "Vanilla" then
-		Tracker:FindObjectForCode("smallkeys").CurrentStage = 0
-	elseif SLOT_DATA.Settings["Small Key Settings"] == "Own Dungeon" then
-		Tracker:FindObjectForCode("smallkeys").CurrentStage = 1
-	elseif SLOT_DATA.Settings["Small Key Settings"] == "Any Dungeon" then
-		Tracker:FindObjectForCode("smallkeys").CurrentStage = 2
-	elseif SLOT_DATA.Settings["Small Key Settings"] == "Anywhere" then
-		Tracker:FindObjectForCode("smallkeys").CurrentStage = 3
-	elseif SLOT_DATA.Settings["Small Key Settings"] == "Start With" then
-		Tracker:FindObjectForCode("smallkeys").CurrentStage = 4
-	end
-	if SLOT_DATA.Settings["Big Key Settings"] == "Vanilla" then
-		Tracker:FindObjectForCode("bigkeys").CurrentStage = 0
-	elseif SLOT_DATA.Settings["Big Key Settings"] == "Own Dungeon" then
-		Tracker:FindObjectForCode("bigkeys").CurrentStage = 1
-	elseif SLOT_DATA.Settings["Big Key Settings"] == "Any Dungeon" then
-		Tracker:FindObjectForCode("bigkeys").CurrentStage = 2
-	elseif SLOT_DATA.Settings["Big Key Settings"] == "Anywhere" then
-		Tracker:FindObjectForCode("bigkeys").CurrentStage = 3
-	elseif SLOT_DATA.Settings["Big Key Settings"] == "Start With" then
-		Tracker:FindObjectForCode("bigkeys").CurrentStage = 4
+	if SLOT_DATA["World Version"] == "v0.2.2" or SLOT_DATA["World Version"] == "v0.2.1" or SLOT_DATA["World Version"] == "v0.2.0" or SLOT_DATA["World Version"] == "v0.1.5" or SLOT_DATA["World Version"] == "v0.1.3" or SLOT_DATA["World Version"] == "v0.1.2" or SLOT_DATA["World Version"] == "v0.1.1" or SLOT_DATA["World Version"] == "v0.1" then
+		--skip if version is less than v0.2.3
+	else
+		if SLOT_DATA.Settings["Logic Settings"] == "Glitchless" then
+			Tracker:FindObjectForCode("glitched").CurrentStage = 1
+		elseif (SLOT_DATA.Settings["Logic Settings"] == "No Logic") or (SLOT_DATA.Settings["Logic Settings"] == "Glitched") then
+			Tracker:FindObjectForCode("glitched").CurrentStage = 0
+		end
+		if SLOT_DATA.Settings["Poes Shuffled"] == "Yes" then
+			Tracker:FindObjectForCode("poes").CurrentStage = 0
+		elseif SLOT_DATA.Settings["Poes Shuffled"] == "No" then
+			Tracker:FindObjectForCode("poes").CurrentStage = 1
+		end
+		if SLOT_DATA.Settings["Golden Bugs Shuffled"] == "Yes" then
+			Tracker:FindObjectForCode("gbugs").CurrentStage = 0
+		elseif SLOT_DATA.Settings["Golden Bugs Shuffled"] == "No" then
+			Tracker:FindObjectForCode("gbugs").CurrentStage = 1
+		end
+		if SLOT_DATA.Settings["Castle Requirements"] == "Open" then
+			Tracker:FindObjectForCode("castlerequirements").CurrentStage = 4
+		elseif SLOT_DATA.Settings["Castle Requirements"] == "Fused Shadows" then
+			Tracker:FindObjectForCode("castlerequirements").CurrentStage = 1
+		elseif SLOT_DATA.Settings["Castle Requirements"] == "Mirror Shards" then
+			Tracker:FindObjectForCode("castlerequirements").CurrentStage = 2
+		elseif SLOT_DATA.Settings["Castle Requirements"] == "All Dungeons" then
+			Tracker:FindObjectForCode("castlerequirements").CurrentStage = 3
+		elseif SLOT_DATA.Settings["Castle Requirements"] == "Vanilla" then
+			Tracker:FindObjectForCode("castlerequirements").CurrentStage = 0
+		end
+		if SLOT_DATA.Settings["Palace of Twilight Requirements"] == "Open" then
+			Tracker:FindObjectForCode("palacerequirements").CurrentStage = 3
+		elseif SLOT_DATA.Settings["Palace of Twilight Requirements"] == "Fused Shadows" then
+			Tracker:FindObjectForCode("palacerequirements").CurrentStage = 1
+		elseif SLOT_DATA.Settings["Palace of Twilight Requirements"] == "Mirror Shards" then
+			Tracker:FindObjectForCode("palacerequirements").CurrentStage = 2
+		elseif SLOT_DATA.Settings["Palace of Twilight Requirements"] == "Vanilla" then
+			Tracker:FindObjectForCode("palacerequirements").CurrentStage = 0
+		end
+		if SLOT_DATA.Settings["Faron Woods Logic"] == "Open" then
+			Tracker:FindObjectForCode("faronwoods").CurrentStage = 0
+		elseif SLOT_DATA.Settings["Faron Woods Logic"] == "Closed" then
+			Tracker:FindObjectForCode("faronwoods").CurrentStage = 1
+		end
+		if SLOT_DATA.Settings["Lakebed Entrance Requirements"] == "Yes" then
+			Tracker:FindObjectForCode("skiplakebedentrance").CurrentStage = 0
+		elseif SLOT_DATA.Settings["Lakebed Entrance Requirements"] == "No" then
+			Tracker:FindObjectForCode("skiplakebedentrance").CurrentStage = 1
+		end
+		if SLOT_DATA.Settings["Arbiters Grounds Entrance Requirements"] == "Yes" then
+			Tracker:FindObjectForCode("skiparbitersentrance").CurrentStage = 0
+		elseif SLOT_DATA.Settings["Arbiters Grounds Entrance Requirements"] == "No" then
+			Tracker:FindObjectForCode("skiparbitersentrance").CurrentStage = 1
+		end
+		if SLOT_DATA.Settings["Snowpeak Entrance Requirements"] == "Yes" then
+			Tracker:FindObjectForCode("skipsnowpeakentrance").CurrentStage = 0
+		elseif SLOT_DATA.Settings["Snowpeak Entrance Requirements"] == "No" then
+			Tracker:FindObjectForCode("skipsnowpeakentrance").CurrentStage = 1
+		end
+		if SLOT_DATA.Settings["City in the Sky Entrance Requirements"] == "Yes" then
+			Tracker:FindObjectForCode("skipcityintheskyentrance").CurrentStage = 0
+		elseif SLOT_DATA.Settings["City in the Sky Entrance Requirements"] == "No" then
+			Tracker:FindObjectForCode("skipcityintheskyentrance").CurrentStage = 1
+		end
+		if SLOT_DATA.Settings["Goron Mines Entrance Requirements"] == "Open" then
+			Tracker:FindObjectForCode("goronminesentrance").CurrentStage = 0
+		elseif SLOT_DATA.Settings["Goron Mines Entrance Requirements"] == "No Wrestling" then
+			Tracker:FindObjectForCode("goronminesentrance").CurrentStage = 1
+		elseif SLOT_DATA.Settings["Goron Mines Entrance Requirements"] == "Closed" then
+			Tracker:FindObjectForCode("goronminesentrance").CurrentStage = 2
+		end
+		if SLOT_DATA.Settings["Temple of Time Entrance Requirements"] == "Open" then
+			Tracker:FindObjectForCode("templeoftimeentrance").CurrentStage = 0
+		elseif SLOT_DATA.Settings["Temple of Time Entrance Requirements"] == "Open Grove" then
+			Tracker:FindObjectForCode("templeoftimeentrance").CurrentStage = 1
+		elseif SLOT_DATA.Settings["Temple of Time Entrance Requirements"] == "Closed" then
+			Tracker:FindObjectForCode("templeoftimeentrance").CurrentStage = 2
+		end
+		if SLOT_DATA.Settings["Skip Prologue"] == "Yes" then
+			Tracker:FindObjectForCode("skipprologue").CurrentStage = 0
+		end
+		if SLOT_DATA.Settings["Faron Twilight Cleared"] == "Yes" then
+			Tracker:FindObjectForCode("farontwilightcleared").CurrentStage = 0
+		end
+		if SLOT_DATA.Settings["Eldin Twilight Cleared"] == "Yes" then
+			Tracker:FindObjectForCode("eldintwilightcleared").CurrentStage = 0
+		end
+		if SLOT_DATA.Settings["Lanayru Twilight Cleared"] == "Yes" then
+			Tracker:FindObjectForCode("lanayrutwilightcleared").CurrentStage = 0
+		end
+		if SLOT_DATA.Settings["Skip MDH"] == "Yes" then
+			Tracker:FindObjectForCode("skipmdh").CurrentStage = 0
+		end
+		if SLOT_DATA.Settings["Open Map"] == "Yes" then
+			Tracker:FindObjectForCode("openmap").CurrentStage = 0
+		elseif SLOT_DATA.Settings["Open Map"] == "No" then
+			Tracker:FindObjectForCode("openmap").CurrentStage = 1
+		end
+		if SLOT_DATA.Settings["Increase Wallet"] == "Yes" then
+			Tracker:FindObjectForCode("increasewallet").CurrentStage = 0
+		elseif SLOT_DATA.Settings["Increase Wallet"] == "No" then
+			Tracker:FindObjectForCode("increasewallet").CurrentStage = 1
+		end
+		if SLOT_DATA.Settings["Transform Anywhere"] == "Yes" then
+			Tracker:FindObjectForCode("transformanywhere").CurrentStage = 0
+		elseif SLOT_DATA.Settings["Transform Anywhere"] == "No" then
+			Tracker:FindObjectForCode("transformanywhere").CurrentStage = 1
+		end
+		if SLOT_DATA.Settings["Bonks do Damage"] == "Yes" then
+			Tracker:FindObjectForCode("bonksdodamage").CurrentStage = 0
+		elseif SLOT_DATA.Settings["Bonks do Damage"] == "No" then
+			Tracker:FindObjectForCode("bonksdodamage").CurrentStage = 1
+		end
+		if SLOT_DATA.Settings["Damage Magnification"] == "Vanilla" then
+			Tracker:FindObjectForCode("damagemagnification").CurrentStage = 0
+		elseif SLOT_DATA.Settings["Damage Magnification"] == "Double" then
+			Tracker:FindObjectForCode("damagemagnification").CurrentStage = 1
+		elseif SLOT_DATA.Settings["Damage Magnification"] == "Triple" then
+			Tracker:FindObjectForCode("damagemagnification").CurrentStage = 2
+		elseif SLOT_DATA.Settings["Damage Magnification"] == "Quadruple" then
+			Tracker:FindObjectForCode("damagemagnification").CurrentStage = 3
+		elseif SLOT_DATA.Settings["Damage Magnification"] == "Ohko" then
+			Tracker:FindObjectForCode("damagemagnification").CurrentStage = 4
+		end
+		if SLOT_DATA.Settings["Small Key Settings"] == "Vanilla" then
+			Tracker:FindObjectForCode("smallkeys").CurrentStage = 0
+		elseif SLOT_DATA.Settings["Small Key Settings"] == "Own Dungeon" then
+			Tracker:FindObjectForCode("smallkeys").CurrentStage = 1
+		elseif SLOT_DATA.Settings["Small Key Settings"] == "Any Dungeon" then
+			Tracker:FindObjectForCode("smallkeys").CurrentStage = 2
+		elseif SLOT_DATA.Settings["Small Key Settings"] == "Anywhere" then
+			Tracker:FindObjectForCode("smallkeys").CurrentStage = 3
+		elseif SLOT_DATA.Settings["Small Key Settings"] == "Start With" then
+			Tracker:FindObjectForCode("smallkeys").CurrentStage = 4
+		end
+		if SLOT_DATA.Settings["Big Key Settings"] == "Vanilla" then
+			Tracker:FindObjectForCode("bigkeys").CurrentStage = 0
+		elseif SLOT_DATA.Settings["Big Key Settings"] == "Own Dungeon" then
+			Tracker:FindObjectForCode("bigkeys").CurrentStage = 1
+		elseif SLOT_DATA.Settings["Big Key Settings"] == "Any Dungeon" then
+			Tracker:FindObjectForCode("bigkeys").CurrentStage = 2
+		elseif SLOT_DATA.Settings["Big Key Settings"] == "Anywhere" then
+			Tracker:FindObjectForCode("bigkeys").CurrentStage = 3
+		elseif SLOT_DATA.Settings["Big Key Settings"] == "Start With" then
+			Tracker:FindObjectForCode("bigkeys").CurrentStage = 4
+		end
 	end
 end
 function initPortals()
@@ -303,20 +308,22 @@ function initMap()
 	Tracker:UiHint("ActivateTab", "Main Map")
 end
 function correctMistakes()
-	SLOT_DATA.Settings["Lakebed Entrance Requirements"] = SLOT_DATA.Settings["Lakebed Entrance Requirements"] or SLOT_DATA.Settings["Lakebed Enterance Requirements"]
-	SLOT_DATA.Settings["Arbiters Grounds Entrance Requirements"] = SLOT_DATA.Settings["Arbiters Grounds Entrance Requirements"] or SLOT_DATA.Settings["Arbiters Grounds Requirements"]
-	SLOT_DATA.Settings["Snowpeak Entrance Requirements"] = SLOT_DATA.Settings["Snowpeak Entrance Requirements"] or SLOT_DATA.Settings["Snowpeak Enterance Requirements"]
-	SLOT_DATA.Settings["City in the Sky Entrance Requirements"] = SLOT_DATA.Settings["City in the Sky Entrance Requirements"] or SLOT_DATA.Settings["City in the Sky Enterance Requirements"]
-	SLOT_DATA.Settings["Goron Mines Entrance Requirements"] = SLOT_DATA.Settings["Goron Mines Entrance Requirements"] or SLOT_DATA.Settings["Goron Mines Enterance Requirements"]
-	SLOT_DATA.Settings["Temple of Time Entrance Requirements"] = SLOT_DATA.Settings["Temple of Time Entrance Requirements"] or SLOT_DATA.Settings["Temple of Time Enterance Requirements"]
-	SLOT_DATA.Settings["Damage Magnification"] = SLOT_DATA.Settings["Damage Magnification"] or SLOT_DATA.Settings["Damage Magnifiation"]
+	if SLOT_DATA["World Version"] == "v0.2.3" then
+		SLOT_DATA.Settings["Lakebed Entrance Requirements"] = SLOT_DATA.Settings["Lakebed Entrance Requirements"] or SLOT_DATA.Settings["Lakebed Enterance Requirements"]
+		SLOT_DATA.Settings["Arbiters Grounds Entrance Requirements"] = SLOT_DATA.Settings["Arbiters Grounds Entrance Requirements"] or SLOT_DATA.Settings["Arbiters Grounds Requirements"]
+		SLOT_DATA.Settings["Snowpeak Entrance Requirements"] = SLOT_DATA.Settings["Snowpeak Entrance Requirements"] or SLOT_DATA.Settings["Snowpeak Enterance Requirements"]
+		SLOT_DATA.Settings["City in the Sky Entrance Requirements"] = SLOT_DATA.Settings["City in the Sky Entrance Requirements"] or SLOT_DATA.Settings["City in the Sky Enterance Requirements"]
+		SLOT_DATA.Settings["Goron Mines Entrance Requirements"] = SLOT_DATA.Settings["Goron Mines Entrance Requirements"] or SLOT_DATA.Settings["Goron Mines Enterance Requirements"]
+		SLOT_DATA.Settings["Temple of Time Entrance Requirements"] = SLOT_DATA.Settings["Temple of Time Entrance Requirements"] or SLOT_DATA.Settings["Temple of Time Enterance Requirements"]
+		SLOT_DATA.Settings["Damage Magnification"] = SLOT_DATA.Settings["Damage Magnification"] or SLOT_DATA.Settings["Damage Magnifiation"]
+	end
 end
 
 
 function onClear(slot_data)
 	debugAP(string.format("called onClear, slot_data:\n%s", dump_table(slot_data)))
 	SLOT_DATA = slot_data
-	if SLOT_DATA["World Version"] == "v0.2.3" then correctMistakes() end
+	correctMistakes()
 	CUR_INDEX = -1
 	PLAYER_ID = Archipelago.PlayerNumber or -1
 	TEAM_NUMBER = Archipelago.TeamNumber or 0
