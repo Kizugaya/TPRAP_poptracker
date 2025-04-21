@@ -3,7 +3,7 @@
 		{
 			"package_version": "0.5.2",
 			"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.5.2/TPRAP_poptracker_v0.5.2.zip",
-			"sha256": "8C7337F6F12D3E1708703A157DF546B7A23EFBDDAA87C9CF35D3835538B4E4FD",
+			"sha256": "86FAD55B679C52A9938104923010213F2355EEA7EFAEFECD282401BB0BF6A5BF",
 			"changelog": [
 				"Fixed crash on apworld v0.2.2 and earlier"
 			]
