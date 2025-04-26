@@ -1,6 +1,15 @@
 {
 	"versions": [
 		{
+			"package_version": "0.5.3",
+			"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.5.3/TPRAP_poptracker_v0.5.3.zip",
+			"sha256": "3A482FA857731FED090E6DC1B060B6F7D8D9E211E47A44F313E33DC7267B28A7",
+			"changelog": [
+				"Fixed logic bug",
+				"Switched coords of 2 locations"
+			]
+		},
+		{
 			"package_version": "0.5.2",
 			"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.5.2/TPRAP_poptracker_v0.5.2.zip",
 			"sha256": "86FAD55B679C52A9938104923010213F2355EEA7EFAEFECD282401BB0BF6A5BF",
