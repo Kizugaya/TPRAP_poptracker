@@ -516,20 +516,8 @@
 							{
 								"access_rules": [
 									"@ArbitersGroundsEastWing, agsmallkey:3, $canDefeatBubble, $canDefeatStalchild, $canDefeatRedeadKnight",
-									"[glitcheson], @ArbitersGroundsEastWing, agsmallkey:3, $canDefeatBubbleGlitched, $canDefeatStalchild, $canDefeatRedeadKnight",
-									"[glitcheson], @ArbitersGroundsEastWing, agsmallkey:3, $canDefeatBubble, $canDefeatStalchildGlitched, $canDefeatRedeadKnight",
-									"[glitcheson], @ArbitersGroundsEastWing, agsmallkey:3, $canDefeatBubbleGlitched, $canDefeatStalchildGlitched, $canDefeatRedeadKnight",
-									"[glitcheson], @ArbitersGroundsEastWing, agsmallkey:3, $canDefeatBubble, $canDefeatStalchild, $canDefeatRedeadKnightGlitched",
-									"[glitcheson], @ArbitersGroundsEastWing, agsmallkey:3, $canDefeatBubbleGlitched, $canDefeatStalchild, $canDefeatRedeadKnightGlitched",
-									"[glitcheson], @ArbitersGroundsEastWing, agsmallkey:3, $canDefeatBubble, $canDefeatStalchildGlitched, $canDefeatRedeadKnightGlitched",
-									"[glitcheson], @ArbitersGroundsEastWing, agsmallkey:3, $canDefeatBubbleGlitched, $canDefeatStalchildGlitched, $canDefeatRedeadKnightGlitched",
 									"@ArbitersGroundsEastWing, skkeysy, $canDefeatBubble, $canDefeatStalchild, $canDefeatRedeadKnight",
-									"[glitcheson], @ArbitersGroundsEastWing, skkeysy, $canDefeatBubbleGlitched, $canDefeatStalchild, $canDefeatRedeadKnight",
-									"[glitcheson], @ArbitersGroundsEastWing, skkeysy, $canDefeatBubble, $canDefeatStalchildGlitched, $canDefeatRedeadKnight",
-									"[glitcheson], @ArbitersGroundsEastWing, skkeysy, $canDefeatBubbleGlitched, $canDefeatStalchildGlitched, $canDefeatRedeadKnight",
-									"[glitcheson], @ArbitersGroundsEastWing, skkeysy, $canDefeatBubble, $canDefeatStalchild, $canDefeatRedeadKnightGlitched",
-									"[glitcheson], @ArbitersGroundsEastWing, skkeysy, $canDefeatBubbleGlitched, $canDefeatStalchild, $canDefeatRedeadKnightGlitched",
-									"[glitcheson], @ArbitersGroundsEastWing, skkeysy, $canDefeatBubble, $canDefeatStalchildGlitched, $canDefeatRedeadKnightGlitched",
+									"[glitcheson], @ArbitersGroundsEastWing, agsmallkey:3, $canDefeatBubbleGlitched, $canDefeatStalchildGlitched, $canDefeatRedeadKnightGlitched",
 									"[glitcheson], @ArbitersGroundsEastWing, skkeysy, $canDefeatBubbleGlitched, $canDefeatStalchildGlitched, $canDefeatRedeadKnightGlitched"
 								]
 							}
@@ -562,8 +550,8 @@
 							{
 								"access_rules": [
 									"@ArbitersGroundsEastWing, agsmallkey:3, $canDefeatRedeadKnight, shadowcrystal",
-									"[glitcheson], @ArbitersGroundsEastWing, agsmallkey:3, $canDefeatRedeadKnightGlitched, shadowcrystal",
 									"@ArbitersGroundsEastWing, skkeysy, $canDefeatRedeadKnight, shadowcrystal",
+									"[glitcheson], @ArbitersGroundsEastWing, agsmallkey:3, $canDefeatRedeadKnightGlitched, shadowcrystal",
 									"[glitcheson], @ArbitersGroundsEastWing, skkeysy, $canDefeatRedeadKnightGlitched, shadowcrystal"
 								]
 							}

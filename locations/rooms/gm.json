@@ -42,16 +42,12 @@
 			"@GoronMinesCrystalSwitchRoom",
 			"@GoronMinesEntrance, boots, $canBreakWoodenDoor",
 			"[glitcheson], @GoronMinesEntrance, boots, $canBreakWoodenDoorGlitched",
-			"[glitcheson], @GoronMinesEntrance, shadowcrystal, $canBreakWoodenDoor",
 			"[glitcheson], @GoronMinesEntrance, shadowcrystal, $canBreakWoodenDoorGlitched",
 			"[glitcheson], @GoronMinesEntrance, boots, $canDoBSMoonBoots",
-			"[glitcheson], @GoronMinesEntrance, boots, $canDoBSMoonBoots",
-			"[glitcheson], @GoronMinesEntrance, shadowcrystal, $canDoBSMoonBoots",
 			"[glitcheson], @GoronMinesEntrance, shadowcrystal, $canDoBSMoonBoots",
 			"@GoronMinesLowerWestWing",
 			"@GoronMinesUpperEastWing, boots, $canDefeatDangoro, bow",
 			"[glitcheson], @GoronMinesUpperEastWing, boots, $canDefeatDangoroGlitched, bow",
-			"[glitcheson], @GoronMinesUpperEastWing, boots, $canDefeatDangoro, $canDefeatBeamos",
 			"[glitcheson], @GoronMinesUpperEastWing, boots, $canDefeatDangoroGlitched, $canDefeatBeamos"
 		]
 	},

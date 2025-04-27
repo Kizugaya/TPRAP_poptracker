@@ -110,7 +110,7 @@ function canCutHangingWeb()
 	return hasAny({"clawshot", "boomerang", "ballchain", hasAll({"bow", canGetArrows()})})
 end
 function canCutHangingWebGlitched()
-	return hasAll({"bow", canGetArrowsGlitched()})
+	return hasAny({canCutHangingWeb(), hasAll({"bow", canGetArrowsGlitched()})})
 end
 
 -- Check if paintings can be knocked down
@@ -118,7 +118,7 @@ function canKnockDownHCPainting()
 	return has("bow")
 end
 function canKnockDownHCPaintingGlitched()
-	return hasAny({hasAll({canDoNicheStuff(), hasAny({hasBombs(), hasAll({"sword", hasAmount("hiddenskill", 6)})})}), hasAny({hasAll({"sword", canDoMoonBoots()}), canDoBSMoonBoots()})})
+	return hasAny({canKnockDownHCPainting(), hasAll({hasAny({hasBombs(), hasAll({"sword", hasAmount("hiddenskill", 6)})})}), hasAny({hasAll({"sword", canDoMoonBoots()}), canDoBSMoonBoots()})})
 end
 
 -- Check if monkey cage can be broken
@@ -126,7 +126,7 @@ function canBreakMonkeyCage()
 	return hasAny({"sword", "ballchain", "boots", hasBombs(), "clawshot", "shadowcrystal", "spinner", hasAll({"bow", canGetArrows()})})
 end
 function canBreakMonkeyCageGlitched()
-	return hasAny({hasAll({"bow", canGetArrowsGlitched()}), hasAll({canDoNicheStuff(), hasAmount("hiddenskill", 2)})})
+	return hasAny({canBreakMonkeyCage(), hasAll({"bow", canGetArrowsGlitched()}), hasAmount("hiddenskill", 2)})
 end
 
 -- Check if all monkey can be freed
@@ -142,7 +142,7 @@ function canPressMinesSwitch()
 	return has("boots")
 end
 function canPressMinesSwitchGlitched()
-	return hasAll({canDoNicheStuff(), "ballchain"})
+	return hasAny({canPressMinesSwitch(), "ballchain"})
 end
 
 -- Check if hanging Baba can be knocked
@@ -155,7 +155,7 @@ function canBreakWoodenDoor()
 	return hasAny({"shadowcrystal", "sword", canSmash()})
 end
 function canBreakWoodenDoorGlitched()
-	return has(canUseBacksliceAsSword())
+	return hasAny({canBreakWoodenDoor(), canUseBacksliceAsSword()})
 end
 
 
@@ -208,7 +208,7 @@ function canDoNicheStuff()
 end
 
 function canUseBacksliceAsSword()
-	return hasAll({canDoNicheStuff(), hasAmount("hiddenskill", 3)})
+	return hasAll({hasAmount("hiddenskill", 3)})
 end
 
 function canDoAirRefill()
@@ -322,7 +322,7 @@ function canGetArrows()
 	return hasAny({canClearForest(), "shadowcrystal"})
 end
 function canGetArrowsGlitched()
-	return hasAll({"lantern", "bombbag", canDoLJA()})
+	return hasAny({canGetArrows(), hasAll({"lantern", "bombbag", canDoLJA()})})
 end
 
 function canAccessEldin()
@@ -342,28 +342,28 @@ function canDefeatAeralfos()
 	return hasAll({"clawshot", hasAny({"sword", "ballchain", "shadowcrystal"})})
 end
 function canDefeatAeralfosGlitched()
-	return hasAll({"clawshot", canDoNicheStuff(), "boots"})
+	return hasAll({"clawshot", hasAny({"boots", canDefeatAeralfos()})})
 end
 
 function canDefeatArmos()
 	return hasAny({"sword", "ballchain", "bow", "shadowcrystal", "clawshot", hasBombs(), "spinner"})
 end
 function canDefeatArmosGlitched()
-	return hasAny({hasAll({canDoNicheStuff(), "boots"}), canUseBacksliceAsSword()})
+	return hasAny({canDefeatArmos(), "boots", canUseBacksliceAsSword()})
 end
 
 function canDefeatBabaSerpent()
 	return hasAny({"sword", "ballchain", "bow", hasAll({canDoNicheStuff(), "boots"}), "spinner", "shadowcrystal", hasBombs(), canUseBacksliceAsSword()})
 end
 function canDefeatBabaSerpentGlitched()
-	return hasAny({hasAll({canDoNicheStuff(), "boots"}), canUseBacksliceAsSword()})
+	return hasAny({canDefeatBabaSerpent(), "boots", canUseBacksliceAsSword()})
 end
 
 function canDefeatBabyGohma()
 	return hasAny({"sword", "ballchain", "spinner", "slingshot", "clawshot", hasBombs()})
 end
 function canDefeatBabyGohmaGlitched()
-	return hasAny({hasAll({canDoNicheStuff(), "boots"}), canUseBacksliceAsSword()})
+	return hasAny({canDefeatBabyGohma(), "boots", canUseBacksliceAsSword()})
 end
 
 function canDefeatBari()
@@ -378,77 +378,77 @@ function canDefeatBigBaba()
 	return hasAny({"sword", "ballchain", hasAll({"bow", canGetArrows()}), "shadowcrystal", "spinner", hasBombs(), })
 end
 function canDefeatBigBabaGlitched()
-	return hasAny({hasAll({"bow", canGetArrowsGlitched()}), hasAll({canDoNicheStuff(), "boots"}), canUseBacksliceAsSword()})
+	return hasAny({canDefeatBigBaba(), hasAll({"bow", canGetArrowsGlitched()}), "boots", canUseBacksliceAsSword()})
 end
 
 function canDefeatBokoblin()
 	return hasAny({"sword", "ballchain", hasAll({"bow", canGetArrows()}), "spinner", "slingshot", "shadowcrystal", hasBombs()})
 end
 function canDefeatBokoblinGlitched()
-	return hasAny({hasAll({"bow", canGetArrowsGlitched()}), hasAll({canDoNicheStuff(), "boots"}), canUseBacksliceAsSword()})
+	return hasAny({canDefeatBokoblin(), hasAll({"bow", canGetArrowsGlitched()}), "boots", canUseBacksliceAsSword()})
 end
 
 function canDefeatBokoblinRed()
 	return hasAny({"sword", "ballchain", hasAll({"bow", canGetArrows()}), "shadowcrystal", hasBombs()})
 end
 function canDefeatBokoblinRedGlitched()
-	return hasAny({hasAll({"bow", canGetArrowsGlitched()}), canUseBacksliceAsSword()})
+	return hasAny({canDefeatBokoblinRed(), hasAll({"bow", canGetArrowsGlitched()}), canUseBacksliceAsSword()})
 end
 
 function canDefeatBombfish()
 	return hasAll({"boots", hasAny({"sword", "clawshot", hasAll({"shield", hasAmount("hiddenskill", 2)})})})
 end
 function canDefeatBombfishGlitched()
-	return hasAll({"magicarmor", hasAny({"sword", "clawshot", hasAll({"shield", hasAmount("hiddenskill", 2)})})})
+	return hasAny({canDefeatBombfish(), hasAll({"magicarmor", hasAny({"sword", "clawshot", hasAll({"shield", hasAmount("hiddenskill", 2)})})})})
 end
 
 function canDefeatBombling()
 	return hasAny({"sword", "ballchain", hasAll({"bow", canGetArrows()}), "spinner", "shadowcrystal", "clawshot"})
 end
 function canDefeatBomblingGlitched()
-	return hasAny({hasAll({"bow", canGetArrowsGlitched()}), hasAll({canDoNicheStuff(), "boots"})})
+	return hasAny({canDefeatBombling(), hasAll({"bow", canGetArrowsGlitched()}), "boots"})
 end
 
 function canDefeatBomskit()
 	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal", hasBombs()})
 end
 function canDefeatBomskitGlitched()
-	return hasAny({canUseBacksliceAsSword(), hasAll({canDoNicheStuff(), "boots"})})
+	return hasAny({canDefeatBomskit(), canUseBacksliceAsSword(), "boots"})
 end
 
 function canDefeatBubble()
 	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal"})
 end
 function canDefeatBubbleGlitched()
-	return hasAny({hasAll({canDoNicheStuff(), "boots"}), canUseBacksliceAsSword()})
+	return hasAny({canDefeatBubble(), "boots", canUseBacksliceAsSword()})
 end
 
 function canDefeatBulblin()
 	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal", hasBombs()})
 end
 function canDefeatBulblinGlitched()
-	return hasAny({hasAll({canDoNicheStuff(), "boots"}), canUseBacksliceAsSword()})
+	return hasAny({canDefeatBulblin(), "boots", canUseBacksliceAsSword()})
 end
 
 function canDefeatChilfos()
 	return hasAny({"sword", "ballchain", "shadowcrystal", "spinner", hasBombs()})
 end
 function canDefeatChilfosGlitched()
-	return hasAny({hasAll({canDoNicheStuff(), "boots"}), canUseBacksliceAsSword()})
+	return hasAny({canDefeatChilfos(), "boots", canUseBacksliceAsSword()})
 end
 
 function canDefeatChu()
 	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal", "clawshot", hasBombs()})
 end
 function canDefeatChuGlitched()
-	return hasAny({hasAll({canDoNicheStuff(), "boots"}), canUseBacksliceAsSword()})
+	return hasAny({canDefeatChu(), "boots", canUseBacksliceAsSword()})
 end
 
 function canDefeatChuWorm()
 	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal"})
 end
 function canDefeatChuWormGlitched()
-	return hasAny({hasAll({canDoNicheStuff(), "boots"}), canUseBacksliceAsSword()})
+	return hasAny({canDefeatChuWorm(), "boots", canUseBacksliceAsSword()})
 end
 
 function canDefeatDarknut()
@@ -459,7 +459,7 @@ function canDefeatDekuBaba()
 	return hasAny({"sword", "ballchain", "bow", "spinner", hasAmount("hiddenskill", 2), "slingshot", "clawshot", hasBombs()})
 end
 function canDefeatDekuBabaGlitched()
-	return hasAny({hasAll({canDoNicheStuff(), "boots"}), canUseBacksliceAsSword()})
+	return hasAny({canDefeatDekuBaba(), "boots", canUseBacksliceAsSword()})
 end
 
 function canDefeatDekuLike()
@@ -470,7 +470,7 @@ function canDefeatDodongo()
 	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal", hasBombs()})
 end
 function canDefeatDodongoGlitched()
-	return hasAny({hasAll({canDoNicheStuff(), "boots"}), canUseBacksliceAsSword()})
+	return hasAny({canDefeatDodongo(), "boots", canUseBacksliceAsSword()})
 end
 
 function canDefeatDinalfos()
@@ -481,14 +481,14 @@ function canDefeatFireBubble()
 	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal"})
 end
 function canDefeatFireBubbleGlitched()
-	return hasAny({hasAll({canDoNicheStuff(), "boots"}), canUseBacksliceAsSword()})
+	return hasAny({canDefeatFireBubble(), "boots", canUseBacksliceAsSword()})
 end
 
 function canDefeatFireKeese()
 	return hasAny({"sword", "ballchain", "bow", "spinner", "slingshot", "shadowcrystal"})
 end
 function canDefeatFireKeeseGlitched()
-	return hasAny({hasAll({canDoNicheStuff(), "boots"}), canUseBacksliceAsSword()})
+	return hasAny({canDefeatFireKeese(), "boots", canUseBacksliceAsSword()})
 end
 
 function canDefeatFireToadpoli()
@@ -503,7 +503,7 @@ function canDefeatGoron()
 	return hasAny({"sword", "ballchain", "bow", "spinner", hasAll({hasAmount("hiddenskill", 2), "shield"}), "slingshot", "clawshot", hasBombs()})
 end
 function canDefeatGoronGlitched()
-	return hasAny({hasAll({canDoNicheStuff(), "boots"}), canUseBacksliceAsSword()})
+	return hasAny({canDefeatGoron(), "boots", canUseBacksliceAsSword()})
 end
 
 function canDefeatGhoulRat()
@@ -514,35 +514,35 @@ function canDefeatGuay()
 	return hasAny({"sword", "ballchain", "bow", "shadowcrystal", "slingshot"})
 end
 function canDefeatGuayGlitched()
-	return hasAll({canDoNicheStuff(), "boots"})
+	return hasAny({canDefeatGuay(), "boots"})
 end
 
 function canDefeatHelmasaur()
 	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal", hasBombs()})
 end
 function canDefeatHelmasaurGlitched()
-	return hasAny({hasAll({canDoNicheStuff(), "boots"}), canUseBacksliceAsSword()})
+	return hasAny({canDefeatHelmasaur(), "boots", canUseBacksliceAsSword()})
 end
 
 function canDefeatHelmasaurus()
 	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal", hasBombs()})
 end
 function canDefeatHelmasaurusGlitched()
-	return hasAny({hasAll({canDoNicheStuff(), "boots"}), canUseBacksliceAsSword()})
+	return hasAny({canDefeatHelmasaurus(), "boots", canUseBacksliceAsSword()})
 end
 
 function canDefeatIceBubble()
 	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal"})
 end
 function canDefeatIceBubbleGlitched()
-	return hasAny({hasAll({canDoNicheStuff(), "boots"}), canUseBacksliceAsSword()})
+	return hasAny({canDefeatIceBubble(), "boots", canUseBacksliceAsSword()})
 end
 
 function canDefeatIceKeese()
 	return hasAny({"sword", "ballchain", "bow", "spinner", "slingshot", "shadowcrystal"})
 end
 function canDefeatIceKeeseGlitched()
-	return hasAny({hasAll({canDoNicheStuff(), "boots"}), canUseBacksliceAsSword()})
+	return hasAny({canDefeatIceKeese(), "boots", canUseBacksliceAsSword()})
 end
 
 function canDefeatPoe()
@@ -553,42 +553,42 @@ function canDefeatKargorok()
 	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal"})
 end
 function canDefeatKargorokGlitched()
-	return hasAny({hasAll({canDoNicheStuff(), "boots"}), canUseBacksliceAsSword()})
+	return hasAny({canDefeatKargorok(), "boots", canUseBacksliceAsSword()})
 end
 
 function canDefeatKeese()
 	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal"})
 end
 function canDefeatKeeseGlitched()
-	return hasAny({hasAll({canDoNicheStuff(), "boots"}), canUseBacksliceAsSword()})
+	return hasAny({canDefeatKeese(), "boots", canUseBacksliceAsSword()})
 end
 
 function canDefeatLeever()
 	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal", hasBombs()})
 end
 function canDefeatLeeverGlitched()
-	return hasAll({canDoNicheStuff(), "boots"})
+	return hasAny({canDefeatLeever(), "boots"})
 end
 
 function canDefeatLizalfos()
 	return hasAny({"sword", "ballchain", "bow", "shadowcrystal", hasBombs()})
 end
 function canDefeatLizalfosGlitched()
-	return hasAny({hasAll({canDoNicheStuff(), "boots"}), canUseBacksliceAsSword()})
+	return hasAny({canDefeatLizalfos(), "boots", canUseBacksliceAsSword()})
 end
 
 function canDefeatMiniFreezard()
 	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal", hasBombs()})
 end
 function canDefeatMiniFreezardGlitched()
-	return hasAny({hasAll({canDoNicheStuff(), "boots"}), canUseBacksliceAsSword()})
+	return hasAny({canDefeatMiniFreezard(), "boots", canUseBacksliceAsSword()})
 end
 
 function canDefeatMoldorm()
 	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal", hasBombs()})
 end
 function canDefeatMoldormGlitched()
-	return hasAll({canDoNicheStuff(), "boots"})
+	return hasAny({canDefeatMoldorm(), "boots"})
 end
 
 function canDefeatPoisonMite()
@@ -599,21 +599,21 @@ function  canDefeatPuppet()
 	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal", hasBombs()})
 end
 function  canDefeatPuppetGlitched()
-	return hasAny({hasAll({canDoNicheStuff(), "boots"}), canUseBacksliceAsSword()})
+	return hasAny({canDefeatPuppet(), "boots", canUseBacksliceAsSword()})
 end
 
 function canDefeatRat()
 	return hasAny({"sword", "ballchain", "bow", "spinner", "slingshot", "shadowcrystal", hasBombs()})
 end
 function canDefeatRatGlitched()
-	return hasAny({hasAll({canDoNicheStuff(), "boots"}), canUseBacksliceAsSword()})
+	return hasAny({canDefeatRat(), "boots", canUseBacksliceAsSword()})
 end
 
 function canDefeatRedeadKnight()
 	return hasAny({"sword", "ballchain", "bow", "shadowcrystal", hasBombs()})
 end
 function canDefeatRedeadKnightGlitched()
-	return hasAny({hasAll({canDoNicheStuff(), "boots"}), canUseBacksliceAsSword()})
+	return hasAny({canDefeatRedeadKnight(), "boots", canUseBacksliceAsSword()})
 end
 
 function canDefeatShadowBeast()
@@ -624,14 +624,14 @@ function canDefeatShadowBulblin()
 	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal", hasBombs()})
 end
 function canDefeatShadowBulblinGlitched()
-	return hasAny({hasAll({canDoNicheStuff(), "boots"}), canUseBacksliceAsSword()})
+	return hasAny({canDefeatShadowBulblin(), "boots", canUseBacksliceAsSword()})
 end
 
 function canDefeatShadowDekuBaba()
 	return hasAny({"sword", "ballchain", "bow", "spinner", hasAmount("hiddenskill", 2), "slingshot", "clawshot", hasBombs()})
 end
 function canDefeatShadowDekuBabaGlitched()
-	return hasAny({hasAll({canDoNicheStuff(), "boots"}), canUseBacksliceAsSword()})
+	return hasAny({canDefeatShadowDekuBaba(), "boots", canUseBacksliceAsSword()})
 end
 
 function canDefeatShadowInsect()
@@ -642,42 +642,42 @@ function canDefeatShadowKargorok()
 	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal", hasBombs()})
 end
 function canDefeatShadowKargorokGlitched()
-	return hasAny({hasAll({canDoNicheStuff(), "boots"}), canUseBacksliceAsSword()})
+	return hasAny({canDefeatShadowKargorok(), "boots", canUseBacksliceAsSword()})
 end
 
 function canDefeatShadowKeese()
 	return hasAny({"sword", "ballchain", "bow", "spinner", "slingshot", "shadowcrystal"})
 end
 function canDefeatShadowKeeseGlitched()
-	return hasAny({hasAll({canDoNicheStuff(), "boots"}), canUseBacksliceAsSword()})
+	return hasAny({canDefeatShadowKeese(), "boots", canUseBacksliceAsSword()})
 end
 
 function canDefeatShadowVermin()
 	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal", hasBombs()})
 end
 function canDefeatShadowVerminGlitched()
-	return hasAny({hasAll({canDoNicheStuff(), "boots"}), canUseBacksliceAsSword()})
+	return hasAny({canDefeatShadowVermin(), "boots", canUseBacksliceAsSword()})
 end
 
 function canDefeatShellBlade()
 	return hasAny({hasWaterBombs(), hasAll({"sword", "boots"})})
 end
 function canDefeatShellBladeGlitched()
-	return hasAll({"sword", canDoNicheStuff(), "magicarmor"})
+	return hasAny({canDefeatShellBlade(), hasAll({"sword", "magicarmor"})})
 end
 
 function canDefeatSkullFish()
 	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal"})
 end
 function canDefeatSkullFishGlitched()
-	return hasAll({canDoNicheStuff(), "boots"})
+	return hasAny({canDefeatSkullFish(), "boots"})
 end
 
 function canDefeatSkulltula()
 	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal", hasBombs()})
 end
 function canDefeatSkulltulaGlitched()
-	return hasAny({hasAll({canDoNicheStuff(), "boots"}), canUseBacksliceAsSword()})
+	return hasAny({canDefeatSkulltula(), "boots", canUseBacksliceAsSword()})
 end
 
 function canDefeatStalfos()
@@ -688,28 +688,28 @@ function canDefeatStalhound()
 	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal", hasBombs()})
 end
 function canDefeatStalhoundGlitched()
-	return hasAny({hasAll({canDoNicheStuff(), "boots"}), canUseBacksliceAsSword()})
+	return hasAny({canDefeatStalhound(), "boots", canUseBacksliceAsSword()})
 end
 
 function canDefeatStalchild()
 	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal", hasBombs()})
 end
 function canDefeatStalchildGlitched()
-	return hasAny({hasAll({canDoNicheStuff(), "boots"}), canUseBacksliceAsSword()})
+	return hasAny({canDefeatStalchild(), "boots", canUseBacksliceAsSword()})
 end
 
 function canDefeatTektite()
 	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal", hasBombs()})
 end
 function canDefeatTektiteGlitched()
-	return hasAny({hasAll({canDoNicheStuff(), "boots"}), canUseBacksliceAsSword()})
+	return hasAny({canDefeatTektite(), "boots", canUseBacksliceAsSword()})
 end
 
 function canDefeatTileWorm()
 	return hasAll({hasAny({"sword", "ballchain", "bow", "shadowcrystal", "spinner", hasBombs()}), "boomerang"})
 end
 function canDefeatTileWormGlitched()
-	return hasAll({hasAny({hasAll({canDoNicheStuff(), "boots"}), canUseBacksliceAsSword()}), "boomerang"})
+	return hasAny({canDefeatTileWorm(), hasAll({hasAny({"boots", canUseBacksliceAsSword()}), "boomerang"})})
 end
 
 function canDefeatToado()
@@ -728,42 +728,42 @@ function canDefeatWalltula()
 	return hasAny({"ballchain", "slingshot", hasAll({"bow", canGetArrows()}), "boomerang", "clawshot"})
 end
 function canDefeatWalltulaGlitched()
-	return hasAll({"bow", canGetArrowsGlitched()})
+	return hasAny({canDefeatWalltula(), hasAll({"bow", canGetArrowsGlitched()})})
 end
 
 function canDefeatWhiteWolfos()
 	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal", hasBombs()})
 end
 function canDefeatWhiteWolfosGlitched()
-	return hasAll({canDoNicheStuff(), "boots"})
+	return hasAny({canDefeatWhiteWolfos(), "boots"})
 end
 
 function canDefeatYoungGohma()
 	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal", hasBombs()})
 end
 function canDefeatYoungGohmaGlitched()
-	return hasAll({canDoNicheStuff(), "boots"})
+	return hasAny({canDefeatYoungGohma(), "boots"})
 end
 
 function canDefeatZantHead()
 	return hasAny({"shadowcrystal", "sword"})
 end
 function canDefeatZantHeadGlitched()
-	return canUseBacksliceAsSword()
+	return hasAny({canDefeatZantHead(), canUseBacksliceAsSword()})
 end
 
 function canDefeatOok()
 	return hasAny({"sword", "ballchain", hasAll({"bow", canGetArrows()}), "shadowcrystal", hasBombs()})
 end
 function canDefeatOokGlitched()
-	return hasAny({hasAll({"bow", canGetArrowsGlitched()}), hasAll({canDoNicheStuff(), "boots"}), canUseBacksliceAsSword()})
+	return hasAny({canDefeatOok(), hasAll({"bow", canGetArrowsGlitched()}), "boots", canUseBacksliceAsSword()})
 end
 
 function canDefeatDangoro()
 	return hasAll({hasAny({"sword", "shadowcrystal", hasAll({"bow", hasBombs()})}), "boots"})
 end
 function canDefeatDangoroGlitched()
-	return hasAll({canDoNicheStuff(), "ballchain", "boots"})
+	return hasAny({canDefeatDangoro(), hasAll({"ballchain", "boots"})})
 end
 
 function canDefeatCarrierKargorok()
@@ -778,7 +778,7 @@ function canDefeatDekuToad()
 	return hasAny({"sword", "ballchain", "bow", "shadowcrystal", hasBombs()})
 end
 function canDefeatDekuToadGlitched()
-	return hasAny({hasAll({canDoNicheStuff(), "boots"}), canUseBacksliceAsSword()})
+	return hasAny({canDefeatDekuToad(), "boots", canUseBacksliceAsSword()})
 end
 
 function canDefeatSkullKid()
@@ -793,7 +793,7 @@ function canDefeatKingBulblinDesert()
 	return hasAny({"sword", "ballchain", "shadowcrystal", "largequiver"})
 end
 function canDefeatKingBulblinDesertGlitched()
-	return hasAny({canUseBacksliceAsSword()})
+	return hasAny({canDefeatKingBulblinDesert(), canUseBacksliceAsSword()})
 end
 
 function canDefeatKingBulblinCastle()
@@ -808,7 +808,7 @@ function canDefeatDarkhammer()
 	return hasAny({"sword", "ballchain", "bow", "shadowcrystal", hasBombs()})
 end
 function canDefeatDarkhammerGlitched()
-	return hasAll({canDoNicheStuff(), "boots"})
+	return hasAny({canDefeatDarkhammer(), "boots"})
 end
 
 function canDefeatPhantomZant()
@@ -819,7 +819,7 @@ function canDefeatDiababa()
 	return hasAny({canLaunchBombs(), hasAll({"boomerang", hasAny({"sword", "ballchain", "shadowcrystal", hasBombs()})})})
 end
 function canDefeatDiababaGlitched()
-	return hasAll({"boomerang", canDoNicheStuff(), "boots"})
+	return hasAny({canDefeatDiababa(), hasAll({"boomerang", "boots"})})
 end
 
 function canDefeatFyrus()
@@ -830,7 +830,7 @@ function canDefeatMorpheel()
 	return hasAll({"zoraarmor", "boots", "sword", "clawshot"})
 end
 function canDefeatMorpheelGlitched()
-	return hasAll({canDoNicheStuff(), "clawshot", canDoAirRefill(), "sword"})
+	return hasAny({canDefeatMorpheel(), hasAll({"clawshot", canDoAirRefill(), "sword"})})
 end
 
 function canDefeatStallord()
@@ -849,14 +849,14 @@ function canDefeatArgorok()
 	return hasAll({"doubleclawshot", "ordonsword", "boots"})
 end
 function canDefeatArgorokGlitched()
-	return hasAll({"doubleclawshot", "ordonsword", canDoNicheStuff(), "magicarmor"})
+	return hasAny({canDefeatArgorok(), hasAll({"doubleclawshot", "ordonsword", "magicarmor"})})
 end
 
 function canDefeatZant()
 	return hasAll({"mastersword", "boomerang", "clawshot", "ballchain", "boots", "zoraarmor"})
 end
 function canDefeatZantGlitched()
-	return hasAll({"mastersword", "boomerang", "clawshot", "ballchain", canDoNicheStuff(), "magicarmor", canDoAirRefill()})
+	return hasAny({canDefeatZant(), hasAll({"mastersword", "boomerang", "clawshot", "ballchain", "magicarmor", canDoAirRefill()})})
 end
 
 function canDefeatGanondorf()

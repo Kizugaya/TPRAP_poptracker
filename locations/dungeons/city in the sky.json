@@ -23,7 +23,6 @@
 							{
 								"access_rules": [
 									"@CityinTheSkyEastWing, clawshot, boots, $canDefeatDinalfos, $canDefeatTileWorm, $canDefeatAeralfos",
-									"[glitcheson], @CityinTheSkyEastWing, clawshot, boots, $canDefeatDinalfos, $canDefeatAeralfos",
 									"[glitcheson], @CityinTheSkyEastWing, clawshot, boots, $canDefeatDinalfos, $canDefeatAeralfosGlitched"
 								]
 							}
@@ -561,8 +560,6 @@
 							{
 								"access_rules": [
 									"@CityinTheSkyCentralTowerSecondFloor, $canDefeatDinalfos, $canDefeatWalltula, $canDefeatKargorok, shadowcrystal",
-									"[glitcheson], @CityinTheSkyCentralTowerSecondFloor, $canDefeatDinalfos, $canDefeatWalltulaGlitched, $canDefeatKargorok, shadowcrystal",
-									"[glitcheson], @CityinTheSkyCentralTowerSecondFloor, $canDefeatDinalfos, $canDefeatWalltula, $canDefeatKargorokGlitched, shadowcrystal",
 									"[glitcheson], @CityinTheSkyCentralTowerSecondFloor, $canDefeatDinalfos, $canDefeatWalltulaGlitched, $canDefeatKargorokGlitched, shadowcrystal",
 									"[glitcheson], @CityinTheSkyCentralTowerSecondFloor, clawshot"
 								]
@@ -587,8 +584,6 @@
 							{
 								"access_rules": [
 									"@CityinTheSkyCentralTowerSecondFloor, shadowcrystal, $canDefeatDinalfos, $canDefeatWalltula, $canDefeatKargorok",
-									"[glitcheson], @CityinTheSkyCentralTowerSecondFloor, shadowcrystal, $canDefeatDinalfos, $canDefeatWalltulaGlitched, $canDefeatKargorok",
-									"[glitcheson], @CityinTheSkyCentralTowerSecondFloor, shadowcrystal, $canDefeatDinalfos, $canDefeatWalltula, $canDefeatKargorokGlitched",
 									"[glitcheson], @CityinTheSkyCentralTowerSecondFloor, shadowcrystal, $canDefeatDinalfos, $canDefeatWalltulaGlitched, $canDefeatKargorokGlitched",
 									"[glitcheson], @CityinTheSkyCentralTowerSecondFloor, shadowcrystal, clawshot"
 								]
@@ -613,8 +608,6 @@
 							{
 								"access_rules": [
 									"@CityinTheSkyCentralTowerSecondFloor, clawshot, boots, $canDefeatDinalfos, $canDefeatWalltula, $canDefeatKargorok, shadowcrystal",
-									"[glitcheson], @CityinTheSkyCentralTowerSecondFloor, $canDefeatDinalfos, $canDefeatWalltulaGlitched, $canDefeatKargorok, shadowcrystal",
-									"[glitcheson], @CityinTheSkyCentralTowerSecondFloor, $canDefeatDinalfos, $canDefeatWalltula, $canDefeatKargorokGlitched, shadowcrystal",
 									"[glitcheson], @CityinTheSkyCentralTowerSecondFloor, $canDefeatDinalfos, $canDefeatWalltulaGlitched, $canDefeatKargorokGlitched, shadowcrystal",
 									"[glitcheson], @CityinTheSkyCentralTowerSecondFloor, clawshot"
 								]

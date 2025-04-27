@@ -882,7 +882,6 @@
 							{
 								"access_rules": [
 									"@LanayruFieldSkulltulaGrotto, $canDefeatSkulltula, lantern, $canBreakWoodenDoor",
-									"[glitcheson], @LanayruFieldSkulltulaGrotto, lantern, $canBreakWoodenDoor",
 									"[glitcheson], @LanayruFieldSkulltulaGrotto, lantern, $canBreakWoodenDoorGlitched"
 								]
 							}

@@ -25,7 +25,6 @@
 									"@GoronMinesEntrance, $canPressMinesSwitch, $canBreakWoodenDoor",
 									"@GoronMinesEntrance, $canPressMinesSwitch, $canBreakWoodenDoorGlitched",
 									"[glitcheson], @GoronMinesEntrance, $canDoBSMoonBoots",
-									"[glitcheson], @GoronMinesEntrance, $canBreakWoodenDoor",
 									"[glitcheson], @GoronMinesEntrance, $canBreakWoodenDoorGlitched"
 								]
 							}
@@ -392,7 +391,6 @@
 								"access_rules": [
 									"@GoronMinesUpperEastWing, boots, $canDefeatDangoro, bow",
 									"[glitcheson], @GoronMinesUpperEastWing, boots, $canDefeatDangoroGlitched, bow",
-									"[glitcheson], @GoronMinesUpperEastWing, boots, $canDefeatDangoro, $canDefeatBeamos",
 									"[glitcheson], @GoronMinesUpperEastWing, boots, $canDefeatDangoroGlitched, $canDefeatBeamos"
 								]
 							}
@@ -417,7 +415,6 @@
 								"access_rules": [
 									"@GoronMinesUpperEastWing, boots, $canDefeatDangoro, bow",
 									"[glitcheson], @GoronMinesUpperEastWing, boots, $canDefeatDangoroGlitched, bow",
-									"[glitcheson], @GoronMinesUpperEastWing, boots, $canDefeatDangoro, $canDefeatBeamos",
 									"[glitcheson], @GoronMinesUpperEastWing, boots, $canDefeatDangoroGlitched, $canDefeatBeamos"
 								]
 							}
@@ -442,7 +439,6 @@
 								"access_rules": [
 									"@GoronMinesUpperEastWing, boots, $canDefeatDangoro, bow",
 									"[glitcheson], @GoronMinesUpperEastWing, boots, $canDefeatDangoroGlitched, bow",
-									"[glitcheson], @GoronMinesUpperEastWing, boots, $canDefeatDangoro, $canDefeatBeamos",
 									"[glitcheson], @GoronMinesUpperEastWing, boots, $canDefeatDangoroGlitched, $canDefeatBeamos"
 								]
 							}
@@ -469,7 +465,6 @@
 									"@GoronMinesMagnetRoom, $canDefeatDangoro, boots, skkeysy, bow",
 									"[glitcheson], @GoronMinesMagnetRoom, $canDefeatDangoroGlitched, boots, gmsmallkey:3, bow",
 									"[glitcheson], @GoronMinesMagnetRoom, $canDefeatDangoroGlitched, boots, skkeysy, bow",
-									"[glitcheson], @GoronMinesMagnetRoom, @GoronMinesUpperEastWing, $canDefeatDangoro, $canDefeatBeamos",
 									"[glitcheson], @GoronMinesMagnetRoom, @GoronMinesUpperEastWing, $canDefeatDangoroGlitched, $canDefeatBeamos"
 								]
 							}

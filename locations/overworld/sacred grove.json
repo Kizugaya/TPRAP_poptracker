@@ -79,13 +79,9 @@
 						"access_rules": [
 							"@LostWoodsBabaSerpentGrotto, $canDefeatBabaSerpent, $canKnockDownHangingBaba",
 							"[glitcheson], @LostWoodsBabaSerpentGrotto, $canDefeatBabaSerpentGlitched, $canKnockDownHangingBaba",
-							"[glitcheson], @LostWoodsBabaSerpentGrotto, $canDefeatBabaSerpent, sword",
 							"[glitcheson], @LostWoodsBabaSerpentGrotto, $canDefeatBabaSerpentGlitched, sword",
-							"[glitcheson], @LostWoodsBabaSerpentGrotto, $canDefeatBabaSerpent, slingshot",
 							"[glitcheson], @LostWoodsBabaSerpentGrotto, $canDefeatBabaSerpentGlitched, slingshot",
-							"[glitcheson], @LostWoodsBabaSerpentGrotto, $canDefeatBabaSerpent, ballchain",
 							"[glitcheson], @LostWoodsBabaSerpentGrotto, $canDefeatBabaSerpentGlitched, ballchain",
-							"[glitcheson], @LostWoodsBabaSerpentGrotto, $canDefeatBabaSerpent, $hasBombs",
 							"[glitcheson], @LostWoodsBabaSerpentGrotto, $canDefeatBabaSerpentGlitched, $hasBombs"
 						]
 					}

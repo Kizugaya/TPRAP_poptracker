@@ -3,9 +3,9 @@
 		"name": "CityinTheSkyBossRoom",
 		"access_rules": [
 			"@CityinTheSkyNorthWing, doubleclawshot, $canDefeatAeralfos, csbigkey",
-			"@CityinTheSkyNorthWing, doubleclawshot, $canDefeatAeralfosGlitched, csbigkey",
 			"@CityinTheSkyNorthWing, doubleclawshot, $canDefeatAeralfos, bkkeysy",
-			"@CityinTheSkyNorthWing, doubleclawshot, $canDefeatAeralfosGlitched, bkkeysy"
+			"[glitcheson], @CityinTheSkyNorthWing, doubleclawshot, $canDefeatAeralfosGlitched, csbigkey",
+			"[glitcheson], @CityinTheSkyNorthWing, doubleclawshot, $canDefeatAeralfosGlitched, bkkeysy"
 		]
 	},
 	{

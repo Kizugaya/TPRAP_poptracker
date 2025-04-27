@@ -103,7 +103,7 @@
 	{
 		"name": "SnowpeakRuinsNortheastChilfosRoomSecondFloor",
 		"access_rules": [
-			"[glitcheson, ]@SnowpeakRuinsNortheastChilfosRoomFirstFloor, $canDoLJA",
+			"[glitcheson], @SnowpeakRuinsNortheastChilfosRoomFirstFloor, $canDoLJA",
 			"@SnowpeakRuinsSecondFloorMiniFreezardRoom, ballchain, clawshot, $canDefeatChilfos",
 			"[glitcheson], @SnowpeakRuinsSecondFloorMiniFreezardRoom, ballchain, clawshot, $canDefeatChilfosGlitched",
 			"[glitcheson], @SnowpeakRuinsSecondFloorMiniFreezardRoom, $canDoLJA"

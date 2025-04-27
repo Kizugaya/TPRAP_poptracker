@@ -86,7 +86,7 @@
 			"[glitcheson], @OrdonSpring",
 			"@FaronWoodsCave, shadowcrystal",
 			"@FaronWoodsCave, $canClearForest",
-			"[glitcheson]@FaronWoodsCave, $canClearForestFlitched",
+			"[glitcheson]@FaronWoodsCave, $canClearForestGlitched",
 			"@SouthFaronWoodsOwlStatueArea, $canSmash",
 			"@FaronField",
 			"@ForestTempleBossRoom, $canDefeatDiababa",
@@ -866,7 +866,6 @@
 			"[glitcheson], @BulblinCamp, bckey, $canDefeatKingBulblinDesertGlitched",
 			"@BulblinCamp, skkeysy, $canDefeatKingBulblinDesert",
 			"[glitcheson], @BulblinCamp, skkeysy, $canDefeatKingBulblinDesertGlitched",
-			"[glitcheson], @BulblinCamp, $canDoMapGlitch, sword, $canDefeatKingBulblinDesert",
 			"[glitcheson], @BulblinCamp, $canDoMapGlitch, sword, $canDefeatKingBulblinDesertGlitched",
 			"@BulblinCamp, skiparbitersentranceon",
 			"@ArbitersGroundsEntrance"
@@ -908,7 +907,6 @@
 		"access_rules": [
 			"@CaveofOrdealsFloors0111, spinner, $canDefeatKeese, $canDefeatTorchSlug",
 			"[glitcheson], @CaveofOrdealsFloors0111, spinner, $canDefeatKeeseGlitched, $canDefeatTorchSlug",
-			"[glitcheson], @CaveofOrdealsFloors0111, $canDoLJA, $canDefeatKeese, $canDefeatTorchSlug",
 			"[glitcheson], @CaveofOrdealsFloors0111, $canDoLJA, $canDefeatKeeseGlitched, $canDefeatTorchSlug"
 		]
 	},
