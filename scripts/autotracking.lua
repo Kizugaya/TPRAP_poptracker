@@ -449,7 +449,7 @@ function onNotify(_key, value, old)
 		Tracker:FindObjectForCode("@Snowpeak Mountain Golden Wolves/Kakariko Graveyard Stone/").AvailableChestCount = Tracker:FindObjectForCode("@Snowpeak Mountain Golden Wolves/Kakariko Graveyard Stone/").AvailableChestCount - (value and 1 or 0)
 	elseif key == "Hidden Village Stone" then
 		Tracker:FindObjectForCode("hvhowlingstone").Active = value
-		Tracker:FindObjectForCode("@Lanayru Region/Castle Town Golden Wolves/Hidden Village Stone/").AvailableChestCount = Tracker:FindObjectForCode("@Lanayru Region/Castle Town Golden Wolves/Hidden Village Stone/").AvailableChestCount - (value and 1 or 0)
+		Tracker:FindObjectForCode("@Castle Town Golden Wolves/Hidden Village Stone/").AvailableChestCount = Tracker:FindObjectForCode("@Castle Town Golden Wolves/Hidden Village Stone/").AvailableChestCount - (value and 1 or 0)
 		Tracker:FindObjectForCode("@Eldin Region/Hidden Village Golden Wolves/North Castle Town Stone/").AvailableChestCount = Tracker:FindObjectForCode("@Eldin Region/Hidden Village Golden Wolves/North Castle Town Stone/").AvailableChestCount - (value and 1 or 0)
 	elseif key == "Youth Scent" then
 		Tracker:FindObjectForCode("youthsscent").Active = value or (Tracker:FindObjectForCode("eldintwilightcleared").CurrentStage == 0)
