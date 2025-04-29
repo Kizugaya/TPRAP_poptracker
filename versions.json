@@ -1,6 +1,14 @@
 {
 	"versions": [
 		{
+			"package_version": "0.6.2",
+			"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.6.2/TPRAP_poptracker_v0.6.2.zip",
+			"sha256": "06416AD8D2532FBE50AB948D24AF1F6EF2851CD0830FD77CD3DEBA7F516003A2",
+			"changelog": [
+				"Fixed Hidden Village Stone"
+			]
+		},
+		{
 			"package_version": "0.6.1",
 			"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.6.1/TPRAP_poptracker_v0.6.1.zip",
 			"sha256": "DCCE7CE918C1D631A5640FBC038D941AEEE122909FC6559D6390220419176BB6",
