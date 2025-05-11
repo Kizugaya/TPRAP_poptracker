@@ -1,6 +1,14 @@
 {
 	"versions": [
 		{
+			"package_version": "0.6.4",
+			"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.6.4/TPRAP_poptracker_v0.6.4.zip",
+			"sha256": "3F9B2166979E5044AAE5D6328417C42860D83F31BEB140F10F2279CF8FEC0CEC",
+			"changelog": [
+				"Fixed East Water Supply Clawshot Chest"
+			]
+		},
+		{
 			"package_version": "0.6.3",
 			"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.6.3/TPRAP_poptracker_v0.6.3.zip",
 			"sha256": "566FF79E40CAC90776B426E562E1DB09FD6ABA01439E651EE12C9312A85ABEAB",
