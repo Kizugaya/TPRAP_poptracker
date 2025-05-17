@@ -1,6 +1,15 @@
 {
 	"versions": [
 		{
+			"package_version": "0.6.5",
+			"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.6.5/TPRAP_poptracker_v0.6.5.zip",
+			"sha256": "51E571303B540DF0155953B8C466F3297A717D83D6E0A59328FD907E9DD62DDD",
+			"changelog": [
+				"Fixed location bug in ToT",
+				"Fixed fetch quest items"
+			]
+		},
+		{
 			"package_version": "0.6.4",
 			"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.6.4/TPRAP_poptracker_v0.6.4.zip",
 			"sha256": "3F9B2166979E5044AAE5D6328417C42860D83F31BEB140F10F2279CF8FEC0CEC",
