@@ -375,8 +375,6 @@ function onItem(index, item_id, item_name, player_number)
 	if obj then
 		if v[1] == "bombbag" and obj.CurrentStage == 0 then
 			Tracker:FindObjectForCode("waterbomb").Active = true
-		elseif v[1] == "horsecall" then
-			Tracker:FindObjectForCode("@Eldin Region/Kakariko/Renado's Sanctuary/Ilia Memory Reward").AvailableChestCount = Tracker:FindObjectForCode("@Eldin Region/Kakariko/Renado's Sanctuary/Ilia Memory Reward").AvailableChestCount - 1
 		end
 		if v[2] == "toggle" then
 			obj.Active = true
@@ -483,13 +481,21 @@ function onNotify(_key, value, old)
 		elseif key == "Poe Scent" then
 			Tracker:FindObjectForCode("poescent").Active = value
 		elseif key == "Renados letter" then
-			Tracker:FindObjectForCode("renadosletter").Active = value
+			if value == true then
+				Tracker:FindObjectForCode("renadosletter").CurrentStage = Tracker:FindObjectForCode("renadosletter").CurrentStage + 1
+			end
 		elseif key == "Telmas Invoice" then
-			Tracker:FindObjectForCode("invoice").Active = value
+			if value == true then
+				Tracker:FindObjectForCode("invoice").CurrentStage = Tracker:FindObjectForCode("invoice").CurrentStage + 1
+			end
 		elseif key == "Wooden Statue" then
-			Tracker:FindObjectForCode("woodenstatue").Active = value
+			if value == true then
+				Tracker:FindObjectForCode("woodenstatue").CurrentStage = Tracker:FindObjectForCode("woodenstatue").CurrentStage + 1
+			end
 		elseif key == "Ilias Charm" then
-			Tracker:FindObjectForCode("iliascharm").Active = value
+			if value == true then
+				Tracker:FindObjectForCode("iliascharm").CurrentStage = Tracker:FindObjectForCode("iliascharm").CurrentStage + 1
+			end
 		elseif key == "Memory Reward" then
 			Tracker:FindObjectForCode("@Eldin Region/Kakariko/Renado's Sanctuary/Ilia Memory Reward").AvailableChestCount = Tracker:FindObjectForCode("@Eldin Region/Kakariko/Renado's Sanctuary/Ilia Memory Reward").AvailableChestCount - (value and 1 or 0)
 		elseif key == "Zant Defeated" then

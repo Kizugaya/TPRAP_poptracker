@@ -11,7 +11,7 @@
 				"margin": "1,1,1,1",
 				"item_h_alignment": "center",
 				"item_v_alignment": "center",
-				"rows":[
+				"rows": [
 					[
 						"bug0",
 						"bug1",
@@ -68,7 +68,7 @@
 				"margin": "1,1,1,1",
 				"item_h_alignment": "center",
 				"item_v_alignment": "center",
-				"rows":[
+				"rows": [
 					[
 						"bug0",
 						"bug1",

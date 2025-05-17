@@ -91,7 +91,7 @@
 				"margin": "5,5,1,1",
 				"item_h_alignment": "center",
 				"item_v_alignment": "center",
-				"rows":[
+				"rows": [
 					[
 						"ftsmallkey",
 						"gmsmallkey",
@@ -212,7 +212,7 @@
 				"margin": "5,5,1,1",
 				"item_h_alignment": "center",
 				"item_v_alignment": "center",
-				"rows":[
+				"rows": [
 					[
 						"ftsmallkey",
 						"gmsmallkey",

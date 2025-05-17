@@ -552,6 +552,7 @@
 							},
 							{
 								"name": "Ilia Memory Reward",
+								"hosted_item": "horsecall",
 								"access_rules": [
 									"iliascharm"
 								]

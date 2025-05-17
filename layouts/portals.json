@@ -11,7 +11,7 @@
 				"margin": "1,1,1,1",
 				"item_h_alignment": "center",
 				"item_v_alignment": "center",
-				"rows":[
+				"rows": [
 					[
 						"osportal",
 						"sfwportal",
@@ -49,7 +49,7 @@
 				"margin": "1,1,1,1",
 				"item_h_alignment": "center",
 				"item_v_alignment": "center",
-				"rows":[
+				"rows": [
 					[
 						"osportal",
 						"sfwportal",

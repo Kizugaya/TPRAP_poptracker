@@ -33,7 +33,7 @@
 	{
 		"name": "TempleofTimeCrumblingCorridor",
 		"access_rules": [
-			"@TempleofTimeEntrance, dominionrod, bow, spinner, $canDefeatLizalfos, $canDefeatDinalfos, $canDefeatDarknut, ttsmallkey:3",
+			"@TempleofTimeEntrance, dominionrod, bow, spinner, $canDefeatLizalfos, $canDefeatDinalfos, $canDefeatDarknut, ttsmallkey:3","@TempleofTimeEntrance, ttopen",
 			"[glitcheson], @TempleofTimeEntrance, dominionrod"
 		]
 	},

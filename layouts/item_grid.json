@@ -11,7 +11,7 @@
 				"margin": "1,1,1,1",
 				"item_h_alignment": "center",
 				"item_v_alignment": "center",
-				"rows":[
+				"rows": [
 					[
 						"fishingrod",
 						"slingshot",
@@ -78,7 +78,7 @@
 				"margin": "1,1,1,1",
 				"item_h_alignment": "center",
 				"item_v_alignment": "center",
-				"rows":[
+				"rows": [
 					[
 						"fishingrod",
 						"slingshot",
