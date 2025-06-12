@@ -514,18 +514,24 @@ function onNotify(_key, value, old)
 			Tracker:FindObjectForCode("srcompleted").Active = value
 		elseif key == "Armogohma Defeated" then
 			Tracker:FindObjectForCode("ttcompleted").Active = value
-		elseif key == "Current Region" and Tracker:FindObjectForCode("autotab").CurrentStage == 0 then
-			Tracker:UiHint("ActivateTab", REGION[value])
+		elseif key == "Current Region" and Tracker:FindObjectForCode("autotab").CurrentStage <= 1 then
+			if REGION[value] ~= "Main Map" then
+				Tracker:UiHint("ActivateTab", REGION[value])
+			end
+			if REGION[value] == "Faron Woods" then
+				Tracker:UiHint("ActivateTab", "Faron")
+				Tracker:UiHint("ActivateTab", "Overworld")
+			end
 			if REGION[value] == "Ordon" or
 			REGION[value] == "Sacred Grove" or
 			REGION[value] == "Snowpeak Mountain" or
 			REGION[value] == "Castle Town" or
-			REGION[value] == "Gerudo Desert" or
-			REGION[value] == "Main Map" then
-				if REGION[value] == "Faron Woods" then
-					Tracker:UiHint("ActivateTab", "Faron")
-				end
+			REGION[value] == "Gerudo Desert" then
 				Tracker:UiHint("ActivateTab", "Overworld")
+			end
+			if REGION[value] == "Main Map" and Tracker:FindObjectForCode("autotab").CurrentStage == 1 then
+				Tracker:UiHint("ActivateTab", "Overworld")
+				Tracker:UiHint("ActivateTab", "Main Map")
 			end
 		end
 	end

@@ -1730,9 +1730,15 @@
 		"loop": true,
 		"stages": [
 			{
-				"name": "Autotab On",
-				"codes": "autotabon",
-				"img": "images/Items/AutoTabOn.png",
+				"name": "Autotab Half",
+				"codes": "autotabhalf",
+				"img": "images/Items/AutoTabHalf.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Autotab Full",
+				"codes": "autotabfull",
+				"img": "images/Items/AutoTabFull.png",
 				"inherit_codes": false
 			},
 			{
