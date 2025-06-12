@@ -1,6 +1,14 @@
 {
 	"versions": [
 		{
+			"package_version": "0.6.6",
+			"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.6.6/TPRAP_poptracker_v0.6.6.zip",
+			"sha256": "71F8B14D295D0FDA2F8A7A75983D00C8934334C9E5C213B1B0CF51838C6CA436",
+			"changelog": [
+				"Added Limited AutoTab"
+			]
+		},
+		{
 			"package_version": "0.6.5",
 			"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.6.5/TPRAP_poptracker_v0.6.5.zip",
 			"sha256": "51E571303B540DF0155953B8C466F3297A717D83D6E0A59328FD907E9DD62DDD",
