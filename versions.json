@@ -1,6 +1,15 @@
 {
 	"versions": [
 		{
+			"package_version": "0.7.0",
+			"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.7.0/TPRAP_poptracker_v0.7.0.zip",
+			"sha256": "4F54BA97B35F6307139E592CBB5A41C599C0AC57785BE222C5859B4A4A7D68EE",
+			"changelog": [
+				"Added Hint Signs",
+				"Fixed Howling Stones"
+			]
+		},
+		{
 			"package_version": "0.6.6",
 			"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.6.6/TPRAP_poptracker_v0.6.6.zip",
 			"sha256": "71F8B14D295D0FDA2F8A7A75983D00C8934334C9E5C213B1B0CF51838C6CA436",
