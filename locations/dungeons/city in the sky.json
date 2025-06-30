@@ -686,6 +686,38 @@
 						]
 					}
 				]
+			},
+			{
+				"name": "Hint Signs",
+				"children": [
+					{
+						"name": "Hint Sign",
+						"map_locations": [
+							{
+								"map": "cs1f",
+								"x": 1007,
+								"y": 609,
+								"shape": "diamond"
+							},
+							{
+								"map": "csfull",
+								"x": 336,
+								"y": 738,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"{@CityinTheSkyEntrance}"
+								],
+								"visibility_rules": [
+									"hintson"
+								]
+							}
+						]
+					}
+				]
 			}
 		]
 	}

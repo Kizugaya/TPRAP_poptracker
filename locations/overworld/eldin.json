@@ -80,6 +80,32 @@
 				]
 			},
 			{
+				"name": "Death Mountain Hint Signs",
+				"children": [
+					{
+						"name": "Hint Sign",
+						"map_locations": [
+							{
+								"map": "dm",
+								"x": 368,
+								"y": 363,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"{@DeathMountainVolcano}"
+								],
+								"visibility_rules": [
+									"hintson"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
 				"name": "Eldin Field",
 				"children": [
 					{
@@ -258,6 +284,32 @@
 				]
 			},
 			{
+				"name": "Eldin Field Hint Signs",
+				"children": [
+					{
+						"name": "Hint Sign",
+						"map_locations": [
+							{
+								"map": "ef",
+								"x": 331,
+								"y": 1289,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"{@EldinField}"
+								],
+								"visibility_rules": [
+									"hintson"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
 				"name": "Hidden Village",
 				"children": [
 					{
@@ -367,6 +419,32 @@
 								"hosted_item": "hvhowlingstone",
 								"access_rules": [
 									"{@HiddenVillage, shadowcrystal}"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Hidden Village Hint Signs",
+				"children": [
+					{
+						"name": "Hint Sign",
+						"map_locations": [
+							{
+								"map": "hv",
+								"x": 200,
+								"y": 275,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"{@HiddenVillage}"
+								],
+								"visibility_rules": [
+									"hintson"
 								]
 							}
 						]
@@ -579,7 +657,8 @@
 					{
 						"name": "Graveyard Spring",
 						"access_rules": [
-							"@KakarikoGraveyard"
+							"@KakarikoGraveyard, gatekeys",
+							"@KakarikoGraveyard, skkeysy"
 						],
 						"map_locations": [
 							{
@@ -592,15 +671,13 @@
 							{
 								"name": "Rutela's Blessing",
 								"access_rules": [
-									"gatekeys",
-									"skkeysy"
+									""
 								]
 							},
 							{
 								"name": "Gift From Ralis",
 								"access_rules": [
-									"gatekeys, asheissketch",
-									"skkeysy, asheissketch"
+									"asheissketch"
 								]
 							}
 						]
@@ -769,13 +846,54 @@
 						],
 						"sections": [
 							{
-								"chest_unopened_img": "images/Items/HowlingStoneGrayed.png",
-								"chest_opened_img": "images/Items/HowlingStone.png",
+								"ref": "Snowpeak Mountain Golden Wolves/Kakariko Graveyard Stone/"
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Kakariko Hint Signs",
+				"children": [
+					{
+						"name": "Hot Spring Hint Sign",
+						"map_locations": [
+							{
+								"map": "kakariko",
+								"x": 111,
+								"y": 288,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
 								"access_rules": [
-									"{@SnowpeakClimbUpper, shadowcrystal}",
-									"{[glitcheson], @SnowpeakClimbUpper, shadowcrystal, skipsnowpeakentrance}",
-									"{[glitcheson], @SnowpeakClimbUpper, shadowcrystal, reekfishscent}",
-									"{[glitcheson], @SnowpeakClimbUpper, shadowcrystal, $canDoMapGlitch}"
+									"{@LowerKakarikoVillage}"
+								],
+								"visibility_rules": [
+									"hintson"
+								]
+							}
+						]
+					},
+					{
+						"name": "Graveyard Spring Hint Sign",
+						"map_locations": [
+							{
+								"map": "kakariko",
+								"x": 935,
+								"y": 515,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"{@KakarikoGraveyard, gatekeys}",
+									"{@KakarikoGraveyard, skkeysy}"
+								],
+								"visibility_rules": [
+									"hintson"
 								]
 							}
 						]
@@ -976,6 +1094,32 @@
 				]
 			},
 			{
+				"name": "Kakariko Gorge Hint Signs",
+				"children": [
+					{
+						"name": "Hint Sign",
+						"map_locations": [
+							{
+								"map": "kg",
+								"x": 595,
+								"y": 52,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"{@KakarikoGorge}"
+								],
+								"visibility_rules": [
+									"hintson"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
 				"name": "North Eldin",
 				"children": [
 					{
@@ -1088,6 +1232,32 @@
 								"access_rules": [
 									"@EldinField, boomerang",
 									"@EldinField, clawshot"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "North Eldin Hint Signs",
+				"children": [
+					{
+						"name": "Hint Sign",
+						"map_locations": [
+							{
+								"map": "ne",
+								"x": 399,
+								"y": 497,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"{@NorthEldinField}"
+								],
+								"visibility_rules": [
+									"hintson"
 								]
 							}
 						]

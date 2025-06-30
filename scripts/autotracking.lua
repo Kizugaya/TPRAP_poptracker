@@ -282,6 +282,9 @@ function setSettings()
 		elseif SLOT_DATA.Settings["Big Key Settings"] == "Start With" then
 			Tracker:FindObjectForCode("bigkeys").CurrentStage = 4
 		end
+		
+		--Disable Hint Signs for current versions
+		Tracker:FindObjectForCode("hints").CurrentStage = 1
 	end
 end
 function initPortals()

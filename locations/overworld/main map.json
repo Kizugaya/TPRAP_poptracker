@@ -151,6 +151,10 @@
 					{
 						"ref": "Castle Town Golden Wolves/Golden Wolf/",
 						"name": "Golden Wolf"
+					},
+					{
+						"ref": "Castle Town Hint Signs/Hint Sign/",
+						"name": "Hint Sign"
 					}
 				]
 			},
@@ -178,6 +182,10 @@
 							{
 								"ref": "Eldin Region/Death Mountain Golden Wolves/Ordon Spring Stone/",
 								"name": "Ordon Spring Stone"
+							},
+							{
+								"ref": "Eldin Region/Death Mountain Hint Signs/Hint Sign/",
+								"name": "Hint Sign"
 							}
 						]
 					},
@@ -226,6 +234,14 @@
 							{
 								"ref": "Eldin Region/Eldin Field Bugs/Male Phasmid/",
 								"name": "Male Phasmid"
+							},
+							{
+								"ref": "Eldin Region/Eldin Field Hint Signs/Hint Sign/",
+								"name": "Hint Sign"
+							},
+							{
+								"ref": "Eldin Region/North Eldin Hint Signs/Hint Sign/",
+								"name": "Hint Sign"
 							}
 						]
 					},
@@ -258,6 +274,10 @@
 							{
 								"ref": "Eldin Region/Hidden Village Golden Wolves/North Castle Town Stone/",
 								"name": "North Castle Town Stone"
+							},
+							{
+								"ref": "Eldin Region/Hidden Village Hint Signs/Hint Sign/",
+								"name": "Hint Sign"
 							}
 						]
 					},
@@ -362,6 +382,14 @@
 							{
 								"ref": "Eldin Region/Kakariko Golden Wolves/Golden Wolf/",
 								"name": "Golden Wolf"
+							},
+							{
+								"ref": "Eldin Region/Kakariko Hint Signs/Hot Spring Hint Sign/",
+								"name": "Hot Spring Hint Sign"
+							},
+							{
+								"ref": "Eldin Region/Kakariko Hint Signs/Graveyard Spring Hint Sign/",
+								"name": "Graveyard Spring Hint Sign"
 							}
 						]
 					},
@@ -418,6 +446,10 @@
 							{
 								"ref": "Eldin Region/Kakariko Gorge Bugs/Female Pill Bug/",
 								"name": "Female Pill Bug"
+							},
+							{
+								"ref": "Eldin Region/Kakariko Gorge Hint Signs/Hint Sign/",
+								"name": "Hint Sign"
 							}
 						]
 					},
@@ -511,6 +543,10 @@
 							{
 								"ref": "Faron Region/Faron Field Bugs/Female Beetle/",
 								"name": "Female Beetle"
+							},
+							{
+								"ref": "Faron Region/Faron Field Hint Signs/Hint Sign/",
+								"name": "Hint Sign"
 							}
 						]
 					},
@@ -575,6 +611,10 @@
 							{
 								"ref": "Faron Region/Faron Woods Golden Wolves/South Castle Town Stone/",
 								"name": "South Castle Town Stone"
+							},
+							{
+								"ref": "Faron Region/Faron Woods Hint Signs/Hint Sign/",
+								"name": "Hint Sign"
 							}
 						]
 					}
@@ -729,6 +769,18 @@
 					{
 						"ref": "Gerudo Desert Golden Wolves/Golden Wolf/",
 						"name": "Golden Wolf"
+					},
+					{
+						"ref": "Gerudo Desert Hint Signs/Desert Hint Sign/",
+						"name": "Desert Hint Sign"
+					},
+					{
+						"ref": "Gerudo Desert Hint Signs/Camp Hint Sign/",
+						"name": "Camp Hint Sign"
+					},
+					{
+						"ref": "Gerudo Desert Hint Signs/CoO Hint Sign/",
+						"name": "CoO Hint Sign"
 					}
 				]
 			},
@@ -772,6 +824,10 @@
 							{
 								"ref": "Lanayru Region/Beside Castle Town Golden Wolves/Golden Wolf/",
 								"name": "Golden Wolf"
+							},
+							{
+								"ref": "Lanayru Region/Beside Castle Town Hint Signs/Hint Sign/",
+								"name": "Hint Sign"
 							}
 						]
 					},
@@ -988,6 +1044,18 @@
 							{
 								"ref": "Lanayru Region/Lake Hylia Golden Wolves/Gerudo Desert Stone/",
 								"name": "Gerudo Desert Stone"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia Hint Signs/Bridge Hint Sign/",
+								"name": "Bridge Hint Sign"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia Hint Signs/Lake Hint Sign/",
+								"name": "Lake Hint Sign"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia Hint Signs/Spring Hint Sign/",
+								"name": "Spring Hint Sign"
 							}
 						]
 					},
@@ -1036,6 +1104,10 @@
 							{
 								"ref": "Lanayru Region/Lanayru Field Bugs/Male Stag Beetle/",
 								"name": "Male Stag Beetle"
+							},
+							{
+								"ref": "Lanayru Region/Lanayru Field Hint Signs/Hint Sign/",
+								"name": "Hint Sign"
 							}
 						]
 					},
@@ -1084,6 +1156,10 @@
 							{
 								"ref": "Lanayru Region/South Castle Town Golden Wolves/Golden Wolf/",
 								"name": "Golden Wolf"
+							},
+							{
+								"ref": "Lanayru Region/South Castle Town Hint Signs/Hint Sign/",
+								"name": "Hint Sign"
 							}
 						]
 					},
@@ -1114,8 +1190,8 @@
 								"name": "Fishing Hole Heart Piece"
 							},
 							{
-								"ref": "Lanayru Region/Upper Zora's River Poes/Upper Zoras River Poe/",
-								"name": "Upper Zoras River Poe"
+								"ref": "Lanayru Region/Upper Zora's River Poes/Upper Zora's River Poe/",
+								"name": "Upper Zora's River Poe"
 							},
 							{
 								"ref": "Lanayru Region/Upper Zora's River Bugs/Female Dragonfly/",
@@ -1124,6 +1200,10 @@
 							{
 								"ref": "Lanayru Region/Upper Zora's River Golden Wolves/West Castle Town Stone/",
 								"name": "West Castle Town Stone"
+							},
+							{
+								"ref": "Lanayru Region/Upper Zora's River Hint Signs/Hint Sign/",
+								"name": "Hint Sign"
 							}
 						]
 					},
@@ -1168,6 +1248,10 @@
 							{
 								"ref": "Lanayru Region/Zora's Domain Bugs/Male Dragonfly/",
 								"name": "Male Dragonfly"
+							},
+							{
+								"ref": "Lanayru Region/Zora's Domain Hint Signs/Hint Sign/",
+								"name": "Hint Sign"
 							}
 						]
 					}
@@ -1226,6 +1310,10 @@
 					{
 						"ref": "Ordon Golden Wolves/Golden Wolf/",
 						"name": "Golden Wolf"
+					},
+					{
+						"ref": "Ordon Hint Signs/Hint Sign/",
+						"name": "Hint Sign"
 					}
 				]
 			},
@@ -1286,6 +1374,10 @@
 					{
 						"ref": "Sacred Grove Bugs/Bugs/Past - Female Snail",
 						"name": "Bugs Past - Female Snail"
+					},
+					{
+						"ref": "Sacred Grove Hint Signs/Hint Sign/",
+						"name": "Hint Sign"
 					}
 				]
 			},
@@ -1338,6 +1430,10 @@
 					{
 						"ref": "Snowpeak Mountain Golden Wolves/Kakariko Graveyard Stone/",
 						"name": "Kakariko Graveyard Stone"
+					},
+					{
+						"ref": "Snowpeak Mountain Hint Signs/Hint Sign/",
+						"name": "Hint Sign"
 					}
 				]
 			},
@@ -1454,6 +1550,10 @@
 							{
 								"ref": "Arbiter's Grounds/1F/West Stalfos West Chest/",
 								"name": "West Stalfos West Chest"
+							},
+							{
+								"ref": "Arbiter's Grounds/Hint Signs/Hint Sign/",
+								"name": "Hint Sign"
 							}
 						]
 					},
@@ -1579,6 +1679,10 @@
 							{
 								"ref": "City in the Sky/1F/West Wing Tile Worm Chest/",
 								"name": "West Wing Tile Worm Chest"
+							},
+							{
+								"ref": "City in the Sky/Hint Signs/Hint Sign",
+								"name": "Hint Sign"
 							}
 						]
 					},
@@ -1664,6 +1768,10 @@
 							{
 								"ref": "Forest Temple/1F/Windless Bridge Chest/",
 								"name": "Windless Bridge Chest"
+							},
+							{
+								"ref": "Forest Temple/Hint Signs/Hint Sign/",
+								"name": "Hint Sign"
 							}
 						]
 					},
@@ -1765,6 +1873,10 @@
 							{
 								"ref": "Goron Mines/2F/Outside Underwater Chest/",
 								"name": "Outside Underwater Chest"
+							},
+							{
+								"ref": "Goron Mines/Hint Signs/Hint Sign/",
+								"name": "Hint Sign"
 							}
 						]
 					},
@@ -1890,6 +2002,10 @@
 							{
 								"ref": "Hyrule Castle/1F/West Courtyard North Small Chest/",
 								"name": "West Courtyard North Small Chest"
+							},
+							{
+								"ref": "Hyrule Castle/Hint Signs/Hint Sign/",
+								"name": "Hint Sign"
 							}
 						]
 					},
@@ -2015,6 +2131,10 @@
 							{
 								"ref": "Lakebed Temple/4F/West Water Supply Small Chest/",
 								"name": "West Water Supply Small Chest"
+							},
+							{
+								"ref": "Lakebed Temple/Hint Signs/Hint Sign/",
+								"name": "Hint Sign"
 							}
 						]
 					},
@@ -2104,6 +2224,10 @@
 							{
 								"ref": "Palace of Twilight/4F/Zant Boss/Zant Heart Container",
 								"name": "Zant Boss Zant Heart Container"
+							},
+							{
+								"ref": "Palace of Twilight/Hint Signs/Hint Sign/",
+								"name": "Hint Sign"
 							}
 						]
 					},
@@ -2213,6 +2337,10 @@
 							{
 								"ref": "Snowpeak Ruins/1F/Wooden Beam Northwest Chest/",
 								"name": "Wooden Beam Northwest Chest"
+							},
+							{
+								"ref": "Snowpeak Ruins/Hint Signs/Hint Sign/",
+								"name": "Hint Sign"
 							}
 						]
 					},
@@ -2306,6 +2434,14 @@
 							{
 								"ref": "Temple of Time/7F/Scales Upper Chest/",
 								"name": "Scales Upper Chest"
+							},
+							{
+								"ref": "Temple of Time/Hint Signs/Entrance Hint Sign/",
+								"name": "Entrance Hint Sign"
+							},
+							{
+								"ref": "Temple of Time/Hint Signs/Walls Hint Sign/",
+								"name": "Walls Hint Sign"
 							}
 						]
 					}

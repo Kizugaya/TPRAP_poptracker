@@ -381,8 +381,8 @@
 				"map_locations": [
 					{
 						"map": "gd",
-						"x": 348,
-						"y": 1716,
+						"x": 353,
+						"y": 1705,
 						"shape": "diamond"
 					}
 				],
@@ -590,10 +590,74 @@
 				],
 				"sections": [
 					{
-						"chest_unopened_img": "images/Items/HowlingStoneGrayed.png",
-						"chest_opened_img": "images/Items/HowlingStone.png",
+						"ref": "Lanayru Region/Lake Hylia Golden Wolves/Gerudo Desert Stone/"
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Gerudo Desert Hint Signs",
+		"children": [
+			{
+				"name": "Desert Hint Sign",
+				"map_locations": [
+					{
+						"map": "gd",
+						"x": 753,
+						"y": 1325,
+						"shape": "diamond"
+					}
+				],
+				"sections": [
+					{
 						"access_rules": [
-							"{@LakeHylia, shadowcrystal}"
+							"{@GerudoDesert}"
+						],
+						"visibility_rules": [
+							"hintson"
+						]
+					}
+				]
+			},
+			{
+				"name": "Camp Hint Sign",
+				"map_locations": [
+					{
+						"map": "gd",
+						"x": 339,
+						"y": 479,
+						"shape": "diamond"
+					}
+				],
+				"sections": [
+					{
+						"access_rules": [
+							"{@BulblinCamp}"
+						],
+						"visibility_rules": [
+							"hintson"
+						]
+					}
+				]
+			},
+			{
+				"name": "CoO Hint Sign",
+				"map_locations": [
+					{
+						"map": "gd",
+						"x": 305,
+						"y": 1750,
+						"shape": "diamond"
+					}
+				],
+				"sections": [
+					{
+						"access_rules": [
+							"{@CaveofOrdealsFloors0111}"
+						],
+						"visibility_rules": [
+							"hintson"
 						]
 					}
 				]

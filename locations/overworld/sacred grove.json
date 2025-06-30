@@ -226,5 +226,31 @@
 				]
 			}
 		]
+	},
+	{
+		"name": "Sacred Grove Hint Signs",
+		"children": [
+			{
+				"name": "Hint Sign",
+				"map_locations": [
+					{
+						"map": "sg",
+						"x": 876,
+						"y": 506,
+						"shape": "diamond"
+					}
+				],
+				"sections": [
+					{
+						"access_rules": [
+							"{@SacredGroveUpper}"
+						],
+						"visibility_rules": [
+							"hintson"
+						]
+					}
+				]
+			}
+		]
 	}
 ]

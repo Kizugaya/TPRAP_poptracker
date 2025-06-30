@@ -567,6 +567,38 @@
 						]
 					}
 				]
+			},
+			{
+				"name": "Hint Signs",
+				"children": [
+					{
+						"name": "Hint Sign",
+						"map_locations": [
+							{
+								"map": "sr1f",
+								"x": 654,
+								"y": 954,
+								"shape": "diamond"
+							},
+							{
+								"map": "srfull",
+								"x": 309,
+								"y": 451,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"{@SnowpeakRuinsYetoandYeta}"
+								],
+								"visibility_rules": [
+									"hintson"
+								]
+							}
+						]
+					}
+				]
 			}
 		]
 	}

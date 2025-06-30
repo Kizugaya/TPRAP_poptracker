@@ -168,10 +168,32 @@
 						],
 						"sections": [
 							{
-								"chest_unopened_img": "images/Items/HowlingStoneGrayed.png",
-								"chest_opened_img": "images/Items/HowlingStone.png",
+								"ref": "Lanayru Region/Upper Zora's River Golden Wolves/West Castle Town Stone/"
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Beside Castle Town Hint Signs",
+				"children": [
+					{
+						"name": "Hint Sign",
+						"map_locations": [
+							{
+								"map": "bct",
+								"x": 547,
+								"y": 657,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
 								"access_rules": [
-									"{@UpperZorasRiver, shadowcrystal}"
+									"{@OutsideCastleTownWest}"
+								],
+								"visibility_rules": [
+									"hintson"
 								]
 							}
 						]
@@ -831,6 +853,97 @@
 				]
 			},
 			{
+				"name": "Lake Hylia Hint Signs",
+				"children": [
+					{
+						"name": "Bridge Hint Sign",
+						"map_locations": [
+							{
+								"map": "lh",
+								"x": 1174,
+								"y": 142,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"{@LakeHyliaBridge, clawshot}"
+								],
+								"visibility_rules": [
+									"hintson"
+								]
+							}
+						]
+					},
+					{
+						"name": "Lake Hint Sign",
+						"map_locations": [
+							{
+								"map": "lh",
+								"x": 714,
+								"y": 569,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"{@LakeHyliaBridge}"
+								],
+								"visibility_rules": [
+									"hintson"
+								]
+							}
+						]
+					},
+					{
+						"name": "Cave Hint Sign",
+						"map_locations": [
+							{
+								"map": "lh",
+								"x": 932,
+								"y": 1520,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"{@LakeHyliaLongCave}"
+								],
+								"visibility_rules": [
+									"hintson"
+								]
+							}
+						]
+					},
+					{
+						"name": "Spring Hint Sign",
+						"map_locations": [
+							{
+								"map": "lh",
+								"x": 1300,
+								"y": 1239,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"{@LakeHyliaLanayruSpring, boots}",
+									"{@LakeHyliaLanayruSpring, zoraarmor}",
+									"{glitcheson, @LakeHyliaLanayruSpring, $hasHeavyMod}"
+								],
+								"visibility_rules": [
+									"hintson"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
 				"name": "Lanayru Field",
 				"children": [
 					{
@@ -1007,6 +1120,32 @@
 								"access_rules": [
 									"boomerang",
 									"clawshot"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Lanayru Field Hint Signs",
+				"children": [
+					{
+						"name": "Hint Sign",
+						"map_locations": [
+							{
+								"map": "lf",
+								"x": 1336,
+								"y": 164,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"{@LanayruField}"
+								],
+								"visibility_rules": [
+									"hintson"
 								]
 							}
 						]
@@ -1228,10 +1367,32 @@
 						],
 						"sections": [
 							{
-								"chest_unopened_img": "images/Items/HowlingStoneGrayed.png",
-								"chest_opened_img": "images/Items/HowlingStone.png",
+								"ref": "Faron Region/Faron Woods Golden Wolves/South Castle Town Stone/"
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "South Castle Town Hint Signs",
+				"children": [
+					{
+						"name": "Hint Sign",
+						"map_locations": [
+							{
+								"map": "sct",
+								"x": 405,
+								"y": 215,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
 								"access_rules": [
-									"{@NorthFaronWoods, shadowcrystal}"
+									"{@OutsideCastleTownSouth}"
+								],
+								"visibility_rules": [
+									"hintson"
 								]
 							}
 						]
@@ -1313,7 +1474,7 @@
 				],
 				"children": [
 					{
-						"name": "Upper Zoras River Poe",
+						"name": "Upper Zora's River Poe",
 						"map_locations": [
 							{
 								"map": "uzr",
@@ -1377,6 +1538,32 @@
 								"hosted_item": "uzrhowlingstone",
 								"access_rules": [
 									"{@UpperZorasRiver, shadowcrystal}"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Upper Zora's River Hint Signs",
+				"children": [
+					{
+						"name": "Hint Sign",
+						"map_locations": [
+							{
+								"map": "uzr",
+								"x": 290,
+								"y": 558,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"{@FishingHole}"
+								],
+								"visibility_rules": [
+									"hintson"
 								]
 							}
 						]
@@ -1548,6 +1735,32 @@
 							{
 								"access_rules": [
 									"@ZorasDomain"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Zora's Domain Hint Signs",
+				"children": [
+					{
+						"name": "Hint Sign",
+						"map_locations": [
+							{
+								"map": "zd",
+								"x": 189,
+								"y": 737,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"{@ZorasDomain}"
+								],
+								"visibility_rules": [
+									"hintson"
 								]
 							}
 						]

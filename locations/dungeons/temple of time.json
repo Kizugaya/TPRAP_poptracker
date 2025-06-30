@@ -492,6 +492,65 @@
 						]
 					}
 				]
+			},
+			{
+				"name": "Hint Signs",
+				"children": [
+					{
+						"name": "Entrance Hint Sign",
+						"map_locations": [
+							{
+								"map": "tt1f",
+								"x": 621,
+								"y": 1273,
+								"shape": "diamond"
+							},
+							{
+								"map": "ttfull",
+								"x": 267,
+								"y": 551,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"{@TempleofTimeEntrance}"
+								],
+								"visibility_rules": [
+									"hintson"
+								]
+							}
+						]
+					},
+					{
+						"name": "Walls Hint Sign",
+						"map_locations": [
+							{
+								"map": "tt5f",
+								"x": 444,
+								"y": 804,
+								"shape": "diamond"
+							},
+							{
+								"map": "ttfull",
+								"x": 192,
+								"y": 1043,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"{@TempleofTimeMovingWallHallways}"
+								],
+								"visibility_rules": [
+									"hintson"
+								]
+							}
+						]
+					}
+				]
 			}
 		]
 	}

@@ -454,6 +454,38 @@
 						]
 					}
 				]
+			},
+			{
+				"name": "Hint Signs",
+				"children": [
+					{
+						"name": "Hint Sign",
+						"map_locations": [
+							{
+								"map": "hc1f",
+								"x": 835,
+								"y": 1288,
+								"shape": "diamond"
+							},
+							{
+								"map": "hcfull",
+								"x": 354,
+								"y": 472,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"{@HyruleCastleEntrance}"
+								],
+								"visibility_rules": [
+									"hintson"
+								]
+							}
+						]
+					}
+				]
 			}
 		]
 	}

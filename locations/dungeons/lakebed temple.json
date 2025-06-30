@@ -689,6 +689,38 @@
 						]
 					}
 				]
+			},
+			{
+				"name": "Hint Signs",
+				"children": [
+					{
+						"name": "Hint Sign",
+						"map_locations": [
+							{
+								"map": "lt1f",
+								"x": 853,
+								"y": 380,
+								"shape": "diamond"
+							},
+							{
+								"map": "ltfull",
+								"x": 427,
+								"y": 808,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"{@LakebedTempleCentralRoom}"
+								],
+								"visibility_rules": [
+									"hintson"
+								]
+							}
+						]
+					}
+				]
 			}
 		]
 	}

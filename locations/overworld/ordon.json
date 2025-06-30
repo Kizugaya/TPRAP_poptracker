@@ -196,10 +196,32 @@
 				],
 				"sections": [
 					{
-						"chest_unopened_img": "images/Items/HowlingStoneGrayed.png",
-						"chest_opened_img": "images/Items/HowlingStone.png",
+						"ref": "Eldin Region/Death Mountain Golden Wolves/Ordon Spring Stone/"
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Ordon Hint Signs",
+		"children": [
+			{
+				"name": "Hint Sign",
+				"map_locations": [
+					{
+						"map": "ordon",
+						"x": 450,
+						"y": 580,
+						"shape": "diamond"
+					}
+				],
+				"sections": [
+					{
 						"access_rules": [
-							"{@DeathMountainTrail, shadowcrystal}"
+							"{@OutsideLinksHouse}"
+						],
+						"visibility_rules": [
+							"hintson"
 						]
 					}
 				]

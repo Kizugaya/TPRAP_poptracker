@@ -158,6 +158,32 @@
 				]
 			},
 			{
+				"name": "Faron Field Hint Signs",
+				"children": [
+					{
+						"name": "Hint Sign",
+						"map_locations": [
+							{
+								"map": "ff",
+								"x": 642,
+								"y": 867,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"{@FaronField}"
+								],
+								"visibility_rules": [
+									"hintson"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
 				"name": "Faron Woods",
 				"children": [
 					{
@@ -397,6 +423,32 @@
 								"hosted_item": "nfwhowlingstone",
 								"access_rules": [
 									"{@NorthFaronWoods, shadowcrystal}"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Faron Woods Hint Signs",
+				"children": [
+					{
+						"name": "Hint Sign",
+						"map_locations": [
+							{
+								"map": "fw",
+								"x": 1020,
+								"y": 627,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"{@SouthFaronWoods}"
+								],
+								"visibility_rules": [
+									"hintson"
 								]
 							}
 						]

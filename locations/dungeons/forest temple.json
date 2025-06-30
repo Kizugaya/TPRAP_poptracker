@@ -422,6 +422,38 @@
 						]
 					}
 				]
+			},
+			{
+				"name": "Hint Signs",
+				"children": [
+					{
+						"name": "Hint Sign",
+						"map_locations": [
+							{
+								"map": "ft1f",
+								"x": 873,
+								"y": 1360,
+								"shape": "diamond"
+							},
+							{
+								"map": "ftfull",
+								"x": 873,
+								"y": 1360,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"{@ForestTempleLobby}"
+								],
+								"visibility_rules": [
+									"hintson"
+								]
+							}
+						]
+					}
+				]
 			}
 		]
 	}

@@ -621,6 +621,38 @@
 						]
 					}
 				]
+			},
+			{
+				"name": "Hint Signs",
+				"children": [
+					{
+						"name": "Hint Sign",
+						"map_locations": [
+							{
+								"map": "ag1f",
+								"x": 1025,
+								"y": 638,
+								"shape": "diamond"
+							},
+							{
+								"map": "agfull",
+								"x": 1712,
+								"y": 216,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"{@ArbitersGroundsLobby}"
+								],
+								"visibility_rules": [
+									"hintson"
+								]
+							}
+						]
+					}
+				]
 			}
 		]
 	}

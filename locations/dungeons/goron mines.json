@@ -503,6 +503,38 @@
 						]
 					}
 				]
+			},
+			{
+				"name": "Hint Signs",
+				"children": [
+					{
+						"name": "Hint Sign",
+						"map_locations": [
+							{
+								"map": "gm2f",
+								"x": 1834,
+								"y": 123,
+								"shape": "diamond"
+							},
+							{
+								"map": "gmfull",
+								"x": 1942,
+								"y": 62,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"{@GoronMinesUpperEastWing}"
+								],
+								"visibility_rules": [
+									"hintson"
+								]
+							}
+						]
+					}
+				]
 			}
 		]
 	}

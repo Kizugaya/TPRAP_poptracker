@@ -493,6 +493,38 @@
 						]
 					}
 				]
+			},
+			{
+				"name": "Hint Signs",
+				"children": [
+					{
+						"name": "Hint Sign",
+						"map_locations": [
+							{
+								"map": "pt1f",
+								"x": 572,
+								"y": 1467,
+								"shape": "diamond"
+							},
+							{
+								"map": "ptfull",
+								"x": 328,
+								"y": 848,
+								"shape": "diamond"
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"{@PalaceofTwilightEntrance}"
+								],
+								"visibility_rules": [
+									"hintson"
+								]
+							}
+						]
+					}
+				]
 			}
 		]
 	}

@@ -206,5 +206,31 @@
 				]
 			}
 		]
+	},
+	{
+		"name": "Snowpeak Mountain Hint Signs",
+		"children": [
+			{
+				"name": "Hint Sign",
+				"map_locations": [
+					{
+						"map": "sm",
+						"x": 1710,
+						"y": 247,
+						"shape": "diamond"
+					}
+				],
+				"sections": [
+					{
+						"access_rules": [
+							"{@SnowpeakClimbLower}"
+						],
+						"visibility_rules": [
+							"hintson"
+						]
+					}
+				]
+			}
+		]
 	}
 ]

@@ -367,10 +367,32 @@
 				],
 				"sections": [
 					{
-						"chest_unopened_img": "images/Items/HowlingStoneGrayed.png",
-						"chest_opened_img": "images/Items/HowlingStone.png",
+						"ref": "Eldin Region/Hidden Village Golden Wolves/North Castle Town Stone/"
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Castle Town Hint Signs",
+		"children": [
+			{
+				"name": "Hint Sign",
+				"map_locations": [
+					{
+						"map": "ct",
+						"x": 373,
+						"y": 340,
+						"shape": "diamond"
+					}
+				],
+				"sections": [
+					{
 						"access_rules": [
-							"{@HiddenVillage, shadowcrystal}"
+							"{@CastleTownCenter}"
+						],
+						"visibility_rules": [
+							"hintson"
 						]
 					}
 				]

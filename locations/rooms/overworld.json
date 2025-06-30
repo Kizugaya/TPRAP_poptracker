@@ -2,7 +2,7 @@
 	{
 		"name": "OutsideLinksHouse",
 		"access_rules": [
-			"wallet",
+			"",
 			"@OrdonVillage",
 			"@OrdonSpring",
 			"@OrdonLinksHouse"

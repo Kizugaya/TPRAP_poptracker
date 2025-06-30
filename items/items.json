@@ -1748,5 +1748,27 @@
 				"inherit_codes": false
 			}
 		]
+	},
+	{
+		"name": "Hint Signs",
+		"type": "progressive",
+		"codes": "hintsign, hintsigns, hints",
+		"loop": true,
+		"allow_disabled": false,
+		"initial_stage_idx": 0,
+		"stages": [
+			{
+				"name": "Hint Signs Enabled",
+				"codes": "hintson",
+				"img": "images/Items/HintsEnabled.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "Hint Signs Disabled",
+				"codes": "hintsoff",
+				"img": "images/Items/HintsDisabled.png",
+				"inherit_codes": false
+			}
+		]
 	}
 ]
