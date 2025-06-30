@@ -452,26 +452,20 @@ function onNotify(_key, value, old)
 		if key == "Death Mountain Stone" then
 			Tracker:FindObjectForCode("dmhowlingstone").Active = value
 			Tracker:FindObjectForCode("@Eldin Region/Death Mountain Golden Wolves/Ordon Spring Stone/").AvailableChestCount = Tracker:FindObjectForCode("@Eldin Region/Death Mountain Golden Wolves/Ordon Spring Stone/").AvailableChestCount - (value and 1 or 0)
-			Tracker:FindObjectForCode("@Ordon Golden Wolves/Death Mountain Stone/").AvailableChestCount = Tracker:FindObjectForCode("@Ordon Golden Wolves/Death Mountain Stone/").AvailableChestCount - (value and 1 or 0)
 		elseif key == "Zora River Stone" then
 			Tracker:FindObjectForCode("uzrhowlingstone").Active = value
-			Tracker:FindObjectForCode("@Lanayru Region/Beside Castle Town Golden Wolves/Upper Zora's River Stone/").AvailableChestCount = Tracker:FindObjectForCode("@Lanayru Region/Beside Castle Town Golden Wolves/Upper Zora's River Stone/").AvailableChestCount - (value and 1 or 0)
 			Tracker:FindObjectForCode("@Lanayru Region/Upper Zora's River Golden Wolves/West Castle Town Stone/").AvailableChestCount = Tracker:FindObjectForCode("@Lanayru Region/Upper Zora's River Golden Wolves/West Castle Town Stone/").AvailableChestCount - (value and 1 or 0)
 		elseif key == "Sacred Grove Stone" then
 			Tracker:FindObjectForCode("nfwhowlingstone").Active = value
 			Tracker:FindObjectForCode("@Faron Region/Faron Woods Golden Wolves/South Castle Town Stone/").AvailableChestCount = Tracker:FindObjectForCode("@Faron Region/Faron Woods Golden Wolves/South Castle Town Stone/").AvailableChestCount - (value and 1 or 0)
-			Tracker:FindObjectForCode("@Lanayru Region/South Castle Town Golden Wolves/North Faron Woods Stone/").AvailableChestCount = Tracker:FindObjectForCode("@Lanayru Region/South Castle Town Golden Wolves/North Faron Woods Stone/").AvailableChestCount - (value and 1 or 0)
 		elseif key == "Lake Hylia Stone" then
 			Tracker:FindObjectForCode("lhhowlingstone").Active = value
 			Tracker:FindObjectForCode("@Gerudo Desert Golden Wolves/Lake Hylia Stone/").AvailableChestCount = Tracker:FindObjectForCode("@Gerudo Desert Golden Wolves/Lake Hylia Stone/").AvailableChestCount - (value and 1 or 0)
-			Tracker:FindObjectForCode("@Lanayru Region/Lake Hylia Golden Wolves/Gerudo Desert Stone/").AvailableChestCount = Tracker:FindObjectForCode("@Lanayru Region/Lake Hylia Golden Wolves/Gerudo Desert Stone/").AvailableChestCount - (value and 1 or 0)
 		elseif key == "Snowpeak Stone" then
 			Tracker:FindObjectForCode("smhowlingstone").Active = value
-			Tracker:FindObjectForCode("@Eldin Region/Kakariko Golden Wolves/Snowpeak Mountain Stone/").AvailableChestCount = Tracker:FindObjectForCode("@Eldin Region/Kakariko Golden Wolves/Snowpeak Mountain Stone/").AvailableChestCount - (value and 1 or 0)
 			Tracker:FindObjectForCode("@Snowpeak Mountain Golden Wolves/Kakariko Graveyard Stone/").AvailableChestCount = Tracker:FindObjectForCode("@Snowpeak Mountain Golden Wolves/Kakariko Graveyard Stone/").AvailableChestCount - (value and 1 or 0)
 		elseif key == "Hidden Village Stone" then
 			Tracker:FindObjectForCode("hvhowlingstone").Active = value
-			Tracker:FindObjectForCode("@Castle Town Golden Wolves/Hidden Village Stone/").AvailableChestCount = Tracker:FindObjectForCode("@Castle Town Golden Wolves/Hidden Village Stone/").AvailableChestCount - (value and 1 or 0)
 			Tracker:FindObjectForCode("@Eldin Region/Hidden Village Golden Wolves/North Castle Town Stone/").AvailableChestCount = Tracker:FindObjectForCode("@Eldin Region/Hidden Village Golden Wolves/North Castle Town Stone/").AvailableChestCount - (value and 1 or 0)
 		elseif key == "Youth Scent" then
 			Tracker:FindObjectForCode("youthsscent").Active = value or (Tracker:FindObjectForCode("eldintwilightcleared").CurrentStage == 0)
