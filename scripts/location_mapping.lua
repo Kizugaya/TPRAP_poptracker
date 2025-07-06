@@ -531,7 +531,7 @@ LOCATION_MAPPING = {
 	[BASE + 375] = {"@Lanayru Region/Upper Zora's River/Iza/Raging Rapids Minigame"},
 	[BASE + 362] = {"@Lanayru Region/Upper Zora's River/Fishing Hole Bottle/"},
 	[BASE + 363] = {"@Lanayru Region/Upper Zora's River/Fishing Hole Heart Piece/"},
-	[BASE + 442] = {"@Lanayru Region/Upper Zora's River Poes/Upper Zoras River Poe/"},
+	[BASE + 442] = {"@Lanayru Region/Upper Zora's River Poes/Upper Zora's River Poe/"},
 	[BASE + 441] = {"@Lanayru Region/Upper Zora's River Bugs/Female Dragonfly/"},
 	--[BASE + ] = {"@Lanayru Region/Upper Zora's River Golden Wolves/West Castle Town Stone/"},
 	
