@@ -612,7 +612,14 @@
 						"sections": [
 							{
 								"access_rules": [
-									"@LakebedTempleEastWingSecondFloor"
+									"@LakebedTempleEastWingSecondFloor, ltsmallkey:3, clawshot, $canSmash, boots",
+									"@LakebedTempleEastWingSecondFloor, skkeysy, clawshot, $canSmash, boots",
+									"@LakebedTempleEastWingSecondFloor, ltsmallkey:3, $canLaunchBombs, $canSmash, boots",
+									"@LakebedTempleEastWingSecondFloor, skkeysy, $canLaunchBombs, $canSmash, boots",
+									"[glitcheson], @LakebedTempleEastWingSecondFloor, ltsmallkey:3, $canLaunchBombs",
+									"[glitcheson], @LakebedTempleEastWingSecondFloor, skkeysy, $canLaunchBombs"
+									"[glitcheson], @LakebedTempleEastWingSecondFloor, ltsmallkey:3, clawshot, $canSmash",
+									"[glitcheson], @LakebedTempleEastWingSecondFloor, skkeysy, clawshot, $canSmash"
 								]
 							}
 						]
