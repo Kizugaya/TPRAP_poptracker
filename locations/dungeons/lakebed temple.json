@@ -1,4 +1,4 @@
-[
+  [
 	{
 		"name": "Lakebed Temple",
 		"children": [
@@ -617,7 +617,7 @@
 									"@LakebedTempleEastWingSecondFloor, ltsmallkey:3, $canLaunchBombs, $canSmash, boots",
 									"@LakebedTempleEastWingSecondFloor, skkeysy, $canLaunchBombs, $canSmash, boots",
 									"[glitcheson], @LakebedTempleEastWingSecondFloor, ltsmallkey:3, $canLaunchBombs",
-									"[glitcheson], @LakebedTempleEastWingSecondFloor, skkeysy, $canLaunchBombs"
+									"[glitcheson], @LakebedTempleEastWingSecondFloor, skkeysy, $canLaunchBombs",
 									"[glitcheson], @LakebedTempleEastWingSecondFloor, ltsmallkey:3, clawshot, $canSmash",
 									"[glitcheson], @LakebedTempleEastWingSecondFloor, skkeysy, clawshot, $canSmash"
 								]
