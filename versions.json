@@ -1,6 +1,14 @@
 {
 	"versions": [
 		{
+			"package_version": "0.7.3",
+			"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.7.3/TPRAP_poptracker_v0.7.3.zip",
+			"sha256": "687B4820A1D9EAAD0D8F606752DBD6B470E5C2BC60DD4358649D6D0E8201DFB0",
+			"changelog": [
+				"Fixed LT East Water Supply Small Chest"
+			]
+		},
+		{
 			"package_version": "0.7.2",
 			"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.7.2/TPRAP_poptracker_v0.7.2.zip",
 			"sha256": "9F388DC3C22139E6D03E35CEC51BFBAA5523A06DDF259AC30ADB6D8614BE8E20",
