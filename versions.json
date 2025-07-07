@@ -1,6 +1,14 @@
 {
 	"versions": [
 		{
+			"package_version": "0.7.4",
+			"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.7.4/TPRAP_poptracker_v0.7.4.zip",
+			"sha256": "1837B397E82B0FE512C91C731D23924E1DCF57FA8B9F94C941281162507B4228",
+			"changelog": [
+				"Fixed PoT Central Tower Chest"
+			]
+		},
+		{
 			"package_version": "0.7.3",
 			"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.7.3/TPRAP_poptracker_v0.7.3.zip",
 			"sha256": "687B4820A1D9EAAD0D8F606752DBD6B470E5C2BC60DD4358649D6D0E8201DFB0",
