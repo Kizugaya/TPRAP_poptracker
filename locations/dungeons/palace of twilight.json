@@ -457,8 +457,8 @@
 						"sections": [
 							{
 								"access_rules": [
-									"@PalaceofTwilightOutsideRoom, $canDefeatZantHead, clawshot, glowingmastersword",
-									"[glitcheson], @PalaceofTwilightOutsideRoom, $canDefeatZantHeadGlitched, clawshot, glowingmastersword"
+									"@PalaceofTwilightNorthTower, $canDefeatZantHead, clawshot, glowingmastersword",
+									"[glitcheson], @PalaceofTwilightNorthTower, $canDefeatZantHeadGlitched, clawshot, glowingmastersword"
 								]
 							}
 						]
