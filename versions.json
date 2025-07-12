@@ -1,6 +1,16 @@
 {
 	"versions": [
 		{
+			"package_version": "0.7.6",
+			"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.7.6/TPRAP_poptracker_v0.7.6.zip",
+			"sha256": "D852AF5389E07494747CCE98ED48E254436D21EBE6BD4100123E8310EB4F947D",
+			"changelog": [
+				"Added Hint Highlights",
+				"Added Icons to Dungeons",
+				"Fixed Duplicate Name in File"
+			]
+		},
+		{
 			"package_version": "0.7.5",
 			"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.7.5/TPRAP_poptracker_v0.7.5.zip",
 			"sha256": "3807E703698FAFC9A4F5AD3DA769C7B2B47F037AAE37A553415C1CC7B81312FA",
