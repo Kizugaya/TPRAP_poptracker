@@ -238,10 +238,6 @@
 							{
 								"ref": "Eldin Region/Eldin Field Hint Signs/Hint Sign/",
 								"name": "Hint Sign"
-							},
-							{
-								"ref": "Eldin Region/North Eldin Hint Signs/Hint Sign/",
-								"name": "Hint Sign"
 							}
 						]
 					},
@@ -494,6 +490,10 @@
 							{
 								"ref": "Eldin Region/North Eldin Bugs/Female Phasmid/",
 								"name": "Female Phasmid"
+							},
+							{
+								"ref": "Eldin Region/North Eldin Hint Signs/Hint Sign/",
+								"name": "Hint Sign"
 							}
 						]
 					}

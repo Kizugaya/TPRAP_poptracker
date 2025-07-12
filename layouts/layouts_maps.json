@@ -296,6 +296,7 @@
 			},
 			{
 				"title": "Forest Temple",
+				"icon": "images/Items/Boomerang.png",
 				"content": {
 					"type": "array",
 					"orientation": "vertical",
@@ -345,6 +346,7 @@
 			},
 			{
 				"title": "Goron Mines",
+				"icon": "images/Items/Bow1.png",
 				"content": {
 					"type": "array",
 					"orientation": "vertical",
@@ -408,6 +410,7 @@
 			},
 			{
 				"title": "Lakebed Temple",
+				"icon": "images/Items/Clawshot1.png",
 				"content": {
 					"type": "array",
 					"orientation": "vertical",
@@ -527,6 +530,7 @@
 			},
 			{
 				"title": "Arbiter's Grounds",
+				"icon": "images/Items/Spinner.png",
 				"content": {
 					"type": "array",
 					"orientation": "vertical",
@@ -646,6 +650,7 @@
 			},
 			{
 				"title": "Snowpeak Ruins",
+				"icon": "images/Items/BallAndChain.png",
 				"content": {
 					"type": "array",
 					"orientation": "vertical",
@@ -723,6 +728,7 @@
 			},
 			{
 				"title": "Temple of Time",
+				"icon": "images/Items/DominionRod2.png",
 				"content": {
 					"type": "array",
 					"orientation": "vertical",
@@ -870,6 +876,7 @@
 			},
 			{
 				"title": "City in the Sky",
+				"icon": "images/Items/Clawshot2.png",
 				"content": {
 					"type": "array",
 					"orientation": "vertical",
@@ -1017,6 +1024,7 @@
 			},
 			{
 				"title": "Palace of Twilight",
+				"icon": "images/Items/Sword4.png",
 				"content": {
 					"type": "array",
 					"orientation": "vertical",
@@ -1108,6 +1116,7 @@
 			},
 			{
 				"title": "Hyrule Castle",
+				"icon": "images/Items/ShadowCrystal.png",
 				"content": {
 					"type": "array",
 					"orientation": "vertical",

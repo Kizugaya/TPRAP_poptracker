@@ -344,9 +344,13 @@ function onClear(slot_data)
 		Archipelago:SetNotify(server_copy)
 		Archipelago:Get(server_copy)
 	end
-	local game_beaten = {"_read_client_status_"..TEAM_NUMBER.."_"..PLAYER_ID}
-	Archipelago:SetNotify(game_beaten)
-	Archipelago:Get(game_beaten)
+	--local game_beaten = {"client_status_"..TEAM_NUMBER.."_"..PLAYER_ID}
+	--Archipelago:SetNotify(game_beaten)
+	--Archipelago:Get(game_beaten)
+	local hints = {"_read_hints_"..TEAM_NUMBER.."_"..PLAYER_ID}
+	Archipelago:SetNotify(hints)
+	Archipelago:Get(hints)
+	
 	clearItems()
 	clearLocations()
 	clearPortals()
@@ -448,6 +452,15 @@ function onNotify(_key, value, old)
 			--skip if v0.2.4
 		else
 			_, _, key = string.find(_key, "TP_.*_.*_(.*)")
+		end
+		if _key == "_read_hints_"..TEAM_NUMBER.."_"..PLAYER_ID then
+			local v = LOCATION_MAPPING[value[1].location]
+			local obj = Tracker:FindObjectForCode(v[1])
+			if obj then
+				if v[1]:sub(1, 1) == "@" then
+					obj.Highlight = 1
+				end
+			end
 		end
 		if key == "Death Mountain Stone" then
 			Tracker:FindObjectForCode("dmhowlingstone").Active = value
