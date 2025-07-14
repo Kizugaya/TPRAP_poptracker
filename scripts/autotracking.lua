@@ -347,9 +347,9 @@ function onClear(slot_data)
 	--local game_beaten = {"client_status_"..TEAM_NUMBER.."_"..PLAYER_ID}
 	--Archipelago:SetNotify(game_beaten)
 	--Archipelago:Get(game_beaten)
-	local hints = {"_read_hints_"..TEAM_NUMBER.."_"..PLAYER_ID}
-	Archipelago:SetNotify(hints)
-	Archipelago:Get(hints)
+	local HINTS_ID = {"_read_hints_"..TEAM_NUMBER.."_"..PLAYER_ID}
+	Archipelago:SetNotify(HINTS_ID)
+	Archipelago:Get(HINTS_ID)
 	
 	clearItems()
 	clearLocations()
@@ -453,12 +453,12 @@ function onNotify(_key, value, old)
 		else
 			_, _, key = string.find(_key, "TP_.*_.*_(.*)")
 		end
-		if _key == "_read_hints_"..TEAM_NUMBER.."_"..PLAYER_ID then
-			local v = LOCATION_MAPPING[value[1].location]
-			local obj = Tracker:FindObjectForCode(v[1])
-			if obj then
-				if v[1]:sub(1, 1) == "@" then
-					obj.Highlight = 1
+		if _key == "_read_hints_"..TEAM_NUMBER.."_"..PLAYER_ID and Highlight then
+			for _, hint in ipairs(value) do
+				if not hint.found and hint.finding_player == PLAYER_ID then
+					UpdateHints(hint.location, hint.status)
+				else
+					ClearHints(hint.location)
 				end
 			end
 		end
@@ -551,6 +551,45 @@ function onNotifyLaunch(key, value)
 	debugAP(string.format("called onNotifyLaunch: key:'%s', value:'%s'", key, value))
 	onNotify(key, value)
 end
+
+
+function UpdateHints(location_id, status)
+	if not Highlight then return end
+	local locations = LOCATION_MAPPING[location_id]
+	for _, location in ipairs(locations) do
+		local section = Tracker:FindObjectForCode(location)
+		if section then
+			section.Highlight = PriorityToHighlight[status]
+		else
+			debugAP(string.format("No object found for code: '%s'", location))
+		end
+	end
+end
+function ClearHints(locationID)
+	if not Highlight then return end
+	local locations = LOCATION_MAPPING[locationID]
+	if not locations then return end
+	for _, locations in ipairs(locations) do
+		local section = Tracker:FindObjectForCode(location)
+		if section then
+			section.Highlight = Highlight.none
+		else
+			debugAP(string.format("No object found for code: '%s'", location))
+		end
+	end
+end
+
+PriorityToHighlight = {}
+if Highlight then
+	PriorityToHighlight = {
+		[0] = Highlight.Unspecified,
+		[10] = Highlight.NoPriority,
+		[20] = Highlight.Avoid,
+		[30] = Highlight.Priority,
+		[40] = Highlight.None -- found
+	}
+end
+
 
 Archipelago:AddClearHandler("clear handler", onClear)
 Archipelago:AddItemHandler("item handler", onItem)
