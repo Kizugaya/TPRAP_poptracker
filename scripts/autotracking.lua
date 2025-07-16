@@ -288,7 +288,7 @@ function setSettings()
 	end
 end
 function initPortals()
-	if Tracker:FindObjectForCode("openmap").CurrentStage = 0 then
+	if Tracker:FindObjectForCode("openmap").CurrentStage == 0 then
 		Tracker:FindObjectForCode("osportal").CurrentStage = 1
 		Tracker:FindObjectForCode("sfwportal").CurrentStage = 1
 		Tracker:FindObjectForCode("nfwportal").CurrentStage = 1
