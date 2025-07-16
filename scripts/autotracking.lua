@@ -288,17 +288,19 @@ function setSettings()
 	end
 end
 function initPortals()
-	Tracker:FindObjectForCode("osportal").CurrentStage = 1
-	Tracker:FindObjectForCode("sfwportal").CurrentStage = 1
-	Tracker:FindObjectForCode("nfwportal").CurrentStage = 1
-	Tracker:FindObjectForCode("kgportal").CurrentStage = 1
-	Tracker:FindObjectForCode("kvportal").CurrentStage = 1
-	Tracker:FindObjectForCode("dmportal").CurrentStage = 1
-	Tracker:FindObjectForCode("zdportal").CurrentStage = 1
-	Tracker:FindObjectForCode("lhportal").CurrentStage = 1
-	Tracker:FindObjectForCode("ctportal").CurrentStage = 1
-	Tracker:FindObjectForCode("stportal").CurrentStage = 1
-	Tracker:FindObjectForCode("sgportal").CurrentStage = 1
+	if Tracker:FindObjectForCode("openmap").CurrentStage = 0 then
+		Tracker:FindObjectForCode("osportal").CurrentStage = 1
+		Tracker:FindObjectForCode("sfwportal").CurrentStage = 1
+		Tracker:FindObjectForCode("nfwportal").CurrentStage = 1
+		Tracker:FindObjectForCode("kgportal").CurrentStage = 1
+		Tracker:FindObjectForCode("kvportal").CurrentStage = 1
+		Tracker:FindObjectForCode("dmportal").CurrentStage = 1
+		Tracker:FindObjectForCode("zdportal").CurrentStage = 1
+		Tracker:FindObjectForCode("lhportal").CurrentStage = 1
+		Tracker:FindObjectForCode("ctportal").CurrentStage = 1
+		Tracker:FindObjectForCode("stportal").CurrentStage = 1
+		Tracker:FindObjectForCode("sgportal").CurrentStage = 1
+	end
 end
 function initItems()
 	Tracker:FindObjectForCode("faronvesseloflight").Active = true
