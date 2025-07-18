@@ -375,9 +375,9 @@
 		"img": "images/Items/GateKeys.png"
 	},
 	{
-		"name": "Bulbin Camp Key",
+		"name": "Bulblin Camp Key",
 		"type": "toggle",
-		"codes": "bulbincampkey, bckey, keybc",
+		"codes": "bulblincampkey, bckey, keybc",
 		"img": "images/Items/DesertKey.png"
 	},
 	{

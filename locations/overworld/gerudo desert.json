@@ -244,7 +244,7 @@
 				]
 			},
 			{
-				"name": "North Small Chest Before Bulbin Camp",
+				"name": "North Small Chest Before Bulblin Camp",
 				"map_locations": [
 					{
 						"map": "gd",
@@ -280,7 +280,7 @@
 				]
 			},
 			{
-				"name": "Bulbin Guard Key",
+				"name": "Bulblin Guard Key",
 				"map_locations": [
 					{
 						"map": "gd",
@@ -449,7 +449,7 @@
 				]
 			},
 			{
-				"name": "Outside Bulbin Camp Poe",
+				"name": "Outside Bulblin Camp Poe",
 				"map_locations": [
 					{
 						"map": "gd",
@@ -467,7 +467,7 @@
 				]
 			},
 			{
-				"name": "Bulbin Camp Poe",
+				"name": "Bulblin Camp Poe",
 				"map_locations": [
 					{
 						"map": "gd",
