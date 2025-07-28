@@ -98,13 +98,13 @@
 							"@OrdonShieldHouse, $canCompletePrologue, farontwilightclearedoff, bonksdodamageon, damagedouble",
 							"@OrdonShieldHouse, $canCompletePrologue, farontwilightclearedoff, bonksdodamageon, damagetriple",
 							"@OrdonShieldHouse, $canCompletePrologue, farontwilightclearedoff, bonksdodamageon, damagequadruple",
-							"@OrdonShieldHouse, $canCompletePrologue, farontwilightclearedoff, bonksdodamageon, $canUseBottledFairies",
+							"@OrdonShieldHouse, $canCompletePrologue, farontwilightclearedoff, bonksdodamageon, $canUseBottledFairies, @LakeHylia",
 							"@OrdonShieldHouse, shadowcrystal, farontwilightclearedon, bonksdodamageoff",
 							"@OrdonShieldHouse, shadowcrystal, farontwilightclearedon, bonksdodamageon, damagevanilla",
 							"@OrdonShieldHouse, shadowcrystal, farontwilightclearedon, bonksdodamageon, damagedouble",
 							"@OrdonShieldHouse, shadowcrystal, farontwilightclearedon, bonksdodamageon, damagetriple",
 							"@OrdonShieldHouse, shadowcrystal, farontwilightclearedon, bonksdodamageon, damagequadruple",
-							"@OrdonShieldHouse, shadowcrystal, farontwilightclearedon, bonksdodamageon, $canUseBottledFairies"
+							"@OrdonShieldHouse, shadowcrystal, farontwilightclearedon, bonksdodamageon, $canUseBottledFairies, @LakeHylia"
 						]
 					}
 				]

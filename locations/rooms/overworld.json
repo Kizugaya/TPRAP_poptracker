@@ -973,7 +973,7 @@
 			"@SnowpeakSummitUpper, $canDefeatShadowBeast, bonksdodamageon, damagedouble",
 			"@SnowpeakSummitUpper, $canDefeatShadowBeast, bonksdodamageon, damagetriple",
 			"@SnowpeakSummitUpper, $canDefeatShadowBeast, bonksdodamageon, damagequadruple",
-			"@SnowpeakSummitUpper, $canDefeatShadowBeast, bonksdodamageon, $canUseBottledFairy",
+			"@SnowpeakSummitUpper, $canDefeatShadowBeast, bonksdodamageon, $canUseBottledFairy, @LakeHylia",
 			"@SnowpeakRuinsBossRoom, $canDefeatBlizzeta",
 			"@SnowpeakRuinsEntrance"
 		]

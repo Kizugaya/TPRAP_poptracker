@@ -3,13 +3,9 @@
 		"name": "GanondorfCastle",
 		"access_rules": [
 			"@HyruleCastleTowerClimb, spinner, doubleclawshot, $canDefeatDarknut, $canDefeatLizalfos, hcbigkey, $canDefeatGanondorf",
-			"[glitcheson], @HyruleCastleTowerClimb, spinner, doubleclawshot, $canDefeatDarknut, $canDefeatLizalfosGlitched, hcbigkey, $canDefeatGanondorf",
-			"[glitcheson], @HyruleCastleTowerClimb, $canDoJSLJA, doubleclawshot, $canDefeatDarknut, $canDefeatLizalfosGlitched, hcbigkey, $canDefeatGanondorf",
 			"[glitcheson], @HyruleCastleTowerClimb, spinner, clawshot, $canDefeatDarknut, $canDefeatLizalfosGlitched, hcbigkey, $canDefeatGanondorf",
 			"[glitcheson], @HyruleCastleTowerClimb, $canDoJSLJA, clawshot, $canDefeatDarknut, $canDefeatLizalfosGlitched, hcbigkey, $canDefeatGanondorf",
 			"@HyruleCastleTowerClimb, spinner, doubleclawshot, $canDefeatDarknut, $canDefeatLizalfos, bkkeysy, $canDefeatGanondorf",
-			"[glitcheson], @HyruleCastleTowerClimb, spinner, doubleclawshot, $canDefeatDarknut, $canDefeatLizalfosGlitched, bkkeysy, $canDefeatGanondorf",
-			"[glitcheson], @HyruleCastleTowerClimb, $canDoJSLJA, doubleclawshot, $canDefeatDarknut, $canDefeatLizalfosGlitched, bkkeysy, $canDefeatGanondorf",
 			"[glitcheson], @HyruleCastleTowerClimb, spinner, clawshot, $canDefeatDarknut, $canDefeatLizalfosGlitched, bkkeysy, $canDefeatGanondorf",
 			"[glitcheson], @HyruleCastleTowerClimb, $canDoJSLJA, clawshot, $canDefeatDarknut, $canDefeatLizalfosGlitched, bkkeysy, $canDefeatGanondorf"
 		]

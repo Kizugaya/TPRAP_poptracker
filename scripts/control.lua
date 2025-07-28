@@ -91,7 +91,7 @@ function canUseBottledFairy()
 end
 
 -- Check if bottled fairies can be used / used for ordon shield if bonk do damage + one hit KO
-function canUseBottledFairy()
+function canUseBottledFairies()
 	return hasAmount("bottle", 2)
 end
 

@@ -1228,8 +1228,12 @@
 									"@OutsideCastleTownSouth, doubleclawshot",
 									"[glitcheson], @OutsideCastleTownSouth, sword, damagevanilla",
 									"[glitcheson], @OutsideCastleTownSouth, sword, damagedouble",
-									"[glitcheson], @OutsideCastleTownSouth, sword, $canUseBottledFairy",
-									"[glitcheson], @OutsideCastleTownSouth, $hasBombs",
+									"[glitcheson], @OutsideCastleTownSouth, sword, $canUseBottledFairy, @LakeHylia",
+									"[glitcheson], @OutsideCastleTownSouth, $hasBombs, damagevanilla",
+									"[glitcheson], @OutsideCastleTownSouth, $hasBombs, damagedouble",
+									"[glitcheson], @OutsideCastleTownSouth, $hasBombs, damagetriple",
+									"[glitcheson], @OutsideCastleTownSouth, $hasBombs, damagequadriple",
+									"[glitcheson], @OutsideCastleTownSouth, $hasBombs, $canUseBottledFairy, @LakeHylia",
 									"[glitcheson], @OutsideCastleTownSouth, spinner",
 									"[glitcheson], @OutsideCastleTownSouth, shadowcrystal"
 								]
@@ -1634,7 +1638,7 @@
 						"map_locations": [
 							{
 								"map": "zd",
-								"x": 276,
+								"x": 296,
 								"y": 160
 							}
 						],
@@ -1652,7 +1656,7 @@
 						"map_locations": [
 							{
 								"map": "zd",
-								"x": 296,
+								"x": 276,
 								"y": 160
 							}
 						],

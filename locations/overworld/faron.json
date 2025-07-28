@@ -149,7 +149,7 @@
 								"access_rules": [
 									"boomerang",
 									"clawshot",
-									"[glitcheson], $canDoMapGlitch",
+									"[glitcheson], $canDoStorage",
 									"[glitcheson], $canDoEBMoonBoots"
 								]
 							}

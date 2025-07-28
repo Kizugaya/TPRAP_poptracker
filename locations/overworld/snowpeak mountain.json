@@ -174,7 +174,12 @@
 				"sections": [
 					{
 						"access_rules": [
-							"@SnowpeakSummitLower, shadowcrystal"
+							"@SnowpeakSummitLower, shadowcrystal, $canDefeatShadowBeast, bonksdodamageoff",
+							"@SnowpeakSummitLower, shadowcrystal, $canDefeatShadowBeast, bonksdodamageon, damagevanilla",
+							"@SnowpeakSummitLower, shadowcrystal, $canDefeatShadowBeast, bonksdodamageon, damagedouble",
+							"@SnowpeakSummitLower, shadowcrystal, $canDefeatShadowBeast, bonksdodamageon, damagetriple",
+							"@SnowpeakSummitLower, shadowcrystal, $canDefeatShadowBeast, bonksdodamageon, damagequadruple",
+							"@SnowpeakSummitLower, shadowcrystal, $canDefeatShadowBeast, bonksdodamageon, $canUseBottledFairy, @LakeHylia"
 						]
 					}
 				]
