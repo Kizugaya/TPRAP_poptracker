@@ -1,6 +1,17 @@
 {
 	"versions": [
 		{
+			"package_version": "0.8.0",
+			"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.8.0/TPRAP_poptracker_v0.8.0.zip",
+			"sha256": "0B5024AB6740111A37FDE4D3338C6252DC21BD094658CD59B08F7150FF384498",
+			"changelog": [
+				"Changed Layout",
+				"Added Split Map (still WIP)",
+				"Some Bug Fixes",
+				"Both Broadcast and Main Body can be changed to only show Items/Maps/Both"
+			]
+		},
+		{
 			"package_version": "0.7.10",
 			"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.7.10/TPRAP_poptracker_v0.7.10.zip",
 			"sha256": "34E8A8901DEAD28D367D9FE461598260FF4E65FD01BF23EC3BA17A881E2B2728",
