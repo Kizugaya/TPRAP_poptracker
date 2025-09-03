@@ -2,16 +2,15 @@
 	{
 		"name": "Fishing Rod",
 		"type": "progressive",
-		"codes": "p_fishingrod",
 		"stages": [
 			{
 				"name": "Fishing Rod",
-				"codes": "fishingrod",
+				"codes": "p_fishingrod, fishingrod",
 				"img": "images/Items/FishingRod1.png"
 			},
 			{
 				"name": "Fishing Rod with Hook",
-				"codes": "hook, fishinghook, Fishingrodhook, rodhook",
+				"codes": "p_fishingrod, hook, fishinghook, Fishingrodhook, rodhook",
 				"img": "images/Items/FishingRod2.png"
 			}
 		]
@@ -43,21 +42,20 @@
 	{
 		"name": "Bow",
 		"type": "progressive",
-		"codes": "p_bow",
 		"stages": [
 			{
 				"name": "Bow - Small Quiver",
-				"codes": "smallquiver, bow",
+				"codes": "p_bow, smallquiver, bow",
 				"img": "images/Items/Bow1.png"
 			},
 			{
 				"name": "Bow - Medium Quiver",
-				"codes": "mediumquiver",
+				"codes": "p_bow, mediumquiver",
 				"img": "images/Items/Bow2.png"
 			},
 			{
 				"name": "Bow - Large Quiver",
-				"codes": "largequiver",
+				"codes": "p_bow, largequiver",
 				"img": "images/Items/Bow3.png"
 			}
 		]
@@ -90,16 +88,15 @@
 	{
 		"name": "Clawshot",
 		"type": "progressive",
-		"codes": "p_clawshot",
 		"stages": [
 			{
 				"name": "Clawshot",
-				"codes": "clawshot",
+				"codes": "p_clawshot, clawshot",
 				"img": "images/Items/Clawshot1.png"
 			},
 			{
 				"name": "Double Clawshot",
-				"codes": "dclawshot, doubleclawshot",
+				"codes": "p_clawshot, dclawshot, doubleclawshot",
 				"img": "images/Items/Clawshot2.png"
 			}
 		]
@@ -119,16 +116,15 @@
 	{
 		"name": "Dominion Rod",
 		"type": "progressive",
-		"codes": "p_dominionrod",
 		"stages": [
 			{
 				"name": "Dominion Rod",
-				"codes": "dominionrod",
+				"codes": "p_dominionrod, dominionrod",
 				"img": "images/Items/DominionRod1.png"
 			},
 			{
 				"name": "Dominion Rod",
-				"codes": "powereddominionrod",
+				"codes": "p_dominionrod, powereddominionrod",
 				"img": "images/Items/DominionRod2.png"
 			}
 		]
@@ -174,26 +170,25 @@
 	{
 		"name": "Sword",
 		"type": "progressive",
-		"codes": "p_sword",
 		"stages": [
 			{
 				"name": "Wooden Sword",
-				"codes": "woodensword, sword",
+				"codes": "p_sword, woodensword, sword",
 				"img": "images/Items/Sword1.png"
 			},
 			{
 				"name": "Ordon Sword",
-				"codes": "ordonsword",
+				"codes": "p_sword, ordonsword",
 				"img": "images/Items/Sword2.png"
 			},
 			{
 				"name": "Master Sword",
-				"codes": "mastersword",
+				"codes": "p_sword, mastersword",
 				"img": "images/Items/Sword3.png"
 			},
 			{
 				"name": "Light Master Sword",
-				"codes": "glowingmastersword, lightmastersword, truemastersword",
+				"codes": "p_sword, glowingmastersword, lightmastersword, truemastersword",
 				"img": "images/Items/Sword4.png"
 			}
 		]
@@ -225,22 +220,21 @@
 	{
 		"name": "Wallet",
 		"type": "progressive",
-		"codes": "p_wallet",
 		"allow_disabled": false,
 		"stages": [
 			{
 				"name": "Small Wallet",
-				"codes": "wallet",
+				"codes": "p_wallet, wallet",
 				"img": "images/Items/Wallet1.png"
 			},
 			{
 				"name": "Medium Wallet",
-				"codes": "mediumwallet",
+				"codes": "p_wallet, mediumwallet",
 				"img": "images/Items/Wallet2.png"
 			},
 			{
 				"name": "Large Wallet",
-				"codes": "largewallet",
+				"codes": "p_wallet, largewallet",
 				"img": "images/Items/Wallet3.png"
 			}
 		]
@@ -320,26 +314,25 @@
 	{
 		"name": "Ilia Memory Quest",
 		"type": "progressive",
-		"codes": "p_memory",
 		"stages": [
 			{
 				"name": "Renado's Letter",
-				"codes": "renadosletter",
+				"codes": "p_memory, renadosletter",
 				"img": "images/Items/Fetch1.png"
 			},
 			{
 				"name": "Invoice",
-				"codes": "invoice",
+				"codes": "p_memory, invoice",
 				"img": "images/Items/Fetch2.png"
 			},
 			{
 				"name": "Wooden Statue",
-				"codes": "woodenstatue",
+				"codes": "p_memory, woodenstatue",
 				"img": "images/Items/Fetch3.png"
 			},
 			{
 				"name": "Ilia's Charm",
-				"codes": "iliascharm",
+				"codes": "p_memory, iliascharm",
 				"img": "images/Items/Fetch4.png"
 			}
 		]
@@ -557,7 +550,7 @@
 		"type": "toggle",
 		"codes": "hyrulecastlebigkey, hcbigkey, bigkeyhc",
 		"img": "images/Items/BossKeyHC.png"
-	},,
+	},
 	{
 		"name": "Hyrule Castle Completed",
 		"type": "toggle",
@@ -709,698 +702,19 @@
 		"img": "images/Items/Bug23.png"
 	},
 	{
-		"name": "Forest Temple Name",
-		"type": "static",
-		"img": "images/Dungeons/Forest Temple/Name.png",
-		"codes": "ftname"
-	},
-	{
-		"name": "Goron Mines Name",
-		"type": "static",
-		"img": "images/Dungeons/Goron Mines/Name.png",
-		"codes": "gmname"
-	},
-	{
-		"name": "Lakebed Temple Name",
-		"type": "static",
-		"img": "images/Dungeons/Lakebed Temple/Name.png",
-		"codes": "ltname"
-	},
-	{
-		"name": "Arbiter's Grounds Name",
-		"type": "static",
-		"img": "images/Dungeons/Arbiter's Grounds/Name.png",
-		"codes": "agname"
-	},
-	{
-		"name": "Snowpeak Ruins Name",
-		"type": "static",
-		"img": "images/Dungeons/Snowpeak Ruins/Name.png",
-		"codes": "srname"
-	},
-	{
-		"name": "Temple of Time Name",
-		"type": "static",
-		"img": "images/Dungeons/Temple of Time/Name.png",
-		"codes": "ttname"
-	},
-	{
-		"name": "City in the Sky Name",
-		"type": "static",
-		"img": "images/Dungeons/City in the Sky/Name.png",
-		"codes": "csname"
-	},
-	{
-		"name": "Palace of Twilight Name",
-		"type": "static",
-		"img": "images/Dungeons/Palace of Twilight/Name.png",
-		"codes": "ptname"
-	},
-	{
-		"name": "Hyrule Castle Name",
-		"type": "static",
-		"img": "images/Dungeons/Hyrule Castle/Name.png",
-		"codes": "hcname"
-	},
-	{
-		"name": "Golden Bugs",
-		"type": "progressive",
-		"codes": "bugs, gbugs, goldenbugs",
-		"loop": true,
-		"allow_disabled": false,
-		"initial_stage_idx": 0,
-		"stages": [
-			{
-				"name": "Golden Bugs Enabled",
-				"codes": "bugson, gbugson, goldenbugson",
-				"img": "images/Items/GoldenBugEnabled.png",
-				"inherit_codes": false
-			},
-			{
-				"name": "Golden Bugs Disabled",
-				"codes": "bugsoff, gbugsoff, goldenbugsoff",
-				"img": "images/Items/GoldenBugDisabled.png",
-				"inherit_codes": false
-			}
-		]
-	},
-	{
-		"name": "Poes",
-		"type": "progressive",
-		"codes": "poes",
-		"loop": true,
-		"allow_disabled": false,
-		"initial_stage_idx": 0,
-		"stages": [
-			{
-				"name": "Poes Enabled",
-				"codes": "poeson",
-				"img": "images/Items/PoeSoulEnabled.png",
-				"inherit_codes": false
-			},
-			{
-				"name": "Poes Disabled",
-				"codes": "poesoff",
-				"img": "images/Items/PoeSoulDisabled.png",
-				"inherit_codes": false
-			}
-		]
-	},
-	{
-		"name": "Glitched",
-		"type": "progressive",
-		"codes": "glitched",
-		"loop": true,
-		"allow_disabled": false,
-		"initial_stage_idx": 1,
-		"stages": [
-			{
-				"name": "Glitches Enabled",
-				"codes": "glitcheson",
-				"img": "images/Items/GlitchesEnabled.png",
-				"inherit_codes": false
-			},
-			{
-				"name": "Glitches Disabled",
-				"codes": "glitchesoff",
-				"img": "images/Items/GlitchesDisabled.png",
-				"inherit_codes": false
-			}
-		]
-	},
-	{
-		"name": "Castle Requirements",
-		"type": "progressive",
-		"codes": "castlerequirements",
-		"loop": true,
-		"allow_disabled": false,
-		"initial_stage_idx": 0,
-		"stages": [
-			{
-				"name": "HC Vanilla",
-				"codes": "hcvanilla",
-				"img": "images/Items/HCVanilla.png",
-				"inherit_codes": false
-			},
-			{
-				"name": "HC Fused Shadows",
-				"codes": "hcfusedshadows",
-				"img": "images/Items/HCFusedShadows.png",
-				"inherit_codes": false
-			},
-			{
-				"name": "HC Mirror Shards",
-				"codes": "hcmirrorshards",
-				"img": "images/Items/HCMirrorShards.png",
-				"inherit_codes": false
-			},
-			{
-				"name": "HC All Dungeons",
-				"codes": "hcalldungeons",
-				"img": "images/Items/HCAllDungeons.png",
-				"inherit_codes": false
-			},
-			{
-				"name": "HC Open",
-				"codes": "hcopen",
-				"img": "images/Items/HCOpen.png",
-				"inherit_codes": false
-			}
-		]
-	},
-	{
-		"name": "Palace Requirements",
-		"type": "progressive",
-		"codes": "palacerequirements",
-		"loop": true,
-		"allow_disabled": false,
-		"initial_stage_idx": 0,
-		"stages": [
-			{
-				"name": "PT Vanilla",
-				"codes": "ptvanilla",
-				"img": "images/Items/PTVanilla.png",
-				"inherit_codes": false
-			},
-			{
-				"name": "PT Fused Shadows",
-				"codes": "ptfusedshadows",
-				"img": "images/Items/PTFusedShadows.png",
-				"inherit_codes": false
-			},
-			{
-				"name": "PT Mirror Shards",
-				"codes": "ptmirrorshards",
-				"img": "images/Items/PTMirrorShards.png",
-				"inherit_codes": false
-			},
-			{
-				"name": "PT Open",
-				"codes": "ptopen",
-				"img": "images/Items/PTOpen.png",
-				"inherit_codes": false
-			}
-		]
-	},
-	{
-		"name": "Faron Woods",
-		"type": "progressive",
-		"codes": "faronwoods",
-		"loop": true,
-		"allow_disabled": false,
-		"initial_stage_idx": 1,
-		"stages": [
-			{
-				"name": "Faron Woods Open",
-				"codes": "faronwoodsopen",
-				"img": "images/Items/FaronWoodsOpen.png",
-				"inherit_codes": false
-			},
-			{
-				"name": "Faron Woods Closed",
-				"codes": "faronwoodsclosed",
-				"img": "images/Items/FaronWoodsClosed.png",
-				"inherit_codes": false
-			}
-		]
-	},
-	{
-		"name": "Small Keys",
-		"type": "progressive",
-		"codes": "smallkeys",
-		"loop": true,
-		"allow_disabled": false,
-		"initial_stage_idx": 0,
-		"stages": [
-			{
-				"name": "SK Vanilla",
-				"codes": "skvanilla",
-				"img": "images/Items/SKVanilla.png",
-				"inherit_codes": false
-			},
-			{
-				"name": "SK Own Dungeon",
-				"codes": "skowndungeon",
-				"img": "images/Items/SKOwnDungeon.png",
-				"inherit_codes": false
-			},
-			{
-				"name": "SK Any Dungeon",
-				"codes": "skanydungeon",
-				"img": "images/Items/SKAnyDungeon.png",
-				"inherit_codes": false
-			},
-			{
-				"name": "SK Anywhere",
-				"codes": "skkeysanity",
-				"img": "images/Items/SKAnywhere.png",
-				"inherit_codes": false
-			},
-			{
-				"name": "SK Start with",
-				"codes": "skkeysy",
-				"img": "images/Items/SKKeysy.png",
-				"inherit_codes": false
-			}
-		]
-	},
-	{
-		"name": "Big Keys",
-		"type": "progressive",
-		"codes": "bigkeys",
-		"loop": true,
-		"allow_disabled": false,
-		"initial_stage_idx": 0,
-		"stages": [
-			{
-				"name": "BK Vanilla",
-				"codes": "bkvanilla",
-				"img": "images/Items/BKVanilla.png",
-				"inherit_codes": false
-			},
-			{
-				"name": "BK Own Dungeon",
-				"codes": "bkowndungeon",
-				"img": "images/Items/BKOwnDungeon.png",
-				"inherit_codes": false
-			},
-			{
-				"name": "BK Any Dungeon",
-				"codes": "bkanydungeon",
-				"img": "images/Items/BKAnyDungeon.png",
-				"inherit_codes": false
-			},
-			{
-				"name": "BK Anywhere",
-				"codes": "bkkeysanity",
-				"img": "images/Items/BKAnywhere.png",
-				"inherit_codes": false
-			},
-			{
-				"name": "BK Start with",
-				"codes": "bkkeysy",
-				"img": "images/Items/BKKeysy.png",
-				"inherit_codes": false
-			}
-		]
-	},
-	{
-		"name": "Skip Prologue",
-		"type": "progressive",
-		"codes": "skipprologue",
-		"loop": true,
-		"allow_disabled": false,
-		"initial_stage_idx": 1,
-		"stages": [
-			{
-				"name": "Skip Prologue Enabled",
-				"codes": "skipprologueon",
-				"img": "images/Items/SkipPrologueEnabled.png",
-				"inherit_codes": false
-			},
-			{
-				"name": "Skip Prologue Disabled",
-				"codes": "skipprologueoff",
-				"img": "images/Items/SkipPrologueDisabled.png",
-				"inherit_codes": false
-			}
-		]
-	},
-	{
-		"name": "Faron Twilight Cleared",
-		"type": "progressive",
-		"codes": "farontwilightcleared",
-		"loop": true,
-		"allow_disabled": false,
-		"initial_stage_idx": 1,
-		"stages": [
-			{
-				"name": "Faron Twilight Cleared Enabled",
-				"codes": "farontwilightclearedon",
-				"img": "images/Items/TwilightFaronEnabled.png",
-				"inherit_codes": false
-			},
-			{
-				"name": "Faron Twilight Cleared Disabled",
-				"codes": "farontwilightclearedoff",
-				"img": "images/Items/TwilightFaronDisabled.png",
-				"inherit_codes": false
-			}
-		]
-	},
-	{
-		"name": "Eldin Twilight Cleared",
-		"type": "progressive",
-		"codes": "eldintwilightcleared",
-		"loop": true,
-		"allow_disabled": false,
-		"initial_stage_idx": 1,
-		"stages": [
-			{
-				"name": "Eldin Twilight Cleared Enabled",
-				"codes": "eldintwilightclearedon",
-				"img": "images/Items/TwilightEldinEnabled.png",
-				"inherit_codes": false
-			},
-			{
-				"name": "Eldin Twilight Cleared Disabled",
-				"codes": "eldintwilightclearedoff",
-				"img": "images/Items/TwilightEldinDisabled.png",
-				"inherit_codes": false
-			}
-		]
-	},
-	{
-		"name": "Lanayru Twilight Cleared",
-		"type": "progressive",
-		"codes": "lanayrutwilightcleared",
-		"loop": true,
-		"allow_disabled": false,
-		"initial_stage_idx": 1,
-		"stages": [
-			{
-				"name": "Lanayru Twilight Cleared Enabled",
-				"codes": "lanayrutwilightclearedon",
-				"img": "images/Items/TwilightLanayruEnabled.png",
-				"inherit_codes": false
-			},
-			{
-				"name": "Lanayru Twilight Cleared Disabled",
-				"codes": "lanayrutwilightclearedoff",
-				"img": "images/Items/TwilightLanayruDisabled.png",
-				"inherit_codes": false
-			}
-		]
-	},
-	{
-		"name": "Skip Midna's Desperate Hour",
-		"type": "progressive",
-		"codes": "skipmdh",
-		"loop": true,
-		"allow_disabled": false,
-		"initial_stage_idx": 1,
-		"stages": [
-			{
-				"name": "Skip Midna's Desperate Hour Enabled",
-				"codes": "skipmdhon",
-				"img": "images/Items/SkipMDHEnabled.png",
-				"inherit_codes": false
-			},
-			{
-				"name": "Skip Midna's Desperate Hour Disabled",
-				"codes": "skipmdhoff",
-				"img": "images/Items/SkipMDHDisabled.png",
-				"inherit_codes": false
-			}
-		]
-	},
-	{
-		"name": "Open Map",
-		"type": "progressive",
-		"codes": "openmap",
-		"loop": true,
-		"allow_disabled": false,
-		"initial_stage_idx": 1,
-		"stages": [
-			{
-				"name": "Open Map Enabled",
-				"codes": "openmapon",
-				"img": "images/Items/OpenMapEnabled.png",
-				"inherit_codes": false
-			},
-			{
-				"name": "Open Map Disabled",
-				"codes": "openmapoff",
-				"img": "images/Items/OpenMapDisabled.png",
-				"inherit_codes": false
-			}
-		]
-	},
-	{
-		"name": "Increase Wallet",
-		"type": "progressive",
-		"codes": "increasewallet",
-		"loop": true,
-		"allow_disabled": false,
-		"initial_stage_idx": 1,
-		"stages": [
-			{
-				"name": "Increase Wallet Enabled",
-				"codes": "increasewalleton",
-				"img": "images/Items/IncreaseWalletEnabled.png",
-				"inherit_codes": false
-			},
-			{
-				"name": "Increase Wallet Disabled",
-				"codes": "increasewalletoff",
-				"img": "images/Items/IncreaseWalletDisabled.png",
-				"inherit_codes": false
-			}
-		]
-	},
-	{
-		"name": "Transform Anywhere",
-		"type": "progressive",
-		"codes": "transformanywhere",
-		"loop": true,
-		"allow_disabled": false,
-		"initial_stage_idx": 1,
-		"stages": [
-			{
-				"name": "Transform Anywhere Enabled",
-				"codes": "transformanywhereon",
-				"img": "images/Items/TransformEnabled.png",
-				"inherit_codes": false
-			},
-			{
-				"name": "Transform Anywhere Disabled",
-				"codes": "transformanywhereoff",
-				"img": "images/Items/TransformDisabled.png",
-				"inherit_codes": false
-			}
-		]
-	},
-	{
-		"name": "Bonks Do Damage",
-		"type": "progressive",
-		"codes": "bonksdodamage",
-		"loop": true,
-		"allow_disabled": false,
-		"initial_stage_idx": 1,
-		"stages": [
-			{
-				"name": "Bonks Do Damage Enabled",
-				"codes": "bonksdodamageon",
-				"img": "images/Items/BonksDoDamageEnabled.png",
-				"inherit_codes": false
-			},
-			{
-				"name": "Bonks Do Damage Disabled",
-				"codes": "bonksdodamageoff",
-				"img": "images/Items/BonksDoDamageDisabled.png",
-				"inherit_codes": false
-			}
-		]
-	},
-	{
-		"name": "Damage Magnification",
-		"type": "progressive",
-		"codes": "damagemagnification",
-		"loop": true,
-		"allow_disabled": false,
-		"initial_stage_idx": 0,
-		"stages": [
-			{
-				"name": "Damage Vanilla",
-				"codes": "damagevanilla",
-				"img": "images/Items/DamageVanilla.png",
-				"inherit_codes": false
-			},
-			{
-				"name": "Damage Double",
-				"codes": "damagedouble",
-				"img": "images/Items/DamageDouble.png",
-				"inherit_codes": false
-			},
-			{
-				"name": "Damage Triple",
-				"codes": "damagetriple",
-				"img": "images/Items/DamageTriple.png",
-				"inherit_codes": false
-			},
-			{
-				"name": "Damage Quadruple",
-				"codes": "damagequadruple",
-				"img": "images/Items/DamageQuadruple.png",
-				"inherit_codes": false
-			},
-			{
-				"name": "One Hit KO",
-				"codes": "ohko",
-				"img": "images/Items/DamageOHKO.png",
-				"inherit_codes": false
-			}
-		]
-	},
-	{
-		"name": "Skip Lakebed Entrance",
-		"type": "progressive",
-		"codes": "skiplakebedentrance",
-		"loop": true,
-		"allow_disabled": false,
-		"initial_stage_idx": 1,
-		"stages": [
-			{
-				"name": "Skip Lakebed Entrance Enabled",
-				"codes": "skiplakebedentranceon",
-				"img": "images/Items/SkipLTEnabled.png",
-				"inherit_codes": false
-			},
-			{
-				"name": "Skip Lakebed Entrance Disabled",
-				"codes": "skiplakebedentranceoff",
-				"img": "images/Items/SkipLTDisabled.png",
-				"inherit_codes": false
-			}
-		]
-	},
-	{
-		"name": "Skip Arbiter's Entrance",
-		"type": "progressive",
-		"codes": "skiparbitersentrance",
-		"loop": true,
-		"allow_disabled": false,
-		"initial_stage_idx": 1,
-		"stages": [
-			{
-				"name": "Skip Arbiter's Entrance Enabled",
-				"codes": "skiparbitersentranceon",
-				"img": "images/Items/SkipAGEnabled.png",
-				"inherit_codes": false
-			},
-			{
-				"name": "Skip Arbiter's Entrance Disabled",
-				"codes": "skiparbitersentranceoff",
-				"img": "images/Items/SkipAGDisabled.png",
-				"inherit_codes": false
-			}
-		]
-	},
-	{
-		"name": "Skip Snowpeak Entrance",
-		"type": "progressive",
-		"codes": "skipsnowpeakentrance",
-		"loop": true,
-		"allow_disabled": false,
-		"initial_stage_idx": 1,
-		"stages": [
-			{
-				"name": "Skip Snowpeak Entrance Enabled",
-				"codes": "skipsnowpeakentranceon",
-				"img": "images/Items/SkipSREnabled.png",
-				"inherit_codes": false
-			},
-			{
-				"name": "Skip Snowpeak Entrance Disabled",
-				"codes": "skipsnowpeakentranceoff",
-				"img": "images/Items/SkipSRDisabled.png",
-				"inherit_codes": false
-			}
-		]
-	},
-	{
-		"name": "Skip City in the Sky Entrance",
-		"type": "progressive",
-		"codes": "skipcityintheskyentrance",
-		"loop": true,
-		"allow_disabled": false,
-		"initial_stage_idx": 1,
-		"stages": [
-			{
-				"name": "Skip City in the Sky Entrance Enabled",
-				"codes": "skipcityintheskyentranceon",
-				"img": "images/Items/SkipCSEnabled.png",
-				"inherit_codes": false
-			},
-			{
-				"name": "Skip City in the Sky Entrance Disabled",
-				"codes": "skipcityintheskyentranceoff",
-				"img": "images/Items/SkipCSDisabled.png",
-				"inherit_codes": false
-			}
-		]
-	},
-	{
-		"name": "Goron Mines Entrance",
-		"type": "progressive",
-		"codes": "goronminesentrance",
-		"loop": true,
-		"allow_disabled": false,
-		"initial_stage_idx": 2,
-		"stages": [
-			{
-				"name": "GM Open",
-				"codes": "gmopen",
-				"img": "images/Items/GMOpen.png",
-				"inherit_codes": false
-			},
-			{
-				"name": "GM No Wrestling",
-				"codes": "gmnowrestling",
-				"img": "images/Items/GMNoWrestling.png",
-				"inherit_codes": false
-			},
-			{
-				"name": "GM Closed",
-				"codes": "gmclosed",
-				"img": "images/Items/GMClosed.png",
-				"inherit_codes": false
-			}
-		]
-	},
-	{
-		"name": "Temple of Time Entrance",
-		"type": "progressive",
-		"codes": "templeoftimeentrance",
-		"loop": true,
-		"allow_disabled": false,
-		"initial_stage_idx": 2,
-		"stages": [
-			{
-				"name": "TT Open",
-				"codes": "ttopen",
-				"img": "images/Items/TTOpen.png",
-				"inherit_codes": false
-			},
-			{
-				"name": "TT Open Grove",
-				"codes": "ttopengrove",
-				"img": "images/Items/TTOpenGrove.png",
-				"inherit_codes": false
-			},
-			{
-				"name": "TT Closed",
-				"codes": "ttclosed",
-				"img": "images/Items/TTClosed.png",
-				"inherit_codes": false
-			}
-		]
-	},
-	{
 		"name": "Ordon Spring Portal",
 		"type": "progressive",
-		"codes": "osportal",
 		"allow_disabled": false,
 		"stages": [
 			{
 				"name": "Ordon Spring Portal Inactive",
-				"codes": "osportalinactive",
+				"codes": "osportal, osportalinactive",
 				"img": "images/Items/PortalRedOS.png",
 				"inherit_codes": false
 			},
 			{
 				"name": "Ordon Spring Portal Active",
-				"codes": "osportalactive",
+				"codes": "osportal, osportalactive",
 				"img": "images/Items/PortalBlueOS.png",
 				"inherit_codes": false
 			}
@@ -1409,18 +723,17 @@
 	{
 		"name": "South Faron Woods Portal",
 		"type": "progressive",
-		"codes": "sfwportal",
 		"allow_disabled": false,
 		"stages": [
 			{
 				"name": "South Faron Woods Portal Inactive",
-				"codes": "sfwportalinactive",
+				"codes": "sfwportal, sfwportalinactive",
 				"img": "images/Items/PortalRedSFW.png",
 				"inherit_codes": false
 			},
 			{
 				"name": "South Faron Woods Portal Active",
-				"codes": "sfwportalactive",
+				"codes": "sfwportal, sfwportalactive",
 				"img": "images/Items/PortalBlueSFW.png",
 				"inherit_codes": false
 			}
@@ -1429,18 +742,17 @@
 	{
 		"name": "North Faron Woods Portal",
 		"type": "progressive",
-		"codes": "nfwportal",
 		"allow_disabled": false,
 		"stages": [
 			{
 				"name": "North Faron Woods Portal Inactive",
-				"codes": "nfwportalinactive",
+				"codes": "nfwportal, nfwportalinactive",
 				"img": "images/Items/PortalRedNFW.png",
 				"inherit_codes": false
 			},
 			{
 				"name": "North Faron Woods Portal Active",
-				"codes": "nfwportalactive",
+				"codes": "nfwportal, nfwportalactive",
 				"img": "images/Items/PortalBlueNFW.png",
 				"inherit_codes": false
 			}
@@ -1449,18 +761,17 @@
 	{
 		"name": "Kakariko Gorge Portal",
 		"type": "progressive",
-		"codes": "kgportal",
 		"allow_disabled": false,
 		"stages": [
 			{
 				"name": "Kakariko Gorge Portal Inactive",
-				"codes": "kgportalinactive",
+				"codes": "kgportal, kgportalinactive",
 				"img": "images/Items/PortalRedKG.png",
 				"inherit_codes": false
 			},
 			{
 				"name": "Kakariko Gorge Portal Active",
-				"codes": "kgportalactive",
+				"codes": "kgportal, kgportalactive",
 				"img": "images/Items/PortalBlueKG.png",
 				"inherit_codes": false
 			}
@@ -1469,18 +780,17 @@
 	{
 		"name": "Kakariko Village Portal",
 		"type": "progressive",
-		"codes": "kvportal",
 		"allow_disabled": false,
 		"stages": [
 			{
 				"name": "Kakariko Village Portal Inactive",
-				"codes": "kwportalinactive",
+				"codes": "kvportal, kwportalinactive",
 				"img": "images/Items/PortalRedKV.png",
 				"inherit_codes": false
 			},
 			{
 				"name": "Kakariko Village Portal Active",
-				"codes": "kvportalactive",
+				"codes": "kvportal, kvportalactive",
 				"img": "images/Items/PortalBlueKV.png",
 				"inherit_codes": false
 			}
@@ -1489,18 +799,17 @@
 	{
 		"name": "Death Mountain Portal",
 		"type": "progressive",
-		"codes": "dmportal",
 		"allow_disabled": false,
 		"stages": [
 			{
 				"name": "Death Mountain Portal Inactive",
-				"codes": "dmportalinactive",
+				"codes": "dmportal, dmportalinactive",
 				"img": "images/Items/PortalRedDM.png",
 				"inherit_codes": false
 			},
 			{
 				"name": "Death Mountain Portal Active",
-				"codes": "dmportalactive",
+				"codes": "dmportal, dmportalactive",
 				"img": "images/Items/PortalBlueDM.png",
 				"inherit_codes": false
 			}
@@ -1509,18 +818,17 @@
 	{
 		"name": "Bridge of Eldin Portal",
 		"type": "progressive",
-		"codes": "boeportal",
 		"allow_disabled": false,
 		"stages": [
 			{
 				"name": "Bridge of Eldin Portal Inactive",
-				"codes": "boeportalinactive",
+				"codes": "boeportal, boeportalinactive",
 				"img": "images/Items/PortalRedBoE.png",
 				"inherit_codes": false
 			},
 			{
 				"name": "Bridge of Eldin Portal Active",
-				"codes": "boeportalactive",
+				"codes": "boeportal, boeportalactive",
 				"img": "images/Items/PortalBlueBoe.png",
 				"inherit_codes": false
 			}
@@ -1529,18 +837,17 @@
 	{
 		"name": "Zora's Domain Portal",
 		"type": "progressive",
-		"codes": "zdportal",
 		"allow_disabled": false,
 		"stages": [
 			{
 				"name": "Zora's Domain Portal Inactive",
-				"codes": "zdportalinactive",
+				"codes": "zdportal, zdportalinactive",
 				"img": "images/Items/PortalRedZD.png",
 				"inherit_codes": false
 			},
 			{
 				"name": "Zora's Domain Portal Active",
-				"codes": "zdportalactive",
+				"codes": "zdportal, zdportalactive",
 				"img": "images/Items/PortalBlueZD.png",
 				"inherit_codes": false
 			}
@@ -1549,18 +856,17 @@
 	{
 		"name": "Lake Hylia Portal",
 		"type": "progressive",
-		"codes": "lhportal",
 		"allow_disabled": false,
 		"stages": [
 			{
 				"name": "Lake Hylia Portal Inactive",
-				"codes": "lhportalinactive",
+				"codes": "lhportal, lhportalinactive",
 				"img": "images/Items/PortalRedLH.png",
 				"inherit_codes": false
 			},
 			{
 				"name": "Lake Hylia Portal Active",
-				"codes": "lhportalactive",
+				"codes": "lhportal, lhportalactive",
 				"img": "images/Items/PortalBlueLH.png",
 				"inherit_codes": false
 			}
@@ -1569,18 +875,17 @@
 	{
 		"name": "Castle Town Portal",
 		"type": "progressive",
-		"codes": "ctportal",
 		"allow_disabled": false,
 		"stages": [
 			{
 				"name": "Castle Town Portal Inactive",
-				"codes": "ctportalinactive",
+				"codes": "ctportal, ctportalinactive",
 				"img": "images/Items/PortalRedCT.png",
 				"inherit_codes": false
 			},
 			{
 				"name": "Castle Town Portal Active",
-				"codes": "ctportalactive",
+				"codes": "ctportal, ctportalactive",
 				"img": "images/Items/PortalBlueCT.png",
 				"inherit_codes": false
 			}
@@ -1589,18 +894,17 @@
 	{
 		"name": "Upper Zora's River Portal",
 		"type": "progressive",
-		"codes": "uzrportal",
 		"allow_disabled": false,
 		"stages": [
 			{
 				"name": "Upper Zora's River Portal Inactive",
-				"codes": "uzrportalinactive",
+				"codes": "uzrportal, uzrportalinactive",
 				"img": "images/Items/PortalRedUZR.png",
 				"inherit_codes": false
 			},
 			{
 				"name": "Upper Zora's River Portal Active",
-				"codes": "uzrportalactive",
+				"codes": "uzrportal, uzrportalactive",
 				"img": "images/Items/PortalBlueUZR.png",
 				"inherit_codes": false
 			}
@@ -1609,18 +913,17 @@
 	{
 		"name": "Gerudo Mesa Portal",
 		"type": "progressive",
-		"codes": "gmportal",
 		"allow_disabled": false,
 		"stages": [
 			{
 				"name": "Gerudo Mesa Portal Inactive",
-				"codes": "gmportalinactive",
+				"codes": "gmportal, gmportalinactive",
 				"img": "images/Items/PortalRedGM.png",
 				"inherit_codes": false
 			},
 			{
 				"name": "Gerudo Mesa Portal Active",
-				"codes": "gmportalactive",
+				"codes": "gmportal, gmportalactive",
 				"img": "images/Items/PortalBlueGM.png",
 				"inherit_codes": false
 			}
@@ -1629,18 +932,17 @@
 	{
 		"name": "Mirror Chamber Portal",
 		"type": "progressive",
-		"codes": "mcportal",
 		"allow_disabled": false,
 		"stages": [
 			{
 				"name": "Mirror Chamber Portal Inactive",
-				"codes": "mcportalinactive",
+				"codes": "mcportal, mcportalinactive",
 				"img": "images/Items/PortalRedMC.png",
 				"inherit_codes": false
 			},
 			{
 				"name": "Mirror Chamber Portal Active",
-				"codes": "mcportalactive",
+				"codes": "mcportal, mcportalactive",
 				"img": "images/Items/PortalBlueMC.png",
 				"inherit_codes": false
 			}
@@ -1649,18 +951,17 @@
 	{
 		"name": "Snowpeak Top Portal",
 		"type": "progressive",
-		"codes": "stportal",
 		"allow_disabled": false,
 		"stages": [
 			{
 				"name": "Snowpeak Top Portal Inactive",
-				"codes": "stportalinactive",
+				"codes": "stportal, stportalinactive",
 				"img": "images/Items/PortalRedST.png",
 				"inherit_codes": false
 			},
 			{
 				"name": "Snowpeak Top Portal Active",
-				"codes": "stportalactive",
+				"codes": "stportal, stportalactive",
 				"img": "images/Items/PortalBlueST.png",
 				"inherit_codes": false
 			}
@@ -1669,18 +970,17 @@
 	{
 		"name": "Sacred Grove Portal",
 		"type": "progressive",
-		"codes": "sgportal",
 		"allow_disabled": false,
 		"stages": [
 			{
 				"name": "Sacred Grove Portal Inactive",
-				"codes": "sgportalinactive",
+				"codes": "sgportal, sgportalinactive",
 				"img": "images/Items/PortalRedSG.png",
 				"inherit_codes": false
 			},
 			{
 				"name": "Sacred Grove Portal Active",
-				"codes": "sgportalactive",
+				"codes": "sgportal, sgportalactive",
 				"img": "images/Items/PortalBlueSG.png",
 				"inherit_codes": false
 			}
@@ -1721,54 +1021,5 @@
 		"type": "toggle",
 		"img": "images/Items/HowlingStone.png",
 		"codes": "smhowlingstone"
-	},
-	{
-		"name": "Autotab",
-		"type": "progressive",
-		"codes": "autotab",
-		"allow_disabled": false,
-		"loop": true,
-		"stages": [
-			{
-				"name": "Autotab Half",
-				"codes": "autotabhalf",
-				"img": "images/Items/AutoTabHalf.png",
-				"inherit_codes": false
-			},
-			{
-				"name": "Autotab Full",
-				"codes": "autotabfull",
-				"img": "images/Items/AutoTabFull.png",
-				"inherit_codes": false
-			},
-			{
-				"name": "Autotab Off",
-				"codes": "autotaboff",
-				"img": "images/Items/AutoTabOff.png",
-				"inherit_codes": false
-			}
-		]
-	},
-	{
-		"name": "Hint Signs",
-		"type": "progressive",
-		"codes": "hintsign, hintsigns, hints",
-		"loop": true,
-		"allow_disabled": false,
-		"initial_stage_idx": 0,
-		"stages": [
-			{
-				"name": "Hint Signs Enabled",
-				"codes": "hintson",
-				"img": "images/Items/HintsEnabled.png",
-				"inherit_codes": false
-			},
-			{
-				"name": "Hint Signs Disabled",
-				"codes": "hintsoff",
-				"img": "images/Items/HintsDisabled.png",
-				"inherit_codes": false
-			}
-		]
 	}
 ]

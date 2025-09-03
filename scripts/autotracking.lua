@@ -282,7 +282,10 @@ function setSettings()
 		elseif SLOT_DATA.Settings["Big Key Settings"] == "Start With" then
 			Tracker:FindObjectForCode("bigkeys").CurrentStage = 4
 		end
-		
+
+		Tracker:AddLayouts("layouts/archipelago_keys.json")
+		Tracker:AddLayouts("layouts/archipelago_item_grid.json")
+
 		--Disable Hint Signs for current versions
 		Tracker:FindObjectForCode("hints").CurrentStage = 1
 	end
@@ -329,6 +332,7 @@ end
 function onClear(slot_data)
 	debugAP(string.format("called onClear, slot_data:\n%s", dump_table(slot_data)))
 	SLOT_DATA = slot_data
+	print(dump_table(SLOT_DATA))
 	correctMistakes()
 	CUR_INDEX = -1
 	PLAYER_ID = Archipelago.PlayerNumber or -1
@@ -509,7 +513,7 @@ function onNotify(_key, value, old)
 				Tracker:FindObjectForCode("iliascharm").CurrentStage = Tracker:FindObjectForCode("iliascharm").CurrentStage + 1
 			end
 		elseif key == "Memory Reward" then
-			Tracker:FindObjectForCode("@Eldin Region/Kakariko/Renado's Sanctuary/Ilia Memory Reward").AvailableChestCount = Tracker:FindObjectForCode("@Eldin Region/Kakariko/Renado's Sanctuary/Ilia Memory Reward").AvailableChestCount - (value and 1 or 0)
+			Tracker:FindObjectForCode("horsecall").Active =  value
 		elseif key == "Zant Defeated" then
 			Tracker:FindObjectForCode("ptcompleted").Active = value
 		elseif key == "Stallord Defeated" then
@@ -592,6 +596,31 @@ if Highlight then
 	}
 end
 
+function splitmapchange()
+	if Tracker:FindObjectForCode("splitmap").CurrentStage == 0 then
+		Tracker:AddLayouts("layouts/layouts_maps.json")
+	elseif Tracker:FindObjectForCode("splitmap").CurrentStage == 1 then
+		Tracker:AddLayouts("layouts/split_layouts_maps.json")
+	end
+end
+function broadcastchange()
+	if Tracker:FindObjectForCode("broadcast").CurrentStage == 0 then
+		Tracker:AddLayouts("layouts/broadcast_items.json")
+	elseif Tracker:FindObjectForCode("broadcast").CurrentStage == 1 then
+		Tracker:AddLayouts("layouts/broadcast_map.json")
+	elseif Tracker:FindObjectForCode("broadcast").CurrentStage == 2 then
+		Tracker:AddLayouts("layouts/broadcast_both.json")
+	end
+end
+function hidefrommainmap()
+	if Tracker:FindObjectForCode("hidelayout").CurrentStage == 0 then
+		Tracker:AddLayouts("layouts/tracker.json")
+	elseif Tracker:FindObjectForCode("hidelayout").CurrentStage == 1 then
+		Tracker:AddLayouts("layouts/tracker_no_map.json")
+	elseif Tracker:FindObjectForCode("hidelayout").CurrentStage == 2 then
+		Tracker:AddLayouts("layouts/tracker_no_items.json")
+	end
+end
 
 Archipelago:AddClearHandler("clear handler", onClear)
 Archipelago:AddItemHandler("item handler", onItem)

@@ -1,0 +1,20 @@
+Forest Temple\nEnter
+Forest Temple\nExit
+Goron Mines\nEnter
+Goron Mines\nExit
+Lakebed Temple\nEnter
+Lakebed Temple\nExit
+Arbiter's Grounds\nEnter
+Arbiter's Grounds\nExit
+Snowpeak Ruins\nEnter Left Door
+Snowpeak Ruins\nExit Left Door
+Snowpeak Ruins\nEnter Right Door
+Snowpeak Ruins\nExit Right Door
+Temple of Time\nEnter
+Temple of Time\nExit
+City in the Sky\nEnter
+City in the Sky\nExit
+Palace of Twilight\nEnter
+Palace of Twilight\nExit
+Hyrule Castle\nEnter
+Hyrule Castle\nExit

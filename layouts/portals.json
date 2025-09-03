@@ -1,13 +1,13 @@
 {
 	"portals": {
 		"type": "container",
-		"orientation": "vertical",
+        "background": "#525260",
 		"content": [
 			{
 				"type": "itemgrid",
 				"h_alignment": "center",
-				"item_size": "101",
-				"item_margin": "1,1,1,1",
+				"item_size": 103,
+				"item_margin": "1,1",
 				"margin": "1,1,1,1",
 				"item_h_alignment": "center",
 				"item_v_alignment": "center",
@@ -39,13 +39,13 @@
 	},
 	"portals_broadcast": {
 		"type": "container",
-		"orientation": "vertical",
+        "background": "#525260",
 		"content": [
 			{
 				"type": "itemgrid",
 				"h_alignment": "center",
-				"item_size": "76",
-				"item_margin": "1,1,1,1",
+				"item_size": 79,
+				"item_margin": "1,1",
 				"margin": "1,1,1,1",
 				"item_h_alignment": "center",
 				"item_v_alignment": "center",

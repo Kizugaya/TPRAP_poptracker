@@ -1,0 +1,115 @@
+{
+	"settings_popup": {
+		"type": "dock",
+		"content": [
+			{
+				"type": "container",
+				"dock": "left",
+				"margin": "0,0,0,0",
+				"content": [
+					{
+						"type": "itemgrid",
+						"item_margin": "2,2",
+						"item_size": "75,75",
+						"rows": [
+							[
+								"glitched",
+								"poes",
+								"goldenbugs",
+								"castlerequirements",
+								"palacerequirements",
+								"faronwoods"
+							],
+							[
+								"skiplakebedentrance",
+								"skiparbitersentrance",
+								"skipsnowpeakentrance",
+								"skipcityintheskyentrance",
+								"goronminesentrance",
+								"templeoftimeentrance"
+							],
+							[
+								"skipprologue",
+								"farontwilightcleared",
+								"eldintwilightcleared",
+								"lanayrutwilightcleared",
+								"skipmdh",
+								"openmap"
+							],
+							[
+								"increasewallet",
+								"transformanywhere",
+								"bonksdodamage",
+								"damagemagnification",
+								"smallkeys",
+								"bigkeys"
+							],
+							[
+								"hints",
+								"",
+								"",
+								"",
+								"",
+								"devsettings"
+							]
+						]
+					}
+				]
+			},
+			{
+				"type": "container",
+				"dock": "left",
+				"margin": "0,0,0,0",
+				"content": [
+					{
+						"type": "itemgrid",
+						"item_margin": "2,2",
+						"item_size": "300,75",
+						"rows": [
+							[
+								"fftn",
+								"fftx"
+							],
+							[
+								"fgmn",
+								"fgmx"
+							],
+							[
+								"fltn",
+								"fltx"
+							],
+							[
+								"fagn",
+								"fagx"
+							],
+							[
+								"fsrnld",
+								"fsrxld"
+							],
+							[
+								"fsrnrd",
+								"fsrxrd"
+							],
+							[
+								"fttn",
+								"fttx"
+							],
+							[
+								"fcsn",
+								"fcsx"
+							],
+							[
+								"fptn",
+								"fptx"
+							],
+							[
+								"fhcn",
+								"fhcx"
+							]
+						]
+					}
+				]
+			}
+		]
+	}
+}

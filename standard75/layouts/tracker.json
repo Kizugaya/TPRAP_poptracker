@@ -5,7 +5,6 @@
 		"content": [
 			{
 				"type": "dock",
-				"orientation": "vertical",
 				"background": "#212121",
 				"dock": "left",
 				"content": [
@@ -14,27 +13,21 @@
 						"dock": "top",
 						"tabs": [
 							{
-								"type": "group",
-								"header": "Items",
-								"background": "#525260",
+								"title": "Items",
 								"content": {
 									"type": "layout",
 									"key": "item_grid75"
 								}
 							},
 							{
-								"type": "group",
-								"header": "Bugs",
-								"background": "#525260",
+								"title": "Bugs",
 								"content": {
 									"type": "layout",
 									"key": "bugs75"
 								}
 							},
 							{
-								"type": "group",
-								"header": "Portals",
-								"background": "#525260",
+								"title": "Portals",
 								"content": {
 									"type": "layout",
 									"key": "portals75"
@@ -49,25 +42,7 @@
 						"background": "#525260",
 						"content": {
 							"type": "layout",
-							"key": "keys75"
-						}
-					},
-					{
-						"type": "container",
-						"dock": "top",
-						"background": "#525260",
-						"content": {
-							"type": "layout",
-							"key": "bosses75"
-						}
-					},
-					{
-						"type": "container",
-						"dock": "top",
-						"background": "#525260",
-						"content": {
-							"type": "layout",
-							"key": "dungeon_keys75"
+							"key": "keys_bosses75"
 						}
 					}
 				]
