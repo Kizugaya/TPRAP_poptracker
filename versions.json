@@ -1,6 +1,14 @@
 {
 	"versions": [
 		{
+			"package_version": "0.8.1",
+			"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.8.1/TPRAP_poptracker_v0.8.1.zip",
+			"sha256": "9B8DCF7B3350A9439F359F80754599B4353330BDCD13A43F3EEB635A8D9AE8E8",
+			"changelog": [
+				"Missed Autotracking for Door of Time Setting"
+			]
+		},
+		{
 			"package_version": "0.8.0",
 			"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.8.0/TPRAP_poptracker_v0.8.0.zip",
 			"sha256": "0B5024AB6740111A37FDE4D3338C6252DC21BD094658CD59B08F7150FF384498",
