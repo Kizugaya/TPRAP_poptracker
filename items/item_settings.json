@@ -604,7 +604,7 @@
 		"type": "progressive",
 		"loop": true,
 		"allow_disabled": false,
-		"initial_stage_idx": 0,
+		"initial_stage_idx": 1,
 		"stages": [
 			{
 				"name": "Door of Time Open",

@@ -282,6 +282,11 @@ function setSettings()
 		elseif SLOT_DATA.Settings["Big Key Settings"] == "Start With" then
 			Tracker:FindObjectForCode("bigkeys").CurrentStage = 4
 		end
+		if SLOT_DATA.Settings["Open Door of Time"] == "Yes" then
+			Tracker:FindObjectForCode("dooroftime").CurrentStage = 0
+		elseif SLOT_DATA.Settings["Open Door of Time"] == "No" then
+			Tracker:FindObjectForCode("dooroftime").CurrentStage = 1
+		end
 
 		Tracker:AddLayouts("layouts/archipelago_keys.json")
 		Tracker:AddLayouts("layouts/archipelago_item_grid.json")
