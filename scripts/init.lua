@@ -3,7 +3,6 @@ ENABLE_DEBUG_LOG = true
 
 ScriptHost:LoadScript("scripts/control.lua")
 ScriptHost:LoadScript("scripts/autotracking.lua")
-ScriptHost:LoadScript("scripts/1.3_settings.lua")
 
 
 
@@ -11,7 +10,6 @@ ScriptHost:LoadScript("scripts/1.3_settings.lua")
 Tracker:AddItems("items/items.json")
 Tracker:AddItems("items/dungeonnames.json")
 Tracker:AddItems("items/item_settings.json")
-Tracker:AddItems("items/1.3settings.json")
 
 
 
