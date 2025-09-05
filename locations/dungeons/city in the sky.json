@@ -268,7 +268,7 @@
 				"name": "2F",
 				"children": [
 					{
-						"name": "East Wing After Dinalfos Ledge Chest",
+						"name": "East Wing After Dinalfos Alcove Chest",
 						"map_locations": [
 							{
 								"map": "cs2f",
@@ -292,7 +292,7 @@
 						]
 					},
 					{
-						"name": "East Wing After Dinalfos Alcove Chest",
+						"name": "East Wing After Dinalfos Ledge Chest",
 						"map_locations": [
 							{
 								"map": "cs2f",
