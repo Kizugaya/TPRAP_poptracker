@@ -143,6 +143,9 @@
 				"name": "Poes3F",
 				"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
 				"chest_opened_img": "images/Items/PoeSoul.png",
+				"visibility_rules": [
+					"poeson"
+				],
 				"children": [
 					{
 						"name": "Poe Behind Gate",
@@ -416,6 +419,9 @@
 				"name": "Poes7F",
 				"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
 				"chest_opened_img": "images/Items/PoeSoul.png",
+				"visibility_rules": [
+					"poeson"
+				],
 				"children": [
 					{
 						"name": "Poe Above Scales",

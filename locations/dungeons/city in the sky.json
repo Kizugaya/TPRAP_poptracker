@@ -415,6 +415,9 @@
 				"name": "Poes2F",
 				"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
 				"chest_opened_img": "images/Items/PoeSoul.png",
+				"visibility_rules": [
+					"poeson"
+				],
 				"children": [
 					{
 						"name": "Garden Island Poe",
@@ -620,6 +623,9 @@
 				"name": "Poes4F",
 				"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
 				"chest_opened_img": "images/Items/PoeSoul.png",
+				"visibility_rules": [
+					"poeson"
+				],
 				"children": [
 					{
 						"name": "Poe Above Central Fan",
