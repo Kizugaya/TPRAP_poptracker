@@ -83,3 +83,30 @@ ITEM_MAPPING = {
 	[BASE + 131] = {"trapsamount", "consumable"},
 	[BASE + 133] = {"giantbombs", "toggle"}
 }
+
+BUGS_ARRAY = {
+		{"@Castle Town/Agitha's Castle/Male Ant", "bug0"},
+		{"@Castle Town/Agitha's Castle/Female Ant", "bug1"},
+		{"@Castle Town/Agitha's Castle/Male Dayfly", "bug2"},
+		{"@Castle Town/Agitha's Castle/Female Dayfly", "bug3"},
+		{"@Castle Town/Agitha's Castle/Male Beetle", "bug4"},
+		{"@Castle Town/Agitha's Castle/Female Beetle", "bug5"},
+		{"@Castle Town/Agitha's Castle/Male Mantis", "bug6"},
+		{"@Castle Town/Agitha's Castle/Female Mantis", "bug7"},
+		{"@Castle Town/Agitha's Castle/Male Stag Beetle", "bug8"},
+		{"@Castle Town/Agitha's Castle/Female Stag Beetle", "bug9"},
+		{"@Castle Town/Agitha's Castle/Male Pillbug", "bug10"},
+		{"@Castle Town/Agitha's Castle/Female Pillbug", "bug11"},
+		{"@Castle Town/Agitha's Castle/Male Butterfly", "bug12"},
+		{"@Castle Town/Agitha's Castle/Female Butterfly", "bug13"},
+		{"@Castle Town/Agitha's Castle/Male Ladybug", "bug14"},
+		{"@Castle Town/Agitha's Castle/Female Ladybug", "bug15"},
+		{"@Castle Town/Agitha's Castle/Male Snail", "bug16"},
+		{"@Castle Town/Agitha's Castle/Female Snail", "bug17"},
+		{"@Castle Town/Agitha's Castle/Male Phasmid", "bug18"},
+		{"@Castle Town/Agitha's Castle/Female Phasmid", "bug19"},
+		{"@Castle Town/Agitha's Castle/Male Grasshopper", "bug20"},
+		{"@Castle Town/Agitha's Castle/Female Grasshopper", "bug21"},
+		{"@Castle Town/Agitha's Castle/Male Dragonfly", "bug22"},
+		{"@Castle Town/Agitha's Castle/Female Dragonfly", "bug23"}
+	}

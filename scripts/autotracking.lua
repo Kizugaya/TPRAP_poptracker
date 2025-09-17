@@ -1,10 +1,11 @@
+---@diagnostic disable: undefined-field
 -- Configuration --------------------------------------
 AUTOTRACKER_ENABLE_ITEM_TRACKING = true
 AUTOTRACKER_ENABLE_LOCATION_TRACKING = true
 AUTOTRACKER_ENABLE_DEBUG_LOGGING = true and ENABLE_DEBUG_LOG
 AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP = true and AUTOTRACKER_ENABLE_DEBUG_LOGGING
 -------------------------------------------------------
-function debugLog()
+function DebugLog()
 	print("")
 	print("Active Auto-Tracker Configuration")
 	print("---------------------------------------------------------------------")
@@ -17,7 +18,7 @@ function debugLog()
 	print("---------------------------------------------------------------------")
 	print("")
 end
-function debugAP(msg)
+function DebugAP(msg)
 	if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
 		print(msg)
 	end
@@ -32,7 +33,7 @@ ScriptHost:LoadScript("scripts/region_mapping.lua")
 CUR_INDEX = -1
 SLOT_DATA = nil
 
-function dump_table(o, depth)
+function Dump_table(o, depth)
 	if depth == nil then
 		depth = 0
 	end
@@ -44,7 +45,7 @@ function dump_table(o, depth)
 			if type(k) ~= 'number' then
 				k = '"' .. k .. '"'
 			end
-			s = s .. tabs2 .. '[' .. k .. '] = ' .. dump_table(v, depth + 1) .. ',\n'
+			s = s .. tabs2 .. '[' .. k .. '] = ' .. Dump_table(v, depth + 1) .. ',\n'
 		end
 		return s .. tabs .. '}'
 	else
@@ -52,10 +53,10 @@ function dump_table(o, depth)
 	end
 end
 
-function clearItems()
+function ClearItems()
 	for _, v in pairs(ITEM_MAPPING) do
 		if v[1] and v[2] then
-			debugAP(string.format("onClear: clearing item '%s' of type '%s'", v[1], v[2]))
+			DebugAP(string.format("onClear: clearing item '%s' of type '%s'", v[1], v[2]))
 			local obj = Tracker:FindObjectForCode(v[1])
 			if obj then
 				if v[2] == "toggle" then
@@ -66,10 +67,10 @@ function clearItems()
 				elseif v[2] == "consumable" then
 					obj.AcquiredCount = 0
 				else 
-					debugAP(string.format("onClear: unknown item type '%s' for code '%s'", v[2], v[1]))
+					DebugAP(string.format("onClear: unknown item type '%s' for code '%s'", v[2], v[1]))
 				end
 			else
-				debugAP(string.format("onClear: could not find object for code '%s'", v[1]))
+				DebugAP(string.format("onClear: could not find object for code '%s'", v[1]))
 			end
 		end
 	end
@@ -101,10 +102,10 @@ function clearItems()
 	Tracker:FindObjectForCode("smhowlingstone").Active = false
 	Tracker:FindObjectForCode("hvhowlingstone").Active = false
 end
-function clearLocations()
+function ClearLocations()
 	for _, v in pairs(LOCATION_MAPPING) do
 		if v[1] then
-			debugAP(string.format("onClear: clearing location '%s'", v[1]))
+			DebugAP(string.format("onClear: clearing location '%s'", v[1]))
 			local obj = Tracker:FindObjectForCode(v[1])
 			if obj then
 				if v[1]:sub(1, 1) == "@" then
@@ -113,13 +114,13 @@ function clearLocations()
 					obj.Active = false
 				end
 			else
-				debugAP(string.format("onClear: could not find object for code '%s'", v[1]))
+				DebugAP(string.format("onClear: could not find object for code '%s'", v[1]))
 			end
 		end
 	end
 	Tracker:FindObjectForCode("@Hyrule Castle/5F/Victory/").AvailableChestCount = Tracker:FindObjectForCode("@Hyrule Castle/5F/Victory/").ChestCount
 end
-function clearPortals()
+function ClearPortals()
 	Tracker:FindObjectForCode("osportal").CurrentStage = 0
 	Tracker:FindObjectForCode("sfwportal").CurrentStage = 0
 	Tracker:FindObjectForCode("nfwportal").CurrentStage = 0
@@ -136,7 +137,7 @@ function clearPortals()
 	Tracker:FindObjectForCode("stportal").CurrentStage = 0
 	Tracker:FindObjectForCode("sgportal").CurrentStage = 0
 end
-function setSettings()
+function SetSettings()
 	if SLOT_DATA["World Version"] == "v0.2.2" or SLOT_DATA["World Version"] == "v0.2.1" or SLOT_DATA["World Version"] == "v0.2.0" or SLOT_DATA["World Version"] == "v0.1.5" or SLOT_DATA["World Version"] == "v0.1.3" or SLOT_DATA["World Version"] == "v0.1.2" or SLOT_DATA["World Version"] == "v0.1.1" or SLOT_DATA["World Version"] == "v0.1" then
 		--skip if version is less than v0.2.3
 	else
@@ -295,7 +296,7 @@ function setSettings()
 		Tracker:FindObjectForCode("hints").CurrentStage = 1
 	end
 end
-function initPortals()
+function InitPortals()
 	if Tracker:FindObjectForCode("openmap").CurrentStage == 0 then
 		Tracker:FindObjectForCode("osportal").CurrentStage = 1
 		Tracker:FindObjectForCode("sfwportal").CurrentStage = 1
@@ -310,18 +311,18 @@ function initPortals()
 		Tracker:FindObjectForCode("sgportal").CurrentStage = 1
 	end
 end
-function initItems()
+function InitItems()
 	Tracker:FindObjectForCode("faronvesseloflight").Active = true
 	Tracker:FindObjectForCode("eldinvesseloflight").Active = true
 	Tracker:FindObjectForCode("lanayruvesseloflight").Active = true
 	Tracker:FindObjectForCode("faronwoodskey").Active = true
 end
-function initMap()
+function InitMap()
 	Tracker:UiHint("ActivateTab", "Full Map")
 	Tracker:UiHint("ActivateTab", "Overworld")
 	Tracker:UiHint("ActivateTab", "Main Map")
 end
-function correctMistakes()
+function CorrectMistakes()
 	if SLOT_DATA["World Version"] == "v0.2.3" then
 		SLOT_DATA.Settings["Lakebed Entrance Requirements"] = SLOT_DATA.Settings["Lakebed Entrance Requirements"] or SLOT_DATA.Settings["Lakebed Enterance Requirements"]
 		SLOT_DATA.Settings["Arbiters Grounds Entrance Requirements"] = SLOT_DATA.Settings["Arbiters Grounds Entrance Requirements"] or SLOT_DATA.Settings["Arbiters Grounds Requirements"]
@@ -334,11 +335,11 @@ function correctMistakes()
 end
 
 
-function onClear(slot_data)
-	debugAP(string.format("called onClear, slot_data:\n%s", dump_table(slot_data)))
+function OnClear(slot_data)
+	DebugAP(string.format("called onClear, slot_data:\n%s", Dump_table(slot_data)))
 	SLOT_DATA = slot_data
-	print(dump_table(SLOT_DATA))
-	correctMistakes()
+	print(Dump_table(SLOT_DATA))
+	CorrectMistakes()
 	CUR_INDEX = -1
 	PLAYER_ID = Archipelago.PlayerNumber or -1
 	TEAM_NUMBER = Archipelago.TeamNumber or 0
@@ -362,17 +363,17 @@ function onClear(slot_data)
 	Archipelago:SetNotify(HINTS_ID)
 	Archipelago:Get(HINTS_ID)
 	
-	clearItems()
-	clearLocations()
-	clearPortals()
-	setSettings()
-	initPortals()
-	initItems()
-	initMap()
+	ClearItems()
+	ClearLocations()
+	ClearPortals()
+	SetSettings()
+	InitPortals()
+	InitItems()
+	InitMap()
 end
 
-function onItem(index, item_id, item_name, player_number)
-	debugAP(string.format("called onItem: index:'%s' id:'%s' name:'%s' player:'%s' cur_index:'%s'", index, item_id, item_name, player_number, CUR_INDEX))
+function OnItem(index, item_id, item_name, player_number)
+	DebugAP(string.format("called onItem: index:'%s' id:'%s' name:'%s' player:'%s' cur_index:'%s'", index, item_id, item_name, player_number, CUR_INDEX))
 	if not AUTOTRACKER_ENABLE_ITEM_TRACKING then
 		return
 	end
@@ -382,10 +383,10 @@ function onItem(index, item_id, item_name, player_number)
 	CUR_INDEX = index;
 	local v = ITEM_MAPPING[item_id]
 	if not v then
-		debugAP(string.format("onItem: could not find item mapping for id %s", item_id))
+		DebugAP(string.format("onItem: could not find item mapping for id %s", item_id))
 		return
 	end
-	debugAP(string.format("onItem: code: %s, type %s", v[1], v[2]))
+	DebugAP(string.format("onItem: code: %s, type %s", v[1], v[2]))
 	if not v[1] then
 		return
 	end
@@ -405,21 +406,21 @@ function onItem(index, item_id, item_name, player_number)
 		elseif v[2] == "consumable" then
 			obj.AcquiredCount = obj.AcquiredCount + obj.Increment
 		else
-			debugAP(string.format("onItem: unknown item type %s for code %s", v[2], v[1]))
+			DebugAP(string.format("onItem: unknown item type %s for code %s", v[2], v[1]))
 		end
 	else
-		debugAP(string.format("onItem: could not find object for code %s", v[1]))
+		DebugAP(string.format("onItem: could not find object for code %s", v[1]))
 	end
 end
 
-function onLocation(location_id, location_name)
-	debugAP(string.format("called onLocation: id:'%s' name:'%s'", location_id, location_name))
+function OnLocation(location_id, location_name)
+	DebugAP(string.format("called onLocation: id:'%s' name:'%s'", location_id, location_name))
 	if not AUTOTRACKER_ENABLE_LOCATION_TRACKING then
 		return
 	end
 	local v = LOCATION_MAPPING[location_id]
 	if not v then
-		debugAP(string.format("onLocation: could not find location mapping for id %s", location_id))
+		DebugAP(string.format("onLocation: could not find location mapping for id %s", location_id))
 	end
 	if not v[1] then
 		return
@@ -432,26 +433,26 @@ function onLocation(location_id, location_name)
 			obj.Active = true
 		end
 	else
-		debugAP(string.format("onLocation: could not find object for code %s", v[1]))
+		DebugAP(string.format("onLocation: could not find object for code %s", v[1]))
 	end
 end
 
-function onScout(location_id, location_name, item_id, item_name, item_player)
-	debugAP(string.format("called onScout: location:'%s', '%s' item:%s, %s, %s", location_id, location_name, item_id, item_name, item_player))
+function OnScout(location_id, location_name, item_id, item_name, item_player)
+	DebugAP(string.format("called onScout: location:'%s', '%s' item:%s, %s, %s", location_id, location_name, item_id, item_name, item_player))
 end
 
-function onBounce(json)
-	debugAP(string.format("called onBounce: %s", dump_table(json)))
+function OnBounce(json)
+	DebugAP(string.format("called onBounce: %s", Dump_table(json)))
 end
 
-function onNotify(_key, value, old)
-	debugAP(string.format("called onNotify: key:'%s' value:'%s' old_value:'%s'", _key, value, old))
+function OnNotify(_key, value, old)
+	DebugAP(string.format("called onNotify: key:'%s' value:'%s' old_value:'%s'", _key, value, old))
 	local key = _key
 	if value == old then return end
 	--if _key == string.find(_key, "_read_client_status_.*_.*") then
-		_, _, team, player = string.find(_key, "_read_client_status_(.*)_(.*)")
+		local _, _, team, player = string.find(_key, "_read_client_status_(.*)_(.*)")
 		if team == ""..TEAM_NUMBER and player == ""..PLAYER_ID then
-			victory = value == 30
+			local victory = value == 30
 			Tracker:FindObjectForCode("hccompleted").Active = victory
 			Tracker:FindObjectForCode("@Hyrule Castle/5F/Victory/").AvailableChestCount = Tracker:FindObjectForCode("@Hyrule Castle/5F/Victory/").AvailableChestCount - (victory and 1 or 0)
 		end
@@ -558,9 +559,9 @@ function onNotify(_key, value, old)
 	end
 end
 
-function onNotifyLaunch(key, value)
-	debugAP(string.format("called onNotifyLaunch: key:'%s', value:'%s'", key, value))
-	onNotify(key, value)
+function OnNotifyLaunch(key, value)
+	DebugAP(string.format("called onNotifyLaunch: key:'%s', value:'%s'", key, value))
+	OnNotify(key, value)
 end
 
 
@@ -572,7 +573,7 @@ function UpdateHints(location_id, status)
 		if section then
 			section.Highlight = PriorityToHighlight[status]
 		else
-			debugAP(string.format("No object found for code: '%s'", location))
+			DebugAP(string.format("No object found for code: '%s'", location))
 		end
 	end
 end
@@ -580,12 +581,12 @@ function ClearHints(locationID)
 	if not Highlight then return end
 	local locations = LOCATION_MAPPING[locationID]
 	if not locations then return end
-	for _, locations in ipairs(locations) do
+	for _, location in ipairs(locations) do
 		local section = Tracker:FindObjectForCode(location)
 		if section then
 			section.Highlight = Highlight.none
 		else
-			debugAP(string.format("No object found for code: '%s'", location))
+			DebugAP(string.format("No object found for code: '%s'", location))
 		end
 	end
 end
@@ -601,14 +602,14 @@ if Highlight then
 	}
 end
 
-function splitmapchange()
+function Splitmapchange()
 	if Tracker:FindObjectForCode("splitmap").CurrentStage == 0 then
 		Tracker:AddLayouts("layouts/layouts_maps.json")
 	elseif Tracker:FindObjectForCode("splitmap").CurrentStage == 1 then
 		Tracker:AddLayouts("layouts/split_layouts_maps.json")
 	end
 end
-function broadcastchange()
+function Broadcastchange()
 	if Tracker:FindObjectForCode("broadcast").CurrentStage == 0 then
 		Tracker:AddLayouts("layouts/broadcast_items.json")
 	elseif Tracker:FindObjectForCode("broadcast").CurrentStage == 1 then
@@ -617,7 +618,7 @@ function broadcastchange()
 		Tracker:AddLayouts("layouts/broadcast_both.json")
 	end
 end
-function hidefrommainmap()
+function Hidefrommainmap()
 	if Tracker:FindObjectForCode("hidelayout").CurrentStage == 0 then
 		Tracker:AddLayouts("layouts/tracker.json")
 	elseif Tracker:FindObjectForCode("hidelayout").CurrentStage == 1 then
@@ -626,35 +627,9 @@ function hidefrommainmap()
 		Tracker:AddLayouts("layouts/tracker_no_items.json")
 	end
 end
-function bugsamountchange()
+function Bugsamountchange()
 	local n = 0
-	bugsArray = {
-		{"@Castle Town/Agitha's Castle/Male Ant", "bug0"},
-		{"@Castle Town/Agitha's Castle/Female Ant", "bug1"},
-		{"@Castle Town/Agitha's Castle/Male Dayfly", "bug2"},
-		{"@Castle Town/Agitha's Castle/Female Dayfly", "bug3"},
-		{"@Castle Town/Agitha's Castle/Male Beetle", "bug4"},
-		{"@Castle Town/Agitha's Castle/Female Beetle", "bug5"},
-		{"@Castle Town/Agitha's Castle/Male Mantis", "bug6"},
-		{"@Castle Town/Agitha's Castle/Female Mantis", "bug7"},
-		{"@Castle Town/Agitha's Castle/Male Stag Beetle", "bug8"},
-		{"@Castle Town/Agitha's Castle/Female Stag Beetle", "bug9"},
-		{"@Castle Town/Agitha's Castle/Male Pillbug", "bug10"},
-		{"@Castle Town/Agitha's Castle/Female Pillbug", "bug11"},
-		{"@Castle Town/Agitha's Castle/Male Butterfly", "bug12"},
-		{"@Castle Town/Agitha's Castle/Female Butterfly", "bug13"},
-		{"@Castle Town/Agitha's Castle/Male Ladybug", "bug14"},
-		{"@Castle Town/Agitha's Castle/Female Ladybug", "bug15"},
-		{"@Castle Town/Agitha's Castle/Male Snail", "bug16"},
-		{"@Castle Town/Agitha's Castle/Female Snail", "bug17"},
-		{"@Castle Town/Agitha's Castle/Male Phasmid", "bug18"},
-		{"@Castle Town/Agitha's Castle/Female Phasmid", "bug19"},
-		{"@Castle Town/Agitha's Castle/Male Grasshopper", "bug20"},
-		{"@Castle Town/Agitha's Castle/Female Grasshopper", "bug21"},
-		{"@Castle Town/Agitha's Castle/Male Dragonfly", "bug22"},
-		{"@Castle Town/Agitha's Castle/Female Dragonfly", "bug23"}
-	}
-	for _, v in pairs(bugsArray) do
+	for _, v in pairs(BUGS_ARRAY) do
 		if Tracker:FindObjectForCode(v[2]).Active and Tracker:FindObjectForCode(v[1]).AvailableChestCount == 1 then
 			n = n + 1
 		end
@@ -663,10 +638,10 @@ function bugsamountchange()
 		Tracker:FindObjectForCode("bugsamount").AcquiredCount = n
 	end
 end
-Archipelago:AddClearHandler("clear handler", onClear)
-Archipelago:AddItemHandler("item handler", onItem)
-Archipelago:AddLocationHandler("location handler", onLocation)
-Archipelago:AddScoutHandler("scout handler", onScout)
-Archipelago:AddBouncedHandler("bounce handler", onBounce)
-Archipelago:AddSetReplyHandler("notify handler", onNotify)
-Archipelago:AddRetrievedHandler("notify launch handler", onNotifyLaunch)
+Archipelago:AddClearHandler("clear handler", OnClear)
+Archipelago:AddItemHandler("item handler", OnItem)
+Archipelago:AddLocationHandler("location handler", OnLocation)
+Archipelago:AddScoutHandler("scout handler", OnScout)
+Archipelago:AddBouncedHandler("bounce handler", OnBounce)
+Archipelago:AddSetReplyHandler("notify handler", OnNotify)
+Archipelago:AddRetrievedHandler("notify launch handler", OnNotifyLaunch)
