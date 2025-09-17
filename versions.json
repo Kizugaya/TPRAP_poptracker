@@ -1,6 +1,16 @@
 {
 	"versions": [
 		{
+			"package_version": "0.9.0",
+			"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.9.0/TPRAP_poptracker_v0.9.0.zip",
+			"sha256": "E9BD5FFDB04DB3BC5444D0D8E72B08C880AE759F3CA1AC6E07A662D885A45E99",
+			"changelog": [
+				"Fixed Poes in Dungeons",
+				"Added Agitha Remaining Checks",
+				"Added Traps Counter"
+			]
+		},
+		{
 			"package_version": "0.8.3",
 			"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.8.3/TPRAP_poptracker_v0.8.3.zip",
 			"sha256": "8EAF2F11280EFE7D7C8DB067AA2B640E2E22D590B194BEB495548DBC845D53B8",
