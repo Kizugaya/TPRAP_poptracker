@@ -80,5 +80,6 @@ ITEM_MAPPING = {
 	[BASE + 124] = {"poesoul", "consumable"},
 	[BASE + 129] = {"pumpkin", "toggle"},
 	[BASE + 130] = {"cheese", "toggle"},
+	[BASE + 131] = {"trapsamount", "consumable"},
 	[BASE + 133] = {"giantbombs", "toggle"}
 }

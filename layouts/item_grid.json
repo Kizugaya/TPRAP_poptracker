@@ -56,11 +56,13 @@
 						"medicinescent"
 					],
 					[
+						"bugsamount",
 						"poesoul",
 						"heartpiece",
 						"heartcontainer",
 						"fusedshadow",
-						"mirrorshard"
+						"mirrorshard",
+						"trapsamount"
 					]
 				]
 			}
@@ -123,11 +125,13 @@
 						"medicinescent"
 					],
 					[
+						"bugsamount",
 						"poesoul",
 						"heartpiece",
 						"heartcontainer",
 						"fusedshadow",
-						"mirrorshard"
+						"mirrorshard",
+						"trapsamount"
 					]
 				]
 			}

@@ -49,13 +49,13 @@
 						"magicarmor"
 					],
 					[
-						"youthsscent",
-						"iliascent",
+						"bugsamount",
 						"poescent",
 						"reekfishscent",
 						"medicinescent",
 						"gatekeys",
-						"bckey"
+						"bckey",
+						"trapsamount"
 					],
 					[
 						"poesoul",
@@ -120,13 +120,13 @@
 						"magicarmor"
 					],
 					[
-						"youthsscent",
-						"iliascent",
+						"bugsamount",
 						"poescent",
 						"reekfishscent",
 						"medicinescent",
 						"gatekeys",
-						"bckey"
+						"bckey",
+						"trapsamount"
 					],
 					[
 						"poesoul",

@@ -702,6 +702,22 @@
 		"img": "images/Items/Bug23.png"
 	},
 	{
+		"name": "Agitha Checks Available",
+		"type": "consumable",
+		"codes": "bugsnumber, bugsamount, bugamount",
+		"max_quantity": 24,
+		"img": "images/Items/AgithaAvailable.png",
+		"disabled_img": "images/Items/AgithaUnavailable.png",
+		"disabled_img_mods": "",
+		"overlay_background": "#000000"
+	},
+	{
+		"name": "Traps Amount",
+		"type": "consumable",
+		"codes": "trapsnumber, trapsamount, trapamount",
+		"img": "images/Items/Trap.png"
+	},
+	{
 		"name": "Ordon Spring Portal",
 		"type": "progressive",
 		"allow_disabled": false,

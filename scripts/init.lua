@@ -66,6 +66,4 @@ Tracker:AddLocations("locations/dungeons/palace of twilight.json")
 Tracker:AddLocations("locations/dungeons/hyrule castle.json")
 
 
-ScriptHost:AddWatchForCode("Split Map", "splitmap", splitmapchange)
-ScriptHost:AddWatchForCode("Broadcast", "broadcast", broadcastchange)
-ScriptHost:AddWatchForCode("HideLayout", "hidelayout", hidefrommainmap)
+ScriptHost:LoadScript("scripts/code_watchers.lua")

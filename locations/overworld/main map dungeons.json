@@ -1083,22 +1083,6 @@
 						]
 					}
 				]
-			},
-			{
-				"name": "Go Mode",
-				"map_locations": [
-					{
-						"map": "overworld",
-						"x": 963,
-						"y": 666,
-						"size": 88
-					}
-				],
-				"sections": [
-					{
-						"ref": "Hyrule Castle/5F/Victory/"
-					}
-				]
 			}
 		]
 	}
