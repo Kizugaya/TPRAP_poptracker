@@ -294,6 +294,15 @@ LOCATION_MAPPING = {
 	[BASE + 224] = {"@Eldin Region/Eldin Field Bugs/Male Grasshopper/"},
 	[BASE + 223] = {"@Eldin Region/Eldin Field Bugs/Female Grasshopper/"},
 	[BASE + 214] = {"@Eldin Region/Eldin Field Bugs/Male Phasmid/"},
+	--North Eldin Locations
+	[BASE + 216] = {"@Eldin Region/Eldin Field/Owl Statue Sky Character/"},
+	[BASE + 236] = {"@Eldin Region/Eldin Field/Stockcave/Upper Chest"},
+	[BASE + 234] = {"@Eldin Region/Eldin Field/Stockcave/Lantern Chest"},
+	[BASE + 235] = {"@Eldin Region/Eldin Field/Stockcave/Lowest Chest"},
+	[BASE + 225] = {"@Eldin Region/Eldin Field/Stalfos Grotto/Left Small Chest"},
+	[BASE + 226] = {"@Eldin Region/Eldin Field/Stalfos Grotto/Right Small Chest"},
+	[BASE + 227] = {"@Eldin Region/Eldin Field/Stalfos Grotto/Stalfos Chest"},
+	[BASE + 213] = {"@Eldin Region/Eldin Field Bugs/Female Phasmid/"},
 	
 	--Faron Field Locations
 	[BASE + 268] = {"@Faron Region/Faron Field/Corner Grotto/Left Chest"},
@@ -465,16 +474,6 @@ LOCATION_MAPPING = {
 	[BASE + 416] = {"@Lanayru Region/Lanayru Field Poes/Grotto/Right Poe"},
 	[BASE + 413] = {"@Lanayru Region/Lanayru Field Bugs/Female Stag Beetle/"},
 	[BASE + 414] = {"@Lanayru Region/Lanayru Field Bugs/Male Stag Beetle/"},
-	
-	--North Eldin Locations
-	[BASE + 216] = {"@Eldin Region/North Eldin/Owl Statue Sky Character/"},
-	[BASE + 236] = {"@Eldin Region/North Eldin/Stockcave/Upper Chest"},
-	[BASE + 234] = {"@Eldin Region/North Eldin/Stockcave/Lantern Chest"},
-	[BASE + 235] = {"@Eldin Region/North Eldin/Stockcave/Lowest Chest"},
-	[BASE + 225] = {"@Eldin Region/North Eldin/Stalfos Grotto/Left Small Chest"},
-	[BASE + 226] = {"@Eldin Region/North Eldin/Stalfos Grotto/Right Small Chest"},
-	[BASE + 227] = {"@Eldin Region/North Eldin/Stalfos Grotto/Stalfos Chest"},
-	[BASE + 213] = {"@Eldin Region/North Eldin Bugs/Female Phasmid/"},
 	
 	--Ordon Locations
 	[BASE + 464] = {"@Ordon/Link's House/Wooden Sword Chest"},

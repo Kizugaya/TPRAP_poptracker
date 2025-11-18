@@ -23,5 +23,8 @@ SERVER_COPY = {
     "Blizzeta Defeated",
     "Armogohma Defeated",
     "Argorok Defeated",
-    "Zant Defeated"
+    "Zant Defeated",
+    "Current Stage",
+    "Current Room",
+    "Current Floor"
 }

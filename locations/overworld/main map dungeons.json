@@ -146,6 +146,13 @@
 								"y": 1234,
 								"size": 40,
 								"border_thickness": 8
+							},
+							{
+								"map": "lr",
+								"x": 300,
+								"y": 1895,
+								"size": 40,
+								"border_thickness": 8
 							}
 						],
 						"sections": [
@@ -283,6 +290,13 @@
 								"y": 62,
 								"size": 40,
 								"border_thickness": 8
+							},
+							{
+								"map": "fr",
+								"x": 93,
+								"y": 1171,
+								"size": 40,
+								"border_thickness": 8
 							}
 						],
 						"sections": [
@@ -378,6 +392,13 @@
 								"map": "dm",
 								"x": 270,
 								"y": 183,
+								"size": 40,
+								"border_thickness": 8
+							},
+							{
+								"map": "er",
+								"x": 1261,
+								"y": 995,
 								"size": 40,
 								"border_thickness": 8
 							}
@@ -491,6 +512,13 @@
 								"map": "ct",
 								"x": 375,
 								"y": 0,
+								"size": 40,
+								"border_thickness": 8
+							},
+							{
+								"map": "lr",
+								"x": 866,
+								"y": 1311,
 								"size": 40,
 								"border_thickness": 8
 							}
@@ -628,6 +656,13 @@
 								"map": "lh",
 								"x": 1260,
 								"y": 740,
+								"size": 40,
+								"border_thickness": 8
+							},
+							{
+								"map": "lr",
+								"x": 432,
+								"y": 1726,
 								"size": 40,
 								"border_thickness": 8
 							}

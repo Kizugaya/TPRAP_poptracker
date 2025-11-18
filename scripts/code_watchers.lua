@@ -1,6 +1,7 @@
 ScriptHost:AddWatchForCode("Split Map", "splitmap", Splitmapchange)
 ScriptHost:AddWatchForCode("Broadcast", "broadcast", Broadcastchange)
 ScriptHost:AddWatchForCode("HideLayout", "hidelayout", Hidefrommainmap)
+ScriptHost:AddWatchForCode("APLayout", "aplayout", APLayoutchange)
 
 ScriptHost:AddWatchForCode("Bugs Amount", "bugsamount", Bugsamountchange)
 ScriptHost:AddWatchForCode("Bugs Amount0", "bug0", Bugsamountchange)

@@ -624,6 +624,7 @@
 		"name": "Autotab",
 		"type": "progressive",
 		"allow_disabled": false,
+		"initial_stage_idx": 1,
 		"loop": true,
 		"stages": [
 			{
@@ -735,6 +736,27 @@
 				"name": "Hint Signs Disabled",
 				"codes": "hintsign, hintsigns, hints, hintsoff",
 				"img": "images/Settings/HintsDisabled.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	{
+		"name": "AP Layout",
+		"type": "progressive",
+		"loop": true,
+		"allow_disabled": false,
+		"initial_stage_idx": 0,
+		"stages": [
+			{
+				"name": "Normal Layout",
+				"codes": "aplayout, aplayoutdisabled",
+				"img": "images/Settings/APLayoutDisabled.png",
+				"inherit_codes": false
+			},
+			{
+				"name": "AP Layout",
+				"codes": "aplayout, aplayoutenabled",
+				"img": "images/Settings/APLayoutEnabled.png",
 				"inherit_codes": false
 			}
 		]

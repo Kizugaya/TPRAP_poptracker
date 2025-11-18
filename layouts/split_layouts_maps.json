@@ -28,6 +28,17 @@
                                         "type": "tabbed",
                                         "tabs": [
                                             {
+                                                "title": "Faron Region",
+                                                "content": [
+                                                    {
+                                                        "type": "map",
+                                                        "maps": [
+                                                            "fr"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
                                                 "title": "Faron Woods",
                                                 "content": [
                                                     {
@@ -57,6 +68,17 @@
                                     "content": {
                                         "type": "tabbed",
                                         "tabs": [
+                                            {
+                                                "title": "Eldin Region",
+                                                "content": [
+                                                    {
+                                                        "type": "map",
+                                                        "maps": [
+                                                            "er"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
                                             {
                                                 "title": "Kakariko Gorge",
                                                 "content": [
@@ -102,17 +124,6 @@
                                                 ]
                                             },
                                             {
-                                                "title": "North Eldin",
-                                                "content": [
-                                                    {
-                                                        "type": "map",
-                                                        "maps": [
-                                                            "ne"
-                                                        ]
-                                                    }
-                                                ]
-                                            },
-                                            {
                                                 "title": "Hidden Village",
                                                 "content": [
                                                     {
@@ -131,6 +142,17 @@
                                     "content": {
                                         "type": "tabbed",
                                         "tabs": [
+                                            {
+                                                "title": "Lanayru Region",
+                                                "content": [
+                                                    {
+                                                        "type": "map",
+                                                        "maps": [
+                                                            "lr"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
                                             {
                                                 "title": "Lake Hylia",
                                                 "content": [
@@ -268,7 +290,7 @@
                                 {
                                     "type": "item",
                                     "item": "ftname",
-                                    "max_width": 900,
+                                    "max_width": 450,
                                     "item_h_alignment": "center",
                                     "item_v_alignment": "center"
                                 },
@@ -314,7 +336,7 @@
                                 {
                                     "type": "item",
                                     "item": "gmname",
-                                    "max_width": 900,
+                                    "max_width": 450,
                                     "item_h_alignment": "center",
                                     "item_v_alignment": "center"
                                 },
@@ -372,7 +394,7 @@
                                 {
                                     "type": "item",
                                     "item": "ltname",
-                                    "max_width": 900,
+                                    "max_width": 450,
                                     "item_h_alignment": "center",
                                     "item_v_alignment": "center"
                                 },
@@ -478,7 +500,7 @@
                                 {
                                     "type": "item",
                                     "item": "agname",
-                                    "max_width": 900,
+                                    "max_width": 450,
                                     "item_h_alignment": "center",
                                     "item_v_alignment": "center"
                                 },
@@ -584,7 +606,7 @@
                                 {
                                     "type": "item",
                                     "item": "srname",
-                                    "max_width": 900,
+                                    "max_width": 450,
                                     "item_h_alignment": "center",
                                     "item_v_alignment": "center"
                                 },
@@ -654,7 +676,7 @@
                                 {
                                     "type": "item",
                                     "item": "ttname",
-                                    "max_width": 900,
+                                    "max_width": 450,
                                     "item_h_alignment": "center",
                                     "item_v_alignment": "center"
                                 },
@@ -784,7 +806,7 @@
                                 {
                                     "type": "item",
                                     "item": "csname",
-                                    "max_width": 900,
+                                    "max_width": 450,
                                     "item_h_alignment": "center",
                                     "item_v_alignment": "center"
                                 },
@@ -914,7 +936,7 @@
                                 {
                                     "type": "item",
                                     "item": "ptname",
-                                    "max_width": 900,
+                                    "max_width": 450,
                                     "item_h_alignment": "center",
                                     "item_v_alignment": "center"
                                 },
@@ -996,7 +1018,7 @@
                                 {
                                     "type": "item",
                                     "item": "hcname",
-                                    "max_width": 900,
+                                    "max_width": 450,
                                     "item_h_alignment": "center",
                                     "item_v_alignment": "center"
                                 },

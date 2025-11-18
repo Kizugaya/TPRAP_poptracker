@@ -18,16 +18,16 @@
 				"skiparbitersentrance",
 				"skipsnowpeakentrance",
 				"skipcityintheskyentrance",
-				"goronminesentrance",
-				"templeoftimeentrance"
+				"skipmdh",
+				"skipprologue"
 			],
 			[
-				"skipprologue",
+				"goronminesentrance",
+				"templeoftimeentrance",
+				"dooroftime",
 				"farontwilightcleared",
 				"eldintwilightcleared",
-				"lanayrutwilightcleared",
-				"skipmdh",
-				"openmap"
+				"lanayrutwilightcleared"
 			],
 			[
 				"increasewallet",
@@ -38,12 +38,15 @@
 				"bigkeys"
 			],
 			[
+				"openmap"
+			],
+			[
 				"hints",
-				"autotab",
 				"splitmap",
 				"broadcast",
 				"hidelayout",
-				"dooroftime"
+				"aplayout",
+				"autotab"
 			]
 		]
 	}

@@ -103,7 +103,7 @@ function ClearItems()
 	Tracker:FindObjectForCode("hvhowlingstone").Active = false
 end
 function ClearLocations()
-	for _, v in pairs(LOCATION_MAPPING) do
+	for id, v in pairs(LOCATION_MAPPING) do
 		if v[1] then
 			DebugAP(string.format("onClear: clearing location '%s'", v[1]))
 			local obj = Tracker:FindObjectForCode(v[1])
@@ -113,6 +113,7 @@ function ClearLocations()
 				else
 					obj.Active = false
 				end
+				ClearHints(id)
 			else
 				DebugAP(string.format("onClear: could not find object for code '%s'", v[1]))
 			end
@@ -322,6 +323,19 @@ function InitMap()
 	Tracker:UiHint("ActivateTab", "Overworld")
 	Tracker:UiHint("ActivateTab", "Main Map")
 end
+function SetHintsFromSlotData()
+	if SLOT_DATA["World Version"] == "v0.3.0" or SLOT_DATA["World Version"] == "v0.2.5" or SLOT_DATA["World Version"] == "v0.2.4" or SLOT_DATA["World Version"] == "v0.2.3" or SLOT_DATA["World Version"] == "v0.2.2" or SLOT_DATA["World Version"] == "v0.2.1" or SLOT_DATA["World Version"] == "v0.2.0" or SLOT_DATA["World Version"] == "v0.1.5" or SLOT_DATA["World Version"] == "v0.1.3" or SLOT_DATA["World Version"] == "v0.1.2" or SLOT_DATA["World Version"] == "v0.1.1" or SLOT_DATA["World Version"] == "v0.1" then
+		--skip for up to v0.3.0
+	else
+		for k, v in pairs(SLOT_DATA.LocationClassification) do
+			if v == "Excluded" then
+				UpdateHints(tonumber(k), 10)
+			elseif v == "Priority" then
+				UpdateHints(tonumber(k), 30)
+			end
+		end
+	end
+end
 function CorrectMistakes()
 	if SLOT_DATA["World Version"] == "v0.2.3" then
 		SLOT_DATA.Settings["Lakebed Entrance Requirements"] = SLOT_DATA.Settings["Lakebed Entrance Requirements"] or SLOT_DATA.Settings["Lakebed Enterance Requirements"]
@@ -356,9 +370,9 @@ function OnClear(slot_data)
 		Archipelago:SetNotify(server_copy)
 		Archipelago:Get(server_copy)
 	end
-	--local game_beaten = {"client_status_"..TEAM_NUMBER.."_"..PLAYER_ID}
-	--Archipelago:SetNotify(game_beaten)
-	--Archipelago:Get(game_beaten)
+	local game_beaten = {"_read_client_status_"..TEAM_NUMBER.."_"..PLAYER_ID}
+	Archipelago:SetNotify(game_beaten)
+	Archipelago:Get(game_beaten)
 	local HINTS_ID = {"_read_hints_"..TEAM_NUMBER.."_"..PLAYER_ID}
 	Archipelago:SetNotify(HINTS_ID)
 	Archipelago:Get(HINTS_ID)
@@ -370,6 +384,7 @@ function OnClear(slot_data)
 	InitPortals()
 	InitItems()
 	InitMap()
+	SetHintsFromSlotData()
 end
 
 function OnItem(index, item_id, item_name, player_number)
@@ -392,7 +407,7 @@ function OnItem(index, item_id, item_name, player_number)
 	end
 	local obj = Tracker:FindObjectForCode(v[1])
 	if obj then
-		if v[1] == "bombbag" and obj.CurrentStage == 0 then
+		if v[1] == "bombbag" then
 			Tracker:FindObjectForCode("waterbomb").Active = true
 		end
 		if v[2] == "toggle" then
@@ -449,14 +464,12 @@ function OnNotify(_key, value, old)
 	DebugAP(string.format("called onNotify: key:'%s' value:'%s' old_value:'%s'", _key, value, old))
 	local key = _key
 	if value == old then return end
-	--if _key == string.find(_key, "_read_client_status_.*_.*") then
-		local _, _, team, player = string.find(_key, "_read_client_status_(.*)_(.*)")
-		if team == ""..TEAM_NUMBER and player == ""..PLAYER_ID then
-			local victory = value == 30
-			Tracker:FindObjectForCode("hccompleted").Active = victory
-			Tracker:FindObjectForCode("@Hyrule Castle/5F/Victory/").AvailableChestCount = Tracker:FindObjectForCode("@Hyrule Castle/5F/Victory/").AvailableChestCount - (victory and 1 or 0)
-		end
-	--end
+	local _, _, team, player = string.find(_key, "_read_client_status_(.*)_(.*)")
+	if team == ""..TEAM_NUMBER and player == ""..PLAYER_ID then
+		local victory = value == 30
+		Tracker:FindObjectForCode("hccompleted").Active = victory
+		Tracker:FindObjectForCode("@Hyrule Castle/5F/Victory/").AvailableChestCount = Tracker:FindObjectForCode("@Hyrule Castle/5F/Victory/").AvailableChestCount - (victory and 1 or 0)
+	end
 	if SLOT_DATA["World Version"] == "v0.2.3" or SLOT_DATA["World Version"] == "v0.2.2" or SLOT_DATA["World Version"] == "v0.2.1" or SLOT_DATA["World Version"] == "v0.2.0" or SLOT_DATA["World Version"] == "v0.1.5" or SLOT_DATA["World Version"] == "v0.1.3" or SLOT_DATA["World Version"] == "v0.1.2" or SLOT_DATA["World Version"] == "v0.1.1" or SLOT_DATA["World Version"] == "v0.1" then
 		--skip for up to v0.2.3
 	else
@@ -518,8 +531,8 @@ function OnNotify(_key, value, old)
 			if value == true then
 				Tracker:FindObjectForCode("iliascharm").CurrentStage = Tracker:FindObjectForCode("iliascharm").CurrentStage + 1
 			end
-		elseif key == "Memory Reward" then
-			Tracker:FindObjectForCode("horsecall").Active =  value
+		elseif key == "Memory Reward" and Tracker:FindObjectForCode("horsecall").Active == false then
+			Tracker:FindObjectForCode("horsecall").Active = value
 		elseif key == "Zant Defeated" then
 			Tracker:FindObjectForCode("ptcompleted").Active = value
 		elseif key == "Stallord Defeated" then
@@ -536,24 +549,47 @@ function OnNotify(_key, value, old)
 			Tracker:FindObjectForCode("srcompleted").Active = value
 		elseif key == "Armogohma Defeated" then
 			Tracker:FindObjectForCode("ttcompleted").Active = value
-		elseif key == "Current Region" and Tracker:FindObjectForCode("autotab").CurrentStage <= 1 then
-			if REGION[value] ~= "Main Map" then
-				Tracker:UiHint("ActivateTab", REGION[value])
+		end
+		--if 0.3.0 or less
+		if SLOT_DATA["World Version"] == "v0.3.0" or SLOT_DATA["World Version"] == "v0.2.5" or SLOT_DATA["World Version"] == "v0.2.4" or SLOT_DATA["World Version"] == "v0.2.3" or SLOT_DATA["World Version"] == "v0.2.2" or SLOT_DATA["World Version"] == "v0.2.1" or SLOT_DATA["World Version"] == "v0.2.0" or SLOT_DATA["World Version"] == "v0.1.5" or SLOT_DATA["World Version"] == "v0.1.3" or SLOT_DATA["World Version"] == "v0.1.2" or SLOT_DATA["World Version"] == "v0.1.1" or SLOT_DATA["World Version"] == "v0.1" then
+			if key == "Current Region" and Tracker:FindObjectForCode("autotab").CurrentStage <= 1 then
+				if REGION[value] ~= "Main Map" then
+					Tracker:UiHint("ActivateTab", REGION[value])
+					print("(v0.3.0) Changing Map to: "..REGION[value])
+				end
+				if REGION[value] == "Faron Woods" then
+					Tracker:UiHint("ActivateTab", "Faron")
+					Tracker:UiHint("ActivateTab", "Overworld")
+					print("(v0.3.0) Changing Map to: Faron Woods")
+				end
+				if REGION[value] == "Ordon" or
+				REGION[value] == "Sacred Grove" or
+				REGION[value] == "Snowpeak Mountain" or
+				REGION[value] == "Castle Town" or
+				REGION[value] == "Gerudo Desert" then
+					Tracker:UiHint("ActivateTab", "Overworld")
+					print("(v0.3.0) Changing Map to: "..REGION[value])
+				end
+				if REGION[value] == "Main Map" and Tracker:FindObjectForCode("autotab").CurrentStage == 1 then
+					Tracker:UiHint("ActivateTab", "Overworld")
+					Tracker:UiHint("ActivateTab", "Main Map")
+					print("(v0.3.0) Changing Map to: "..REGION[value])
+				end
 			end
-			if REGION[value] == "Faron Woods" then
-				Tracker:UiHint("ActivateTab", "Faron")
-				Tracker:UiHint("ActivateTab", "Overworld")
-			end
-			if REGION[value] == "Ordon" or
-			REGION[value] == "Sacred Grove" or
-			REGION[value] == "Snowpeak Mountain" or
-			REGION[value] == "Castle Town" or
-			REGION[value] == "Gerudo Desert" then
-				Tracker:UiHint("ActivateTab", "Overworld")
-			end
-			if REGION[value] == "Main Map" and Tracker:FindObjectForCode("autotab").CurrentStage == 1 then
-				Tracker:UiHint("ActivateTab", "Overworld")
-				Tracker:UiHint("ActivateTab", "Main Map")
+		else
+			--if 0.4.0+
+			if key == "Current Room" then
+				CurrentRoom = value
+				print("Current Room changed to: "..CurrentRoom)
+				SwitchMap()
+			elseif key == "Current Stage" then
+				CurrentStage = STAGE[value]
+				print("Current Stage changed to: "..CurrentStage)
+				SwitchMap()
+			elseif key == "Current Floor" then
+				CurrentFloor = value
+				print("Current Floor changed to: "..CurrentFloor)
+				SwitchMap()
 			end
 		end
 	end
@@ -571,6 +607,7 @@ function UpdateHints(location_id, status)
 	for _, location in ipairs(locations) do
 		local section = Tracker:FindObjectForCode(location)
 		if section then
+			print("Updating hint for "..location.." to status "..status)
 			section.Highlight = PriorityToHighlight[status]
 		else
 			DebugAP(string.format("No object found for code: '%s'", location))
@@ -584,7 +621,8 @@ function ClearHints(locationID)
 	for _, location in ipairs(locations) do
 		local section = Tracker:FindObjectForCode(location)
 		if section then
-			section.Highlight = Highlight.none
+			print("Clearing hint for "..location)
+			section.Highlight = Highlight.None
 		else
 			DebugAP(string.format("No object found for code: '%s'", location))
 		end
@@ -627,6 +665,15 @@ function Hidefrommainmap()
 		Tracker:AddLayouts("layouts/tracker_no_items.json")
 	end
 end
+function APLayoutchange()
+	if Tracker:FindObjectForCode("aplayout").CurrentStage == 0 then
+		Tracker:AddLayouts("layouts/keys_bosses.json")
+		Tracker:AddLayouts("layouts/item_grid.json")
+	elseif Tracker:FindObjectForCode("aplayout").CurrentStage == 1 then
+		Tracker:AddLayouts("layouts/archipelago_keys.json")
+		Tracker:AddLayouts("layouts/archipelago_item_grid.json")
+	end
+end
 function Bugsamountchange()
 	local n = 0
 	for _, v in pairs(BUGS_ARRAY) do
@@ -636,6 +683,185 @@ function Bugsamountchange()
 	end
 	if Tracker:FindObjectForCode("bugsamount").AcquiredCount ~= n then
 		Tracker:FindObjectForCode("bugsamount").AcquiredCount = n
+	end
+end
+
+function SwitchMap()
+	if Tracker:FindObjectForCode("autotab").CurrentStage <= 1 then
+		if CurrentStage == "Ordon" or
+		CurrentStage == "Sacred Grove" or
+		CurrentStage == "Snowpeak Mountain" or
+		CurrentStage == "Gerudo Desert" or
+		CurrentStage == "Castle Town" then
+			Tracker:UiHint("ActivateTab", "Overworld")
+			Tracker:UiHint("ActivateTab", CurrentStage)
+			print("Changing Map to: "..CurrentStage)
+		end
+	end
+	if Tracker:FindObjectForCode("autotab").CurrentStage == 0 then
+		if CurrentStage == "Faron Woods" or
+		CurrentStage == "Faron Field" or
+		(CurrentStage == "Hyrule Field" and (CurrentRoom == 6 or CurrentRoom == 1 or CurrentRoom == 15)) then
+			Tracker:UiHint("ActivateTab", "Overworld")
+			Tracker:UiHint("ActivateTab", "Faron")
+			Tracker:UiHint("ActivateTab", "Faron Region")
+			print("Changing Map to: Faron Region ("..CurrentStage..")")
+		elseif CurrentStage == "Kakariko Gorge" or
+		CurrentStage == "Kakariko" or
+		CurrentStage == "Death Mountain" or
+		CurrentStage == "Eldin Field" or
+		CurrentStage == "Hidden Village" or
+		(CurrentStage == "Hyrule Field" and (CurrentRoom == 3 or CurrentRoom == 4 or CurrentRoom == 2 or CurrentRoom == 0 or CurrentRoom == 7 or CurrentRoom == 5)) then
+			Tracker:UiHint("ActivateTab", "Overworld")
+			Tracker:UiHint("ActivateTab", "Eldin")
+			Tracker:UiHint("ActivateTab", "Eldin Region")
+			print("Changing Map to: Eldin Region ("..CurrentStage..")")
+		elseif CurrentStage == "Lake Hylia" or
+		CurrentStage == "Lanayru Field" or
+		CurrentStage == "Beside Castle Town" or
+		CurrentStage == "South Castle Town" or
+		CurrentStage == "Upper Zora's River" or
+		CurrentStage == "Zora's Domain" or
+		(CurrentStage == "Hyrule Field" and (CurrentRoom == 10 or CurrentRoom == 11 or CurrentRoom == 9 or CurrentRoom == 13 or CurrentRoom == 14 or CurrentRoom == 12)) then
+			Tracker:UiHint("ActivateTab", "Overworld")
+			Tracker:UiHint("ActivateTab", "Lanayru")
+			Tracker:UiHint("ActivateTab", "Lanayru Region")
+			print("Changing Map to: Lanayru Region ("..CurrentStage..")")
+		elseif CurrentStage == "Forest Temple" or
+		CurrentStage == "Goron Mines" or
+		CurrentStage == "Lakebed Temple" or
+		CurrentStage == "Arbiter's Grounds" or
+		CurrentStage == "Snowpeak Ruins" or
+		CurrentStage == "Temple of Time" or
+		CurrentStage == "City in the Sky" or
+		CurrentStage == "Palace of Twilight" or
+		CurrentStage == "Hyrule Castle" then
+			Tracker:UiHint("ActivateTab", CurrentStage)
+			Tracker:UiHint("ActivateTab", "Full Map")
+			print("Changing Map to: "..CurrentStage)
+		end
+	elseif Tracker:FindObjectForCode("autotab").CurrentStage == 1 then
+		if CurrentStage == "Faron Woods" or
+		CurrentStage == "Faron Field" then
+			Tracker:UiHint("ActivateTab", "Overworld")
+			Tracker:UiHint("ActivateTab", "Faron")
+			Tracker:UiHint("ActivateTab", CurrentStage)
+			print("Changing Map to: "..CurrentStage)
+		elseif CurrentStage == "Kakariko Gorge" or
+		CurrentStage == "Kakariko" or
+		CurrentStage == "Death Mountain" or
+		CurrentStage == "Eldin Field" or
+		CurrentStage == "Hidden Village" then
+			Tracker:UiHint("ActivateTab", "Overworld")
+			Tracker:UiHint("ActivateTab", "Eldin")
+			Tracker:UiHint("ActivateTab", CurrentStage)
+			print("Changing Map to: "..CurrentStage)
+		elseif CurrentStage == "Lake Hylia" or
+		CurrentStage == "Lanayru Field" or
+		CurrentStage == "Beside Castle Town" or
+		CurrentStage == "South Castle Town" or
+		CurrentStage == "Upper Zora's River" or
+		CurrentStage == "Zora's Domain" then
+			Tracker:UiHint("ActivateTab", "Overworld")
+			Tracker:UiHint("ActivateTab", "Lanayru")
+			Tracker:UiHint("ActivateTab", CurrentStage)
+			print("Changing Map to: "..CurrentStage)
+		elseif CurrentStage == "Hyrule Field" then
+			if CurrentRoom == 6 or CurrentRoom == 1 or CurrentRoom == 15 then
+				Tracker:UiHint("ActivateTab", "Overworld")
+				Tracker:UiHint("ActivateTab", "Faron")
+				Tracker:UiHint("ActivateTab", "Faron Field")
+				print("Changing Map to: Faron Field")
+			elseif CurrentRoom == 3 or CurrentRoom == 4 or CurrentRoom == 2 then
+				Tracker:UiHint("ActivateTab", "Overworld")
+				Tracker:UiHint("ActivateTab", "Eldin")
+				Tracker:UiHint("ActivateTab", "Kakariko Gorge")
+				print("Changing Map to: Kakariko Gorge")
+			elseif CurrentRoom == 0 or CurrentRoom == 7 or CurrentRoom == 5 then
+				Tracker:UiHint("ActivateTab", "Overworld")
+				Tracker:UiHint("ActivateTab", "Eldin")
+				Tracker:UiHint("ActivateTab", "Eldin Field")
+				print("Changing Map to: Eldin Field")
+			elseif CurrentRoom == 10 or CurrentRoom == 11 or CurrentRoom == 9 then
+				Tracker:UiHint("ActivateTab", "Overworld")
+				Tracker:UiHint("ActivateTab", "Lanayru")
+				Tracker:UiHint("ActivateTab", "Lanayru Field")
+				print("Changing Map to: Lanayru Field")
+			elseif CurrentRoom == 13 or CurrentRoom == 14 or CurrentRoom == 12 then
+				Tracker:UiHint("ActivateTab", "Overworld")
+				Tracker:UiHint("ActivateTab", "Lanayru")
+				Tracker:UiHint("ActivateTab", "Lake Hylia")
+				print("Changing Map to: Lake Hylia")
+			elseif CurrentRoom == 8 then
+				Tracker:UiHint("ActivateTab", "Overworld")
+				Tracker:UiHint("ActivateTab", "Lanayru")
+				Tracker:UiHint("ActivateTab", "Beside Castle Town")
+				print("Changing Map to: Beside Castle Town")
+			elseif CurrentRoom == 16 then
+				Tracker:UiHint("ActivateTab", "Overworld")
+				Tracker:UiHint("ActivateTab", "Lanayru")
+				Tracker:UiHint("ActivateTab", "South Castle Town")
+				print("Changing Map to: South Castle Town")
+			elseif CurrentRoom == 17 then
+				Tracker:UiHint("ActivateTab", "Overworld")
+				Tracker:UiHint("ActivateTab", "Castle Town")
+				print("Changing Map to: Castle Town")
+			end
+		elseif CurrentStage == "Forest Temple" or
+		CurrentStage == "Goron Mines" or
+		CurrentStage == "Lakebed Temple" or
+		CurrentStage == "Arbiter's Grounds" or
+		CurrentStage == "Snowpeak Ruins" or
+		CurrentStage == "Temple of Time" or
+		CurrentStage == "City in the Sky" or
+		CurrentStage == "Palace of Twilight" or
+		CurrentStage == "Hyrule Castle" then
+			if CurrentFloor == 0 then
+				Tracker:UiHint("ActivateTab", "1F")
+				Tracker:UiHint("ActivateTab", CurrentStage)
+				print("Changing Map to: "..CurrentStage.." 2F")
+			elseif CurrentFloor == 1 then
+				Tracker:UiHint("ActivateTab", "2F")
+				Tracker:UiHint("ActivateTab", CurrentStage)
+				print("Changing Map to: "..CurrentStage.." 2F")
+			elseif CurrentFloor == 2 then
+				Tracker:UiHint("ActivateTab", "3F")
+				Tracker:UiHint("ActivateTab", CurrentStage)
+				print("Changing Map to: "..CurrentStage.." 3F")
+			elseif CurrentFloor == 3 then
+				Tracker:UiHint("ActivateTab", "4F")
+				Tracker:UiHint("ActivateTab", CurrentStage)
+				print("Changing Map to: "..CurrentStage.." 4F")
+			elseif CurrentFloor == 4 then
+				Tracker:UiHint("ActivateTab", "5F")
+				Tracker:UiHint("ActivateTab", CurrentStage)
+				print("Changing Map to: "..CurrentStage.." 5F")
+			elseif CurrentFloor == 5 then
+				Tracker:UiHint("ActivateTab", "6F")
+				Tracker:UiHint("ActivateTab", CurrentStage)
+				print("Changing Map to: "..CurrentStage.." 6F")
+			elseif CurrentFloor == 6 then
+				Tracker:UiHint("ActivateTab", "7F")
+				Tracker:UiHint("ActivateTab", CurrentStage)
+				print("Changing Map to: "..CurrentStage.." 7F")
+			elseif CurrentFloor == 7 then
+				Tracker:UiHint("ActivateTab", "8F")
+				Tracker:UiHint("ActivateTab", CurrentStage)
+				print("Changing Map to: "..CurrentStage.." 8F")
+			elseif CurrentFloor == 255 then
+				Tracker:UiHint("ActivateTab", "B1")
+				Tracker:UiHint("ActivateTab", CurrentStage)
+				print("Changing Map to: "..CurrentStage.." B1")
+			elseif CurrentFloor == 254 then
+				Tracker:UiHint("ActivateTab", "B2")
+				Tracker:UiHint("ActivateTab", CurrentStage)
+				print("Changing Map to: "..CurrentStage.." B2")
+			elseif CurrentFloor == 253 then
+				Tracker:UiHint("ActivateTab", "B3")
+				Tracker:UiHint("ActivateTab", CurrentStage)
+				print("Changing Map to: "..CurrentStage.." B3")
+			end
+		end
 	end
 end
 Archipelago:AddClearHandler("clear handler", OnClear)

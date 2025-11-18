@@ -224,6 +224,34 @@
 								"name": "Owl Statue Chest"
 							},
 							{
+								"ref": "Eldin Region/Eldin Field/Owl Statue Sky Character/",
+								"name": "Owl Statue Sky Character"
+							},
+							{
+								"ref": "Eldin Region/Eldin Field/Stockcave/Upper Chest",
+								"name": "Stockcave Upper Chest"
+							},
+							{
+								"ref": "Eldin Region/Eldin Field/Stockcave/Lantern Chest",
+								"name": "Stockcave Lantern Chest"
+							},
+							{
+								"ref": "Eldin Region/Eldin Field/Stockcave/Lowest Chest",
+								"name": "Stockcave Lowest Chest"
+							},
+							{
+								"ref": "Eldin Region/Eldin Field/Stalfos Grotto/Left Small Chest",
+								"name": "Stalfos Grotto Left Small Chest"
+							},
+							{
+								"ref": "Eldin Region/Eldin Field/Stalfos Grotto/Right Small Chest",
+								"name": "Stalfos Grotto Right Small Chest"
+							},
+							{
+								"ref": "Eldin Region/Eldin Field/Stalfos Grotto/Stalfos Chest",
+								"name": "Stalfos Grotto Stalfos Chest"
+							},
+							{
 								"ref": "Eldin Region/Eldin Field Bugs/Male Grasshopper/",
 								"name": "Male Grasshopper"
 							},
@@ -236,8 +264,16 @@
 								"name": "Male Phasmid"
 							},
 							{
+								"ref": "Eldin Region/Eldin Field Bugs/Female Phasmid/",
+								"name": "Female Phasmid"
+							},
+							{
 								"ref": "Eldin Region/Eldin Field Hint Signs/Hint Sign/",
 								"name": "Hint Sign"
+							},
+							{
+								"ref": "Eldin Region/Eldin Field Hint Signs/North Hint Sign/",
+								"name": "North Hint Sign"
 							}
 						]
 					},
@@ -445,54 +481,6 @@
 							},
 							{
 								"ref": "Eldin Region/Kakariko Gorge Hint Signs/Hint Sign/",
-								"name": "Hint Sign"
-							}
-						]
-					},
-					{
-						"name": "North Eldin",
-						"map_locations": [
-							{
-								"map": "overworld",
-								"x": 1505,
-								"y": 466
-							}
-						],
-						"sections": [
-							{
-								"ref": "Eldin Region/North Eldin/Owl Statue Sky Character/",
-								"name": "Owl Statue Sky Character"
-							},
-							{
-								"ref": "Eldin Region/North Eldin/Stockcave/Upper Chest",
-								"name": "Stockcave Upper Chest"
-							},
-							{
-								"ref": "Eldin Region/North Eldin/Stockcave/Lantern Chest",
-								"name": "Stockcave Lantern Chest"
-							},
-							{
-								"ref": "Eldin Region/North Eldin/Stockcave/Lowest Chest",
-								"name": "Stockcave Lowest Chest"
-							},
-							{
-								"ref": "Eldin Region/North Eldin/Stalfos Grotto/Left Small Chest",
-								"name": "Stalfos Grotto Left Small Chest"
-							},
-							{
-								"ref": "Eldin Region/North Eldin/Stalfos Grotto/Right Small Chest",
-								"name": "Stalfos Grotto Right Small Chest"
-							},
-							{
-								"ref": "Eldin Region/North Eldin/Stalfos Grotto/Stalfos Chest",
-								"name": "Stalfos Grotto Stalfos Chest"
-							},
-							{
-								"ref": "Eldin Region/North Eldin Bugs/Female Phasmid/",
-								"name": "Female Phasmid"
-							},
-							{
-								"ref": "Eldin Region/North Eldin Hint Signs/Hint Sign/",
 								"name": "Hint Sign"
 							}
 						]
@@ -1056,6 +1044,10 @@
 							{
 								"ref": "Lanayru Region/Lake Hylia Hint Signs/Spring Hint Sign/",
 								"name": "Spring Hint Sign"
+							},
+							{
+								"ref": "Lanayru Region/Lake Hylia Hint Signs/Lake Lantern Cave Hint Sign/",
+								"name": "Lake Lantern Cave Hint Sign"
 							}
 						]
 					},

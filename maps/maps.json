@@ -1,5 +1,33 @@
 [
 	{
+		"name": "overworld",
+		"location_size": 48,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Overworld/Full Map.png"
+	},
+	{
+		"name": "fr",
+		"location_size": 48,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Overworld/Faron Region.png"
+	},
+	{
+		"name": "er",
+		"location_size": 48,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Overworld/Eldin Region.png"
+	},
+	{
+		"name": "lr",
+		"location_size": 48,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Overworld/Lanayru Region.png"
+	},
+	{
 		"name": "ft1f",
 		"location_size": 32,
 		"location_border_thickness": 2,
@@ -364,13 +392,6 @@
 		"img": "images/Dungeons/Hyrule Castle/Full.png"
 	},
 	{
-		"name": "overworld",
-		"location_size": 64,
-		"location_border_thickness": 2,
-		"location_shape": "rect",
-		"img": "images/Overworld/Full Map.png"
-	},
-	{
 		"name": "bct",
 		"location_size": 32,
 		"location_border_thickness": 2,
@@ -453,13 +474,6 @@
 		"location_border_thickness": 2,
 		"location_shape": "rect",
 		"img": "images/Overworld/Lanayru Field.png"
-	},
-	{
-		"name": "ne",
-		"location_size": 32,
-		"location_border_thickness": 2,
-		"location_shape": "rect",
-		"img": "images/Overworld/North Eldin.png"
 	},
 	{
 		"name": "ordon",
