@@ -1,6 +1,22 @@
 {
 	"versions": [
 		{
+			"package_version": "0.10.0",
+			"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.10.0/TPRAP_poptracker_v0.10.0.zip",
+			"sha256": "272789084AC88883976927D8CA163773C4A9E484D0914E3E9D4B323BC3955CC6",
+			"changelog": [
+				"Added new 50% icon size, so the window can be smaller",
+				"Added Region Maps",
+				"Merged North Eldin Field and Eldin Field together",
+				"Improved Tracking for beta v0.4.0",
+				"  - Added Proper Autotabbing",
+				"  - Added Priority/Excluded Locations marked with the Hint System",
+				"Fixed Tracking for Ganon Defeat",
+				"Fixed Tracking for Horse Call Item",
+				"Fixed Hints not clearing correctly"
+			]
+		},
+		{
 			"package_version": "0.9.0",
 			"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.9.0/TPRAP_poptracker_v0.9.0.zip",
 			"sha256": "E9BD5FFDB04DB3BC5444D0D8E72B08C880AE759F3CA1AC6E07A662D885A45E99",
