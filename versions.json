@@ -9,6 +9,14 @@
 			]
 		},
 		{
+			"package_version": "0.10.2",
+			"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.10.2/TPRAP_poptracker_v0.10.2.zip",
+			"sha256": "E20188E06AF99F62CFC50EDDD5F69C4C0F53C647DF007A94B1928CE74631DC4C",
+			"changelog": [
+				"Fixed Autotabbing to Region Maps (for real. *maybe i should start testing before publishing*)"
+			]
+		},
+		{
 			"package_version": "0.10.0",
 			"download_url": "https://github.com/Kizugaya/TPRAP_poptracker/releases/download/v0.10.0/TPRAP_poptracker_v0.10.0.zip",
 			"sha256": "272789084AC88883976927D8CA163773C4A9E484D0914E3E9D4B323BC3955CC6",
