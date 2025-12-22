@@ -558,17 +558,28 @@ function OnNotify(_key, value, old)
 					print("(v0.3.0) Changing Map to: "..REGION[value])
 				end
 				if REGION[value] == "Faron Woods" then
+					Tracker:UiHint("ActivateTab", "Faron Woods")
 					Tracker:UiHint("ActivateTab", "Faron")
 					Tracker:UiHint("ActivateTab", "Overworld")
 					print("(v0.3.0) Changing Map to: Faron Woods")
+				end
+				if REGION[value] == "Eldin Region" then
+					Tracker:UiHint("ActivateTab", "Eldin Region")
+					Tracker:UiHint("ActivateTab", "Eldin")
+					Tracker:UiHint("ActivateTab", "Overworld")
+					print("(v0.3.0) Changing Map to: Eldin Region")
+				end
+				if REGION[value] == "Lanayru Region" then
+					Tracker:UiHint("ActivateTab", "Lanayru Region")
+					Tracker:UiHint("ActivateTab", "Lanayru")
+					Tracker:UiHint("ActivateTab", "Overworld")
+					print("(v0.3.0) Changing Map to: Lanayru Region")
 				end
 				if REGION[value] == "Ordon" or
 				REGION[value] == "Sacred Grove" or
 				REGION[value] == "Snowpeak Mountain" or
 				REGION[value] == "Castle Town" or
-				REGION[value] == "Gerudo Desert" or
-				REGION[value] == "Eldin Region" or
-				REGION[value] == "Lanayru Region" then
+				REGION[value] == "Gerudo Desert" then
 					Tracker:UiHint("ActivateTab", "Overworld")
 					print("(v0.3.0) Changing Map to: "..REGION[value])
 				end
