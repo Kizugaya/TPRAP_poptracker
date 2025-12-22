@@ -316,7 +316,7 @@ function InitItems()
 	Tracker:FindObjectForCode("faronvesseloflight").Active = true
 	Tracker:FindObjectForCode("eldinvesseloflight").Active = true
 	Tracker:FindObjectForCode("lanayruvesseloflight").Active = true
-	Tracker:FindObjectForCode("faronwoodskey").Active = true
+	Tracker:FindObjectForCode("fwkey").Active = true
 end
 function InitMap()
 	Tracker:UiHint("ActivateTab", "Full Map")
@@ -566,7 +566,9 @@ function OnNotify(_key, value, old)
 				REGION[value] == "Sacred Grove" or
 				REGION[value] == "Snowpeak Mountain" or
 				REGION[value] == "Castle Town" or
-				REGION[value] == "Gerudo Desert" then
+				REGION[value] == "Gerudo Desert" or
+				REGION[value] == "Eldin Region" or
+				REGION[value] == "Lanayru Region" then
 					Tracker:UiHint("ActivateTab", "Overworld")
 					print("(v0.3.0) Changing Map to: "..REGION[value])
 				end
