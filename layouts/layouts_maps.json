@@ -19,28 +19,49 @@
 							]
 						},
 						{
+							"title": "Main Map (Grouped)",
+							"content": [
+								{
+									"type": "map",
+									"maps": [
+										"overworldfull"
+									]
+								}
+							]
+						},
+						{
 							"title": "Faron",
 							"content": {
 								"type": "tabbed",
 								"tabs": [
 									{
-										"title": "Faron Region",
-										"content": [
-											{
-												"type": "map",
-												"maps": [
-													"fr"
-												]
-											}
-										]
-									},
-									{
 										"title": "Faron Woods",
 										"content": [
 											{
-												"type": "map",
-												"maps": [
-													"fw"
+												"type": "tabbed",
+												"tabs": [
+													{
+														"title": "South Faron Cave",
+														"content": [
+															{
+																"type": "map",
+																"maps": [
+																	"sfc"
+																]
+															}
+														]
+													},
+													{
+														"title": "Coro's House",
+														"content": [
+															{
+																"type": "map",
+																"maps": [
+																	"ch"
+																]
+															}
+														]
+													}
 												]
 											}
 										]
@@ -49,9 +70,30 @@
 										"title": "Faron Field",
 										"content": [
 											{
-												"type": "map",
-												"maps": [
-													"ff"
+												"type": "tabbed",
+												"tabs": [
+													{
+														"title": "Corner Grotto",
+														"content": [
+															{
+																"type": "map",
+																"maps": [
+																	"grotto21"
+																]
+															}
+														]
+													},
+													{
+														"title": "Fishing Grotto",
+														"content": [
+															{
+																"type": "map",
+																"maps": [
+																	"grotto51"
+																]
+															}
+														]
+													}
 												]
 											}
 										]
@@ -65,23 +107,33 @@
 								"type": "tabbed",
 								"tabs": [
 									{
-										"title": "Eldin Region",
-										"content": [
-											{
-												"type": "map",
-												"maps": [
-													"er"
-												]
-											}
-										]
-									},
-									{
 										"title": "Kakariko Gorge",
 										"content": [
 											{
-												"type": "map",
-												"maps": [
-													"kg"
+												"type": "tabbed",
+												"tabs": [
+													{
+														"title": "Lantern Cave",
+														"content": [
+															{
+																"type": "map",
+																"maps": [
+																	"elc"
+																]
+															}
+														]
+													},
+													{
+														"title": "Keese Grotto",
+														"content": [
+															{
+																"type": "map",
+																"maps": [
+																	"grotto23"
+																]
+															}
+														]
+													}
 												]
 											}
 										]
@@ -90,20 +142,137 @@
 										"title": "Kakariko",
 										"content": [
 											{
-												"type": "map",
-												"maps": [
-													"kakariko"
-												]
-											}
-										]
-									},
-									{
-										"title": "Death Mountain",
-										"content": [
-											{
-												"type": "map",
-												"maps": [
-													"dm"
+												"type": "tabbed",
+												"tabs": [
+													{
+														"title": "Sanctuary",
+														"content": [
+															{
+																"type": "tabbed",
+																"tabs": [
+																	{
+																		"title": "B1",
+																		"content": [
+																			{
+																				"type": "map",
+																				"maps": [
+																					"ksb1"
+																				]
+																			}
+																		]
+																	},
+																	{
+																		"title": "1F",
+																		"content": [
+																			{
+																				"type": "map",
+																				"maps": [
+																					"ks1f"
+																				]
+																			}
+																		]
+																	}
+																]
+															}
+														]
+													},
+													{
+														"title": "Malo Mart",
+														"content": [
+															{
+																"type": "map",
+																"maps": [
+																	"mmkb"
+																]
+															}
+														]
+													},
+													{
+														"title": "Inn",
+														"content": [
+															{
+																"type": "tabbed",
+																"tabs": [
+																	{
+																		"title": "1F",
+																		"content": [
+																			{
+																				"type": "map",
+																				"maps": [
+																					"ki1f"
+																				]
+																			}
+																		]
+																	},
+																	{
+																		"title": "2F",
+																		"content": [
+																			{
+																				"type": "map",
+																				"maps": [
+																					"ki2f"
+																				]
+																			}
+																		]
+																	}
+																]
+															}
+														]
+													},
+													{
+														"title": "Empty House",
+														"content": [
+															{
+																"type": "map",
+																"maps": [
+																	"keh"
+																]
+															}
+														]
+													},
+													{
+														"title": "Barnes' Shop",
+														"content": [
+															{
+																"type": "map",
+																"maps": [
+																	"bs"
+																]
+															}
+														]
+													},
+													{
+														"title": "Watchtower",
+														"content": [
+															{
+																"type": "tabbed",
+																"tabs": [
+																	{
+																		"title": "B1",
+																		"content": [
+																			{
+																				"type": "map",
+																				"maps": [
+																					"kwb1"
+																				]
+																			}
+																		]
+																	},
+																	{
+																		"title": "1F",
+																		"content": [
+																			{
+																				"type": "map",
+																				"maps": [
+																					"kw1f"
+																				]
+																			}
+																		]
+																	}
+																]
+															}
+														]
+													}
 												]
 											}
 										]
@@ -112,9 +281,95 @@
 										"title": "Eldin Field",
 										"content": [
 											{
-												"type": "map",
-												"maps": [
-													"ef"
+												"type": "tabbed",
+												"tabs": [
+													{
+														"title": "Bomskit Grotto",
+														"content": [
+															{
+																"type": "map",
+																"maps": [
+																	"grotto11"
+																]
+															}
+														]
+													},
+													{
+														"title": "Water Bomb Fish Grotto",
+														"content": [
+															{
+																"type": "map",
+																"maps": [
+																	"grotto53"
+																]
+															}
+														]
+													},
+													{
+														"title": "Eldin Stockcave",
+														"content": [
+															{
+																"type": "tabbed",
+																"tabs": [
+																	{
+																		"title": "1F",
+																		"content": [
+																			{
+																				"type": "map",
+																				"maps": [
+																					"es1f"
+																				]
+																			}
+																		]
+																	},
+																	{
+																		"title": "2F",
+																		"content": [
+																			{
+																				"type": "map",
+																				"maps": [
+																					"es2f"
+																				]
+																			}
+																		]
+																	},
+																	{
+																		"title": "3F",
+																		"content": [
+																			{
+																				"type": "map",
+																				"maps": [
+																					"es3f"
+																				]
+																			}
+																		]
+																	},
+																	{
+																		"title": "4F",
+																		"content": [
+																			{
+																				"type": "map",
+																				"maps": [
+																					"es4f"
+																				]
+																			}
+																		]
+																	}
+																]
+															}
+														]
+													},
+													{
+														"title": "Stalfos Grotto",
+														"content": [
+															{
+																"type": "map",
+																"maps": [
+																	"grotto20"
+																]
+															}
+														]
+													}
 												]
 											}
 										]
@@ -123,9 +378,19 @@
 										"title": "Hidden Village",
 										"content": [
 											{
-												"type": "map",
-												"maps": [
-													"hv"
+												"type": "tabbed",
+												"tabs": [
+													{
+														"title": "Impaz's House",
+														"content": [
+															{
+																"type": "map",
+																"maps": [
+																	"ih"
+																]
+															}
+														]
+													}
 												]
 											}
 										]
@@ -139,23 +404,66 @@
 								"type": "tabbed",
 								"tabs": [
 									{
-										"title": "Lanayru Region",
-										"content": [
-											{
-												"type": "map",
-												"maps": [
-													"lr"
-												]
-											}
-										]
-									},
-									{
 										"title": "Lake Hylia",
 										"content": [
 											{
-												"type": "map",
-												"maps": [
-													"lh"
+												"type": "tabbed",
+												"tabs": [
+													{
+														"title": "Spring",
+														"content": [
+															{
+																"type": "map",
+																"maps": [
+																	"ls"
+																]
+															}
+														]
+													},
+													{
+														"title": "Lantern Cave",
+														"content": [
+															{
+																"type": "map",
+																"maps": [
+																	"llc"
+																]
+															}
+														]
+													},
+													{
+														"title": "Water Toadpoli Grotto",
+														"content": [
+															{
+																"type": "map",
+																"maps": [
+																	"grotto52"
+																]
+															}
+														]
+													},
+													{
+														"title": "Shell Blade Grotto",
+														"content": [
+															{
+																"type": "map",
+																"maps": [
+																	"grotto54"
+																]
+															}
+														]
+													},
+													{
+														"title": "Bubble Grotto",
+														"content": [
+															{
+																"type": "map",
+																"maps": [
+																	"grotto40"
+																]
+															}
+														]
+													}
 												]
 											}
 										]
@@ -164,31 +472,94 @@
 										"title": "Lanayru Field",
 										"content": [
 											{
-												"type": "map",
-												"maps": [
-													"lf"
+												"type": "tabbed",
+												"tabs": [
+													{
+														"title": "Chu Grotto",
+														"content": [
+															{
+																"type": "map",
+																"maps": [
+																	"grotto33"
+																]
+															}
+														]
+													},
+													{
+														"title": "Skulltula Grotto",
+														"content": [
+															{
+																"type": "map",
+																"maps": [
+																	"grotto43"
+																]
+															}
+														]
+													},
+													{
+														"title": "Poe Grotto",
+														"content": [
+															{
+																"type": "map",
+																"maps": [
+																	"grotto13"
+																]
+															}
+														]
+													},
+													{
+														"title": "Ice Cave",
+														"content": [
+															{
+																"type": "map",
+																"maps": [
+																	"lic"
+																]
+															}
+														]
+													}
 												]
 											}
 										]
 									},
 									{
-										"title": "Beside Castle Town",
+										"title": "West Hyrule Field",
 										"content": [
 											{
-												"type": "map",
-												"maps": [
-													"bct"
+												"type": "tabbed",
+												"tabs": [
+													{
+														"title": "Helmasaur Grotto",
+														"content": [
+															{
+																"type": "map",
+																"maps": [
+																	"grotto10"
+																]
+															}
+														]
+													}
 												]
 											}
 										]
 									},
 									{
-										"title": "South Castle Town",
+										"title": "Outside South Castle Town",
 										"content": [
 											{
-												"type": "map",
-												"maps": [
-													"sct"
+												"type": "tabbed",
+												"tabs": [
+													{
+														"title": "Tektite Grotto",
+														"content": [
+															{
+																"type": "map",
+																"maps": [
+																	"grotto50"
+																]
+															}
+														]
+													}
 												]
 											}
 										]
@@ -197,20 +568,19 @@
 										"title": "Upper Zora's River",
 										"content": [
 											{
-												"type": "map",
-												"maps": [
-													"uzr"
-												]
-											}
-										]
-									},
-									{
-										"title": "Zora's Domain",
-										"content": [
-											{
-												"type": "map",
-												"maps": [
-													"zd"
+												"type": "tabbed",
+												"tabs": [
+													{
+														"title": "Hena's Shop",
+														"content": [
+															{
+																"type": "map",
+																"maps": [
+																	"hs"
+																]
+															}
+														]
+													}
 												]
 											}
 										]
@@ -222,9 +592,116 @@
 							"title": "Ordon",
 							"content": [
 								{
-									"type": "map",
-									"maps": [
-										"ordon"
+									"type": "tabbed",
+									"tabs": [
+										{
+											"title": "Link's House",
+											"content": [
+												{
+													"type": "tabbed",
+													"tabs": [
+														{
+															"title": "B1",
+															"content": [
+																{
+																	"type": "map",
+																	"maps": [
+																		"lhb1"
+																	]
+																}
+															]
+														},
+														{
+															"title": "1F",
+															"content": [
+																{
+																	"type": "map",
+																	"maps": [
+																		"lh1f"
+																	]
+																}
+															]
+														}
+													]
+												}
+											]
+										},
+										{
+											"title": "Sera's Shop",
+											"content": [
+												{
+													"type": "map",
+													"maps": [
+														"ss"
+													]
+												}
+											]
+										},
+										{
+											"title": "Rusl's House",
+											"content": [
+												{
+													"type": "map",
+													"maps": [
+														"rh"
+													]
+												}
+											]
+										},
+										{
+											"title": "Jaggle's House",
+											"content": [
+												{
+													"type": "map",
+													"maps": [
+														"jah"
+													]
+												}
+											]
+										},
+										{
+											"title": "Bo's House",
+											"content": [
+												{
+													"type": "tabbed",
+													"tabs": [
+														{
+															"title": "1F",
+															"content": [
+																{
+																	"type": "map",
+																	"maps": [
+																		"bh1f"
+																	]
+																}
+															]
+														},
+														{
+															"title": "2F",
+															"content": [
+																{
+																	"type": "map",
+																	"maps": [
+																		"bh2f"
+																	]
+																}
+															]
+														}
+													]
+												}
+											]
+										},
+										{
+											"title": "Ranch Grotto",
+											"content": [
+												{
+													"type": "map",
+													"maps": [
+														"grotto12"
+													]
+												}
+											]
+										}
 									]
 								}
 							]
@@ -233,9 +710,30 @@
 							"title": "Sacred Grove",
 							"content": [
 								{
-									"type": "map",
-									"maps": [
-										"sg"
+									"type": "tabbed",
+									"tabs": [
+										{
+											"title": "Baba Serpent Grotto",
+											"content": [
+												{
+													"type": "map",
+													"maps": [
+														"grotto22"
+													]
+												}
+											]
+										},
+										{
+											"title": "Past Sacred Grove",
+											"content": [
+												{
+													"type": "map",
+													"maps": [
+														"psg"
+													]
+												}
+											]
+										}
 									]
 								}
 							]
@@ -244,9 +742,30 @@
 							"title": "Snowpeak Mountain",
 							"content": [
 								{
-									"type": "map",
-									"maps": [
-										"sm"
+									"type": "tabbed",
+									"tabs": [
+										{
+											"title": "Freezard Grotto",
+											"content": [
+												{
+													"type": "map",
+													"maps": [
+														"grotto42"
+													]
+												}
+											]
+										},
+										{
+											"title": "Chu Grotto",
+											"content": [
+												{
+													"type": "map",
+													"maps": [
+														"grotto32"
+													]
+												}
+											]
+										}
 									]
 								}
 							]
@@ -255,9 +774,651 @@
 							"title": "Gerudo Desert",
 							"content": [
 								{
-									"type": "map",
-									"maps": [
-										"gd"
+									"type": "tabbed",
+									"tabs": [
+										{
+											"title": "Skulltula Grotto",
+											"content": [
+												{
+													"type": "map",
+													"maps": [
+														"grotto41"
+													]
+												}
+											]
+										},
+										{
+											"title": "Rock Grotto",
+											"content": [
+												{
+													"type": "map",
+													"maps": [
+														"grotto30"
+													]
+												}
+											]
+										},
+										{
+											"title": "Chu Grotto",
+											"content": [
+												{
+													"type": "map",
+													"maps": [
+														"grotto31"
+													]
+												}
+											]
+										},
+										{
+											"title": "Cave of Ordeals",
+											"content": [
+												{
+													"type": "tabbed",
+													"tabs": [
+														{
+															"title": "B1-B10",
+															"content": [
+																{
+																	"type": "tabbed",
+																	"tabs": [
+																		{
+																			"title": "B1",
+																			"content": [
+																				{
+																					"type": "map",
+																					"maps": [
+																						"coob1"
+																					]
+																				}
+																			]
+																		},
+																		{
+																			"title": "B2",
+																			"content": [
+																				{
+																					"type": "map",
+																					"maps": [
+																						"coob2"
+																					]
+																				}
+																			]
+																		},
+																		{
+																			"title": "B3",
+																			"content": [
+																				{
+																					"type": "map",
+																					"maps": [
+																						"coob3"
+																					]
+																				}
+																			]
+																		},
+																		{
+																			"title": "B4",
+																			"content": [
+																				{
+																					"type": "map",
+																					"maps": [
+																						"coob4"
+																					]
+																				}
+																			]
+																		},
+																		{
+																			"title": "B5",
+																			"content": [
+																				{
+																					"type": "map",
+																					"maps": [
+																						"coob5"
+																					]
+																				}
+																			]
+																		},
+																		{
+																			"title": "B6",
+																			"content": [
+																				{
+																					"type": "map",
+																					"maps": [
+																						"coob6"
+																					]
+																				}
+																			]
+																		},
+																		{
+																			"title": "B7",
+																			"content": [
+																				{
+																					"type": "map",
+																					"maps": [
+																						"coob7"
+																					]
+																				}
+																			]
+																		},
+																	   {
+																		   "title": "B8",
+																		   "content": [
+																			   {
+																				   "type": "map",
+																				   "maps": [
+																					   "coob8"
+																				   ]
+																			   }
+																		   ]
+																	   },
+																	   {
+																		   "title": "B9",
+																		   "content": [
+																			   {
+																				   "type": "map",
+																				   "maps": [
+																					   "coob9"
+																				   ]
+																			   }
+																		   ]
+																	   },
+																	   {
+																		   "title": "B10",
+																		   "content": [
+																			   {
+																				   "type": "map",
+																				   "maps": [
+																					   "coob10"
+																				   ]
+																			   }
+																		    ]
+																	    }
+																	]
+																}
+															]
+														},
+														{
+															"title": "B11-B20",
+															"content": [
+																{
+																	"type": "tabbed",
+																	"tabs": [
+																		{
+																			"title": "B11",
+																			"content": [
+																				{
+																					"type": "map",
+																					"maps": [
+																						"coob11"
+																					]
+																				}
+																			]
+																		},
+																		{
+																			"title": "B12",
+																			"content": [
+																				{
+																					"type": "map",
+																					"maps": [
+																						"coob12"
+																					]
+																				}
+																			]
+																		},
+																		{
+																			"title": "B13",
+																			"content": [
+																				{
+																					"type": "map",
+																					"maps": [
+																						"coob13"
+																					]
+																				}
+																			]
+																		},
+																		{
+																			"title": "B14",
+																			"content": [
+																				{
+																					"type": "map",
+																					"maps": [
+																						"coob14"
+																					]
+																				}
+																			]
+																		},
+																		{
+																			"title": "B15",
+																			"content": [
+																				{
+																					"type": "map",
+																					"maps": [
+																						"coob15"
+																					]
+																				}
+																			]
+																		},
+																		{
+																			"title": "B16",
+																			"content": [
+																				{
+																					"type": "map",
+																					"maps": [
+																						"coob16"
+																					]
+																				}
+																			]
+																		},
+																		{
+																			"title": "B17",
+																			"content": [
+																				{
+																					"type": "map",
+																					"maps": [
+																						"coob17"
+																					]
+																				}
+																			]
+																		},
+																		{
+																			"title": "B18",
+																			"content": [
+																				{
+																					"type": "map",
+																					"maps": [
+																						"coob18"
+																					]
+																				}
+																			]
+																		},
+																		{
+																			"title": "B19",
+																			"content": [
+																				{
+																					"type": "map",
+																					"maps": [
+																						"coob19"
+																					]
+																				}
+																			]
+																		},
+																		{
+																			"title": "B20",
+																			"content": [
+																				{
+																					"type": "map",
+																					"maps": [
+																						"coob20"
+																					]
+																				}
+																			]
+																		}
+																	]
+																}
+															]
+														},
+														{
+															"title": "B21-B30",
+															"content": [
+																{
+																	"type": "tabbed",
+																	"tabs": [
+																		{
+																			"title": "B21",
+																			"content": [
+																				{
+																					"type": "map",
+																					"maps": [
+																						"coob21"
+																					]
+																				}
+																			]
+																		},
+																		{
+																			"title": "B22",
+																			"content": [
+																				{
+																					"type": "map",
+																					"maps": [
+																						"coob22"
+																					]
+																				}
+																			]
+																		},
+																		{
+																			"title": "B23",
+																			"content": [
+																				{
+																					"type": "map",
+																					"maps": [
+																						"coob23"
+																					]
+																				}
+																			]
+																		},
+																	   {
+																		   "title": "B24",
+																		   "content": [
+																			   {
+																				   "type": "map",
+																				   "maps": [
+																					   "coob24"
+																				   ]
+																			   }
+																		   ]
+																	   },
+																	   {
+																		   "title": "B25",
+																		   "content": [
+																			   {
+																				   "type": "map",
+																				   "maps": [
+																					   "coob25"
+																				   ]
+																			   }
+																		   ]
+																	   },
+																	   {
+																		   "title": "B26",
+																		   "content": [
+																			   {
+																				   "type": "map",
+																				   "maps": [
+																					   "coob26"
+																				   ]
+																			   }
+																		   ]
+																	   },
+																	   {
+																		   "title": "B27",
+																		   "content": [
+																			   {
+																				   "type": "map",
+																				   "maps": [
+																					   "coob27"
+																				   ]
+																			   }
+																		   ]
+																	   },
+																	    {
+																		    "title": "B28",
+																		    "content": [
+																			    {
+																				    "type": "map",
+																				    "maps": [
+																					    "coob28"
+																				    ]
+																				}
+																		    ]
+																	    },
+																	    {
+																		    "title": "B29",
+																		    "content": [
+																			    {
+																				    "type": "map",
+																				    "maps": [
+																					    "coob29"
+																				    ]
+																				}
+																			]
+																		},
+																		{
+																			"title": "B30",
+																			"content": [
+																				{
+																					"type": "map",
+																					"maps": [
+																						"coob30"
+																					]
+																				}
+																			]
+																		}
+																	]
+																}
+															]
+														},
+														{
+															"title": "B31-B40",
+															"content": [
+																{
+																	"type": "tabbed",
+																	"tabs": [
+																		{
+																			"title": "B31",
+																			"content": [
+																				{
+																					"type": "map",
+																					"maps": [
+																						"coob31"
+																					]
+																				}
+																			]
+																		},
+																		{
+																			"title": "B32",
+																			"content": [
+																				{
+																					"type": "map",
+																					"maps": [
+																						"coob32"
+																					]
+																				}
+																			]
+																		},
+																	   {
+																		   "title": "B33",
+																		   "content": [
+																			   {
+																				   "type": "map",
+																				   "maps": [
+																					   "coob33"
+																				   ]
+																			   }
+																		   ]
+																	   },
+																	   {
+																		   "title": "B34",
+																		   "content": [
+																			   {
+																				   "type": "map",
+																				   "maps": [
+																					   "coob34"
+																				   ]
+																			   }
+																		   ]
+																	   },
+																	   {
+																		   "title": "B35",
+																		   "content": [
+																			   {
+																				   "type": "map",
+																				   "maps": [
+																					   "coob35"
+																				   ]
+																			   }
+																		   ]
+																	   },
+																	    {
+																		    "title": "B36",
+																		    "content": [
+																			    {
+																				    "type": "map",
+																				    "maps": [
+																					    "coob36"
+																				    ]
+																				}
+																			]
+																	    },
+																	    {
+																		    "title": "B37",
+																		    "content": [
+																			    {
+																				    "type": "map",
+																				    "maps": [
+																					    "coob37"
+																				    ]
+																				}
+																			]
+																	    },
+																	    {
+																		    "title": "B38",
+																		    "content": [
+																			    {
+																				    "type": "map",
+																				    "maps": [
+																					    "coob38"
+																				    ]
+																				}
+																			]
+																	    },
+																	    {
+																		    "title": "B39",
+																		    "content": [
+																			    {
+																				    "type": "map",
+																				    "maps": [
+																					    "coob39"
+																				    ]
+																				}
+																			]
+																	    },
+																		{
+																			"title": "B40",
+																			"content": [
+																				{
+																					"type": "map",
+																					"maps": [
+																						"coob40"
+																					]
+																				}
+																			]
+																		}
+																	]
+																}
+															]
+														},
+														{
+															"title": "B41-B50",
+															"content": [
+																{
+																	"type": "tabbed",
+																	"tabs": [
+																		{
+																			"title": "B41",
+																			"content": [
+																				{
+																					"type": "map",
+																					"maps": [
+																						"coob41"
+																					]
+																				}
+																			]
+																		},
+																	   {
+																		   "title": "B42",
+																		   "content": [
+																			   {
+																				   "type": "map",
+																				   "maps": [
+																					   "coob42"
+																				   ]
+																			   }
+																		   ]
+																	   },
+																	   {
+																		   "title": "B43",
+																		   "content": [
+																			   {
+																				   "type": "map",
+																				   "maps": [
+																					   "coob43"
+																				   ]
+																			   }
+																		   ]
+																	   },
+																	   {
+																		   "title": "B44",
+																		   "content": [
+																			   {
+																				   "type": "map",
+																				   "maps": [
+																					   "coob44"
+																				   ]
+																			   }
+																		   ]
+																	   },
+																	    {
+																		    "title": "B45",
+																		    "content": [
+																			    {
+																				    "type": "map",
+																				    "maps": [
+																					    "coob45"
+																				    ]
+																			    }
+																		    ]
+																	    },
+																	    {
+																		    "title": "B46",
+																		    "content": [
+																			    {
+																				    "type": "map",
+																				    "maps": [
+																					    "coob46"
+																				    ]
+																			    }
+																		    ]
+																	    },
+																	    {
+																		    "title": "B47",
+																		    "content": [
+																			    {
+																				    "type": "map",
+																				    "maps": [
+																					    "coob47"
+																				    ]
+																			    }
+																		    ]
+																	    },
+																	    {
+																		    "title": "B48",
+																		    "content": [
+																			    {
+																				    "type": "map",
+																				    "maps": [
+																					    "coob48"
+																				    ]
+																				}
+																			]
+																		},
+																		{
+																			"title": "B49",
+																			"content": [
+																				{
+																					"type": "map",
+																					"maps": [
+																						"coob49"
+																					]
+																				}
+																			]
+																		},
+																		{
+																			"title": "B50",
+																			"content": [
+																				{
+																					"type": "map",
+																					"maps": [
+																						"coob50"
+																					]
+																				}
+																			]
+																		}
+																	]
+																}
+															]
+														}
+													]
+												}
+											]
+										}
 									]
 								}
 							]
@@ -266,9 +1427,159 @@
 							"title": "Castle Town",
 							"content": [
 								{
-									"type": "map",
-									"maps": [
-										"ct"
+									"type": "tabbed",
+									"tabs": [
+										{
+											"title": "Agitha's Castle",
+											"content": [
+												{
+													"type": "tabbed",
+													"tabs": [
+														{
+															"title": "1F",
+															"content": [
+																{
+																	"type": "map",
+																	"maps": [
+																		"ac1f"
+																	]
+																}
+															]
+														},
+														{
+															"title": "2F",
+															"content": [
+																{
+																	"type": "map",
+																	"maps": [
+																		"ac2f"
+																	]
+																}
+															]
+														}
+													]
+												}
+											]
+										},
+										{
+											"title": "Doctor's Office",
+											"content": [
+												{
+													"type": "map",
+													"maps": [
+														"do"
+													]
+												}
+											]
+										},
+										{
+											"title": "Jovani's House",
+											"content": [
+												{
+													"type": "map",
+													"maps": [
+														"joh"
+													]
+												}
+											]
+										},
+										{
+											"title": "Malo Mart",
+											"content": [
+												{
+													"type": "map",
+													"maps": [
+														"mmcb"
+													]
+												}
+											]
+										},
+										{
+											"title": "STAR Tent",
+											"content": [
+												{
+													"type": "map",
+													"maps": [
+														"st"
+													]
+												}
+											]
+										},
+										{
+											"title": "Telma's Bar",
+											"content": [
+												{
+													"type": "tabbed",
+													"tabs": [
+														{
+															"title": "1F",
+															"content": [
+																{
+																	"type": "map",
+																	"maps": [
+																		"tb1f"
+																	]
+																}
+															]
+														},
+														{
+															"title": "2F",
+															"content": [
+																{
+																	"type": "map",
+																	"maps": [
+																		"tb2f"
+																	]
+																}
+															]
+														}
+													]
+												}
+											]
+										},
+										{
+											"title": "Goron Merchants",
+											"content": [
+												{
+													"type": "tabbed",
+													"tabs": [
+														{
+															"title": "1F",
+															"content": [
+																{
+																	"type": "map",
+																	"maps": [
+																		"cgm1f"
+																	]
+																}
+															]
+														},
+														{
+															"title": "2F",
+															"content": [
+																{
+																	"type": "map",
+																	"maps": [
+																		"cgm2f"
+																	]
+																}
+															]
+														}
+													]
+												}
+											]
+										},
+										{
+											"title": "Fanadi's Palace",
+											"content": [
+												{
+													"type": "map",
+													"maps": [
+														"fp"
+													]
+												}
+											]
+										}
 									]
 								}
 							]

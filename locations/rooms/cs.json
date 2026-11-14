@@ -2,10 +2,8 @@
 	{
 		"name": "CityinTheSkyBossRoom",
 		"access_rules": [
-			"@CityinTheSkyNorthWing, doubleclawshot, $canDefeatAeralfos, csbigkey",
-			"@CityinTheSkyNorthWing, doubleclawshot, $canDefeatAeralfos, bkkeysy",
-			"[glitcheson], @CityinTheSkyNorthWing, doubleclawshot, $canDefeatAeralfosGlitched, csbigkey",
-			"[glitcheson], @CityinTheSkyNorthWing, doubleclawshot, $canDefeatAeralfosGlitched, bkkeysy"
+			"@CityinTheSkyNorthWing, doubleclawshot, @CanDefeatAeralfos, csbigkey",
+			"[glitcheson], @CityinTheSkyNorthWing, doubleclawshot, @CanDefeatAeralfosGlitched, csbigkey"
 		]
 	},
 	{
@@ -18,34 +16,27 @@
 	{
 		"name": "CityinTheSkyEastWing",
 		"access_rules": [
-			"@CityinTheSkyLobby, spinner, cssmallkey:1",
-			"@CityinTheSkyLobby, spinner, skkeysy"
+			"@CityinTheSkyLobby, spinner, cssmallkey:1"
 		]
 	},
 	{
 		"name": "CityinTheSkyEntrance",
 		"access_rules": [
-			"@LakeHylia, clawshot, skybook:7",
-			"@LakeHylia, clawshot, skipcityintheskyentranceon",
-			"@CityinTheSkyBossRoom, $canDefeatArgorok",
-			"[glitcheson], @CityinTheSkyBossRoom, $canDefeatArgorokGlitched",
-			"@CityinTheSkyLobby"
+			"@CityinTheSkyBossRoom, @CanDefeatArgorok",
+			"[glitcheson], @CityinTheSkyBossRoom, @CanDefeatArgorokGlitched",
+			"@CityinTheSkyLobby",
+			"@LakeHylia, skybook:7, clawshot",
+			"@LakeHylia, skipcityintheskyentranceon, clawshot"
 		]
 	},
 	{
 		"name": "CityinTheSkyLobby",
 		"access_rules": [
-			"@CityinTheSkyCentralTowerSecondFloor, clawshot, boots, damagevanilla, shadowcrystal",
-			"@CityinTheSkyCentralTowerSecondFloor, clawshot, boots, damagedouble, shadowcrystal",
-			"@CityinTheSkyCentralTowerSecondFloor, clawshot, boots, damagetriple, shadowcrystal",
-			"@CityinTheSkyCentralTowerSecondFloor, clawshot, boots, damagequadruple, shadowcrystal",
-			"[glitcheson], @CityinTheSkyCentralTowerSecondFloor, clawshot, boots, damagevanilla, $canDoLJA",
-			"[glitcheson], @CityinTheSkyCentralTowerSecondFloor, clawshot, boots, damagedouble, $canDoLJA",
-			"[glitcheson], @CityinTheSkyCentralTowerSecondFloor, clawshot, boots, damagetriple, $canDoLJA",
-			"[glitcheson], @CityinTheSkyCentralTowerSecondFloor, clawshot, boots, damagequadruple, $canDoLJA",
+			"@CityinTheSkyCentralTowerSecondFloor, clawshot, boots, shadowcrystal, $Not|ohko",
+			"[glitcheson], @CityinTheSkyCentralTowerSecondFloor, clawshot, boots, @CanDoLJA, $Not|ohko",
 			"@CityinTheSkyEastWing",
 			"@CityinTheSkyEntrance, clawshot",
-			"[glitcheson], @CityinTheSkyEntrance, bow, $canDoLJA",
+			"[glitcheson], @CityinTheSkyEntrance, bow, @CanDoLJA",
 			"@CityinTheSkyNorthWing",
 			"@CityinTheSkyWestWing, doubleclawshot"
 		]
@@ -53,7 +44,7 @@
 	{
 		"name": "CityinTheSkyNorthWing",
 		"access_rules": [
-			"@CityinTheSkyLobby, doubleclawshot, $canDefeatBabaSerpent, $canDefeatKargorok, shadowcrystal, boots",
+			"@CityinTheSkyLobby, doubleclawshot, @CanDefeatBabaSerpent, @CanDefeatKargorok, shadowcrystal, boots",
 			"[glitcheson], @CityinTheSkyLobby, doubleclawshot"
 		]
 	},

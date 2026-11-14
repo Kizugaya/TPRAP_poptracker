@@ -1,32 +1,448 @@
 [
 	{
 		"name": "overworld",
-		"location_size": 48,
+		"location_size": 192,
 		"location_border_thickness": 2,
 		"location_shape": "rect",
-		"img": "images/Overworld/Full Map.png"
+		"img": "images/Overworld/Full Map Big.png"
 	},
 	{
-		"name": "fr",
-		"location_size": 48,
+		"name": "overworldfull",
+		"location_size": 192,
 		"location_border_thickness": 2,
 		"location_shape": "rect",
-		"img": "images/Overworld/Faron Region.png"
+		"img": "images/Overworld/Full Map Big.png"
+	},
+
+	{
+		"name": "sfc",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/South_Faron_Cave.png"
 	},
 	{
-		"name": "er",
-		"location_size": 48,
+		"name": "ch",
+		"location_size": 32,
 		"location_border_thickness": 2,
 		"location_shape": "rect",
-		"img": "images/Overworld/Eldin Region.png"
+		"img": "images/Submaps/Coro's_House.png"
 	},
 	{
-		"name": "lr",
-		"location_size": 48,
+		"name": "elc",
+		"location_size": 32,
 		"location_border_thickness": 2,
 		"location_shape": "rect",
-		"img": "images/Overworld/Lanayru Region.png"
+		"img": "images/Submaps/Eldin_Lantern_Cave.png"
 	},
+	{
+		"name": "ksb1",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Kakariko_Sanctuary/0.png"
+	},
+	{
+		"name": "ks1f",
+		"location_size": 16,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Kakariko_Sanctuary/1.png"
+	},
+	{
+		"name": "mmkb",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Malo_Mart_Kakariko_Branch.png"
+	},
+	{
+		"name": "ki1f",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Kakariko_Inn/0.png"
+	},
+	{
+		"name": "ki2f",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Kakariko_Inn/1.png"
+	},
+	{
+		"name": "keh",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Kakariko_Empty_House.png"
+	},
+	{
+		"name": "bs",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Barnes'_Shop.png"
+	},
+	{
+		"name": "kwb1",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Kakariko_Watchtower/0.png"
+	},
+	{
+		"name": "kw1f",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Kakariko_Watchtower/1.png"
+	},
+	{
+		"name": "es4f",
+		"location_size": 16,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Eldin_Stockcave/3.png"
+	},
+	{
+		"name": "es3f",
+		"location_size": 16,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Eldin_Stockcave/2.png"
+	},
+	{
+		"name": "es2f",
+		"location_size": 16,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Eldin_Stockcave/1.png"
+	},
+	{
+		"name": "es1f",
+		"location_size": 16,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Eldin_Stockcave/0.png"
+	},
+	{
+		"name": "ih",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Impaz's_House.png"
+	},
+	{
+		"name": "ls",
+		"location_size": 24,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Lanayru_Spring.png"
+	},
+	{
+		"name": "llc",
+		"location_size": 24,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Lake_Lantern_Cave.png"
+	},
+	{
+		"name": "lic",
+		"location_size": 24,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Lanayru_Ice_Cave.png"
+	},
+	{
+		"name": "hs",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Hena's_Shop.png"
+	},
+	{
+		"name": "lh1f",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Link's_House/1.png"
+	},
+	{
+		"name": "lhb1",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Link's_House/0.png"
+	},
+	{
+		"name": "ss",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Sera's_Shop.png"
+	},
+	{
+		"name": "jah",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Jaggle's_House.png"
+	},
+	{
+		"name": "rh",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Rusl's_House.png"
+	},
+	{
+		"name": "bh1f",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Bo's_House/0.png"
+	},
+	{
+		"name": "bh2f",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Bo's_House/1.png"
+	},
+	{
+		"name": "psg",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Past_Sacred_Grove.png"
+	},
+	{
+		"name": "do",
+		"location_size": 8,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Doctor's_Office.png"
+	},
+	{
+		"name": "joh",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Jovani's_House.png"
+	},
+	{
+		"name": "mmcb",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Malo_Mart_Castle_Branch.png"
+	},
+	{
+		"name": "tb1f",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Telma's_Bar/0.png"
+	},
+	{
+		"name": "tb2f",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Telma's_Bar/1.png"
+	},
+	{
+		"name": "cgm1f",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Castle_Goron_Merchants/0.png"
+	},
+	{
+		"name": "cgm2f",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Castle_Goron_Merchants/1.png"
+	},
+	{
+		"name": "fp",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Fanadi's_Palace.png"
+	},
+	{
+		"name": "ac1f",
+		"location_size": 24,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Agitha's_Castle/0.png"
+	},
+	{
+		"name": "ac2f",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Agitha's_Castle/1.png"
+	},
+	{
+		"name": "st",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/STAR_Tent.png"
+	},
+
+	{
+		"name": "grotto12",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Grotto_1.png"
+	},
+	{
+		"name": "grotto11",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Grotto_1.png"
+	},
+	{
+		"name": "grotto13",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Grotto_1.png"
+	},
+	{
+		"name": "grotto10",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Grotto_1.png"
+	},
+	{
+		"name": "grotto22",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Grotto_2.png"
+	},
+	{
+		"name": "grotto21",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Grotto_2.png"
+	},
+	{
+		"name": "grotto23",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Grotto_2.png"
+	},
+	{
+		"name": "grotto20",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Grotto_2.png"
+	},
+	{
+		"name": "grotto33",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Grotto_3.png"
+	},
+	{
+		"name": "grotto31",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Grotto_3.png"
+	},
+	{
+		"name": "grotto30",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Grotto_3.png"
+	},
+	{
+		"name": "grotto32",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Grotto_3.png"
+	},
+	{
+		"name": "grotto43",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Grotto_4.png"
+	},
+	{
+		"name": "grotto40",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Grotto_4.png"
+	},
+	{
+		"name": "grotto41",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Grotto_4.png"
+	},
+	{
+		"name": "grotto42",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Grotto_4.png"
+	},
+	{
+		"name": "grotto51",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Grotto_5.png"
+	},
+	{
+		"name": "grotto53",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Grotto_5.png"
+	},
+	{
+		"name": "grotto50",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Grotto_5.png"
+	},
+	{
+		"name": "grotto54",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Grotto_5.png"
+	},
+	{
+		"name": "grotto52",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Grotto_5.png"
+	},
+
 	{
 		"name": "ft1f",
 		"location_size": 32,
@@ -391,130 +807,12 @@
 		"location_shape": "rect",
 		"img": "images/Dungeons/Hyrule Castle/Full.png"
 	},
+
+
 	{
-		"name": "bct",
+		"name": "tutorial",
 		"location_size": 32,
 		"location_border_thickness": 2,
-		"location_shape": "rect",
-		"img": "images/Overworld/Beside Castle Town.png"
-	},
-	{
-		"name": "ct",
-		"location_size": 24,
-		"location_border_thickness": 2,
-		"location_shape": "rect",
-		"img": "images/Overworld/Castle Town.png"
-	},
-	{
-		"name": "dm",
-		"location_size": 32,
-		"location_border_thickness": 2,
-		"location_shape": "rect",
-		"img": "images/Overworld/Death Mountain.png"
-	},
-	{
-		"name": "ef",
-		"location_size": 32,
-		"location_border_thickness": 2,
-		"location_shape": "rect",
-		"img": "images/Overworld/Eldin Field.png"
-	},
-	{
-		"name": "ff",
-		"location_size": 32,
-		"location_border_thickness": 2,
-		"location_shape": "rect",
-		"img": "images/Overworld/Faron Field.png"
-	},
-	{
-		"name": "fw",
-		"location_size": 32,
-		"location_border_thickness": 2,
-		"location_shape": "rect",
-		"img": "images/Overworld/Faron Woods.png"
-	},
-	{
-		"name": "gd",
-		"location_size": 28,
-		"location_border_thickness": 2,
-		"location_shape": "rect",
-		"img": "images/Overworld/Gerudo Desert.png"
-	},
-	{
-		"name": "hv",
-		"location_size": 16,
-		"location_border_thickness": 2,
-		"location_shape": "rect",
-		"img": "images/Overworld/Hidden Village.png"
-	},
-	{
-		"name": "kakariko",
-		"location_size": 24,
-		"location_border_thickness": 2,
-		"location_shape": "rect",
-		"img": "images/Overworld/Kakariko.png"
-	},
-	{
-		"name": "kg",
-		"location_size": 32,
-		"location_border_thickness": 2,
-		"location_shape": "rect",
-		"img": "images/Overworld/Kakariko Gorge.png"
-	},
-	{
-		"name": "lh",
-		"location_size": 32,
-		"location_border_thickness": 2,
-		"location_shape": "rect",
-		"img": "images/Overworld/Lake Hylia.png"
-	},
-	{
-		"name": "lf",
-		"location_size": 40,
-		"location_border_thickness": 2,
-		"location_shape": "rect",
-		"img": "images/Overworld/Lanayru Field.png"
-	},
-	{
-		"name": "ordon",
-		"location_size": 32,
-		"location_border_thickness": 2,
-		"location_shape": "rect",
-		"img": "images/Overworld/Ordon.png"
-	},
-	{
-		"name": "sg",
-		"location_size": 32,
-		"location_border_thickness": 2,
-		"location_shape": "rect",
-		"img": "images/Overworld/Sacred Grove.png"
-	},
-	{
-		"name": "sm",
-		"location_size": 32,
-		"location_border_thickness": 2,
-		"location_shape": "rect",
-		"img": "images/Overworld/Snowpeak Mountain.png"
-	},
-	{
-		"name": "sct",
-		"location_size": 24,
-		"location_border_thickness": 2,
-		"location_shape": "rect",
-		"img": "images/Overworld/South Castle Town.png"
-	},
-	{
-		"name": "uzr",
-		"location_size": 32,
-		"location_border_thickness": 2,
-		"location_shape": "rect",
-		"img": "images/Overworld/Upper Zora's River.png"
-	},
-	{
-		"name": "zd",
-		"location_size": 24,
-		"location_border_thickness": 2,
-		"location_shape": "rect",
-		"img": "images/Overworld/Zora's Domain.png"
+		"img": "images/TutorialDisc.png"
 	}
 ]

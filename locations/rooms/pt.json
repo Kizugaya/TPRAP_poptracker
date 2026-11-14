@@ -2,14 +2,8 @@
 	{
 		"name": "PalaceofTwilightBossRoom",
 		"access_rules": [
-			"@PalaceofTwilightNorthTower, ptsmallkey:7, $canDefeatZantHead, glowingmastersword, ptbigkey, $canDefeatShadowBeast, clawshot",
-			"@PalaceofTwilightNorthTower, skkeysy, $canDefeatZantHead, glowingmastersword, ptbigkey, $canDefeatShadowBeast, clawshot",
-			"@PalaceofTwilightNorthTower, ptsmallkey:7, $canDefeatZantHead, glowingmastersword, bkkeysy, $canDefeatShadowBeast, clawshot",
-			"@PalaceofTwilightNorthTower, skkeysy, $canDefeatZantHead, glowingmastersword, bkkeysy, $canDefeatShadowBeast, clawshot",
-			"[glitcheson], @PalaceofTwilightNorthTower, ptsmallkey:7, $canDefeatZantHeadGlitched, glowingmastersword, ptbigkey, $canDefeatShadowBeast, clawshot",
-			"[glitcheson], @PalaceofTwilightNorthTower, skkeysy, $canDefeatZantHeadGlitched, glowingmastersword, ptbigkey, $canDefeatShadowBeast, clawshot",
-			"[glitcheson], @PalaceofTwilightNorthTower, ptsmallkey:7, $canDefeatZantHeadGlitched, glowingmastersword, bkkeysy, $canDefeatShadowBeast, clawshot",
-			"[glitcheson], @PalaceofTwilightNorthTower, skkeysy, $canDefeatZantHeadGlitched, glowingmastersword, bkkeysy, $canDefeatShadowBeast, clawshot"
+			"@PalaceofTwilightNorthTower, @CanDefeatZantHead, glowingmastersword, ptbigkey, @CanDefeatShadowBeast, clawshot, ptsmallkey:7",
+			"[glitcheson], @PalaceofTwilightNorthTower, @CanDefeatZantHeadGlitched, glowingmastersword, ptbigkey, @CanDefeatShadowBeast, clawshot, ptsmallkey:7"
 		]
 	},
 	{
@@ -27,12 +21,12 @@
 	{
 		"name": "PalaceofTwilightEntrance",
 		"access_rules": [
-			"@MirrorChamberPortal",
-			"@PalaceofTwilightBossRoom, $canDefeatZant",
-			"[glitcheson], @PalaceofTwilightBossRoom, $canDefeatZantGlitched",
-			"@PalaceofTwilightEastWing",
 			"@PalaceofTwilightWestWing",
-			"@PalaceofTwilightCentralFirstRoom"
+			"@PalaceofTwilightEastWing",
+			"@PalaceofTwilightCentralFirstRoom",
+			"@PalaceofTwilightBossRoom, @CanDefeatZant",
+			"[glitcheson], @PalaceofTwilightBossRoom, @CanDefeatZantGlitched",
+			"@MirrorChamberPortal"
 		]
 	},
 	{
@@ -45,16 +39,14 @@
 	{
 		"name": "PalaceofTwilightOutsideRoom",
 		"access_rules": [
-			"@PalaceofTwilightCentralFirstRoom, glowingmastersword, ptsmallkey:5",
-			"@PalaceofTwilightCentralFirstRoom, glowingmastersword, skkeysy",
+			"@PalaceofTwilightCentralFirstRoom, ptsmallkey:5, glowingmastersword",
 			"@PalaceofTwilightNorthTower"
 		]
 	},
 	{
 		"name": "PalaceofTwilightNorthTower",
 		"access_rules": [
-			"@PalaceofTwilightOutsideRoom, ptsmallkey:6",
-			"@PalaceofTwilightOutsideRoom, skkeysy"
+			"@PalaceofTwilightOutsideRoom, ptsmallkey:6"
 		]
 	}
 ]

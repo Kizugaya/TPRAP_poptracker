@@ -1,0 +1,200 @@
+[
+    {
+        "name": "Tutorial Locations",
+        "children": [
+            {
+                "name": "Obtained",
+                "map_locations": [
+                    {
+                        "map": "tutorial",
+                        "x": 47,
+                        "y": 545
+                    }
+                ],
+                "sections": [
+                    {
+                        "access_rules": [
+                            ""
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Not Obtainable",
+                "map_locations": [
+                    {
+                        "map": "tutorial",
+                        "x": 47,
+                        "y": 588
+                    }
+                ],
+                "sections": [
+                    {
+                        "access_rules": [
+                            "unobtainable"
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Obtainable with Glitches",
+                "map_locations": [
+                    {
+                        "map": "tutorial",
+                        "x": 47,
+                        "y": 631
+                    }
+                ],
+                "sections": [
+                    {
+                        "access_rules": [
+                            "[unobtainable]"
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Obtainable",
+                "map_locations": [
+                    {
+                        "map": "tutorial",
+                        "x": 47,
+                        "y": 674
+                    }
+                ],
+                "sections": [
+                    {
+                        "access_rules": [
+                            ""
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Howling Stones",
+                "map_locations": [
+                    {
+                        "map": "tutorial",
+                        "x": 47,
+                        "y": 717
+                    }
+                ],
+                "sections": [
+                    {
+                        "access_rules": [
+                            "{}"
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Dungeons",
+                "map_locations": [
+                    {
+                        "map": "tutorial",
+                        "x": 533,
+                        "y": 545,
+                        "border_thickness": 8,
+                        "size": 24
+                    }
+                ],
+                "sections": [
+                    {
+                        "access_rules": [
+                            ""
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Bugs/Poes",
+                "map_locations": [
+                    {
+                        "map": "tutorial",
+                        "x": 533,
+                        "y": 588,
+                        "shape": "diamond"
+                    }
+                ],
+                "sections": [
+                    {
+                        "access_rules": [
+                            ""
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Hint Signs",
+                "map_locations": [
+                    {
+                        "map": "tutorial",
+                        "x": 533,
+                        "y": 631,
+                        "shape": "diamond"
+                    }
+                ],
+                "sections": [
+                    {
+                        "access_rules": [
+                            "{}"
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Scents",
+                "map_locations": [
+                    {
+                        "map": "tutorial",
+                        "x": 533,
+                        "y": 674,
+                        "shape": "diamond",
+                        "border_thickness": 8,
+                        "size": 24
+                    }
+                ],
+                "sections": [
+                    {
+                        "access_rules": [
+                            ""
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Submaps",
+                "map_locations": [
+                    {
+                        "map": "tutorial",
+                        "x": 533,
+                        "y": 717,
+                        "shape": "trapezoid"
+                    }
+                ],
+                "sections": [
+                    {
+                        "access_rules": [
+                            ""
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Continue",
+                "map_locations": [
+                    {
+                        "map": "tutorial",
+                        "x": 750,
+                        "y": 75
+                    }
+                ],
+                "sections": [
+                    {
+                        "hosted_item": "tutorialoff"
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -24,11 +24,6 @@ function DebugAP(msg)
 	end
 end
 
-ScriptHost:LoadScript("scripts/item_mapping.lua")
-ScriptHost:LoadScript("scripts/location_mapping.lua")
-ScriptHost:LoadScript("scripts/server_copy_keys.lua")
-ScriptHost:LoadScript("scripts/region_mapping.lua")
-
 
 CUR_INDEX = -1
 SLOT_DATA = nil
@@ -142,6 +137,7 @@ function SetSettings()
 	if SLOT_DATA["World Version"] == "v0.2.2" or SLOT_DATA["World Version"] == "v0.2.1" or SLOT_DATA["World Version"] == "v0.2.0" or SLOT_DATA["World Version"] == "v0.1.5" or SLOT_DATA["World Version"] == "v0.1.3" or SLOT_DATA["World Version"] == "v0.1.2" or SLOT_DATA["World Version"] == "v0.1.1" or SLOT_DATA["World Version"] == "v0.1" then
 		--skip if version is less than v0.2.3
 	else
+		print(Dump_table(SLOT_DATA.Settings))
 		if SLOT_DATA.Settings["Logic Settings"] == "Glitchless" then
 			Tracker:FindObjectForCode("glitched").CurrentStage = 1
 		elseif (SLOT_DATA.Settings["Logic Settings"] == "No Logic") or (SLOT_DATA.Settings["Logic Settings"] == "Glitched") then
@@ -158,7 +154,7 @@ function SetSettings()
 			Tracker:FindObjectForCode("gbugs").CurrentStage = 1
 		end
 		if SLOT_DATA.Settings["Castle Requirements"] == "Open" then
-			Tracker:FindObjectForCode("castlerequirements").CurrentStage = 4
+			Tracker:FindObjectForCode("castlerequirements").CurrentStage = 0
 		elseif SLOT_DATA.Settings["Castle Requirements"] == "Fused Shadows" then
 			Tracker:FindObjectForCode("castlerequirements").CurrentStage = 1
 		elseif SLOT_DATA.Settings["Castle Requirements"] == "Mirror Shards" then
@@ -166,7 +162,7 @@ function SetSettings()
 		elseif SLOT_DATA.Settings["Castle Requirements"] == "All Dungeons" then
 			Tracker:FindObjectForCode("castlerequirements").CurrentStage = 3
 		elseif SLOT_DATA.Settings["Castle Requirements"] == "Vanilla" then
-			Tracker:FindObjectForCode("castlerequirements").CurrentStage = 0
+			Tracker:FindObjectForCode("castlerequirements").CurrentStage = 4
 		end
 		if SLOT_DATA.Settings["Palace of Twilight Requirements"] == "Open" then
 			Tracker:FindObjectForCode("palacerequirements").CurrentStage = 3
@@ -237,9 +233,9 @@ function SetSettings()
 			Tracker:FindObjectForCode("openmap").CurrentStage = 1
 		end
 		if SLOT_DATA.Settings["Increase Wallet"] == "Yes" then
-			Tracker:FindObjectForCode("increasewallet").CurrentStage = 0
+			Tracker:FindObjectForCode("walletsize").CurrentStage = 3
 		elseif SLOT_DATA.Settings["Increase Wallet"] == "No" then
-			Tracker:FindObjectForCode("increasewallet").CurrentStage = 1
+			Tracker:FindObjectForCode("walletsize").CurrentStage = 1
 		end
 		if SLOT_DATA.Settings["Transform Anywhere"] == "Yes" then
 			Tracker:FindObjectForCode("transformanywhere").CurrentStage = 0
@@ -270,7 +266,7 @@ function SetSettings()
 			Tracker:FindObjectForCode("smallkeys").CurrentStage = 2
 		elseif SLOT_DATA.Settings["Small Key Settings"] == "Anywhere" then
 			Tracker:FindObjectForCode("smallkeys").CurrentStage = 3
-		elseif SLOT_DATA.Settings["Small Key Settings"] == "Start With" then
+		elseif SLOT_DATA.Settings["Small Key Settings"] == "Startwith" then
 			Tracker:FindObjectForCode("smallkeys").CurrentStage = 4
 		end
 		if SLOT_DATA.Settings["Big Key Settings"] == "Vanilla" then
@@ -281,7 +277,7 @@ function SetSettings()
 			Tracker:FindObjectForCode("bigkeys").CurrentStage = 2
 		elseif SLOT_DATA.Settings["Big Key Settings"] == "Anywhere" then
 			Tracker:FindObjectForCode("bigkeys").CurrentStage = 3
-		elseif SLOT_DATA.Settings["Big Key Settings"] == "Start With" then
+		elseif SLOT_DATA.Settings["Big Key Settings"] == "Startwith" then
 			Tracker:FindObjectForCode("bigkeys").CurrentStage = 4
 		end
 		if SLOT_DATA.Settings["Open Door of Time"] == "Yes" then
@@ -308,8 +304,10 @@ function InitPortals()
 		Tracker:FindObjectForCode("zdportal").CurrentStage = 1
 		Tracker:FindObjectForCode("lhportal").CurrentStage = 1
 		Tracker:FindObjectForCode("ctportal").CurrentStage = 1
-		Tracker:FindObjectForCode("stportal").CurrentStage = 1
 		Tracker:FindObjectForCode("sgportal").CurrentStage = 1
+		if Tracker:FindObjectForCode("skipsnowpeakentrance").CurrentStage == 0 then
+			Tracker:FindObjectForCode("stportal").CurrentStage = 1
+		end
 	end
 end
 function InitItems()
@@ -317,6 +315,7 @@ function InitItems()
 	Tracker:FindObjectForCode("eldinvesseloflight").Active = true
 	Tracker:FindObjectForCode("lanayruvesseloflight").Active = true
 	Tracker:FindObjectForCode("fwkey").Active = true
+	Tracker:FindObjectForCode("START_OrdonLinksHouse_OutsideLinksHouse").Active = true
 end
 function InitMap()
 	Tracker:UiHint("ActivateTab", "Full Map")
@@ -329,7 +328,7 @@ function SetHintsFromSlotData()
 	else
 		for k, v in pairs(SLOT_DATA.LocationClassification) do
 			if v == "Excluded" then
-				UpdateHints(tonumber(k), 10)
+				UpdateHints(tonumber(k), 20)
 			elseif v == "Priority" then
 				UpdateHints(tonumber(k), 30)
 			end
@@ -470,14 +469,10 @@ function OnNotify(_key, value, old)
 		Tracker:FindObjectForCode("hccompleted").Active = victory
 		Tracker:FindObjectForCode("@Hyrule Castle/5F/Victory/").AvailableChestCount = Tracker:FindObjectForCode("@Hyrule Castle/5F/Victory/").AvailableChestCount - (victory and 1 or 0)
 	end
-	if SLOT_DATA["World Version"] == "v0.2.3" or SLOT_DATA["World Version"] == "v0.2.2" or SLOT_DATA["World Version"] == "v0.2.1" or SLOT_DATA["World Version"] == "v0.2.0" or SLOT_DATA["World Version"] == "v0.1.5" or SLOT_DATA["World Version"] == "v0.1.3" or SLOT_DATA["World Version"] == "v0.1.2" or SLOT_DATA["World Version"] == "v0.1.1" or SLOT_DATA["World Version"] == "v0.1" then
-		--skip for up to v0.2.3
+	if SLOT_DATA["World Version"] == "v0.2.4" or SLOT_DATA["World Version"] == "v0.2.3" or SLOT_DATA["World Version"] == "v0.2.2" or SLOT_DATA["World Version"] == "v0.2.1" or SLOT_DATA["World Version"] == "v0.2.0" or SLOT_DATA["World Version"] == "v0.1.5" or SLOT_DATA["World Version"] == "v0.1.3" or SLOT_DATA["World Version"] == "v0.1.2" or SLOT_DATA["World Version"] == "v0.1.1" or SLOT_DATA["World Version"] == "v0.1" then
+		--skip for up to v0.2.4
 	else
-		if SLOT_DATA["World Version"] == "v0.2.4" then
-			--skip if v0.2.4
-		else
-			_, _, key = string.find(_key, "TP_.*_.*_(.*)")
-		end
+		_, _, key = string.find(_key, "TP_.*_.*_(.*)")
 		if _key == "_read_hints_"..TEAM_NUMBER.."_"..PLAYER_ID and Highlight then
 			for _, hint in ipairs(value) do
 				if not hint.found and hint.finding_player == PLAYER_ID then
@@ -498,17 +493,13 @@ function OnNotify(_key, value, old)
 			Tracker:FindObjectForCode("@Faron Region/Faron Woods Golden Wolves/South Castle Town Stone/").AvailableChestCount = Tracker:FindObjectForCode("@Faron Region/Faron Woods Golden Wolves/South Castle Town Stone/").AvailableChestCount - (value and 1 or 0)
 		elseif key == "Lake Hylia Stone" then
 			Tracker:FindObjectForCode("lhhowlingstone").Active = value
-			Tracker:FindObjectForCode("@Gerudo Desert Golden Wolves/Lake Hylia Stone/").AvailableChestCount = Tracker:FindObjectForCode("@Gerudo Desert Golden Wolves/Lake Hylia Stone/").AvailableChestCount - (value and 1 or 0)
+			Tracker:FindObjectForCode("@Lanayru Region/Lake Hylia Golden Wolves/Gerudo Desert Stone/").AvailableChestCount = Tracker:FindObjectForCode("@Lanayru Region/Lake Hylia Golden Wolves/Gerudo Desert Stone/").AvailableChestCount - (value and 1 or 0)
 		elseif key == "Snowpeak Stone" then
 			Tracker:FindObjectForCode("smhowlingstone").Active = value
 			Tracker:FindObjectForCode("@Snowpeak Mountain Golden Wolves/Kakariko Graveyard Stone/").AvailableChestCount = Tracker:FindObjectForCode("@Snowpeak Mountain Golden Wolves/Kakariko Graveyard Stone/").AvailableChestCount - (value and 1 or 0)
 		elseif key == "Hidden Village Stone" then
 			Tracker:FindObjectForCode("hvhowlingstone").Active = value
 			Tracker:FindObjectForCode("@Eldin Region/Hidden Village Golden Wolves/North Castle Town Stone/").AvailableChestCount = Tracker:FindObjectForCode("@Eldin Region/Hidden Village Golden Wolves/North Castle Town Stone/").AvailableChestCount - (value and 1 or 0)
-		elseif key == "Youth Scent" then
-			Tracker:FindObjectForCode("youthsscent").Active = value or (Tracker:FindObjectForCode("eldintwilightcleared").CurrentStage == 0)
-		elseif key == "Ilias Scent" then
-			Tracker:FindObjectForCode("iliascent").Active = value or (Tracker:FindObjectForCode("lanayrutwilightcleared").CurrentStage == 0)
 		elseif key == "Medicine Scent" then
 			Tracker:FindObjectForCode("medicinescent").Active = value
 		elseif key == "ReekFish Scent" then
@@ -517,21 +508,26 @@ function OnNotify(_key, value, old)
 			Tracker:FindObjectForCode("poescent").Active = value
 		elseif key == "Renados letter" then
 			if value == true then
+				Tracker:FindObjectForCode("@Eldin Region/Submaps/Renado's Sanctuary/Renado's Letter/").AvailableChestCount = Tracker:FindObjectForCode("@Eldin Region/Submaps/Renado's Sanctuary/Renado's Letter/").AvailableChestCount - (value and 1 or 0)
 				Tracker:FindObjectForCode("renadosletter").CurrentStage = Tracker:FindObjectForCode("renadosletter").CurrentStage + 1
 			end
 		elseif key == "Telmas Invoice" then
 			if value == true then
+				Tracker:FindObjectForCode("@Castle Town/Submaps/Telma's Bar/Doctor's Invoice/").AvailableChestCount = Tracker:FindObjectForCode("@Castle Town/Submaps/Telma's Bar/Doctor's Invoice/").AvailableChestCount - (value and 1 or 0)
 				Tracker:FindObjectForCode("invoice").CurrentStage = Tracker:FindObjectForCode("invoice").CurrentStage + 1
 			end
 		elseif key == "Wooden Statue" then
 			if value == true then
+				Tracker:FindObjectForCode("@Lanayru Region/Outside South Castle Town/Wooden Statue/").AvailableChestCount = Tracker:FindObjectForCode("@Lanayru Region/Outside South Castle Town/Wooden Statue/").AvailableChestCount - (value and 1 or 0)
 				Tracker:FindObjectForCode("woodenstatue").CurrentStage = Tracker:FindObjectForCode("woodenstatue").CurrentStage + 1
 			end
 		elseif key == "Ilias Charm" then
 			if value == true then
+				Tracker:FindObjectForCode("@Eldin Region/Hidden Village/Ilia's Charm/").AvailableChestCount = Tracker:FindObjectForCode("@Eldin Region/Hidden Village/Ilia's Charm/").AvailableChestCount - (value and 1 or 0)
 				Tracker:FindObjectForCode("iliascharm").CurrentStage = Tracker:FindObjectForCode("iliascharm").CurrentStage + 1
 			end
 		elseif key == "Memory Reward" and Tracker:FindObjectForCode("horsecall").Active == false then
+			Tracker:FindObjectForCode("@Eldin Region/Submaps/Renado's Sanctuary/Ilia Memory Reward/").AvailableChestCount = Tracker:FindObjectForCode("@Eldin Region/Submaps/Renado's Sanctuary/Ilia Memory Reward/").AvailableChestCount - (value and 1 or 0)
 			Tracker:FindObjectForCode("horsecall").Active = value
 		elseif key == "Zant Defeated" then
 			Tracker:FindObjectForCode("ptcompleted").Active = value
@@ -555,25 +551,21 @@ function OnNotify(_key, value, old)
 			if key == "Current Region" and Tracker:FindObjectForCode("autotab").CurrentStage <= 1 then
 				if REGION[value] ~= "Main Map" then
 					Tracker:UiHint("ActivateTab", REGION[value])
-					print("(v0.3.0) Changing Map to: "..REGION[value])
 				end
 				if REGION[value] == "Faron Woods" then
 					Tracker:UiHint("ActivateTab", "Faron Woods")
 					Tracker:UiHint("ActivateTab", "Faron")
 					Tracker:UiHint("ActivateTab", "Overworld")
-					print("(v0.3.0) Changing Map to: Faron Woods")
 				end
 				if REGION[value] == "Eldin Region" then
 					Tracker:UiHint("ActivateTab", "Eldin Region")
 					Tracker:UiHint("ActivateTab", "Eldin")
 					Tracker:UiHint("ActivateTab", "Overworld")
-					print("(v0.3.0) Changing Map to: Eldin Region")
 				end
 				if REGION[value] == "Lanayru Region" then
 					Tracker:UiHint("ActivateTab", "Lanayru Region")
 					Tracker:UiHint("ActivateTab", "Lanayru")
 					Tracker:UiHint("ActivateTab", "Overworld")
-					print("(v0.3.0) Changing Map to: Lanayru Region")
 				end
 				if REGION[value] == "Ordon" or
 				REGION[value] == "Sacred Grove" or
@@ -581,28 +573,48 @@ function OnNotify(_key, value, old)
 				REGION[value] == "Castle Town" or
 				REGION[value] == "Gerudo Desert" then
 					Tracker:UiHint("ActivateTab", "Overworld")
-					print("(v0.3.0) Changing Map to: "..REGION[value])
 				end
 				if REGION[value] == "Main Map" and Tracker:FindObjectForCode("autotab").CurrentStage == 1 then
 					Tracker:UiHint("ActivateTab", "Overworld")
 					Tracker:UiHint("ActivateTab", "Main Map")
-					print("(v0.3.0) Changing Map to: "..REGION[value])
 				end
 			end
 		else
-			--if 0.4.0+
-			if key == "Current Room" then
-				CurrentRoom = value
-				print("Current Room changed to: "..CurrentRoom)
-				SwitchMap()
-			elseif key == "Current Stage" then
-				CurrentStage = STAGE[value]
-				print("Current Stage changed to: "..CurrentStage)
-				SwitchMap()
-			elseif key == "Current Floor" then
-				CurrentFloor = value
-				print("Current Floor changed to: "..CurrentFloor)
-				SwitchMap()
+			--if v0.4.0+
+			if Tracker:FindObjectForCode("autotab").CurrentStage <= 1 then
+				if key == "Current Room" then
+					CurrentRoom = tonumber(value) or value
+					SwitchMap()
+				elseif key == "Current Stage" then
+					CurrentStage = value
+					SwitchMap()
+				elseif key == "Current Floor" then
+					if value == 254 then
+						CurrentFloor = "B2"
+					elseif value == 255 then
+						CurrentFloor = "B1"
+					elseif value == 0 then
+						CurrentFloor = "1F"
+					elseif value == 1 then
+						CurrentFloor = "2F"
+					elseif value == 2 then
+						CurrentFloor = "3F"
+					elseif value == 3 then
+						CurrentFloor = "4F"
+					elseif value == 4 then
+						CurrentFloor = "5F"
+					elseif value == 5 then
+						CurrentFloor = "6F"
+					elseif value == 6 then
+						CurrentFloor = "7F"
+					elseif value == 7 then
+						CurrentFloor = "8F"
+					end
+					SwitchMap()
+				elseif key == "Current Layer" then
+					CurrentLayer = tonumber(value) or value
+					SwitchMap()
+				end
 			end
 		end
 	end
@@ -653,230 +665,226 @@ if Highlight then
 	}
 end
 
-function Splitmapchange()
-	if Tracker:FindObjectForCode("splitmap").CurrentStage == 0 then
-		Tracker:AddLayouts("layouts/layouts_maps.json")
-	elseif Tracker:FindObjectForCode("splitmap").CurrentStage == 1 then
-		Tracker:AddLayouts("layouts/split_layouts_maps.json")
+
+function SetView(map, x, y, zoom)
+	local autozoom_obj = Tracker:FindObjectForCode("autozoom")
+	local autozoom_count = 0
+	if autozoom_obj and autozoom_obj.AcquiredCount then
+		autozoom_count = autozoom_obj.AcquiredCount
 	end
+	local zoom_factor = autozoom_count * 0.25
+	local adjusted_zoom = math.max(1, zoom + zoom_factor)
+	Tracker:UiHint("Zoom " .. map, tostring(adjusted_zoom))
+	Tracker:UiHint("Pan " .. map, x .. ", " .. y)
 end
-function Broadcastchange()
-	if Tracker:FindObjectForCode("broadcast").CurrentStage == 0 then
-		Tracker:AddLayouts("layouts/broadcast_items.json")
-	elseif Tracker:FindObjectForCode("broadcast").CurrentStage == 1 then
-		Tracker:AddLayouts("layouts/broadcast_map.json")
-	elseif Tracker:FindObjectForCode("broadcast").CurrentStage == 2 then
-		Tracker:AddLayouts("layouts/broadcast_both.json")
+function SwitchMap()
+	if CurrentStage == "Cave or Ordeals" then
+		CurrentStage = "Cave of Ordeals"
+	elseif CurrentStage == "Kakriko Interiors" then
+		CurrentStage = "Kakariko Interiors"
 	end
-end
-function Hidefrommainmap()
-	if Tracker:FindObjectForCode("hidelayout").CurrentStage == 0 then
-		Tracker:AddLayouts("layouts/tracker.json")
-	elseif Tracker:FindObjectForCode("hidelayout").CurrentStage == 1 then
-		Tracker:AddLayouts("layouts/tracker_no_map.json")
-	elseif Tracker:FindObjectForCode("hidelayout").CurrentStage == 2 then
-		Tracker:AddLayouts("layouts/tracker_no_items.json")
-	end
-end
-function APLayoutchange()
-	if Tracker:FindObjectForCode("aplayout").CurrentStage == 0 then
-		Tracker:AddLayouts("layouts/keys_bosses.json")
-		Tracker:AddLayouts("layouts/item_grid.json")
-	elseif Tracker:FindObjectForCode("aplayout").CurrentStage == 1 then
-		Tracker:AddLayouts("layouts/archipelago_keys.json")
-		Tracker:AddLayouts("layouts/archipelago_item_grid.json")
-	end
-end
-function Bugsamountchange()
-	local n = 0
-	for _, v in pairs(BUGS_ARRAY) do
-		if Tracker:FindObjectForCode(v[2]).Active and Tracker:FindObjectForCode(v[1]).AvailableChestCount == 1 then
-			n = n + 1
+	local stage = STAGE[CurrentStage]
+	if OVERWORLDSTAGES[CurrentStage] then
+		if CurrentStage == "Sacred Grove"  and CurrentRoom == 2 then
+			for segment in string.gmatch(STAGE["Sacred Grove Past"]["Tab"], "[^_]+") do
+				Tracker:UiHint("ActivateTab", segment)
+			SetView(STAGE["Sacred Grove Past"]["map"], STAGE["Sacred Grove Past"]["x"], STAGE["Sacred Grove Past"]["y"], STAGE["Sacred Grove Past"]["zoom"])
+			end
+		elseif LAKEHYLIAROOMS[CurrentStage] ~= nil then
+			print("SwitchMap: Lake Hylia, CurrentRoom="..tostring(CurrentRoom))
+			for name, v in pairs(LAKEHYLIAROOMS) do
+				print("Checking room group '"..tostring(name).."' with rooms: "..table.concat(v["room"], ", "))
+				for _, n in ipairs(v["room"]) do
+					if n == CurrentRoom then
+						print("Matched room group '"..tostring(name).."'")
+						for segment in string.gmatch(v["Tab"], "[^_]+") do
+							Tracker:UiHint("ActivateTab", segment)
+						end
+						SetView(v["map"], v["x"], v["y"], v["zoom"])
+						break
+					end
+				end
+			end
+		else
+			for segment in string.gmatch(stage["Tab"], "[^_]+") do
+				Tracker:UiHint("ActivateTab", segment)
+				SetView(stage["map"], stage["x"], stage["y"], stage["zoom"])
+			end
 		end
-	end
-	if Tracker:FindObjectForCode("bugsamount").AcquiredCount ~= n then
-		Tracker:FindObjectForCode("bugsamount").AcquiredCount = n
+		Tracker:UiHint("ActivateTab", "Full")
+	elseif DUNGEONSTAGES[CurrentStage] then
+		for segment in string.gmatch(stage["Tab"], "[^_]+") do		       --\
+			Tracker:UiHint("ActivateTab", segment)					       -- |  Tabs to Dungeon
+		end															       --/
+		if Tracker:FindObjectForCode("autotab").CurrentStage == 0 then     -- if half tabbing
+			Tracker:UiHint("ActivateTab", "Full Map")				       --    Tab to all floors
+			SetView(stage["map"], stage["xh"], stage["yh"], stage["zoom"]) --    zooms and pans to see full map
+			Tracker:UiHint("ActivateTab", "Full")				           --    Tabs split map to overworld
+		else 														       -- if full tabbing
+			Tracker:UiHint("ActivateTab", CurrentFloor)				       --    Tabs to current floor
+			SetView(stage["map"], stage["xf"], stage["yf"], stage["zoom"]) --    zooms and pans to see full map
+			Tracker:UiHint("ActivateTab", string.upper(stage["map"]))	   --    Tabs split map to Dungeon
+		end
+	elseif HYRULEFIELDSTAGES[CurrentStage] then
+		print("SwitchMap: Hyrule Field, CurrentRoom="..tostring(CurrentRoom))
+		for name, v in pairs(HYRULEFIELDROOMS) do
+			print("Checking room group '"..tostring(name).."' with rooms: "..table.concat(v["room"], ", "))
+			for _, n in ipairs(v["room"]) do
+				if n == CurrentRoom then
+					print("Matched room group '"..tostring(name).."'")
+					for segment in string.gmatch(v["Tab"], "[^_]+") do
+						Tracker:UiHint("ActivateTab", segment)
+					end
+					SetView(v["map"], v["x"], v["y"], v["zoom"])
+					break
+				end
+			end
+		end
+		Tracker:UiHint("ActivateTab", "Full")
+	elseif CurrentStage == "Hyrule Castle Town Interiors (Jovani, Agitha, Shops, etc)" then
+		for _, v in pairs(CASTLEINTERIOR) do
+			if v["room"] == CurrentRoom then
+				for segment in string.gmatch(v["Tab"], "[^_]+") do
+					Tracker:UiHint("ActivateTab", segment)
+				end
+				if v["room"] == 3 or v["room"] == 4 then
+					Tracker:UiHint("ActivateTab", CurrentFloor)
+					SetView(v["map"] .. string.lower(CurrentFloor), v["x"], v["y"], v["zoom"])
+				else
+					SetView(v["map"], v["x"], v["y"], v["zoom"])
+				end
+			end
+		end
+		Tracker:UiHint("ActivateTab", "Full")
+	elseif CurrentStage == "Ordon Interiors" then
+		for _, v in pairs(ORDONINTERIOR) do
+			if v["room"] == CurrentRoom then
+				for segment in string.gmatch(v["Tab"], "[^_]+") do
+					Tracker:UiHint("ActivateTab", segment)
+				end
+				if v["room"] == 2 then
+					Tracker:UiHint("ActivateTab", CurrentFloor)
+					SetView(v["map"] .. string.lower(CurrentFloor), v["x"], v["y"], v["zoom"])
+				else
+					SetView(v["map"], v["x"], v["y"], v["zoom"])
+				end
+			end
+		end
+		Tracker:UiHint("ActivateTab", "Full")
+	elseif CurrentStage == "Kakariko Interiors" then
+		for _, v in pairs(KAKARIKOINTERIOR) do
+			if v["room"] == CurrentRoom then
+				for segment in string.gmatch(v["Tab"], "[^_]+") do
+					Tracker:UiHint("ActivateTab", segment)
+				end
+				if v["room"] == 2 then
+					Tracker:UiHint("ActivateTab", CurrentFloor)
+					SetView(v["map"] .. string.lower(CurrentFloor), v["x"], v["y"], v["zoom"])
+				elseif v["room"] == 4 then
+					local tempCurrentFloor = CurrentFloor
+					if tempCurrentFloor == "1F" then
+						tempCurrentFloor = "B1"
+					elseif tempCurrentFloor == "2F" then
+						tempCurrentFloor = "1F"
+					end
+					Tracker:UiHint("ActivateTab", tempCurrentFloor)
+					SetView(tempCurrentFloor, v["x"], v["y"], v["zoom"])
+				else
+					SetView(v["map"], v["x"], v["y"], v["zoom"])
+				end
+			end
+		end
+		Tracker:UiHint("ActivateTab", "Full")
+	elseif CurrentStage == "Goron Stockcave" then
+		for segment in string.gmatch(stage["Tab"], "[^_]+") do
+			Tracker:UiHint("ActivateTab", segment)
+		end
+		print(CurrentFloor)
+		if CurrentFloor == "B1" then
+			Tracker:UiHint("ActivateTab", "1F")
+			SetView("1F", stage["x"], stage["y"], stage["zoom"])
+		elseif CurrentFloor == "1F" then
+			Tracker:UiHint("ActivateTab", "2F")
+			SetView("2F", stage["x"], stage["y"], stage["zoom"])
+		elseif CurrentFloor == "2F" then
+			Tracker:UiHint("ActivateTab", "3F")
+			SetView("3F", stage["x"], stage["y"], stage["zoom"])
+		elseif CurrentFloor == "3F" then
+			Tracker:UiHint("ActivateTab", "4F")
+			SetView("4F", stage["x"], stage["y"], stage["zoom"])
+		end
+		Tracker:UiHint("ActivateTab", "Full")
+	elseif CurrentStage == "Cave of Ordeals" or CurrentStage == "Cave or Ordeals" then
+		for segment in string.gmatch(stage["Tab"], "[^_]+") do
+			Tracker:UiHint("ActivateTab", segment)
+		end
+		if CurrentRoom <= 10 then
+			Tracker:UiHint("ActivateTab", "B1-B10")
+		elseif CurrentRoom <=20 then
+			Tracker:UiHint("ActivateTab", "B11-B20")
+		elseif CurrentRoom <=30 then
+			Tracker:UiHint("ActivateTab", "B21-B30")
+		elseif CurrentRoom <=40 then
+			Tracker:UiHint("ActivateTab", "B31-B40")
+		elseif CurrentRoom <=50 then
+			Tracker:UiHint("ActivateTab", "B41-B50")
+		end
+		Tracker:UiHint("ActivateTab", "B" .. CurrentRoom + 1)
+		Tracker:UiHint("ActivateTab", "Full")--
+	elseif CurrentStage == "Grotto 1" then
+		for _, v in pairs(GROTTOONE) do
+			if v["layer"] == CurrentLayer then
+				for segment in string.gmatch(v["Tab"], "[^_]+") do
+					Tracker:UiHint("ActivateTab", segment)
+				end
+				SetView(v["map"], v["x"], v["y"], v["zoom"])
+			end
+		end
+		Tracker:UiHint("ActivateTab", "Full")
+	elseif CurrentStage == "Grotto 2" then
+		for _, v in pairs(GROTTOTWO) do
+			if v["layer"] == CurrentLayer then
+				for segment in string.gmatch(v["Tab"], "[^_]+") do
+					Tracker:UiHint("ActivateTab", segment)
+				end
+				SetView(v["map"], v["x"], v["y"], v["zoom"])
+			end
+		end
+		Tracker:UiHint("ActivateTab", "Full")
+	elseif CurrentStage == "Grotto 3" then
+		for _, v in pairs(GROTTOTHREE) do
+			if v["layer"] == CurrentLayer then
+				for segment in string.gmatch(v["Tab"], "[^_]+") do
+					Tracker:UiHint("ActivateTab", segment)
+				end
+				SetView(v["map"], v["x"], v["y"], v["zoom"])
+			end
+		end
+		Tracker:UiHint("ActivateTab", "Full")
+	elseif CurrentStage == "Grotto 4" then
+		for _, v in pairs(GROTTOFOUR) do
+			if v["layer"] == CurrentLayer then
+				for segment in string.gmatch(v["Tab"], "[^_]+") do
+					Tracker:UiHint("ActivateTab", segment)
+				end
+				SetView(v["map"], v["x"], v["y"], v["zoom"])
+			end
+		end
+		Tracker:UiHint("ActivateTab", "Full")
+	elseif CurrentStage == "Grotto 5" then
+		for _, v in pairs(GROTTOFIVE) do
+			if v["layer"] == CurrentLayer then
+				for segment in string.gmatch(v["Tab"], "[^_]+") do
+					Tracker:UiHint("ActivateTab", segment)
+				end
+				SetView(v["map"], v["x"], v["y"], v["zoom"])
+			end
+		end
+		Tracker:UiHint("ActivateTab", "Full")
 	end
 end
 
-function SwitchMap()
-	if Tracker:FindObjectForCode("autotab").CurrentStage <= 1 then
-		if CurrentStage == "Ordon" or
-		CurrentStage == "Sacred Grove" or
-		CurrentStage == "Snowpeak Mountain" or
-		CurrentStage == "Gerudo Desert" or
-		CurrentStage == "Castle Town" then
-			Tracker:UiHint("ActivateTab", "Overworld")
-			Tracker:UiHint("ActivateTab", CurrentStage)
-			print("Changing Map to: "..CurrentStage)
-		end
-	end
-	if Tracker:FindObjectForCode("autotab").CurrentStage == 0 then
-		if CurrentStage == "Faron Woods" or
-		CurrentStage == "Faron Field" or
-		(CurrentStage == "Hyrule Field" and (CurrentRoom == 6 or CurrentRoom == 1 or CurrentRoom == 15)) then
-			Tracker:UiHint("ActivateTab", "Overworld")
-			Tracker:UiHint("ActivateTab", "Faron")
-			Tracker:UiHint("ActivateTab", "Faron Region")
-			print("Changing Map to: Faron Region ("..CurrentStage..")")
-		elseif CurrentStage == "Kakariko Gorge" or
-		CurrentStage == "Kakariko" or
-		CurrentStage == "Death Mountain" or
-		CurrentStage == "Eldin Field" or
-		CurrentStage == "Hidden Village" or
-		(CurrentStage == "Hyrule Field" and (CurrentRoom == 3 or CurrentRoom == 4 or CurrentRoom == 2 or CurrentRoom == 0 or CurrentRoom == 7 or CurrentRoom == 5)) then
-			Tracker:UiHint("ActivateTab", "Overworld")
-			Tracker:UiHint("ActivateTab", "Eldin")
-			Tracker:UiHint("ActivateTab", "Eldin Region")
-			print("Changing Map to: Eldin Region ("..CurrentStage..")")
-		elseif CurrentStage == "Lake Hylia" or
-		CurrentStage == "Lanayru Field" or
-		CurrentStage == "Beside Castle Town" or
-		CurrentStage == "South Castle Town" or
-		CurrentStage == "Upper Zora's River" or
-		CurrentStage == "Zora's Domain" or
-		(CurrentStage == "Hyrule Field" and (CurrentRoom == 10 or CurrentRoom == 11 or CurrentRoom == 9 or CurrentRoom == 13 or CurrentRoom == 14 or CurrentRoom == 12)) then
-			Tracker:UiHint("ActivateTab", "Overworld")
-			Tracker:UiHint("ActivateTab", "Lanayru")
-			Tracker:UiHint("ActivateTab", "Lanayru Region")
-			print("Changing Map to: Lanayru Region ("..CurrentStage..")")
-		elseif CurrentStage == "Forest Temple" or
-		CurrentStage == "Goron Mines" or
-		CurrentStage == "Lakebed Temple" or
-		CurrentStage == "Arbiter's Grounds" or
-		CurrentStage == "Snowpeak Ruins" or
-		CurrentStage == "Temple of Time" or
-		CurrentStage == "City in the Sky" or
-		CurrentStage == "Palace of Twilight" or
-		CurrentStage == "Hyrule Castle" then
-			Tracker:UiHint("ActivateTab", CurrentStage)
-			Tracker:UiHint("ActivateTab", "Full Map")
-			print("Changing Map to: "..CurrentStage)
-		end
-	elseif Tracker:FindObjectForCode("autotab").CurrentStage == 1 then
-		if CurrentStage == "Faron Woods" or
-		CurrentStage == "Faron Field" then
-			Tracker:UiHint("ActivateTab", "Overworld")
-			Tracker:UiHint("ActivateTab", "Faron")
-			Tracker:UiHint("ActivateTab", CurrentStage)
-			print("Changing Map to: "..CurrentStage)
-		elseif CurrentStage == "Kakariko Gorge" or
-		CurrentStage == "Kakariko" or
-		CurrentStage == "Death Mountain" or
-		CurrentStage == "Eldin Field" or
-		CurrentStage == "Hidden Village" then
-			Tracker:UiHint("ActivateTab", "Overworld")
-			Tracker:UiHint("ActivateTab", "Eldin")
-			Tracker:UiHint("ActivateTab", CurrentStage)
-			print("Changing Map to: "..CurrentStage)
-		elseif CurrentStage == "Lake Hylia" or
-		CurrentStage == "Lanayru Field" or
-		CurrentStage == "Beside Castle Town" or
-		CurrentStage == "South Castle Town" or
-		CurrentStage == "Upper Zora's River" or
-		CurrentStage == "Zora's Domain" then
-			Tracker:UiHint("ActivateTab", "Overworld")
-			Tracker:UiHint("ActivateTab", "Lanayru")
-			Tracker:UiHint("ActivateTab", CurrentStage)
-			print("Changing Map to: "..CurrentStage)
-		elseif CurrentStage == "Hyrule Field" then
-			if CurrentRoom == 6 or CurrentRoom == 1 or CurrentRoom == 15 then
-				Tracker:UiHint("ActivateTab", "Overworld")
-				Tracker:UiHint("ActivateTab", "Faron")
-				Tracker:UiHint("ActivateTab", "Faron Field")
-				print("Changing Map to: Faron Field")
-			elseif CurrentRoom == 3 or CurrentRoom == 4 or CurrentRoom == 2 then
-				Tracker:UiHint("ActivateTab", "Overworld")
-				Tracker:UiHint("ActivateTab", "Eldin")
-				Tracker:UiHint("ActivateTab", "Kakariko Gorge")
-				print("Changing Map to: Kakariko Gorge")
-			elseif CurrentRoom == 0 or CurrentRoom == 7 or CurrentRoom == 5 then
-				Tracker:UiHint("ActivateTab", "Overworld")
-				Tracker:UiHint("ActivateTab", "Eldin")
-				Tracker:UiHint("ActivateTab", "Eldin Field")
-				print("Changing Map to: Eldin Field")
-			elseif CurrentRoom == 10 or CurrentRoom == 11 or CurrentRoom == 9 then
-				Tracker:UiHint("ActivateTab", "Overworld")
-				Tracker:UiHint("ActivateTab", "Lanayru")
-				Tracker:UiHint("ActivateTab", "Lanayru Field")
-				print("Changing Map to: Lanayru Field")
-			elseif CurrentRoom == 13 or CurrentRoom == 14 or CurrentRoom == 12 then
-				Tracker:UiHint("ActivateTab", "Overworld")
-				Tracker:UiHint("ActivateTab", "Lanayru")
-				Tracker:UiHint("ActivateTab", "Lake Hylia")
-				print("Changing Map to: Lake Hylia")
-			elseif CurrentRoom == 8 then
-				Tracker:UiHint("ActivateTab", "Overworld")
-				Tracker:UiHint("ActivateTab", "Lanayru")
-				Tracker:UiHint("ActivateTab", "Beside Castle Town")
-				print("Changing Map to: Beside Castle Town")
-			elseif CurrentRoom == 16 then
-				Tracker:UiHint("ActivateTab", "Overworld")
-				Tracker:UiHint("ActivateTab", "Lanayru")
-				Tracker:UiHint("ActivateTab", "South Castle Town")
-				print("Changing Map to: South Castle Town")
-			elseif CurrentRoom == 17 then
-				Tracker:UiHint("ActivateTab", "Overworld")
-				Tracker:UiHint("ActivateTab", "Castle Town")
-				print("Changing Map to: Castle Town")
-			end
-		elseif CurrentStage == "Forest Temple" or
-		CurrentStage == "Goron Mines" or
-		CurrentStage == "Lakebed Temple" or
-		CurrentStage == "Arbiter's Grounds" or
-		CurrentStage == "Snowpeak Ruins" or
-		CurrentStage == "Temple of Time" or
-		CurrentStage == "City in the Sky" or
-		CurrentStage == "Palace of Twilight" or
-		CurrentStage == "Hyrule Castle" then
-			if CurrentFloor == 0 then
-				Tracker:UiHint("ActivateTab", "1F")
-				Tracker:UiHint("ActivateTab", CurrentStage)
-				print("Changing Map to: "..CurrentStage.." 2F")
-			elseif CurrentFloor == 1 then
-				Tracker:UiHint("ActivateTab", "2F")
-				Tracker:UiHint("ActivateTab", CurrentStage)
-				print("Changing Map to: "..CurrentStage.." 2F")
-			elseif CurrentFloor == 2 then
-				Tracker:UiHint("ActivateTab", "3F")
-				Tracker:UiHint("ActivateTab", CurrentStage)
-				print("Changing Map to: "..CurrentStage.." 3F")
-			elseif CurrentFloor == 3 then
-				Tracker:UiHint("ActivateTab", "4F")
-				Tracker:UiHint("ActivateTab", CurrentStage)
-				print("Changing Map to: "..CurrentStage.." 4F")
-			elseif CurrentFloor == 4 then
-				Tracker:UiHint("ActivateTab", "5F")
-				Tracker:UiHint("ActivateTab", CurrentStage)
-				print("Changing Map to: "..CurrentStage.." 5F")
-			elseif CurrentFloor == 5 then
-				Tracker:UiHint("ActivateTab", "6F")
-				Tracker:UiHint("ActivateTab", CurrentStage)
-				print("Changing Map to: "..CurrentStage.." 6F")
-			elseif CurrentFloor == 6 then
-				Tracker:UiHint("ActivateTab", "7F")
-				Tracker:UiHint("ActivateTab", CurrentStage)
-				print("Changing Map to: "..CurrentStage.." 7F")
-			elseif CurrentFloor == 7 then
-				Tracker:UiHint("ActivateTab", "8F")
-				Tracker:UiHint("ActivateTab", CurrentStage)
-				print("Changing Map to: "..CurrentStage.." 8F")
-			elseif CurrentFloor == 255 then
-				Tracker:UiHint("ActivateTab", "B1")
-				Tracker:UiHint("ActivateTab", CurrentStage)
-				print("Changing Map to: "..CurrentStage.." B1")
-			elseif CurrentFloor == 254 then
-				Tracker:UiHint("ActivateTab", "B2")
-				Tracker:UiHint("ActivateTab", CurrentStage)
-				print("Changing Map to: "..CurrentStage.." B2")
-			elseif CurrentFloor == 253 then
-				Tracker:UiHint("ActivateTab", "B3")
-				Tracker:UiHint("ActivateTab", CurrentStage)
-				print("Changing Map to: "..CurrentStage.." B3")
-			end
-		end
-	end
-end
+
 Archipelago:AddClearHandler("clear handler", OnClear)
 Archipelago:AddItemHandler("item handler", OnItem)
 Archipelago:AddLocationHandler("location handler", OnLocation)

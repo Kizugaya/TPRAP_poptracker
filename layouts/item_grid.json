@@ -1,7 +1,7 @@
 {
 	"item_grid": {
 		"type": "container",
-        "background": "#525260",
+		"background": "#525260",
 		"content": [
 			{
 				"type": "itemgrid",
@@ -70,7 +70,7 @@
 	},
 	"item_grid_broadcast": {
 		"type": "container",
-        "background": "#525260",
+		"background": "#525260",
 		"content": [
 			{
 				"type": "itemgrid",

@@ -1,237 +1,833 @@
 [
 	{
-		"name": "Snowpeak Mountain",
+		"name": "Snowpeak Province",
 		"children": [
 			{
-				"name": "Ashei Sketch",
-				"map_locations": [
+				"name": "Snowpeak",
+				"children": [
 					{
-						"map": "sm",
-						"x": 1979,
-						"y": 319
-					}
-				],
-				"sections": [
-					{
+						"name": "Snowpeak Climb Lower",
 						"access_rules": [
-							"@SnowpeakClimbLower"
-						]
-					}
-				]
-			},
-			{
-				"name": "Freezard Grotto Chest",
-				"map_locations": [
-					{
-						"map": "sm",
-						"x": 1546,
-						"y": 204
-					}
-				],
-				"sections": [
-					{
-						"access_rules": [
-							"@SnowpeakFreezardGrotto, ballchain"
-						]
-					}
-				]
-			},
-			{
-				"name": "Cave Ice Lantern Chest",
-				"map_locations": [
-					{
-						"map": "sm",
-						"x": 1304,
-						"y": 357
-					}
-				],
-				"sections": [
-					{
-						"access_rules": [
-							"@SnowpeakSummitUpper, ballchain, lantern"
-						]
-					}
-				]
-			},
-			{
-				"name": "Snowboard Racing Prize",
-				"map_locations": [
-					{
-						"map": "sm",
-						"x": 1148,
-						"y": 366
-					}
-				],
-				"sections": [
-					{
-						"access_rules": [
-							"@SnowpeakSummitUpper, srcompleted"
-						]
-					}
-				]
-			}
-		]
-	},
-	{
-		"name": "Snowpeak Mountain Poes",
-		"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
-		"chest_opened_img": "images/Items/PoeSoul.png",
-		"visibility_rules": [
-			"poeson"
-		],
-		"children": [
-			{
-				"name": "Above Freezard Grotto Poe",
-				"map_locations": [
-					{
-						"map": "sm",
-						"x": 1570,
-						"y": 223,
-						"shape": "diamond"
-					}
-				],
-				"sections": [
-					{
-						"access_rules": [
-							"@SnowpeakClimbUpper, shadowcrystal",
-							"[glitcheson], @SnowpeakClimbUpper, shadowcrystal, skipsnowpeakentrance",
-							"[glitcheson], @SnowpeakClimbUpper, shadowcrystal, reekfishscent",
-							"[glitcheson], @SnowpeakClimbUpper, shadowcrystal, $canDoMapGlitch"
-						]
-					}
-				]
-			},
-			{
-				"name": "Blizzard Poe",
-				"map_locations": [
-					{
-						"map": "sm",
-						"x": 1431,
-						"y": 148,
-						"shape": "diamond"
-					}
-				],
-				"sections": [
-					{
-						"access_rules": [
-							"@SnowpeakClimbUpper, shadowcrystal",
-							"[glitcheson], @SnowpeakClimbUpper, shadowcrystal, skipsnowpeakentrance",
-							"[glitcheson], @SnowpeakClimbUpper, shadowcrystal, reekfishscent",
-							"[glitcheson], @SnowpeakClimbUpper, shadowcrystal, $canDoMapGlitch"
-						]
-					}
-				]
-			},
-			{
-				"name": "Poe Among Trees",
-				"map_locations": [
-					{
-						"map": "sm",
-						"x": 1339,
-						"y": 166,
-						"shape": "diamond"
-					}
-				],
-				"sections": [
-					{
-						"access_rules": [
-							"@SnowpeakClimbUpper, shadowcrystal",
-							"[glitcheson], @SnowpeakClimbUpper, shadowcrystal, skipsnowpeakentrance",
-							"[glitcheson], @SnowpeakClimbUpper, shadowcrystal, reekfishscent",
-							"[glitcheson], @SnowpeakClimbUpper, shadowcrystal, $canDoMapGlitch"
-						]
-					}
-				]
-			},
-			{
-				"name": "Cave Ice Poe",
-				"map_locations": [
-					{
-						"map": "sm",
-						"x": 1333,
-						"y": 349,
-						"shape": "diamond"
-					}
-				],
-				"sections": [
-					{
-						"access_rules": [
-							"@SnowpeakSummitUpper, ballchain, shadowcrystal"
-						]
-					}
-				]
-			},
-			{
-				"name": "Icy Summit Poe",
-				"map_locations": [
-					{
-						"map": "sm",
-						"x": 150,
-						"y": 1701,
-						"shape": "diamond"
-					}
-				],
-				"sections": [
-					{
-						"access_rules": [
-							"@SnowpeakSummitLower, shadowcrystal, $canDefeatShadowBeast, bonksdodamageoff",
-							"@SnowpeakSummitLower, shadowcrystal, $canDefeatShadowBeast, bonksdodamageon, damagevanilla",
-							"@SnowpeakSummitLower, shadowcrystal, $canDefeatShadowBeast, bonksdodamageon, damagedouble",
-							"@SnowpeakSummitLower, shadowcrystal, $canDefeatShadowBeast, bonksdodamageon, damagetriple",
-							"@SnowpeakSummitLower, shadowcrystal, $canDefeatShadowBeast, bonksdodamageon, damagequadruple",
-							"@SnowpeakSummitLower, shadowcrystal, $canDefeatShadowBeast, bonksdodamageon, $canUseBottledFairy, @LakeHylia"
-						]
-					}
-				]
-			}
-		]
-	},
-	{
-		"name": "Snowpeak Mountain Golden Wolves",
-		"children": [
-			{
-				"name": "Kakariko Graveyard Stone",
-				"map_locations": [
-					{
-						"map": "sm",
-						"x": 1366,
-						"y": 245
-					}
-				],
-				"sections": [
-					{
-						"hosted_item": "smhowlingstone",
-						"access_rules": [
-							"{@SnowpeakClimbUpper, shadowcrystal}",
-							"{[glitcheson], @SnowpeakClimbUpper, shadowcrystal, skipsnowpeakentrance}",
-							"{[glitcheson], @SnowpeakClimbUpper, shadowcrystal, reekfishscent}",
-							"{[glitcheson], @SnowpeakClimbUpper, shadowcrystal, $canDoMapGlitch}"
-						]
-					}
-				]
-			}
-		]
-	},
-	{
-		"name": "Snowpeak Mountain Hint Signs",
-		"children": [
-			{
-				"name": "Hint Sign",
-				"map_locations": [
-					{
-						"map": "sm",
-						"x": 1710,
-						"y": 247,
-						"shape": "diamond"
-					}
-				],
-				"sections": [
-					{
-						"access_rules": [
-							"{@SnowpeakClimbLower}"
+							"^$canAccess|SnowpeakClimbLower"
 						],
-						"visibility_rules": [
-							"hintson"
+						"children": [
+							{
+								"name": "Ashei Sketch",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 4437,
+										"y": 602
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											""
+										]
+									}
+								]
+							},
+							{
+								"name": "Hint Sign",
+								"chest_opened_img": "images/Items/Sign.png",
+								"chest_unopened_img": "images/Items/SignGrayed.png",
+								"visibility_rules": [
+									"hintson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 3983,
+										"y": 467,
+										"shape": "triangle",
+										"orientation": "south",
+										"border_thickness": 32
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"{}"
+										]
+									}
+								]
+							}
+						]
+					},
+					{
+						"name": "Snowpeak Climb Upper",
+						"access_rules": [
+							"^$canAccess|SnowpeakClimbUpper"
+						],
+						"children": [
+							{
+								"name": "Snowpeak Above Freezard Grotto Poe",
+								"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
+								"chest_opened_img": "images/Items/PoeSoul.png",
+								"visibility_rules": [
+									"poeson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 3755,
+										"y": 450
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"shadowcrystal"
+										]
+									}
+								]
+							},
+							{
+								"name": "Snowpeak Blizzard Poe",
+								"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
+								"chest_opened_img": "images/Items/PoeSoul.png",
+								"visibility_rules": [
+									"poeson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 3493,
+										"y": 305
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"shadowcrystal"
+										]
+									}
+								]
+							},
+							{
+								"name": "Snowpeak Poe Among Trees",
+								"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
+								"chest_opened_img": "images/Items/PoeSoul.png",
+								"visibility_rules": [
+									"poeson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 3336,
+										"y": 342
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"shadowcrystal"
+										]
+									}
+								]
+							},
+							{
+								"name": "Kakariko Graveyard Stone",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 3389,
+										"y": 476
+									}
+								],
+								"sections": [
+									{
+										"hosted_item": "smhowlingstone",
+										"access_rules": [
+											"{shadowcrystal}"
+										]
+									}
+								]
+							}
+						]
+					},
+					{
+						"name": "Snowpeak Freezard Grotto",
+						"access_rules": [
+							"^$canAccess|SnowpeakFreezardGrotto"
+						],
+						"children": [
+							{
+								"name": "Snowpeak Freezard Grotto",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 3694,
+										"y": 404,
+										"shape": "trapezoid"
+									}
+								],
+								"sections": [
+									{
+										"name": "Chest",
+										"ref": "Snowpeak Province/Submaps/Snowpeak Freezard Grotto/Snowpeak Freezard Grotto Chest/"
+									}
+								]
+							}
+						]
+					},
+					{
+						"name": "Snowpeak Summit Upper",
+						"access_rules": [
+							"^$canAccess|SnowpeakSummitUpper"
+						],
+						"children": [
+							{
+								"name": "Snowpeak Cave Ice Lantern Chest",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 3278,
+										"y": 672
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"lantern, ballchain"
+										]
+									}
+								]
+							},
+							{
+								"name": "Snowboard Racing Prize",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 3009,
+										"y": 677
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"srcompleted, stportalactive",
+											"srcompleted, ^$canDefeatShadowBeast"
+										]
+									}
+								]
+							},
+							{
+								"name": "Snowpeak Cave Ice Poe",
+								"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
+								"chest_opened_img": "images/Items/PoeSoul.png",
+								"visibility_rules": [
+									"poeson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 3326,
+										"y": 651
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"shadowcrystal, ballchain"
+										]
+									}
+								]
+							},
+							{
+								"name": "Snowpeak Portal",
+								"visibility_rules": [
+									"portalson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 3143,
+										"y": 665
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"^$canDefeatShadowBeast"
+										]
+									}
+								]
+							},
+							{
+								"name": "Snowboarding Bridge Ledge Bottom Rupee",
+								"visibility_rules": [
+									"freerupeeson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 1959,
+										"y": 876
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"stportalactive, bonksdodamageoff",
+											"stportalactive, bonksdodamageon, $Not|ohko",
+											"stportalactive, bonksdodamageon, ^$canUseBottledFairy",
+											"stportalactive, srcompleted",
+											"^$canDefeatShadowBeast, bonksdodamageoff",
+											"^$canDefeatShadowBeast, bonksdodamageon, $Not|ohko",
+											"^$canDefeatShadowBeast, bonksdodamageon, ^$canUseBottledFairy",
+											"^$canDefeatShadowBeast, srcompleted"
+										]
+									}
+								]
+							},
+							{
+								"name": "Snowboarding Bridge Ledge Middle Rupee",
+								"visibility_rules": [
+									"freerupeeson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 2021,
+										"y": 707
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"stportalactive, bonksdodamageoff",
+											"stportalactive, bonksdodamageon, $Not|ohko",
+											"stportalactive, bonksdodamageon, ^$canUseBottledFairy",
+											"stportalactive, srcompleted",
+											"^$canDefeatShadowBeast, bonksdodamageoff",
+											"^$canDefeatShadowBeast, bonksdodamageon, $Not|ohko",
+											"^$canDefeatShadowBeast, bonksdodamageon, ^$canUseBottledFairy",
+											"^$canDefeatShadowBeast, srcompleted"
+										]
+									}
+								]
+							},
+							{
+								"name": "Snowboarding Bridge Ledge Upper Rupee",
+								"visibility_rules": [
+									"freerupeeson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 2129,
+										"y": 669
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"stportalactive, bonksdodamageoff",
+											"stportalactive, bonksdodamageon, $Not|ohko",
+											"stportalactive, bonksdodamageon, ^$canUseBottledFairy",
+											"stportalactive, srcompleted",
+											"^$canDefeatShadowBeast, bonksdodamageoff",
+											"^$canDefeatShadowBeast, bonksdodamageon, $Not|ohko",
+											"^$canDefeatShadowBeast, bonksdodamageon, ^$canUseBottledFairy",
+											"^$canDefeatShadowBeast, srcompleted"
+										]
+									}
+								]
+							},
+							{
+								"name": "Snowboarding Shortcut Rupee 1",
+								"visibility_rules": [
+									"freerupeeson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 1982,
+										"y": 2197
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"stportalactive, bonksdodamageoff",
+											"stportalactive, bonksdodamageon, $Not|ohko",
+											"stportalactive, bonksdodamageon, ^$canUseBottledFairy",
+											"stportalactive, srcompleted",
+											"^$canDefeatShadowBeast, bonksdodamageoff",
+											"^$canDefeatShadowBeast, bonksdodamageon, $Not|ohko",
+											"^$canDefeatShadowBeast, bonksdodamageon, ^$canUseBottledFairy",
+											"^$canDefeatShadowBeast, srcompleted"
+										]
+									}
+								]
+							},
+							{
+								"name": "Snowboarding Shortcut Rupee 2",
+								"visibility_rules": [
+									"freerupeeson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 2012,
+										"y": 2240
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"stportalactive, bonksdodamageoff",
+											"stportalactive, bonksdodamageon, $Not|ohko",
+											"stportalactive, bonksdodamageon, ^$canUseBottledFairy",
+											"stportalactive, srcompleted",
+											"^$canDefeatShadowBeast, bonksdodamageoff",
+											"^$canDefeatShadowBeast, bonksdodamageon, $Not|ohko",
+											"^$canDefeatShadowBeast, bonksdodamageon, ^$canUseBottledFairy",
+											"^$canDefeatShadowBeast, srcompleted"
+										]
+									}
+								]
+							},
+							{
+								"name": "Snowboarding Shortcut Rupee 3",
+								"visibility_rules": [
+									"freerupeeson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 2095,
+										"y": 2459
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"stportalactive, bonksdodamageoff",
+											"stportalactive, bonksdodamageon, $Not|ohko",
+											"stportalactive, bonksdodamageon, ^$canUseBottledFairy",
+											"stportalactive, srcompleted",
+											"^$canDefeatShadowBeast, bonksdodamageoff",
+											"^$canDefeatShadowBeast, bonksdodamageon, $Not|ohko",
+											"^$canDefeatShadowBeast, bonksdodamageon, ^$canUseBottledFairy",
+											"^$canDefeatShadowBeast, srcompleted"
+										]
+									}
+								]
+							},
+							{
+								"name": "Snowboarding Shortcut Rupee 4",
+								"visibility_rules": [
+									"freerupeeson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 2094,
+										"y": 2488
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"stportalactive, bonksdodamageoff",
+											"stportalactive, bonksdodamageon, $Not|ohko",
+											"stportalactive, bonksdodamageon, ^$canUseBottledFairy",
+											"stportalactive, srcompleted",
+											"^$canDefeatShadowBeast, bonksdodamageoff",
+											"^$canDefeatShadowBeast, bonksdodamageon, $Not|ohko",
+											"^$canDefeatShadowBeast, bonksdodamageon, ^$canUseBottledFairy",
+											"^$canDefeatShadowBeast, srcompleted"
+										]
+									}
+								]
+							},
+							{
+								"name": "Snowboarding Shortcut Rupee 5",
+								"visibility_rules": [
+									"freerupeeson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 2087,
+										"y": 2525
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"stportalactive, bonksdodamageoff",
+											"stportalactive, bonksdodamageon, $Not|ohko",
+											"stportalactive, bonksdodamageon, ^$canUseBottledFairy",
+											"stportalactive, srcompleted",
+											"^$canDefeatShadowBeast, bonksdodamageoff",
+											"^$canDefeatShadowBeast, bonksdodamageon, $Not|ohko",
+											"^$canDefeatShadowBeast, bonksdodamageon, ^$canUseBottledFairy",
+											"^$canDefeatShadowBeast, srcompleted"
+										]
+									}
+								]
+							},
+							{
+								"name": "Snowboarding Shortcut Rupee 6",
+								"visibility_rules": [
+									"freerupeeson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 2089,
+										"y": 2556
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"stportalactive, bonksdodamageoff",
+											"stportalactive, bonksdodamageon, $Not|ohko",
+											"stportalactive, bonksdodamageon, ^$canUseBottledFairy",
+											"stportalactive, srcompleted",
+											"^$canDefeatShadowBeast, bonksdodamageoff",
+											"^$canDefeatShadowBeast, bonksdodamageon, $Not|ohko",
+											"^$canDefeatShadowBeast, bonksdodamageon, ^$canUseBottledFairy",
+											"^$canDefeatShadowBeast, srcompleted"
+										]
+									}
+								]
+							},
+							{
+								"name": "Snowboarding Shortcut Rupee 7",
+								"visibility_rules": [
+									"freerupeeson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 2089,
+										"y": 2582
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"stportalactive, bonksdodamageoff",
+											"stportalactive, bonksdodamageon, $Not|ohko",
+											"stportalactive, bonksdodamageon, ^$canUseBottledFairy",
+											"stportalactive, srcompleted",
+											"^$canDefeatShadowBeast, bonksdodamageoff",
+											"^$canDefeatShadowBeast, bonksdodamageon, $Not|ohko",
+											"^$canDefeatShadowBeast, bonksdodamageon, ^$canUseBottledFairy",
+											"^$canDefeatShadowBeast, srcompleted"
+										]
+									}
+								]
+							},
+							{
+								"name": "Snowboarding Shortcut Rupee 8",
+								"visibility_rules": [
+									"freerupeeson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 2107,
+										"y": 2667
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"stportalactive, bonksdodamageoff",
+											"stportalactive, bonksdodamageon, $Not|ohko",
+											"stportalactive, bonksdodamageon, ^$canUseBottledFairy",
+											"stportalactive, srcompleted",
+											"^$canDefeatShadowBeast, bonksdodamageoff",
+											"^$canDefeatShadowBeast, bonksdodamageon, $Not|ohko",
+											"^$canDefeatShadowBeast, bonksdodamageon, ^$canUseBottledFairy",
+											"^$canDefeatShadowBeast, srcompleted"
+										]
+									}
+								]
+							},
+							{
+								"name": "Snowboarding Shortcut Rupee 9",
+								"visibility_rules": [
+									"freerupeeson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 2111,
+										"y": 2743
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"stportalactive, bonksdodamageoff",
+											"stportalactive, bonksdodamageon, $Not|ohko",
+											"stportalactive, bonksdodamageon, ^$canUseBottledFairy",
+											"stportalactive, srcompleted",
+											"^$canDefeatShadowBeast, bonksdodamageoff",
+											"^$canDefeatShadowBeast, bonksdodamageon, $Not|ohko",
+											"^$canDefeatShadowBeast, bonksdodamageon, ^$canUseBottledFairy",
+											"^$canDefeatShadowBeast, srcompleted"
+										]
+									}
+								]
+							},
+							{
+								"name": "Snowboarding Shortcut Rupee 10",
+								"visibility_rules": [
+									"freerupeeson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 2110,
+										"y": 2831
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"stportalactive, bonksdodamageoff",
+											"stportalactive, bonksdodamageon, $Not|ohko",
+											"stportalactive, bonksdodamageon, ^$canUseBottledFairy",
+											"stportalactive, srcompleted",
+											"^$canDefeatShadowBeast, bonksdodamageoff",
+											"^$canDefeatShadowBeast, bonksdodamageon, $Not|ohko",
+											"^$canDefeatShadowBeast, bonksdodamageon, ^$canUseBottledFairy",
+											"^$canDefeatShadowBeast, srcompleted"
+										]
+									}
+								]
+							},
+							{
+								"name": "Snowboarding Shortcut Rupee 11",
+								"visibility_rules": [
+									"freerupeeson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 2094,
+										"y": 2908
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"stportalactive, bonksdodamageoff",
+											"stportalactive, bonksdodamageon, $Not|ohko",
+											"stportalactive, bonksdodamageon, ^$canUseBottledFairy",
+											"stportalactive, srcompleted",
+											"^$canDefeatShadowBeast, bonksdodamageoff",
+											"^$canDefeatShadowBeast, bonksdodamageon, $Not|ohko",
+											"^$canDefeatShadowBeast, bonksdodamageon, ^$canUseBottledFairy",
+											"^$canDefeatShadowBeast, srcompleted"
+										]
+									}
+								]
+							},
+							{
+								"name": "Snowboarding Snowy Tree Top Rupee 1",
+								"visibility_rules": [
+									"freerupeeson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 1951,
+										"y": 1641
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"stportalactive, bonksdodamageoff",
+											"stportalactive, bonksdodamageon, $Not|ohko",
+											"stportalactive, bonksdodamageon, ^$canUseBottledFairy",
+											"stportalactive, srcompleted",
+											"^$canDefeatShadowBeast, bonksdodamageoff",
+											"^$canDefeatShadowBeast, bonksdodamageon, $Not|ohko",
+											"^$canDefeatShadowBeast, bonksdodamageon, ^$canUseBottledFairy",
+											"^$canDefeatShadowBeast, srcompleted"
+										]
+									}
+								]
+							},
+							{
+								"name": "Snowboarding Snowy Tree Top Rupee 2",
+								"visibility_rules": [
+									"freerupeeson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 1948,
+										"y": 1741
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"stportalactive, bonksdodamageoff",
+											"stportalactive, bonksdodamageon, $Not|ohko",
+											"stportalactive, bonksdodamageon, ^$canUseBottledFairy",
+											"stportalactive, srcompleted",
+											"^$canDefeatShadowBeast, bonksdodamageoff",
+											"^$canDefeatShadowBeast, bonksdodamageon, $Not|ohko",
+											"^$canDefeatShadowBeast, bonksdodamageon, ^$canUseBottledFairy",
+											"^$canDefeatShadowBeast, srcompleted"
+										]
+									}
+								]
+							},
+							{
+								"name": "Snowboarding Snowy Tree Top Rupee 3",
+								"visibility_rules": [
+									"freerupeeson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 1929,
+										"y": 1824
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"stportalactive, bonksdodamageoff",
+											"stportalactive, bonksdodamageon, $Not|ohko",
+											"stportalactive, bonksdodamageon, ^$canUseBottledFairy",
+											"stportalactive, srcompleted",
+											"^$canDefeatShadowBeast, bonksdodamageoff",
+											"^$canDefeatShadowBeast, bonksdodamageon, $Not|ohko",
+											"^$canDefeatShadowBeast, bonksdodamageon, ^$canUseBottledFairy",
+											"^$canDefeatShadowBeast, srcompleted"
+										]
+									}
+								]
+							},
+							{
+								"name": "Snowboarding Top Left Rupee",
+								"visibility_rules": [
+									"freerupeeson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 2415,
+										"y": 824
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"stportalactive, bonksdodamageoff",
+											"stportalactive, bonksdodamageon, $Not|ohko",
+											"stportalactive, bonksdodamageon, ^$canUseBottledFairy",
+											"stportalactive, srcompleted",
+											"^$canDefeatShadowBeast, bonksdodamageoff",
+											"^$canDefeatShadowBeast, bonksdodamageon, $Not|ohko",
+											"^$canDefeatShadowBeast, bonksdodamageon, ^$canUseBottledFairy",
+											"^$canDefeatShadowBeast, srcompleted"
+										]
+									}
+								]
+							},
+							{
+								"name": "Snowboarding Top Right Rupee",
+								"visibility_rules": [
+									"freerupeeson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 2346,
+										"y": 523
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"stportalactive, bonksdodamageoff",
+											"stportalactive, bonksdodamageon, $Not|ohko",
+											"stportalactive, bonksdodamageon, ^$canUseBottledFairy",
+											"stportalactive, srcompleted",
+											"^$canDefeatShadowBeast, bonksdodamageoff",
+											"^$canDefeatShadowBeast, bonksdodamageon, $Not|ohko",
+											"^$canDefeatShadowBeast, bonksdodamageon, ^$canUseBottledFairy",
+											"^$canDefeatShadowBeast, srcompleted"
+										]
+									}
+								]
+							}
+						]
+					},
+					{
+						"name": "Snowpeak Summit Lower",
+						"access_rules": [
+							"^$canAccess|SnowpeakSummitLower"
+						],
+						"children": [
+							{
+								"name": "Snowpeak Icy Summit Poe",
+								"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
+								"chest_opened_img": "images/Items/PoeSoul.png",
+								"visibility_rules": [
+									"poeson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 1300,
+										"y": 2978
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"shadowcrystal"
+										]
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Submaps",
+				"children": [
+					{
+						"name": "Snowpeak Freezard Grotto",
+						"access_rules": [
+							"^$canAccess|SnowpeakFreezardGrotto"
+						],
+						"children": [
+							{
+								"name": "Snowpeak Freezard Grotto Chest",
+								"map_locations": [
+									{
+										"map": "grotto42",
+										"x": 185,
+										"y": 137
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"ballchain"
+										]
+									}
+								]
+							}
 						]
 					}
 				]

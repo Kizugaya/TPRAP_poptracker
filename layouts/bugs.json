@@ -1,7 +1,7 @@
 {
 	"bugs": {
 		"type": "container",
-        "background": "#525260",
+		"background": "#525260",
 		"content": [
 			{
 				"type": "itemgrid",
@@ -58,7 +58,7 @@
 	},
 	"bugs_broadcast": {
 		"type": "container",
-        "background": "#525260",
+		"background": "#525260",
 		"content": [
 			{
 				"type": "itemgrid",

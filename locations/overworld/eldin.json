@@ -1,433 +1,191 @@
 [
 	{
-		"name": "Eldin Region",
+		"name": "Eldin Province",
 		"children": [
 			{
 				"name": "Death Mountain",
 				"children": [
 					{
-						"name": "Alcove Chest",
-						"map_locations": [
-							{
-								"map": "dm",
-								"x": 287,
-								"y": 578
-							}
-						],
-						"sections": [
-							{
-								"access_rules": [
-									"@DeathMountainTrail, gmcompleted",
-									"@DeathMountainTrail, glitchesoff, clawshot, boots",
-									"@DeathMountainTrail, glitchesoff, clawshot, shadowcrystal",
-									"[glitcheson], @DeathMountainTrail, clawshot",
-									"[glitcheson], @DeathMountainTrail, $canDoLJA"
-								]
-							}
-						]
-					}
-				]
-			},
-			{
-				"name": "Death Mountain Poes",
-				"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
-				"chest_opened_img": "images/Items/PoeSoul.png",
-				"visibility_rules": [
-					"poeson"
-				],
-				"children": [
-					{
-						"name": "Death Mountain Trail Poe",
-						"map_locations": [
-							{
-								"map": "dm",
-								"x": 241,
-								"y": 866,
-								"shape": "diamond"
-							}
-						],
-						"sections": [
-							{
-								"access_rules": [
-									"@DeathMountainTrail, gmcompleted, shadowcrystal"
-								]
-							}
-						]
-					}
-				]
-			},
-			{
-				"name": "Death Mountain Golden Wolves",
-				"children": [
-					{
-						"name": "Ordon Spring Stone",
-						"map_locations": [
-							{
-								"map": "dm",
-								"x": 347,
-								"y": 603
-							}
-						],
-						"sections": [
-							{
-								"hosted_item": "dmhowlingstone",
-								"access_rules": [
-									"{@DeathMountainTrail, shadowcrystal}"
-								]
-							}
-						]
-					}
-				]
-			},
-			{
-				"name": "Death Mountain Hint Signs",
-				"children": [
-					{
-						"name": "Hint Sign",
-						"map_locations": [
-							{
-								"map": "dm",
-								"x": 368,
-								"y": 363,
-								"shape": "diamond"
-							}
-						],
-						"sections": [
-							{
-								"access_rules": [
-									"{@DeathMountainVolcano}"
-								],
-								"visibility_rules": [
-									"hintson"
-								]
-							}
-						]
-					}
-				]
-			},
-			{
-				"name": "Eldin Field",
-				"children": [
-					{
-						"name": "Bomb Rock Chest",
-						"map_locations": [
-							{
-								"map": "ef",
-								"x": 822,
-								"y": 1917
-							}
-						],
-						"sections": [
-							{
-								"access_rules": [
-									"@EldinField, $canSmash",
-									"[glitcheson], @EldinField, $canDoMapGlitch",
-									"[glitcheson], @EldinField, $canDoEBMoonBoots, $canDoLJA"
-								]
-							}
-						]
-					},
-					{
-						"name": "Goron Springwater Rush",
-						"map_locations": [
-							{
-								"map": "ef",
-								"x": 79,
-								"y": 1619
-							}
-						],
-						"sections": [
-							{
-								"access_rules": [
-									"@EldinField, $canSmash",
-									"@EldinField, gatekeys, $lanayruTwilightCleared",
-									"@EldinField, gatekeys, shadowcrystal",
-									"@EldinField, skkeysy, $lanayruTwilightCleared",
-									"@EldinField, skkeysy, shadowcrystal"
-								]
-							}
-						]
-					},
-					{
-						"name": "Bomskit Grotto",
+						"name": "Death Mountain Trail",
 						"access_rules": [
-							"@EldinFieldBombskitGrotto"
+							"^$canAccess|DeathMountainTrail"
 						],
-						"map_locations": [
+						"children": [
 							{
-								"map": "ef",
-								"x": 626,
-								"y": 1492
-							}
-						],
-						"sections": [
-							{
-								"name": "Left Chest",
-								"access_rules": [
-									"$canDefeatBomskit",
-									"[glitcheson], $canDefeatBomskitGlitched"
+								"name": "Death Mountain Alcove Chest",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 8164,
+										"y": 4049
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"gmcompleted",
+											"clawshot",
+											"[glitcheson], ^$canDoLJA"
+										]
+									}
 								]
 							},
 							{
-								"name": "Lantern Chest",
-								"access_rules": [
-									"$canDefeatBomskit, lantern",
-									"[glitcheson], $canDefeatBomskitGlitched, lantern"
-								]
-							}
-						]
-					},
-					{
-						"name": "Water Bomb Fish Grotto",
-						"map_locations": [
-							{
-								"map": "ef",
-								"x": 1192,
-								"y": 1160
-							}
-						],
-						"sections": [
-							{
-								"access_rules": [
-									"@EldinFieldWaterBombFishGrotto"
-								]
-							}
-						]
-					},
-					{
-						"name": "Owl Statue Chest",
-						"map_locations": [
-							{
-								"map": "ef",
-								"x": 1231,
-								"y": 1087
-							}
-						],
-						"sections": [
-							{
-								"access_rules": [
-									"@EldinField, powereddominionrod",
-									"[glitcheson], @EldinField, $canDoLJA",
-									"[glitcheson], shadowcrystal"
-								]
-							}
-						]
-					},
-					{
-						"name": "Owl Statue Sky Character",
-						"map_locations": [
-							{
-								"map": "ef",
-								"x": 1265,
-								"y": 671
-							}
-						],
-						"sections": [
-							{
-								"access_rules": [
-									"@EldinField, powereddominionrod"
-								]
-							}
-						]
-					},
-					{
-						"name": "Stockcave",
-						"map_locations": [
-							{
-								"map": "ef",
-								"x": 1432,
-								"y": 605
-							}
-						],
-						"sections": [
-							{
-								"name": "Upper Chest",
-								"access_rules": [
-									"@EldinFieldLavaCaveUpper, boots, glitchesoff",
-									"[glitcheson], @EldinFieldLavaCaveUpper, clawshot"
+								"name": "Death Mountain Trail Poe",
+								"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
+								"chest_opened_img": "images/Items/PoeSoul.png",
+								"visibility_rules": [
+									"poeson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 8129,
+										"y": 4354
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"shadowcrystal, gmcompleted, ^$canCompleteEldinTwilight"
+										]
+									}
 								]
 							},
 							{
-								"name": "Lantern Chest",
-								"access_rules": [
-									"@EldinFieldLavaCaveLower, lantern, glitchesoff",
-									"[glitcheson], @EldinFieldLavaCaveLower, lantern, $canDoLJA",
-									"[glitcheson], @EldinFieldLavaCaveLower, lantern, clawshot"
+								"name": "Ordon Spring Stone",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 8223,
+										"y": 4069
+									}
+								],
+								"sections": [
+									{
+										"hosted_item": "dmhowlingstone",
+										"access_rules": [
+											"{^$canAccess|DeathMountainTrail, shadowcrystal}"
+										]
+									}
 								]
 							},
 							{
-								"name": "Lowest Chest",
-								"access_rules": [
-									"@EldinFieldLavaCaveLower, glitchesoff",
-									"[glitcheson], @EldinFieldLavaCaveLower, $canDoLJA",
-									"[glitcheson], @EldinFieldLavaCaveLower, clawshot"
+								"name": "Hint Sign",
+								"chest_opened_img": "images/Items/Sign.png",
+								"chest_unopened_img": "images/Items/SignGrayed.png",
+								"visibility_rules": [
+									"hintson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 8252,
+										"y": 3824,
+										"shape": "triangle",
+										"orientation": "south",
+										"border_thickness": 32
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"{}"
+										]
+									}
 								]
 							}
 						]
 					},
 					{
-						"name": "Stalfos Grotto",
+						"name": "Death Mountain Volcano",
 						"access_rules": [
-							"@EldinFieldStalfosGrotto"
+							"^$canAccess|DeathMountainVolcano"
 						],
-						"map_locations": [
+						"children": [
 							{
-								"map": "ef",
-								"x": 1043,
-								"y": 41
-							}
-						],
-						"sections": [
-							{
-								"name": "Left Small Chest",
-								"access_rules": [
-									""
+								"name": "Death Mountain Portal",
+								"visibility_rules": [
+									"portals"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 8266,
+										"y": 3716
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											""
+										],
+										"hosted_item": "dmportal"
+									}
 								]
 							},
 							{
-								"name": "Right Small Chest",
-								"access_rules": [
-									""
+								"name": "Death Mountain Volcano Ledge",
+								"visibility_rules": [
+									"freerupeeson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 8138,
+										"y": 3703
+									}
+								],
+								"sections": [
+									{
+										"name": "Rupee 1",
+										"access_rules": [
+											"boots, ^$canDefeatGoron, ^$canCompleteEldinTwilight",
+											"boots, gmcompleted, ^$canCompleteEldinTwilight",
+											"[glitcheson], ^$hasShield, ^$canDefeatGoron, ^$canCompleteEldinTwilight",
+											"[glitcheson], ^$hasShield, gmcompleted, ^$canCompleteEldinTwilight"
+										]
+									},
+									{
+										"name": "Rupee 2",
+										"access_rules": [
+											"boots, ^$canDefeatGoron, ^$canCompleteEldinTwilight",
+											"boots, gmcompleted, ^$canCompleteEldinTwilight",
+											"[glitcheson], ^$hasShield, ^$canDefeatGoron, ^$canCompleteEldinTwilight",
+											"[glitcheson], ^$hasShield, gmcompleted, ^$canCompleteEldinTwilight"
+
+										]
+									},
+									{
+										"name": "Rupee 3",
+										"access_rules": [
+											"boots, ^$canDefeatGoron, ^$canCompleteEldinTwilight",
+											"boots, gmcompleted, ^$canCompleteEldinTwilight",
+											"[glitcheson], ^$hasShield, ^$canDefeatGoron, ^$canCompleteEldinTwilight",
+											"[glitcheson], ^$hasShield, gmcompleted, ^$canCompleteEldinTwilight"
+										]
+									}
 								]
 							},
 							{
-								"name": "Stalfos Chest",
-								"access_rules": [
-									"$canDefeatStalfos"
-								]
-							}
-						]
-					}
-				]
-			},
-			{
-				"name": "Eldin Field Bugs",
-				"chest_unopened_img": "images/Items/GoldenBugGrayed.png",
-				"chest_opened_img": "images/Items/GoldenBug.png",
-				"visibility_rules": [
-					"bugson"
-				],
-				"access_rules": [
-					"@EldinField"
-				],
-				"children": [
-					{
-						"name": "Male Grasshopper",
-						"map_locations": [
-							{
-								"map": "ef",
-								"x": 1027,
-								"y": 1679,
-								"shape": "diamond"
-							}
-						],
-						"sections": [
-							{
-								"access_rules": [
-									""
-								]
-							}
-						]
-					},
-					{
-						"name": "Female Grasshopper",
-						"map_locations": [
-							{
-								"map": "ef",
-								"x": 357,
-								"y": 1202,
-								"shape": "diamond"
-							}
-						],
-						"sections": [
-							{
-								"access_rules": [
-									""
-								]
-							}
-						]
-					},
-					{
-						"name": "Male Phasmid",
-						"map_locations": [
-							{
-								"map": "ef",
-								"x": 1307,
-								"y": 1104,
-								"shape": "diamond"
-							}
-						],
-						"sections": [
-							{
-								"access_rules": [
-									"boomerang",
-									"clawshot"
-								]
-							}
-						]
-					},
-					{
-						"name": "Female Phasmid",
-						"map_locations": [
-							{
-								"map": "ef",
-								"x": 1403,
-								"y": 588,
-								"shape": "diamond"
-							}
-						],
-						"sections": [
-							{
-								"access_rules": [
-									"boomerang",
-									"clawshot"
-								]
-							}
-						]
-					}
-				]
-			},
-			{
-				"name": "Eldin Field Hint Signs",
-				"children": [
-					{
-						"name": "Hint Sign",
-						"map_locations": [
-							{
-								"map": "ef",
-								"x": 334,
-								"y": 1842,
-								"shape": "diamond"
-							}
-						],
-						"sections": [
-							{
-								"access_rules": [
-									"{@EldinField}"
-								],
+								"name": "Death Mountain Volcano Pipe Ledge Rock Rupee",
 								"visibility_rules": [
-									"hintson"
-								]
-							}
-						]
-					},
-					{
-						"name": "North Hint Sign",
-						"map_locations": [
-							{
-								"map": "ef",
-								"x": 1196,
-								"y": 310,
-								"shape": "diamond"
-							}
-						],
-						"sections": [
-							{
-								"access_rules": [
-									"{@NorthEldinField}"
+									"hiddenrupeeson"
 								],
-								"visibility_rules": [
-									"hintson"
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 8221,
+										"y": 3612
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"^$canDefeatGoron, ^$canCompleteEldinTwilight",
+											"gmcompleted, ^$canCompleteEldinTwilight"
+										]
+									}
 								]
 							}
 						]
@@ -438,138 +196,136 @@
 				"name": "Hidden Village",
 				"children": [
 					{
-						"name": "Cats Hide and Seek Minigame",
-						"map_locations": [
-							{
-								"map": "hv",
-								"x": 100,
-								"y": 396
-							}
-						],
-						"sections": [
-							{
-								"access_rules": [
-									"@HiddenVillage, shadowcrystal, clawshot, iliascharm, bow, dominionrod",
-									"[glitcheson], @HiddenVillage, shadowcrystal, clawshot, iliascharm, $canDoHiddenVillageGlitched, dominionrod",
-									"@HiddenVillage, shadowcrystal, clawshot, iliascharm, bow, glitchesoff"
-								]
-							}
-						]
-					},
-					{
-						"name": "Ilia's Charm",
+						"name": "Hidden Village",
 						"access_rules": [
-							"@HiddenVillage"
+							"^$canAccess|HiddenVillage"
 						],
-						"map_locations": [
+						"children": [
 							{
-								"map": "hv",
-								"x": 142,
-								"y": 394
-							}
-						],
-						"sections": [
-							{
-								"hosted_item": "iliascharm",
-								"access_rules": [
-									"bow",
-									"[glitcheson], $canDoHiddenVillageGlitched"
-								]
-							}
-						]
-					},
-					{
-						"name": "Skybook From Impaz",
-						"map_locations": [
-							{
-								"map": "hv",
-								"x": 117,
-								"y": 435
-							}
-						],
-						"sections": [
-							{
-								"access_rules": [
-									"@HiddenVillageImpazHouse"
-								]
-							}
-						]
-					}
-				]
-			},
-			{
-				"name": "Hidden Village Poes",
-				"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
-				"chest_opened_img": "images/Items/PoeSoul.png",
-				"visibility_rules": [
-					"poeson"
-				],
-				"children": [
-					{
-						"name": "Hidden Village Poe",
-						"map_locations": [
-							{
-								"map": "hv",
-								"x": 65,
-								"y": 229,
-								"shape": "diamond"
-							}
-						],
-						"sections": [
-							{
-								"access_rules": [
-									"@HiddenVillage, iliascharm, clawshot, bow, dominionrod, shadowcrystal",
-									"@HiddenVillage, iliascharm, clawshot, bow, glitchesoff, shadowcrystal",
-									"[glitcheson], @HiddenVillage, iliascharm, $canDoHiddenVillageGlitched, dominionrod, shadowcrystal"
-								]
-							}
-						]
-					}
-				]
-			},
-			{
-				"name": "Hidden Village Golden Wolves",
-				"children": [
-					{
-						"name": "North Castle Town Stone",
-						"map_locations": [
-							{
-								"map": "hv",
-								"x": 198,
-								"y": 295
-							}
-						],
-						"sections": [
-							{
-								"hosted_item": "hvhowlingstone",
-								"access_rules": [
-									"{@HiddenVillage, shadowcrystal}"
-								]
-							}
-						]
-					}
-				]
-			},
-			{
-				"name": "Hidden Village Hint Signs",
-				"children": [
-					{
-						"name": "Hint Sign",
-						"map_locations": [
-							{
-								"map": "hv",
-								"x": 200,
-								"y": 275,
-								"shape": "diamond"
-							}
-						],
-						"sections": [
-							{
-								"access_rules": [
-									"{@HiddenVillage}"
+								"name": "Cats Hide and Seek Minigame",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 6568,
+										"y": 2184
+									}
 								],
+								"sections": [
+									{
+										"access_rules": [
+											"bow, shadowcrystal, clawshot",
+											"[glitcheson], ^$canDoHiddenVillageGlitched, shadowcrystal"
+										]
+									}
+								]
+							},
+							{
+								"name": "Ilia Charm",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 6595,
+										"y": 2184
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"bow, woodenstatue",
+											"[glitcheson], ^$canDoHiddenVillageGlitched, woodenstatue"
+										]
+									}
+								]
+							},
+							{
+								"name": "Hidden Village Poe",
+								"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
+								"chest_opened_img": "images/Items/PoeSoul.png",
+								"visibility_rules": [
+									"poeson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 6540,
+										"y": 2001
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"bow, shadowcrystal, clawshot",
+											"^$canDoHiddenVillageGlitched, shadowcrystal"
+										]
+									}
+								]
+							},
+							{
+								"name": "North Castle Town Stone",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 6666,
+										"y": 2083
+									}
+								],
+								"sections": [
+									{
+										"hosted_item": "hvhowlingstone",
+										"access_rules": [
+											"{^$canAccess|HiddenVillage, shadowcrystal}"
+										]
+									}
+								]
+							},
+							{
+								"name": "Hint Sign",
+								"chest_opened_img": "images/Items/Sign.png",
+								"chest_unopened_img": "images/Items/SignGrayed.png",
 								"visibility_rules": [
 									"hintson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 6663,
+										"y": 2060,
+										"shape": "triangle",
+										"orientation": "south",
+										"border_thickness": 32
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"{}"
+										]
+									}
+								]
+							}
+						]
+					},
+					{
+						"name": "Hidden Village Impaz House",
+						"access_rules": [
+							"^$canAccess|HiddenVillageImpazHouse"
+						],
+						"children": [
+							{
+								"name": "Impaz's House",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 6588,
+										"y": 2195,
+										"shape": "trapezoid"
+									}
+								],
+								"sections": [
+									{
+										"name": "Skybook From Impaz",
+										"ref": "Eldin Province/Submaps/Hidden Village Impaz House/Skybook From Impaz/"
+									}
 								]
 							}
 						]
@@ -577,667 +333,1879 @@
 				]
 			},
 			{
-				"name": "Kakariko",
+				"name": "Eldin Field",
 				"children": [
 					{
-						"name": "Kakariko Inn Chest",
-						"map_locations": [
-							{
-								"map": "kakariko",
-								"x": 236,
-								"y": 328
-							}
+						"name": "Kakariko Gorge",
+						"access_rules": [
+							"^$canAccess|KakarikoGorge"
 						],
-						"sections": [
+						"children": [
 							{
-								"access_rules": [
-									"@KakarikoEldeInn"
-								]
-							}
-						]
-					},
-					{
-						"name": "Eldin Spring Underwater Chest",
-						"map_locations": [
-							{
-								"map": "kakariko",
-								"x": 324,
-								"y": 881
-							}
-						],
-						"sections": [
-							{
-								"access_rules": [
-									"@LowerKakarikoVillage, $canSmash, boots",
-									"[glitcheson], @LowerKakarikoVillage, $hasHeavyMod, $canSmash",
-									"[glitcheson], @LowerKakarikoVillage, $hasHeavyMod, $canDoMapGlitch"
-								]
-							}
-						]
-					},
-					{
-						"name": "Bomb Rock Spire Heart Piece",
-						"map_locations": [
-							{
-								"map": "kakariko",
-								"x": 226,
-								"y": 648
-							}
-						],
-						"sections": [
-							{
-								"access_rules": [
-									"@LowerKakarikoVillage, $canLaunchBombs, boomerang",
-									"[glitcheson], @LowerKakarikoVillage, $canDoMapGlitch",
-									"[glitcheson], @LowerKakarikoVillage, $canLaunchBombs, boomerang",
-									"[glitcheson], @LowerKakarikoVillage, $canLaunchBombs, clawshot"
-								]
-							}
-						]
-					},
-					{
-						"name": "Watchtower",
-						"map_locations": [
-							{
-								"map": "kakariko",
-								"x": 235,
-								"y": 141
-							}
-						],
-						"sections": [
-							{
-								"name": "Chest",
-								"access_rules": [
-									"@KakarikoWatchtower"
+								"name": "Kakariko Gorge Owl Statue ",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 5979,
+										"y": 4908
+									}
+								],
+								"sections": [
+									{
+										"name": "Sky Character",
+										"access_rules": [
+											"powereddominionrod"
+										]
+									},
+									{
+										"name": "Chest",
+										"access_rules": [
+											"powereddominionrod",
+											"[glitcheson], ^$canDoLJA",
+											"[glitcheson], ^$canDoStorage",
+											"[glitcheson], ^$canDoEBMoonBoots"
+										]
+									}
 								]
 							},
+							{
+								"name": "Kakariko Gorge Double Clawshot Chest",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 5613,
+										"y": 5268
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"doubleclawshot",
+											"[glitcheson], ^$canDoLJA",
+											"[glitcheson], shadowcrystal"
+										]
+									}
+								]
+							},
+							{
+								"name": "Kakariko Gorge Spire Heart Piece",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 5667,
+										"y": 5300
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"clawshot",
+											"boomerang"
+										]
+									}
+								]
+							},
+							{
+								"name": "Kakariko Gorge Male Pill Bug",
+								"chest_unopened_img": "images/Items/Bug10Grayed.png",
+								"chest_opened_img": "images/Items/Bug10.png",
+								"visibility_rules": [
+									"bugson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 6009,
+										"y": 5429
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"^$canCompleteEldinTwilight"
+										]
+									}
+								]
+							},
+							{
+								"name": "Kakariko Gorge Female Pill Bug",
+								"chest_unopened_img": "images/Items/Bug11Grayed.png",
+								"chest_opened_img": "images/Items/Bug11.png",
+								"visibility_rules": [
+									"bugson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 6318,
+										"y": 5590
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"^$canCompleteEldinTwilight"
+										]
+									}
+								]
+							},
+							{
+								"name": "Kakariko Gorge Poe",
+								"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
+								"chest_opened_img": "images/Items/PoeSoul.png",
+								"visibility_rules": [
+									"poeson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 5974,
+										"y": 5343
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"shadowcrystal, ^$canCompleteMDH, ^$canCompleteAllTwilight"
+										]
+									}
+								]
+							},
+							{
+								"name": "Kakariko Gorge Portal",
+								"visibility_rules": [
+									"portals"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 6027,
+										"y": 5433
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											""
+										],
+										"hosted_item": "kgportal"
+									}
+								]
+							},
+							{
+								"name": "Kakariko Gorge Owl Statue Boulder Rupee",
+								"visibility_rules": [
+									"hiddenrupeeson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 5851,
+										"y": 5012
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"^$canSmash"
+										]
+									}
+								]
+							},
+							{
+								"name": "Kakariko Gorge Spire Boulder Rupee",
+								"visibility_rules": [
+									"hiddenrupeeson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 5500,
+										"y": 5375
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"^$canSmash"
+										]
+									}
+								]
+							},
+							{
+								"name": "Hint Sign",
+								"chest_opened_img": "images/Items/Sign.png",
+								"chest_unopened_img": "images/Items/SignGrayed.png",
+								"visibility_rules": [
+									"hintson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 5948,
+										"y": 4854,
+										"shape": "triangle",
+										"orientation": "south",
+										"border_thickness": 32
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"{}"
+										]
+									}
+								]
+							}
+						]
+					},
+					{
+						"name": "Eldin Lantern Cave",
+						"access_rules": [
+							"^$canAccess|EldinLanternCave"
+						],
+						"children": [
+							{
+								"name": "Eldin Lantern Cave",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 6043,
+										"y": 5714,
+										"shape": "trapezoid"
+									}
+								],
+								"sections": [
+									{
+										"name": "First Chest",
+										"ref": "Eldin Province/Submaps/Eldin Lantern Cave/Eldin Lantern Cave First Chest/"
+									},
+									{
+										"name": "Second Chest",
+										"ref": "Eldin Province/Submaps/Eldin Lantern Cave/Eldin Lantern Cave Second Chest/"
+									},
+									{
+										"name": "Lantern Chest",
+										"ref": "Eldin Province/Submaps/Eldin Lantern Cave/Eldin Lantern Cave Lantern Chest/"
+									},
+									{
+										"name": "Poe",
+										"ref": "Eldin Province/Submaps/Eldin Lantern Cave/Eldin Lantern Cave Poe/"
+									}
+								]
+							}
+						]
+					},
+					{
+						"name": "Eldin Field",
+						"access_rules": [
+							"^$canAccess|EldinField"
+						],
+						"children": [
+							{
+								"name": "Eldin Field Bomb Rock Chest",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 6672,
+										"y": 4397
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"^$canSmash",
+											"[glitcheson], ^$canDoMapGlitch, ^$canCompleteEldinTwilight",
+											"[glitcheson], ^$canDoEBMoonBoots, ^$canDoLJA, ^$canCompleteEldinTwilight"
+										]
+									}
+								]
+							},
+							{
+								"name": "Bridge of Eldin Owl Statue Chest",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 7282,
+										"y": 3133
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"powereddominionrod",
+											"[glitcheson], ^$canDoLJA",
+											"[glitcheson], shadowcrystal, ^$canCompleteEldinTwilight"
+										]
+									}
+								]
+							},
+							{
+								"name": "Bridge of Eldin Owl Statue Sky Character",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 7355,
+										"y": 2511
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"powereddominionrod"
+										]
+									}
+								]
+							},
+							{
+								"name": "Eldin Field Male Grasshopper",
+								"chest_unopened_img": "images/Items/Bug20Grayed.png",
+								"chest_opened_img": "images/Items/Bug20.png",
+								"visibility_rules": [
+									"bugson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 6959,
+										"y": 4041
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"^$canCompleteEldinTwilight"
+										]
+									}
+								]
+							},
+							{
+								"name": "Eldin Field Female Grasshopper",
+								"chest_unopened_img": "images/Items/Bug21Grayed.png",
+								"chest_opened_img": "images/Items/Bug21.png",
+								"visibility_rules": [
+									"bugson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 5988,
+										"y": 3244
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"^$canCompleteEldinTwilight"
+										]
+									}
+								]
+							},
+							{
+								"name": "Bridge of Eldin Male Phasmid",
+								"chest_unopened_img": "images/Items/Bug18Grayed.png",
+								"chest_opened_img": "images/Items/Bug18.png",
+								"visibility_rules": [
+									"bugson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 7408,
+										"y": 3159
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"clawshot, ^$canCompleteEldinTwilight",
+											"boomerang, ^$canCompleteEldinTwilight"
+										]
+									}
+								]
+							},
+							{
+								"name": "Bridge of Eldin Female Phasmid",
+								"chest_unopened_img": "images/Items/Bug19Grayed.png",
+								"chest_opened_img": "images/Items/Bug19.png",
+								"visibility_rules": [
+									"bugson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 7549,
+										"y": 2368
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"clawshot, ^$canCompleteEldinTwilight",
+											"boomerang, ^$canCompleteEldinTwilight"
+										]
+									}
+								]
+							},
+							{
+								"name": "Bridge of Eldin Portal",
+								"visibility_rules": [
+									"portals"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 7396,
+										"y": 2808
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"^$canDefeatShadowBeast"
+										],
+										"hosted_item": "boeportal"
+									}
+								]
+							},
+							{
+								"name": "Bridge of Eldin Boulder Rupee",
+								"visibility_rules": [
+									"hiddenrupeeson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 7484,
+										"y": 2388
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"^$canSmash"
+										]
+									}
+								]
+							},
+							{
+								"name": "Hint Sign",
+								"chest_opened_img": "images/Items/Sign.png",
+								"chest_unopened_img": "images/Items/SignGrayed.png",
+								"visibility_rules": [
+									"hintson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 5932,
+										"y": 4282,
+										"shape": "triangle",
+										"orientation": "south",
+										"border_thickness": 32
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"{}"
+										]
+									}
+								]
+							}
+						]
+					},
+					{
+						"name": "Eldin Field Near Castle Town",
+						"access_rules": [
+							"^$canAccess|EldinFieldNearCastleTown"
+						],
+						"children": [
+							{
+								"name": "Goron Springwater Rush",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 5468,
+										"y": 3942
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"^$canCompleteEldinTwilight, ^$canAccess|LowerKakarikoVillage, skipbridgedonationon",
+											"^$canCompleteEldinTwilight, ^$canAccess|LowerKakarikoVillage, canAccess|KakarikoMaloMart, $Not|reducedwalletsie",
+											"^$canCompleteEldinTwilight, ^$canAccess|LowerKakarikoVillage, canAccess|KakarikoMaloMart, mediumwallet"
+										]
+									}
+								]
+							}
+						]
+					},
+					{
+						"name": "North Eldin Field",
+						"access_rules": [
+							"^$canAccess|NorthEldinField"
+						],
+						"children": [
+							{
+								"name": "Hint Sign",
+								"chest_opened_img": "images/Items/Sign.png",
+								"chest_unopened_img": "images/Items/SignGrayed.png",
+								"visibility_rules": [
+									"hintson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 7237,
+										"y": 1959,
+										"shape": "triangle",
+										"orientation": "south",
+										"border_thickness": 32
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"{}"
+										]
+									}
+								]
+							}
+						]
+					},
+					{
+						"name": "Eldin Stockcave",
+						"children": [
+							{
+								"name": "Eldin Stockcave",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 7601,
+										"y": 2399,
+										"shape": "trapezoid"
+									}
+								],
+								"sections": [
+									{
+										"name": "Upper Chest",
+										"ref": "Eldin Province/Submaps/Eldin Field Lava Cave Upper/Eldin Stockcave Upper Chest/"
+									},
+									{
+										"name": "Lantern Chest",
+										"ref": "Eldin Province/Submaps/Eldin Field Lava Cave Lower/Eldin Stockcave Lantern Chest/"
+									},
+									{
+										"name": "Lowest Chest",
+										"ref": "Eldin Province/Submaps/Eldin Field Lava Cave Lower/Eldin Stockcave Lowest Chest/"
+									}
+								]
+							}
+						]
+					},
+					{
+						"name": "Eldin Field Bomskit Grotto",
+						"access_rules": [
+							"^$canAccess|EldinFieldBomskitGrotto"
+						],
+						"children": [
+							{
+								"name": "Eldin Field Bomskit Grotto",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 6371,
+										"y": 3741,
+										"shape": "trapezoid"
+									}
+								],
+								"sections": [
+									{
+										"name": "Left Chest",
+										"ref": "Eldin Province/Submaps/Eldin Field Bomskit Grotto/Eldin Field Bomskit Grotto Left Chest/"
+									},
+									{
+										"name": "Lantern Chest",
+										"ref": "Eldin Province/Submaps/Eldin Field Bomskit Grotto/Eldin Field Bomskit Grotto Lantern Chest/"
+									}
+								]
+							}
+						]
+					},
+					{
+						"name": "Eldin Field Water Bomb Fish Grotto",
+						"access_rules": [
+							"^$canAccess|EldinFieldWaterBombFishGrotto"
+						],
+						"children": [
+							{
+								"name": "Eldin Field Water Bomb Fish Grotto",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 7227,
+										"y": 3246,
+										"shape": "trapezoid"
+									}
+								],
+								"sections": [
+									{
+										"name": "Chest",
+										"ref": "Eldin Province/Submaps/Eldin Field Water Bomb Fish Grotto/Eldin Field Water Bomb Fish Grotto Chest/"
+									}
+								]
+							}
+						]
+					},
+					{
+						"name": "Eldin Field Stalfos Grotto",
+						"access_rules": [
+							"^$canAccess|EldinFieldStalfosGrotto"
+						],
+						"children": [
+							{
+								"name": "Eldin Field Stalfos Grotto",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 7006,
+										"y": 1544,
+										"shape": "trapezoid"
+									}
+								],
+								"sections": [
+									{
+										"name": "Left Small Chest",
+										"ref": "Eldin Province/Submaps/Eldin Field Stalfos Grotto/Eldin Field Stalfos Grotto Left Small Chest/"
+									},
+									{
+										"name": "Right Small Chest",
+										"ref": "Eldin Province/Submaps/Eldin Field Stalfos Grotto/Eldin Field Stalfos Grotto Right Small Chest/"
+									},
+									{
+										"name": "Stalfos Chest",
+										"ref": "Eldin Province/Submaps/Eldin Field Stalfos Grotto/Eldin Field Stalfos Grotto Stalfos Chest/"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Kakariko Village",
+				"children": [
+					{
+						"name": "Lower Kakariko Village",
+						"access_rules": [
+							"^$canAccess|LowerKakarikoVillage"
+						],
+						"children": [
+							{
+								"name": "Eldin Spring Underwater Chest",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 7693,
+										"y": 5844
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"^$canSmash, boots",
+											"[glitcheson], ^$hasHeavyMod, ^$canSmash",
+											"[glitcheson], ^$hasHeavyMod, ^$canDoMapGlitch"
+										]
+									}
+								]
+							},
+							{
+								"name": "Kakariko Village Bomb Rock Spire Heart Piece",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 7571,
+										"y": 5597
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"^$hasBombs, boomerang, ^$canCompleteEldinTwilight",
+											"[glitcheson], ^$canDoMapGlitch, ^$canCompleteEldinTwilight",
+											"[glitcheson], ^$canLaunchBombs, clawshot, ^$canCompleteEldinTwilight"
+										]
+									}
+								]
+							},
+							{
+								"name": "Kakariko Village Portal",
+								"visibility_rules": [
+									"portals"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 7588,
+										"y": 5555
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											""
+										],
+										"hosted_item": "kvportal"
+									}
+								]
+							},
+							{
+								"name": "Kakariko Village Bell Rupee",
+								"visibility_rules": [
+									"hiddenrupeeson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 7697,
+										"y": 5496
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"shadowcrystal, ^$canLaunchBombs, ^$canCompleteEldinTwilight",
+											"[glitcheson], ^$canLaunchBombs, boomerang, ^$canCompleteEldinTwilight"
+										]
+									}
+								]
+							},
+							{
+								"name": "Eldin Spring Underwater Boulder Rupee",
+								"visibility_rules": [
+									"hiddenrupeeson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 7668,
+										"y": 5813
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"boots, ^$canUseWaterBombs, ^$canCompleteEldinTwilight",
+											"zoraarmor, ^$canUseWaterBombs, ^$canCompleteEldinTwilight",
+											"[glitcheson], magicarmor, ^$canUseWaterBombs, ^$canCompleteEldinTwilight"
+										]
+									}
+								]
+							},
+							{
+								"name": "Kakariko Village Spring Shortcut Box",
+								"visibility_rules": [
+									"hiddenrupeeson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 7538,
+										"y": 5699
+									}
+								],
+								"sections": [
+									{
+										"name": "Rupee 1",
+										"access_rules": [
+											"^$canSmash, ^$canCompleteEldinTwilight",
+											"[glitcheson], shadowcrystal, ^$canCompleteEldinTwilight"
+										]
+									},
+									{
+										"name": "Rupee 2",
+										"access_rules": [
+											"^$canSmash, ^$canCompleteEldinTwilight",
+											"[glitcheson], shadowcrystal, ^$canCompleteEldinTwilight"
+										]
+									}
+								]
+							},
+							{
+								"name": "Kakariko Village Ant House Ledge Box Rupee",
+								"visibility_rules": [
+									"hiddenrupeeson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 7673,
+										"y": 5303
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"boomerang, ^$canCompleteEldinTwilight",
+											"[glitcheson], shadowcrystal, ^$canCompleteEldinTwilight"
+										]
+									}
+								]
+							},
+							{
+								"name": "Kakariko Village Hot Spring Ledge Box Rupee",
+								"visibility_rules": [
+									"hiddenrupeeson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 7574,
+										"y": 5199
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"shadowcrystal, ^$canCompleteEldinTwilight",
+											"boomerang, ^$canCompleteEldinTwilight"
+										]
+									}
+								]
+							},
+							{
+								"name": "Hint Sign",
+								"chest_opened_img": "images/Items/Sign.png",
+								"chest_unopened_img": "images/Items/SignGrayed.png",
+								"visibility_rules": [
+									"hintson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 7452,
+										"y": 5258,
+										"shape": "triangle",
+										"orientation": "south",
+										"border_thickness": 32
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"{}"
+										]
+									}
+								]
+							}
+						]
+					},
+					{
+						"name": "Upper Kakariko Village",
+						"access_rules": [
+							"^$canAccess|UpperKakarikoVillage"
+						],
+						"children": [
+							{
+								"name": "Kakariko Village Bomb Shop Poe",
+								"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
+								"chest_opened_img": "images/Items/PoeSoul.png",
+								"visibility_rules": [
+									"poeson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 7765,
+										"y": 5226
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"shadowcrystal, ^$canCompleteEldinTwilight"
+										]
+									}
+								]
+							},
+							{
+								"name": "Kakariko Village Watchtower Poe",
+								"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
+								"chest_opened_img": "images/Items/PoeSoul.png",
+								"visibility_rules": [
+									"poeson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 7608,
+										"y": 5124
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"shadowcrystal, ^$canCompleteEldinTwilight"
+										]
+									}
+								]
+							},
+							{
+								"name": "Kakariko Watchtower Alcove Chest",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 7535,
+										"y": 5068
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"^$canSmash, ^$canCompleteEldinTwilight",
+											"[glitcheson], shadowcrystal"
+										]
+									}
+								]
+							}
+						]
+					},
+					{
+						"name": "Kakariko Top of Watchtower",
+						"access_rules": [
+							"^$canAccess|KakarikoTopofWatchtower"
+						],
+						"children": [
 							{
 								"name": "Talo Sharpshooting",
-								"access_rules": [
-									"@KakarikoTopofWatchtower, bow, gmcompleted"
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 7585,
+										"y": 5082
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"gmcompleted, bow, ^$canCompleteEldinTwilight"
+										]
+									}
 								]
 							}
 						]
 					},
 					{
-						"name": "Watchtower Alcove Chest",
-						"map_locations": [
+						"name": "Kakariko Renados Sanctuary",
+						"children": [
 							{
-								"map": "kakariko",
-								"x": 187,
-								"y": 103
-							}
-						],
-						"sections": [
-							{
-								"access_rules": [
-									"@UpperKakarikoVillage, $canSmash",
-									"[glitcheson], @UpperKakarikoVillage, shadowcrystal"
+								"name": "Renados Sanctuary",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 7671,
+										"y": 5528,
+										"shape": "trapezoid"
+									}
+								],
+								"sections": [
+									{
+										"name": "Renados Letter",
+										"ref": "Eldin Province/Submaps/Kakariko Renados Sanctuary/Renados Letter/"
+									},
+									{
+										"name": "Ilia Memory Reward",
+										"ref": "Eldin Province/Submaps/Kakariko Renados Sanctuary/Ilia Memory Reward/"
+									},
+									{
+										"name": "Shad Dominion Rod",
+										"ref": "Eldin Province/Submaps/Kakariko Renados Sanctuary Basement/Shad Dominion Rod/"
+									}
 								]
 							}
 						]
 					},
 					{
-						"name": "Barnes Bomb Bag",
-						"map_locations": [
-							{
-								"map": "kakariko",
-								"x": 317,
-								"y": 205
-							}
-						],
-						"sections": [
-							{
-								"access_rules": [
-									"@KakarikoBarnesBombShopLower"
-								]
-							}
-						]
-					},
-					{
-						"name": "Malo Mart",
+						"name": "Kakariko Malo Mart",
 						"access_rules": [
-							"@KakarikoMaloMart"
+							"^$canAccess|KakarikoMaloMart"
 						],
-						"map_locations": [
+						"children": [
 							{
-								"map": "kakariko",
-								"x": 221,
-								"y": 419
-							}
-						],
-						"sections": [
-							{
-								"name": "Hylian Shield",
-								"access_rules": [
-									""
-								]
-							},
-							{
-								"name": "Red Potion",
-								"access_rules": [
-									""
-								]
-							},
-							{
-								"name": "Wooden Shield",
-								"access_rules": [
-									""
-								]
-							},
-							{
-								"name": "Hawkeye",
-								"access_rules": [
-									"bow, gmcompleted"
+								"name": "Kakariko Village Malo Mart",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 7589,
+										"y": 5379,
+										"shape": "trapezoid"
+									}
+								],
+								"sections": [
+									{
+										"name": "Hylian Shield",
+										"ref": "Eldin Province/Submaps/Kakariko Malo Mart/Kakariko Village Malo Mart Hylian Shield/"
+									},
+									{
+										"name": "Red Potion",
+										"ref": "Eldin Province/Submaps/Kakariko Malo Mart/Kakariko Village Malo Mart Red Potion/"
+									},
+									{
+										"name": "Wooden Shield",
+										"ref": "Eldin Province/Submaps/Kakariko Malo Mart/Kakariko Village Malo Mart Wooden Shield/"
+									},
+									{
+										"name": "Hawkeye",
+										"ref": "Eldin Province/Submaps/Kakariko Malo Mart/Kakariko Village Malo Mart Hawkeye/"
+									}
 								]
 							}
 						]
 					},
 					{
-						"name": "Renado's Sanctuary",
+						"name": "Kakariko Elde Inn",
 						"access_rules": [
-							"@KakarikoRenadosSanctuary"
+							"^$canAccess|KakarikoEldeInn"
 						],
-						"map_locations": [
+						"children": [
 							{
-								"map": "kakariko",
-								"x": 349,
-								"y": 539
+								"name": "Kakariko Inn",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 7597,
+										"y": 5294,
+										"shape": "trapezoid"
+									}
+								],
+								"sections": [
+									{
+										"name": "Chest",
+										"ref": "Eldin Province/Submaps/Kakariko Elde Inn/Kakariko Inn Chest/"
+									}
+								]
 							}
+						]
+					},
+					{
+						"name": "Kakariko Bug House",
+						"access_rules": [
+							"^$canAccess|KakarikoBugHouse"
 						],
-						"sections": [
+						"children": [
 							{
-								"name": "Renado's Letter",
-								"hosted_item": "renadosletter",
-								"access_rules": [
-									"ttcompleted"
+								"name": "Kakariko Bug House",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 7645,
+										"y": 5270,
+										"shape": "trapezoid"
+									}
+								],
+								"sections": [
+									{
+										"name": "Kakariko Village Female Ant",
+										"ref": "Eldin Province/Submaps/Kakariko Bug House/Kakariko Village Female Ant/"
+									}
+								]
+							}
+						]
+					},
+					{
+						"name": "Kakariko Barnes Bomb Shop Lower",
+						"access_rules": [
+							"^$canAccess|KakarikoBarnesBombShopLower"
+						],
+						"children": [
+							{
+								"name": "Barnes' Shop",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 7648,
+										"y": 5170,
+										"shape": "trapezoid"
+									}
+								],
+								"sections": [
+									{
+										"name": "Barnes Bomb Bag",
+										"ref": "Eldin Province/Submaps/Kakariko Barnes Bomb Shop Lower/Barnes Bomb Bag/"
+									}
+								]
+							}
+						]
+					},
+					{
+						"name": "Kakariko Watchtower",
+						"access_rules": [
+							"^$canAccess|KakarikoWatchtower"
+						],
+						"children": [
+							{
+								"name": "Watchtower",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 7595,
+										"y": 5107,
+										"shape": "trapezoid"
+									}
+								],
+								"sections": [
+									{
+										"name": "Kakariko Watchtower Chest",
+										"ref": "Eldin Province/Submaps/Kakariko Watchtower/Kakariko Watchtower Chest/"
+									}
+								]
+							}
+						]
+					},
+					{
+						"name": "Kakariko Graveyard",
+						"access_rules": [
+							"^$canAccess|KakarikoGraveyard"
+						],
+						"children": [
+							{
+								"name": "Kakariko Graveyard Lantern Chest",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 8093,
+										"y": 5496
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"lantern"
+										]
+									}
+								]
+							},
+							{
+								"name": "Graveyard Spring",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 8254,
+										"y": 5474
+									}
+								],
+								"sections": [
+									{
+										"name": "Rutelas Blessing",
+										"access_rules": [
+											"gatekeys, ^$canCompleteEldinTwilight"
+										]
+									},
+									{
+										"name": "Gift From Ralis",
+										"access_rules": [
+											"asheissketch, gatekeys, ^$canCompleteEldinTwilight"
+										]
+									}
+								]
+							},
+							{
+								"name": "Kakariko Graveyard Male Ant",
+								"chest_unopened_img": "images/Items/Bug0Grayed.png",
+								"chest_opened_img": "images/Items/Bug0.png",
+								"visibility_rules": [
+									"bugson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 8118,
+										"y": 5451
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"^$canCompleteEldinTwilight"
+										]
+									}
+								]
+							},
+							{
+								"name": "Kakariko Graveyard Grave Poe",
+								"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
+								"chest_opened_img": "images/Items/PoeSoul.png",
+								"visibility_rules": [
+									"poeson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 7981,
+										"y": 5493
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"shadowcrystal, ^$canCompleteEldinTwilight"
+										]
+									}
+								]
+							},
+							{
+								"name": "Kakariko Graveyard Open Poe",
+								"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
+								"chest_opened_img": "images/Items/PoeSoul.png",
+								"visibility_rules": [
+									"poeson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 8050,
+										"y": 5458
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"shadowcrystal, ^$canCompleteEldinTwilight"
+										]
+									}
+								]
+							},
+							{
+								"name": "Kakariko Graveyard Golden Wolf",
+								"chest_unopened_img": "images/Items/GoldenWolfGrayed.png",
+								"chest_opened_img": "images/Items/GoldenWolf.png",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 8141,
+										"y": 5475
+									}
+								],
+								"sections": [
+									{
+										"name": "(Snowpeak Mountain Stone)",
+										"access_rules": [
+											"shadowcrystal, ^$canAccess|SnowpeakClimbUpper, smhowlingstone"
+										]
+									}
+								]
+							},
+							{
+								"name": "Kakariko Graveyard Underwater Boulder Rupee",
+								"visibility_rules": [
+									"hiddenrupeeson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 8233,
+										"y": 5513
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"boots, ^$canUseWaterBombs, gatekeys",
+											"zoraarmor, ^$canUseWaterBombs, gatekeys",
+											"[glitcheson], magicarmor, ^$canUseWaterBombs, gatekeys"
+										]
+									}
+								]
+							},
+							{
+								"name": "Hint Sign",
+								"chest_opened_img": "images/Items/Sign.png",
+								"chest_unopened_img": "images/Items/SignGrayed.png",
+								"visibility_rules": [
+									"hintson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 8270,
+										"y": 5474,
+										"shape": "triangle",
+										"orientation": "south",
+										"border_thickness": 32
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"{gatekeys}"
+										]
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Submaps",
+				"children": [
+					{
+						"name": "Hidden Village Impaz House",
+						"access_rules": [
+							"^$canAccess|HiddenVillageImpazHouse"
+						],
+						"children": [
+							{
+								"name": "Skybook From Impaz",
+								"map_locations": [
+									{
+										"map": "ih",
+										"x": 144,
+										"y": 101
+									}
+								],
+								"sections": [
+									{
+										"access_rules":[
+											"^$canAccess|HiddenVillage, bow, dominionrod",
+											"[glitcheson], ^$canAccess|HiddenVillage, ^$CanDoHiddenVillageGlitched, dominionrod"
+										]
+									}
+								]
+							}
+						]
+					},
+					{
+						"name": "Eldin Lantern Cave",
+						"access_rules": [
+							"^$canAccess|EldinLanternCave"
+						],
+						"children": [
+							{
+								"name": "Eldin Lantern Cave First Chest",
+								"map_locations": [
+									{
+										"map": "elc",
+										"x": 176,
+										"y": 174
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"^$canBurnWebs"
+										]
+									}
+								]
+							},
+							{
+								"name": "Eldin Lantern Cave Second Chest",
+								"map_locations": [
+									{
+										"map": "elc",
+										"x": 828,
+										"y": 505
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"^$canBurnWebs"
+										]
+									}
+								]
+							},
+							{
+								"name": "Eldin Lantern Cave Lantern Chest",
+								"map_locations": [
+									{
+										"map": "elc",
+										"x": 760,
+										"y": 31
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"lantern"
+										]
+									}
+								]
+							},
+							{
+								"name": "Eldin Lantern Cave Poe",
+								"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
+								"chest_opened_img": "images/Items/PoeSoul.png",
+								"visibility_rules": [
+									"poeson"
+								],
+								"map_locations": [
+									{
+										"map": "elc",
+										"x": 618,
+										"y": 111
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"shadowcrystal, ^$canBurnWebs"
+										]
+									}
+								]
+							}
+						]
+					},
+					{
+						"name": "Eldin Field Lava Cave Upper",
+						"access_rules": [
+							"^$canAccess|EldinFieldLavaCaveUpper"
+						],
+						"children": [
+							{
+								"name": "Eldin Stockcave Upper Chest",
+								"map_locations": [
+									{
+										"map": "es2f",
+										"x": 410,
+										"y": 64
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"boots",
+											"[glitcheson]"
+										]
+									}
+								]
+							}
+						]
+					},
+					{
+						"name": "Eldin Field Lava Cave Lower",
+						"access_rules": [
+							"^$canAccess|EldinFieldLavaCaveLower"
+						],
+						"children": [
+							{
+								"name": "Eldin Stockcave Lantern Chest",
+								"map_locations": [
+									{
+										"map": "es1f",
+										"x": 197,
+										"y": 90
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"glitchesoff, lantern",
+											"[glitcheson], clawshot, lantern",
+											"[glitcheson], ^$canDoLJA, lantern"
+										]
+									}
+								]
+							},
+							{
+								"name": "Eldin Stockcave Lowest Chest",
+								"map_locations": [
+									{
+										"map": "es1f",
+										"x": 209,
+										"y": 148
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"glitchesoff",
+											"[glitcheson], clawshot",
+											"[glitcheson], ^$canDoLJA"
+										]
+									}
+								]
+							}
+						]
+					},
+					{
+						"name": "Eldin Field Bomskit Grotto",
+						"access_rules": [
+							"^$canAccess|EldinFieldBomskitGrotto"
+						],
+						"children": [
+							{
+								"name": "Eldin Field Bomskit Grotto Left Chest",
+								"map_locations": [
+									{
+										"map": "grotto11",
+										"x": 77,
+										"y": 177
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"^$canDefeatBomskit"
+										]
+									}
+								]
+							},
+							{
+								"name": "Eldin Field Bomskit Grotto Lantern Chest",
+								"map_locations": [
+									{
+										"map": "grotto11",
+										"x": 271,
+										"y": 67
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"^$canDefeatBomskit, lantern"
+										]
+									}
+								]
+							}
+						]
+					},
+					{
+						"name": "Eldin Field Water Bomb Fish Grotto",
+						"access_rules": [
+							"^$canAccess|EldinFieldWaterBombFishGrotto"
+						],
+						"children": [
+							{
+								"name": "Eldin Field Water Bomb Fish Grotto Chest",
+								"map_locations": [
+									{
+										"map": "grotto53",
+										"x": 137,
+										"y": 65
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											""
+										]
+									}
+								]
+							}
+						]
+					},
+					{
+						"name": "Eldin Field Stalfos Grotto",
+						"access_rules": [
+							"^$canAccess|EldinFieldStalfosGrotto"
+						],
+						"children": [
+							{
+								"name": "Eldin Field Stalfos Grotto Left Small Chest",
+								"map_locations": [
+									{
+										"map": "grotto20",
+										"x": 54,
+										"y": 241
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											""
+										]
+									}
+								]
+							},
+							{
+								"name": "Eldin Field Stalfos Grotto Right Small Chest",
+								"map_locations": [
+									{
+										"map": "grotto20",
+										"x": 303,
+										"y": 264
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											""
+										]
+									}
+								]
+							},
+							{
+								"name": "Eldin Field Stalfos Grotto Stalfos Chest",
+								"map_locations": [
+									{
+										"map": "grotto20",
+										"x": 192,
+										"y": 51
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"^$canDefeatStalfos"
+										]
+									}
+								]
+							}
+						]
+					},
+					{
+						"name": "Kakariko Renados Sanctuary",
+						"access_rules": [
+							"^$canAccess|KakarikoRenadosSanctuary"
+						],
+						"children": [
+							{
+								"name": "Renados Letter",
+								"map_locations": [
+									{
+										"map": "ks1f",
+										"x": 99,
+										"y": 280
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"ttcompleted, ^$canCompleteEldinTwilight",
+											"$Not|iliaquestvanilla, ^$canCompleteEldinTwilight"
+										]
+									}
 								]
 							},
 							{
 								"name": "Ilia Memory Reward",
-								"hosted_item": "horsecall",
-								"access_rules": [
-									"iliascharm"
-								]
-							}
-						]
-					},
-					{
-						"name": "Lantern Chest",
-						"map_locations": [
-							{
-								"map": "kakariko",
-								"x": 746,
-								"y": 539
-							}
-						],
-						"sections": [
-							{
-								"access_rules": [
-									"@KakarikoGraveyard, lantern"
-								]
-							}
-						]
-					},
-					{
-						"name": "Graveyard Spring",
-						"access_rules": [
-							"@KakarikoGraveyard, gatekeys",
-							"@KakarikoGraveyard, skkeysy"
-						],
-						"map_locations": [
-							{
-								"map": "kakariko",
-								"x": 907,
-								"y": 515
-							}
-						],
-						"sections": [
-							{
-								"name": "Rutela's Blessing",
-								"access_rules": [
-									""
-								]
-							},
-							{
-								"name": "Gift From Ralis",
-								"access_rules": [
-									"asheissketch"
-								]
-							}
-						]
-					}
-				]
-			},
-			{
-				"name": "Kakariko Poes",
-				"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
-				"chest_opened_img": "images/Items/PoeSoul.png",
-				"visibility_rules": [
-					"poeson"
-				],
-				"children": [
-					{
-						"name": "Bomb Shop Poe",
-						"map_locations": [
-							{
-								"map": "kakariko",
-								"x": 419,
-								"y": 267,
-								"shape": "diamond"
-							}
-						],
-						"sections": [
-							{
-								"access_rules": [
-									"@UpperKakarikoVillage, shadowcrystal"
-								]
-							}
-						]
-					},
-					{
-						"name": "Watchtower Poe",
-						"map_locations": [
-							{
-								"map": "kakariko",
-								"x": 265,
-								"y": 141,
-								"shape": "diamond"
-							}
-						],
-						"sections": [
-							{
-								"access_rules": [
-									"@UpperKakarikoVillage, shadowcrystal"
-								]
-							}
-						]
-					},
-					{
-						"name": "Open Poe",
-						"map_locations": [
-							{
-								"map": "kakariko",
-								"x": 703,
-								"y": 501,
-								"shape": "diamond"
-							}
-						],
-						"sections": [
-							{
-								"access_rules": [
-									"@KakarikoGraveyard, shadowcrystal"
-								]
-							}
-						]
-					},
-					{
-						"name": "Grave Poe",
-						"map_locations": [
-							{
-								"map": "kakariko",
-								"x": 635,
-								"y": 533,
-								"shape": "diamond"
-							}
-						],
-						"sections": [
-							{
-								"access_rules": [
-									"@KakarikoGraveyard, shadowcrystal"
-								]
-							}
-						]
-					}
-				]
-			},
-			{
-				"name": "Kakariko Bugs",
-				"chest_unopened_img": "images/Items/GoldenBugGrayed.png",
-				"chest_opened_img": "images/Items/GoldenBug.png",
-				"visibility_rules": [
-					"bugson"
-				],
-				"children": [
-					{
-						"name": "Female Ant",
-						"map_locations": [
-							{
-								"map": "kakariko",
-								"x": 312,
-								"y": 298,
-								"shape": "diamond"
-							}
-						],
-						"sections": [
-							{
-								"access_rules": [
-									"@KakarikoBugHouse"
-								]
-							}
-						]
-					},
-					{
-						"name": "Male Ant",
-						"map_locations": [
-							{
-								"map": "kakariko",
-								"x": 772,
-								"y": 490,
-								"shape": "diamond"
-							}
-						],
-						"sections": [
-							{
-								"access_rules": [
-									"@KakarikoGraveyard"
-								]
-							}
-						]
-					}
-				]
-			},
-			{
-				"name": "Kakariko Golden Wolves",
-				"children": [
-					{
-						"name": "Golden Wolf",
-						"map_locations": [
-							{
-								"map": "kakariko",
-								"x": 798,
-								"y": 516
-							}
-						],
-						"sections": [
-							{
-								"chest_unopened_img": "images/Items/GoldenWolfGrayed.png",
-								"chest_opened_img": "images/Items/GoldenWolf.png",
-								"access_rules": [
-									"@KakarikoGraveyard, @SnowpeakClimbUpper, shadowcrystal, smhowlingstone"
-								]
-							}
-						]
-					},
-					{
-						"name": "Snowpeak Mountain Stone",
-						"map_locations": [
-							{
-								"map": "kakariko",
-								"x": 777,
-								"y": 521,
-								"size": 12
-							}
-						],
-						"sections": [
-							{
-								"ref": "Snowpeak Mountain Golden Wolves/Kakariko Graveyard Stone/"
-							}
-						]
-					}
-				]
-			},
-			{
-				"name": "Kakariko Hint Signs",
-				"children": [
-					{
-						"name": "Hot Spring Hint Sign",
-						"map_locations": [
-							{
-								"map": "kakariko",
-								"x": 111,
-								"y": 288,
-								"shape": "diamond"
-							}
-						],
-						"sections": [
-							{
-								"access_rules": [
-									"{@LowerKakarikoVillage}"
+								"map_locations": [
+									{
+										"map": "ks1f",
+										"x": 80,
+										"y": 301
+									}
 								],
-								"visibility_rules": [
-									"hintson"
+								"sections": [
+									{
+										"access_rules": [
+											"iliascharm"
+										]
+									}
 								]
 							}
 						]
 					},
 					{
-						"name": "Graveyard Spring Hint Sign",
-						"map_locations": [
-							{
-								"map": "kakariko",
-								"x": 935,
-								"y": 515,
-								"shape": "diamond"
-							}
+						"name": "Kakariko Renados Sanctuary Basement",
+						"access_rules": [
+							"^$canAccess|KakarikoRenadosSanctuaryBasement"
 						],
-						"sections": [
+						"children": [
 							{
-								"access_rules": [
-									"{@KakarikoGraveyard, gatekeys}",
-									"{@KakarikoGraveyard, skkeysy}"
+								"name": "Shad Dominion Rod",
+								"map_locations": [
+									{
+										"map": "ksb1",
+										"x": 159,
+										"y": 123
+									}
 								],
-								"visibility_rules": [
-									"hintson"
+								"sections": [
+									{
+										"access_rules": [
+											"skybook, ^$canCompleteEldinTwilight"
+										]
+									}
 								]
 							}
 						]
-					}
-				]
-			},
-			{
-				"name": "Kakariko Gorge",
-				"children": [
+					},
 					{
-						"name": "Lantern Cave",
+						"name": "Kakariko Malo Mart",
 						"access_rules": [
-							"@EldinLanternCave"
+							"^$canAccess|KakarikoMaloMart"
 						],
-						"map_locations": [
+						"children": [
 							{
-								"map": "kg",
-								"x": 665,
-								"y": 922
-							}
-						],
-						"sections": [
-							{
-								"name": "First Chest",
-								"access_rules": [
-									"$canBurnWebs"
-								]
-							},
-							{
-								"name": "Second Chest",
-								"access_rules": [
-									"$canBurnWebs"
-								]
-							},
-							{
-								"name": "Lantern Chest",
-								"access_rules": [
-									"lantern"
-								]
-							}
-						]
-					},
-					{
-						"name": "Stone Pillars",
-						"access_rules": [
-							"@KakarikoGorge"
-						],
-						"map_locations": [
-							{
-								"map": "kg",
-								"x": 284,
-								"y": 514
-							}
-						],
-						"sections": [
-							{
-								"name": "Spire Heart Piece",
-								"access_rules": [
-									"boomerang",
-									"clawshot"
-								]
-							},
-							{
-								"name": "Double Clawshot Chest",
-								"access_rules": [
-									"doubleclawshot",
-									"[glitcheson], $canDoLJA",
-									"[glitcheson], shadowcrystal"
-								]
-							}
-						]
-					},
-					{
-						"name": "Owl Statue",
-						"access_rules": [
-							"@KakarikoGorge"
-						],
-						"map_locations": [
-							{
-								"map": "kg",
-								"x": 633,
-								"y": 81
-							}
-						],
-						"sections": [
-							{
-								"name": "Sky Character",
-								"access_rules": [
-									"powereddominionrod"
-								]
-							},
-							{
-								"name": "Chest",
-								"access_rules": [
-									"powereddominionrod",
-									"[glitcheson], $canDoLJA",
-									"[glitcheson], $canDoStorage",
-									"[glitcheson], $canDoEBMoonBoots"
-								]
-							}
-						]
-					}
-				]
-			},
-			{
-				"name": "Kakariko Gorge Poes",
-				"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
-				"chest_opened_img": "images/Items/PoeSoul.png",
-				"visibility_rules": [
-					"poeson"
-				],
-				"children": [
-					{
-						"name": "Lantern Cave Poe",
-						"map_locations": [
-							{
-								"map": "kg",
-								"x": 695,
-								"y": 922,
-								"shape": "diamond"
-							}
-						],
-						"sections": [
-							{
-								"access_rules": [
-									"@EldinLanternCave, $canBurnWebs, shadowcrystal"
-								]
-							}
-						]
-					},
-					{
-						"name": "Kakariko Gorge Poe",
-						"map_locations": [
-							{
-								"map": "kg",
-								"x": 615,
-								"y": 570,
-								"shape": "diamond"
-							}
-						],
-						"sections": [
-							{
-								"access_rules": [
-									"@KakarikoGorge, $canCompleteMDH, shadowcrystal, $allTwilightCleared"
-								]
-							}
-						]
-					}
-				]
-			},
-			{
-				"name": "Kakariko Gorge Bugs",
-				"chest_unopened_img": "images/Items/GoldenBugGrayed.png",
-				"chest_opened_img": "images/Items/GoldenBug.png",
-				"visibility_rules": [
-					"bugson"
-				],
-				"access_rules": [
-					"@KakarikoGorge"
-				],
-				"children": [
-					{
-						"name": "Male Pill Bug",
-						"map_locations": [
-							{
-								"map": "kg",
-								"x": 643,
-								"y": 648,
-								"shape": "diamond"
-							}
-						],
-						"sections": [
-							{
-								"access_rules": [
-									""
-								]
-							}
-						]
-					},
-					{
-						"name": "Female Pill Bug",
-						"map_locations": [
-							{
-								"map": "kg",
-								"x": 967,
-								"y": 814,
-								"shape": "diamond"
-							}
-						],
-						"sections": [
-							{
-								"access_rules": [
-									""
-								]
-							}
-						]
-					}
-				]
-			},
-			{
-				"name": "Kakariko Gorge Hint Signs",
-				"children": [
-					{
-						"name": "Hint Sign",
-						"map_locations": [
-							{
-								"map": "kg",
-								"x": 595,
-								"y": 52,
-								"shape": "diamond"
-							}
-						],
-						"sections": [
-							{
-								"access_rules": [
-									"{@KakarikoGorge}"
+								"name": "Kakariko Village Malo Mart Hylian Shield",
+								"map_locations": [
+									{
+										"map": "mmkb",
+										"x": 76,
+										"y": 178
+									}
 								],
+								"sections": [
+									{
+										"access_rules": [
+											"^$canCompleteEldinTwilight, $Not|reducedwalletsize",
+											"^$canCompleteEldinTwilight, mediumwallet"
+										]
+									}
+								]
+							},
+							{
+								"name": "Kakariko Village Malo Mart Red Potion",
+								"map_locations": [
+									{
+										"map": "mmkb",
+										"x": 36,
+										"y": 178
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"^$canCompleteEldinTwilight, $Not|reducedwalletsize",
+											"^$canCompleteEldinTwilight, mediumwallet"
+										]
+									}
+								]
+							},
+							{
+								"name": "Kakariko Village Malo Mart Wooden Shield",
+								"map_locations": [
+									{
+										"map": "mmkb",
+										"x": 116,
+										"y": 178
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"^$canCompleteEldinTwilight"
+										]
+									}
+								]
+							},
+							{
+								"name": "Kakariko Village Malo Mart Hawkeye",
+								"map_locations": [
+									{
+										"map": "mmkb",
+										"x": 156,
+										"y": 178
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"gmcompleted, ^$canAccess|KakarikoTopofWatchtower, bow, ^$canCompleteEldinTwilight, $Not|reducedwalletsize",
+											"gmcompleted, ^$canAccess|KakarikoTopofWatchtower, bow, ^$canCompleteEldinTwilight, mediumwallet"
+										]
+									}
+								]
+							}
+						]
+					},
+					{
+						"name": "Kakariko Elde Inn",
+						"access_rules": [
+							"^$canAccess|KakarikoEldeInn"
+						],
+						"children": [
+							{
+								"name": "Kakariko Inn Chest",
+								"map_locations": [
+									{
+										"map": "ki1f",
+										"x": 592,
+										"y": 285
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											""
+										]
+									}
+								]
+							}
+						]
+					},
+					{
+						"name": "Kakariko Bug House",
+						"access_rules": [
+							"^$canAccess|KakarikoBugHouse"
+						],
+						"children": [
+							{
+								"name": "Kakariko Village Female Ant",
+								"chest_unopened_img": "images/Items/Bug1Grayed.png",
+								"chest_opened_img": "images/Items/Bug1.png",
 								"visibility_rules": [
-									"hintson"
+									"bugson"
+								],
+								"map_locations": [
+									{
+										"map": "keh",
+										"x": 226,
+										"y": 100
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"^$canCompleteEldinTwilight"
+										]
+									}
+								]
+							}
+						]
+					},
+					{
+						"name": "Kakariko Barnes Bomb Shop Lower",
+						"access_rules": [
+							"^$canAccess|KakarikoBarnesBombShopLower"
+						],
+						"children": [
+							{
+								"name": "Barnes Bomb Bag",
+								"map_locations": [
+									{
+										"map": "bs",
+										"x": 227,
+										"y": 183
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"^$canCompleteEldinTwilight, $Not|reducedwalletsize",
+											"^$canCompleteEldinTwilight, mediumwallet"
+										]
+									}
+								]
+							}
+						]
+					},
+					{
+						"name": "Kakariko Watchtower",
+						"access_rules": [
+							"^$canAccess|KakarikoWatchtower"
+						],
+						"children": [
+							{
+								"name": "Kakariko Watchtower Chest",
+								"map_locations": [
+									{
+										"map": "kw1f",
+										"x": 50,
+										"y": 193
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											""
+										]
+									}
 								]
 							}
 						]

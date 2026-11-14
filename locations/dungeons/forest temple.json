@@ -3,101 +3,55 @@
 		"name": "Forest Temple",
 		"children": [
 			{
-				"name": "1F",
+				"name": "Forest Temple Boss Room",
+				"access_rules": [
+					"^$canAccess|ForestTempleBossRoom"
+				],
 				"children": [
 					{
-						"name": "Entrance Vines Chest",
+						"name": "Diababa Boss",
 						"map_locations": [
 							{
 								"map": "ft1f",
-								"x": 1061,
-								"y": 1752
+								"x": 1463,
+								"y": 157
 							},
 							{
 								"map": "ftfull",
-								"x": 1061,
-								"y": 1752
+								"x": 1463,
+								"y": 157
 							}
 						],
 						"sections": [
 							{
+								"name": "Diababa Heart Container",
 								"access_rules": [
-									"@ForestTempleEntrance, $canDefeatWalltula",
-									"[glitcheson], @ForestTempleEntrance, $canDefeatWalltulaGlitched"
+									"^$canDefeatDiababa"
 								]
-							}
-						]
-					},
-					{
-						"name": "Central Chest Behind Stairs",
-						"map_locations": [
-							{
-								"map": "ft1f",
-								"x": 1011,
-								"y": 1270
 							},
 							{
-								"map": "ftfull",
-								"x": 1011,
-								"y": 1270
-							}
-						],
-						"sections": [
-							{
+								"name": "Dungeon Reward",
 								"access_rules": [
-									"@ForestTempleLobby, boomerang, glitchesoff",
-									"[glitcheson], @ForestTempleLobby, boomerang, $canDefeatBomblingGlitched",
-									"[glitcheson], @ForestTempleLobby, boomerang, $canSmash"
+									"^$canDefeatDiababa"
 								]
-							}
-						]
-					},
-					{
-						"name": "Central North Chest",
-						"map_locations": [
-							{
-								"map": "ft1f",
-								"x": 1061,
-								"y": 1253
 							},
 							{
-								"map": "ftfull",
-								"x": 1061,
-								"y": 1253
-							}
-						],
-						"sections": [
-							{
+								"name": "Diababa",
 								"access_rules": [
-									"@ForestTempleLobby, lantern",
-									"[glitcheson], @ForestTempleLobby, lantern, $canDoLJA",
-									"[glitcheson], @ForestTempleLobby, @ForestTempleWestWing"
-								]
+									"^$canDefeatDiababa"
+								],
+								"hosted_item": "ftcompleted"
 							}
 						]
-					},
-					{
-						"name": "Windless Bridge Chest",
-						"map_locations": [
-							{
-								"map": "ft1f",
-								"x": 1433,
-								"y": 846
-							},
-							{
-								"map": "ftfull",
-								"x": 1433,
-								"y": 846
-							}
-						],
-						"sections": [
-							{
-								"access_rules": [
-									"@ForestTempleNorthWing"
-								]
-							}
-						]
-					},
+					}
+				]
+			},
+			{
+				"name": "Forest Temple East Wing",
+				"access_rules": [
+					"^$canAccess|ForestTempleEastWing"
+				],
+				"children": [
 					{
 						"name": "Second Monkey Under Bridge Chest",
 						"map_locations": [
@@ -115,174 +69,7 @@
 						"sections": [
 							{
 								"access_rules": [
-									"@ForestTempleEastWing, ftsmallkey:4",
-									"@ForestTempleEastWing, skkeysy"
-								]
-							}
-						]
-					},
-					{
-						"name": "Totem Pole Chest",
-						"map_locations": [
-							{
-								"map": "ft1f",
-								"x": 471,
-								"y": 1262
-							},
-							{
-								"map": "ftfull",
-								"x": 471,
-								"y": 1262
-							}
-						],
-						"sections": [
-							{
-								"access_rules": [
-									"@ForestTempleWestWing, glitchesoff",
-									"[glitcheson], @ForestTempleWestWing, $canDefeatBomblingGlitched",
-									"[glitcheson], @ForestTempleWestWing, $canSmash"
-								]
-							}
-						]
-					},
-					{
-						"name": "West Tile Worm Room Vines Chest",
-						"map_locations": [
-							{
-								"map": "ft1f",
-								"x": 280,
-								"y": 1226
-							},
-							{
-								"map": "ftfull",
-								"x": 280,
-								"y": 1226
-							}
-						],
-						"sections": [
-							{
-								"access_rules": [
-									"@ForestTempleWestWing, glitchesoff",
-									"[glitcheson], @ForestTempleWestWing, $canDefeatBomblingGlitched",
-									"[glitcheson], @ForestTempleWestWing, $canSmash"
-								]
-							}
-						]
-					},
-					{
-						"name": "West Tile Worm Chest Behind Stairs",
-						"map_locations": [
-							{
-								"map": "ft1f",
-								"x": 144,
-								"y": 1292
-							},
-							{
-								"map": "ftfull",
-								"x": 144,
-								"y": 1292
-							}
-						],
-						"sections": [
-							{
-								"access_rules": [
-									"@ForestTempleWestWing, boomerang, glitchesoff",
-									"[glitcheson], @ForestTempleWestWing, boomerang, $canDefeatBomblingGlitched",
-									"[glitcheson], @ForestTempleWestWing, boomerang, $canSmash"
-								]
-							}
-						]
-					},
-					{
-						"name": "West Deku Like Chest",
-						"map_locations": [
-							{
-								"map": "ft1f",
-								"x": 762,
-								"y": 1406
-							},
-							{
-								"map": "ftfull",
-								"x": 762,
-								"y": 1406
-							}
-						],
-						"sections": [
-							{
-								"access_rules": [
-									"@ForestTempleWestWing, $canDefeatWalltula",
-									"[glitcheson], @ForestTempleWestWing"
-								]
-							}
-						]
-					},
-					{
-						"name": "Big Baba Key",
-						"map_locations": [
-							{
-								"map": "ft1f",
-								"x": 653,
-								"y": 1535
-							},
-							{
-								"map": "ftfull",
-								"x": 653,
-								"y": 1535
-							}
-						],
-						"sections": [
-							{
-								"access_rules": [
-									"@ForestTempleWestWing, $canDefeatWalltula, $canDefeatBigBaba",
-									"[glitcheson], @ForestTempleWestWing, $canDefeatBigBabaGlitched"
-								]
-							}
-						]
-					},
-					{
-						"name": "Gale Boomerang",
-						"map_locations": [
-							{
-								"map": "ft1f",
-								"x": 1010,
-								"y": 682
-							},
-							{
-								"map": "ftfull",
-								"x": 1010,
-								"y": 682
-							}
-						],
-						"sections": [
-							{
-								"access_rules": [
-									"@Ook, $canDefeatOok",
-									"[glitcheson], @Ook, $canDefeatOokGlitched",
-									"[glitcheson], @Ook, $hasBombs"
-								]
-							}
-						]
-					},
-					{
-						"name": "Central Chest Hanging From Web",
-						"map_locations": [
-							{
-								"map": "ft1f",
-								"x": 1011,
-								"y": 1340
-							},
-							{
-								"map": "ftfull",
-								"x": 1011,
-								"y": 1340
-							}
-						],
-						"sections": [
-							{
-								"access_rules": [
-									"@ForestTempleLobby, $canCutHangingWeb",
-									"[glitcheson], @ForestTempleLobby, $canCutHangingWebGlitched",
-									"[glitcheson], @ForestTempleLobby, $canDoJSMoonBoots"
+									"ftsmallkey:4"
 								]
 							}
 						]
@@ -304,7 +91,7 @@
 						"sections": [
 							{
 								"access_rules": [
-									"@ForestTempleEastWing, boomerang"
+									"boomerang"
 								]
 							}
 						]
@@ -326,7 +113,174 @@
 						"sections": [
 							{
 								"access_rules": [
-									"@ForestTempleEastWing"
+									""
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Forest Temple Entrance",
+				"access_rules": [
+					"^$canAccess|ForestTempleEntrance"
+				],
+				"children": [
+					{
+						"name": "Entrance Vines Chest",
+						"map_locations": [
+							{
+								"map": "ft1f",
+								"x": 1061,
+								"y": 1752
+							},
+							{
+								"map": "ftfull",
+								"x": 1061,
+								"y": 1752
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"^$canDefeatWalltula"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Forest Temple Lobby",
+				"access_rules": [
+					"^$canAccess|ForestTempleLobby"
+				],
+				"children": [
+					{
+						"name": "Central Chest Behind Stairs",
+						"map_locations": [
+							{
+								"map": "ft1f",
+								"x": 1011,
+								"y": 1270
+							},
+							{
+								"map": "ftfull",
+								"x": 1011,
+								"y": 1270
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"boomerang"
+								]
+							}
+						]
+					},
+					{
+						"name": "Central North Chest",
+						"map_locations": [
+							{
+								"map": "ft1f",
+								"x": 1061,
+								"y": 1253
+							},
+							{
+								"map": "ftfull",
+								"x": 1061,
+								"y": 1253
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"lantern",
+									"[glitcheson], ^$canDoLJA, ^$canAccess|ForestTempleWestWing"
+								]
+							}
+						]
+					},
+					{
+						"name": "Central Chest Hanging From Web",
+						"map_locations": [
+							{
+								"map": "ft1f",
+								"x": 1011,
+								"y": 1340
+							},
+							{
+								"map": "ftfull",
+								"x": 1011,
+								"y": 1340
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"^$canCutHangingWeb",
+									"[glitcheson], ^$canDoJSMoonBoots"
+								]
+							}
+						]
+					},
+					{
+						"name": "Hint Sign",
+						"map_locations": [
+							{
+								"map": "ft1f",
+								"x": 873,
+								"y": 1360,
+								"shape": "triangle",
+								"orientation": "south"
+							},
+							{
+								"map": "ftfull",
+								"x": 873,
+								"y": 1360,
+								"shape": "triangle",
+								"orientation": "south"
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"{^$canAccess|ForestTempleLobby}"
+								],
+								"visibility_rules": [
+									"hintson"
+								],
+								"chest_opened_img": "images/Items/Sign.png",
+								"chest_unopened_img": "images/Items/SignGrayed.png"
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Forest Temple North Wing",
+				"access_rules": [
+					"^$canAccess|ForestTempleNorthWing"
+				],
+				"children": [
+					{
+						"name": "Windless Bridge Chest",
+						"map_locations": [
+							{
+								"map": "ft1f",
+								"x": 1433,
+								"y": 846
+							},
+							{
+								"map": "ftfull",
+								"x": 1433,
+								"y": 846
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									""
 								]
 							}
 						]
@@ -348,8 +302,8 @@
 						"sections": [
 							{
 								"access_rules": [
-									"@ForestTempleNorthWing, boomerang",
-									"[glitcheson], @ForestTempleNorthWing, $hasBombs, sword, clawshot"
+									"boomerang",
+									"[glitcheson], ^$hasBombs, sword, clawshot"
 								]
 							}
 						]
@@ -371,52 +325,11 @@
 						"sections": [
 							{
 								"access_rules": [
-									"@ForestTempleNorthWing, $canDefeatWalltula, $canDefeatSkulltula, $canDefeatTileWorm, boomerang, ftsmallkey:4",
-									"[glitcheson], @ForestTempleNorthWing, $canDefeatWalltulaGlitched, $canDefeatSkulltulaGlitched, $canDefeatTileWormGlitched, boomerang, ftsmallkey:4",
-									"[glitcheson], @ForestTempleNorthWing, $hasBombs, ftsmallkey:4",
-									"[glitcheson], @ForestTempleNorthWing, $canDoBSMoonBoots, ftsmallkey:4",
-									"[glitcheson], @ForestTempleNorthWing, $canDoJSMoonBoots, ftsmallkey:4",
-									"[glitcheson], @ForestTempleNorthWing, boomerang, ftsmallkey:4",
-									"@ForestTempleNorthWing, $canDefeatWalltula, $canDefeatSkulltula, $canDefeatTileWorm, boomerang, skkeysy",
-									"[glitcheson], @ForestTempleNorthWing, $canDefeatWalltulaGlitched, $canDefeatSkulltulaGlitched, $canDefeatTileWormGlitched, boomerang, skkeysy",
-									"[glitcheson], @ForestTempleNorthWing, $hasBombs, skkeysy",
-									"[glitcheson], @ForestTempleNorthWing, $canDoBSMoonBoots, skkeysy",
-									"[glitcheson], @ForestTempleNorthWing, $canDoJSMoonBoots, skkeysy",
-									"[glitcheson], @ForestTempleNorthWing, boomerang, skkeysy"
-								]
-							}
-						]
-					},
-					{
-						"name": "Diababa Boss",
-						"access_rules": [
-							"@ForestTempleBossRoom"
-						],
-						"map_locations": [
-							{
-								"map": "ft1f",
-								"x": 1463,
-								"y": 157
-							},
-							{
-								"map": "ftfull",
-								"x": 1463,
-								"y": 157
-							}
-						],
-						"sections": [
-							{
-								"name": "Diababa Heart Container",
-								"access_rules": [
-									"$canDefeatDiababa",
-									"[glitcheson], $canDefeatDiababaGlitched"
-								]
-							},
-							{
-								"name": "Dungeon Reward",
-								"access_rules": [
-									"$canDefeatDiababa",
-									"[glitcheson], $canDefeatDiababaGlitched"
+									"^$canDefeatTileWorm, ^$canDefeatSkulltula, ^$canDefeatWalltula, boomerang, ftsmallkey:4",
+									"[glitcheson], ^$hasBombs, ftsmallkey:4",
+									"[glitcheson], ^$canDoBSMoonBoots, ftsmallkey:4",
+									"[glitcheson], ^$canDoJSMoonBoots, ftsmallkey:4",
+									"[glitcheson], boomerang, ftsmallkey:4"
 								]
 							}
 						]
@@ -424,31 +337,156 @@
 				]
 			},
 			{
-				"name": "Hint Signs",
+				"name": "Forest Temple West Wing",
+				"access_rules": [
+					"^$canAccess|ForestTempleWestWing"
+				],
 				"children": [
 					{
-						"name": "Hint Sign",
+						"name": "West Deku Like Chest",
 						"map_locations": [
 							{
 								"map": "ft1f",
-								"x": 873,
-								"y": 1360,
-								"shape": "diamond"
+								"x": 762,
+								"y": 1406
 							},
 							{
 								"map": "ftfull",
-								"x": 873,
-								"y": 1360,
-								"shape": "diamond"
+								"x": 762,
+								"y": 1406
 							}
 						],
 						"sections": [
 							{
 								"access_rules": [
-									"{@ForestTempleLobby}"
-								],
-								"visibility_rules": [
-									"hintson"
+									"^$canDefeatWalltula",
+									"[glitcheson]"
+								]
+							}
+						]
+					},
+					{
+						"name": "Totem Pole Chest",
+						"map_locations": [
+							{
+								"map": "ft1f",
+								"x": 471,
+								"y": 1262
+							},
+							{
+								"map": "ftfull",
+								"x": 471,
+								"y": 1262
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"glitchesoff",
+									"[glitcheson], ^$canDefeatBombling",
+									"[glitcheson], ^$canSmash"
+								]
+							}
+						]
+					},
+					{
+						"name": "West Tile Worm Room Vines Chest",
+						"map_locations": [
+							{
+								"map": "ft1f",
+								"x": 280,
+								"y": 1226
+							},
+							{
+								"map": "ftfull",
+								"x": 280,
+								"y": 1226
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"glitchesoff",
+									"[glitcheson], ^$canDefeatBombling",
+									"[glitcheson], ^$canSmash"
+								]
+							}
+						]
+					},
+					{
+						"name": "West Tile Worm Chest Behind Stairs",
+						"map_locations": [
+							{
+								"map": "ft1f",
+								"x": 144,
+								"y": 1292
+							},
+							{
+								"map": "ftfull",
+								"x": 144,
+								"y": 1292
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"glitchesoff, boomerang",
+									"[glitcheson], boomerang, ^$canDefeatBombling",
+									"[glitcheson], boomerang, ^$canSmash"
+								]
+							}
+						]
+					},
+					{
+						"name": "Big Baba Key",
+						"map_locations": [
+							{
+								"map": "ft1f",
+								"x": 653,
+								"y": 1535
+							},
+							{
+								"map": "ftfull",
+								"x": 653,
+								"y": 1535
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"^$canDefeatBigBaba, ^$canDefeatWalltula",
+									"[glitcheson], ^$canDefeatBigBaba"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Ook",
+				"access_rules": [
+					"^$canAccess|Ook"
+				],
+				"children": [
+					{
+						"name": "Gale Boomerang",
+						"map_locations": [
+							{
+								"map": "ft1f",
+								"x": 1010,
+								"y": 682
+							},
+							{
+								"map": "ftfull",
+								"x": 1010,
+								"y": 682
+							}
+						],
+						"sections": [
+							{
+								"access_rules": [
+									"^$canDefeatOok",
+									"[glitcheson], ^$hasBombs"
 								]
 							}
 						]

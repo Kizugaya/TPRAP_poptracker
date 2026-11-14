@@ -1,0 +1,1454 @@
+[
+	{
+		"name": "NorthFaronWoodsTOForestTemple",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "NorthFaronWoodsTOForestTemple",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "NorthFaronWoodsTOGoronMines",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "NorthFaronWoodsTOGoronMines",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "NorthFaronWoodsTOLakebedTemple",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "NorthFaronWoodsTOLakebedTemple",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "NorthFaronWoodsTOArbitersGrounds",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "NorthFaronWoodsTOArbitersGrounds",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "NorthFaronWoodsTOSnowpeakRuinsLeftDoor",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "NorthFaronWoodsTOSnowpeakRuinsLeftDoor",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "NorthFaronWoodsTOSnowpeakRuinsRightDoor",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "NorthFaronWoodsTOSnowpeakRuinsRightDoor",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "NorthFaronWoodsTOSnowpeakRuins",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "NorthFaronWoodsTOSnowpeakRuins",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "NorthFaronWoodsTOTempleOfTime",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "NorthFaronWoodsTOTempleOfTime",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "NorthFaronWoodsTOCityInTheSky",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "NorthFaronWoodsTOCityInTheSky",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "NorthFaronWoodsTOPalaceOfTwilight",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "NorthFaronWoodsTOPalaceOfTwilight",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "NorthFaronWoodsTOHyruleCastle",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "NorthFaronWoodsTOHyruleCastle",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "DeathMountainSumoHallGoronMinesTunnelTOForestTemple",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "DeathMountainSumoHallGoronMinesTunnelTOForestTemple",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "DeathMountainSumoHallGoronMinesTunnelTOGoronMines",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "DeathMountainSumoHallGoronMinesTunnelTOGoronMines",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "DeathMountainSumoHallGoronMinesTunnelTOLakebedTemple",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "DeathMountainSumoHallGoronMinesTunnelTOLakebedTemple",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "DeathMountainSumoHallGoronMinesTunnelTOArbitersGrounds",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "DeathMountainSumoHallGoronMinesTunnelTOArbitersGrounds",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "DeathMountainSumoHallGoronMinesTunnelTOSnowpeakRuinsLeftDoor",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "DeathMountainSumoHallGoronMinesTunnelTOSnowpeakRuinsLeftDoor",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "DeathMountainSumoHallGoronMinesTunnelTOSnowpeakRuinsRightDoor",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "DeathMountainSumoHallGoronMinesTunnelTOSnowpeakRuinsRightDoor",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "DeathMountainSumoHallGoronMinesTunnelTOSnowpeakRuins",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "DeathMountainSumoHallGoronMinesTunnelTOSnowpeakRuins",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "DeathMountainSumoHallGoronMinesTunnelTOTempleOfTime",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "DeathMountainSumoHallGoronMinesTunnelTOTempleOfTime",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "DeathMountainSumoHallGoronMinesTunnelTOCityInTheSky",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "DeathMountainSumoHallGoronMinesTunnelTOCityInTheSky",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "DeathMountainSumoHallGoronMinesTunnelTOPalaceOfTwilight",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "DeathMountainSumoHallGoronMinesTunnelTOPalaceOfTwilight",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "DeathMountainSumoHallGoronMinesTunnelTOHyruleCastle",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "DeathMountainSumoHallGoronMinesTunnelTOHyruleCastle",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "OutsideArbitersGroundsTOForestTemple",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "OutsideArbitersGroundsTOForestTemple",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "OutsideArbitersGroundsTOGoronMines",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "OutsideArbitersGroundsTOGoronMines",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "OutsideArbitersGroundsTOLakebedTemple",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "OutsideArbitersGroundsTOLakebedTemple",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "OutsideArbitersGroundsTOArbitersGrounds",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "OutsideArbitersGroundsTOArbitersGrounds",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "OutsideArbitersGroundsTOSnowpeakRuinsLeftDoor",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "OutsideArbitersGroundsTOSnowpeakRuinsLeftDoor",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "OutsideArbitersGroundsTOSnowpeakRuinsRightDoor",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "OutsideArbitersGroundsTOSnowpeakRuinsRightDoor",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "OutsideArbitersGroundsTOSnowpeakRuins",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "OutsideArbitersGroundsTOSnowpeakRuins",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "OutsideArbitersGroundsTOTempleOfTime",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "OutsideArbitersGroundsTOTempleOfTime",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "OutsideArbitersGroundsTOCityInTheSky",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "OutsideArbitersGroundsTOCityInTheSky",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "OutsideArbitersGroundsTOPalaceOfTwilight",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "OutsideArbitersGroundsTOPalaceOfTwilight",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "OutsideArbitersGroundsTOHyruleCastle",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "OutsideArbitersGroundsTOHyruleCastle",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "LakeHyliaLakebedTempleEntranceTOForestTemple",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "LakeHyliaLakebedTempleEntranceTOForestTemple",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "LakeHyliaLakebedTempleEntranceTOGoronMines",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "LakeHyliaLakebedTempleEntranceTOGoronMines",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "LakeHyliaLakebedTempleEntranceTOLakebedTemple",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "LakeHyliaLakebedTempleEntranceTOLakebedTemple",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "LakeHyliaLakebedTempleEntranceTOArbitersGrounds",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "LakeHyliaLakebedTempleEntranceTOArbitersGrounds",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "LakeHyliaLakebedTempleEntranceTOSnowpeakRuinsLeftDoor",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "LakeHyliaLakebedTempleEntranceTOSnowpeakRuinsLeftDoor",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "LakeHyliaLakebedTempleEntranceTOSnowpeakRuinsRightDoor",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "LakeHyliaLakebedTempleEntranceTOSnowpeakRuinsRightDoor",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "LakeHyliaLakebedTempleEntranceTOSnowpeakRuins",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "LakeHyliaLakebedTempleEntranceTOSnowpeakRuins",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "LakeHyliaLakebedTempleEntranceTOTempleOfTime",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "LakeHyliaLakebedTempleEntranceTOTempleOfTime",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "LakeHyliaLakebedTempleEntranceTOCityInTheSky",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "LakeHyliaLakebedTempleEntranceTOCityInTheSky",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "LakeHyliaLakebedTempleEntranceTOPalaceOfTwilight",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "LakeHyliaLakebedTempleEntranceTOPalaceOfTwilight",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "LakeHyliaLakebedTempleEntranceTOHyruleCastle",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "LakeHyliaLakebedTempleEntranceTOHyruleCastle",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "SnowpeakSummitLowerLeftDoorTOForestTemple",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "SnowpeakSummitLowerLeftDoorTOForestTemple",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "SnowpeakSummitLowerLeftDoorTOGoronMines",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "SnowpeakSummitLowerLeftDoorTOGoronMines",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "SnowpeakSummitLowerLeftDoorTOLakebedTemple",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "SnowpeakSummitLowerLeftDoorTOLakebedTemple",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "SnowpeakSummitLowerLeftDoorTOArbitersGrounds",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "SnowpeakSummitLowerLeftDoorTOArbitersGrounds",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "SnowpeakSummitLowerLeftDoorTOSnowpeakRuinsLeftDoor",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "SnowpeakSummitLowerLeftDoorTOSnowpeakRuinsLeftDoor",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "SnowpeakSummitLowerLeftDoorTOSnowpeakRuinsRightDoor",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "SnowpeakSummitLowerLeftDoorTOSnowpeakRuinsRightDoor",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "SnowpeakSummitLowerLeftDoorTOSnowpeakRuins",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "SnowpeakSummitLowerLeftDoorTOSnowpeakRuins",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "SnowpeakSummitLowerLeftDoorTOTempleOfTime",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "SnowpeakSummitLowerLeftDoorTOTempleOfTime",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "SnowpeakSummitLowerLeftDoorTOCityInTheSky",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "SnowpeakSummitLowerLeftDoorTOCityInTheSky",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "SnowpeakSummitLowerLeftDoorTOPalaceOfTwilight",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "SnowpeakSummitLowerLeftDoorTOPalaceOfTwilight",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "SnowpeakSummitLowerLeftDoorTOHyruleCastle",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "SnowpeakSummitLowerLeftDoorTOHyruleCastle",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "SnowpeakSummitLowerRightDoorTOForestTemple",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "SnowpeakSummitLowerRightDoorTOForestTemple",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "SnowpeakSummitLowerRightDoorTOGoronMines",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "SnowpeakSummitLowerRightDoorTOGoronMines",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "SnowpeakSummitLowerRightDoorTOLakebedTemple",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "SnowpeakSummitLowerRightDoorTOLakebedTemple",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "SnowpeakSummitLowerRightDoorTOArbitersGrounds",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "SnowpeakSummitLowerRightDoorTOArbitersGrounds",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "SnowpeakSummitLowerRightDoorTOSnowpeakRuinsLeftDoor",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "SnowpeakSummitLowerRightDoorTOSnowpeakRuinsLeftDoor",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "SnowpeakSummitLowerRightDoorTOSnowpeakRuinsRightDoor",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "SnowpeakSummitLowerRightDoorTOSnowpeakRuinsRightDoor",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "SnowpeakSummitLowerRightDoorTOSnowpeakRuins",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "SnowpeakSummitLowerRightDoorTOSnowpeakRuins",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "SnowpeakSummitLowerRightDoorTOTempleOfTime",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "SnowpeakSummitLowerRightDoorTOTempleOfTime",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "SnowpeakSummitLowerRightDoorTOCityInTheSky",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "SnowpeakSummitLowerRightDoorTOCityInTheSky",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "SnowpeakSummitLowerRightDoorTOPalaceOfTwilight",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "SnowpeakSummitLowerRightDoorTOPalaceOfTwilight",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "SnowpeakSummitLowerRightDoorTOHyruleCastle",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "SnowpeakSummitLowerRightDoorTOHyruleCastle",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "SnowpeakSummitLowerTOForestTemple",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "SnowpeakSummitLowerTOForestTemple",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "SnowpeakSummitLowerTOGoronMines",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "SnowpeakSummitLowerTOGoronMines",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "SnowpeakSummitLowerTOLakebedTemple",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "SnowpeakSummitLowerTOLakebedTemple",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "SnowpeakSummitLowerTOArbitersGrounds",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "SnowpeakSummitLowerTOArbitersGrounds",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "SnowpeakSummitLowerTOSnowpeakRuinsLeftDoor",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "SnowpeakSummitLowerTOSnowpeakRuinsLeftDoor",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "SnowpeakSummitLowerTOSnowpeakRuinsRightDoor",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "SnowpeakSummitLowerTOSnowpeakRuinsRightDoor",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "SnowpeakSummitLowerTOSnowpeakRuins",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "SnowpeakSummitLowerTOSnowpeakRuins",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "SnowpeakSummitLowerTOTempleOfTime",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "SnowpeakSummitLowerTOTempleOfTime",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "SnowpeakSummitLowerTOCityInTheSky",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "SnowpeakSummitLowerTOCityInTheSky",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "SnowpeakSummitLowerTOPalaceOfTwilight",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "SnowpeakSummitLowerTOPalaceOfTwilight",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "SnowpeakSummitLowerTOHyruleCastle",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "SnowpeakSummitLowerTOHyruleCastle",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "SacredGrovePastBehindWindowTOForestTemple",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "SacredGrovePastBehindWindowTOForestTemple",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "SacredGrovePastBehindWindowTOGoronMines",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "SacredGrovePastBehindWindowTOGoronMines",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "SacredGrovePastBehindWindowTOLakebedTemple",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "SacredGrovePastBehindWindowTOLakebedTemple",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "SacredGrovePastBehindWindowTOArbitersGrounds",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "SacredGrovePastBehindWindowTOArbitersGrounds",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "SacredGrovePastBehindWindowTOSnowpeakRuinsLeftDoor",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "SacredGrovePastBehindWindowTOSnowpeakRuinsLeftDoor",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "SacredGrovePastBehindWindowTOSnowpeakRuinsRightDoor",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "SacredGrovePastBehindWindowTOSnowpeakRuinsRightDoor",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "SacredGrovePastBehindWindowTOSnowpeakRuins",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "SacredGrovePastBehindWindowTOSnowpeakRuins",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "SacredGrovePastBehindWindowTOTempleOfTime",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "SacredGrovePastBehindWindowTOTempleOfTime",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "SacredGrovePastBehindWindowTOCityInTheSky",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "SacredGrovePastBehindWindowTOCityInTheSky",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "SacredGrovePastBehindWindowTOPalaceOfTwilight",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "SacredGrovePastBehindWindowTOPalaceOfTwilight",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "SacredGrovePastBehindWindowTOHyruleCastle",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "SacredGrovePastBehindWindowTOHyruleCastle",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "LakeHyliaTOForestTemple",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "LakeHyliaTOForestTemple",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "LakeHyliaTOGoronMines",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "LakeHyliaTOGoronMines",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "LakeHyliaTOLakebedTemple",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "LakeHyliaTOLakebedTemple",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "LakeHyliaTOArbitersGrounds",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "LakeHyliaTOArbitersGrounds",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "LakeHyliaTOSnowpeakRuinsLeftDoor",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "LakeHyliaTOSnowpeakRuinsLeftDoor",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "LakeHyliaTOSnowpeakRuinsRightDoor",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "LakeHyliaTOSnowpeakRuinsRightDoor",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "LakeHyliaTOSnowpeakRuins",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "LakeHyliaTOSnowpeakRuins",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "LakeHyliaTOTempleOfTime",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "LakeHyliaTOTempleOfTime",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "LakeHyliaTOCityInTheSky",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "LakeHyliaTOCityInTheSky",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "LakeHyliaTOPalaceOfTwilight",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "LakeHyliaTOPalaceOfTwilight",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "LakeHyliaTOHyruleCastle",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "LakeHyliaTOHyruleCastle",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "MirrorChamberPortalTOForestTemple",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "MirrorChamberPortalTOForestTemple",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "MirrorChamberPortalTOGoronMines",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "MirrorChamberPortalTOGoronMines",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "MirrorChamberPortalTOLakebedTemple",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "MirrorChamberPortalTOLakebedTemple",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "MirrorChamberPortalTOArbitersGrounds",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "MirrorChamberPortalTOArbitersGrounds",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "MirrorChamberPortalTOSnowpeakRuinsLeftDoor",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "MirrorChamberPortalTOSnowpeakRuinsLeftDoor",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "MirrorChamberPortalTOSnowpeakRuinsRightDoor",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "MirrorChamberPortalTOSnowpeakRuinsRightDoor",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "MirrorChamberPortalTOSnowpeakRuins",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "MirrorChamberPortalTOSnowpeakRuins",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "MirrorChamberPortalTOTempleOfTime",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "MirrorChamberPortalTOTempleOfTime",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "MirrorChamberPortalTOCityInTheSky",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "MirrorChamberPortalTOCityInTheSky",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "MirrorChamberPortalTOPalaceOfTwilight",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "MirrorChamberPortalTOPalaceOfTwilight",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "MirrorChamberPortalTOHyruleCastle",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "MirrorChamberPortalTOHyruleCastle",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "CastleTownNorthInsideBarrierTOForestTemple",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "CastleTownNorthInsideBarrierTOForestTemple",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "CastleTownNorthInsideBarrierTOGoronMines",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "CastleTownNorthInsideBarrierTOGoronMines",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "CastleTownNorthInsideBarrierTOLakebedTemple",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "CastleTownNorthInsideBarrierTOLakebedTemple",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "CastleTownNorthInsideBarrierTOArbitersGrounds",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "CastleTownNorthInsideBarrierTOArbitersGrounds",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "CastleTownNorthInsideBarrierTOSnowpeakRuinsLeftDoor",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "CastleTownNorthInsideBarrierTOSnowpeakRuinsLeftDoor",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "CastleTownNorthInsideBarrierTOSnowpeakRuinsRightDoor",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "CastleTownNorthInsideBarrierTOSnowpeakRuinsRightDoor",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "CastleTownNorthInsideBarrierTOSnowpeakRuins",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "CastleTownNorthInsideBarrierTOSnowpeakRuins",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "CastleTownNorthInsideBarrierTOTempleOfTime",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "CastleTownNorthInsideBarrierTOTempleOfTime",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "CastleTownNorthInsideBarrierTOCityInTheSky",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "CastleTownNorthInsideBarrierTOCityInTheSky",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "CastleTownNorthInsideBarrierTOPalaceOfTwilight",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "CastleTownNorthInsideBarrierTOPalaceOfTwilight",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	},
+	{
+		"name": "CastleTownNorthInsideBarrierTOHyruleCastle",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"codes": "CastleTownNorthInsideBarrierTOHyruleCastle",
+				"disabled_img": "images/ERDoor.png",
+				"img": "images/ERDoor.png"
+			}
+		]
+	}
+]

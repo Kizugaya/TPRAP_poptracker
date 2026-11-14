@@ -1,7 +1,7 @@
 {
 	"portals": {
 		"type": "container",
-        "background": "#525260",
+		"background": "#525260",
 		"content": [
 			{
 				"type": "itemgrid",
@@ -39,7 +39,7 @@
 	},
 	"portals_broadcast": {
 		"type": "container",
-        "background": "#525260",
+		"background": "#525260",
 		"content": [
 			{
 				"type": "itemgrid",

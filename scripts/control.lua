@@ -2,29 +2,60 @@
 -- Check if player has at least 1 of following item
 function has(item)
 	if type(item) == "boolean" then return item end
+	if item == "lantern" or item == "lamp" then
+		return hasAll({"lantern", canRefillOil()})
+	elseif item == "p_bow" or item == "bow" or item == "smallquiver" or item == "mediumquiver" or item == "largequiver" then
+		if not canGetArrows() then return false end
+	end
 	return Tracker:ProviderCountForCode(item) >= 1
 end
 
 -- Check if player has any of following items
 function hasAny(items)
+	local level = AccessibilityLevel.None
 	for _, item in ipairs(items) do
 		if type(item) == "table" then
-			if hasAny(item) then return true end
-		elseif has(item) then return true end
+			level = math.max(level, hasAny(item))
+		elseif type(item) == "string" then
+			if has(item) then
+				level = math.max(level, AccessibilityLevel.Normal)
+			end
+		elseif type(item) == "boolean" then
+			if item then
+				level = math.max(level, AccessibilityLevel.Normal)
+			end
+		else
+			level = math.max(level, item)
+		end
 	end
-	return false
+	if  level == AccessibilityLevel.SequenceBreak and Tracker:FindObjectForCode("glitcheson") then
+		level = AccessibilityLevel.Normal
+	end
+	return level
 end
 
 -- Check if player has all following items
 function hasAll(items)
+	local level = AccessibilityLevel.Normal
 	for _, item in ipairs(items) do
 		if type(item) == "table" then
-			if not hasAny(item) then return false end
-		elseif not has(item) then
-			return false
+			level = math.min(level, hasAll(item))
+		elseif type(item) == "string" then
+			if not has(item) then
+				level = AccessibilityLevel.None
+			end
+		elseif type(item) == "boolean" then
+			if not item then
+				level = AccessibilityLevel.None
+			end
+		else
+			level = math.min(level, item)
 		end
 	end
-	return true
+	if  level == AccessibilityLevel.SequenceBreak and Tracker:FindObjectForCode("glitcheson") then
+		level = AccessibilityLevel.Normal
+	end
+	return level
 end
 
 -- Check if player has at least X items
@@ -32,191 +63,1304 @@ function hasAmount(item, amount)
 	return Tracker:ProviderCountForCode(item) >= amount
 end
 
--- Check if player has NONE of following items
-function hasNone(items)
+-- Check if player does not have item
+function Not(code)
+	return not Tracker:ProviderCountForCode(code)
+end
+
+-- Helper function to return AccessibilityLevel.SequenceBreak or
+-- AccessibilityLevel.Normal if player can reach a specific area
+function map(items, func)
+	local result = {}
 	for _, item in ipairs(items) do
-		if has(item) then
-			return false
+		table.insert(result, func(item))
+	end
+	return result
+end
+
+
+CANACCESS_ACTIVE = {count = 0}
+function canAccess(targetnode, exclude)
+	if CANACCESS_ACTIVE[targetnode] then
+		return AccessibilityLevel.None
+	end
+	CANACCESS_ACTIVE[targetnode] = 1
+	CANACCESS_ACTIVE.count = CANACCESS_ACTIVE.count + 1
+	local function finish(result)
+		CANACCESS_ACTIVE.count = CANACCESS_ACTIVE.count - 1
+		if CANACCESS_ACTIVE.count == 0 then
+			CANACCESS_ACTIVE = {count = 0}
+		end
+		return result
+	end
+	print(CANACCESS_ACTIVE.count.." "..targetnode)
+	local queue = {targetnode}
+	local queueseq = {}
+	local visited = {}
+	while #queue > 0 do
+		local current = table.remove(queue, 1)
+		local edges = ER_NODES[current]
+		if edges["spawn"] then
+			return finish(AccessibilityLevel.Normal)
+		end
+		if not visited[current] then
+			visited[current] = true
+			for _, edge in pairs(edges) do
+				local from, flags, to = edge:match("(.*)__(.*)__(.*)")
+				local accessrules = ER_EDGES[edge]
+				if edge == exclude then
+					--skip
+				elseif not accessrules[1] or not accessrules[1][1] or accessrules[1][1]() then
+					table.insert(queue, from)
+				elseif accessrules[2] and (not accessrules[2][1] or accessrules[2][1]()) then
+					table.insert(queueseq, from)
+				end
+			end
 		end
 	end
-	return true
+	while #queueseq > 0 do
+		local current = table.remove(queueseq, 1)
+		local edges = ER_NODES[current]
+		if edges["spawn"] then
+			return finish(AccessibilityLevel.SequenceBreak)
+		end
+		if not visited[current] then
+			visited[current] = true
+			for _, edge in pairs(edges) do
+				local from, flags, to = edge:match("(.*)__(.*)__(.*)")
+				local accessrules = ER_EDGES[edge]
+				if edge == exclude then
+					--skip
+				elseif not accessrules[1] or not accessrules[1][1] or accessrules[1][1]()
+				or (accessrules[2] and (not accessrules[2][1] or accessrules[2][1]())) then
+					table.insert(queueseq, from)
+				end
+			end
+		end
+	end
+	return finish(AccessibilityLevel.None)
 end
 
--- Return number of item
-function count(item)
-	return Tracker:ProviderCountForCode(item)
+function occupyRoomSetting()
+	ER_NODES = {}
+	initNodes()
+	vanillaRoomAlways()
+	print(Tracker:FindObjectForCode("exteriorshuffledoff"))
+	if Tracker:FindObjectForCode("exteriorshuffledoff") then
+		vanillaRoomExterior()
+	else
+		for item in pairs(EXT_ER_ITEMS_A) do
+			if item.ItemState.Active then
+				local from, to, from2, to2 = item:match("(.*)_TO_(.*)_LEADS_(.*)_TO_(.*)")
+				table.insert(ER_NODES[to2], from.."__EXT_A__"..to)
+			end
+		end
+		for item in pairs(EXT_ER_ITEMS_B) do
+			if item.ItemState.Active then
+				local from, to, from2, to2 = item:match("(.*)_TO_(.*)_LEADS_(.*)_TO_(.*)")
+				table.insert(ER_NODES[to2], from.."__EXT_B__"..to)
+			end
+		end
+	end
+	if Tracker:FindObjectForCode("interiorshuffledoff") then
+		vanillaRoomInterior()
+	else
+		for item in pairs(INT_ER_ITEMS_A) do
+			if item.ItemState.Active then
+				local from, to, from2, to2 = item:match("(.*)_TO_(.*)_LEADS_(.*)_TO_(.*)")
+				table.insert(ER_NODES[to2], from.."__INT_A__"..to)
+			end
+		end
+		for item in pairs(INT_ER_ITEMS_B) do
+			if item.ItemState.Active then
+				local from, to, from2, to2 = item:match("(.*)_TO_(.*)_LEADS_(.*)_TO_(.*)")
+				table.insert(ER_NODES[to2], from.."__INT_B__"..to)
+			end
+		end
+	end
+	if Tracker:FindObjectForCode("onewayshuffledoff") then
+		vanillaRoomOneway()
+	else
+		for item in pairs(OOW_ER_ITEMS) do
+			if item.ItemState.Active then
+				local from, to, from2, to2 = item:match("(.*)_TO_(.*)_LEADS_(.*)_TO_(.*)")
+				table.insert(ER_NODES[to2], from.."__OOW_A__"..to)
+			end
+		end
+	end
+	if Tracker:FindObjectForCode("caveshuffledoff") then
+		vanillaRoomCave()
+	else
+		for item in pairs(CAV_ER_ITEMS_A) do
+			if item.ItemState.Active then
+				local from, to, from2, to2 = item:match("(.*)_TO_(.*)_LEADS_(.*)_TO_(.*)")
+				table.insert(ER_NODES[to2], from.."__CAV_A__"..to)
+			end
+		end
+		for item in pairs(CAV_ER_ITEMS_B) do
+			if item.ItemState.Active then
+				local from, to, from2, to2 = item:match("(.*)_TO_(.*)_LEADS_(.*)_TO_(.*)")
+				table.insert(ER_NODES[to2], from.."__CAV_B__"..to)
+			end
+		end
+	end
+	if Tracker:FindObjectForCode("grottoshuffledoff") then
+		vanillaRoomGrotto()
+	else
+		for item in pairs(GRO_ER_ITEMS_A) do
+			if item.ItemState.Active then
+				local from, to, from2, to2 = item:match("(.*)_TO_(.*)_LEADS_(.*)_TO_(.*)")
+				table.insert(ER_NODES[to2], from.."__GRO_A__"..to)
+			end
+		end
+		for item in pairs(GRO_ER_ITEMS_B) do
+			if item.ItemState.Active then
+				local from, to, from2, to2 = item:match("(.*)_TO_(.*)_LEADS_(.*)_TO_(.*)")
+				table.insert(ER_NODES[to2], from.."__GRO_B__"..to)
+			end
+		end
+	end
+	if Tracker:FindObjectForCode("dungeonshuffledoff") then
+		vanillaRoomDungeon()
+		vanillaRoomDungeonHyruleCastle()
+		vanillaRoomBossexit()
+	elseif Tracker:FindObjectForCode("dungeonshuffledon") then
+		vanillaRoomDungeonHyruleCastle()
+		for item in pairs(DUN_ER_ITEMS_A) do
+			if item.ItemState.Active then
+				local from, to, from2, to2 = item:match("(.*)_TO_(.*)_LEADS_(.*)_TO_(.*)")
+				table.insert(ER_NODES[to2], from.."__DUN_A__"..to)
+			end
+		end
+		for item in pairs(DUN_ER_ITEMS_B) do
+			if item.ItemState.Active then
+				local from, to, from2, to2 = item:match("(.*)_TO_(.*)_LEADS_(.*)_TO_(.*)")
+				table.insert(ER_NODES[to2], from.."__DUN_B__"..to)
+			end
+		end
+		for item in pairs(BRE_ER_ITEMS_A) do
+			if item.ItemState.Active then
+				local from, to, from2, to2 = item:match("(.*)_TO_(.*)_LEADS_(.*)_TO_(.*)")
+				table.insert(ER_NODES[to2], from.."__BRE_A__"..to)
+			end
+		end
+		for item in pairs(BRE_ER_ITEMS_B) do
+			if item.ItemState.Active then
+				local from, to, from2, to2 = item:match("(.*)_TO_(.*)_LEADS_(.*)_TO_(.*)")
+				table.insert(ER_NODES[to2], from.."__BRE_B__"..to)
+			end
+		end
+		for item in pairs(BRE_ER_ITEMS) do
+			if item.ItemState.Active then
+				local from, to, from2, to2 = item:match("(.*)_TO_(.*)_LEADS_(.*)_TO_(.*)")
+				table.insert(ER_NODES[to2], from.."__BRE__"..to)
+			end
+		end
+	elseif Tracker:FindObjectForCode("dungeonshuffledhc") then
+		for item in pairs(DHC_ER_ITEMS_A) do
+			if item.ItemState.Active then
+				local from, to, from2, to2 = item:match("(.*)_TO_(.*)_LEADS_(.*)_TO_(.*)")
+				table.insert(ER_NODES[to2], from.."__DHC_A__"..to)
+			end
+		end
+		for item in pairs(DHC_ER_ITEMS_B) do
+			if item.ItemState.Active then
+				local from, to, from2, to2 = item:match("(.*)_TO_(.*)_LEADS_(.*)_TO_(.*)")
+				table.insert(ER_NODES[to2], from.."__DHC_B__"..to)
+			end
+		end
+		for item in pairs(BRE_ER_ITEMS_A) do
+			if item.ItemState.Active then
+				local from, to, from2, to2 = item:match("(.*)_TO_(.*)_LEADS_(.*)_TO_(.*)")
+				table.insert(ER_NODES[to2], from.."__BRE_A__"..to)
+			end
+		end
+		for item in pairs(BRE_ER_ITEMS_B) do
+			if item.ItemState.Active then
+				local from, to, from2, to2 = item:match("(.*)_TO_(.*)_LEADS_(.*)_TO_(.*)")
+				table.insert(ER_NODES[to2], from.."__BRE_B__"..to)
+			end
+		end
+		for item in pairs(BRE_ER_ITEMS) do
+			if item.ItemState.Active then
+				local from, to, from2, to2 = item:match("(.*)_TO_(.*)_LEADS_(.*)_TO_(.*)")
+				table.insert(ER_NODES[to2], from.."__BRE__"..to)
+			end
+		end
+	end
+	if Tracker:FindObjectForCode("bossshuffledoff") then
+		vanillaRoomBoss()
+	else
+		for item in pairs(BOS_ER_ITEMS_A) do
+			if item.ItemState.Active then
+				local from, to, from2, to2 = item:match("(.*)_TO_(.*)_LEADS_(.*)_TO_(.*)")
+				table.insert(ER_NODES[to2], from.."__BOS_A__"..to)
+			end
+		end
+		for item in pairs(BOS_ER_ITEMS_B) do
+			if item.ItemState.Active then
+				local from, to, from2, to2 = item:match("(.*)_TO_(.*)_LEADS_(.*)_TO_(.*)")
+				table.insert(ER_NODES[to2], from.."__BOS_B__"..to)
+			end
+		end
+	end
+end
+
+function vanillaRoomAlways()
+	for edge in pairs(ER_EDGES) do
+		local from, flags, to = edge:match("(.*)__(.*)__(.*)")
+		if flags == "TO" then
+			table.insert(ER_NODES[to], edge)
+		end
+	end
+end
+function vanillaRoomExterior()
+	for edge in pairs(ER_EDGES) do
+		local flag, direction
+		local from, flags, to = edge:match("(.*)__(.*)__(.*)")
+		if flags:match("_") then
+			flag, direction = flags:match("(.*)_(.*)")
+		else
+			flag = flags
+		end
+		if flag == "EXT" then
+			table.insert(ER_NODES[to], edge)
+		end
+	end
+end
+function vanillaRoomInterior()
+	for edge in pairs(ER_EDGES) do
+		local flag, direction
+		local from, flags, to = edge:match("(.*)__(.*)__(.*)")
+		if flags:match("_") then
+			flag, direction = flags:match("(.*)_(.*)")
+		else
+			flag = flags
+		end
+		if flag == "INT" then
+			table.insert(ER_NODES[to], edge)
+		end
+	end
+end
+function vanillaRoomOneway()
+	for edge in pairs(ER_EDGES) do
+		local flag, direction
+		local from, flags, to = edge:match("(.*)__(.*)__(.*)")
+		if flags:match("_") then
+			flag, direction = flags:match("(.*)_(.*)")
+		else
+			flag = flags
+		end
+		if flag == "OOW" then
+			table.insert(ER_NODES[to], edge)
+		end
+	end
+end
+function vanillaRoomCave()
+	for edge in pairs(ER_EDGES) do
+		local flag, direction
+		local from, flags, to = edge:match("(.*)__(.*)__(.*)")
+		if flags:match("_") then
+			flag, direction = flags:match("(.*)_(.*)")
+		else
+			flag = flags
+		end
+		if flag == "CAV" then
+			table.insert(ER_NODES[to], edge)
+		end
+	end
+end
+function vanillaRoomGrotto()
+	for edge in pairs(ER_EDGES) do
+		local flag, direction
+		local from, flags, to = edge:match("(.*)__(.*)__(.*)")
+		if flags:match("_") then
+			flag, direction = flags:match("(.*)_(.*)")
+		else
+			flag = flags
+		end
+		if flag == "GRO" then
+			table.insert(ER_NODES[to], edge)
+		end
+	end
+end
+function vanillaRoomDungeon()
+	for edge in pairs(ER_EDGES) do
+		local flag, direction
+		local from, flags, to = edge:match("(.*)__(.*)__(.*)")
+		if flags:match("_") then
+			flag, direction = flags:match("(.*)_(.*)")
+		else
+			flag = flags
+		end
+		if flag == "DUN" then
+			table.insert(ER_NODES[to], edge)
+		end
+	end
+end
+function vanillaRoomDungeonHyruleCastle()
+	for edge in pairs(ER_EDGES) do
+		local flag, direction
+		local from, flags, to = edge:match("(.*)__(.*)__(.*)")
+		if flags:match("_") then
+			flag, direction = flags:match("(.*)_(.*)")
+		else
+			flag = flags
+		end
+		if flag == "DHC" then
+			table.insert(ER_NODES[to], edge)
+		end
+	end
+end
+function vanillaRoomBossexit()
+	for edge in pairs(ER_EDGES) do
+		local flag, direction
+		local from, flags, to = edge:match("(.*)__(.*)__(.*)")
+		if flags:match("_") then
+			flag, direction = flags:match("(.*)_(.*)")
+		else
+			flag = flags
+		end
+		if flag == "BRE" then
+			table.insert(ER_NODES[to], edge)
+		end
+	end
+end
+function vanillaRoomBoss()
+	for edge in pairs(ER_EDGES) do
+		local flag, direction
+		local from, flags, to = edge:match("(.*)__(.*)__(.*)")
+		if flags:match("_") then
+			flag, direction = flags:match("(.*)_(.*)")
+		else
+			flag = flags
+		end
+		if flag == "BOS" then
+			table.insert(ER_NODES[to], edge)
+		end
+	end
 end
 
 
 
 
+function canWarp()
+	if has("shadowcrystal") then
+		for k in pairs(WARPABLE_STAGES) do
+			if canAccess(k) then
+				return AccessibilityLevel.Normal
+			end
+		end
+	end
+	return AccessibilityLevel.None
+end
 
+function canGetHotSpringWater()
+	return hasAll({
+		hasAny({
+			canAccess("LowerKakarikoVillage"),
+			hasAll({
+				canAccess("DeathMountainElevatorLower"),
+				canDefeatGoron()
+			})
+		}),
+		hasBottle()
+	})
+end
 
-
--- HAS, CAN, GET
--- Return if has any damaging item
 function hasDamagingItem()
-	return hasAny({ "sword", "ballchain", "bow", hasBombs(), "boots", "shadowcrystal", "spinner" })
+	return hasAny({
+		"sword",
+		"ballchain",
+		"bow",
+		hasBombs(),
+		"boots",
+		"shadowcrystal",
+		"spinner"
+	})
 end
 
--- Check for bombbag
-function hasBombs(...)
-	if ... then return false end
-	return hasAll({"bombbag", hasAny({canAccessEldin(), canAccessLanayru(true)})})
+function canSmash()
+	return hasAny({
+		"ballchain",
+		hasBombs()
+	})
 end
 
--- Check for water bombs
-function hasWaterBombs()
-	return hasAll({"waterbomb", hasBombs()})
-end
-
--- Check if can smash
-function canSmash(...)
-	return hasAny({"ballchain", hasBombs(...)})
-end
-
--- Check if webs can burn
 function canBurnWebs()
-	return hasAny({"lantern", hasBombs(), "ballchain"})
+	return hasAny({
+		"lantern",
+		hasBombs(),
+		"ballchain"
+	})
 end
 
--- Check if has ranged weapon
+function canDestroyWebsWithoutLantern()
+	return hasAny({
+		hasBombs(),
+		"ballchain"
+	})
+end
+
 function hasRangedItem()
-	return hasAny({"ballchain", "slingshot", "bow", "clawshot", "boomerang"})
+	return hasAny({
+		"ballchain",
+		"slingshot",
+		"bow",
+		"clawshot",
+		"boomerang"
+	})
 end
 
--- Check if bottled fairy can be used / used for single bonk do damage + one hit KO
+function hasShield()
+	return hasAny({
+		"hylianshield",
+		hasAll({
+			canAccess("KakarikoMaloMart"),
+			"shuffleshopsoff"
+		}),
+		hasAll({
+			canAccess("CastleTownGoronHouse"),
+			"shuffleshopsoff"
+		}),
+		canAccess("DeathMountainHotSpring")
+	})
+end
+
 function canUseBottledFairy()
-	return has("bottle")
+	return hasAll({
+		hasBottle(),
+		canAccess("LakeHylia")
+	})
 end
 
--- Check if bottled fairies can be used / used for ordon shield if bonk do damage + one hit KO
 function canUseBottledFairies()
-	return hasAmount("bottle", 2)
+	return hasAll({
+		hasBottles(),
+		canAccess("LakeHylia")
+	})
 end
 
--- Check if bombs can be launched
+function canUseOilBottle()
+	return hasAll({
+		"lantern",
+		hasAmount("bottle", 3),
+	})
+end
+
 function canLaunchBombs()
-	return hasAll({hasAny({"bow", "boomerang"}), hasBombs()})
+	return hasAll({
+		hasAny({
+			"boomerang",
+			"bow"
+		}),
+		hasBombs()
+	})
 end
 
--- Check for bomb arrows
-function canBombArrow()
-	return hasAll({"bow", hasBombs()})
-end
-
--- Check for cut webs
 function canCutHangingWeb()
-	return hasAny({"clawshot", "boomerang", "ballchain", hasAll({"bow", canGetArrows()})})
-end
-function canCutHangingWebGlitched()
-	return hasAny({canCutHangingWeb(), hasAll({"bow", canGetArrowsGlitched()})})
+	return hasAny({
+		"clawshot",
+		"bow",
+		"boomerang",
+		"ballchain"
+	})
 end
 
--- Check if paintings can be knocked down
+function getPlayerHealth()
+	local playerHealth = 3
+	playerHealth = playerHealth + (Tracker:ProviderCountForCode("heartpiece") * 0.2)
+	playerHealth = playerHealth + Tracker:ProviderCountForCode("heartcontainer")
+	return playerHealth
+end
+
 function canKnockDownHCPainting()
-	return has("bow")
-end
-function canKnockDownHCPaintingGlitched()
-	return hasAny({canKnockDownHCPainting(), hasAll({hasAny({hasBombs(), hasAll({"sword", hasAmount("hiddenskill", 6)})})}), hasAny({hasAll({"sword", canDoMoonBoots()}), canDoBSMoonBoots()})})
+	return hasAny({
+		hasAll({
+			"bow"
+		}),
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			hasAny({
+				hasAll({
+					canDoNicheStuff(),
+					hasAny({
+						hasBombs(),
+						hasAll({
+							"sword",
+							hasAmount("hiddenskill", 6)
+						})
+					})
+				}),
+				hasAll({
+					"glitcheson",
+					hasAny({
+						hasAll({
+							"sword",
+							canDoMoonBoots()
+						}),
+						canDoBSMoonBoots()
+					})
+				})
+			})
+		}),
+	})
 end
 
--- Check if monkey cage can be broken
 function canBreakMonkeyCage()
-	return hasAny({"sword", "ballchain", "boots", hasBombs(), "clawshot", "shadowcrystal", "spinner", hasAll({"bow", canGetArrows()})})
-end
-function canBreakMonkeyCageGlitched()
-	return hasAny({canBreakMonkeyCage(), hasAll({"bow", canGetArrowsGlitched()}), hasAmount("hiddenskill", 2)})
+	return hasAny({
+		"sword",
+		"boots",
+		"spinner",
+		"ballchain",
+		"shadowcrystal",
+		hasBombs(),
+		"bow",
+		"clawshot",
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			canDoNicheStuff(),
+			hasShield(),
+			hasAmount("hiddenskill", 2)
+		})
+	})
 end
 
--- Check if all monkey can be freed
-function canFreeAllMonkeys()
-	return hasAll({canBreakMonkeyCage(), hasAny({"lantern", hasAll({"skkeysy", hasAny({hasBombs(), "boots"})})}), canBurnWebs(), "boomerang", canDefeatBokoblin(), hasAny({hasAmount("ftsmallkey", 4), "skkeysy"})})
-end
-function canFreeAllMonkeysGlitched()
-	return hasAll({canBreakMonkeyCageGlitched(), hasAny({"lantern", hasAll({"skkeysy", hasAny({hasBombs(), "boots"})})}), canBurnWebs(), "boomerang", canDefeatBokoblinGlitched(), hasAny({hasAmount("ftsmallkey", 4), "skkeysy"})})
-end
-
--- Check if buttons can be pressed (GM)
 function canPressMinesSwitch()
-	return has("boots")
-end
-function canPressMinesSwitchGlitched()
-	return hasAny({canPressMinesSwitch(), "ballchain"})
+	return hasAny({
+		hasAll({
+			"boots"
+		}),
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			canDoNicheStuff(),
+			"ballchain"
+		})
+	})
 end
 
--- Check if hanging Baba can be knocked
+function canFreeAllMonkeys()
+	return hasAll({
+		canBreakMonkeyCage(),
+		hasAny({
+			"lantern",
+			hasAll({
+				hasAmount("ftsmallkey", 4),
+				hasAny({
+					hasBombs(),
+					"boots"
+				})
+			})
+		}),
+		canBurnWebs(),
+		"boomerang",
+		canDefeatBokoblin(),
+		hasAmount("ftsmallkey", 4)
+	})
+end
+
 function canKnockDownHangingBaba()
-	return hasAny({"bow", "boomerang", "clawshot", "slingshot"})
+	return hasAny({
+		"bow",
+		"clawshot",
+		"boomerang",
+		"slingshot"
+	})
 end
 
--- Check if wooden doors can be broken
 function canBreakWoodenDoor()
-	return hasAny({"shadowcrystal", "sword", canSmash()})
-end
-function canBreakWoodenDoorGlitched()
-	return hasAny({canBreakWoodenDoor(), canUseBacksliceAsSword()})
-end
-
-
-
-
-
--- GLITCHED
-function hasSwordorBS()
-	return hasAny({"sword", hasAmount("hiddenskill", 3)})
+	return hasAny({
+		"shadowcrystal",
+		"sword",
+		canSmash(),
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			canUseBacksliceAsSword()
+		})
+	})
 end
 
-function hasBottle()
-	return hasAll({"bottle", "lantern"})
+function hasBombs()
+	return hasAll({
+		"bombbag",
+		hasAny({
+			canAccess("KakarikoBarnesBombShopLower"),
+			hasAll({
+				canAccess("EldinFieldWaterBombFishGrotto"),
+				"fishingrod"
+			}),
+			canAccess("CityinTheSkyEntrance")
+		})
+	})
 end
 
-function hasBottles()
-	return hasAll({hasAmount("bottle", 2), "lantern"})
+function hasWaterBombs()
+	return hasAll({
+		"waterbomb",
+		"bombbag",
+		hasAny({
+			canAccess("KakarikoBarnesBombShopLower"),
+			hasAll({
+				canAccess("EldinFieldWaterBombFishGrotto"),
+				"fishingrod"
+			}),
+			hasAll({
+				canAccess("KakarikoBarnesBombShopLower"),
+				canAccess("CastleTownMaloMart")
+			})
+		})
+	})
+end
+function canUseWaterBombs()
+	return hasWaterBombs()
 end
 
-function hasHeavyMod()
-	return hasAny({"boots", "magicarmor"})
+function canGetArrows()
+	return hasAny({
+		canAccess("LostWoods"),
+		hasAll({
+			"gmcompleted",
+			canAccess("KakarikoMaloMart")
+		}),
+		hasAll({
+			canAccess("CastleTownGoronHouseBalcony"),
+			"shuffleshopsoff"
+		})
+	})
 end
 
-function hasCutsceneItem()
-	return hasAny({"skybook", hasBottle(), "horsecall"})
+function canRefillOil()
+	return hasAny({
+		canAccess("NorthFaronWoods"),
+		canAccess("SouthFaronWoods"),
+		canAccess("ArbitersGroundsEntrance"),
+		hasAll({
+			canAccess("LakeHyliaLongCave"),
+			canSmash()
+		}),
+		canAccess("OrdonSerasShop"),
+		hasAll({
+			"gmcompleted",
+			canAccess("LowerKakarikoVillage")
+		}),
+		hasAll({
+			canAccess("CastleTownGoronHouse"),
+			"shuffleshopsoff"
+		}),
+		canAccess("DeathMountainHotSpring"),
+		canAccess("CityinTheSkyEntrance"),
+		hasAll({
+			canAccess("HyruleCastleMainHall"),
+			canDefeatBokoblin(),
+			canDefeatLizalfos(),
+			"dclawshot",
+			canDefeatDarknut()
+		}),
+		hasAll({
+			canAccess("EldinLanternCave"),
+			canDestroyWebsWithoutLantern(),
+			canDefeatChu()
+		}),
+		hasAll({
+			canAccess("HyruleCastleGraveyard"),
+			canSmash()
+		})
+	})
 end
 
-function canDoLJA()
-	return hasAll({"sword", "boomerang"})
+function canCompletePrologue()
+	return hasAny({
+		hasAll({
+			canAccess("NorthFaronWoods"),
+			canDefeatBokoblin()
+		}),
+		"skipprologueon"
+	})
 end
 
-function canDoJSLJA()
-	return hasAll({"sword", "boomerang", hasAmount("hiddenskill", 6)})
+function canCompleteGoats1()
+	return hasAny({
+		canAccess("OrdonRanch"),
+		"skipprologueon"
+	})
 end
 
-function canDoMapGlitch()
-	return hasAll({"shadowcrystal", canAccessEldin()})
+function canCompleteMDH()
+	return hasAny({
+		"skipmdhon",
+		hasAll({
+			"ltcompleted",
+			canAccess("CastleTownSouth")
+		})
+	})
 end
 
-function canDoStorage()
-	return hasAll({canDoMapGlitch(), hasOneHandedItem()})
+function canMidnaCharge()
+	return hasAny({
+		canCompleteMDH(),
+		allTwilightCleared()
+	})
 end
 
-function hasOneHandedItem()
-	return hasAny({"sword", hasBottle(), "boomerang", "clawshot", "lantern", "bow", "slingshot", "dominionrod"})
+function canStrikePedestal()
+	return hasAny({
+		hasAll({
+			"woodensword",
+			"ttwooden"
+		}),
+		hasAll({
+			"ordonsword",
+			"ttordon"
+		}),
+		hasAll({
+			"mastersword",
+			"ttmaster"
+		}),
+		hasAll({
+			"glowingmastersword",
+			"ttlight"
+		}),
+	})
+end
+
+function canClearForest()
+	return hasAll({
+		hasAny({
+			"ftcompleted",
+			"faronwoodsopenon"
+		}),
+		canCompletePrologue(),
+		faronTwilightCleared()
+	})
+end
+
+function faronTwilightCleared()
+	return hasAny({
+		"farontwilightclearedon",
+		hasAll({
+			canCompletePrologue(),
+			canAccess("SouthFaronWoods"),
+			canAccess("FaronWoodsCorosHouseLower"),
+			canAccess("MistAreaNearFaronWoodsCave"),
+			canAccess("NorthFaronWoods"),
+			canAccess("OrdonSpring"),
+			hasAny({
+				"bonksdodamageoff",
+				hasAll({
+					"bonksdodamageon",
+					hasAny({
+						Not("ohko"),
+						canUseBottledFairies()
+					})
+				}),
+			})
+		})
+	})
+end
+function canCompleteFaronTwilight()
+	return faronTwilightCleared()
+end
+
+function eldinTwilightCleared()
+	return hasAny({
+		"eldintwilightclearedon",
+		hasAll({
+			canAccess("FaronField"),
+			canAccess("LowerKakarikoVillage"),
+			canAccess("KakarikoGraveyard"),
+			canAccess("KakarikoMaloMart"),
+			canAccess("KakarikoBarnesBombShopUpper"),
+			canAccess("KakarikoRenadosSanctuaryBasement"),
+			canAccess("KakarikoEldeInn"),
+			canAccess("KakarikoBugHouse"),
+			canAccess("UpperKakarikoVillage"),
+			canAccess("KakarikoWatchtower"),
+			canAccess("DeathMountainVolcano"),
+			hasAny({
+				"bonksdodamageoff",
+				hasAll({
+					"bonksdodamageon",
+					hasAny({
+						Not("ohko"),
+						canUseBottledFairies()
+					})
+				}),
+			})
+		})
+	})
+end
+function canCompleteEldinTwilight()
+	return eldinTwilightCleared()
+end
+
+function lanayruTwilightCleared()
+	return hasAny({
+		"lanayrutwilightclearedon",
+		hasAll({
+			hasAny({
+				canAccess("NorthEldinField"),
+				"shadowcrystal"
+			}),
+			canAccess("ZorasDomain"),
+			canAccess("ZorasDomainThroneRoom"),
+			canAccess("UpperZorasRiver"),
+			canAccess("LakeHylia"),
+			canAccess("LakeHyliaLanayruSpring"),
+			canAccess("CastleTownSouth"),
+			hasAny({
+				"bonksdodamageoff",
+				hasAll({
+					"bonksdodamageon",
+					hasAny({
+						Not("ohko"),
+						canUseBottledFairies()
+					})
+				}),
+			})
+		})
+	})
+end
+function canCompleteLanayruTwilight()
+	return lanayruTwilightCleared()
+end
+
+function canWarpMeteor()
+	return hasAny({
+		lanayruTwilightCleared(),
+		hasAll({
+			eldinTwilightCleared(),
+			canAccess("ZorasDomainThroneRoom"),
+			"shadowcrystal"
+		})
+	})
+end
+
+function allTwilightCleared()
+	return hasAll({
+		faronTwilightCleared(),
+		eldinTwilightCleared(),
+		lanayruTwilightCleared()
+	})
+end
+function canCompleteAllTwilight()
+	return allTwilightCleared()
+end
+
+function hasCompletedAllDungeons()
+	return hasAll({
+		"ftcompleted",
+		"gmcompleted",
+		"ltcompleted",
+		"agcompleted",
+		"srcompleted",
+		"ttcompleted",
+		"cscompleted",
+		"ptcompleted"
+	})
+end
+-- HELP
+function canUnlockOrdonaMap()
+	return hasAny({
+		hasAll({
+			"openmapon",
+			"skipprologueon"
+		}),
+		map(ORDONA_MAP_ROOMS, canAccess)
+	})
+end
+
+function canUnlockFaronMap()
+	return hasAny({
+		hasAll({
+			"openmapon",
+			"farontwilightclearedon"
+		}),
+		map(FARON_MAP_ROOMS, canAccess)
+	})
+end
+
+function canUnlockEldinMap()
+	return hasAny({
+		hasAll({
+			"openmapon",
+			"eldintwilightclearedon"
+		}),
+		map(ELDIN_MAP_ROOMS, canAccess)
+	})
+end
+
+function canUnlockLanayruMap()
+	return hasAny({
+		hasAll({
+			"openmapon",
+			"lanayrutwilightclearedon"
+		}),
+		map(LANAYRU_MAP_ROOMS, canAccess)
+	})
+end
+
+function canUnlockSnowpeakMap()
+	return hasAny({
+		hasAll({
+			"openmapon",
+			"skipsnowpeakentranceon"
+		}),
+		map(SNOWPEAK_MAP_ROOMS, canAccess)
+	})
+end
+
+function canUnlockGerudoMap()
+	return hasAny({
+		"openmapon",
+		map(GERUDO_MAP_ROOMS, canAccess)
+	})
+end
+-- HELP
+function canDoDifficultCombat()
+	return false
 end
 
 function canDoNicheStuff()
-	return true
+	return hasAll({
+		AccessibilityLevel.SequenceBreak,
+		"glitcheson"
+	})
 end
 
 function canUseBacksliceAsSword()
-	return hasAll({hasAmount("hiddenskill", 3)})
+	return hasAll({
+		AccessibilityLevel.SequenceBreak,
+		canDoNicheStuff(),
+		hasAmount("hiddenskill", 3)
+	})
+end
+
+function canGetBugWithLantern()
+	return false
+end
+
+function canBreakHCBarrier()
+	local dungeons = 0
+	if has("ftcompleted") then dungeons = dungeons + 1 end
+	if has("gmcompleted") then dungeons = dungeons + 1 end
+	if has("ltcompleted") then dungeons = dungeons + 1 end
+	if has("agcompleted") then dungeons = dungeons + 1 end
+	if has("srcompleted") then dungeons = dungeons + 1 end
+	if has("ttcompleted") then dungeons = dungeons + 1 end
+	if has("cscompleted") then dungeons = dungeons + 1 end
+	if has("ptcompleted") then dungeons = dungeons + 1 end
+	return hasAny({
+		"hcopen",
+		hasAll({
+			"hcfusedshadows",
+			hasAmount("fusedshadow", Tracker:ProviderCountForCode("hcamount"))
+		}),
+		hasAll({
+			"hcmirrorshards",
+			hasAmount("mirrorshard", Tracker:ProviderCountForCode("hcamount"))
+		}),
+		hasAll({
+			"hcdungeons",
+			dungeons >= Tracker:ProviderCountForCode("hcamount")
+		}),
+		hasAll({
+			"hcvanilla",
+			"ptcompleted"
+		}),
+		hasAll({
+			"hcpoesouls",
+			hasAmount("poesoul", Tracker:ProviderCountForCode("hcamount"))
+		}),
+		hasAll({
+			"hchearts",
+			getPlayerHealth() >= Tracker:ProviderCountForCode("hcamount")
+		})
+	})
+end
+
+function canOpenHCBKGate()
+	local dungeons = 0
+	if has("ftcompleted") then dungeons = dungeons + 1 end
+	if has("gmcompleted") then dungeons = dungeons + 1 end
+	if has("ltcompleted") then dungeons = dungeons + 1 end
+	if has("agcompleted") then dungeons = dungeons + 1 end
+	if has("srcompleted") then dungeons = dungeons + 1 end
+	if has("ttcompleted") then dungeons = dungeons + 1 end
+	if has("cscompleted") then dungeons = dungeons + 1 end
+	if has("ptcompleted") then dungeons = dungeons + 1 end
+	return hasAny({
+		"hcbknone",
+		hasAll({
+			"hcbkfusedshadows",
+			hasAmount("fusedshadow", Tracker:ProviderCountForCode("hcbkamount"))
+		}),
+		hasAll({
+			"hcbkmirrorshards",
+			hasAmount("mirrorshard", Tracker:ProviderCountForCode("hcbkamount"))
+		}),
+		hasAll({
+			"hcbkdungeons",
+			dungeons >= Tracker:ProviderCountForCode("hcbkamount")
+		}),
+		hasAll({
+			"hcbkpoesouls",
+			hasAmount("poesoul", Tracker:ProviderCountForCode("hcbkamount"))
+		}),
+		hasAll({
+			"hcbkhearts",
+			getPlayerHealth() >= Tracker:ProviderCountForCode("hcbkamount")
+		})
+	})
+end
+
+function canBuyMagicArmor()
+	return hasAny({
+		"largewalletsize",
+		hasAll({
+			"reducedwalletsize",
+			"largewallet"
+		}),
+		hasAll({
+			"vanillawalletsize",
+			"mediumwallet"
+		}),
+		hasAll({
+			"hdwalletsize",
+			"mediumwallet"
+		})
+	})
+end
+
+function hasSwordorBS()
+	return hasAny({
+		"sword",
+		hasAmount("hiddenskill", 3)
+	})
+end
+
+function hasBottle()
+	return hasAll({
+		"bottle",
+		"lantern"
+	})
+end
+
+function hasBottles()
+	return hasAll({
+		hasAmount("bottle", 2),
+		"lantern"
+	})
+end
+
+function hasHeavyMod()
+	return hasAny({
+		AccessibilityLevel.SequenceBreak,
+		"boots",
+		"magicarmor"
+	})
+end
+
+function hasCutsceneItem()
+	return hasAny({
+		"skybook",
+		hasBottle(),
+		"horsecall"
+	})
+end
+
+function canDoLJA()
+	return hasAll({
+		AccessibilityLevel.SequenceBreak,
+		"sword",
+		"boomerang"
+	})
+end
+
+function canDoJSLJA()
+	return hasAll({
+		AccessibilityLevel.SequenceBreak,
+		"sword",
+		"boomerang",
+		hasAmount("hiddenskill", 6)
+	})
+end
+
+function canDoMapGlitch()
+	return hasAll({
+		AccessibilityLevel.SequenceBreak,
+		"shadowcrystal",
+		canAccess("KakarikoGorge")
+	})
+end
+
+function canDoStorage()
+	return hasAll({
+		AccessibilityLevel.SequenceBreak,
+		canDoMapGlitch(),
+		hasOneHandedItem()
+	})
+end
+
+function hasOneHandedItem()
+	return hasAny({
+		"sword",
+		hasBottle(),
+		"boomerang",
+		"clawshot",
+		"lantern",
+		"bow",
+		"slingshot",
+		"dominionrod"
+	})
+end
+
+function canDoMoonBoots()
+	return hasAll({
+		AccessibilityLevel.SequenceBreak,
+		"sword",
+		hasAny({
+			"magicarmor",
+			hasAll({
+				"boots",
+				getItemWheelSlotCount() >= 3
+			})
+		})
+	})
+end
+
+function canDoJSMoonBoots()
+	return hasAll({
+		AccessibilityLevel.SequenceBreak,
+		canDoMoonBoots(),
+		hasAmount("hiddenskill", 6)
+	})
+end
+
+function canDoBSMoonBoots()
+	return hasAll({
+		AccessibilityLevel.SequenceBreak,
+		hasAmount("hiddenskill", 3),
+		"magicarmor"
+	})
+end
+
+function canDoEBMoonBoots()
+	return hasAll({
+		AccessibilityLevel.SequenceBreak,
+		canDoMoonBoots(),
+		"hiddenskill",
+		"ordonsword"
+	})
+end
+
+function canDoHSMoonBoots()
+	return hasAll({
+		AccessibilityLevel.SequenceBreak,
+		canDoMoonBoots(),
+		hasAmount("hiddenskill", 4),
+		"sword",
+		hasShield()
+	})
+end
+
+function canDoFlyGlitch()
+	return hasAll({
+		AccessibilityLevel.SequenceBreak,
+		"fishingrod",
+		hasHeavyMod()
+	})
 end
 
 function canDoAirRefill()
-	return hasAll({hasWaterBombs(), hasAny({"magicarmor", hasAll({"boots", getItemWheelSlotCount() >= 3})})})
+	return hasAll({
+		AccessibilityLevel.SequenceBreak,
+		hasWaterBombs(),
+		hasAny({
+			"magicarmor",
+			hasAll({
+				"boots",
+				getItemWheelSlotCount() >= 3
+			})
+		})
+	})
+end
+
+function canDoHiddenVillageGlitched()
+	return hasAll({
+		AccessibilityLevel.SequenceBreak,
+		hasAny({
+			"bow",
+			"ballchain",
+			hasAll({
+				"slingshot",
+				hasAny({
+					"shadowcrystal",
+					"sword",
+					hasBombs(),
+					"boots",
+					"spinner"
+				})
+			})
+		})
+	})
+end
+
+function canDoFTWindlessBridgeRoom()
+	return hasAll({
+		AccessibilityLevel.SequenceBreak,
+		hasAny({
+			hasBombs(),
+			canDoBSMoonBoots(),
+			canDoJSMoonBoots()
+		})
+	})
+end
+
+function canClearForestGlitched()
+	return hasAll({
+		AccessibilityLevel.SequenceBreak,
+		canCompletePrologue(),
+		hasAny({
+			"faronwoodsopenon",
+			"ftcompleted",
+			canDoLJA(),
+			canDoMapGlitch()
+		})
+	})
+end
+
+function canCompleteEldinTwilightGlitched()
+	return hasAll({
+		AccessibilityLevel.SequenceBreak,
+		hasAny({
+			"eldintwilightclearedon",
+			canClearForestGlitched()
+		})
+	})
+end
+
+function canSkipKeyToDekuToad()
+	return hasAll({
+		AccessibilityLevel.SequenceBreak,
+		hasAny({
+			hasAmount("ltsmallkey", 4),
+			hasAmount("hiddenskill", 3),
+			canDoBSMoonBoots(),
+			canDoJSMoonBoots(),
+			canDoLJA(),
+			hasAll({
+				hasBombs(),
+				hasAny({
+					hasHeavyMod(),
+					hasAmount("hiddenskill", 6)
+				})
+			})
+		})
+	})
 end
 
 function getItemWheelSlotCount()
-	count = 0
+	local count = 0
 	if has("clawshot") then count = count + 1 end
 	if has("dominionrod") then count = count + 1 end
 	if has("ballchain") then count = count + 1 end
@@ -241,624 +1385,1608 @@ function getItemWheelSlotCount()
 	return count
 end
 
-function canDoMoonBoots()
-	return hasAll({"sword", hasAny({"magicarmor", hasAll({"boots", getItemWheelSlotCount() >= 3})})})
+function canStepClip()
+	return hasAll({
+		AccessibilityLevel.SequenceBreak,
+		hasAny({
+			"sword",
+			"clawshot",
+			"dominionrod",
+			"ballchain",
+			"bow",
+			"boomerang",
+			"lantern",
+			"slingshot",
+			"fishingrod",
+			hasBombs(),
+			hasBottle()
+		})
+	})
 end
-
-function canDoJSMoonBoots()
-	return hasAll({canDoMoonBoots(), hasAmount("hiddenskill", 6)})
-end
-
-function canDoBSMoonBoots()
-	return hasAll({hasAmount("hiddenskill", 3), "magicarmor"})
-end
-
-function canDoEBMoonBoots()
-	return hasAll({canDoMoonBoots(), "hiddenskill", "ordonsword"})
-end
-
-function canDoHSMoonBoots()
-	return hasAll({canDoMoonBoots(), hasAmount("hiddenskill", 4), "sword", "shield"})
-end
-
-function canDoFlyGlitch()
-	return hasAll({"fishingrod", hasHeavyMod()})
-end
-
-function canDoHiddenVillageGlitched()
-	return hasAny({"bow", "ballchain", hasAll({"slingshot", hasAny({"shadowcrystal", "sword", hasBombs(), "boots", "spinner"})})})
-end
-
-function canDoFTWindlessBridgeRoom()
-	return hasAny({hasBombs(), canDoBSMoonBoots(), canDoJSMoonBoots()})
-end
-
-function canClearForestGlitched()
-	return hasAll({canCompletePrologue(), hasAny({"faronwoodsopen", "ftcompleted", canDoLJA(), canDoMapGlitch()})})
-end
-
-function canSkipKeyToDekuToad()
-	return hasAny({"skkeysy", hasAmount("hiddenskill", 3), canDoBSMoonBoots(), canDoJSMoonBoots(), canDoLJA(), hasAll({hasBombs(), hasAny({hasHeavyMod(), hasAmount("hiddenskill", 6)})})})
-end
-
-
-
-
-
---AREAS
-function canCompletePrologue()
-	return hasAny({hasAll({"sword", "slingshot", hasAny({"fwkey", "skkeysy"})}), "skipprologueon"})
-end
-
-function canClearForest()
-	return hasAll({hasAny({"ftcompleted", "faronwoodsopen"}), canCompletePrologue(), faronTwilightCleared()})
-end
-
-function canCompleteMDH()
-	return hasAny({"ltcompleted", "skipmdhon"})
-end
-
-function faronTwilightCleared()
-	return hasAny({"faronvesseloflight", "farontwilightclearedon"})
-end
-
-function eldinTwilightCleared()
-	return hasAny({"eldinvesseloflight", "eldintwilightclearedon"})
-end
-
-function lanayruTwilightCleared()
-	return hasAny({"lanayruvesseloflight", "lanayrutwilightclearedon"})
-end
-
-function allTwilightCleared()
-	return hasAll({faronTwilightCleared(), eldinTwilightCleared(), lanayruTwilightCleared()})
-end
-
-function hasCompletedAllDungeons()
-	return hasAll({"ftcompleted", "gmcompleted", "ltcompleted", "agcompleted", "srcompleted", "ttcompleted", "cscompleted", "ptcompleted"})
-end
-
-function canGetArrows()
-	return hasAny({canClearForest(), "shadowcrystal"})
-end
-function canGetArrowsGlitched()
-	return hasAny({canGetArrows(), hasAll({"lantern", "bombbag", canDoLJA()})})
-end
-
-function canAccessEldin()
-	return hasAny({canClearForest(), hasAll({"shadowcrystal", "openmapon", hasAny({"eldintwilightclearedon", "lanayrutwilightclearedon", "skipsnowpeakentranceon"})})})
-end
-
-function canAccessLanayru(...)
-	return hasAny({hasAll({"shadowcrystal", "openmapon", hasAny({"lanayrutwilightclearedon", "skipsnowpeakentranceon"})}), hasAll({hasAny({canClearForest(), hasAll({"shadowcrystal", "openmapon", "eldintwilightclearedon"})}), hasAny({"gatekeys", "skkeysy", "glitcheson", canSmash(...)})})})
-end
-
-
-
-
 
 -- ENEMIES
 function canDefeatAeralfos()
-	return hasAll({"clawshot", hasAny({"sword", "ballchain", "shadowcrystal"})})
-end
-function canDefeatAeralfosGlitched()
-	return hasAll({"clawshot", hasAny({"boots", canDefeatAeralfos()})})
+	return hasAny({
+		hasAll({
+			"clawshot",
+			hasAny({
+				"sword",
+				"ballchain",
+				"shadowcrystal"
+			})
+		}),
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			"clawshot",
+			canDoNicheStuff(),
+			"boots"
+		})
+	})
 end
 
 function canDefeatArmos()
-	return hasAny({"sword", "ballchain", "bow", "shadowcrystal", "clawshot", hasBombs(), "spinner"})
-end
-function canDefeatArmosGlitched()
-	return hasAny({canDefeatArmos(), "boots", canUseBacksliceAsSword()})
+	return hasAny({
+		"sword",
+		"ballchain",
+		"bow",
+		"shadowcrystal",
+		"clawshot",
+		hasBombs(),
+		"spinner",
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			hasAny({
+				hasAll({
+					canDoNicheStuff(),
+					"boots"
+				}),
+				canUseBacksliceAsSword()
+			})
+		})
+	})
 end
 
 function canDefeatBabaSerpent()
-	return hasAny({"sword", "ballchain", "bow", hasAll({canDoNicheStuff(), "boots"}), "spinner", "shadowcrystal", hasBombs(), canUseBacksliceAsSword()})
+	return hasAny({
+		"sword",
+		"ballchain",
+		"bow",
+		"spinner",
+		"shadowcrystal",
+		hasBombs(),
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			hasAny({
+				hasAll({
+					canDoNicheStuff(),
+					"boots"
+				}),
+				canUseBacksliceAsSword()
+			})
+		})
+	})
 end
-function canDefeatBabaSerpentGlitched()
-	return hasAny({canDefeatBabaSerpent(), "boots", canUseBacksliceAsSword()})
+
+function canDefeatHangingBabaSerpent()
+	return hasAll({
+		hasAny({
+			"boomerang",
+			"bow"
+		}),
+		canDefeatBabaSerpent()
+	})
 end
 
 function canDefeatBabyGohma()
-	return hasAny({"sword", "ballchain", "spinner", "slingshot", "clawshot", hasBombs()})
-end
-function canDefeatBabyGohmaGlitched()
-	return hasAny({canDefeatBabyGohma(), "boots", canUseBacksliceAsSword()})
+	return hasAny({
+		"sword",
+		"ballchain",
+		"bow",
+		"spinner",
+		"slingshot",
+		"clawshot",
+		hasBombs(),
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			hasAny({
+				hasAll({
+					canDoNicheStuff(),
+					"boots"
+				}),
+				canUseBacksliceAsSword()
+			})
+		})
+	})
 end
 
 function canDefeatBari()
-	return hasAny({hasWaterBombs(), "clawshot"})
+	return hasAny({
+		hasWaterBombs(),
+		"clawshot"
+	})
 end
 
 function canDefeatBeamos()
-	return hasAny({"ballchain", "bow", hasBombs()})
+	return hasAny({
+		"ballchain",
+		"bow",
+		hasBombs()
+	})
 end
 
 function canDefeatBigBaba()
-	return hasAny({"sword", "ballchain", hasAll({"bow", canGetArrows()}), "shadowcrystal", "spinner", hasBombs(), })
-end
-function canDefeatBigBabaGlitched()
-	return hasAny({canDefeatBigBaba(), hasAll({"bow", canGetArrowsGlitched()}), "boots", canUseBacksliceAsSword()})
-end
-
-function canDefeatBokoblin()
-	return hasAny({"sword", "ballchain", hasAll({"bow", canGetArrows()}), "spinner", "slingshot", "shadowcrystal", hasBombs()})
-end
-function canDefeatBokoblinGlitched()
-	return hasAny({canDefeatBokoblin(), hasAll({"bow", canGetArrowsGlitched()}), "boots", canUseBacksliceAsSword()})
-end
-
-function canDefeatBokoblinRed()
-	return hasAny({"sword", "ballchain", hasAll({"bow", canGetArrows()}), "shadowcrystal", hasBombs()})
-end
-function canDefeatBokoblinRedGlitched()
-	return hasAny({canDefeatBokoblinRed(), hasAll({"bow", canGetArrowsGlitched()}), canUseBacksliceAsSword()})
-end
-
-function canDefeatBombfish()
-	return hasAll({"boots", hasAny({"sword", "clawshot", hasAll({"shield", hasAmount("hiddenskill", 2)})})})
-end
-function canDefeatBombfishGlitched()
-	return hasAny({canDefeatBombfish(), hasAll({"magicarmor", hasAny({"sword", "clawshot", hasAll({"shield", hasAmount("hiddenskill", 2)})})})})
-end
-
-function canDefeatBombling()
-	return hasAny({"sword", "ballchain", hasAll({"bow", canGetArrows()}), "spinner", "shadowcrystal", "clawshot"})
-end
-function canDefeatBomblingGlitched()
-	return hasAny({canDefeatBombling(), hasAll({"bow", canGetArrowsGlitched()}), "boots"})
-end
-
-function canDefeatBomskit()
-	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal", hasBombs()})
-end
-function canDefeatBomskitGlitched()
-	return hasAny({canDefeatBomskit(), canUseBacksliceAsSword(), "boots"})
-end
-
-function canDefeatBubble()
-	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal"})
-end
-function canDefeatBubbleGlitched()
-	return hasAny({canDefeatBubble(), "boots", canUseBacksliceAsSword()})
-end
-
-function canDefeatBulblin()
-	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal", hasBombs()})
-end
-function canDefeatBulblinGlitched()
-	return hasAny({canDefeatBulblin(), "boots", canUseBacksliceAsSword()})
-end
-
-function canDefeatChilfos()
-	return hasAny({"sword", "ballchain", "shadowcrystal", "spinner", hasBombs()})
-end
-function canDefeatChilfosGlitched()
-	return hasAny({canDefeatChilfos(), "boots", canUseBacksliceAsSword()})
+	return hasAny({
+		"sword",
+		"ballchain",
+		"bow",
+		"shadowcrystal",
+		"spinner",
+		hasBombs(),
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			hasAny({
+				hasAll({
+					canDoNicheStuff(),
+					"boots"
+				}),
+				canUseBacksliceAsSword()
+			})
+		})
+	})
 end
 
 function canDefeatChu()
-	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal", "clawshot", hasBombs()})
+	return hasAny({
+		"sword",
+		"ballchain",
+		"bow",
+		"spinner",
+		"shadowcrystal",
+		"clawshot",
+		hasBombs(),
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			hasAny({
+				hasAll({
+					canDoNicheStuff(),
+					"boots"
+				}),
+				canUseBacksliceAsSword()
+			})
+		})
+	})
 end
-function canDefeatChuGlitched()
-	return hasAny({canDefeatChu(), "boots", canUseBacksliceAsSword()})
+
+function canDefeatBokoblin()
+	return hasAny({
+		"sword",
+		"ballchain",
+		"bow",
+		"spinner",
+		"slingshot",
+		"shadowcrystal",
+		hasBombs(),
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			hasAny({
+				hasAll({
+					canDoNicheStuff(),
+					"boots"
+				}),
+				canUseBacksliceAsSword()
+			})
+		})
+	})
+end
+
+function canDefeatBokoblinRed()
+	return hasAny({
+		"sword",
+		"ballchain",
+		"largequiver",
+		"shadowcrystal",
+		hasBombs(),
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			hasAny({
+				canUseBacksliceAsSword(),
+				hasAll({
+					canDoDifficultCombat(),
+					hasAny({
+						"boots",
+						"spinner"
+					})
+				})
+			})
+		})
+	})
+end
+
+function canDefeatBombfish()
+	return hasAny({
+		hasAll({
+			"boots",
+			hasAny({
+				"sword",
+				"clawshot",
+				hasAll({
+					"shield",
+					hasAmount("hiddenskill", 2)
+				})
+			})
+		}),
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			"magicarmor",
+			hasAny({
+				"sword",
+				"clawshot",
+				hasAll({
+					"shield",
+					hasAmount("hiddenskill", 2)
+				})
+			})
+		})
+	})
+end
+
+function canDefeatBombling()
+	return hasAny({
+		"sword",
+		"ballchain",
+		"bow",
+		"spinner",
+		"shadowcrystal",
+		"clawshot",
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			canDoNicheStuff(),
+			"boots"
+		})
+	})
+end
+
+function canDefeatBomskit()
+	return hasAny({
+		"sword",
+		"ballchain",
+		"bow",
+		"spinner",
+		"shadowcrystal",
+		hasBombs(),
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			hasAny({
+				canUseBacksliceAsSword(),
+				hasAll({
+					canDoNicheStuff(),
+					"boots"
+				})
+			})
+		})
+	})
+end
+
+function canDefeatBubble()
+	return hasAny({
+		"sword",
+		"ballchain",
+		"bow",
+		"spinner",
+		"shadowcrystal",
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			hasAny({
+				hasAll({
+					canDoNicheStuff(),
+					"boots"
+				}),
+				canUseBacksliceAsSword()
+			})
+		})
+	})
+end
+
+function canDefeatBulblin()
+	return hasAny({
+		"sword",
+		"ballchain",
+		"bow",
+		"spinner",
+		"shadowcrystal",
+		hasBombs(),
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			hasAny({
+				hasAll({
+					canDoNicheStuff(),
+					"boots"
+				}),
+				canUseBacksliceAsSword()
+			})
+		})
+	})
+end
+
+function canDefeatChilfos()
+	return hasAny({
+		"sword",
+		"ballchain",
+		"shadowcrystal",
+		"spinner",
+		hasBombs(),
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			hasAny({
+				hasAll({
+					canDoNicheStuff(),
+					"boots"
+				}),
+				canUseBacksliceAsSword()
+			})
+		})
+	})
 end
 
 function canDefeatChuWorm()
-	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal"})
-end
-function canDefeatChuWormGlitched()
-	return hasAny({canDefeatChuWorm(), "boots", canUseBacksliceAsSword()})
+	return hasAny({
+		hasAll({
+			hasAny({
+				"sword",
+				"ballchain",
+				"bow",
+				"spinner",
+				"shadowcrystal"
+			}),
+			hasAny({
+				hasBombs(),
+				"clawshot"
+			})
+		}),
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			hasAny({
+				hasAll({
+					canDoNicheStuff(),
+					"boots"
+				}),
+				canUseBacksliceAsSword()
+			}),
+			hasAny({
+				hasBombs(),
+				"clawshot"
+			})
+		})
+	})
 end
 
 function canDefeatDarknut()
-	return has("sword")
+	return hasAny({
+		"sword",
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			canDoDifficultCombat(),
+			hasAny({
+				hasBombs(),
+				"ballchain"
+			})
+		})
+	})
 end
 
 function canDefeatDekuBaba()
-	return hasAny({"sword", "ballchain", "bow", "spinner", hasAmount("hiddenskill", 2), "slingshot", "clawshot", hasBombs()})
-end
-function canDefeatDekuBabaGlitched()
-	return hasAny({canDefeatDekuBaba(), "boots", canUseBacksliceAsSword()})
+	return hasAny({
+		"sword",
+		"ballchain",
+		"bow",
+		"spinner",
+		hasAll({
+			hasShield(),
+			hasAmount("hiddenskill", 2)
+		}),
+		"slingshot",
+		"clawshot",
+		hasBombs(),
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			hasAny({
+				hasAll({
+					canDoNicheStuff(),
+					"boots"
+				}),
+				canUseBacksliceAsSword()
+			})
+		})
+	})
 end
 
 function canDefeatDekuLike()
-	return hasBombs()
+	return hasAll({
+		hasBombs(),
+	})
 end
 
 function canDefeatDodongo()
-	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal", hasBombs()})
-end
-function canDefeatDodongoGlitched()
-	return hasAny({canDefeatDodongo(), "boots", canUseBacksliceAsSword()})
+	return hasAny({
+		"sword",
+		"ballchain",
+		"bow",
+		"spinner",
+		"shadowcrystal",
+		hasBombs(),
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			hasAny({
+				hasAll({
+					canDoNicheStuff(),
+					"boots"
+				}),
+				canUseBacksliceAsSword()
+			})
+		})
+	})
 end
 
 function canDefeatDinalfos()
-	return hasAny({"sword", "ballchain", "shadowcrystal"})
+	return hasAny({
+		"sword",
+		"ballchain",
+		"shadowcrystal"
+	})
 end
 
 function canDefeatFireBubble()
-	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal"})
-end
-function canDefeatFireBubbleGlitched()
-	return hasAny({canDefeatFireBubble(), "boots", canUseBacksliceAsSword()})
+	return hasAny({
+		"sword",
+		"ballchain",
+		"bow",
+		"spinner",
+		"shadowcrystal",
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			hasAny({
+				hasAll({
+					canDoNicheStuff(),
+					"boots"
+				}),
+				canUseBacksliceAsSword()
+			})
+		})
+	})
 end
 
 function canDefeatFireKeese()
-	return hasAny({"sword", "ballchain", "bow", "spinner", "slingshot", "shadowcrystal"})
-end
-function canDefeatFireKeeseGlitched()
-	return hasAny({canDefeatFireKeese(), "boots", canUseBacksliceAsSword()})
+	return hasAny({
+		"sword",
+		"ballchain",
+		"bow",
+		"spinner",
+		"slingshot",
+		"shadowcrystal",
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			hasAny({
+				hasAll({
+					canDoNicheStuff(),
+					"boots"
+				}),
+				canUseBacksliceAsSword()
+			})
+		})
+	})
 end
 
 function canDefeatFireToadpoli()
-	return hasAny({"sword", "ballchain", "bow", hasAll({hasAmount("hiddenskill", 2), "hylianshield"})})
+	return hasAny({
+		"sword",
+		"ballchain",
+		"bow",
+		hasAll({
+			"hylianshield",
+			hasAmount("hiddenskill", 2)
+		}),
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			canDoDifficultCombat(),
+			"shadowcrystal"
+		})
+	})
 end
 
 function canDefeatFreezard()
-	return has("ballchain")
+	return hasAll({
+		"ballchain"
+	})
 end
 
 function canDefeatGoron()
-	return hasAny({"sword", "ballchain", "bow", "spinner", hasAll({hasAmount("hiddenskill", 2), "shield"}), "slingshot", "clawshot", hasBombs()})
-end
-function canDefeatGoronGlitched()
-	return hasAny({canDefeatGoron(), "boots", canUseBacksliceAsSword()})
+	return hasAny({
+		"sword",
+		"ballchain",
+		"bow",
+		"spinner",
+		hasAll({
+			hasShield(),
+			hasAmount("hiddenskill", 2),
+		}),
+		"slingshot",
+		"clawshot",
+		hasBombs(),
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			hasAny({
+				hasAll({
+					canDoNicheStuff(),
+					"boots"
+				}),
+				hasAll({
+					canDoDifficultCombat(),
+					"lantern"
+				}),
+				canUseBacksliceAsSword()
+			})
+		})
+	})
 end
 
 function canDefeatGhoulRat()
-	return has("shadowcrystal")
+	return hasAll({
+		"shadowcrystal"
+	})
 end
 
 function canDefeatGuay()
-	return hasAny({"sword", "ballchain", "bow", "shadowcrystal", "slingshot"})
-end
-function canDefeatGuayGlitched()
-	return hasAny({canDefeatGuay(), "boots"})
+	return hasAny({
+		"sword",
+		"ballchain",
+		"bow",
+		"shadowcrystal",
+		"slingshot",
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			hasAny({
+				hasAll({
+					canDoNicheStuff(),
+					"boots"
+				}),
+				hasAll({
+					canDoDifficultCombat(),
+					"spinner"
+				})
+			})
+		})
+	})
 end
 
 function canDefeatHelmasaur()
-	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal", hasBombs()})
-end
-function canDefeatHelmasaurGlitched()
-	return hasAny({canDefeatHelmasaur(), "boots", canUseBacksliceAsSword()})
+	return hasAny({
+		"sword",
+		"ballchain",
+		"bow",
+		"spinner",
+		"shadowcrystal",
+		hasBombs(),
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			hasAny({
+				hasAll({
+					canDoNicheStuff(),
+					"boots"
+				}),
+				canUseBacksliceAsSword()
+			})
+		})
+	})
 end
 
 function canDefeatHelmasaurus()
-	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal", hasBombs()})
-end
-function canDefeatHelmasaurusGlitched()
-	return hasAny({canDefeatHelmasaurus(), "boots", canUseBacksliceAsSword()})
+	return hasAny({
+		"sword",
+		"ballchain",
+		"bow",
+		"spinner",
+		"shadowcrystal",
+		hasBombs(),
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			hasAny({
+				hasAll({
+					canDoNicheStuff(),
+					"boots"
+				}),
+				canUseBacksliceAsSword()
+			})
+		})
+	})
 end
 
 function canDefeatIceBubble()
-	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal"})
-end
-function canDefeatIceBubbleGlitched()
-	return hasAny({canDefeatIceBubble(), "boots", canUseBacksliceAsSword()})
+	return hasAny({
+		"sword",
+		"ballchain",
+		"bow",
+		"spinner",
+		"shadowcrystal",
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			hasAny({
+				hasAll({
+					canDoNicheStuff(),
+					"boots"
+				}),
+				canUseBacksliceAsSword()
+			})
+		})
+	})
 end
 
 function canDefeatIceKeese()
-	return hasAny({"sword", "ballchain", "bow", "spinner", "slingshot", "shadowcrystal"})
-end
-function canDefeatIceKeeseGlitched()
-	return hasAny({canDefeatIceKeese(), "boots", canUseBacksliceAsSword()})
+	return hasAny({
+		"sword",
+		"ballchain",
+		"bow",
+		"spinner",
+		"slingshot",
+		"shadowcrystal",
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			hasAny({
+				hasAll({
+					canDoNicheStuff(),
+					"boots"
+				}),
+				canUseBacksliceAsSword()
+			})
+		})
+	})
 end
 
 function canDefeatPoe()
-	return has("shadowcrystal")
+	return hasAll({
+		"shadowcrystal"
+	})
 end
 
 function canDefeatKargorok()
-	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal"})
-end
-function canDefeatKargorokGlitched()
-	return hasAny({canDefeatKargorok(), "boots", canUseBacksliceAsSword()})
+	return hasAny({
+		"sword",
+		"ballchain",
+		"bow",
+		"spinner",
+		"shadowcrystal",
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			hasAny({
+				hasAll({
+					canDoNicheStuff(),
+					"boots"
+				}),
+				canUseBacksliceAsSword()
+			})
+		})
+	})
 end
 
 function canDefeatKeese()
-	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal"})
-end
-function canDefeatKeeseGlitched()
-	return hasAny({canDefeatKeese(), "boots", canUseBacksliceAsSword()})
+	return hasAny({
+		"sword",
+		"ballchain",
+		"bow",
+		"spinner",
+		"slingshot",
+		"shadowcrystal",
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			hasAny({
+				hasAll({
+					canDoNicheStuff(),
+					"boots"
+				}),
+				canUseBacksliceAsSword()
+			})
+		})
+	})
 end
 
 function canDefeatLeever()
-	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal", hasBombs()})
-end
-function canDefeatLeeverGlitched()
-	return hasAny({canDefeatLeever(), "boots"})
+	return hasAny({
+		"sword",
+		"ballchain",
+		"bow",
+		"spinner",
+		"shadowcrystal",
+		hasBombs(),
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			canDoNicheStuff(),
+			"boots"
+		})
+	})
 end
 
 function canDefeatLizalfos()
-	return hasAny({"sword", "ballchain", "bow", "shadowcrystal", hasBombs()})
-end
-function canDefeatLizalfosGlitched()
-	return hasAny({canDefeatLizalfos(), "boots", canUseBacksliceAsSword()})
+	return hasAny({
+		"sword",
+		"ballchain",
+		"bow",
+		"shadowcrystal",
+		hasBombs(),
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			hasAny({
+				hasAll({
+					canDoNicheStuff(),
+					"boots"
+				}),
+				canUseBacksliceAsSword()
+			})
+		})
+	})
 end
 
 function canDefeatMiniFreezard()
-	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal", hasBombs()})
-end
-function canDefeatMiniFreezardGlitched()
-	return hasAny({canDefeatMiniFreezard(), "boots", canUseBacksliceAsSword()})
+	return hasAny({
+		"sword",
+		"ballchain",
+		"bow",
+		"spinner",
+		"shadowcrystal",
+		hasBombs(),
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			hasAny({
+				hasAll({
+					canDoNicheStuff(),
+					"boots"
+				}),
+				canUseBacksliceAsSword()
+			})
+		})
+	})
 end
 
 function canDefeatMoldorm()
-	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal", hasBombs()})
-end
-function canDefeatMoldormGlitched()
-	return hasAny({canDefeatMoldorm(), "boots"})
+	return hasAny({
+		"sword",
+		"ballchain",
+		"bow",
+		"spinner",
+		"shadowcrystal",
+		hasBombs(),
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			canDoNicheStuff(),
+			"boots"
+		})
+	})
 end
 
 function canDefeatPoisonMite()
-	return hasAny({"sword", "ballchain", "bow", "lantern", "spinner", "shadowcrystal"})
+	return hasAny({
+		"sword",
+		"ballchain",
+		"bow",
+		"lantern",
+		"spinner",
+		"shadowcrystal"
+	})
 end
 
 function  canDefeatPuppet()
-	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal", hasBombs()})
-end
-function  canDefeatPuppetGlitched()
-	return hasAny({canDefeatPuppet(), "boots", canUseBacksliceAsSword()})
+	return hasAny({
+		"sword",
+		"ballchain",
+		"bow",
+		"spinner",
+		"shadowcrystal",
+		hasBombs(),
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			hasAny({
+				hasAll({
+					canDoNicheStuff(),
+					"boots"
+				}),
+				canUseBacksliceAsSword()
+			})
+		})
+	})
 end
 
 function canDefeatRat()
-	return hasAny({"sword", "ballchain", "bow", "spinner", "slingshot", "shadowcrystal", hasBombs()})
-end
-function canDefeatRatGlitched()
-	return hasAny({canDefeatRat(), "boots", canUseBacksliceAsSword()})
+	return hasAny({
+		"sword",
+		"ballchain",
+		"bow",
+		"spinner",
+		"slingshot",
+		"shadowcrystal",
+		hasBombs(),
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			hasAny({
+				hasAll({
+					canDoNicheStuff(),
+					"boots"
+				}),
+				canUseBacksliceAsSword()
+			})
+		})
+	})
 end
 
 function canDefeatRedeadKnight()
-	return hasAny({"sword", "ballchain", "bow", "shadowcrystal", hasBombs()})
-end
-function canDefeatRedeadKnightGlitched()
-	return hasAny({canDefeatRedeadKnight(), "boots", canUseBacksliceAsSword()})
+	return hasAny({
+		"sword",
+		"ballchain",
+		"bow",
+		"shadowcrystal",
+		hasBombs(),
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			hasAny({
+				hasAll({
+					canDoNicheStuff(),
+					"boots"
+				}),
+				canUseBacksliceAsSword()
+			})
+		})
+	})
 end
 
 function canDefeatShadowBeast()
-	return hasAny({"sword", hasAll({"shadowcrystal", canCompleteMDH()})})
+	return hasAny({
+		"sword",
+		hasAll({
+			"shadowcrystal",
+			canMidnaCharge()
+		})
+	})
 end
 
 function canDefeatShadowBulblin()
-	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal", hasBombs()})
-end
-function canDefeatShadowBulblinGlitched()
-	return hasAny({canDefeatShadowBulblin(), "boots", canUseBacksliceAsSword()})
+	return hasAny({
+		"sword",
+		"ballchain",
+		"bow",
+		"spinner",
+		"shadowcrystal",
+		hasBombs(),
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			hasAny({
+				hasAll({
+					canDoNicheStuff(),
+					"boots"
+				}),
+				canUseBacksliceAsSword()
+			})
+		})
+	})
 end
 
 function canDefeatShadowDekuBaba()
-	return hasAny({"sword", "ballchain", "bow", "spinner", hasAmount("hiddenskill", 2), "slingshot", "clawshot", hasBombs()})
-end
-function canDefeatShadowDekuBabaGlitched()
-	return hasAny({canDefeatShadowDekuBaba(), "boots", canUseBacksliceAsSword()})
+	return hasAny({
+		"sword",
+		"ballchain",
+		"bow",
+		"spinner",
+		hasAll({
+			hasShield(),
+			hasAmount("hiddenskill", 2)
+		}),
+		"slingshot",
+		"clawshot",
+		hasBombs(),
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			hasAny({
+				hasAll({
+					canDoNicheStuff(),
+					"boots"
+				}),
+				canUseBacksliceAsSword()
+			})
+		})
+	})
 end
 
 function canDefeatShadowInsect()
-	return has("shadowcrystal")
+	return hasAll({
+		"shadowcrystal"
+	})
 end
 
 function canDefeatShadowKargorok()
-	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal", hasBombs()})
-end
-function canDefeatShadowKargorokGlitched()
-	return hasAny({canDefeatShadowKargorok(), "boots", canUseBacksliceAsSword()})
+	return hasAny({
+		"sword",
+		"ballchain",
+		"bow",
+		"spinner",
+		"shadowcrystal",
+		hasBombs(),
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			hasAny({
+				hasAll({
+					canDoNicheStuff(),
+					"boots"
+				}),
+				canUseBacksliceAsSword()
+			})
+		})
+	})
 end
 
 function canDefeatShadowKeese()
-	return hasAny({"sword", "ballchain", "bow", "spinner", "slingshot", "shadowcrystal"})
-end
-function canDefeatShadowKeeseGlitched()
-	return hasAny({canDefeatShadowKeese(), "boots", canUseBacksliceAsSword()})
+	return hasAny({
+		"sword",
+		"ballchain",
+		"bow",
+		"spinner",
+		"slingshot",
+		"shadowcrystal",
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			hasAny({
+				hasAll({
+					canDoNicheStuff(),
+					"boots"
+				}),
+				canUseBacksliceAsSword()
+			})
+		})
+	})
 end
 
 function canDefeatShadowVermin()
-	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal", hasBombs()})
-end
-function canDefeatShadowVerminGlitched()
-	return hasAny({canDefeatShadowVermin(), "boots", canUseBacksliceAsSword()})
+	return hasAny({
+		"sword",
+		"ballchain",
+		"bow",
+		"spinner",
+		"shadowcrystal",
+		hasBombs(),
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			hasAny({
+				hasAll({
+					canDoNicheStuff(),
+					"boots"
+				}),
+				canUseBacksliceAsSword()
+			})
+		})
+	})
 end
 
 function canDefeatShellBlade()
-	return hasAny({hasWaterBombs(), hasAll({"sword", "boots"})})
-end
-function canDefeatShellBladeGlitched()
-	return hasAny({canDefeatShellBlade(), hasAll({"sword", "magicarmor"})})
+	return hasAny({
+		hasWaterBombs(),
+		hasAll({
+			"sword",
+			"boots"
+		}),
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			"sword",
+			canDoNicheStuff(),
+			"magicarmor"
+		})
+	})
 end
 
 function canDefeatSkullFish()
-	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal"})
-end
-function canDefeatSkullFishGlitched()
-	return hasAny({canDefeatSkullFish(), "boots"})
+	return hasAny({
+		"sword",
+		"ballchain",
+		"bow",
+		"spinner",
+		"shadowcrystal",
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			canDoNicheStuff(),
+			"boots"
+		})
+	})
 end
 
 function canDefeatSkulltula()
-	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal", hasBombs()})
-end
-function canDefeatSkulltulaGlitched()
-	return hasAny({canDefeatSkulltula(), "boots", canUseBacksliceAsSword()})
+	return hasAny({
+		"sword",
+		"ballchain",
+		"bow",
+		"spinner",
+		"shadowcrystal",
+		hasBombs(),
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			hasAny({
+				hasAll({
+					canDoNicheStuff(),
+					"boots"
+				}),
+				canUseBacksliceAsSword()
+			})
+		})
+	})
 end
 
 function canDefeatStalfos()
-	return canSmash()
+	return hasAll({
+		canSmash()
+	})
 end
 
 function canDefeatStalhound()
-	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal", hasBombs()})
-end
-function canDefeatStalhoundGlitched()
-	return hasAny({canDefeatStalhound(), "boots", canUseBacksliceAsSword()})
+	return hasAny({
+		"sword",
+		"ballchain",
+		"bow",
+		"spinner",
+		"shadowcrystal",
+		hasBombs(),
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			hasAny({
+				hasAll({
+					canDoNicheStuff(),
+					"boots"
+				}),
+				canUseBacksliceAsSword()
+			})
+		})
+	})
 end
 
 function canDefeatStalchild()
-	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal", hasBombs()})
-end
-function canDefeatStalchildGlitched()
-	return hasAny({canDefeatStalchild(), "boots", canUseBacksliceAsSword()})
+	return hasAny({
+		"sword",
+		"ballchain",
+		"bow",
+		"spinner",
+		"shadowcrystal",
+		hasBombs(),
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			hasAny({
+				hasAll({
+					canDoNicheStuff(),
+					"boots"
+				}),
+				canUseBacksliceAsSword()
+			})
+		})
+	})
 end
 
 function canDefeatTektite()
-	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal", hasBombs()})
-end
-function canDefeatTektiteGlitched()
-	return hasAny({canDefeatTektite(), "boots", canUseBacksliceAsSword()})
+	return hasAny({
+		"sword",
+		"ballchain",
+		"bow",
+		"spinner",
+		"shadowcrystal",
+		hasBombs(),
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			hasAny({
+				hasAll({
+					canDoNicheStuff(),
+					"boots"
+				}),
+				canUseBacksliceAsSword()
+			})
+		})
+	})
 end
 
 function canDefeatTileWorm()
-	return hasAll({hasAny({"sword", "ballchain", "bow", "shadowcrystal", "spinner", hasBombs()}), "boomerang"})
-end
-function canDefeatTileWormGlitched()
-	return hasAny({canDefeatTileWorm(), hasAll({hasAny({"boots", canUseBacksliceAsSword()}), "boomerang"})})
+	return hasAny({
+		hasAll({
+			hasAny({
+				"sword",
+				"ballchain",
+				"bow",
+				"shadowcrystal",
+				"spinner",
+				hasBombs()
+			}),
+			"boomerang"
+		}),
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			hasAny({
+				hasAll({
+					canDoNicheStuff(),
+					"boots"
+				}),
+				canUseBacksliceAsSword()
+			}),
+			"boomerang"
+		})
+	})
 end
 
 function canDefeatToado()
-	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal"})
+	return hasAny({
+		"sword",
+		"ballchain",
+		"bow",
+		"spinner",
+		"shadowcrystal"
+	})
 end
 
 function canDefeatWaterToadpoli()
-	return hasAny({"sword", "ballchain", "bow", hasAll({hasAmount("hiddenskill", 2), "shield"})})
+	return hasAny({
+		"sword",
+		"ballchain",
+		"bow",
+		hasAll({
+			hasShield(),
+			hasAmount("hiddenskill", 2)
+		}),
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			canDoDifficultCombat(),
+			"shadowcrystal"
+		})
+	})
 end
 
 function canDefeatTorchSlug()
-	return hasAny({"sword", "ballchain", "bow", "shadowcrystal", hasBombs()})
+	return hasAny({
+		"sword",
+		"ballchain",
+		"bow",
+		"shadowcrystal",
+		hasBombs()
+	})
 end
 
 function canDefeatWalltula()
-	return hasAny({"ballchain", "slingshot", hasAll({"bow", canGetArrows()}), "boomerang", "clawshot"})
-end
-function canDefeatWalltulaGlitched()
-	return hasAny({canDefeatWalltula(), hasAll({"bow", canGetArrowsGlitched()})})
+	return hasAny({
+		"ballchain",
+		"slingshot",
+		"bow",
+		"boomerang",
+		"clawshot"
+	})
 end
 
 function canDefeatWhiteWolfos()
-	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal", hasBombs()})
-end
-function canDefeatWhiteWolfosGlitched()
-	return hasAny({canDefeatWhiteWolfos(), "boots"})
+	return hasAny({
+		"sword",
+		"ballchain",
+		"bow",
+		"spinner",
+		"shadowcrystal",
+		hasBombs(),
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			canDoNicheStuff(),
+			"boots"
+		})
+	})
 end
 
 function canDefeatYoungGohma()
-	return hasAny({"sword", "ballchain", "bow", "spinner", "shadowcrystal", hasBombs()})
-end
-function canDefeatYoungGohmaGlitched()
-	return hasAny({canDefeatYoungGohma(), "boots"})
+	return hasAny({
+		"sword",
+		"ballchain",
+		"bow",
+		"spinner",
+		"shadowcrystal",
+		hasBombs(),
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			canDoNicheStuff(),
+			"boots"
+		})
+	})
 end
 
 function canDefeatZantHead()
-	return hasAny({"shadowcrystal", "sword"})
-end
-function canDefeatZantHeadGlitched()
-	return hasAny({canDefeatZantHead(), canUseBacksliceAsSword()})
+	return hasAny({
+		"shadowcrystal",
+		"sword",
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			canUseBacksliceAsSword()
+		})
+	})
 end
 
 function canDefeatOok()
-	return hasAny({"sword", "ballchain", hasAll({"bow", canGetArrows()}), "shadowcrystal", hasBombs()})
-end
-function canDefeatOokGlitched()
-	return hasAny({canDefeatOok(), hasAll({"bow", canGetArrowsGlitched()}), "boots", canUseBacksliceAsSword()})
+	return hasAny({
+		"sword",
+		"ballchain",
+		"bow",
+		"shadowcrystal",
+		hasBombs(),
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			hasAny({
+				hasAll({
+					canDoNicheStuff(),
+					"boots"
+				}),
+				canUseBacksliceAsSword()
+			})
+		})
+	})
 end
 
 function canDefeatDangoro()
-	return hasAll({hasAny({"sword", "shadowcrystal", hasAll({"bow", hasBombs()})}), "boots"})
-end
-function canDefeatDangoroGlitched()
-	return hasAny({canDefeatDangoro(), hasAll({"ballchain", "boots"})})
+	return hasAny({
+		hasAll({
+			hasAny({
+				"sword",
+				"shadowcrystal"
+			}),
+			"boots"
+		}),
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			canDoDifficultCombat(),
+			hasAny({
+				"ballchain",
+				hasAll({
+					"bow",
+					hasBombs()
+				})
+			}),
+			"boots"
+		})
+	})
 end
 
 function canDefeatCarrierKargorok()
-	return has("shadowcrystal")
+	return hasAll({
+		"shadowcrystal"
+	})
 end
 
 function canDefeatTwilitBloat()
-	return has("shadowcrystal")
+	return hasAll({
+		"shadowcrystal"
+	})
 end
 
 function canDefeatDekuToad()
-	return hasAny({"sword", "ballchain", "bow", "shadowcrystal", hasBombs()})
-end
-function canDefeatDekuToadGlitched()
-	return hasAny({canDefeatDekuToad(), "boots", canUseBacksliceAsSword()})
+	return hasAny({
+		"sword",
+		"ballchain",
+		"bow",
+		"shadowcrystal",
+		hasBombs(),
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			hasAny({
+				hasAll({
+					canDoNicheStuff(),
+					"boots"
+				}),
+				canUseBacksliceAsSword()
+			})
+		})
+	})
 end
 
 function canDefeatSkullKid()
-	return has("bow")
+	return hasAll({
+		"bow"
+	})
 end
 
 function canDefeatKingBulblinBridge()
-	return has("bow")
+	return hasAll({
+		"bow"
+	})
 end
 
 function canDefeatKingBulblinDesert()
-	return hasAny({"sword", "ballchain", "shadowcrystal", "largequiver"})
-end
-function canDefeatKingBulblinDesertGlitched()
-	return hasAny({canDefeatKingBulblinDesert(), canUseBacksliceAsSword()})
+	return hasAny({
+		"sword",
+		"ballchain",
+		"shadowcrystal",
+		"largequiver",
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			hasAny({
+				canUseBacksliceAsSword(),
+				hasAll({
+					canDoDifficultCombat(),
+					hasAny({
+						"spinner",
+						"boots",
+						hasBombs(),
+						"mediumquiver"
+					})
+				})
+			})
+		})
+	})
 end
 
 function canDefeatKingBulblinCastle()
-	return hasAny({"sword", "ballchain", "shadowcrystal", "largequiver"})
+	return hasAny({
+		"sword",
+		"ballchain",
+		"shadowcrystal",
+		"largequiver",
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			canDoDifficultCombat(),
+			hasAny({
+				"spinner",
+				"boots",
+				hasBombs(),
+				canUseBacksliceAsSword()
+			})
+		})
+	})
 end
 
 function canDefeatDeathSword()
-	return hasAll({"sword", hasAny({"boomerang", "bow", "clawshot"}), "shadowcrystal"})
+	return hasAll({
+		"sword",
+		hasAny({
+			"boomerang",
+			"bow",
+			"clawshot"
+		}),
+		"shadowcrystal"
+	})
 end
 
 function canDefeatDarkhammer()
-	return hasAny({"sword", "ballchain", "bow", "shadowcrystal", hasBombs()})
-end
-function canDefeatDarkhammerGlitched()
-	return hasAny({canDefeatDarkhammer(), "boots"})
+	return hasAny({
+		"sword",
+		"ballchain",
+		"bow",
+		"shadowcrystal",
+		hasBombs(),
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			hasAny({
+				hasAll({
+					canDoNicheStuff(),
+					"boots"
+				}),
+				hasAll({
+					canDoDifficultCombat(),
+					canUseBacksliceAsSword()
+				})
+			})
+		})
+	})
 end
 
 function canDefeatPhantomZant()
-	return hasAny({"shadowcrystal", "sword"})
+	return hasAny({
+		"shadowcrystal",
+		"sword"
+	})
 end
 
 function canDefeatDiababa()
-	return hasAny({canLaunchBombs(), hasAll({"boomerang", hasAny({"sword", "ballchain", "shadowcrystal", hasBombs()})})})
-end
-function canDefeatDiababaGlitched()
-	return hasAny({canDefeatDiababa(), hasAll({"boomerang", "boots"})})
+	return hasAny({
+		canLaunchBombs(),
+		hasAll({
+			"boomerang",
+			hasAny({
+				"sword",
+				"ballchain",
+				"shadowcrystal",
+				hasBombs()
+			})
+		}),
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			"boomerang",
+			hasAny({
+				hasAll({
+					canDoNicheStuff(),
+					"boots"
+				}),
+				hasAll({
+					canDoDifficultCombat(),
+					canUseBacksliceAsSword()
+				})
+			})
+		})
+	})
 end
 
 function canDefeatFyrus()
-	return hasAll({"bow", "boots", "sword"})
+	return hasAny({
+		hasAll({
+			"bow",
+			"boots",
+			"sword"
+		}),
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			"bow",
+			"boots",
+			canDoDifficultCombat(),
+			canUseBacksliceAsSword()
+		})
+	})
 end
 
 function canDefeatMorpheel()
-	return hasAll({"zoraarmor", "boots", "sword", "clawshot"})
-end
-function canDefeatMorpheelGlitched()
-	return hasAny({canDefeatMorpheel(), hasAll({"clawshot", canDoAirRefill(), "sword"})})
+	return hasAny({
+		hasAll({
+			"zoraarmor",
+			"boots",
+			"sword",
+			"clawshot"
+		}),
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			canDoNicheStuff(),
+			"clawshot",
+			canDoAirRefill(),
+			"sword"
+		})
+	})
 end
 
 function canDefeatStallord()
-	return hasAll({"spinner", "sword"})
+	return hasAny({
+		hasAll({
+			"spinner",
+			"sword"
+		}),
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			canDoDifficultCombat(),
+			"spinner"
+		})
+	})
 end
 
 function canDefeatBlizzeta()
-	return has("ballchain")
+	return hasAll({
+		"ballchain"
+	})
 end
 
 function canDefeatArmogohma()
-	return hasAll({"bow", "dominionrod"})
+	return hasAll({
+		"bow",
+		"dominionrod"
+	})
 end
 
 function canDefeatArgorok()
-	return hasAll({"doubleclawshot", "ordonsword", "boots"})
-end
-function canDefeatArgorokGlitched()
-	return hasAny({canDefeatArgorok(), hasAll({"doubleclawshot", "ordonsword", "magicarmor"})})
+	return hasAny({
+		hasAll({
+			"doubleclawshot",
+			"ordonsword",
+			"boots"
+		}),
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			"doubleclawshot",
+			"ordonsword",
+			canDoNicheStuff(),
+			"magicarmor"
+		})
+	})
 end
 
 function canDefeatZant()
-	return hasAll({"mastersword", "boomerang", "clawshot", "ballchain", "boots", "zoraarmor"})
-end
-function canDefeatZantGlitched()
-	return hasAny({canDefeatZant(), hasAll({"mastersword", "boomerang", "clawshot", "ballchain", "magicarmor", canDoAirRefill()})})
+	return hasAny({
+		hasAll({
+			"mastersword",
+			"boomerang",
+			"clawshot",
+			"ballchain",
+			"boots",
+			"zoraarmor"
+		}),
+		hasAll({
+			AccessibilityLevel.SequenceBreak,
+			"mastersword",
+			"boomerang",
+			"clawshot",
+			"ballchain",
+			hasAny({
+				"boots",
+				hasAll({
+					canDoNicheStuff(),
+					"magicarmor"
+				})
+			}),
+			hasAny({
+				"zoraarmor",
+				canDoAirRefill()
+			})
+		})
+	})
 end
 
 function canDefeatGanondorf()
-	return hasAll({"shadowcrystal", "mastersword", "hiddenskill"})
+	return hasAll({
+		"shadowcrystal",
+		"mastersword",
+		"hiddenskill"
+	})
+end
+
+-- Watch for code functions
+function Splitmapchange()
+	if Tracker:FindObjectForCode("splitmap").CurrentStage == 0 then
+		Tracker:AddLayouts("layouts/layouts_maps.json")
+	elseif Tracker:FindObjectForCode("splitmap").CurrentStage == 1 then
+		Tracker:AddLayouts("layouts/split_layouts_maps.json")
+	end
+end
+function Broadcastchange()
+	if Tracker:FindObjectForCode("broadcast").CurrentStage == 0 then
+		Tracker:AddLayouts("layouts/broadcast_items.json")
+	elseif Tracker:FindObjectForCode("broadcast").CurrentStage == 1 then
+		Tracker:AddLayouts("layouts/broadcast_map.json")
+	elseif Tracker:FindObjectForCode("broadcast").CurrentStage == 2 then
+		Tracker:AddLayouts("layouts/broadcast_both.json")
+	end
+end
+function Hidefrommainmap()
+	if Tracker:FindObjectForCode("hidelayout").CurrentStage == 0 then
+		Tracker:AddLayouts("layouts/tracker.json")
+	elseif Tracker:FindObjectForCode("hidelayout").CurrentStage == 1 then
+		Tracker:AddLayouts("layouts/tracker_no_map.json")
+	elseif Tracker:FindObjectForCode("hidelayout").CurrentStage == 2 then
+		Tracker:AddLayouts("layouts/tracker_no_items.json")
+	end
+end
+function APLayoutchange()
+	if Tracker:FindObjectForCode("aplayout").CurrentStage == 0 then
+		Tracker:AddLayouts("layouts/keys_bosses.json")
+		Tracker:AddLayouts("layouts/item_grid.json")
+	elseif Tracker:FindObjectForCode("aplayout").CurrentStage == 1 then
+		Tracker:AddLayouts("layouts/archipelago_keys.json")
+		Tracker:AddLayouts("layouts/archipelago_item_grid.json")
+	end
+end
+function Bugsamountchange()
+	local n = 0
+	for _, v in pairs(BUGS_ARRAY) do
+		if Tracker:FindObjectForCode(v[2]).Active and Tracker:FindObjectForCode(v[1]).AvailableChestCount == 1 then
+			n = n + 1
+		end
+	end
+	if Tracker:FindObjectForCode("bugsamount").AcquiredCount ~= n then
+		Tracker:FindObjectForCode("bugsamount").AcquiredCount = n
+	end
+end
+function TutorialChange()
+	if Tracker:FindObjectForCode("tutorial").CurrentStage == 0 then
+		Tracker:AddLayouts("layouts/layouts_maps.json")
+	elseif Tracker:FindObjectForCode("tutorial").CurrentStage == 1 then
+		Tracker:AddLayouts("layouts/tutorial.json")
+	end
+end
+function ItemScaleChange()
+	if Tracker:FindObjectForCode("itemscale").CurrentStage == 0 then
+		Tracker:AddLayouts("layouts/archipelago_item_grid50.json")
+		Tracker:AddLayouts("layouts/archipelago_keys50.json")
+		Tracker:AddLayouts("layouts/bugs50.json")
+		Tracker:AddLayouts("layouts/portals50.json")
+	elseif Tracker:FindObjectForCode("itemscale").CurrentStage == 1 then
+		Tracker:AddLayouts("layouts/archipelago_item_grid75.json")
+		Tracker:AddLayouts("layouts/archipelago_keys75.json")
+		Tracker:AddLayouts("layouts/bugs75.json")
+		Tracker:AddLayouts("layouts/portals75.json")
+	elseif Tracker:FindObjectForCode("itemscale").CurrentStage == 2 then
+		Tracker:AddLayouts("layouts/archipelago_item_grid.json")
+		Tracker:AddLayouts("layouts/archipelago_keys.json")
+		Tracker:AddLayouts("layouts/bugs.json")
+		Tracker:AddLayouts("layouts/portals.json")
+	end
 end

@@ -2,25 +2,18 @@
 	{
 		"name": "GanondorfCastle",
 		"access_rules": [
-			"@HyruleCastleTowerClimb, spinner, doubleclawshot, $canDefeatDarknut, $canDefeatLizalfos, hcbigkey, $canDefeatGanondorf",
-			"[glitcheson], @HyruleCastleTowerClimb, spinner, clawshot, $canDefeatDarknut, $canDefeatLizalfosGlitched, hcbigkey, $canDefeatGanondorf",
-			"[glitcheson], @HyruleCastleTowerClimb, $canDoJSLJA, clawshot, $canDefeatDarknut, $canDefeatLizalfosGlitched, hcbigkey, $canDefeatGanondorf",
-			"@HyruleCastleTowerClimb, spinner, doubleclawshot, $canDefeatDarknut, $canDefeatLizalfos, bkkeysy, $canDefeatGanondorf",
-			"[glitcheson], @HyruleCastleTowerClimb, spinner, clawshot, $canDefeatDarknut, $canDefeatLizalfosGlitched, bkkeysy, $canDefeatGanondorf",
-			"[glitcheson], @HyruleCastleTowerClimb, $canDoJSLJA, clawshot, $canDefeatDarknut, $canDefeatLizalfosGlitched, bkkeysy, $canDefeatGanondorf"
+			"@HyruleCastleTowerClimb, spinner, doubleclawshot, @CanDefeatDarknut, @CanDefeatLizalfos, hcbigkey, @CanDefeatGanondorf",
+			"[glitcheson], @HyruleCastleTowerClimb, spinner, clawshot, @CanDefeatDarknut, @CanDefeatLizalfosGlitched, hcbigkey, @CanDefeatGanondorf",
+			"[glitcheson], @HyruleCastleTowerClimb, @CanDoJSLJA, clawshot, @CanDefeatDarknut, @CanDefeatLizalfosGlitched, hcbigkey, @CanDefeatGanondorf"
 		]
 	},
 	{
 		"name": "HyruleCastleEntrance",
 		"access_rules": [
-			"@CastleTownNorthBehindFirstDoor, hcopen",
-			"@CastleTownNorthBehindFirstDoor, hcvanilla, ptcompleted",
-			"@CastleTownNorthBehindFirstDoor, hcfusedshadows, fusedshadows:3",
-			"@CastleTownNorthBehindFirstDoor, hcmirrorshards, mirrorshards:4",
-			"@CastleTownNorthBehindFirstDoor, hcalldungeons, $hasCompletedAllDungeons",
 			"@HyruleCastleMainHall",
 			"@HyruleCastleOutsideEastWing",
-			"@HyruleCastleOutsideWestWing"
+			"@HyruleCastleOutsideWestWing",
+			"@CastleTownNorthInsideBarrier"
 		]
 	},
 	{
@@ -32,49 +25,49 @@
 	{
 		"name": "HyruleCastleInsideEastWing",
 		"access_rules": [
-			"@HyruleCastleMainHall, $canDefeatBokoblin, $canDefeatLizalfos, doubleclawshot, $canDefeatDarknut, boomerang",
-			"[glitcheson], @HyruleCastleMainHall, $canDefeatBokoblinGlitched, $canDefeatLizalfosGlitched, clawshot, $canDefeatDarknut, boomerang",
-			"@HyruleCastleThirdFloorBalcony, lantern, $canDefeatDinalfos"
+			"@HyruleCastleMainHall, @CanDefeatBokoblin, @CanDefeatLizalfos, doubleclawshot, @CanDefeatDarknut, boomerang",
+			"[glitcheson], @HyruleCastleMainHall, @CanDefeatBokoblinGlitched, @CanDefeatLizalfosGlitched, clawshot, @CanDefeatDarknut, boomerang",
+			"@HyruleCastleThirdFloorBalcony, lantern, @CanDefeatDinalfos"
 		]
 	},
 	{
 		"name": "HyruleCastleInsideWestWing",
 		"access_rules": [
-			"@HyruleCastleMainHall, $canDefeatBokoblin, $canDefeatLizalfos, doubleclawshot, $canDefeatDarknut, boomerang",
-			"[glitcheson], @HyruleCastleMainHall, $canDefeatBokoblinGlitched, $canDefeatLizalfosGlitched, clawshot, $canDefeatDarknut, boomerang",
-			"@HyruleCastleThirdFloorBalcony, $canKnockDownHCPainting, $canDefeatLizalfos, $canDefeatDarknut",
-			"[glitcheson], @HyruleCastleThirdFloorBalcony, $canKnockDownHCPaintingGlitched, $canDefeatLizalfosGlitched, $canDefeatDarknut"
+			"@HyruleCastleMainHall, @CanDefeatBokoblin, @CanDefeatLizalfos, doubleclawshot, @CanDefeatDarknut, boomerang",
+			"[glitcheson], @HyruleCastleMainHall, @CanDefeatBokoblinGlitched, @CanDefeatLizalfosGlitched, clawshot, @CanDefeatDarknut, boomerang",
+			"@HyruleCastleThirdFloorBalcony, @CanDefeatDarknut, @CanDefeatLizalfos, @CanKnockDownHCPainting",
+			"[glitcheson], @HyruleCastleThirdFloorBalcony, @CanDefeatDarknut, @CanDefeatLizalfosGlitched, @CanKnockDownHCPaintingGlitched"
 		]
 	},
 	{
 		"name": "HyruleCastleMainHall",
 		"access_rules": [
 			"@HyruleCastleEntrance, hcsmallkey:1",
-			"@HyruleCastleEntrance, skkeysy",
+			"@HyruleCastleInsideEastWing",
 			"@HyruleCastleInsideWestWing"
 		]
 	},
 	{
 		"name": "HyruleCastleOutsideEastWing",
 		"access_rules": [
-			"@HyruleCastleEntrance, $canDefeatBokoblinRed",
-			"[glitcheson], @HyruleCastleEntrance, $canDefeatBokoblinRedGlitched",
+			"@HyruleCastleEntrance, @CanDefeatBokoblinRed",
+			"[glitcheson], @HyruleCastleEntrance, @CanDefeatBokoblinRedGlitched",
 			"@HyruleCastleGraveyard, shadowcrystal"
 		]
 	},
 	{
 		"name": "HyruleCastleOutsideWestWing",
 		"access_rules": [
-			"@HyruleCastleEntrance, $canDefeatBokoblinRed",
-			"[glitcheson], @HyruleCastleEntrance, $canDefeatBokoblinRedGlitched"
+			"@HyruleCastleEntrance, @CanDefeatBokoblinRed",
+			"[glitcheson], @HyruleCastleEntrance, @CanDefeatBokoblinRedGlitched"
 		]
 	},
 	{
 		"name": "HyruleCastleThirdFloorBalcony",
 		"access_rules": [
-			"@HyruleCastleInsideEastWing, lantern, $canDefeatDinalfos",
-			"@HyruleCastleInsideWestWing, $canKnockDownHCPainting, $canDefeatLizalfos, $canDefeatDarknut",
-			"[glitcheson], @HyruleCastleInsideWestWing, $canKnockDownHCPaintingGlitched, $canDefeatLizalfosGlitched, $canDefeatDarknut",
+			"@HyruleCastleInsideEastWing, lantern, @CanDefeatDinalfos",
+			"@HyruleCastleInsideWestWing, @CanKnockDownHCPainting, @CanDefeatLizalfos, @CanDefeatDarknut",
+			"[glitcheson], @HyruleCastleInsideWestWing, @CanKnockDownHCPaintingGlitched, @CanDefeatLizalfosGlitched, @CanDefeatDarknut",
 			"@HyruleCastleTowerClimb"
 		]
 	},
@@ -83,19 +76,15 @@
 		"access_rules": [
 			"@GanondorfCastle",
 			"@HyruleCastleThirdFloorBalcony, hcsmallkey:2",
-			"@HyruleCastleThirdFloorBalcony, skkeysy",
 			"@HyruleCastleTreasureRoom"
 		]
 	},
 	{
 		"name": "HyruleCastleTreasureRoom",
 		"access_rules": [
-			"@HyruleCastleTowerClimb, hcsmallkey:3, spinner, doubleclawshot, $canDefeatDarknut, $canDefeatLizalfos",
-			"@HyruleCastleTowerClimb, skkeysy, spinner, doubleclawshot, $canDefeatDarknut, $canDefeatLizalfos",
-			"[glitcheson], @HyruleCastleTowerClimb, hcsmallkey:3, spinner, clawshot, $canDefeatDarknut, $canDefeatLizalfosGlitched",
-			"[glitcheson], @HyruleCastleTowerClimb, skkeysy, spinner, clawshot, $canDefeatDarknut, $canDefeatLizalfosGlitched",
-			"[glitcheson], @HyruleCastleTowerClimb, hcsmallkey:3, $canDoJSLJA, clawshot, $canDefeatDarknut, $canDefeatLizalfosGlitched",
-			"[glitcheson], @HyruleCastleTowerClimb, skkeysy, $canDoJSLJA, clawshot, $canDefeatDarknut, $canDefeatLizalfosGlitched"
+			"@HyruleCastleTowerClimb, hcsmallkey:3, spinner, doubleclawshot, @CanDefeatDarknut, @CanDefeatLizalfos",
+			"[glitcheson], @HyruleCastleTowerClimb, hcsmallkey:3, spinner, clawshot, @CanDefeatDarknut, @CanDefeatLizalfosGlitched",
+			"[glitcheson], @HyruleCastleTowerClimb, hcsmallkey:3, @CanDoJSLJA, clawshot, @CanDefeatDarknut, @CanDefeatLizalfosGlitched"
 		]
 	}
 ]

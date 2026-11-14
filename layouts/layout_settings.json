@@ -7,46 +7,67 @@
 		"rows": [
 			[
 				"glitched",
-				"poes",
 				"goldenbugs",
-				"castlerequirements",
-				"palacerequirements",
-				"faronwoods"
+				"skycharacters",
+				"npcitems",
+				"shopitems",
+				"",
+				"splitmap",
+				"itemscale"
 			],
 			[
+				"hiddenskills",
+				"poes",
+				"heartpieces",
+				"freerupees",
+				"hiddenrupees",
+				"",
+				"broadcast"
+			],
+			[
+				"castlerequirements",
+				"barrieramount",
+				"castlebkrequirements",
+				"bigkeygateamount",
+				"palacerequirements",
+				"",
+				"hidelayout"
+			],
+			[
+				"smallkeys",
+				"bigkeys",
+				"dooroftime",
+				"goronminesshortcut",
+				"hyrulecastleshortcut",
+				"",
+				"hints"
+			],
+			[
+				"goronminesentrance",
 				"skiplakebedentrance",
 				"skiparbitersentrance",
 				"skipsnowpeakentrance",
 				"skipcityintheskyentrance",
-				"skipmdh",
-				"skipprologue"
+				"",
+				"tutorial"
 			],
 			[
-				"goronminesentrance",
+				"skipskullkidfight",
 				"templeoftimeentrance",
-				"dooroftime",
-				"farontwilightcleared",
-				"eldintwilightcleared",
-				"lanayrutwilightcleared"
+				"faronwoods",
+				"openmap",
+				"skipbridgedonation",
+				"",
+				"autotab"
 			],
 			[
-				"increasewallet",
+				"walletsize",
 				"transformanywhere",
 				"bonksdodamage",
 				"damagemagnification",
-				"smallkeys",
-				"bigkeys"
-			],
-			[
-				"openmap"
-			],
-			[
-				"hints",
-				"splitmap",
-				"broadcast",
-				"hidelayout",
-				"aplayout",
-				"autotab"
+				"iliaquest",
+				"",
+				"autozoom"
 			]
 		]
 	}

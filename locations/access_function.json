@@ -1,0 +1,1827 @@
+[
+    {
+        "name": "CanWarp",
+        "access_rules": [
+            "shadowcrystal, @SouthFaronWoods",
+            "shadowcrystal, @SouthFaronWoodsBehindGate",
+            "shadowcrystal, @SouthFaronWoodsCorosLedge",
+            "shadowcrystal, @SouthFaronWoodsOwlStatueArea",
+            "shadowcrystal, @MistAreaNearFaronWoodsCave",
+            "shadowcrystal, @MistAreaUnderOwlStatueChest",
+            "shadowcrystal, @MistAreaOutsideFaronMistCave",
+            "shadowcrystal, @MistAreaNearNorthFaronWoods",
+            "shadowcrystal, @NorthFaronWoods",
+            "shadowcrystal, @LostWoods",
+            "shadowcrystal, @LostWoodsLowerBattleArena",
+            "shadowcrystal, @LostWoodsUpperBattleArena",
+            "shadowcrystal, @SacredGroveBeforeBlock",
+            "shadowcrystal, @SacredGroveUpper",
+            "shadowcrystal, @SacredGroveLower",
+            "shadowcrystal, @FaronField",
+            "shadowcrystal, @KakarikoGorge",
+            "shadowcrystal, @KakarikoGorgeBehindGate",
+            "shadowcrystal, @DeathMountainNearKakariko",
+            "shadowcrystal, @DeathMountainTrail",
+            "shadowcrystal, @DeathMountainOutsideSumoHall",
+            "shadowcrystal, @DeathMountainElevatorLower",
+            "shadowcrystal, @EldinField",
+            "shadowcrystal, @EldinFieldNearCastleTown",
+            "shadowcrystal, @EldinFieldFromLavaCaveLower",
+            "shadowcrystal, @EldinFieldGrottoPlatform",
+            "shadowcrystal, @EldinFieldOutsideHiddenVillage",
+            "shadowcrystal, @LanayruField",
+            "shadowcrystal, @LanayruFieldBehindBoulder",
+            "shadowcrystal, @HyruleFieldNearSpinnerRails",
+            "shadowcrystal, @UpperZorasRiver",
+            "shadowcrystal, @FishingHole",
+            "shadowcrystal, @ZorasDomain",
+            "shadowcrystal, @ZorasDomainWestLedge",
+            "shadowcrystal, @ZorasDomainThroneRoom",
+            "shadowcrystal, @SnowpeakClimbLower",
+            "shadowcrystal, @SnowpeakClimbUpper",
+            "shadowcrystal, @SnowpeakSummitUpper",
+            "shadowcrystal, @SnowpeakSummitLower",
+            "shadowcrystal, @OutsideCastleTownWest",
+            "shadowcrystal, @OutsideCastleTownWestGrottoLedge",
+            "shadowcrystal, @CastleTownWest",
+            "shadowcrystal, @CastleTownCenter",
+            "shadowcrystal, @CastleTownEast",
+            "shadowcrystal, @CastleTownDoctorsOfficeBalcony",
+            "shadowcrystal, @OutsideCastleTownEast",
+            "shadowcrystal, @CastleTownSouth",
+            "shadowcrystal, @OutsideCastleTownSouth",
+            "shadowcrystal, @LakeHyliaBridge",
+            "shadowcrystal, @LakeHylia",
+            "shadowcrystal, @GerudoDesert",
+            "shadowcrystal, @GerudoDesertBasin",
+            "shadowcrystal, @GerudoDesertOutsideBulblinCamp",
+            "shadowcrystal, @BulblinCamp",
+            "shadowcrystal, @MirrorChamberLower",
+            "shadowcrystal, @MirrorChamberUpper",
+            "shadowcrystal, @MirrorChamberPortal",
+            "shadowcrystal, @OrdonVillage",
+            "shadowcrystal, @OutsideLinksHouse",
+            "shadowcrystal, @OrdonSpring",
+            "shadowcrystal, @OrdonBridge"
+        ]
+    },
+    {
+        "name": "CanChangeTime",
+        "access_rules": [
+            "shadowcrystal",
+            "@SouthFaronWoods",
+            "@SouthFaronWoodsBehindGate",
+            "@SouthFaronWoodsCorosLedge",
+            "@SouthFaronWoodsOwlStatueArea",
+            "@SouthFaronWoodsAboveOwlStatue",
+            "@NorthFaronWoods",
+            "@SacredGroveBeforeBlock",
+            "@SacredGroveUpper",
+            "@SacredGroveLower",
+            "@FaronField",
+            "@KakarikoGorge",
+            "@KakarikoGorgeBehindGate",
+            "@DeathMountainNearKakariko",
+            "@DeathMountainTrail",
+            "@DeathMountainVolcano",
+            "@DeathMountainOutsideSumoHall",
+            "@DeathMountainElevatorLower",
+            "@EldinField",
+            "@EldinFieldNearCastleTown",
+            "@EldinFieldLavaCaveLedge",
+            "@EldinFieldFromLavaCaveLower",
+            "@EldinFieldGrottoPlatform",
+            "@EldinFieldOutsideHiddenVillage",
+            "@LanayruField",
+            "@LanayruFieldBehindBoulder",
+            "@HyruleFieldNearSpinnerRails",
+            "@UpperZorasRiver",
+            "@FishingHole",
+            "@ZorasDomain",
+            "@ZorasDomainWestLedge",
+            "@ZorasDomainThroneRoom",
+            "@SnowpeakClimbLower",
+            "@SnowpeakClimbUpper",
+            "@SnowpeakSummitLower",
+            "@OutsideCastleTownWest",
+            "@OutsideCastleTownWestGrottoLedge",
+            "@CastleTownWest",
+            "@CastleTownCenter",
+            "@CastleTownEast",
+            "@CastleTownDoctorsOfficeBalcony",
+            "@OutsideCastleTownEast",
+            "@CastleTownSouth",
+            "@OutsideCastleTownSouth",
+            "@LakeHyliaBridge",
+            "@LakeHyliaBridgeGrottoLedge",
+            "@LakeHylia",
+            "@LakeHyliaCaveEntrance",
+            "@LakeHyliaLakebedTempleEntrance",
+            "@GerudoDesert",
+            "@GerudoDesertCaveofOrdealsPlateau",
+            "@GerudoDesertBasin",
+            "@GerudoDesertNorthEastLedge",
+            "@GerudoDesertOutsideBulblinCamp",
+            "@BulblinCamp",
+            "@MirrorChamberLower",
+            "@MirrorChamberUpper",
+            "@MirrorChamberPortal"
+        ]
+    },
+    {
+        "name": "OrdonaMapRooms",
+        "access_rules": [
+            "@OrdonVillage",
+            "@OrdonRanch",
+            "@OrdonSpring",
+            "@OutsideLinksHouse",
+            "@OrdonBridge"
+        ]
+    },
+    {
+        "name": "FaronMapRooms",
+        "access_rules": [
+            "@SouthFaronWoods",
+            "@SouthFaronWoodsBehindGate",
+            "@SouthFaronWoodsCorosLedge",
+            "@SouthFaronWoodsOwlStatueArea",
+            "@SouthFaronWoodsAboveOwlStatue",
+            "@MistAreaNearFaronWoodsCave",
+            "@MistAreaInsideMist",
+            "@MistAreaUnderOwlStatueChest",
+            "@MistAreaNearOwlStatueChest",
+            "@MistAreaCenterStump",
+            "@MistAreaOutsideFaronMistCave",
+            "@MistAreaNearNorthFaronWoods",
+            "@MistAreaFaronMistCave",
+            "@NorthFaronWoods",
+            "@LostWoods",
+            "@LostWoodsLowerBattleArena",
+            "@LostWoodsUpperBattleArena",
+            "@SacredGroveBeforeBlock",
+            "@SacredGroveUpper",
+            "@SacredGroveLower",
+            "@SacredGrovePast",
+            "@SacredGrovePastBehindWindow",
+            "@FaronField"
+        ]
+    },
+    {
+        "name": "EldinMapRooms",
+        "access_rules": [
+            "@KakarikoGorge",
+            "@KakarikoGorgeCaveEntrance",
+            "@KakarikoGorgeBehindGate",
+            "@LowerKakarikoVillage",
+            "@UpperKakarikoVillage",
+            "@KakarikoTopofWatchtower",
+            "@KakarikoVillageBehindGate",
+            "@KakarikoGraveyard",
+            "@DeathMountainNearKakariko",
+            "@DeathMountainTrail",
+            "@DeathMountainVolcano",
+            "@DeathMountainHotSpring",
+            "@DeathMountainOutsideSumoHall",
+            "@DeathMountainElevatorLower",
+            "@EldinField",
+            "@EldinFieldLavaCaveLedge",
+            "@EldinFieldFromLavaCaveLower"
+        ]
+    },
+    {
+        "name": "LanayruMapRooms",
+        "access_rules": [
+            "@LanayruField",
+            "@LanayruFieldCaveEntrance",
+            "@LanayruFieldBehindBoulder",
+            "@HyruleFieldNearSpinnerRails",
+            "@UpperZorasRiver",
+            "@FishingHole",
+            "@ZorasDomain",
+            "@ZorasDomainWestLedge",
+            "@ZorasDomainThroneRoom",
+            "@ZorasDomainTopofWaterfall",
+            "OutsideCastleTownWest",
+            "@OutsideCastleTownWestGrottoLedge",
+            "@CastleTownWest",
+            "@CastleTownCenter",
+            "@CastleTownNorth",
+            "@CastleTownNorthBehindFirstDoor",
+            "@CastleTownNorthInsideBarrier",
+            "@CastleTownEast",
+            "@CastleTownDoctorsOfficeBalcony",
+            "@OutsideCastleTownEast",
+            "@CastleTownSouth",
+            "@SouthCastleTownDoors",
+            "@OutsideCastleTownSouth",
+            "@LakeHyliaBridge",
+            "@LakeHyliaBridgeGrottoLedge",
+            "@LakeHylia",
+            "@LakeHyliaFlightByFowl",
+            "@LakeHyliaCaveEntrance",
+            "@LakeHyliaLakebedTempleEntrance",
+            "@LakeHyliaLanayruSpring"
+        ]
+    },
+    {
+        "name": "SnowpeakMapRooms",
+        "access_rules": [
+            "@SnowpeakClimbLower",
+            "@SnowpeakClimbUpper",
+            "@SnowpeakSummitUpper",
+            "@SnowpeakSummitLower"
+        ]
+    },
+    {
+        "name": "GerudoMapRooms",
+        "access_rules": [
+            "@GerudoDesert",
+            "@GerudoDesertCaveofOrdealsPlateau",
+            "@GerudoDesertBasin",
+            "@GerudoDesertNorthEastLedge",
+            "@GerudoDesertOutsideBulblinCamp",
+            "@BulblinCamp",
+            "@OutsideArbitersGrounds",
+            "@MirrorChamberLower",
+            "@MirrorChamberUpper",
+            "@MirrorChamberPortal"
+        ]
+    },
+    {
+        "name": "CanUseLantern",
+        "access_rules": [
+            "lantern, @CanRefillOil"
+        ]
+    },
+    {
+        "name": "CanUseBow",
+        "access_rules": [
+            "bow, @CanGetArrows"
+        ]
+    },
+    {
+        "name": "CanGetHotSpringWater",
+        "access_rules": [
+            "@LowerKakarikoVillage, @HasBottle",
+            "@DeathMountainElevatorLower, @CanDefeatGoron, @HasBottle"
+        ]
+    },
+    {
+        "name": "HasDamagingItem",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "@CanUseBow",
+            "@HasBombs",
+            "boots",
+            "shadowcrystal",
+            "spinner"
+        ]
+    },
+    {
+        "name": "HasSword",
+        "access_rules": [
+            "sword"
+        ]
+    },
+    {
+        "name": "CanDefeatAeralfos",
+        "access_rules": [
+            "clawshot, @HasSword",
+            "clawshot, ballchain",
+            "clawshot, shadowcrystal",
+            "@CanDoNiecheStuff, boots"
+        ]
+    },
+    {
+        "name": "CanDefeatArmos",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "@CanUseBow",
+            "@CanDoNiecheStuff, boots",
+            "shadowcrystal",
+            "clawshot",
+            "@HasBombs",
+            "spinner",
+            "@CanUseBacksliceAsSword"
+        ]
+    },
+    {
+        "name": "CanDefeatBabaSerpent",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "@CanUseBow",
+            "@CanDoNiecheStuff, boots",
+            "spinner",
+            "shadowcrystal",
+            "@HasBombs",
+            "@CanUseBacksliceAsSword"
+        ]
+    },
+    {
+        "name": "CanDefeatHangingBabaSerpent",
+        "access_rules": [
+            "boomerang, @CanDefeatBabaSerpent",
+            "@CanUseBow, @CanDefeatBabaSerpent"
+        ]
+    },
+    {
+        "name": "CanDefeatBabyGohma",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "@CanUseBow",
+            "@CanDoNiecheStuff, boots",
+            "shadowcrystal",
+            "clawshot",
+            "@HasBombs",
+            "spinner",
+            "@CanUseBacksliceAsSword"
+        ]
+    },
+    {
+        "name": "CanDefeatBari",
+        "access_rules": [
+            "@CanUseWaterBombs",
+            "clawshot"
+        ]
+    },
+    {
+        "name": "CanDefeatBeamos",
+        "access_rules": [
+            "ballchain",
+            "@CanUseBow",
+            "@HasBombs"
+        ]
+    },
+    {
+        "name": "CanDefeatBigBaba",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "@CanUseBow",
+            "@CanDoNiecheStuff, boots",
+            "shadowcrystal",
+            "spinner",
+            "@HasBombs",
+            "@CanUseBacksliceAsSword"
+        ]
+    },
+    {
+        "name": "CanDefeatChu",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "@CanUseBow",
+            "@CanDoNiecheStuff, boots",
+            "spinner",
+            "shadowcrystal",
+            "clawshot",
+            "@HasBombs",
+            "@CanUseBacksliceAsSword"
+        ]
+    },
+    {
+        "name": "CanDefeatBokoblin",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "@CanUseBow",
+            "@CanDoNiecheStuff, boots",
+            "spinner",
+            "slingshot",
+            "shadowcrystal",
+            "@HasBombs",
+            "@CanUseBacksliceAsSword"
+        ]
+    },
+    {
+        "name": "CanDefeatBokoblinRed",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "bow:3, @CanGetArrows",
+            "shadowcrystal",
+            "@HasBombs",
+            "@CanUseBacksliceAsSword",
+            "@CanDoDifficultCombat, boots",
+            "@CanDoDifficultCombat, spinner"
+        ]
+    },
+    {
+        "name": "CanDefeatBombfish",
+        "access_rules": [
+            "boots, @HasSword",
+            "boots, clawshot",
+            "boots, @HasShield, hiddenskill:2",
+            "[glitcheson], magicarmor, @HasSword",
+            "[glitcheson], magicarmor, clawshot",
+            "[glitcheson], magicarmor, @HasShield, hiddenskill:2"
+        ]
+    },
+    {
+        "name": "CanDefeatBombling",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "@CanUseBow",
+            "@CanDoNiecheStuff, boots",
+            "spinner",
+            "shadowcrystal",
+            "clawshot"
+        ]
+    },
+    {
+        "name": "CanDefeatBomskit",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "@CanUseBow",
+            "spinner",
+            "shadowcrystal",
+            "@HasBombs",
+            "@CanUseBacksliceAsSword",
+            "@CanDoNiecheStuff, boots"
+        ]
+    },
+    {
+        "name": "CanDefeatBubble",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "@CanUseBow",
+            "@CanDoNiecheStuff, boots",
+            "spinner",
+            "shadowcrystal",
+            "@CanUseBacksliceAsSword"
+        ]
+    },
+    {
+        "name": "CanDefeatBulblin",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "@CanUseBow",
+            "@CanDoNiecheStuff, boots",
+            "spinner",
+            "shadowcrystal",
+            "@HasBombs",
+            "@CanUseBacksliceAsSword"
+        ]
+    },
+    {
+        "name": "CanDefeatChilfos",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "@CanDoNiecheStuff, boots",
+            "shadowcrystal",
+            "spinner",
+            "@HasBombs",
+            "@CanUseBacksliceAsSword"
+        ]
+    },
+    {
+        "name": "CanDefeatChuWorm",
+        "access_rules": [
+            "@HasSword, @HasBombs",
+            "ballchain, @HasBombs",
+            "@CanUseBow, @HasBombs",
+            "@CanDoNiecheStuff, boots, @HasBombs",
+            "spinner, @HasBombs",
+            "shadowcrystal, @HasBombs",
+            "@CanUseBacksliceAsSword, @HasBombs",
+            "@HasSword, clawshot",
+            "ballchain, clawshot",
+            "@CanUseBow, clawshot",
+            "@CanDoNiecheStuff, boots, clawshot",
+            "spinner, clawshot",
+            "shadowcrystal, clawshot",
+            "@CanUseBacksliceAsSword, clawshot"
+        ]
+    },
+    {
+        "name": "CanDefeatDarknut",
+        "access_rules": [
+            "sword",
+            "@CanDoDifficultCombat, @HasBombs",
+            "@CanDoDifficultCombat, ballchain"
+        ]
+    },
+    {
+        "name": "CanDefeatDekuBaba",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "@CanUseBow",
+            "@CanDoNiecheStuff, boots",
+            "spinner",
+            "@HasShield, hiddenskill:2",
+            "slingshot",
+            "clawshot",
+            "@HasBombs",
+            "@CanUseBacksliceAsSword"
+        ]
+    },
+    {
+        "name": "CanDefeatDekuLike",
+        "access_rules": [
+            "@HasBombs"
+        ]
+    },
+    {
+        "name": "CanDefeatDodongo",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "@CanUseBow",
+            "@CanDoNiecheStuff, boots",
+            "spinner",
+            "shadowcrystal",
+            "@HasBombs",
+            "@CanUseBacksliceAsSword"
+        ]
+    },
+    {
+        "name": "CanDefeatDinalfos",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "shadowcrystal"
+        ]
+    },
+    {
+        "name": "CanDefeatFireBubble",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "@CanUseBow",
+            "@CanDoNiecheStuff, boots",
+            "spinner",
+            "shadowcrystal",
+            "@CanUseBacksliceAsSword"
+        ]
+    },
+    {
+        "name": "CanDefeatFireKeese",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "@CanUseBow",
+            "@CanDoNiecheStuff, boots",
+            "spinner",
+            "slingshot",
+            "shadowcrystal",
+            "@CanUseBacksliceAsSword"
+        ]
+    },
+    {
+        "name": "CanDefeatFireToadpoli",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "@CanUseBow",
+            "hylianshield, hiddenskill:2",
+            "@CanDoDifficultCombat, shadowcrystal"
+        ]
+    },
+    {
+        "name": "CanDefeatFreezard",
+        "access_rules": [
+            "ballchain"
+        ]
+    },
+    {
+        "name": "CanDefeatGoron",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "@CanUseBow",
+            "@CanDoNiecheStuff, boots",
+            "spinner",
+            "@HasShield, hiddenskill:2",
+            "slingshot",
+            "@CanDoDifficultCombat, @CanUseLantern",
+            "clawshot",
+            "@HasBombs",
+            "@CanUseBacksliceAsSword"
+        ]
+    },
+    {
+        "name": "CanDefeatGhoulRat",
+        "access_rules": [
+            "shadowcrystal"
+        ]
+    },
+    {
+        "name": "CanDefeatGuay",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "@CanUseBow",
+            "@CanDoNiecheStuff, boots",
+            "@CanDoDifficultCombat, spinner",
+            "shadowcrystal",
+            "slingshot"
+        ]
+    },
+    {
+        "name": "CanDefeatHelmasaur",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "@CanUseBow",
+            "@CanDoNiecheStuff, boots",
+            "spinner",
+            "shadowcrystal",
+            "@HasBombs",
+            "@CanUseBacksliceAsSword"
+        ]
+    },
+    {
+        "name": "CanDefeatHelmasaurus",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "@CanUseBow",
+            "@CanDoNiecheStuff, boots",
+            "spinner",
+            "shadowcrystal",
+            "@HasBombs",
+            "@CanUseBacksliceAsSword"
+        ]
+    },
+    {
+        "name": "CanDefeatIceBubble",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "@CanUseBow",
+            "@CanDoNiecheStuff, boots",
+            "spinner",
+            "shadowcrystal",
+            "@CanUseBacksliceAsSword"
+        ]
+    },
+    {
+        "name": "CanDefeatIceKeese",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "@CanUseBow",
+            "@CanDoNiecheStuff, boots",
+            "spinner",
+            "slingshot",
+            "shadowcrystal",
+            "@CanUseBacksliceAsSword"
+        ]
+    },
+    {
+        "name": "CanDefeatPoe",
+        "access_rules": [
+            "shadowcrystal"
+        ]
+    },
+    {
+        "name": "CanDefeatKargarok",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "@CanUseBow",
+            "@CanDoNiecheStuff, boots",
+            "spinner",
+            "shadowcrystal",
+            "@CanUseBacksliceAsSword"
+        ]
+    },
+    {
+        "name": "CanDefeatKeese",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "@CanUseBow",
+            "@CanDoNiecheStuff, boots",
+            "spinner",
+            "slingshot",
+            "shadowcrystal",
+            "@CanUseBacksliceAsSword"
+        ]
+    },
+    {
+        "name": "CanDefeatLeever",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "@CanUseBow",
+            "@CanDoNiecheStuff, boots",
+            "spinner",
+            "shadowcrystal",
+            "@HasBombs"
+        ]
+    },
+    {
+        "name": "CanDefeatLizalfos",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "@CanUseBow",
+            "@CanDoNiecheStuff, boots",
+            "shadowcrystal",
+            "@HasBombs",
+            "@CanUseBacksliceAsSword"
+        ]
+    },
+    {
+        "name": "CanDefeatMiniFreezard",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "@CanUseBow",
+            "@CanDoNiecheStuff, boots",
+            "spinner",
+            "shadowcrystal",
+            "@HasBombs",
+            "@CanUseBacksliceAsSword"
+        ]
+    },
+    {
+        "name": "CanDefeatMoldorm",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "@CanUseBow",
+            "@CanDoNiecheStuff, boots",
+            "spinner",
+            "shadowcrystal",
+            "@HasBombs"
+        ]
+    },
+    {
+        "name": "CanDefeatPoisonMite",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "@CanUseBow",
+            "@CanUseLantern",
+            "spinner",
+            "shadowcrystal"
+        ]
+    },
+    {
+        "name": "CanDefeatPuppet",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "@CanUseBow",
+            "@CanDoNiecheStuff, boots",
+            "spinner",
+            "shadowcrystal",
+            "@HasBombs",
+            "@CanUseBacksliceAsSword"
+        ]
+    },
+    {
+        "name": "CanDefeatRat",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "@CanUseBow",
+            "@CanDoNiecheStuff, boots",
+            "spinner",
+            "slingshot",
+            "shadowcrystal",
+            "@HasBombs",
+            "@CanUseBacksliceAsSword"
+        ]
+    },
+    {
+        "name": "CanDefeatRedeadKnight",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "@CanUseBow",
+            "@CanDoNiecheStuff, boots",
+            "shadowcrystal",
+            "@HasBombs",
+            "@CanUseBacksliceAsSword"
+        ]
+    },
+    {
+        "name": "CanDefeatShadowBeast",
+        "access_rules": [
+            "@HasSword",
+            "shadowcrystal, @CanMidnaCharge"
+        ]
+    },
+    {
+        "name": "CanDefeatShadowBulblin",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "@CanUseBow",
+            "@CanDoNiecheStuff, boots",
+            "spinner",
+            "shadowcrystal",
+            "@HasBombs",
+            "@CanUseBacksliceAsSword"
+        ]
+    },
+    {
+        "name": "CanDefeatShadowDekuBaba",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "@CanUseBow",
+            "@CanDoNiecheStuff, boots",
+            "spinner",
+            "@HasShield, hiddenskill:2",
+            "slingshot",
+            "clawshot",
+            "@HasBombs",
+            "@CanUseBacksliceAsSword"
+        ]
+    },
+    {
+        "name": "CanDefeatShadowInsect",
+        "access_rules": [
+            "shadowcrystal"
+        ]
+    },
+    {
+        "name": "CanDefeatShadowKargarok",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "@CanUseBow",
+            "@CanDoNiecheStuff, boots",
+            "spinner",
+            "shadowcrystal",
+            "@HasBombs",
+            "@CanUseBacksliceAsSword"
+        ]
+    },
+    {
+        "name": "CanDefeatShadowKeese",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "@CanUseBow",
+            "@CanDoNiecheStuff, boots",
+            "spinner",
+            "slingshot",
+            "shadowcrystal",
+            "@CanUseBacksliceAsSword"
+        ]
+    },
+    {
+        "name": "CanDefeatShadowVermin",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "@CanUseBow",
+            "@CanDoNiecheStuff, boots",
+            "spinner",
+            "shadowcrystal",
+            "@HasBombs",
+            "@CanUseBacksliceAsSword"
+        ]
+    },
+    {
+        "name": "CanDefeatShellBlade",
+        "access_rules": [
+            "@CanUseWaterBombs",
+            "@HasSword, boots",
+            "@HasSword, @CanDoNiecheStuff, magicarmor"
+        ]
+    },
+    {
+        "name": "CanDefeatSkullfish",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "@CanUseBow",
+            "@CanDoNiecheStuff, boots",
+            "spinner",
+            "shadowcrystal"
+        ]
+    },
+    {
+        "name": "CanDefeatSkulltula",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "@CanUseBow",
+            "@CanDoNiecheStuff, boots",
+            "spinner",
+            "shadowcrystal",
+            "@HasBombs",
+            "@CanUseBacksliceAsSword"
+        ]
+    },
+    {
+        "name": "CanDefeatStalfos",
+        "access_rules": [
+            "@CanSmash"
+        ]
+    },
+    {
+        "name": "CanDefeatStalhound",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "@CanUseBow",
+            "@CanDoNiecheStuff, boots",
+            "spinner",
+            "shadowcrystal",
+            "@HasBombs",
+            "@CanUseBacksliceAsSword"
+        ]
+    },
+    {
+        "name": "CanDefeatStalchild",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "@CanUseBow",
+            "@CanDoNiecheStuff, boots",
+            "spinner",
+            "shadowcrystal",
+            "@HasBombs",
+            "@CanUseBacksliceAsSword"
+        ]
+    },
+    {
+        "name": "CanDefeatTektite",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "@CanUseBow",
+            "@CanDoNiecheStuff, boots",
+            "spinner",
+            "shadowcrystal",
+            "@HasBombs",
+            "@CanUseBacksliceAsSword"
+        ]
+    },
+    {
+        "name": "CanDefeatTileWorm",
+        "access_rules": [
+            "@HasSword, boomerang",
+            "ballchain, boomerang",
+            "@CanUseBow, boomerang",
+            "shadowcrystal, boomerang",
+            "spinner, boomerang",
+            "@CanDoNiecheStuff, boots, boomerang",
+            "@HasBombs, boomerang",
+            "@CanUseBacksliceAsSword, boomerang"
+        ]
+    },
+    {
+        "name": "CanDefeatToado",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "@CanUseBow",
+            "spinner",
+            "shadowcrystal"
+        ]
+    },
+    {
+        "name": "CanDefeatWaterToadpoli",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "@CanUseBow",
+            "@HasShield, hiddenskill:2",
+            "@CanDoDifficultCombat, shadowcrystal"
+        ]
+    },
+    {
+        "name": "CanDefeatTorchSlug",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "@CanUseBow",
+            "shadowcrystal",
+            "@HasBombs"
+        ]
+    },
+    {
+        "name": "CanDefeatWalltula",
+        "access_rules": [
+            "ballchain",
+            "slingshot",
+            "@CanUseBow",
+            "boomerang",
+            "clawshot"
+        ]
+    },
+    {
+        "name": "CanDefeatWhiteWolfos",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "@CanUseBow",
+            "@CanDoNiecheStuff, boots",
+            "spinner",
+            "shadowcrystal",
+            "@HasBombs"
+        ]
+    },
+    {
+        "name": "CanDefeatYoungGohma",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "@CanUseBow",
+            "@CanDoNiecheStuff, boots",
+            "spinner",
+            "shadowcrystal",
+            "@HasBombs"
+        ]
+    },
+    {
+        "name": "CanDefeatZantHead",
+        "access_rules": [
+            "shadowcrystal",
+            "@HasSword",
+            "@CanUseBacksliceAsSword"
+        ]
+    },
+    {
+        "name": "CanDefeatOok",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "@CanUseBow",
+            "@CanDoNiecheStuff, boots",
+            "shadowcrystal",
+            "@HasBombs",
+            "@CanUseBacksliceAsSword"
+        ]
+    },
+    {
+        "name": "CanDefeatDangoro",
+        "access_rules": [
+            "@HasSword, boots",
+            "shadowcrystal, boots",
+            "@CanDoNiecheStuff, ballchain, boots",
+            "@CanUseBow, @HasBombs, boots"
+        ]
+    },
+    {
+        "name": "CanDefeatCarrierKargarok",
+        "access_rules": [
+            "shadowcrystal"
+        ]
+    },
+    {
+        "name": "CanDefeatTwilitBloat",
+        "access_rules": [
+            "shadowcrystal"
+        ]
+    },
+    {
+        "name": "CanDefeatDekuToad",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "@CanUseBow",
+            "@CanDoNiecheStuff, boots",
+            "shadowcrystal",
+            "@HasBombs",
+            "@CanUseBacksliceAsSword"
+        ]
+    },
+    {
+        "name": "CanDefeatSkullKid",
+        "access_rules": [
+            "@CanUseBow"
+        ]
+    },
+    {
+        "name": "CanDefeatKingBulblinBridge",
+        "access_rules": [
+            "@CanUseBow"
+        ]
+    },
+    {
+        "name": "CanDefeatKingBulblinDesert",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "shadowcrystal",
+            "bow:3, @CanGetArrows",
+            "@CanUseBacksliceAsSword",
+            "@CanDoDifficultCombat, spinner",
+            "@CanDoDifficultCombat, boots",
+            "@CanDoDifficultCombat, @HasBombs",
+            "@CanDoDifficultCombat, bow:2, @CanGetArrows"
+        ]
+    },
+    {
+        "name": "CanDefeatKingBulblinCastle",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "shadowcrystal",
+            "bow:3, @CanGetArrows",
+            "@CanDoDifficultCombat, spinner",
+            "@CanDoDifficultCombat, boots",
+            "@CanDoDifficultCombat, @HasBombs",
+            "@CanDoDifficultCombat, @CanUseBacksliceAsSword"
+        ]
+    },
+    {
+        "name": "CanDefeatDeathSword",
+        "access_rules": [
+            "@HasSword, boomerang, shadowcrystal",
+            "@HasSword, @CanUseBow, shadowcrystal",
+            "@HasSword, clawshot, shadowcrystal"
+        ]
+    },
+    {
+        "name": "CanDefeatDarkhammer",
+        "access_rules": [
+            "@HasSword",
+            "ballchain",
+            "@CanUseBow",
+            "@CanDoNiecheStuff, boots",
+            "shadowcrystal",
+            "@HasBombs",
+            "@CanDoDifficultCombat, @CanUseBacksliceAsSword"
+        ]
+    },
+    {
+        "name": "CanDefeatPhantomZant",
+        "access_rules": [
+            "shadowcrystal, @HasSword"
+        ]
+    },
+    {
+        "name": "CanDefeatDiababa",
+        "access_rules": [
+            "@CanLaunchBombs",
+            "boomerang, @HasSword",
+            "boomerang, ballchain",
+            "boomerang, @CanDoNiecheStuff, boots",
+            "boomerang, shadowcrystal",
+            "boomerang, @HasBombs",
+            "boomerang, @CanDoDifficultCombat, @CanUseBacksliceAsSword"
+        ]
+    },
+    {
+        "name": "CanDefeatFyrus",
+        "access_rules": [
+            "@CanUseBow, boots, @HasSword",
+            "@CanUseBow, boots, @CanDoDifficultCombat, @CanUseBacksliceAsSword"
+        ]
+    },
+    {
+        "name": "CanDefeatMorpheel",
+        "access_rules": [
+            "zoraarmor, boots, @HasSword, clawshot",
+            "@CanDoNiecheStuff, clawshot, @CanDoAirRefill, @HasSword"
+        ]
+    },
+    {
+        "name": "CanDefeatStallord",
+        "access_rules": [
+            "spinner, @HasSword",
+            "@CanDoDifficultCombat, spinner"
+        ]
+    },
+    {
+        "name": "CanDefeatBlizzeta",
+        "access_rules": [
+            "ballchain"
+        ]
+    },
+    {
+        "name": "CanDefeatArmogohma",
+        "access_rules": [
+            "@CanUseBow, dominionrod"
+        ]
+    },
+    {
+        "name": "CanDefeatArgorok",
+        "access_rules": [
+            "doubleclawshot, ordonsword, boots",
+            "doubleclawshot, ordonsword, @CanDoNiecheStuff, magicarmor"
+        ]
+    },
+    {
+        "name": "CanDefeatZant",
+        "access_rules": [
+            "mastersword, boomerang, clawshot, ballchain, boots, zoraarmor",
+            "mastersword, boomerang, clawshot, ballchain, boots, [glitcheson], @CanDoAirRefill",
+            "mastersword, boomerang, clawshot, ballchain, @CanDoNiecheStuff, magicarmor, zoraarmor",
+            "mastersword, boomerang, clawshot, ballchain, @CanDoNiecheStuff, magicarmor, [glitcheson], @CanDoAirRefill"
+        ]
+    },
+    {
+        "name": "CanDefeatGanondorf",
+        "access_rules": [
+            "shadowcrystal, mastersword, hiddenskill"
+        ]
+    },
+    {
+        "name": "CanSmash",
+        "access_rules": [
+            "ballchain",
+            "@HasBombs"
+        ]
+    },
+    {
+        "name": "CanBurnWebs",
+        "access_rules": [
+            "@CanUseLantern",
+            "@HasBombs",
+            "ballchain"
+        ]
+    },
+    {
+        "name": "CanDestroyWebsWithoutLantern",
+        "access_rules": [
+            "@HasBombs",
+            "ballchain"
+        ]
+    },
+    {
+        "name": "HasRangedItem",
+        "access_rules": [
+            "ballchain",
+            "slingshot",
+            "@CanUseBow",
+            "clawshot",
+            "boomerang"
+        ]
+    },
+    {
+        "name": "HasShield",
+        "access_rules": [
+            "hylianshield",
+            "@KakarikoMaloMart, $Not|shuffleshopson",
+            "@CastleTownGoronHouse, $Not|shuffleshopson",
+            "@DeathMountainHotSpring"
+        ]
+    },
+    {
+        "name": "CanUseBottledFairy",
+        "access_rules": [
+            "@HasBottle, @LakeHylia"
+        ]
+    },
+    {
+        "name": "CanUseBottledFairies",
+        "access_rules": [
+            "@HasBottles, @LakeHylia"
+        ]
+    },
+    {
+        "name": "CanUseOilBottle",
+        "access_rules": [
+            "@CanUseLantern, @HasBottle"
+        ]
+    },
+    {
+        "name": "CanLaunchBombs",
+        "access_rules": [
+            "boomerang, @HasBombs",
+            "@CanUseBow, @HasBombs"
+        ]
+    },
+    {
+        "name": "CanCutHangingWeb",
+        "access_rules": [
+            "clawshot",
+            "@CanUseBow",
+            "boomerang",
+            "ballchain"
+        ]
+    },
+    {
+        "name": "CanKnockDownHCPainting",
+        "access_rules": [
+            "@CanUseBow",
+            "@CanDoNiecheStuff, @HasBombs",
+            "@CanDoNiecheStuff, @HasSword, hiddenskill:6",
+            "[glitcheson], @HasSword, @CanDoMoonBoots",
+            "[glitcheson], @CanDoBSMoonBoots"
+        ]
+    },
+    {
+        "name": "CanBreakMonkeyCage",
+        "access_rules": [
+            "@HasSword",
+            "boots",
+            "spinner",
+            "ballchain",
+            "shadowcrystal",
+            "@HasBombs",
+            "@CanUseBow",
+            "clawshot",
+            "@CanDoNiecheStuff, @HasShield, hiddenskill:2"
+        ]
+    },
+    {
+        "name": "CanPressMinesSwitch",
+        "access_rules": [
+            "boots",
+            "@CanDoNiecheStuff, ballchain"
+        ]
+    },
+    {
+        "name": "CanFreeAllMonkeys",
+        "access_rules": [
+            "@CanBreakMonkeyCage, @CanUseLantern, @CanBurnWebs, boomerang, @CanDefeatBokoblin, ftsmallkey:4",
+            "@CanBreakMonkeyCage, @CanUseLantern, @CanBurnWebs, boomerang, @CanDefeatBokoblin, skkeysy",
+            "@CanBreakMonkeyCage, skkeysy, @HasBombs, @CanBurnWebs, boomerang, @CanDefeatBokoblin, ftsmallkey:4",
+            "@CanBreakMonkeyCage, skkeysy, @HasBombs, @CanBurnWebs, boomerang, @CanDefeatBokoblin, skkeysy",
+            "@CanBreakMonkeyCage, skkeysy, boots, @CanBurnWebs, boomerang, @CanDefeatBokoblin, ftsmallkey:4",
+            "@CanBreakMonkeyCage, skkeysy, boots, @CanBurnWebs, boomerang, @CanDefeatBokoblin, skkeysy"
+        ]
+    },
+    {
+        "name": "CanKnockDownHangingBaba",
+        "access_rules": [
+            "@CanUseBow",
+            "clawshot",
+            "boomerang",
+            "slingshot"
+        ]
+    },
+    {
+        "name": "CanBreakWoodenDoor",
+        "access_rules": [
+            "shadowcrystal",
+            "@HasSword",
+            "@CanSmash",
+            "@CanUseBacksliceAsSword"
+        ]
+    },
+    {
+        "name": "HasBombs",
+        "access_rules": [
+            "bombbag, @KakarikoBarnesBombShopLower",
+            "bombbag, @EldinFieldWaterBombFishGrotto, fishingrod",
+            "bombbag, @CityinTheSkyEntrance"
+        ]
+    },
+    {
+        "name": "CanUseWaterBombs",
+        "access_rules": [
+            "bombbag, @KakarikoBarnesBombShopLower",
+            "bombbag, @EldinFieldWaterBombFishGrotto, fishingrod",
+            "bombbag, @KakarikoBarnesBombShopLower, @CastleTownMaloMart"
+        ]
+    },
+    {
+        "name": "CanGetArrows",
+        "access_rules": [
+            "@LostWoods",
+            "@CanCompleteGoronMines, @KakarikoMaloMart",
+            "@CastleTownGoronHouseBalcony, $Not|shuffleshopson"
+        ]
+    },
+    {
+        "name": "CanRefillOil" ,
+        "access_rules": [
+            "@NorthFaronWoods",
+            "@SouthFaronWoods",
+            "@ArbitersGroundsEntrance",
+            "@LakeHyliaLongCave, @CanSmash",
+            "@OrdonSerasShop",
+            "@CanCompleteGoronMines, @LowerKakarikoVillage",
+            "@CastleTownGoronHouse, $Not|shuffleshopson",
+            "@DeathMountainHotSpring",
+            "@CityinTheSkyEntrance",
+            "@HyruleCastleMainHall, @CanDefeatBokoblin, @CanDefeatLizalfos, doubleclawshot, @CanDefeatDarknut",
+            "@EldinLanternCave, @CanDestroyWebsWithoutLantern, @CanDefeatChu",
+            "@HyruleCastleGraveyard, @CanSmash"
+        ]
+    },
+    {
+        "name": "CanCompletePrologue",
+        "access_rules": [
+            "@NorthFaronWoods, @CanDefeatBokoblin",
+            "skipprologueon"
+        ]
+    },
+    {
+        "name": "CanCompleteGoats1",
+        "access_rules": [
+            "@OrdonRanch",
+            "@CanCompletePrologue"
+        ]
+    },
+    {
+        "name": "CanCompleteMDH",
+        "access_rules": [
+            "skipmdhon",
+            "@CanCompleteLakebedTemple, @CastleTownSouth"
+        ]
+    },
+    {
+        "name": "CanMidnaCharge",
+        "access_rules": [
+            "@CanCompleteMDH, @CanCompleteAllTwilight"
+        ]
+    },
+    {
+        "name": "CanStrikePedestal",
+        "access_rules": [
+            "totentrancenone",
+            "totentrancewooden, woodensword",
+            "totentranceordon, ordonsword",
+            "totentrancemaster, mastersword",
+            "totentrancelight, lightmastersword"
+        ]
+    },
+    {
+        "name": "CanClearForest",
+        "access_rules": [
+            "@CanCompleteForestTemple, @CanCompletePrologue, @CanCompleteFaronTwilight",
+            "faronwoodsopen, @CanCompletePrologue, @CanCompleteFaronTwilight"
+
+        ]
+    },
+    {
+        "name": "CanCompleteFaronTwilight",
+        "access_rules": [
+            "farontwilightclearedon",
+            "@CanCompletePrologue, @SouthFaronWoods, @FaronWoodsCorosHouseLower, @MistAreaNearFaronWoodsCave, @NorthFaronWoods, @OrdonSpring, bonksdodamageoff",
+            "@CanCompletePrologue, @SouthFaronWoods, @FaronWoodsCorosHouseLower, @MistAreaNearFaronWoodsCave, @NorthFaronWoods, @OrdonSpring, bonksdodamageon, $Not|ohko",
+            "@CanCompletePrologue, @SouthFaronWoods, @FaronWoodsCorosHouseLower, @MistAreaNearFaronWoodsCave, @NorthFaronWoods, @OrdonSpring, bonksdodamageon, canUseBottledFairies"
+        ]
+    },
+    {
+        "name": "CanCompleteEldinTwilight",
+        "access_rules": [
+            "eldintwilightclearedon",
+            "@FaronField, @LowerKakarikoVillage, @KakarikoGraveyard, @KakarikoMaloMart, @KakarikoBarnesBombShopLower, @KakarikoRenadosSanctuaryBasement, @KakarikoEldeInn, @KakarikoBugHouse, @UpperKakarikoVillage, @KakarikoWatchTower, @DeathMountainVolcano, bonksdodamageoff",
+            "@FaronField, @LowerKakarikoVillage, @KakarikoGraveyard, @KakarikoMaloMart, @KakarikoBarnesBombShopLower, @KakarikoRenadosSanctuaryBasement, @KakarikoEldeInn, @KakarikoBugHouse, @UpperKakarikoVillage, @KakarikoWatchTower, @DeathMountainVolcano, bonksdodamageon, $Not|ohko",
+            "@FaronField, @LowerKakarikoVillage, @KakarikoGraveyard, @KakarikoMaloMart, @KakarikoBarnesBombShopLower, @KakarikoRenadosSanctuaryBasement, @KakarikoEldeInn, @KakarikoBugHouse, @UpperKakarikoVillage, @KakarikoWatchTower, @DeathMountainVolcano, bonksdodamageon, canUseBottledFairies"
+        ]
+    },
+    {
+        "name": "CanCompleteLanayruTwilight",
+        "access_rules": [
+            "lanayrutwilightclearedon",
+            "@NorthEldinField, @ZorasDomain, @ZorasDomainThroneRoom, @UpperZorasRiver, @LakeHylia, @LakeHyliaLanayruSpring, @CastleTownSouth, bonksdodamageoff",
+            "@NorthEldinField, @ZorasDomain, @ZorasDomainThroneRoom, @UpperZorasRiver, @LakeHylia, @LakeHyliaLanayruSpring, @CastleTownSouth, bonksdodamageon, $Not|ohko",
+            "@NorthEldinField, @ZorasDomain, @ZorasDomainThroneRoom, @UpperZorasRiver, @LakeHylia, @LakeHyliaLanayruSpring, @CastleTownSouth, bonksdodamageon, canUseBottledFairies",
+            "shadowcrystal, @ZorasDomain, @ZorasDomainThroneRoom, @UpperZorasRiver, @LakeHylia, @LakeHyliaLanayruSpring, @CastleTownSouth, bonksdodamageoff",
+            "shadowcrystal, @ZorasDomain, @ZorasDomainThroneRoom, @UpperZorasRiver, @LakeHylia, @LakeHyliaLanayruSpring, @CastleTownSouth, bonksdodamageon, $Not|ohko",
+            "shadowcrystal, @ZorasDomain, @ZorasDomainThroneRoom, @UpperZorasRiver, @LakeHylia, @LakeHyliaLanayruSpring, @CastleTownSouth, bonksdodamageon, canUseBottledFairies"
+        ]
+    },
+    {
+        "name": "CanWarpMeteor",
+        "access_rules": [
+            "@CanCompleteLanayruTwilight",
+            "@CanCompleteEldinTwilight, @ZorasDomainThroneRoom, shadowcrystal"
+        ]
+    },
+    {
+        "name": "CanCompleteAllTwilight",
+        "access_rules": [
+            "@CanCompleteFaronTwilight",
+            "@CanCompleteEldinTwilight",
+            "@CanCompleteLanayruTwilight"
+        ]
+    },
+    {
+        "name": "CanCompleteForestTemple",
+        "access_rules": [
+            "ftcompleted"
+        ]
+    },
+    {
+        "name": "CanCompleteGoronMines",
+        "access_rules": [
+            "gmcompleted"
+        ]
+    },
+    {
+        "name": "CanCompleteLakebedTemple",
+        "access_rules": [
+            "ltcompleted"
+        ]
+    },
+    {
+        "name": "CanCompleteArbitersGrounds",
+        "access_rules": [
+            "agcompleted"
+        ]
+    },
+    {
+        "name": "CanCompleteSnowpeakRuins",
+        "access_rules": [
+            "srcompleted"
+        ]
+    },
+    {
+        "name": "CanCompleteTempleofTime",
+        "access_rules": [
+            "ttcompleted"
+        ]
+    },
+    {
+        "name": "CanCompleteCityinTheSky",
+        "access_rules": [
+            "cscompleted"
+        ]
+    },
+    {
+        "name": "CanCompletePalaceofTwilight",
+        "access_rules": [
+            "ptcompleted"
+        ]
+    },
+    {
+        "name": "CanCompleteAllDungeons",
+        "access_rules": [
+            "@CanCompleteForestTemple, @CanCompleteGoronMines, @CanCompleteLakebedTemple, @CanCompleteArbitersGrounds, @CanCompleteSnowpeakRuins, @CanCompleteTempleofTime, @CanCompleteCityinTheSky, @CanCompletePalaceofTwilight"
+        ]
+    },
+    {
+        "name": "CanUnlockOrdonaMap",
+        "access_rules": [
+            "openmapon, skipprologueon",
+            "@OrdonaMapRooms"
+        ]
+    },
+    {
+        "name": "CanUnlockFaronMap",
+        "access_rules": [
+            "openmapon, farontwilightclearedon",
+            "@FaronMapRooms"
+        ]
+    },
+    {
+        "name": "CanUnlockEldinMap",
+        "access_rules": [
+            "openmapon, eldintwilightclearedon",
+            "@EldinMapRooms"
+        ]
+    },
+    {
+        "name": "CanUnlockLanayruMap",
+        "access_rules": [
+            "openmapon, lanayrutwilightclearedon",
+            "@LanayruMapRooms"
+        ]
+    },
+    {
+        "name": "CanUnlockSnowpeakMap",
+        "access_rules": [
+            "openmapon, skipsnowpeakentranceon",
+            "@SnowpeakMapRooms"
+        ]
+    },
+    {
+        "name": "CanUnlockGerudoMap",
+        "access_rules": [
+            "openmapon",
+            "@GerudoMapRooms"
+        ]
+    },
+    {
+        "name": "CanDoDifficultCombat",
+        "access_rules": [
+            "FALSE"
+        ]
+    },
+    {
+        "name": "CanDoNiecheStuff",
+        "access_rules": [
+            "[glitcheson]"
+        ]
+    },
+    {
+        "name": "CanUseBacksliceAsSword",
+        "access_rules": [
+            "@CanDoNiecheStuff, hiddenskill:3"
+        ]
+    },
+    {
+        "name": "CanGetBugWithLantern",
+        "access_rules": [
+            "FALSE"
+        ]
+    },
+    {
+        "name": "CanBreakHCBarrier",
+        "access_rules": [
+            "hcopen",
+            "hcfusedshadows, $BarrierRequirement|fusedshadows|barrieramount",
+            "hcmirrorshards, $BarrierRequirement|mirrorshards|barrieramount",
+            "hcdungeons, $BarrierRequirement|hcdungeons|barrieramount",
+            "hcvanilla, @CanCompletePalaceofTwilight",
+            "hcpoesouls, $BarrierRequirement|poesouls|barrieramount",
+            "hchearts, $BarrierRequirement|hchearts|barrieramount"
+        ]
+    },
+    {
+        "name": "CanOpenHCBKGate",
+        "access_rules": [
+            "hcbknone",
+            "hcbkfusedshadows, $BarrierRequirement|fusedshadows|bkgateamount",
+            "hcbkmirrorshards, $BarrierRequirement|mirrorshards|bkgateamount",
+            "hcbkdungeons, $BarrierRequirement|hcdungeons|bkgateamount",
+            "hcbkvanilla, @CanCompletePalaceofTwilight",
+            "hcbkpoesouls, $BarrierRequirement|poesouls|bkgateamount",
+            "hcbkhearts, $BarrierRequirement|hchearts|bkgateamount"
+        ]
+    },
+    {
+        "name": "CanBuyMagicArmor",
+        "access_rules": [
+            "largewalletsize",
+            "hdwalletsize, mediumwallet",
+            "vanillawalletsize, mediumwallet",
+            "reducedwalletsize, largewallet"
+        ]
+    },
+    {
+        "name": "HasSwordOrBS",
+        "access_rules": [
+            "sword",
+            "hiddenskill:3"
+        ]
+    },
+    {
+        "name": "HasBottle",
+        "access_rules": [
+            "bottle, @CanUseLantern"
+        ]
+    },
+    {
+        "name": "HasBottles",
+        "access_rules": [
+            "bottle:2, @CanUseLantern"
+        ]
+    },
+    {
+        "name": "HasHeavyMod",
+        "access_rules": [
+            "boots, magicarmor"
+        ]
+    },
+    {
+        "name": "HasCutsceneItem",
+        "access_rules": [
+            "skybook",
+            "@HasBottle",
+            "horsecall"
+        ]
+    },
+    {
+        "name": "CanDoLJA",
+        "access_rules": [
+            "@HasSword, boomerang"
+        ]
+    },
+    {
+        "name": "CanDoJSLJA",
+        "access_rules": [
+            "@HasSword, boomerang, hiddenskill:6"
+        ]
+    },
+    {
+        "name": "CanDoMapGlitch",
+        "access_rules": [
+            "shadowcrystal, @KakarikoGorge"
+        ]
+    },
+    {
+        "name": "CanDoStorage",
+        "access_rules": [
+            "@CanDoMapGlitch, @HasOneHandedItem"
+        ]
+    },
+    {
+        "name": "HasOneHandedItem",
+        "access_rules": [
+            "@HasSword",
+            "@HasBottle",
+            "boomerang",
+            "clawshot",
+            "@CanUseLantern",
+            "@CanUseBow",
+            "slingshot",
+            "dominionrod"
+        ]
+    },
+    {
+        "name": "CanDoMoonBoots",
+        "access_rules": [
+            "@HasSword, magicarmor",
+            "@HasSword, boots, $GetItemWheelSlotCount|3"
+        ]
+    },
+    {
+        "name": "CanDoJSMoonBoots",
+        "access_rules": [
+            "@CanDoMoonBoots, hiddenskill:6"
+        ]
+    },
+    {
+        "name": "CanDoBSMoonBoots",
+        "access_rules": [
+            "@CanDoMoonBoots, hiddenskill:3"
+        ]
+    },
+    {
+        "name": "CanDoEBMoonBoots",
+        "access_rules": [
+            "@CanDoMoonBoots, hiddenskill, ordonsword"
+        ]
+    },
+    {
+        "name": "CanDoHSMoonBoots",
+        "access_rules": [
+            "@CanDoMoonBoots, hiddenskill:4, @HasSword, @HasShield"
+        ]
+    },
+    {
+        "name": "CanDoFlyGlitch",
+        "access_rules": [
+            "fishingrod, @HasHeavyMod"
+        ]
+    },
+    {
+        "name": "CanDoAirRefill",
+        "access_rules": [
+            "@CanUseWaterBombs, magicarmor",
+            "@CanUseWaterBombs, boots, $GetItemWheelSlotCount|3"
+        ]
+    },
+    {
+        "name": "CanDoHiddenVillageGlitched",
+        "access_rules": [
+            "@CanUseBow",
+            "ballchain",
+            "slingshot, shadowcrystal",
+            "slingshot, @HasSword",
+            "slingshot, @HasBombs",
+            "slingshot, boots",
+            "slingshot, spinner"
+        ]
+    },
+    {
+        "name": "CanDoFTWindlessBridgeRoom",
+        "access_rules": [
+            "@HasBombs",
+            "@CanDoBSMoonBoots",
+            "@CanDoJSMoonBoots"
+        ]
+    },
+    {
+        "name": "CanClearForestGlitched",
+        "access_rules": [
+            "@CanCompletePrologue, faronwoodsopen",
+            "@CanCompletePrologue, @CanCompleteForestTemple",
+            "@CanCompletePrologue, @CanDoLJA",
+            "@CanCompletePrologue, @CanDoMapGlitch"
+        ]
+    },
+    {
+        "name": "CanCompleteEldinTwilightGlitched",
+        "access_rules": [
+            "eldintwilightclearedon",
+            "@CanClearForestGlitched"
+        ]
+    },
+    {
+        "name": "CanSkipKeyToDekuToad",
+        "access_rules": [
+            "skkeysy",
+            "hiddenskill:3",
+            "@CanDoBSMoonBoots",
+            "@CanDoJSMoonBoots",
+            "@CanDoLJA",
+            "@HasBombs, @HasHeavyMod",
+            "@HasBombs, hiddenskill:6"
+        ]
+    },
+    {
+        "name": "CanStepClip",
+        "access_rules": [
+            "sword",
+            "clawshot",
+            "dominionrod",
+            "ballchain",
+            "@CanUseBow",
+            "boomerang",
+            "@CanUseLantern",
+            "slingshot",
+            "fishingrod",
+            "@HasBombs",
+            "@HasBottle"
+        ]
+    }
+]

@@ -3,76 +3,57 @@
 		"name": "SnowpeakRuinsBossRoom",
 		"access_rules": [
 			"[glitcheson], @SnowpeakRuinsCagedFreezardRoom, srbigkey",
-			"[glitcheson], @SnowpeakRuinsCagedFreezardRoom, bkkeysy",
-			"@SnowpeakRuinsWestCourtyard, glitchesoff, srsmallkey:4, cheese, ballchain, $hasBombs, srbigkey",
-			"@SnowpeakRuinsWestCourtyard, glitchesoff, skkeysy, ballchain, $hasBombs, srbigkey",
+			"@SnowpeakRuinsWestCourtyard, srsmallkey:4, cheese, ballchain, @HasBombs, srbigkey",
 			"[glitcheson], @SnowpeakRuinsWestCourtyard, srsmallkey:4, srbigkey",
-			"[glitcheson], @SnowpeakRuinsWestCourtyard, cheese, srbigkey",
-			"[glitcheson], @SnowpeakRuinsWestCourtyard, skkeysy, srbigkey",
-			"@SnowpeakRuinsWestCourtyard, glitchesoff, srsmallkey:4, cheese, ballchain, $hasBombs, bkkeysy",
-			"@SnowpeakRuinsWestCourtyard, glitchesoff, skkeysy, ballchain, $hasBombs, bkkeysy",
-			"[glitcheson], @SnowpeakRuinsWestCourtyard, srsmallkey:4, bkkeysy",
-			"[glitcheson], @SnowpeakRuinsWestCourtyard, cheese, bkkeysy",
-			"[glitcheson], @SnowpeakRuinsWestCourtyard, skkeysy, bkkeysy"
+			"[glitcheson], @SnowpeakRuinsWestCourtyard, cheese, srbigkey"
 		]
 	},
 	{
 		"name": "SnowpeakRuinsCagedFreezardRoom",
 		"access_rules": [
-			"@SnowpeakRuinsCagedFreezardRoomLower, glitchesoff",
 			"[glitcheson], @SnowpeakRuinsCagedFreezardRoomLower, clawshot",
 			"@SnowpeakRuinsSecondFloorMiniFreezardRoom, srsmallkey:4",
-			"@SnowpeakRuinsSecondFloorMiniFreezardRoom, skkeysy",
 			"[glitcheson], @SnowpeakRuinsSecondFloorMiniFreezardRoom, ballchain, clawshot",
-			"@SnowpeakRuinsYetoandYeta, cheese",
-			"@SnowpeakRuinsYetoandYeta, skkeysy"
+			"@SnowpeakRuinsYetoandYeta, cheese"
 		]
 	},
 	{
 		"name": "SnowpeakRuinsCagedFreezardRoomLower",
 		"access_rules": [
-			"@SnowpeakRuinsCagedFreezardRoom, glitchesoff",
-			"[glitcheson], @SnowpeakRuinsCagedFreezardRoom, $canSmash",
-			"[glitcheson], @SnowpeakRuinsEntrance, $canDoLJA"
+			"glitchesoff, @SnowpeakRuinsCagedFreezardRoom",
+			"[glitcheson], @SnowpeakRuinsCagedFreezardRoom, @CanSmash",
+			"[glitcheson], @SnowpeakRuinsEntrance, @CanDoLJA"
 		]
 	},
 	{
 		"name": "SnowpeakRuinsChapel",
 		"access_rules": [
 			"[glitcheson], @SnowpeakRuinsCagedFreezardRoom",
-			"@SnowpeakRuinsWestCourtyard, srsmallkey:4, cheese, ballchain, $hasBombs, glitchesoff",
-			"@SnowpeakRuinsWestCourtyard, skkeysy, ballchain, $hasBombs, glitchesoff",
+			"@SnowpeakRuinsWestCourtyard, srsmallkey:4, cheese, ballchain, @HasBombs",
 			"[glitcheson], @SnowpeakRuinsWestCourtyard, srsmallkey:4",
-			"[glitcheson], @SnowpeakRuinsWestCourtyard, cheese",
-			"[glitcheson], @SnowpeakRuinsWestCourtyard, skkeysy"
+			"[glitcheson], @SnowpeakRuinsWestCourtyard, cheese"
 		]
 	},
 	{
 		"name": "SnowpeakRuinsDarkhammerRoom",
 		"access_rules": [
 			"@SnowpeakRuinsWestCourtyard, ballchain",
-			"@SnowpeakRuinsWestCourtyard, srsmallkey:2, glitchesoff, $hasBombs",
-			"[glitcheson], @SnowpeakRuinsWestCourtyard, srsmallkey:4, $hasBombs",
-			"@SnowpeakRuinsWestCourtyard, cheese, $hasBombs",
-			"@SnowpeakRuinsWestCourtyard, skkeysy, $hasBombs",
-			"[glitcheson], @SnowpeakRuinsWestCourtyard, shadowcrystal, damagevanilla",
-			"[glitcheson], @SnowpeakRuinsWestCourtyard, shadowcrystal, damagedouble",
-			"[glitcheson], @SnowpeakRuinsWestCourtyard, shadowcrystal, damagetriple",
-			"[glitcheson], @SnowpeakRuinsWestCourtyard, shadowcrystal, damagequadruple"
+			"glitchesoff, @SnowpeakRuinsWestCourtyard, srsmallkey:2, @HasBombs",
+			"@SnowpeakRuinsWestCourtyard, cheese, @HasBombs",
+			"[glitcheson], @SnowpeakRuinsWestCourtyard, srsmallkey:4, @HasBombs",
+			"[glitcheson], @SnowpeakRuinsWestCourtyard, shadowcrystal, $Not|ohko"
 		]
 	},
 	{
 		"name": "SnowpeakRuinsEastCourtyard",
 		"access_rules": [
-			"@SnowpeakRuinsNortheastChilfosRoomFirstFloor, glitchesoff",
+			"glitchesoff, @SnowpeakRuinsNortheastChilfosRoomFirstFloor",
 			"[glitcheson], @SnowpeakRuinsNortheastChilfosRoomFirstFloor, srsmallkey:4",
-			"[glitcheson], @SnowpeakRuinsNortheastChilfosRoomFirstFloor, skkeysy",
-			"@SnowpeakRuinsSecondFloorMiniFreezardRoom, glitchesoff, shadowcrystal",
-			"@SnowpeakRuinsSecondFloorMiniFreezardRoom, glitchesoff, ballchain",
+			"glitchesoff, @SnowpeakRuinsSecondFloorMiniFreezardRoom, shadowcrystal",
+			"glitchesoff, @SnowpeakRuinsSecondFloorMiniFreezardRoom, ballchain",
 			"@SnowpeakRuinsWestCourtyard, ballchain",
 			"[glitcheson], @SnowpeakRuinsWestCourtyard, srsmallkey:4",
 			"[glitcheson], @SnowpeakRuinsWestCourtyard, cheese",
-			"[glitcheson], @SnowpeakRuinsWestCourtyard, skkeysy",
 			"@SnowpeakRuinsYetoandYeta, shadowcrystal",
 			"@SnowpeakRuinsYetoandYeta, ballchain"
 		]
@@ -80,8 +61,9 @@
 	{
 		"name": "SnowpeakRuinsEntrance",
 		"access_rules": [
-			"@SnowpeakSummitLower",
-			"[glitcheson], @SnowpeakRuinsCagedFreezardRoomLower, $canDoLJA",
+			"@SnowpeakRuinsLeftDoor",
+			"@SnowpeakRuinsRightDoor",
+			"[glitcheson], @SnowpeakRuinsCagedFreezardRoomLower, @CanDoLJA",
 			"@SnowpeakRuinsSecondFloorMiniFreezardRoom",
 			"@SnowpeakRuinsYetoandYeta"
 		]
@@ -89,31 +71,26 @@
 	{
 		"name": "SnowpeakRuinsNortheastChilfosRoomFirstFloor",
 		"access_rules": [
-			"@SnowpeakRuinsEastCourtyard, srsmallkey:4, $canDefeatMiniFreezard",
-			"[glitcheson], @SnowpeakRuinsEastCourtyard, srsmallkey:4, $canDefeatMiniFreezardGlitched",
-			"@SnowpeakRuinsEastCourtyard, skkeysy, $canDefeatMiniFreezard",
-			"[glitcheson], @SnowpeakRuinsEastCourtyard, skkeysy, $canDefeatMiniFreezardGlitched",
-			"@SnowpeakRuinsEastCourtyard, srsmallkey:2, clawshot, $canDefeatMiniFreezard, glitchesoff",
-			"@SnowpeakRuinsEastCourtyard, skkeysy, clawshot, $canDefeatMiniFreezard, glitchesoff",
-			"[glitcheson], @SnowpeakRuinsEastCourtyard, ballchain",
-			"[glitcheson], @SnowpeakRuinsEastCourtyard, clawshot",
+			"@SnowpeakRuinsEastCourtyard, srsmallkey:4, @CanDefeatMiniFreezard",
+			"glitchesoff, @SnowpeakRuinsEastCourtyard, srsmallkey:2, clawshot, @CanDefeatMiniFreezard",
+			"[glitcheson], @SnowpeakRuinsEastCourtyard, srsmallkey:4, @CanDefeatMiniFreezardGlitched",
+			"[glitcheson], @SnowpeakRuinsEastCourtyard, ballchain, clawshot",
 			"@SnowpeakRuinsNortheastChilfosRoomSecondFloor"
 		]
 	},
 	{
 		"name": "SnowpeakRuinsNortheastChilfosRoomSecondFloor",
 		"access_rules": [
-			"[glitcheson], @SnowpeakRuinsNortheastChilfosRoomFirstFloor, $canDoLJA",
-			"@SnowpeakRuinsSecondFloorMiniFreezardRoom, ballchain, clawshot, $canDefeatChilfos",
-			"[glitcheson], @SnowpeakRuinsSecondFloorMiniFreezardRoom, ballchain, clawshot, $canDefeatChilfosGlitched",
-			"[glitcheson], @SnowpeakRuinsSecondFloorMiniFreezardRoom, $canDoLJA"
+			"[glitcheson], @SnowpeakRuinsNortheastChilfosRoomFirstFloor, @CanDoLJA",
+			"@SnowpeakRuinsSecondFloorMiniFreezardRoom, ballchain, clawshot, @CanDefeatChilfos",
+			"[glitcheson], @SnowpeakRuinsSecondFloorMiniFreezardRoom, ballchain, clawshot, @CanDefeatChilfosGlitched",
+			"[glitcheson], @SnowpeakRuinsSecondFloorMiniFreezardRoom, @CanDoLJA"
 		]
 	},
 	{
 		"name": "SnowpeakRuinsSecondFloorMiniFreezardRoom",
 		"access_rules": [
-			"@SnowpeakRuinsCagedFreezardRoom, ballchain, srsmallkey:3, glitchesoff",
-			"@SnowpeakRuinsCagedFreezardRoom, ballchain, skkeysy",
+			"glitchesoff, @SnowpeakRuinsCagedFreezardRoom, ballchain, srsmallkey:3",
 			"[glitcheson], @SnowpeakRuinsCagedFreezardRoom, ballchain, srsmallkey:4",
 			"[glitcheson], @SnowpeakRuinsCagedFreezardRoom, ballchain, clawshot"
 		]
@@ -129,23 +106,20 @@
 		"name": "SnowpeakRuinsWestCourtyard",
 		"access_rules": [
 			"@SnowpeakRuinsCagedFreezardRoom, srsmallkey:2",
-			"@SnowpeakRuinsCagedFreezardRoom, skkeysy",
-			"[glitcheson], @SnowpeakRuinsCagedFreezardRoom",
-			"@SnowpeakRuinsChapel, $canDefeatChilfos",
-			"[glitcheson], @SnowpeakRuinsChapel, $canDefeatChilfosGlitched",
-			"@SnowpeakRuinsDarkhammerRoom, $canDefeatDarkhammer",
-			"[glitcheson], @SnowpeakRuinsDarkhammerRoom, $canDefeatDarkhammerGlitched",
+			"@SnowpeakRuinsChapel, @CanDefeatChilfos",
+			"[glitcheson], @SnowpeakRuinsChapel, @CanDefeatChilfosGlitched",
+			"@SnowpeakRuinsDarkhammerRoom, @CanDefeatDarkhammer",
+			"[glitcheson], @SnowpeakRuinsDarkhammerRoom, @CanDefeatDarkhammerGlitched",
 			"@SnowpeakRuinsEastCourtyard, ballchain",
 			"@SnowpeakRuinsWestCannonRoom",
-			"@SnowpeakRuinsYetoandYeta, pumpkin",
-			"@SnowpeakRuinsYetoandYeta, skkeysy"
+			"@SnowpeakRuinsYetoandYeta, pumpkin"
 		]
 	},
 	{
 		"name": "SnowpeakRuinsWoodenBeamRoom",
 		"access_rules": [
 			"@SnowpeakRuinsCagedFreezardRoom, ballchain",
-			"@SnowpeakRuinsWestCannonRoom, $canSmash"
+			"@SnowpeakRuinsWestCannonRoom, @CanSmash"
 		]
 	},
 	{
@@ -155,11 +129,25 @@
 			"@SnowpeakRuinsEastCourtyard, shadowcrystal",
 			"@SnowpeakRuinsEastCourtyard, ballchain",
 			"@SnowpeakRuinsEntrance",
-			"@SnowpeakRuinsNortheastChilfosRoomFirstFloor, $canDefeatChilfos",
-			"[glitcheson], @SnowpeakRuinsNortheastChilfosRoomFirstFloor, $canDefeatChilfosGlitched",
+			"@SnowpeakRuinsNortheastChilfosRoomFirstFloor, @CanDefeatChilfos",
+			"[glitcheson], @SnowpeakRuinsNortheastChilfosRoomFirstFloor, @CanDefeatChilfosGlitched",
 			"@SnowpeakRuinsNortheastChilfosRoomSecondFloor, ballchain",
 			"[glitcheson], @SnowpeakRuinsSecondFloorMiniFreezardRoom",
 			"@SnowpeakRuinsWestCourtyard"
+		]
+	},
+	{
+		"name": "SnowpeakRuinsLeftDoor",
+		"access_rules": [
+			"@SnowpeakRuinsEntrance",
+			"@SnowpeakSummitLower"
+		]
+	},
+	{
+		"name": "SnowpeakRuinsRightDoor",
+		"access_rules": [
+			"@SnowpeakRuinsEntrance",
+			"@SnowpeakSummitLower"
 		]
 	}
 ]

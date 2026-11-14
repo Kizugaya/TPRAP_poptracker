@@ -3,9 +3,10 @@
 		"name": "OutsideLinksHouse",
 		"access_rules": [
 			"",
+			"$CanReach|OutsideLinksHouse",
+			"@OrdonLinksHouse",
 			"@OrdonVillage",
-			"@OrdonSpring",
-			"@OrdonLinksHouse"
+			"@OrdonSpring"
 		]
 	},
 	{
@@ -18,42 +19,65 @@
 		"name": "OrdonVillage",
 		"access_rules": [
 			"@OutsideLinksHouse",
-			"@OrdonRanch",
 			"@OrdonSerasShop",
 			"@OrdonShieldHouse",
 			"@OrdonSwordHouse",
-			"@OrdonBosHouse"
+			"@OrdonBosHouseLeftDoor",
+			"@OrdonBosHouseRightDoor",
+			"@OrdonRanchEntrance"
 		]
 	},
 	{
 		"name": "OrdonSerasShop",
 		"access_rules": [
-			"@OrdonVillage"
+			"@OrdonVillage, @CanChangeTime"
 		]
 	},
 	{
 		"name": "OrdonShieldHouse",
 		"access_rules": [
-			"@OrdonVillage"
+			"@OrdonVillage, @CanChangeTime"
 		]
 	},
 	{
 		"name": "OrdonSwordHouse",
 		"access_rules": [
-			"@OrdonVillage"
+			"@OrdonVillage, @CanChangeTime"
+		]
+	},
+	{
+		"name": "OrdonBosHouseLeftDoor",
+		"access_rules": [
+			"@OrdonVillage",
+			"@OrdonBosHouse"
+		]
+	},
+	{
+		"name": "OrdonBosHouseRightDoor",
+		"access_rules": [
+			"@OrdonVillage",
+			"@OrdonBosHouse"
 		]
 	},
 	{
 		"name": "OrdonBosHouse",
 		"access_rules": [
-			"@OrdonVillage"
+			"@OrdonBosHouseLeftDoor",
+			"@OrdonBosHouseRightDoor"
+		]
+	},
+	{
+		"name": "OrdonRanchEntrance",
+		"access_rules": [
+			"@OrdonVillage",
+			"@OrdonRanch, @CanChangeTime"
 		]
 	},
 	{
 		"name": "OrdonRanch",
 		"access_rules": [
-			"@OrdonVillage",
-			"@OrdonRanchStable"
+			"@OrdonRanchEntrance, @CanChangeTime",
+			"@OrdonRanchStable, @CanChangeTime"
 		]
 	},
 	{
@@ -73,63 +97,126 @@
 		"name": "OrdonSpring",
 		"access_rules": [
 			"@OutsideLinksHouse",
-			"@SouthFaronWoods, woodensword, slingshot",
-			"@SouthFaronWoods, skipprologueon",
+			"@OrdonBridge",
 			"osportalactive, shadowcrystal"
+		]
+	},
+	{
+		"name": "OrdonBridge",
+		"access_rules": [
+			"@SouthFaronWoods",
+			"@OrdonSpring"
 		]
 	},
 	{
 		"name": "SouthFaronWoods",
 		"access_rules": [
-			"@OrdonSpring, sword, slingshot",
-			"@OrdonSpring, skipprologueon",
-			"[glitcheson], @OrdonSpring",
-			"@FaronWoodsCave, shadowcrystal",
-			"@FaronWoodsCave, $canClearForest",
-			"[glitcheson]@FaronWoodsCave, $canClearForestGlitched",
-			"@SouthFaronWoodsOwlStatueArea, $canSmash",
+			"@ForestTempleBossRoom, @CanDefeatDiababa",
+			"[glitcheson], @ForestTempleBossRoom, @CanDefeatDiababaGlitched",
+			"@SouthFaronWoodsBehindGate, @SouthFaronWoods",
+			"@SouthFaronWoodsBehindGate, shadowcrystal",
+			"glitchesoff, @SouthFaronWoodsBehindGate, @CanClearForest",
+			"[glitcheson], @SouthFaronWoodsBehindGate, @CanClearForestGlitched",
+			"@SouthFaronWoodsCorosLedge",
+			"@SouthFaronWoodsOwlStatueArea, @CanSmash",
+			"@FaronWoodsCorosHouseLower",
 			"@FaronField",
-			"@ForestTempleBossRoom, $canDefeatDiababa",
-			"[glitcheson], @ForestTempleBossRoom, $canDefeatDiababaGlitched",
+			"@OrdonBridge",
 			"sfwportalactive, shadowcrystal"
+		]
+	},
+	{
+		"name": "SouthFaronWoodsCorosLedge",
+		"access_rules": [
+			"@FaronWoodsCorosHouseUpper"
+		]
+	},
+	{
+		"name": "SouthFaronWoodsBehindGate",
+		"access_rules": [
+			"@SouthFaronWoods",
+			"@FaronWoodsCaveSouthernEntrance"
+		]
+	},
+	{
+		"name": "SouthFaronWoodsAboveOwlStatue",
+		"access_rules": [
+			"@SouthFaronWoodsOwlStatueArea, @CanClearForest, powereddominionrod, shadowcrystal",
+			"@MistAreaNearOwlStatueChest"
 		]
 	},
 	{
 		"name": "SouthFaronWoodsOwlStatueArea",
 		"access_rules": [
-			"@SouthFaronWoods, $canSmash",
-			"@MistAreaNearOwlStatueChest"
+			"@SouthFaronWoods, @CanSmash",
+			"@SouthFaronWoodsAboveOwlStatue"
+		]
+	},
+	{
+		"name": "FaronWoodsCaveSouthernEntrance",
+		"access_rules": [
+			"@SouthFaronWoodsBehindGate",
+			"@FaronWoodsCave"
+		]
+	},
+	{
+		"name": "FaronWoodsCaveNorthernEntrance",
+		"access_rules": [
+			"@SouthFaronWoodsBehindGate",
+			"@FaronWoodsCave"
 		]
 	},
 	{
 		"name": "FaronWoodsCave",
 		"access_rules": [
-			"@SouthFaronWoods",
+			"@FaronWoodsCave",
 			"@MistAreaNearFaronWoodsCave"
+		]
+	},
+	{
+		"name": "FaronWoodsCorosHouseLower",
+		"access_rules": [
+			"@SouthFaronWoods",
+			"@FaronWoodsCorosHouseUpper"
+		]
+	},
+	{
+		"name": "FaronWoodsCorosHouseUpper",
+		"access_rules": [
+			"@SouthFaronWoodsCorosLedge",
+			"@FaronWoodsCorosHouseLower"
 		]
 	},
 	{
 		"name": "MistAreaNearFaronWoodsCave",
 		"access_rules": [
-			"@FaronWoodsCave",
 			"@MistAreaInsideMist, lantern",
-			"[glitcheson], @MistAreaInsideMist, $canDoMapGlitch",
-			"@MistAreaNearNorthFaronWoods, shadowcrystal"
+			"[glitcheson], @MistAreaInsideMist, @SouthFaronWoods, @CanDoMapGlitch",
+			"@MistAreaNearNorthFaronWoods, shadowcrystal",
+			"@FaronWoodsCaveNorthernEntrance"
+		]
+	},
+	{
+		"name": "MistAreaOutsideFaronMistCave",
+		"access_rules": [
+			"@MistAreaInsideMist, lantern",
+			"[glitcheson], @MistAreaInsideMist, @SouthFaronWoods, @CanDoMapGlitch",
+			"@MistAreaFaronMistCave"
 		]
 	},
 	{
 		"name": "MistAreaInsideMist",
 		"access_rules": [
 			"@MistAreaNearFaronWoodsCave, lantern",
-			"[glitcheson], @MistAreaNearFaronWoodsCave, $canDoMapGlitch",
+			"[glitcheson], @MistAreaNearFaronWoodsCave, @CanDoMapGlitch",
 			"@MistAreaUnderOwlStatueChest, lantern",
-			"[glitcheson], @MistAreaUnderOwlStatueChest, $canDoMapGlitch",
+			"[glitcheson], @MistAreaUnderOwlStatueChest, @CanDoMapGlitch",
 			"@MistAreaCenterStump, lantern",
-			"[glitcheson], @MistAreaCenterStump, $canDoMapGlitch",
+			"[glitcheson], @MistAreaCenterStump, @CanDoMapGlitch",
+			"@MistAreaOutsideFaronMistCave, lantern",
+			"[glitcheson], @MistAreaOutsideFaronMistCave, @CanDoMapGlitch",
 			"@MistAreaNearNorthFaronWoods, lantern",
-			"[glitcheson], @MistAreaNearNorthFaronWoods, $canDoMapGlitch",
-			"@MistAreaFaronMistCave, lantern",
-			"[glitcheson], @MistAreaFaronMistCave, $canDoMapGlitch"
+			"[glitcheson], @MistAreaNearNorthFaronWoods, @CanDoMapGlitch"
 		]
 	},
 	{
@@ -138,14 +225,14 @@
 			"@MistAreaNearFaronWoodsCave, lantern",
 			"@MistAreaNearFaronWoodsCave, shadowcrystal",
 			"@MistAreaInsideMist, lantern",
-			"[glitcheson], @MistAreaInsideMist, $canDoMapGlitch",
+			"[glitcheson], @MistAreaInsideMist, @CanDoMapGlitch",
 			"@MistAreaNearOwlStatueChest"
 		]
 	},
 	{
 		"name": "MistAreaNearOwlStatueChest",
 		"access_rules": [
-			"@SouthFaronWoodsOwlStatueArea, $canClearForest, powereddominionrod, shadowcrystal"
+			"@SouthFaronWoodsAboveOwlStatue"
 		]
 	},
 	{
@@ -158,7 +245,7 @@
 		"name": "MistAreaNearNorthFaronWoods",
 		"access_rules": [
 			"@MistAreaInsideMist, lantern",
-			"[glitcheson], @MistAreaInsideMist, $canDoMapGlitch",
+			"[glitcheson], @MistAreaInsideMist, @SouthFaronWoods, @CanDoMapGlitch",
 			"@MistAreaCenterStump, shadowcrystal",
 			"@NorthFaronWoods"
 		]
@@ -166,18 +253,15 @@
 	{
 		"name": "MistAreaFaronMistCave",
 		"access_rules": [
-			"@MistAreaInsideMist, lantern",
-			"[glitcheson], @MistAreaInsideMist, $canDoMapGlitch"
+			"@MistAreaOutsideFaronMistCave"
 		]
 	},
 	{
 		"name": "NorthFaronWoods",
 		"access_rules": [
-			"@MistAreaNearNorthFaronWoods, fwkey",
-			"@MistAreaNearNorthFaronWoods, skkeysy",
-			"@MistAreaNearNorthFaronWoods, skipprologueon",
-			"@LostWoods",
 			"@ForestTempleEntrance",
+			"@MistAreaNearNorthFaronWoods, gatekeys",
+			"@LostWoods",
 			"nfwportalactive, shadowcrystal"
 		]
 	},
@@ -185,17 +269,17 @@
 		"name": "LostWoods",
 		"access_rules": [
 			"@NorthFaronWoods, shadowcrystal",
-			"[glitcheson], @NorthFaronWoods, $hasBombs, $canDoLJA",
+			"[glitcheson], @NorthFaronWoods, @HasBombs, @CanDoLJA",
 			"@LostWoodsLowerBattleArena"
 		]
 	},
 	{
 		"name": "LostWoodsLowerBattleArena",
 		"access_rules": [
-			"@LostWoods, $canDefeatSkullKid, shadowcrystal",
+			"@LostWoods, @CanDefeatSkullKid, shadowcrystal",
 			"@LostWoods, ttopen",
 			"@LostWoods, ttopengrove",
-			"[glitcheson], @LostWoods, $canDoJSMoonBoots",
+			"[glitcheson], @LostWoods, @CanDoJSMoonBoots",
 			"@LostWoodsBabaSerpentGrotto",
 			"@SacredGroveLower"
 		]
@@ -203,7 +287,7 @@
 	{
 		"name": "LostWoodsUpperBattleArena",
 		"access_rules": [
-			"@LostWoods, $canDefeatSkullKid, shadowcrystal",
+			"@LostWoods, @CanDefeatSkullKid, shadowcrystal",
 			"@LostWoods, ttopen",
 			"@LostWoods, ttopengrove",
 			"@SacredGroveBeforeBlock"
@@ -212,13 +296,13 @@
 	{
 		"name": "LostWoodsBabaSerpentGrotto",
 		"access_rules": [
-			"@LostWoodsLowerBattleArena, $canSmash, shadowcrystal"
+			"@LostWoodsLowerBattleArena, @CanSmash, shadowcrystal"
 		]
 	},
 	{
 		"name": "SacredGroveBeforeBlock",
 		"access_rules": [
-			"@LostWoodsUpperBattleArena, $canDefeatSkullKid",
+			"@LostWoodsUpperBattleArena, @CanDefeatSkullKid",
 			"@LostWoodsUpperBattleArena, ttopen",
 			"@LostWoodsUpperBattleArena, ttopengrove"
 		]
@@ -227,14 +311,17 @@
 		"name": "SacredGroveUpper",
 		"access_rules": [
 			"@SacredGroveBeforeBlock",
-			"@SacredGroveLower",
+			"@SacredGroveLower, @SacredGroveBeforeBlock",
+			"@SacredGroveLower, ttopen",
+			"@SacredGroveLower, ttopengrove",
+			"[glitcheson], @SacredGroveLower, @CanDoJSMoonBoots",
 			"@SacredGrovePast"
 		]
 	},
 	{
 		"name": "SacredGroveLower",
 		"access_rules": [
-			"@LostWoodsLowerBattleArena, $canDefeatSkullKid",
+			"@LostWoodsLowerBattleArena, @CanDefeatSkullKid",
 			"@LostWoodsLowerBattleArena, ttopen",
 			"@LostWoodsLowerBattleArena, ttopengrove",
 			"@SacredGroveUpper",
@@ -244,22 +331,50 @@
 	{
 		"name": "SacredGrovePast",
 		"access_rules": [
+			"@TempleofTimeBossRoom, @CanDefeatArmogohma",
 			"@SacredGroveUpper, ttopen",
 			"@SacredGroveUpper, ttopengrove",
-			"@SacredGroveUpper, mastersword, $canDefeatShadowBeast",
-			"@TempleofTimeBossRoom, $canDefeatArmogohma",
-			"@TempleofTimeEntrance"
+			"@SacredGroveUpper, @SacredGroveLower, mastersword, @CanDefeatShadowBeast",
+			"@SacredGrovePastBehindWindow"
+		]
+	},
+	{
+		"name": "SacredGrovePastBehindWindow",
+		"access_rules": [
+			"@TempleofTimeEntrance",
+			"@SacredGrovePast, ttopen",
+			"@SacredGrovePast, mastersword"
 		]
 	},
 	{
 		"name": "FaronField",
 		"access_rules": [
-			"@SouthFaronWoods, $canClearForest",
-			"@FaronFieldCornerGrotto",
 			"@KakarikoGorge",
+			"@SouthFaronWoods, @CanClearForest",
+			"@FaronFieldBehindBoulder, @LowerKakarikoVillage, @HasBottle, @OutsideCastleTownSouth",
+			"@FaronFieldBehindBoulder, @DeathMountainElevatorRoom, @CanDefeatGoron, @HasBottle, @OutsideCastleTownSouth",
+			"@FaronFieldCornerGrotto",
+			"@FaronFieldFishingGrotto",
 			"@LakeHyliaBridge, gatekeys",
-			"@LakeHyliaBridge, skkeysy",
 			"[glitcheson], @LakeHyliaBridge, shadowcrystal"
+		]
+	},
+	{
+		"name": "FaronFieldBehindBoulder",
+		"access_rules": [
+			"glitchesoff, @FaronField, @LowerKakarikoVillage, @HasBottle, @OutsideCastleTownSouth",
+			"glitchesoff, @FaronField, @DeathMountainElevatorLower, @CanDefeatGoron, @HasBottle, @OutsideCastleTownSouth",
+			"[glitcheson], @FaronField, @CastleTownSouth, @HasBottle, @OutsideCastleTownSouth",
+			"glitchesoff, @OutsideCastleTownSouthInsideBoulder, @LowerKakarikoVillage, @HasBottle",
+			"glitchesoff, @OutsideCastleTownSouthInsideBoulder, @DeathMountainElevatorLower, @CanDefeatGoron, @HasBottle",
+			"[glitcheson], @OutsideCastleTownSouthInsideBoulder, @KakarikoMaloMart, @LowerKakarikoVillage, @CastleTownSouth, @HasBottle"
+		]
+	},
+	{
+		"name": "OutsideCastleTownSouthInsideBoulder",
+		"access_rules": [
+			"@FaronFieldBehindBoulder",
+			"@OutsideCastleTownSouth"
 		]
 	},
 	{
@@ -269,45 +384,74 @@
 		]
 	},
 	{
+		"name": "FaronFieldFishingGrotto",
+		"access_rules": [
+			"@FaronField, shadowcrystal"
+		]
+	},
+	{
 		"name": "KakarikoGorge",
 		"access_rules": [
+			"@KakarikoGorgeCaveEntrance, @CanSmash",
+			"@KakarikoGorgeBehindGate, shadowcrystal",
+			"@KakarikoGorgeBehindGate, gatekeys",
+			"@KakarikoGorgeKeeseGrotto",
+			"@EldinField, @CanSmash",
 			"@FaronField",
-			"@EldinLanternCave, $canSmash",
-			"@EldinField, $canSmash",
-			"@LowerKakarikoVillage, shadowcrystal",
-			"@LowerKakarikoVillage, gatekeys",
-			"@LowerKakarikoVillage, skkeysy",
 			"kgportalactive, shadowcrystal"
+		]
+	},
+	{
+		"name": "KakarikoGorgeCaveEntrance",
+		"access_rules": [
+			"@KakarikoGorge, @CanSmash",
+			"@EldinLanternCave"
 		]
 	},
 	{
 		"name": "EldinLanternCave",
 		"access_rules": [
-			"@KakarikoGorge, $canSmash"
+			"@KakarikoGorgeCaveEntrance"
 		]
 	},
 	{
 		"name": "EldinField",
 		"access_rules": [
-			"@KakarikoGorge, $canSmash",
-			"@NorthEldinField, $canSmash",
-			"[glitcheson], @NorthEldinField, shadowcrystal",
-			"@EldinFieldLavaCaveUpper",
-			"@EldinFieldLavaCaveLower, clawshot",
-			"@EldinFieldBombskitGrotto",
+			"@KakarikoGorge, @CanSmash",
+			"@EldinFieldNearCastleTown, @KakarikoMaloMart",
+			"@EldinFieldLavaCaveLedge",
+			"@EldinFieldFromLavaCaveLower, clawshot",
+			"@NorthEldinField, @CanSmash",
+			"[glitcheson], @NorthEldinField, @CanDoMapGlitch",
+			"@EldinFieldBomskitGrotto",
 			"@EldinFieldWaterBombFishGrotto",
-			"@LowerKakarikoVillage",
-			"@OutsideCastleTownEast",
+			"@KakarikoVillageBehindGate",
 			"boeportalactive, shadowcrystal"
+		]
+	},
+	{
+		"name": "EldinFieldNearCastleTown",
+		"access_rules": [
+			"glitchesoff, @EldinField, @EldinFieldNearCastleTown",
+			"[glitcheson], @EldinField, @KakarikoMaloMart",
+			"[glitcheson], @EldinField, shadowcrystal",
+			"@OutsideCastleTownEast"
+		]
+	},
+	{
+		"name": "EldinFieldOutsideHiddenVillage",
+		"access_rules": [
+			"@HiddenVillage",
+			"@NorthEldinField, @KakarikoRenadosSanctuary, woodenstatue"
 		]
 	},
 	{
 		"name": "NorthEldinField",
 		"access_rules": [
-			"@EldinField, $canSmash",
-			"[glitcheson], @EldinField, $canDoMapGlitch",
+			"@EldinField, @CanSmash",
+			"[glitcheson], @EldinField, shadowcrystal",
+			"@EldinFieldOutsideHiddenVillage, @KakarikoRenadosSanctuary, woodenstatue",
 			"@EldinFieldGrottoPlatform, spinner",
-			"@HiddenVillage, woodenstatue",
 			"@LanayruField"
 		]
 	},
@@ -319,22 +463,37 @@
 		]
 	},
 	{
-		"name": "EldinFieldLavaCaveUpper",
+		"name": "EldinFieldLavaCaveLedge",
 		"access_rules": [
 			"@EldinField, clawshot",
-			"[glitcheson], @EldinField, shadowcrystal"
+			"[glitcheson], @EldinField, shadowcrystal",
+			"@EldinFieldLavaCaveUpper"
+		]
+	},
+	{
+		"name": "EldinFieldFromLavaCaveLower",
+		"access_rules": [
+			"[glitcheson], @EldinField, shadowcrystal",
+			"[glitcheson], @EldinField, @CanDoLJA",
+			"@EldinFieldLavaCaveLower"
+		]
+	},
+	{
+		"name": "EldinFieldLavaCaveUpper",
+		"access_rules": [
+			"@EldinFieldLavaCaveLedge"
 		]
 	},
 	{
 		"name": "EldinFieldLavaCaveLower",
 		"access_rules": [
-			"[glitcheson], @EldinField, shadowcrystal, $canDoLJA",
+			"@EldinFieldFromLavaCaveLower",
 			"@EldinFieldLavaCaveUpper, boots",
 			"[glitcheson], @EldinFieldLavaCaveUpper, shadowcrystal"
 		]
 	},
 	{
-		"name": "EldinFieldBombskitGrotto",
+		"name": "EldinFieldBomskitGrotto",
 		"access_rules": [
 			"@EldinField, shadowcrystal"
 		]
@@ -352,76 +511,200 @@
 		]
 	},
 	{
-		"name": "LowerKakarikoVillage",
+		"name": "KakarikoGorgeBehindGate",
 		"access_rules": [
 			"@KakarikoGorge",
-			"@EldinField, gatekeys",
-			"@EldinField, skkeysy",
+			"@LowerKakarikoVillage"
+		]
+	},
+	{
+		"name": "KakarikoGorgeKeeseGrotto",
+		"access_rules": [
+			"@KakarikoGorge, shadowcrystal"
+		]
+	},
+	{
+		"name": "KakarikoVillageBehindGate",
+		"access_rules": [
+			"@EldinField",
+			"@LowerKakarikoVillage"
+		]
+	},
+	{
+		"name": "LowerKakarikoVillage",
+		"access_rules": [
+			"@GoronMinesBossRoom, @CanDefeatFyrus",
+			"@DeathMountainNearKakariko",
+			"@KakarikoGorgeBehindGate",
 			"@UpperKakarikoVillage",
-			"@KakarikoRenadosSanctuary",
+			"@KakarikoVillageBehindGate, gatekeys",
+			"@KakarikoRenadosSanctuaryFrontLeftDoor",
+			"@KakarikoRenadosSanctuaryFrontRightDoor",
+			"@KakarikoRenadosSanctuaryBackLeftDoor",
+			"@KakarikoRenadosSanctuaryBackRightDoor",
 			"@KakarikoMaloMart",
-			"@KakarikoEldeInn",
-			"@KakarikoBugHouse",
+			"@KakarikoEldeInnLeftDoor",
+			"@KakarikoEldeInnRightDoor",
+			"@KakarikoBugHouseDoor",
+			"@KakarikoBugHouseCeilingHole",
 			"@KakarikoBarnesBombShopLower",
 			"@KakarikoGraveyard",
-			"@DeathMountainTrail",
-			"@GoronMinesBossRoom, $canDefeatFyrus",
 			"kvportalactive, shadowcrystal"
+		]
+	},
+	{
+		"name": "KakarikoBugHouseDoor",
+		"access_rules": [
+			"@LowerKakarikoVillage",
+			"@KakarikoBugHouse"
+		]
+	},
+	{
+		"name": "KakarikoBugHouseCeilingHole",
+		"access_rules": [
+			"@LowerKakarikoVillage",
+			"@KakarikoBugHouse, shadowcrystal"
+		]
+	},
+	{
+		"name": "KakarikoEldeInnLeftDoor",
+		"access_rules": [
+			"@LowerKakarikoVillage, @CanChangeTime",
+			"@KakarikoEldeInn"
+		]
+	},
+	{
+		"name": "KakarikoEldeInnRightDoor",
+		"access_rules": [
+			"@LowerKakarikoVillage, @CanChangeTime",
+			"@KakarikoEldeInn"
+		]
+	},
+	{
+		"name": "KakarikoRenadosSanctuaryFrontLeftDoor",
+		"access_rules": [
+			"@LowerKakarikoVillage",
+			"@KakarikoRenadosSanctuary"
+		]
+	},
+	{
+		"name": "KakarikoRenadosSanctuaryFrontRightDoor",
+		"access_rules": [
+			"@LowerKakarikoVillage",
+			"@KakarikoRenadosSanctuary"
+		]
+	},
+	{
+		"name": "KakarikoRenadosSanctuaryBackLeftDoor",
+		"access_rules": [
+			"@LowerKakarikoVillage",
+			"@KakarikoRenadosSanctuary"
+		]
+	},
+	{
+		"name": "KakarikoRenadosSanctuaryBackRightDoor",
+		"access_rules": [
+			"@LowerKakarikoVillage",
+			"@KakarikoRenadosSanctuary"
 		]
 	},
 	{
 		"name": "UpperKakarikoVillage",
 		"access_rules": [
-			"@LowerKakarikoVillage, gmcompleted",
-			"@LowerKakarikoVillage, $canSmash",
+			"@LowerKakarikoVillage, gmcompleted, @CanChangeTime",
+			"@LowerKakarikoVillage, @CanSmash",
+			"[glitcheson], @LowerKakarikoVillage, gmcompleted",
 			"@KakarikoTopofWatchtower",
-			"@KakarikoBarnesBombShopLower",
-			"@KakarikoWatchtower"
+			"@KakarikoBarnesBombShopUpper",
+			"@KakarikoWatchtowerLowerDoor",
+			"@KakarikoWatchtowerDigSpot"
 		]
 	},
 	{
 		"name": "KakarikoTopofWatchtower",
 		"access_rules": [
-			"@UpperKakarikoVillage, gmcompleted",
-			"@KakarikoWatchtower"
+			"@UpperKakarikoVillage, gmcompleted, @CanChangeTime",
+			"[glitcheson], @UpperKakarikoVillage, gmcompleted",
+			"@KakarikoWatchtowerUpperDoor"
 		]
 	},
 	{
 		"name": "KakarikoRenadosSanctuary",
 		"access_rules": [
-			"@LowerKakarikoVillage"
+			"@KakarikoRenadosSanctuaryFrontLeftDoor",
+			"@KakarikoRenadosSanctuaryFrontRightDoor",
+			"@KakarikoRenadosSanctuaryBackLeftDoor",
+			"@KakarikoRenadosSanctuaryBackRightDoor",
+			"@KakarikoRenadosSanctuaryBasement"
+		]
+	},
+	{
+		"name": "KakarikoRenadosSanctuaryBasement",
+		"access_rules": [
+			"@KakarikoRenadosSanctuary"
 		]
 	},
 	{
 		"name": "KakarikoMaloMart",
 		"access_rules": [
-			"@LowerKakarikoVillage"
+			"@LowerKakarikoVillage, @CanChangeTime"
 		]
 	},
 	{
 		"name": "KakarikoEldeInn",
 		"access_rules": [
-			"@LowerKakarikoVillage"
+			"@KakarikoEldeInnLeftDoor",
+			"@KakarikoEldeInnRightDoor"
 		]
 	},
 	{
 		"name": "KakarikoBugHouse",
 		"access_rules": [
-			"@LowerKakarikoVillage"
+			"@KakarikoBugHouseDoor",
+			"@KakarikoBugHouseCeilingHole"
 		]
 	},
 	{
 		"name": "KakarikoBarnesBombShopLower",
 		"access_rules": [
 			"@LowerKakarikoVillage",
-			"@UpperKakarikoVillage"
+			"@KakarikoBarnesBombShopUpper"
+		]
+	},
+	{
+		"name": "KakarikoBarnesBombShopUpper",
+		"access_rules": [
+			"@UpperKakarikoVillage",
+			"@KakarikoBarnesBombShopLower"
 		]
 	},
 	{
 		"name": "KakarikoWatchtower",
 		"access_rules": [
+			"@KakarikoWatchtowerLowerDoor",
+			"@KakarikoWatchtowerDigSpot",
+			"@KakarikoWatchtowerUpperDoor"
+		]
+	},
+	{
+		"name": "KakarikoWatchtowerLowerDoor",
+		"access_rules": [
 			"@UpperKakarikoVillage",
-			"@KakarikoTopofWatchtower"
+			"@KakarikoWatchtower"
+		]
+	},
+	{
+		"name": "KakarikoWatchtowerDigSpot",
+		"access_rules": [
+			"@UpperKakarikoVillage, shadowcrystal",
+			"@KakarikoWatchtower"
+		]
+	},
+	{
+		"name": "KakarikoWatchtowerUpperDoor",
+		"access_rules": [
+			"@KakarikoTopofWatchtower",
+			"@KakarikoWatchtower"
 		]
 	},
 	{
@@ -433,41 +716,66 @@
 	{
 		"name": "DeathMountainTrail",
 		"access_rules": [
-			"@LowerKakarikoVillage, boots",
-			"@LowerKakarikoVillage, gmcompleted",
+			"@DeathMountainNearKakariko, boots",
+			"@DeathMountainNearKakariko, gmcompleted",
 			"@DeathMountainVolcano"
+		]
+	},
+	{
+		"name": "DeathMountainNearKakariko",
+		"access_rules": [
+			"@DeathMountainTrail",
+			"@LowerKakarikoVillage"
 		]
 	},
 	{
 		"name": "DeathMountainVolcano",
 		"access_rules": [
 			"@DeathMountainTrail",
+			"@DeathMountainOutsideSumoHall",
 			"@DeathMountainElevatorLower",
-			"@DeathMountainSumoHall",
 			"dmportalactive, shadowcrystal"
 		]
 	},
 	{
 		"name": "DeathMountainElevatorLower",
 		"access_rules": [
+			"@DeathMountainVolcano, @DeathMountainElevatorLower",
 			"@DeathMountainVolcano, gmopen",
+			"[glitcheson], @DeathMountainVolcano, sword, @CanDoLJA",
 			"@DeathMountainSumoHallElevator, boots"
+		]
+	},
+	{
+		"name": "DeathMountainOutsideSumoHall",
+		"access_rules": [
+			"@DeathMountainVolcano, boots, @CanDefeatGoron",
+			"@DeathMountainVolcano, boots, gmcompleted",
+			"[glitcheson], @DeathMountainVolcano, boots, @CanDefeatGoronGlitched",
+			"@DeathMountainSumoHall"
 		]
 	},
 	{
 		"name": "DeathMountainSumoHall",
 		"access_rules": [
-			"@DeathMountainVolcano, boots, $canDefeatGoron",
-			"[glitcheson], @DeathMountainVolcano, boots, $canDefeatGoronGlitched",
-			"@DeathMountainVolcano, boots, gmcompleted",
-			"@DeathMountainSumoHallElevator, boots",
+			"@DeathMountainOutsideSumoHall",
+			"@DeathMountainSumoHallElevator, @DeathMountainSumoHall, boots",
 			"@DeathMountainSumoHallElevator, gmnowrestling",
-			"@DeathMountainSumoHallElevator, gmopen",
+			"@DeathMountainSumoHallElevator, $Not|gmclosed",
 			"[glitcheson], @DeathMountainSumoHallElevator, spinner",
-			"@GoronMinesEntrance, boots",
-			"@GoronMinesEntrance, gmnowrestling",
-			"@GoronMinesEntrance, gmopen",
-			"[glitcheson], @GoronMinesEntrance, spinner"
+			"@DeathMountainSumoHallGoronMinesTunnel, @DeathMountainSumoHall, boots",
+			"@DeathMountainSumoHallGoronMinesTunnel, gmnowrestling",
+			"@DeathMountainSumoHallGoronMinesTunnel, $Not|gmclosed",
+			"[glitcheson], @DeathMountainSumoHallGoronMinesTunnel, spinner"
+		]
+	},
+	{
+		"name": "DeathMountainSumoHallGoronMinesTunnel",
+		"access_rules": [
+			"@GoronMinesEntrance",
+			"@DeathMountainSumoHall, boots",
+			"@DeathMountainSumoHall, gmnowrestling",
+			"@DeathMountainSumoHall, $Not|gmclosed"
 		]
 	},
 	{
@@ -476,14 +784,14 @@
 			"@DeathMountainElevatorLower, boots",
 			"@DeathMountainSumoHall, boots",
 			"@DeathMountainSumoHall, gmnowrestling",
-			"@DeathMountainSumoHall, gmopen"
+			"@DeathMountainSumoHall, $Not|gmclosed"
 		]
 	},
 	{
 		"name": "HiddenVillage",
 		"access_rules": [
-			"@NorthEldinField, woodenstatue",
-			"@HiddenVillageImpazHouse"
+			"@HiddenVillageImpazHouse",
+			"@EldinFieldOutsideHiddenVillage"
 		]
 	},
 	{
@@ -496,32 +804,54 @@
 		"name": "LanayruField",
 		"access_rules": [
 			"@NorthEldinField",
-			"@HyruleFieldNearSpinnerRails, $canSmash",
-			"@LanayruIcePuzzleCave, $canSmash",
+			"@LanayruFieldCaveEntrance, @CanSmash",
+			"@LanayruFieldBehindBoulder, @CanSmash",
+			"@HyruleFieldNearSpinnerRails, @CanSmash",
+			"@LanayruFieldChuGrotto",
 			"@LanayruFieldSkulltulaGrotto",
 			"@LanayruFieldPoeGrotto",
 			"@OutsideCastleTownWest",
-			"@UpperZorasRiver",
-			"@ZorasDomainWestLedge, $canSmash"
+			"@UpperZorasRiver"
 		]
 	},
 	{
 		"name": "HyruleFieldNearSpinnerRails",
 		"access_rules": [
-			"@LanayruField, $canSmash",
-			"[glitcheson], @LanayruField, $canDoMapGlitch",
-			"@LakeHyliaBridge, $canSmash",
-			"[glitcheson], @LakeHyliaBridge, $canDoMapGlitch"
+			"@LanayruField, @CanSmash",
+			"[glitcheson], @LanayruField, @CanDoMapGlitch",
+			"@LakeHyliaBridge, @CanSmash",
+			"[glitcheson], @LakeHyliaBridge, @CanDoMapGlitch"
+		]
+	},
+	{
+		"name": "LanayruFieldCaveEntrance",
+		"access_rules": [
+			"@LanayruField, @CanSmash",
+			"@LanayruIcePuzzleCave"
+		]
+	},
+	{
+		"name": "LanayruFieldBehindBoulder",
+		"access_rules": [
+			"@LanayruField, @CanSmash",
+			"[glitcheson], @LanayruField, @CanDoMapGlitch",
+			"@ZorasDomainWestLedge"
 		]
 	},
 	{
 		"name": "LanayruIcePuzzleCave",
 		"access_rules": [
-			"@LanayruField, $canSmash"
+			"@LanayruFieldCaveEntrance"
 		]
 	},
 	{
 		"name": "LanayruFieldSkulltulaGrotto",
+		"access_rules": [
+			"@LanayruField, shadowcrystal"
+		]
+	},
+	{
+		"name": "LanayruFieldChuGrotto",
 		"access_rules": [
 			"@LanayruField, shadowcrystal"
 		]
@@ -535,18 +865,19 @@
 	{
 		"name": "OutsideCastleTownWest",
 		"access_rules": [
+			"@CastleTownWest",
 			"@LanayruField",
 			"@OutsideCastleTownWestGrottoLedge",
 			"@LakeHyliaBridge",
-			"@CastleTownWest",
 			"ctportalactive, shadowcrystal"
 		]
 	},
 	{
 		"name": "OutsideCastleTownWestGrottoLedge",
 		"access_rules": [
-			"@OutsideCastleTownWest, clawshot",
-			"[glitcheson], @OutsideCastleTownWest, $canDoMapGlitch",
+			"glitchesoff, @OutsideCastleTownWest, clawshot",
+			"[glitcheson], @OutsideCastleTownWest, shadowcrystal, clawshot",
+			"[glitcheson], @OutsideCastleTownWest, shadowcrystal, @CanDoMapGlitch",
 			"@OutsideCastleTownWestHelmasaurGrotto"
 		]
 	},
@@ -559,16 +890,18 @@
 	{
 		"name": "OutsideCastleTownEast",
 		"access_rules": [
-			"[glitcheson], @EldinField, @KakarikoMaloMart",
-			"[glitcheson], @EldinField, shadowcrystal",
+			"@EldinFieldNearCastleTown",
 			"@CastleTownEast"
 		]
 	},
 	{
 		"name": "OutsideCastleTownSouth",
 		"access_rules": [
-			"@OutsideCastleTownSouthTektiteGrotto",
-			"@CastleTownSouth"
+			"@CastleTownSouth",
+			"glitchesoff, @OutsideCastleTownSouthInsideBoulder, @LowerKakarikoVillage, @HasBottle, @OutsideCastleTownSouth",
+			"glitchesoff, @OutsideCastleTownSouthInsideBoulder, @DeathMountainElevatorLower, @CanDefeatGoron, @HasBottle, @OutsideCastleTownSouth",
+			"[glitcheson], @OutsideCastleTownSouthInsideBoulder, @KakarikoMaloMart, @LowerKakarikoVillage, @CastleTownSouth, @HasBottle, @OutsideCastleTownSouth",
+			"@OutsideCastleTownSouthTektiteGrotto"
 		]
 	},
 	{
@@ -581,9 +914,8 @@
 		"name": "LakeHyliaBridge",
 		"access_rules": [
 			"@FaronField, gatekeys",
-			"@FaronField, skkeysy",
 			"[glitcheson], @FaronField, shadowcrystal",
-			"@HyruleFieldNearSpinnerRails, $canSmash",
+			"@HyruleFieldNearSpinnerRails, @CanSmash",
 			"@OutsideCastleTownWest",
 			"@LakeHyliaBridgeGrottoLedge",
 			"@LakeHylia"
@@ -592,7 +924,7 @@
 	{
 		"name": "LakeHyliaBridgeGrottoLedge",
 		"access_rules": [
-			"@LakeHyliaBridge, $canLaunchBombs, clawshot",
+			"@LakeHyliaBridge, @CanLaunchBombs, clawshot",
 			"@LakeHyliaBridgeBubbleGrotto"
 		]
 	},
@@ -605,10 +937,10 @@
 	{
 		"name": "CastleTownWest",
 		"access_rules": [
-			"@OutsideCastleTownWest",
 			"@CastleTownSTARGame",
 			"@CastleTownCenter",
-			"@CastleTownSouth"
+			"@CastleTownSouth",
+			"@OutsideCastleTownWest"
 		]
 	},
 	{
@@ -621,8 +953,10 @@
 		"name": "CastleTownCenter",
 		"access_rules": [
 			"@CastleTownWest",
+			"@CastleTownGoronHouseLeftDoor",
+			"@CastleTownGoronHouseRightDoor",
 			"@CastleTownMaloMart",
-			"@CastleTownNorthBehindFirstDoor, $canCompleteMDH",
+			"@CastleTownNorth",
 			"@CastleTownEast",
 			"@CastleTownSouth"
 		]
@@ -634,49 +968,125 @@
 		]
 	},
 	{
+		"name": "CastleTownGoronHouse",
+		"access_rules": [
+			"@CastleTownGoronHouseLeftDoor",
+			"@CastleTownGoronHouseRightDoor"
+		]
+	},
+	{
+		"name": "CastleTownGoronHouseLeftDoor",
+		"access_rules": [
+			"@CastleTownCenter",
+			"@CastleTownGoronHouse"
+		]
+	},
+	{
+		"name": "CastleTownGoronHouseRightDoor",
+		"access_rules": [
+			"@CastleTownCenter",
+			"@CastleTownGoronHouse"
+		]
+	},
+	{
+		"name": "CastleTownNorth",
+		"access_rules": [
+			"@CastleTownCenter",
+			"@CastleTownNorthBehindFirstDoor"
+		]
+	},
+	{
 		"name": "CastleTownNorthBehindFirstDoor",
 		"access_rules": [
-			"@CastleTownCenter, $canCompleteMDH",
-			"@HyruleCastleEntrance, $canCompleteMDH"
+			"@CastleTownNorth",
+			"@CastleTownNorthInsideBarrier"
+		]
+	},
+	{
+		"name": "CastleTownNorthInsideBarrier",
+		"access_rules": [
+			"@GanondorfCastle",
+			"@CastleTownNorthBehindFirstDoor, hcopen",
+			"@CastleTownNorthBehindFirstDoor, hcvanilla, ptcompleted",
+			"@CastleTownNorthBehindFirstDoor, hcfusedshadows, fusedshadows:3",
+			"@CastleTownNorthBehindFirstDoor, hcmirrorshards, mirrorshards:4",
+			"@CastleTownNorthBehindFirstDoor, hcalldungeons, @CanCompleteAllDungeons"
 		]
 	},
 	{
 		"name": "CastleTownEast",
 		"access_rules": [
-			"@OutsideCastleTownEast",
 			"@CastleTownCenter",
 			"@CastleTownDoctorsOfficeBalcony",
-			"@CastleTownDoctorsOfficeLower, invoice",
-			"@CastleTownSouth"
+			"@CastleTownDoctorsOfficeLeftDoor",
+			"@CastleTownDoctorsOfficeRightDoor",
+			"@CastleTownSouth",
+			"@OutsideCastleTownEast"
 		]
 	},
 	{
 		"name": "CastleTownDoctorsOfficeBalcony",
 		"access_rules": [
-			"@CastleTownDoctorsOfficeLower, shadowcrystal"
+			"@CastleTownDoctorsOfficeUpper"
+		]
+	},
+	{
+		"name": "CastleTownDoctorsOfficeLeftDoor",
+		"access_rules": [
+			"@CastleTownEast",
+			"@CastleTownDoctorsOfficeEntrance"
+		]
+	},
+	{
+		"name": "CastleTownDoctorsOfficeRightDoor",
+		"access_rules": [
+			"@CastleTownEast",
+			"@CastleTownDoctorsOfficeEntrance"
+		]
+	},
+	{
+		"name": "CastleTownDoctorsOfficeEntrance",
+		"access_rules": [
+			"@CastleTownDoctorsOfficeLeftDoor",
+			"@CastleTownDoctorsOfficeRightDoor",
+			"@CastleTownDoctorsOfficeLower, invoice"
 		]
 	},
 	{
 		"name": "CastleTownDoctorsOfficeLower",
 		"access_rules": [
-			"@CastleTownEast, invoice",
-			"@CastleTownDoctorsOfficeBalcony"
+			"@CastleTownDoctorsOfficeEntrance, invoice",
+			"@CastleTownDoctorsOfficeUpper"
+		]
+	},
+	{
+		"name": "CastleTownDoctorsOfficeUpper",
+		"access_rules": [
+			"@CastleTownDoctorsOfficeBalcony",
+			"@CastleTownDoctorsOfficeLower, shadowcrystal"
 		]
 	},
 	{
 		"name": "CastleTownSouth",
 		"access_rules": [
-			"@OutsideCastleTownSouth",
 			"@CastleTownWest",
 			"@CastleTownCenter",
 			"@CastleTownEast",
 			"@CastleTownAgithasHouse",
+			"@CastleTownSeerHouse",
 			"@CastleTownJovanisHouse",
-			"@CastleTownTelmasBar"
+			"@CastleTownTelmasBar",
+			"@OutsideCastleTownSouth"
 		]
 	},
 	{
 		"name": "CastleTownAgithasHouse",
+		"access_rules": [
+			"@CastleTownSouth"
+		]
+	},
+	{
+		"name": "CastleTownSeerHouse",
 		"access_rules": [
 			"@CastleTownSouth"
 		]
@@ -696,46 +1106,64 @@
 	{
 		"name": "LakeHylia",
 		"access_rules": [
-			"@KakarikoGraveyard, gatekeys, boots, $hasWaterBombs",
-			"@KakarikoGraveyard, gatekeys, zoraarmor, $hasWaterBombs",
-			"[glitcheson], @KakarikoGraveyard, gatekeys, $hasHeavyMod, $hasWaterBombs",
-			"@KakarikoGraveyard, skkeysy, boots, $hasWaterBombs",
-			"@KakarikoGraveyard, skkeysy, zoraarmor, $hasWaterBombs",
-			"[glitcheson], @KakarikoGraveyard, skkeysy, $hasHeavyMod, $hasWaterBombs",
-			"[glitcheson], @KakarikoGraveyard, $hasHeavyMod, $hasBombs, sword",
-			"[glitcheson], @KakarikoGraveyard, $hasHeavyMod, $hasBombs, spinner",
-			"[glitcheson], @KakarikoGraveyard, $hasHeavyMod, $canDoLJA",
-			"[glitcheson], @KakarikoGraveyard, $hasHeavyMod, $canDoMoonBoots",
-			"[glitcheson], @KakarikoGraveyard, zoraarmor, $hasBombs, sword",
-			"[glitcheson], @KakarikoGraveyard, zoraarmor, $hasBombs, spinner",
-			"[glitcheson], @KakarikoGraveyard, zoraarmor, $canDoLJA",
-			"[glitcheson], @KakarikoGraveyard, zoraarmor, $canDoMoonBoots",
+			"@CityinTheSkyEntrance, clawshot",
+			"@KakarikoGraveyard, gatekeys, boots, @CanUseWaterBombs",
+			"glitchesoff, @KakarikoGraveyard, gatekeys, zoraarmor, @CanUseWaterBombs",
+			"[glitcheson], @KakarikoGraveyard, @HasHeavyMod, @CanUseWaterBombs, gatekeys",
+			"[glitcheson], @KakarikoGraveyard, @HasHeavyMod, @HasBombs, sword",
+			"[glitcheson], @KakarikoGraveyard, @HasHeavyMod, @HasBombs, spinner",
+			"[glitcheson], @KakarikoGraveyard, @HasHeavyMod, @CanDoLJA",
+			"[glitcheson], @KakarikoGraveyard, @HasHeavyMod, @CanDoMoonBoots",
+			"[glitcheson], @KakarikoGraveyard, zoraarmor, @HasBombs, sword",
+			"[glitcheson], @KakarikoGraveyard, zoraarmor, @HasBombs, spinner",
+			"[glitcheson], @KakarikoGraveyard, zoraarmor, @CanDoLJA",
+			"[glitcheson], @KakarikoGraveyard, zoraarmor, @CanDoMoonBoots",
 			"@OutsideCastleTownSouth",
 			"@LakeHyliaBridge",
+			"@LakeHyliaCaveEntrance, @CanSmash",
+			"@LakeHyliaLakebedTempleEntrance, zoraarmor, skiplakebedentranceon",
+			"@LakeHyliaLakebedTempleEntrance, zoraarmor, boots, @CanUseWaterBombs",
 			"@LakeHyliaLanayruSpring",
-			"@LakeHyliaLongCave, $canSmash",
 			"@LakeHyliaShellBladeGrotto",
 			"@LakeHyliaWaterToadpoliGrotto",
 			"@UpperZorasRiverIzasHouse, bow",
+			"lhportalactive, shadowcrystal",
+
+			"$canAccess|LakeHylia",
+			"[glitcheson], $CanAccessGlitched|LakeHylia"
+		]
+	},
+	{
+		"name": "LakeHyliaLakebedTempleEntrance",
+		"access_rules": [
 			"@LakebedTempleEntrance",
-			"@CityinTheSkyEntrance, clawshot",
-			"lhportalactive, shadowcrystal"
+			"@LakeHylia, zoraarmor, skiplakebedentranceon",
+			"@LakeHylia, zoraarmor, boots, @CanUseWaterBombs",
+			"[glitcheson], @LakeHylia, zoraarmor",
+			"[glitcheson], @LakeHylia, @CanDoAirRefill"
 		]
 	},
 	{
 		"name": "LakeHyliaLanayruSpring",
 		"access_rules": [
-			"@LakeHylia",
-			"@CaveofOrdealsFloors4250, $canDefeatPoe, $canDefeatFreezard, $canDefeatDarknut, $canDefeatAeralfos",
-			"[glitcheson], @CaveofOrdealsFloors4250, $canDefeatPoe, $canDefeatFreezard, $canDefeatDarknut, $canDefeatAeralfosGlitched",
-			"@LakebedTempleBossRoom, $canDefeatMorpheel",
-			"[glitcheson], @LakebedTempleBossRoom, $canDefeatMorpheelGlitched"
+			"@LakebedTempleBossRoom, @CanDefeatMorpheel",
+			"[glitcheson], @LakebedTempleBossRoom, @CanDefeatMorpheelGlitched",
+			"@GerudoDesertCaveofOrdealsFloors4250, @CanDefeatArmos, @CanDefeatBokoblin, @CanDefeatBabaSerpent, @CanDefeatLizalfos, @CanDefeatBulblin, @CanDefeatDinalfos, @CanDefeatPoe, @CanDefeatRedeadKnight, @CanDefeatChu, @CanDefeatFreezard, @CanDefeatChilfos, @CanDefeatGhoulRat, @CanDefeatRat, @CanDefeatStalchild, @CanDefeatAeralfos, @CanDefeatDarknut",
+			"[glitcheson], @GerudoDesertCaveofOrdealsFloors4250, @CanDefeatArmosGlitched, @CanDefeatBokoblinGlitched, @CanDefeatBabaSerpentGlitched, @CanDefeatLizalfosGlitched, @CanDefeatBulblinGlitched, @CanDefeatDinalfos, @CanDefeatPoe, @CanDefeatRedeadKnightGlitched, @CanDefeatChuGlitched, @CanDefeatFreezard, @CanDefeatChilfosGlitched, @CanDefeatGhoulRat, @CanDefeatRatGlitched, @CanDefeatStalchildGlitched, @CanDefeatAeralfosGlitched, @CanDefeatDarknut",
+			"@LakeHylia"
+		]
+	},
+	{
+		"name": "LakeHyliaCaveEntrance",
+		"access_rules": [
+			"@LakeHylia, @CanSmash",
+			"@LakeHyliaLongCave"
 		]
 	},
 	{
 		"name": "LakeHyliaLongCave",
 		"access_rules": [
-			"@LakeHylia, $canSmash"
+			"@LakeHyliaCaveEntrance"
 		]
 	},
 	{
@@ -764,13 +1192,20 @@
 		"name": "UpperZorasRiverIzasHouse",
 		"access_rules": [
 			"@UpperZorasRiver, sword",
-			"@UpperZorasRiver, $canDefeatShadowBeast, transformanywhereon"
+			"@UpperZorasRiver, @CanDefeatShadowBeast, transformanywhereon"
 		]
 	},
 	{
 		"name": "FishingHole",
 		"access_rules": [
-			"@UpperZorasRiver"
+			"@UpperZorasRiver",
+			"@FishingHoleHouse"
+		]
+	},
+	{
+		"name": "FishingHoleHouse",
+		"access_rules": [
+			"@FishingHole"
 		]
 	},
 	{
@@ -778,42 +1213,41 @@
 		"access_rules": [
 			"@UpperZorasRiver",
 			"@ZorasDomainWestLedge",
-			"@ZorasThroneRoom",
-			"@SnowpeakClimbLower",
+			"@ZorasDomainThroneRoom",
+			"@SnowpeakClimbLower"
+		]
+	},
+	{
+		"name": "ZorasDomainThroneRoom",
+		"access_rules": [
+			"@ZorasDomain",
 			"zdportalactive, shadowcrystal"
 		]
 	},
 	{
 		"name": "ZorasDomainWestLedge",
 		"access_rules": [
-			"@LanayruField, $canSmash",
-			"[glitcheson], @LanayruField, $canDoMapGlitch",
+			"@LanayruFieldBehindBoulder",
 			"@ZorasDomain, clawshot",
 			"@ZorasDomain, shadowcrystal",
-			"@ZorasDomain, $canSmash"
-		]
-	},
-	{
-		"name": "ZorasThroneRoom",
-		"access_rules": [
-			"@ZorasDomain"
+			"@ZorasDomain, @CanSmash"
 		]
 	},
 	{
 		"name": "GerudoDesert",
 		"access_rules": [
-			"@LakeHylia, aurusmemo",
 			"@GerudoDesertCaveofOrdealsPlateau",
-			"@GerudoDesertBasin, $canDefeatBulblin",
-			"[glitcheson], @GerudoDesertBasin, $canDefeatBulblinGlitched",
-			"@GerudoDesertSkulltulaGrotto"
+			"@GerudoDesertBasin, @CanDefeatBulblin",
+			"[glitcheson], @GerudoDesertBasin, @CanDefeatBulblinGlitched",
+			"@GerudoDesertSkulltulaGrotto",
+			"@LakeHylia, aurusmemo"
 		]
 	},
 	{
 		"name": "GerudoDesertCaveofOrdealsPlateau",
 		"access_rules": [
-			"@GerudoDesert, $canDefeatShadowBeast, clawshot",
-			"@CaveofOrdealsFloors0111, clawshot",
+			"@GerudoDesertCaveofOrdealsFloors0111, clawshot",
+			"@GerudoDesert, clawshot, @CanDefeatShadowBeast",
 			"gmportalactive, shadowcrystal"
 		]
 	},
@@ -822,8 +1256,9 @@
 		"access_rules": [
 			"@GerudoDesert",
 			"@GerudoDesertNorthEastLedge",
-			"@GerudoDesertOutsideBulblinCamp, $canDefeatBulblin",
-			"[glitcheson], @GerudoDesertOutsideBulblinCamp, $canDefeatBulblinGlitched"
+			"@GerudoDesertOutsideBulblinCamp, @GerudoDesertBasin, @CanDefeatBulblin",
+			"[glitcheson], @GerudoDesertOutsideBulblinCamp, @GerudoDesertBasin, @CanDefeatBulblinGlitched",
+			"@GerudoDesertChuGrotto"
 		]
 	},
 	{
@@ -836,8 +1271,8 @@
 	{
 		"name": "GerudoDesertOutsideBulblinCamp",
 		"access_rules": [
-			"@GerudoDesertBasin, $canDefeatBulblin",
-			"[glitcheson], @GerudoDesertBasin, $canDefeatBulblinGlitched",
+			"@GerudoDesertBasin, @CanDefeatBulblin",
+			"[glitcheson], @GerudoDesertBasin, @CanDefeatBulblinGlitched",
 			"@BulblinCamp"
 		]
 	},
@@ -845,6 +1280,12 @@
 		"name": "GerudoDesertSkulltulaGrotto",
 		"access_rules": [
 			"@GerudoDesert, shadowcrystal"
+		]
+	},
+	{
+		"name": "GerudoDesertChuGrotto",
+		"access_rules": [
+			"@GerudoDesertBasin, shadowcrystal"
 		]
 	},
 	{
@@ -863,98 +1304,106 @@
 	{
 		"name": "OutsideArbitersGrounds",
 		"access_rules": [
-			"@BulblinCamp, bckey, $canDefeatKingBulblinDesert",
-			"[glitcheson], @BulblinCamp, bckey, $canDefeatKingBulblinDesertGlitched",
-			"@BulblinCamp, skkeysy, $canDefeatKingBulblinDesert",
-			"[glitcheson], @BulblinCamp, skkeysy, $canDefeatKingBulblinDesertGlitched",
-			"[glitcheson], @BulblinCamp, $canDoMapGlitch, sword, $canDefeatKingBulblinDesertGlitched",
+			"@ArbitersGroundsEntrance",
+			"@BulblinCamp, bckey, @CanDefeatKingBulblinDesert",
 			"@BulblinCamp, skiparbitersentranceon",
-			"@ArbitersGroundsEntrance"
+			"[glitcheson], @BulblinCamp, bckey, @CanDefeatKingBulblinDesertGlitched",
+			"[glitcheson], @BulblinCamp, @CanDefeatKingBulblinDesertGlitched, @CanDoMapGlitch, sword"
 		]
 	},
 	{
 		"name": "MirrorChamberLower",
 		"access_rules": [
-			"@MirrorChamberUpper, $canDefeatShadowBeast",
-			"@ArbitersGroundsBossRoom, $canDefeatStallord"
+			"@ArbitersGroundsBossRoom, @CanDefeatStallord",
+			"@MirrorChamberUpper, @CanDefeatShadowBeast"
 		]
 	},
 	{
 		"name": "MirrorChamberUpper",
 		"access_rules": [
-			"@MirrorChamberLower",
-			"@MirrorChamberPortal, $canDefeatShadowBeast",
 			"@PalaceofTwilightEntrance",
+			"@MirrorChamberLower",
+			"@MirrorChamberPortal, @CanDefeatShadowBeast",
 			"mcportalactive, shadowcrystal"
 		]
 	},
 	{
 		"name": "MirrorChamberPortal",
 		"access_rules": [
-			"@MirrorChamberUpper, ptvanilla, cscompleted, $canDefeatShadowBeast",
-			"@MirrorChamberUpper, ptfusedshadows, fusedshadows:3, $canDefeatShadowBeast",
-			"@MirrorChamberUpper, ptmirrorshards, mirrorshards:4, $canDefeatShadowBeast",
-			"@MirrorChamberUpper, ptopen, $canDefeatShadowBeast"
+			"@MirrorChamberUpper, @CanDefeatShadowBeast, ptopen",
+			"@MirrorChamberUpper, @CanDefeatShadowBeast, ptfusedshadows, fusedshadows:3",
+			"@MirrorChamberUpper, @CanDefeatShadowBeast, ptmirrorshards, mirrorshards: 4",
+			"@MirrorChamberUpper, @CanDefeatShadowBeast, ptvanilla, cscompleted"
 		]
 	},
 	{
-		"name": "CaveofOrdealsFloors0111",
+		"name": "GerudoDesertCaveofOrdealsFloors0111",
 		"access_rules": [
 			"@GerudoDesertCaveofOrdealsPlateau"
 		]
 	},
 	{
-		"name": "CaveofOrdealsFloors1221",
+		"name": "GerudoDesertCaveofOrdealsFloors1221",
 		"access_rules": [
-			"@CaveofOrdealsFloors0111, spinner, $canDefeatKeese, $canDefeatTorchSlug",
-			"[glitcheson], @CaveofOrdealsFloors0111, spinner, $canDefeatKeeseGlitched, $canDefeatTorchSlug",
-			"[glitcheson], @CaveofOrdealsFloors0111, $canDoLJA, $canDefeatKeeseGlitched, $canDefeatTorchSlug"
+			"@GerudoDesertCaveofOrdealsFloors0111, spinner, @CanDefeatBokoblin, @CanDefeatKeese, @CanDefeatRat, @CanDefeatBabaSerpent, @CanDefeatSkulltula, @CanDefeatBulblin, @CanDefeatTorchSlug, @CanDefeatFireKeese, @CanDefeatDodongo, @CanDefeatTektite, @CanDefeatLizalfos",
+			"[glitcheson], @GerudoDesertCaveofOrdealsFloors0111, spinner, @CanDefeatBokoblinGlitched, @CanDefeatKeeseGlitched, @CanDefeatRatGlitched, @CanDefeatBabaSerpentGlitched, @CanDefeatSkulltulaGlitched, @CanDefeatBulblinGlitched, @CanDefeatTorchSlug, @CanDefeatFireKeeseGlitched, @CanDefeatDodongoGlitched, @CanDefeatTektiteGlitched, @CanDefeatLizalfosGlitched",
+			"[glitcheson], @GerudoDesertCaveofOrdealsFloors0111, @CanDoLJA, @CanDefeatBokoblinGlitched, @CanDefeatKeeseGlitched, @CanDefeatRatGlitched, @CanDefeatBabaSerpentGlitched, @CanDefeatSkulltulaGlitched, @CanDefeatBulblinGlitched, @CanDefeatTorchSlug, @CanDefeatFireKeeseGlitched, @CanDefeatDodongoGlitched, @CanDefeatTektiteGlitched, @CanDefeatLizalfosGlitched"
 		]
 	},
 	{
-		"name": "CaveofOrdealsFloors2231",
+		"name": "GerudoDesertCaveofOrdealsFloors2231",
 		"access_rules": [
-			"@CaveofOrdealsFloors1221, $canDefeatPoe, ballchain"
+			"@GerudoDesertCaveofOrdealsFloors1221, @CanDefeatHelmasaur, @CanDefeatRat, ballchain, @CanDefeatChu, @CanDefeatChuWorm, @CanDefeatBubble, @CanDefeatBulblin, @CanDefeatKeese, @CanDefeatRat, @CanDefeatStalhound, @CanDefeatPoe, @CanDefeatLeever",
+			"[glitcheson], @GerudoDesertCaveofOrdealsFloors1221, @CanDefeatHelmasaurGlitched, @CanDefeatRatGlitched, ballchain, @CanDefeatChuGlitched, @CanDefeatChuWormGlitched, @CanDefeatBubbleGlitched, @CanDefeatBulblinGlitched, @CanDefeatKeeseGlitched, @CanDefeatRatGlitched, @CanDefeatStalhoundGlitched, @CanDefeatPoe, @CanDefeatLeeverGlitched"
 		]
 	},
 	{
-		"name": "CaveofOrdealsFloors3241",
+		"name": "GerudoDesertCaveofOrdealsFloors3241",
 		"access_rules": [
-			"@CaveofOrdealsFloors2231, powereddominionrod, $canDefeatGhoulRat"
+			"@GerudoDesertCaveofOrdealsFloors2231, @CanDefeatBokoblin, @CanDefeatIceKeese, powereddominionrod, @CanDefeatKeese, @CanDefeatRat, @CanDefeatGhoulRat, @CanDefeatStalchild, @CanDefeatRedeadKnight, @CanDefeatBulblin, @CanDefeatStalfos, @CanDefeatSkulltula, @CanDefeatBubble, @CanDefeatLizalfos, @CanDefeatFireBubble",
+			"[glitcheson], @GerudoDesertCaveofOrdealsFloors2231, @CanDefeatBokoblinGlitched, @CanDefeatIceKeeseGlitched, powereddominionrod, @CanDefeatKeeseGlitched, @CanDefeatRatGlitched, @CanDefeatGhoulRat, @CanDefeatStalchildGlitched, @CanDefeatRedeadKnightGlitched, @CanDefeatBulblinGlitched, @CanDefeatStalfos, @CanDefeatSkulltulaGlitched, @CanDefeatBubbleGlitched, @CanDefeatLizalfosGlitched, @CanDefeatFireBubbleGlitched"
 		]
 	},
 	{
-		"name": "CaveofOrdealsFloors4250",
+		"name": "GerudoDesertCaveofOrdealsFloors4250",
 		"access_rules": [
-			"@CaveofOrdealsFloors3241, doubleclawshot, $canDefeatPoe, $canDefeatFreezard, $canDefeatDarknut",
-			"[glitcheson], @CaveofOrdealsFloors3241, $canDoLJA, $canDefeatPoe, $canDefeatFreezard, $canDefeatDarknut"
+			"@GerudoDesertCaveofOrdealsFloors3241, @CanDefeatBeamos, @CanDefeatKeese, doubleclawshot, @CanDefeatTorchSlug, @CanDefeatFireKeese, @CanDefeatDodongo, @CanDefeatFireBubble, @CanDefeatRedeadKnight, @CanDefeatPoe, @CanDefeatGhoulRat, @CanDefeatChu, @CanDefeatIceKeese, @CanDefeatFreezard, @CanDefeatChilfos, @CanDefeatIceBubble, @CanDefeatLeever, @CanDefeatDarknut",
+			"[glitcheson], @GerudoDesertCaveofOrdealsFloors3241, @CanDefeatBeamos, @CanDefeatKeeseGlitched, doubleclawshot, @CanDefeatTorchSlug, @CanDefeatFireKeeseGlitched, @CanDefeatDodongoGlitched, @CanDefeatFireBubbleGlitched, @CanDefeatRedeadKnightGlitched, @CanDefeatPoe, @CanDefeatGhoulRat, @CanDefeatChuGlitched, @CanDefeatIceKeeseGlitched, @CanDefeatFreezard, @CanDefeatChilfosGlitched, @CanDefeatIceBubbleGlitched, @CanDefeatLeeverGlitched, @CanDefeatDarknut",
+			"[glitcheson], @GerudoDesertCaveofOrdealsFloors3241, @CanDefeatBeamos, @CanDefeatKeeseGlitched, @CanDoLJA, @CanDefeatTorchSlug, @CanDefeatFireKeeseGlitched, @CanDefeatDodongoGlitched, @CanDefeatFireBubbleGlitched, @CanDefeatRedeadKnightGlitched, @CanDefeatPoe, @CanDefeatGhoulRat, @CanDefeatChuGlitched, @CanDefeatIceKeeseGlitched, @CanDefeatFreezard, @CanDefeatChilfosGlitched, @CanDefeatIceBubbleGlitched, @CanDefeatLeeverGlitched, @CanDefeatDarknut"
 		]
 	},
 	{
 		"name": "SnowpeakClimbLower",
 		"access_rules": [
 			"@ZorasDomain",
-			"@SnowpeakClimbUpper, reekfishscent, shadowcrystal",
 			"@SnowpeakClimbUpper, skipsnowpeakentranceon, shadowcrystal",
-			"[glitcheson], @SnowpeakClimbUpper, reekfishscent",
+			"@SnowpeakClimbUpper, reekfishscent, shadowcrystal",
 			"[glitcheson], @SnowpeakClimbUpper, skipsnowpeakentranceon",
+			"[glitcheson], @SnowpeakClimbUpper, reekfishscent",
 			"[glitcheson], @SnowpeakClimbUpper, shadowcrystal"
 		]
 	},
 	{
 		"name": "SnowpeakClimbUpper",
 		"access_rules": [
-			"@SnowpeakClimbLower, reekfishscent, shadowcrystal",
 			"@SnowpeakClimbLower, skipsnowpeakentranceon, shadowcrystal",
-			"[glitcheson], @SnowpeakClimbLower, reekfishscent",
+			"@SnowpeakClimbLower, reekfishscent, shadowcrystal",
 			"[glitcheson], @SnowpeakClimbLower, skipsnowpeakentranceon",
+			"[glitcheson], @SnowpeakClimbLower, reekfishscent",
 			"[glitcheson], @SnowpeakClimbLower, shadowcrystal",
+			"@SnowpeakIceKeeseGrotto",
 			"@SnowpeakFreezardGrotto",
 			"@SnowpeakSummitUpper, shadowcrystal"
 		]
 	},
 	{
 		"name": "SnowpeakFreezardGrotto",
+		"access_rules": [
+			"@SnowpeakClimbUpper, shadowcrystal"
+		]
+	},
+	{
+		"name": "SnowpeakIceKeeseGrotto",
 		"access_rules": [
 			"@SnowpeakClimbUpper, shadowcrystal"
 		]
@@ -969,14 +1418,12 @@
 	{
 		"name": "SnowpeakSummitLower",
 		"access_rules": [
-			"@SnowpeakSummitUpper, $canDefeatShadowBeast, bonksdodamageoff",
-			"@SnowpeakSummitUpper, $canDefeatShadowBeast, bonksdodamageon, damagevanilla",
-			"@SnowpeakSummitUpper, $canDefeatShadowBeast, bonksdodamageon, damagedouble",
-			"@SnowpeakSummitUpper, $canDefeatShadowBeast, bonksdodamageon, damagetriple",
-			"@SnowpeakSummitUpper, $canDefeatShadowBeast, bonksdodamageon, damagequadruple",
-			"@SnowpeakSummitUpper, $canDefeatShadowBeast, bonksdodamageon, $canUseBottledFairy, @LakeHylia",
-			"@SnowpeakRuinsBossRoom, $canDefeatBlizzeta",
-			"@SnowpeakRuinsEntrance"
+			"@SnowpeakRuinsLeftDoor",
+			"@SnowpeakRuinsRightDoor",
+			"@SnowpeakRuinsBossRoom, @CanDefeatBlizzeta",
+			"@SnowpeakSummitUpper, @CanDefeatShadowBeast, bonksdodamageoff",
+			"@SnowpeakSummitUpper, @CanDefeatShadowBeast, bonksdodamageon, $Not|ohko",
+			"@SnowpeakSummitUpper, @CanDefeatShadowBeast, bonksdodamageon, ohko, @CanUseBottledFairy, @LakeHylia"
 		]
 	}
 ]

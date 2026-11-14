@@ -1,0 +1,353 @@
+[
+    
+	{
+		"name": "coob1",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Cave_of_Ordeals/0.png"
+	},
+	{
+		"name": "coob2",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Cave_of_Ordeals/1.png"
+	},
+	{
+		"name": "coob3",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Cave_of_Ordeals/2.png"
+	},
+	{
+		"name": "coob4",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Cave_of_Ordeals/3.png"
+	},
+	{
+		"name": "coob5",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Cave_of_Ordeals/4.png"
+	},
+	{
+		"name": "coob6",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Cave_of_Ordeals/1.png"
+	},
+	{
+		"name": "coob7",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Cave_of_Ordeals/2.png"
+	},
+	{
+		"name": "coob8",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Cave_of_Ordeals/3.png"
+	},
+	{
+		"name": "coob9",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Cave_of_Ordeals/4.png"
+	},
+	{
+		"name": "coob10",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Cave_of_Ordeals/1.png"
+	},
+	{
+		"name": "coob11",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Cave_of_Ordeals/2.png"
+	},
+	{
+		"name": "coob12",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Cave_of_Ordeals/3.png"
+	},
+	{
+		"name": "coob13",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Cave_of_Ordeals/4.png"
+	},
+	{
+		"name": "coob14",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Cave_of_Ordeals/1.png"
+	},
+	{
+		"name": "coob15",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Cave_of_Ordeals/2.png"
+	},
+	{
+		"name": "coob16",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Cave_of_Ordeals/3.png"
+	},
+	{
+		"name": "coob17",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Cave_of_Ordeals/4.png"
+	},
+	{
+		"name": "coob18",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Cave_of_Ordeals/1.png"
+	},
+	{
+		"name": "coob19",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Cave_of_Ordeals/2.png"
+	},
+	{
+		"name": "coob20",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Cave_of_Ordeals/3.png"
+	},
+	{
+		"name": "coob21",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Cave_of_Ordeals/4.png"
+	},
+	{
+		"name": "coob22",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Cave_of_Ordeals/1.png"
+	},
+	{
+		"name": "coob23",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Cave_of_Ordeals/2.png"
+	},
+	{
+		"name": "coob24",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Cave_of_Ordeals/3.png"
+	},
+	{
+		"name": "coob25",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Cave_of_Ordeals/4.png"
+	},
+	{
+		"name": "coob26",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Cave_of_Ordeals/1.png"
+	},
+	{
+		"name": "coob27",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Cave_of_Ordeals/2.png"
+	},
+	{
+		"name": "coob28",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Cave_of_Ordeals/3.png"
+	},
+	{
+		"name": "coob29",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Cave_of_Ordeals/4.png"
+	},
+	{
+		"name": "coob30",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Cave_of_Ordeals/1.png"
+	},
+	{
+		"name": "coob31",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Cave_of_Ordeals/2.png"
+	},
+	{
+		"name": "coob32",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Cave_of_Ordeals/3.png"
+	},
+	{
+		"name": "coob33",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Cave_of_Ordeals/4.png"
+	},
+	{
+		"name": "coob34",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Cave_of_Ordeals/1.png"
+	},
+	{
+		"name": "coob35",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Cave_of_Ordeals/2.png"
+	},
+	{
+		"name": "coob36",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Cave_of_Ordeals/3.png"
+	},
+	{
+		"name": "coob37",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Cave_of_Ordeals/4.png"
+	},
+	{
+		"name": "coob38",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Cave_of_Ordeals/1.png"
+	},
+	{
+		"name": "coob39",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Cave_of_Ordeals/2.png"
+	},
+	{
+		"name": "coob40",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Cave_of_Ordeals/3.png"
+	},
+	{
+		"name": "coob41",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Cave_of_Ordeals/4.png"
+	},
+	{
+		"name": "coob42",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Cave_of_Ordeals/1.png"
+	},
+	{
+		"name": "coob43",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Cave_of_Ordeals/2.png"
+	},
+	{
+		"name": "coob44",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Cave_of_Ordeals/3.png"
+	},
+	{
+		"name": "coob45",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Cave_of_Ordeals/4.png"
+	},
+	{
+		"name": "coob46",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Cave_of_Ordeals/1.png"
+	},
+	{
+		"name": "coob47",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Cave_of_Ordeals/2.png"
+	},
+	{
+		"name": "coob48",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Cave_of_Ordeals/3.png"
+	},
+	{
+		"name": "coob49",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Cave_of_Ordeals/4.png"
+	},
+	{
+		"name": "coob50",
+		"location_size": 32,
+		"location_border_thickness": 2,
+		"location_shape": "rect",
+		"img": "images/Submaps/Cave_of_Ordeals/5.png"
+	}
+]

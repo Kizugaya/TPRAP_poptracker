@@ -2,53 +2,45 @@
 	{
 		"name": "GoronMinesBossRoom",
 		"access_rules": [
-			"@GoronMinesNorthWing, gmbigkey:3, bow, boots, $canDefeatBulblin",
-			"[glitcheson], @GoronMinesNorthWing, gmbigkey:3, bow, boots, $canDefeatBulblinGlitched",
+			"@GoronMinesNorthWing, bow, boots, @CanDefeatBulblin, gmbigkey:3",
+			"[glitcheson], @GoronMinesNorthWing, bow, boots, @CanDefeatBulblinGlitched, gmbigkey:3",
 			"[glitcheson], @GoronMinesNorthWing, gmbigkey:3, bow, clawshot",
-			"[glitcheson], @GoronMinesNorthWing, gmbigkey:3, bow, $canDoLJA",
-			"@GoronMinesNorthWing, bkkeysy, bow, boots, $canDefeatBulblin",
-			"[glitcheson], @GoronMinesNorthWing, bkkeysy, bow, boots, $canDefeatBulblinGlitched",
-			"[glitcheson], @GoronMinesNorthWing, bkkeysy, bow, clawshot",
-			"[glitcheson], @GoronMinesNorthWing, bkkeysy, bow, $canDoLJA"
+			"[glitcheson], @GoronMinesNorthWing, gmbigkey:3, bow, @CanDoLJA"
 		]
 	},
 	{
 		"name": "GoronMinesCrystalSwitchRoom",
 		"access_rules": [
 			"@GoronMinesMagnetRoom, gmsmallkey:1, boots",
-			"@GoronMinesMagnetRoom, skkeysy, boots",
 			"@GoronMinesNorthWing"
 		]
 	},
 	{
 		"name": "GoronMinesEntrance",
 		"access_rules": [
-			"@DeathMountainSumoHall, boots",
-			"@DeathMountainSumoHall, gmnowrestling",
-			"@DeathMountainSumoHall, gmopen",
-			"@GoronMinesMagnetRoom"
+			"@GoronMinesMagnetRoom",
+			"@DeathMountainSumoHallGoronMinesTunnel"
 		]
 	},
 	{
 		"name": "GoronMinesLowerWestWing",
 		"access_rules": [
-			"@GoronMinesMagnetRoom, gmsmallkey:1",
-			"@GoronMinesMagnetRoom, skkeysy"
+			"@GoronMinesMagnetRoom, gmsmallkey:1"
 		]
 	},
 	{
 		"name": "GoronMinesMagnetRoom",
 		"access_rules": [
 			"@GoronMinesCrystalSwitchRoom",
-			"@GoronMinesEntrance, boots, $canBreakWoodenDoor",
-			"[glitcheson], @GoronMinesEntrance, boots, $canBreakWoodenDoorGlitched",
-			"[glitcheson], @GoronMinesEntrance, shadowcrystal, $canBreakWoodenDoorGlitched",
-			"[glitcheson], @GoronMinesEntrance, boots, $canDoBSMoonBoots",
-			"[glitcheson], @GoronMinesEntrance, shadowcrystal, $canDoBSMoonBoots",
+			"@GoronMinesEntrance, boots, @CanBreakWoodenDoor",
+			"[glitcheson], @GoronMinesEntrance, boots, @CanBreakWoodenDoorGlitched",
+			"[glitcheson], @GoronMinesEntrance, boots, @CanDoBSMoonBoots",
+			"[glitcheson], @GoronMinesEntrance, shadowcrystal, @CanBreakWoodenDoorGlitched",
+			"[glitcheson], @GoronMinesEntrance, shadowcrystal, @CanDoBSMoonBoots",
 			"@GoronMinesLowerWestWing",
-			"@GoronMinesUpperEastWing, boots, $canDefeatDangoro, bow",
-			"[glitcheson], @GoronMinesUpperEastWing, boots, $canDefeatDangoroGlitched, bow",
-			"[glitcheson], @GoronMinesUpperEastWing, boots, $canDefeatDangoroGlitched, $canDefeatBeamos"
+			"@GoronMinesUpperEastWing, boots, @CanDefeatDangoro, bow",
+			"[glitcheson], @GoronMinesUpperEastWing, boots, @CanDefeatDangoroGlitched, bow",
+			"[glitcheson], @GoronMinesUpperEastWing, boots, @CanDefeatDangoroGlitched, @CanDefeatBeamos"
 		]
 	},
 	{
@@ -56,24 +48,18 @@
 		"access_rules": [
 			"@GoronMinesCrystalSwitchRoom, boots, sword, gmsmallkey:2",
 			"@GoronMinesCrystalSwitchRoom, bow, gmsmallkey:2",
-			"[glitcheson], @GoronMinesCrystalSwitchRoom, $canDoLJA, clawshot, gmsmallkey:2",
-			"[glitcheson], @GoronMinesCrystalSwitchRoom, $canDoLJA, ballchain, gmsmallkey:2",
-			"[glitcheson], @GoronMinesCrystalSwitchRoom, $canDoLJA, $hasBombs, gmsmallkey:2",
-			"[glitcheson], @GoronMinesCrystalSwitchRoom, sword, $hasBombs, gmsmallkey:2",
-			"@GoronMinesCrystalSwitchRoom, boots, sword, skkeysy",
-			"@GoronMinesCrystalSwitchRoom, bow, skkeysy",
-			"[glitcheson], @GoronMinesCrystalSwitchRoom, $canDoLJA, clawshot, skkeysy",
-			"[glitcheson], @GoronMinesCrystalSwitchRoom, $canDoLJA, ballchain, skkeysy",
-			"[glitcheson], @GoronMinesCrystalSwitchRoom, $canDoLJA, $hasBombs, skkeysy",
-			"[glitcheson], @GoronMinesCrystalSwitchRoom, sword, $hasBombs, skkeysy",
+			"[glitcheson], @GoronMinesCrystalSwitchRoom, gmsmallkey:2, bow",
+			"[glitcheson], @GoronMinesCrystalSwitchRoom, gmsmallkey:2, @CanDoLJA, clawshot",
+			"[glitcheson], @GoronMinesCrystalSwitchRoom, gmsmallkey:2, @CanDoLJA, ballchain",
+			"[glitcheson], @GoronMinesCrystalSwitchRoom, gmsmallkey:2, @CanDoLJA, @HasBombs",
+			"[glitcheson], @GoronMinesCrystalSwitchRoom, gmsmallkey:2, sword, @HasBombs",
 			"@GoronMinesUpperEastWing"
 		]
 	},
 	{
 		"name": "GoronMinesUpperEastWing",
 		"access_rules": [
-			"@GoronMinesNorthWing, gmsmallkey:3",
-			"@GoronMinesNorthWing, skkeysy"
+			"@GoronMinesNorthWing, gmsmallkey:3"
 		]
 	}
 ]

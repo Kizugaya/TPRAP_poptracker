@@ -2,16 +2,15 @@
 	{
 		"name": "ArbitersGroundsAfterPoeGate",
 		"access_rules": [
-			"@ArbitersGroundsLobby, shadowcrystal, clawshot, $canDefeatStalfos, agsmallkey:4",
-			"@ArbitersGroundsLobby, shadowcrystal, clawshot, $canDefeatStalfos, skkeysy"
+			"@ArbitersGroundsLobby, @CanDefeatPoe, shadowcrystal,  clawshot, @CanDefeatRedeadKnight, @CanDefeatStalchild, @CanDefeatBubble, @CanDefeatGhoulRat, @CanDefeatStalfos, agsmallkey:4",
+			"[glitcheson], @ArbitersGroundsLobby, @CanDefeatPoe, shadowcrystal,  clawshot, @CanDefeatRedeadKnightGlitched, @CanDefeatStalchildGlitched, @CanDefeatBubbleGlitched, @CanDefeatGhoulRat, @CanDefeatStalfos, agsmallkey:4"
 		]
 	},
 	{
 		"name": "ArbitersGroundsBossRoom",
 		"access_rules": [
 			"@MirrorChamberLower",
-			"@ArbitersGroundsAfterPoeGate, spinner, agbigkey",
-			"@ArbitersGroundsAfterPoeGate, spinner, bkkeysy"
+			"@ArbitersGroundsAfterPoeGate, spinner, agbigkey"
 		]
 	},
 	{
@@ -30,11 +29,10 @@
 	{
 		"name": "ArbitersGroundsLobby",
 		"access_rules": [
-			"@ArbitersGroundsAfterPoeGate",
-			"@ArbitersGroundsEastWing",
 			"@ArbitersGroundsEntrance, agsmallkey:1, lantern",
-			"@ArbitersGroundsEntrance, skkeysy, lantern",
-			"@ArbitersGroundsWestWing"
+			"@ArbitersGroundsEastWing",
+			"@ArbitersGroundsWestWing",
+			"@ArbitersGroundsAfterPoeGate"
 		]
 	},
 	{

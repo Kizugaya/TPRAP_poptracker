@@ -1,663 +1,1003 @@
 [
 	{
-		"name": "Gerudo Desert",
+		"name": "Gerudo Province",
 		"children": [
-			{
-				"name": "Skulltula Grotto Chest",
-				"map_locations": [
-					{
-						"map": "gd",
-						"x": 1649,
-						"y": 1697
-					}
-				],
-				"sections": [
-					{
-						"access_rules": [
-							"@GerudoDesertSkulltulaGrotto, $canDefeatSkulltula",
-							"[glitcheson], @GerudoDesertSkulltulaGrotto, $canDefeatSkulltulaGlitched"
-						]
-					}
-				]
-			},
-			{
-				"name": "Peahat Ledge Chest",
-				"map_locations": [
-					{
-						"map": "gd",
-						"x": 1372,
-						"y": 1737
-					}
-				],
-				"sections": [
-					{
-						"access_rules": [
-							"@GerudoDesert, clawshot"
-						]
-					}
-				]
-			},
-			{
-				"name": "East Canyon Chest",
-				"map_locations": [
-					{
-						"map": "gd",
-						"x": 1388,
-						"y": 1494
-					}
-				],
-				"sections": [
-					{
-						"access_rules": [
-							"@GerudoDesert"
-						]
-					}
-				]
-			},
-			{
-				"name": "South Chest Behind Wooden Gates",
-				"map_locations": [
-					{
-						"map": "gd",
-						"x": 1002,
-						"y": 1923
-					}
-				],
-				"sections": [
-					{
-						"access_rules": [
-							"@GerudoDesert, $canDefeatBulblin",
-							"[glitcheson], @GerudoDesert, $canDefeatBulblinGlitched"
-						]
-					}
-				]
-			},
-			{
-				"name": "Lone Small Chest",
-				"map_locations": [
-					{
-						"map": "gd",
-						"x": 944,
-						"y": 1555
-					}
-				],
-				"sections": [
-					{
-						"access_rules": [
-							"@GerudoDesert"
-						]
-					}
-				]
-			},
-			{
-				"name": "Owl Statue",
-				"access_rules": [
-					"@GerudoDesert"
-				],
-				"map_locations": [
-					{
-						"map": "gd",
-						"x": 652,
-						"y": 1774
-					}
-				],
-				"sections": [
-					{
-						"name": "Chest",
-						"access_rules": [
-							"powereddominionrod",
-							"[glitcheson], $canDoLJA"
-						]
-					},
-					{
-						"name": "Sky Character",
-						"access_rules": [
-							"powereddominionrod"
-						]
-					}
-				]
-			},
 			{
 				"name": "Cave of Ordeals",
-				"map_locations": [
+				"children": [
 					{
-						"map": "gd",
-						"x": 328,
-						"y": 1727
-					}
-				],
-				"sections": [
-					{
-						"name": "Great Fairy Reward",
-						"access_rules": [
-							"@CaveofOrdealsFloors4250, $canDefeatPoe, $canDefeatFreezard, $canDefeatDarknut"
-						]
-					}
-				]
-			},
-			{
-				"name": "West Canyon Chest",
-				"map_locations": [
-					{
-						"map": "gd",
-						"x": 202,
-						"y": 1531
-					}
-				],
-				"sections": [
-					{
-						"access_rules": [
-							"@GerudoDesert, clawshot",
-							"[glitcheson], @GerudoDesert, canDoLJA, $hasBombs",
-							"[glitcheson], @GerudoDesert, shadowcrystal, $hasBombs"
-						]
-					}
-				]
-			},
-			{
-				"name": "Campfire",
-				"access_rules": [
-					"@GerudoDesertBasin"
-				],
-				"map_locations": [
-					{
-						"map": "gd",
-						"x": 413,
-						"y": 1078
-					}
-				],
-				"sections": [
-					{
-						"name": "West Chest",
-						"access_rules": [
-							"$canDefeatBulblin",
-							"[glitcheson], $canDefeatBulblinGlitched"
-						]
-					},
-					{
-						"name": "East Chest",
-						"access_rules": [
-							"$canDefeatBulblin",
-							"[glitcheson], $canDefeatBulblinGlitched"
-						]
-					},
-					{
-						"name": "North Chest",
-						"access_rules": [
-							""
-						]
-					}
-				]
-			},
-			{
-				"name": "Northwest Chest Behind Gates",
-				"map_locations": [
-					{
-						"map": "gd",
-						"x": 225,
-						"y": 983
-					}
-				],
-				"sections": [
-					{
-						"access_rules": [
-							"@GerudoDesertBasin, $canDefeatBulblin",
-							"[glitcheson], @GerudoDesertBasin, $canDefeatBulblinGlitched"
-						]
-					}
-				]
-			},
-			{
-				"name": "Northeast Chest Behind Gates",
-				"map_locations": [
-					{
-						"map": "gd",
-						"x": 548,
-						"y": 913
-					}
-				],
-				"sections": [
-					{
-						"access_rules": [
-							"@GerudoDesertBasin, $canDefeatBulblin",
-							"[glitcheson], @GerudoDesertBasin, $canDefeatBulblinGlitched"
-						]
-					}
-				]
-			},
-			{
-				"name": "Rock Grotto",
-				"map_locations": [
-					{
-						"map": "gd",
-						"x": 882,
-						"y": 1070
-					}
-				],
-				"sections": [
-					{
-						"name": "Lantern Chest",
-						"access_rules": [
-							"@GerudoDesertRockGrotto, $canSmash, lantern"
-						]
-					}
-				]
-			},
-			{
-				"name": "North Small Chest Before Bulblin Camp",
-				"map_locations": [
-					{
-						"map": "gd",
-						"x": 447,
-						"y": 803
-					}
-				],
-				"sections": [
-					{
-						"access_rules": [
-							"@GerudoDesertOutsideBulblinCamp, $canDefeatBulblin",
-							"[glitcheson], @GerudoDesertOutsideBulblinCamp, $canDefeatBulblinGlitched",
-							"@GerudoDesertOutsideBulblinCamp, glitchesoff"
-						]
-					}
-				]
-			},
-			{
-				"name": "First Chest Under Tower At Entrance",
-				"map_locations": [
-					{
-						"map": "gd",
-						"x": 438,
-						"y": 589
-					}
-				],
-				"sections": [
-					{
-						"access_rules": [
-							"@BulblinCamp"
-						]
-					}
-				]
-			},
-			{
-				"name": "Bulblin Guard Key",
-				"map_locations": [
-					{
-						"map": "gd",
-						"x": 420,
-						"y": 484
-					}
-				],
-				"sections": [
-					{
-						"access_rules": [
-							"@BulblinCamp, $canDefeatBulblin",
-							"[glitcheson], @BulblinCamp, $canDefeatBulblinGlitched"
-						]
-					}
-				]
-			},
-			{
-				"name": "Small Chest in Back of Camp",
-				"map_locations": [
-					{
-						"map": "gd",
-						"x": 400,
-						"y": 522
-					}
-				],
-				"sections": [
-					{
-						"access_rules": [
-							"@BulblinCamp"
-						]
-					}
-				]
-			},
-			{
-				"name": "Roasted Boar",
-				"map_locations": [
-					{
-						"map": "gd",
-						"x": 455,
-						"y": 490
-					}
-				],
-				"sections": [
-					{
-						"access_rules": [
-							"@BulblinCamp, $hasDamagingItem"
-						]
-					}
-				]
-			},
-			{
-				"name": "Outside Arbiter's Grounds Lantern Chest",
-				"map_locations": [
-					{
-						"map": "gd",
-						"x": 417,
-						"y": 313
-					}
-				],
-				"sections": [
-					{
-						"access_rules": [
-							"@OutsideArbitersGrounds, lantern"
-						]
-					}
-				]
-			}
-		]
-	},
-	{
-		"name": "Gerudo Desert Poes",
-		"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
-		"chest_opened_img": "images/Items/PoeSoul.png",
-		"visibility_rules": [
-			"poeson"
-		],
-		"children": [
-			{
-				"name": "East Poe",
-				"map_locations": [
-					{
-						"map": "gd",
-						"x": 1666,
-						"y": 1731,
-						"shape": "diamond"
-					}
-				],
-				"sections": [
-					{
-						"access_rules": [
-							"@GerudoDesert, shadowcrystal"
-						]
-					}
-				]
-			},
-			{
-				"name": "Cave of Ordeals",
-				"map_locations": [
-					{
-						"map": "gd",
-						"x": 353,
-						"y": 1705,
-						"shape": "diamond"
-					}
-				],
-				"sections": [
-					{
-						"name": "Poe Above Cave of Ordeals",
-						"access_rules": [
-							"@GerudoDesertCaveofOrdealsPlateau, shadowcrystal"
-						]
-					},
-					{
-						"name": "Floor 17 Poe",
-						"access_rules": [
-							"@CaveofOrdealsFloors1221, spinner, shadowcrystal",
-							"[glitcheson], @CaveofOrdealsFloors1221, clawshot, $canDoLJA, shadowcrystal"
-						]
-					},
-					{
-						"name": "Floor 33 Poe",
-						"access_rules": [
-							"@CaveofOrdealsFloors3241, shadowcrystal, powereddominionrod, $canDefeatBeamos"
-						]
-					},
-					{
-						"name": "Floor 44 Poe",
-						"access_rules": [
-							"@CaveofOrdealsFloors4250, shadowcrystal, doubleclawshot, bow",
-							"@CaveofOrdealsFloors4250, shadowcrystal, doubleclawshot, ballchain",
-							"[glitcheson], @CaveofOrdealsFloors4250, shadowcrystal, clawshot, $canDoLJA, bow",
-							"[glitcheson], @CaveofOrdealsFloors4250, shadowcrystal, clawshot, $canDoLJA, ballchain"
-						]
-					}
-				]
-			},
-			{
-				"name": "Rock Grotto",
-				"map_locations": [
-					{
-						"map": "gd",
-						"x": 878,
-						"y": 1087,
-						"shape": "diamond"
-					}
-				],
-				"sections": [
-					{
-						"name": "Outside - North Peahat Poe",
-						"access_rules": [
-							"@GerudoDesertNorthEastLedge, shadowcrystal"
-						]
-					},
-					{
-						"name": "First Poe",
-						"access_rules": [
-							"@GerudoDesertRockGrotto, $canSmash, shadowcrystal"
-						]
-					},
-					{
-						"name": "Second Poe",
-						"access_rules": [
-							"@GerudoDesertRockGrotto, $canSmash, shadowcrystal"
-						]
-					}
-				]
-			},
-			{
-				"name": "Outside Bulblin Camp Poe",
-				"map_locations": [
-					{
-						"map": "gd",
-						"x": 297,
-						"y": 782,
-						"shape": "diamond"
-					}
-				],
-				"sections": [
-					{
-						"access_rules": [
-							"@GerudoDesertOutsideBulblinCamp, shadowcrystal"
-						]
-					}
-				]
-			},
-			{
-				"name": "Bulblin Camp Poe",
-				"map_locations": [
-					{
-						"map": "gd",
-						"x": 384,
-						"y": 570,
-						"shape": "diamond"
-					}
-				],
-				"sections": [
-					{
-						"access_rules": [
-							"@BulblinCamp, shadowcrystal, bckey",
-							"@BulblinCamp, shadowcrystal, skkeysy",
-							"@BulblinCamp, shadowcrystal, skiparbitersentranceon",
-							"[glitcheson], @BulblinCamp, shadowcrystal, $canDoMapGlitch, sword"
-						]
-					}
-				]
-			},
-			{
-				"name": "Outside Arbiter's Grounds Poe",
-				"map_locations": [
-					{
-						"map": "gd",
-						"x": 353,
-						"y": 316,
-						"shape": "diamond"
-					}
-				],
-				"sections": [
-					{
-						"access_rules": [
-							"@OutsideArbitersGrounds, shadowcrystal"
-						]
-					}
-				]
-			}
-		]
-	},
-	{
-		"name": "Gerudo Desert Bugs",
-		"chest_unopened_img": "images/Items/GoldenBugGrayed.png",
-		"chest_opened_img": "images/Items/GoldenBug.png",
-		"visibility_rules": [
-			"bugson"
-		],
-		"access_rules": [
-			"@GerudoDesert"
-		],
-		"children": [
-			{
-				"name": "Male Dayfly",
-				"map_locations": [
-					{
-						"map": "gd",
-						"x": 916,
-						"y": 1727,
-						"shape": "diamond"
-					}
-				],
-				"sections": [
-					{
-						"access_rules": [
-							""
-						]
-					}
-				]
-			},
-			{
-				"name": "Female Dayfly",
-				"map_locations": [
-					{
-						"map": "gd",
-						"x": 589,
-						"y": 1652,
-						"shape": "diamond"
-					}
-				],
-				"sections": [
-					{
-						"access_rules": [
-							""
-						]
-					}
-				]
-			}
-		]
-	},
-	{
-		"name": "Gerudo Desert Golden Wolves",
-		"children": [
-			{
-				"name": "Golden Wolf",
-				"map_locations": [
-					{
-						"map": "gd",
-						"x": 371,
-						"y": 808
-					}
-				],
-				"sections": [
-					{
-						"chest_unopened_img": "images/Items/GoldenWolfGrayed.png",
-						"chest_opened_img": "images/Items/GoldenWolf.png",
-						"access_rules": [
-							"@GerudoDesertOutsideBulblinCamp, @LakeHylia, shadowcrystal, lhhowlingstone"
-						]
-					}
-				]
-			},
-			{
-				"name": "Lake Hylia Stone",
-				"map_locations": [
-					{
-						"map": "gd",
-						"x": 349,
-						"y": 817,
-						"size": 14
-					}
-				],
-				"sections": [
-					{
-						"ref": "Lanayru Region/Lake Hylia Golden Wolves/Gerudo Desert Stone/"
-					}
-				]
-			}
-		]
-	},
-	{
-		"name": "Gerudo Desert Hint Signs",
-		"children": [
-			{
-				"name": "Desert Hint Sign",
-				"map_locations": [
-					{
-						"map": "gd",
-						"x": 753,
-						"y": 1325,
-						"shape": "diamond"
-					}
-				],
-				"sections": [
-					{
-						"access_rules": [
-							"{@GerudoDesert}"
+						"name": "Cave of Ordeals",
+						"map_locations": [
+							{
+								"map": "overworld",
+								"x": 521,
+								"y": 6098,
+								"shape": "trapezoid"
+							}
 						],
-						"visibility_rules": [
-							"hintson"
+						"sections": [
+							{
+								"name": "Floor 17 Poe",
+								"ref": "Gerudo Province/Submaps/Gerudo Desert Cave of Ordeals Floors 1221/Cave of Ordeals Floor 17 Poe/"
+							},
+							{
+								"name": "Floor 33 Poe",
+								"ref": "Gerudo Province/Submaps/Gerudo Desert Cave of Ordeals Floors 3241/Cave of Ordeals Floor 33 Poe/"
+							},
+							{
+								"name": "Floor 44 Poe",
+								"ref": "Gerudo Province/Submaps/Gerudo Desert Cave of Ordeals Floors 4250/Cave of Ordeals Floor 44 Poe/"
+							},
+							{
+								"name": "Great Fairy Reward",
+								"ref": "Gerudo Province/Submaps/Gerudo Desert Cave of Ordeals Floors 4250/Cave of Ordeals Great Fairy Reward/"
+							},
+							{
+								"name": "Hint Sign",
+								"ref": "Gerudo Province/Submaps/Gerudo Desert Cave of Ordeals Floors 0111/Hint Sign/"
+							}
 						]
 					}
 				]
 			},
 			{
-				"name": "Camp Hint Sign",
-				"map_locations": [
+				"name": "Gerudo Desert",
+				"children": [
 					{
-						"map": "gd",
-						"x": 339,
-						"y": 479,
-						"shape": "diamond"
-					}
-				],
-				"sections": [
-					{
+						"name": "Gerudo Desert",
 						"access_rules": [
-							"{@BulblinCamp}"
+							"^$canAccess|GerudoDesert"
 						],
-						"visibility_rules": [
-							"hintson"
+						"children": [
+							{
+								"name": "Gerudo Desert Peahat Ledge Chest",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 2137,
+										"y": 6094
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"clawshot"
+										]
+									}
+								]
+							},
+							{
+								"name": "Gerudo Desert East Canyon Chest",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 2174,
+										"y": 5743
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											""
+										]
+									}
+								]
+							},
+							{
+								"name": "Gerudo Desert Lone Small Chest",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 1474,
+										"y": 5835
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											""
+										]
+									}
+								]
+							},
+							{
+								"name": "Gerudo Desert West Canyon Chest",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 301,
+										"y": 5787
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"clawshot",
+											"[glitcheson], canDoLJA",
+											"[glitcheson], shadowcrystal, ^$hasBombs"
+										]
+									}
+								]
+							},
+							{
+								"name": "Gerudo Desert South Chest Behind Wooden Gates",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 1571,
+										"y": 6415
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"^$canDefeatBulblin"
+										]
+									}
+								]
+							},
+							{
+								"name": "Gerudo Desert Owl Statue",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 1031,
+										"y": 6209
+									}
+								],
+								"sections": [
+									{
+										"name": "Chest",
+										"access_rules": [
+											"powereddominionrod",
+											"[glitcheson], ^$canDoLJA"
+										]
+									},
+									{
+										"name": "Sky Character",
+										"access_rules": [
+											"powereddominionrod"
+										]
+									}
+								]
+							},
+							{
+								"name": "Gerudo Desert Male Dayfly",
+								"chest_unopened_img": "images/Items/Bug2Grayed.png",
+								"chest_opened_img": "images/Items/Bug2.png",
+								"visibility_rules": [
+									"bugson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 1426,
+										"y": 6102
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											""
+										]
+									}
+								]
+							},
+							{
+								"name": "Gerudo Desert Female Dayfly",
+								"chest_unopened_img": "images/Items/Bug3Grayed.png",
+								"chest_opened_img": "images/Items/Bug3.png",
+								"visibility_rules": [
+									"bugson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 883,
+										"y": 5985
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											""
+										]
+									}
+								]
+							},
+							{
+								"name": "Gerudo Desert East Poe",
+								"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
+								"chest_opened_img": "images/Items/PoeSoul.png",
+								"visibility_rules": [
+									"poeson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 2607,
+										"y": 6047
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"shadowcrystal"
+										]
+									}
+								]
+							},
+							{
+								"name": "Hint Sign",
+								"chest_opened_img": "images/Items/Sign.png",
+								"chest_unopened_img": "images/Items/SignGrayed.png",
+								"visibility_rules": [
+									"hintson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 1180,
+										"y": 5474,
+										"shape": "triangle",
+										"orientation": "south",
+										"border_thickness": 32
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"{}"
+										]
+									}
+								]
+							}
+						]
+					},
+					{
+						"name": "Gerudo Desert Cave of Ordeals Plateau",
+						"access_rules": [
+							"^$canAccess|GerudoDesertCaveofOrdealsPlateau"
+						],
+						"children": [
+							{
+								"name": "Gerudo Desert Poe Above Cave of Ordeals",
+								"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
+								"chest_opened_img": "images/Items/PoeSoul.png",
+								"visibility_rules": [
+									"poeson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 567,
+										"y": 6064
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"glitchesoff, shadowcrystal",
+											"[glitcheson], shadowcrystal, clawshot, ^$canDefeatShadowBeast"
+										]
+									}
+								]
+							},
+							{
+								"name": "Gerudo Desert Portal",
+								"visibility_rules": [
+									"portals"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 609,
+										"y": 6043
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"^$canDefeatShadowBeast"
+										],
+										"hosted_item": "gdportal"
+									}
+								]
+							}
+						]
+					},
+					{
+						"name": "Gerudo Desert Basin",
+						"access_rules": [
+							"^$canAccess|GerudoDesertBasin"
+						],
+						"children": [
+							{
+								"name": "Gerudo Desert Northeast Chest Behind Gates",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 872,
+										"y": 4827
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"^$canDefeatBulblin"
+										]
+									}
+								]
+							},
+							{
+								"name": "Gerudo Desert Campfire North Chest",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 654,
+										"y": 5056
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											""
+										]
+									}
+								]
+							},
+							{
+								"name": "Gerudo Desert Campfire East Chest",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 704,
+										"y": 5106
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"^$canDefeatBulblin"
+										]
+									}
+								]
+							},
+							{
+								"name": "Gerudo Desert Campfire West Chest",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 604,
+										"y": 5106
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"^$canDefeatBulblin"
+										]
+									}
+								]
+							},
+							{
+								"name": "Gerudo Desert Northwest Chest Behind Gates",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 347,
+										"y": 4913
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"^$canDefeatBulblin"
+										]
+									}
+								]
+							}
+						]
+					},
+					{
+						"name": "Gerudo Desert North East Ledge",
+						"access_rules": [
+							"^$canAccess|GerudoDesertNorthEastLedge"
+						],
+						"children": [
+							{
+								"name": "Gerudo Desert North Peahat Poe",
+								"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
+								"chest_opened_img": "images/Items/PoeSoul.png",
+								"visibility_rules": [
+									"poeson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 1330,
+										"y": 5129
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"glitchesoff, shadowcrystal",
+											"[glitcheson], shadowcrystal, clawshot"
+										]
+									}
+								]
+							}
+						]
+					},
+					{
+						"name": "Gerudo Desert Outside Bulblin Camp",
+						"access_rules": [
+							"^$canAccess|GerudoDesertOutsideBulblinCamp"
+						],
+						"children": [
+							{
+								"name": "Gerudo Desert North Small Chest Before Bulblin Camp",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 700,
+										"y": 4655
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"glitchesoff",
+											"[glitcheson], ^$canDefeatBulblin"
+										]
+									}
+								]
+							},
+							{
+								"name": "Outside Bulblin Camp Poe",
+								"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
+								"chest_opened_img": "images/Items/PoeSoul.png",
+								"visibility_rules": [
+									"poeson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 461,
+										"y": 4621
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"shadowcrystal"
+										]
+									}
+								]
+							},
+							{
+								"name": "Gerudo Desert Golden Wolf",
+								"chest_unopened_img": "images/Items/GoldenWolfGrayed.png",
+								"chest_opened_img": "images/Items/GoldenWolf.png",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 580,
+										"y": 4664
+									}
+								],
+								"sections": [
+									{
+										"name": "(Lake Hylia Stone)",
+										"access_rules": [
+											"shadowcrystal, ^$canAccess|LakeHylia, lhhowlingstone"
+										]
+									}
+								]
+							}
+						]
+					},
+					{
+						"name": "Gerudo Desert Skulltula Grotto",
+						"access_rules": [
+							"^$canAccess|GerudoDesertSkulltulaGrotto"
+						],
+						"children": [
+							{
+								"name": "Gerudo Desert Skulltula Grotto",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 2657,
+										"y": 6097,
+										"shape": "trapezoid"
+									}
+								],
+								"sections": [
+									{
+										"name": "Chest",
+										"ref": "Gerudo Province/Submaps/Gerudo Desert Skulltula Grotto/Gerudo Desert Skulltula Grotto Chest/"
+									}
+								]
+							}
+						]
+					},
+					{
+						"name": "Gerudo Desert Rock Grotto",
+						"access_rules": [
+							"^$canAccess|GerudoDesertRockGrotto"
+						],
+						"children": [
+							{
+								"name": "Gerudo Desert Rock Grotto",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 1371,
+										"y": 5079,
+										"shape": "trapezoid"
+									}
+								],
+								"sections": [
+									{
+										"name": "Lantern Chest",
+										"ref": "Gerudo Province/Submaps/Gerudo Desert Rock Grotto/Gerudo Desert Rock Grotto Lantern Chest/"
+									},
+									{
+										"name": "First Poe",
+										"ref": "Gerudo Province/Submaps/Gerudo Desert Rock Grotto/Gerudo Desert Rock Grotto First Poe/"
+									},
+									{
+										"name": "Second Poe",
+										"ref": "Gerudo Province/Submaps/Gerudo Desert Rock Grotto/Gerudo Desert Rock Grotto Second Poe/"
+									}
+								]
+							}
+						]
+					},
+					{
+						"name": "Bulblin Camp",
+						"access_rules": [
+							"^$canAccess|BulblinCamp"
+						],
+						"children": [
+							{
+								"name": "Bulblin Camp First Chest Under Tower At Entrance",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 689,
+										"y": 4316
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											""
+										]
+									}
+								]
+							},
+							{
+								"name": "Bulblin Camp Small Chest in Back of Camp",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 625,
+										"y": 4216
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											""
+										]
+									}
+								]
+							},
+							{
+								"name": "Bulblin Camp Roasted Boar",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 733,
+										"y": 4159
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"^$hasDamagingItem"
+										]
+									}
+								]
+							},
+							{
+								"name": "Bulblin Camp Poe",
+								"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
+								"chest_opened_img": "images/Items/PoeSoul.png",
+								"visibility_rules": [
+									"poeson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 602,
+										"y": 4291
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"shadowcrystal, bckey",
+											"shadowcrystal, skiparbitersentranceon",
+											"[glitcheson], shadowcrystal, ^$canDoMapGlitch, sword"
+										]
+									}
+								]
+							},
+							{
+								"name": "Bulblin Guard Key",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 664,
+										"y": 4146
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"^$canDefeatBulblin"
+										]
+									}
+								]
+							},
+							{
+								"name": "Hint Sign",
+								"chest_opened_img": "images/Items/Sign.png",
+								"chest_unopened_img": "images/Items/SignGrayed.png",
+								"visibility_rules": [
+									"hintson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 525,
+										"y": 4145,
+										"shape": "triangle",
+										"orientation": "south",
+										"border_thickness": 32
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"{}"
+										]
+									}
+								]
+							}
+						]
+					},
+					{
+						"name": "Outside Arbiters Grounds",
+						"access_rules": [
+							"^$canAccess|OutsideArbitersGrounds"
+						],
+						"children": [
+							{
+								"name": "Outside Arbiters Grounds Lantern Chest",
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 657,
+										"y": 3885
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"lantern"
+										]
+									}
+								]
+							},
+							{
+								"name": "Outside Arbiters Grounds Poe",
+								"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
+								"chest_opened_img": "images/Items/PoeSoul.png",
+								"visibility_rules": [
+									"poeson"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 553,
+										"y": 3886
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"shadowcrystal"
+										]
+									}
+								]
+							}
+						]
+					},
+					{
+						"name": "Mirror Chamber Upper",
+						"access_rules": [
+							"^$canAccess|MirrorChamberUpper"
+						],
+						"children": [
+							{
+								"name": "Mirror Chamber Portal",
+								"visibility_rules": [
+									"portals"
+								],
+								"map_locations": [
+									{
+										"map": "overworld",
+										"x": 602,
+										"y": 3725
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"^$canDefeatShadowBeast"
+										],
+										"hosted_item": "mirrorportal"
+									}
+								]
+							}
 						]
 					}
 				]
 			},
 			{
-				"name": "CoO Hint Sign",
-				"map_locations": [
+				"name": "Submaps",
+				"children": [
 					{
-						"map": "gd",
-						"x": 305,
-						"y": 1750,
-						"shape": "diamond"
-					}
-				],
-				"sections": [
-					{
+						"name": "Gerudo Desert Cave of Ordeals Floors 0111",
 						"access_rules": [
-							"{@CaveofOrdealsFloors0111}"
+							"^$canAccess|GerudoDesertCaveofOrdealsFloors0111"
 						],
-						"visibility_rules": [
-							"hintson"
+						"children": [
+							{
+								"name": "Hint Sign",
+								"chest_opened_img": "images/Items/Sign.png",
+								"chest_unopened_img": "images/Items/SignGrayed.png",
+								"visibility_rules": [
+									"hintson"
+								],
+								"map_locations": [
+									{
+										"map": "coob1",
+										"x": 557,
+										"y": 538,
+										"shape": "triangle",
+										"orientation": "south",
+										"border_thickness": 32
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"{}"
+										]
+									}
+								]
+							}
+						]
+					},
+					{
+						"name": "Gerudo Desert Cave of Ordeals Floors 1221",
+						"access_rules": [
+							"^$canAccess|GerudoDesertCaveofOrdealsFloors1221"
+						],
+						"children": [
+							{
+								"name": "Cave of Ordeals Floor 17 Poe",
+								"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
+								"chest_opened_img": "images/Items/PoeSoul.png",
+								"visibility_rules": [
+									"poeson"
+								],
+								"map_locations": [
+									{
+										"map": "coob17",
+										"x": 700,
+										"y": 539
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"spinner, shadowcrystal, ^$canDefeatHelmasaur, ^$canDefeatRat, ^$canDefeatChu, ^$canDefeatChuWorm, ^$canDefeatBubble, ^$canDefeatKeese, ^$canDefeatStalhound",
+											"[glitcheson], clawshot, ^$canDoLJA, shadowcrystal, ^$canDefeatHelmasaur, ^$canDefeatRat, ^$canDefeatChu, ^$canDefeatChuWorm, ^$canDefeatBubble, ^$canDefeatKeese, ^$canDefeatStalhound"
+										]
+									}
+								]
+							}
+						]
+					},
+					{
+						"name": "Gerudo Desert Cave of Ordeals Floors 3241",
+						"access_rules": [
+							"^$canAccess|GerudoDesertCaveofOrdealsFloors3241"
+						],
+						"children": [
+							{
+								"name": "Cave of Ordeals Floor 33 Poe",
+								"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
+								"chest_opened_img": "images/Items/PoeSoul.png",
+								"visibility_rules": [
+									"poeson"
+								],
+								"map_locations": [
+									{
+										"map": "coob33",
+										"x": 700,
+										"y": 539
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"shadowcrystal, powereddominionrod, ^$canDefeatBeamos, ^$canDefeatKeese, ^$canDefeatDodongo, ^$canDefeatBubble, ^$canDefeatRedeadKnight"
+										]
+									}
+								]
+							}
+						]
+					},
+					{
+						"name": "Gerudo Desert Cave of Ordeals Floors 4250",
+						"access_rules": [
+							"^$canAccess|GerudoDesertCaveofOrdealsFloors4250"
+						],
+						"children": [
+							{
+								"name": "Cave of Ordeals Floor 44 Poe",
+								"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
+								"chest_opened_img": "images/Items/PoeSoul.png",
+								"visibility_rules": [
+									"poeson"
+								],
+								"map_locations": [
+									{
+										"map": "coob44",
+										"x": 208,
+										"y": 539
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"shadowcrystal, doubleclawshot, ^$canDefeatArmos, ^$canDefeatBabaSerpent, ^$canDefeatLizalfos, ^$canDefeatDinalfos, bow",
+											"shadowcrystal, doubleclawshot, ^$canDefeatArmos, ^$canDefeatBabaSerpent, ^$canDefeatLizalfos, ^$canDefeatDinalfos, ballchain",
+											"[glitcheson], shadowcrystal, clawshot, ^$canDoLJA, ^$canDefeatArmos, ^$canDefeatBabaSerpent, ^$canDefeatLizalfos, ^$canDefeatDinalfos, bow",
+											"[glitcheson], shadowcrystal, clawshot, ^$canDoLJA, ^$canDefeatArmos, ^$canDefeatBabaSerpent, ^$canDefeatLizalfos, ^$canDefeatDinalfos, ballchain"
+										]
+									}
+								]
+							},
+							{
+								"name": "Cave of Ordeals Great Fairy Reward",
+								"map_locations": [
+									{
+										"map": "coob50",
+										"x": 693,
+										"y": 148
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"^$canDefeatArmos, ^$canDefeatBokoblin, ^$canDefeatBabaSerpent, ^$canDefeatLizalfos, ^$canDefeatBulblin, ^$canDefeatDinalfos, ^$canDefeatPoe, ^$canDefeatRedeadKnight, ^$canDefeatChu, ^$canDefeatFreezard, ^$canDefeatChilfos, ^$canDefeatGhoulRat, ^$canDefeatRat, ^$canDefeatStalchild, ^$canDefeatAeralfos, ^$canDefeatDarknut"
+										]
+									}
+								]
+							}
+						]
+					},
+					{
+						"name": "Gerudo Desert Skulltula Grotto",
+						"access_rules": [
+							"^$canAccess|GerudoDesertSkulltulaGrotto"
+						],
+						"children": [
+							{
+								"name": "Gerudo Desert Skulltula Grotto Chest",
+								"map_locations": [
+									{
+										"map": "grotto41",
+										"x": 139,
+										"y": 28
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"^$canDefeatSkulltula"
+										]
+									}
+								]
+							}
+						]
+					},
+					{
+						"name": "Gerudo Desert Rock Grotto",
+						"access_rules": [
+							"^$canAccess|GerudoDesertRockGrotto"
+						],
+						"children": [
+							{
+								"name": "Gerudo Desert Rock Grotto Lantern Chest",
+								"map_locations": [
+									{
+										"map": "grotto30",
+										"x": 220,
+										"y": 39
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"^$canSmash, lantern"
+										]
+									}
+								]
+							},
+							{
+								"name": "Gerudo Desert Rock Grotto First Poe",
+								"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
+								"chest_opened_img": "images/Items/PoeSoul.png",
+								"visibility_rules": [
+									"poeson"
+								],
+								"map_locations": [
+									{
+										"map": "grotto30",
+										"x": 105,
+										"y": 172
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"shadowcrystal, ^$canSmash"
+										]
+									}
+								]
+							},
+							{
+								"name": "Gerudo Desert Rock Grotto Second Poe",
+								"chest_unopened_img": "images/Items/PoeSoulGrayed.png",
+								"chest_opened_img": "images/Items/PoeSoul.png",
+								"visibility_rules": [
+									"poeson"
+								],
+								"map_locations": [
+									{
+										"map": "grotto30",
+										"x": 194,
+										"y": 125
+									}
+								],
+								"sections": [
+									{
+										"access_rules": [
+											"shadowcrystal, ^$canSmash"
+										]
+									}
+								]
+							}
 						]
 					}
 				]
